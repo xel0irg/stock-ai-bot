@@ -1,0 +1,74 @@
+name: Stock AI Bot — Scheduled Scan
+
+on:
+  # Run every 30 minutes during market hours (Mon-Fri 9:30 AM - 4 PM ET = 13:30-20:00 UTC)
+  schedule:
+    - cron: "*/30 13-20 * * 1-5"
+
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Specific ticker to analyze (leave blank for full watchlist)"
+        required: false
+        default: ""
+      watchlist:
+        description: "Custom watchlist (comma-separated, overrides .env)"
+        required: false
+        default: ""
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create .env from secrets
+        run: |
+          cat > .env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          REDDIT_CLIENT_ID=${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET=${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT=${{ secrets.REDDIT_USER_AGENT }}
+          STOCKTWITS_ACCESS_TOKEN=${{ secrets.STOCKTWITS_ACCESS_TOKEN }}
+          TWITTER_BEARER_TOKEN=${{ secrets.TWITTER_BEARER_TOKEN }}
+          WATCHLIST=${{ secrets.WATCHLIST }}
+          SCAN_INTERVAL_MINUTES=30
+          SENTIMENT_THRESHOLD=0.6
+          CONFLUENCE_THRESHOLD=65
+          LOG_LEVEL=INFO
+          EOF
+
+      - name: Run Stock AI Bot
+        run: |
+          if [ -n "${{ github.event.inputs.ticker }}" ]; then
+            python main.py --ticker "${{ github.event.inputs.ticker }}"
+          elif [ -n "${{ github.event.inputs.watchlist }}" ]; then
+            python main.py --watchlist "${{ github.event.inputs.watchlist }}"
+          else
+            python main.py
+          fi
+
+      - name: Upload analysis reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: analysis-reports-${{ github.run_number }}
+          path: logs/
+          retention-days: 30
+
+      - name: Clean up .env
+        if: always()
+        run: rm -f .env
