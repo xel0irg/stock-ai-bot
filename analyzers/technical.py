@@ -30,7 +30,11 @@ def fetch_ohlcv(ticker: str, period: str = "3mo", interval: str = "1d") -> pd.Da
         if df.empty:
             log.warning(f"No OHLCV data for {ticker}")
             return pd.DataFrame()
-        df.columns = [c.lower() for c in df.columns]
+        # Fix for yfinance multi-level column tuples (newer versions)
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = [col[0].lower() for col in df.columns]
+        else:
+            df.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df.columns]
         return df
     except Exception as e:
         log.error(f"OHLCV fetch error for {ticker}: {e}")
