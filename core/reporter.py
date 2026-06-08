@@ -72,10 +72,10 @@ def print_terminal_report(
 
     # Technical snapshot
     print(f"\n{Fore.WHITE}  TECHNICAL SIGNALS{Style.RESET_ALL}")
-    print(f"  RSI:       {ta.get('rsi','N/A'):.1f}  ({ta.get('rsi_signal','').upper()})")
-    print(f"  MACD:      {ta.get('macd_crossover','N/A').upper()}")
-    print(f"  EMAs:      {ta.get('ema_trend','N/A').upper()}")
-    print(f"  Volume:    {ta.get('volume_ratio','N/A')}x avg  ({ta.get('volume_signal','N/A').upper()})")
+    print(f"  RSI:       {ta.get('rsi') or 'N/A'}  ({ta.get('rsi_signal','').upper()})")
+    print(f"  MACD:      {(ta.get('macd_crossover') or 'N/A').upper()}")
+    print(f"  EMAs:      {(ta.get('ema_trend') or 'N/A').upper()}")
+    print(f"  Volume:    {ta.get('volume_ratio') or 'N/A'}x avg  ({(ta.get('volume_signal') or 'N/A').upper()})")
     print(f"  Options:   {opts.get('summary','N/A')}")
     print(f"  Shorts:    {short.get('summary','N/A')}")
     print(f"  TA Score:  {_score_bar(ta_sc)} {ta_sc}/100")
@@ -157,7 +157,7 @@ def save_report(
         f.write(f"SUGGESTED BIAS:   {ai.get('suggested_bias','N/A')}\n\n")
 
         f.write("── AI ANALYSIS ─────────────────────────────────────\n\n")
-        f.write(ai.get("analysis", "AI analysis not available") + "\n\n")
+        f.write((ai.get("analysis") or "AI analysis not available") + "\n\n")
 
         f.write("── TECHNICALS ───────────────────────────────────────\n")
         ta = tech.get("technicals", {})

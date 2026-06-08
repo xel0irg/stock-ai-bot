@@ -30,6 +30,10 @@ SENTIMENT_THRESHOLD   = float(os.getenv("SENTIMENT_THRESHOLD", "0.6"))
 CONFLUENCE_THRESHOLD  = int(os.getenv("CONFLUENCE_THRESHOLD", "65"))
 LOG_LEVEL             = os.getenv("LOG_LEVEL", "INFO")
 
+# ── Telegram ──────────────────────────────────────────────
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
+
 # ── Paths ─────────────────────────────────────────────────
 LOG_DIR  = BASE_DIR / "logs"
 DATA_DIR = BASE_DIR / "data"

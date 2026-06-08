@@ -23,6 +23,7 @@ from config.settings import WATCHLIST, SCAN_INTERVAL_MINUTES, CONFLUENCE_THRESHO
 from core.logger    import get_logger
 from core.ai_engine import run_ai_synthesis
 from core.reporter  import print_terminal_report, save_report
+from core.telegram_notifier import send_telegram_alert, send_telegram_test
 from analyzers.technical    import run_technical_analysis
 from analyzers.sentiment    import run_sentiment_analysis
 from analyzers.fundamentals import run_fundamental_analysis
@@ -90,6 +91,11 @@ def analyze_ticker(ticker: str) -> dict:
         # Output
         print_terminal_report(ticker, tech, sent, fund, ai)
         json_path, txt_path = save_report(ticker, tech, sent, fund, ai)
+
+        # Send Telegram alert if score meets threshold
+        from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+        if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+            send_telegram_alert(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ticker, tech, sent, fund, ai)
 
         results.update({
             "technical":         tech,
@@ -166,7 +172,23 @@ def main():
         type=str, default=None,
         help="Comma-separated override watchlist, e.g. AAPL,TSLA,NVDA"
     )
+    parser.add_argument(
+        "--test-telegram",
+        action="store_true",
+        help="Send a test message to verify Telegram is configured correctly"
+    )
     args = parser.parse_args()
+
+    # Telegram test mode
+    if args.test_telegram:
+        from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+        log.info("Sending Telegram test message...")
+        success = send_telegram_test(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
+        if success:
+            log.info("✅ Telegram is working! Check your phone.")
+        else:
+            log.error("❌ Telegram test failed. Check your token and chat ID in .env")
+        return
 
     # Determine tickers
     if args.ticker:
