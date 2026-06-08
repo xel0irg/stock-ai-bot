@@ -157,7 +157,7 @@ def fetch_fundamentals(ticker: str) -> Dict[str, Any]:
 
         log.info(
             f"Fundamentals for {ticker}: {result.get('company_name')} | "
-            f"P/E={pe} | Analyst={result.get('analyst_recommend_key', 'N/A').upper()}"
+            f"P/E={pe} | Analyst={str(result.get('analyst_recommend_key') or 'N/A').upper()}"
         )
 
     except Exception as e:

@@ -64,7 +64,7 @@ Bollinger Band Position: {ta.get('bb_pct', 'N/A')} ({ta.get('bb_signal', 'N/A').
 Stochastic K/D: {ta.get('stoch_k')}/{ta.get('stoch_d')} → {ta.get('stoch_signal', 'N/A').upper()}
 ATR: {ta.get('atr')} ({ta.get('atr_pct')}% of price)
 OBV Trend: {ta.get('obv_trend', 'N/A').upper()}
-Volume: {ta.get('volume_last', 'N/A'):,} vs 20D MA {ta.get('volume_ma20', 'N/A'):,} → {ta.get('volume_signal', 'N/A').upper()} (ratio: {ta.get('volume_ratio', 'N/A')}x)
+Volume: {ta.get('volume_last') or 'N/A'} vs 20D MA {ta.get('volume_ma20') or 'N/A'} → {str(ta.get('volume_signal') or 'N/A').upper()} (ratio: {ta.get('volume_ratio') or 'N/A'}x)
 20D Support: ${ta.get('support_20d', 'N/A')} | 20D Resistance: ${ta.get('resistance_20d', 'N/A')}
 
 OPTIONS FLOW:
@@ -97,12 +97,12 @@ Top Reddit Posts:
 ═══════════════════════════════════════════════
 📋 FUNDAMENTAL & MACRO DATA
 ═══════════════════════════════════════════════
-Company: {fund_d.get('company_name', ticker)} | Sector: {fund_d.get('sector', 'N/A')} | Industry: {fund_d.get('industry', 'N/A')}
-Market Cap: ${fund_d.get('market_cap', 0):,} | Beta: {fund_d.get('beta', 'N/A')}
-P/E (TTM): {fund_d.get('pe_ratio', 'N/A')} | Forward P/E: {fund_d.get('forward_pe', 'N/A')} | PEG: {fund_d.get('peg_ratio', 'N/A')}
-Revenue Growth: {fund_d.get('revenue_growth', 'N/A')} | Earnings Growth: {fund_d.get('earnings_growth', 'N/A')}
-Analyst Consensus: {fund_d.get('analyst_recommend_key', 'N/A').upper()} (mean: {fund_d.get('analyst_recommend', 'N/A')}/5) | Price Target: ${fund_d.get('analyst_target', 'N/A')} | # Analysts: {fund_d.get('analyst_count', 'N/A')}
-Valuation Signal: {fund_d.get('valuation_signal', 'N/A').upper()}
+Company: {fund_d.get('company_name', ticker)} | Sector: {fund_d.get('sector') or 'N/A'} | Industry: {fund_d.get('industry') or 'N/A'}
+Market Cap: ${fund_d.get('market_cap') or 'N/A'} | Beta: {fund_d.get('beta') or 'N/A'}
+P/E (TTM): {fund_d.get('pe_ratio') or 'N/A'} | Forward P/E: {fund_d.get('forward_pe') or 'N/A'} | PEG: {fund_d.get('peg_ratio') or 'N/A'}
+Revenue Growth: {fund_d.get('revenue_growth') or 'N/A'} | Earnings Growth: {fund_d.get('earnings_growth') or 'N/A'}
+Analyst Consensus: {str(fund_d.get('analyst_recommend_key') or 'N/A').upper()} (mean: {fund_d.get('analyst_recommend') or 'N/A'}/5) | Price Target: ${fund_d.get('analyst_target') or 'N/A'} | # Analysts: {fund_d.get('analyst_count') or 'N/A'}
+Valuation Signal: {str(fund_d.get('valuation_signal') or 'N/A').upper()}
 
 EARNINGS: {earn.get('signal', 'N/A')} | Earnings Imminent: {'⚡ YES' if earn.get('earnings_imminent') else 'No'}
 INSIDER ACTIVITY: {inside.get('insider_signal', 'N/A').upper()} | Form 4s (90D): {inside.get('form4_count_90d', 0)}
