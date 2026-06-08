@@ -34,6 +34,9 @@ LOG_LEVEL             = os.getenv("LOG_LEVEL", "INFO")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
 
+# ── Discord ───────────────────────────────────────────────
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "")
+
 # ── Paths ─────────────────────────────────────────────────
 LOG_DIR  = BASE_DIR / "logs"
 DATA_DIR = BASE_DIR / "data"
