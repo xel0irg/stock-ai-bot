@@ -108,6 +108,35 @@ def print_terminal_report(
     else:
         print(f"  {Fore.RED}AI analysis unavailable: {ai.get('error','Unknown error')}{Style.RESET_ALL}")
 
+    # Trade Decision Worksheet
+    ts_data = ai.get("trade_setup", {})
+    direction = ts_data.get("direction", "NONE")
+    dir_color = Fore.GREEN if direction == "LONG" else Fore.RED if direction == "SHORT" else Fore.YELLOW
+    rr        = ts_data.get("risk_reward")
+    rr_q      = ts_data.get("rr_quality", "UNKNOWN")
+    rr_color  = Fore.GREEN if rr_q == "GOOD" else Fore.YELLOW if rr_q == "ACCEPTABLE" else Fore.RED
+
+    print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
+    print(f"{Fore.WHITE}  📋  TRADE DECISION WORKSHEET{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
+    print(f"  Direction:    {dir_color}{direction}{Style.RESET_ALL}")
+    if direction != "NONE":
+        print(f"  Entry:        ${Fore.YELLOW}{ts_data.get('entry_price', 'N/A')}{Style.RESET_ALL}")
+        print(f"  Stop Loss:    ${Fore.RED}{ts_data.get('stop_loss', 'N/A')}{Style.RESET_ALL}  ← exit here if wrong")
+        print(f"  Target 1:     ${Fore.GREEN}{ts_data.get('target_1', 'N/A')}{Style.RESET_ALL}  ← take partial profit")
+        print(f"  Target 2:     ${Fore.GREEN}{ts_data.get('target_2', 'N/A')}{Style.RESET_ALL}  ← full target")
+        rr_display = f"{rr}:1" if rr else "N/A"
+        print(f"  Risk/Reward:  {rr_color}{rr_display} ({rr_q}){Style.RESET_ALL}")
+        if ts_data.get("entry_condition"):
+            print(f"  When to enter: {ts_data['entry_condition']}")
+        if ts_data.get("size_note"):
+            print(f"  Position size: {ts_data['size_note']}")
+        if ts_data.get("valid_days"):
+            print(f"  Setup expires: in {ts_data['valid_days']} trading days")
+    else:
+        print(f"  {Fore.YELLOW}No trade setup — score below 50 or signals too mixed.{Style.RESET_ALL}")
+        print(f"  Watch for a cleaner entry before committing capital.")
+
     # Final verdict
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
     print(f"  CONFLUENCE:  {_score_bar(score)} {score}/100")
@@ -142,6 +171,7 @@ def save_report(
         "insider":           fund.get("insider", {}),
         "confluence_score":  ai.get("confluence_score"),
         "suggested_bias":    ai.get("suggested_bias"),
+        "trade_setup":       ai.get("trade_setup", {}),
         "ai_analysis":       ai.get("analysis"),
     }
 
@@ -158,6 +188,27 @@ def save_report(
 
         f.write(f"CONFLUENCE SCORE: {ai.get('confluence_score','N/A')}/100\n")
         f.write(f"SUGGESTED BIAS:   {ai.get('suggested_bias','N/A')}\n\n")
+
+        f.write("── TRADE DECISION WORKSHEET ─────────────────────────\n")
+        ts_data   = ai.get("trade_setup", {})
+        direction = ts_data.get("direction", "NONE")
+        f.write(f"  Direction:     {direction}\n")
+        if direction != "NONE":
+            f.write(f"  Entry:         ${ts_data.get('entry_price', 'N/A')}\n")
+            f.write(f"  Stop Loss:     ${ts_data.get('stop_loss', 'N/A')}\n")
+            f.write(f"  Target 1:      ${ts_data.get('target_1', 'N/A')}\n")
+            f.write(f"  Target 2:      ${ts_data.get('target_2', 'N/A')}\n")
+            rr = ts_data.get('risk_reward')
+            f.write(f"  Risk/Reward:   {f'{rr}:1' if rr else 'N/A'} ({ts_data.get('rr_quality','UNKNOWN')})\n")
+            if ts_data.get("entry_condition"):
+                f.write(f"  When to enter: {ts_data['entry_condition']}\n")
+            if ts_data.get("size_note"):
+                f.write(f"  Position size: {ts_data['size_note']}\n")
+            if ts_data.get("valid_days"):
+                f.write(f"  Setup expires: in {ts_data['valid_days']} trading days\n")
+        else:
+            f.write("  No trade setup — score below 50 or signals too mixed.\n")
+        f.write("\n")
 
         f.write("── AI ANALYSIS ─────────────────────────────────────\n\n")
         f.write((ai.get("analysis") or "AI analysis not available") + "\n\n")

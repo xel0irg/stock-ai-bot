@@ -140,6 +140,20 @@ Explain the score in 1 sentence.
 **7. SUGGESTED BIAS**
 One word: BULLISH / BEARISH / NEUTRAL + confidence level (Low/Medium/High)
 
+**8. TRADE SETUP**
+Based on the bias above, give ONE concrete trade setup a swing trader could act on.
+Use EXACTLY this format (fill in real numbers, no ranges for entry/stop/target):
+
+TRADE DIRECTION: LONG or SHORT or NONE (if score < 50, use NONE)
+ENTRY PRICE: $X.XX (specific level to enter — e.g. on a bounce off support, or a breakout level)
+STOP LOSS: $X.XX (the level that invalidates the thesis — where you exit if wrong)
+TARGET 1: $X.XX (first take-profit level — conservative)
+TARGET 2: $X.XX (second take-profit level — full target)
+RISK/REWARD: X.X:1 (calculate as (Target1 - Entry) / (Entry - Stop) for LONG, reversed for SHORT)
+POSITION SIZE NOTE: one sentence on how aggressive to size this given the confluence score
+ENTRY CONDITION: one sentence describing WHEN exactly to enter (e.g. "Enter on a confirmed bounce off $391 with volume above 1.5x average")
+TRADE VALID UNTIL: X days (how many trading days before this setup expires if not triggered)
+
 Be analytical, not promotional. Call out contradictions in the data. Do not make this longer than necessary.
 """
     return prompt
@@ -187,7 +201,52 @@ def run_ai_synthesis(
         bias_match = re.search(r"SUGGESTED BIAS[:\s\n]+([A-Z]+)", analysis_text, re.IGNORECASE)
         bias = bias_match.group(1).upper() if bias_match else "NEUTRAL"
 
-        log.info(f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias}")
+        # Extract trade setup fields
+        def _extract_field(pattern, text, cast=str, default=None):
+            m = re.search(pattern, text, re.IGNORECASE)
+            if m:
+                try:
+                    return cast(m.group(1).strip())
+                except (ValueError, AttributeError):
+                    return default
+            return default
+
+        trade_direction = _extract_field(r"TRADE DIRECTION:\s*(LONG|SHORT|NONE)", analysis_text, str, "NONE")
+        entry_price     = _extract_field(r"ENTRY PRICE:\s*\$?([\d.]+)", analysis_text, float)
+        stop_loss       = _extract_field(r"STOP LOSS:\s*\$?([\d.]+)", analysis_text, float)
+        target_1        = _extract_field(r"TARGET 1:\s*\$?([\d.]+)", analysis_text, float)
+        target_2        = _extract_field(r"TARGET 2:\s*\$?([\d.]+)", analysis_text, float)
+        risk_reward     = _extract_field(r"RISK/REWARD:\s*([\d.]+):1", analysis_text, float)
+        size_note_m     = re.search(r"POSITION SIZE NOTE:\s*(.+?)(?:\n|$)", analysis_text, re.IGNORECASE)
+        size_note       = size_note_m.group(1).strip() if size_note_m else None
+        entry_cond_m    = re.search(r"ENTRY CONDITION:\s*(.+?)(?:\n|$)", analysis_text, re.IGNORECASE)
+        entry_condition = entry_cond_m.group(1).strip() if entry_cond_m else None
+        valid_days      = _extract_field(r"TRADE VALID UNTIL:\s*(\d+)\s*days?", analysis_text, int)
+
+        rr_quality = (
+            "POOR"       if risk_reward and risk_reward < 1.5  else
+            "ACCEPTABLE" if risk_reward and risk_reward < 2.0  else
+            "GOOD"       if risk_reward                        else
+            "UNKNOWN"
+        )
+
+        trade_setup = {
+            "direction":       trade_direction,
+            "entry_price":     entry_price,
+            "stop_loss":       stop_loss,
+            "target_1":        target_1,
+            "target_2":        target_2,
+            "risk_reward":     risk_reward,
+            "rr_quality":      rr_quality,
+            "size_note":       size_note,
+            "entry_condition": entry_condition,
+            "valid_days":      valid_days,
+        }
+
+        log.info(
+            f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias} | "
+            f"Trade={trade_direction} | R/R={risk_reward}:1 ({rr_quality})"
+        )
 
         if confluence_score >= CONFLUENCE_THRESHOLD:
             log_banner(log, ticker, confluence_score)
@@ -198,6 +257,7 @@ def run_ai_synthesis(
             "analysis":          analysis_text,
             "confluence_score":  confluence_score,
             "suggested_bias":    bias,
+            "trade_setup":       trade_setup,
             "model":             message.model,
             "tokens_used":       message.usage.input_tokens + message.usage.output_tokens,
         }
