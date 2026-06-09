@@ -117,8 +117,9 @@ def print_terminal_report(
     moneyness = ts_data.get("moneyness", "")
 
     con_color  = Fore.GREEN if contract == "CALL" else Fore.RED if contract == "PUT" else Fore.YELLOW
-    qual_color = (Fore.GREEN  if quality == "HIGH CONVICTION" else
-                  Fore.YELLOW if quality == "MODERATE"        else
+    qual_color = (Fore.GREEN  if quality == "HIGH CONVICTION"   else
+                  Fore.YELLOW if quality == "MODERATE"          else
+                  Fore.MAGENTA if "EARNINGS" in quality         else
                   Fore.RED)
 
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
@@ -146,8 +147,13 @@ def print_terminal_report(
         if ts_data.get("key_risk"):
             print(f"  {Fore.YELLOW}Key risk:{Style.RESET_ALL}      {ts_data['key_risk']}")
     else:
-        print(f"  {Fore.YELLOW}No trade — signals too mixed or score below threshold.{Style.RESET_ALL}")
-        print(f"  0-2 DTE requires high conviction. Sit this one out.")
+        if "EARNINGS" in quality:
+            print(f"  {Fore.MAGENTA}⚡ EARNINGS IMMINENT — NO TRADE{Style.RESET_ALL}")
+            if ts_data.get("key_risk"):
+                print(f"  {Fore.MAGENTA}{ts_data['key_risk']}{Style.RESET_ALL}")
+        else:
+            print(f"  {Fore.YELLOW}No trade — signals too mixed or score below threshold.{Style.RESET_ALL}")
+            print(f"  0-2 DTE requires high conviction. Sit this one out.")
 
     # Final verdict
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")

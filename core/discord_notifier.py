@@ -106,6 +106,9 @@ def _build_embed(
             setup_value += f"⚠️ Risk: {ts_data['key_risk']}"
         setup_value = setup_value.strip()
         conviction_str = f"{qual_emoji} {quality}"
+    elif "EARNINGS" in quality:
+        setup_value    = f"⚡ **EARNINGS IMMINENT — NO TRADE**\n{ts_data.get('key_risk', 'IV crush risk is extreme. Do not trade 0-2 DTE into earnings.')}"
+        conviction_str = "⚡ NO TRADE — EARNINGS"
     else:
         setup_value    = "❌ No trade — signals too mixed or score below threshold.\nSit this one out."
         conviction_str = "❌ NO TRADE"

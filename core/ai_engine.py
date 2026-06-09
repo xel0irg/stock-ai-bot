@@ -287,6 +287,23 @@ def run_ai_synthesis(
         else:
             setup_quality = "LOW CONVICTION"
 
+        # ── Earnings guard ────────────────────────────────────────
+        # Hard override: never suggest a 0-2 DTE trade into earnings.
+        # IV crush after the print can wipe a winning directional bet.
+        earnings_imminent = fund.get("earnings", {}).get("earnings_imminent", False)
+        days_to_earnings  = fund.get("earnings", {}).get("days_to_earnings")
+        if earnings_imminent and contract_type != "NONE":
+            log.warning(
+                f"⚡ Earnings guard triggered for {ticker} "
+                f"({days_to_earnings}d to earnings) — forcing NO TRADE"
+            )
+            contract_type   = "NONE"
+            setup_quality   = "NO TRADE — EARNINGS"
+            key_risk        = (
+                f"EARNINGS IN {days_to_earnings} DAY(S) — IV crush risk is extreme. "
+                f"Do not trade 0-2 DTE options into an earnings print."
+            )
+
         trade_setup = {
             "contract_type":   contract_type,
             "expiry":          expiry,

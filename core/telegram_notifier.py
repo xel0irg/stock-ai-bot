@@ -82,6 +82,9 @@ def _format_alert(
         if ts_data.get("key_risk"):
             trade_block += f"⚠️ Risk: _{ts_data['key_risk']}_"
         conviction_line = f"{qual_emoji} *{quality}*"
+    elif "EARNINGS" in quality:
+        trade_block     = f"⚡ *EARNINGS IMMINENT — NO TRADE*\n_{ts_data.get('key_risk', 'IV crush risk is extreme. Do not trade 0-2 DTE into earnings.')}_"
+        conviction_line = "⚡ *NO TRADE — EARNINGS*"
     else:
         trade_block     = "_No trade — signals too mixed or score below threshold._\n_Sit this one out._"
         conviction_line = "❌ *NO TRADE*"
