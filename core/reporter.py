@@ -63,8 +63,11 @@ def print_terminal_report(
     # Price snapshot
     print(f"\n{Fore.WHITE}  PRICE SNAPSHOT{Style.RESET_ALL}")
     print(f"  Last Price:  ${Fore.YELLOW}{ta.get('last_price', 'N/A')}{Style.RESET_ALL}")
-    print(f"  1D / 5D / 20D:  {ta.get('return_1d',0):+.2f}% / {ta.get('return_5d',0):+.2f}% / {ta.get('return_20d',0):+.2f}%")
-    print(f"  Company:  {fund_d.get('company_name', ticker)} | {fund_d.get('sector','N/A')}")
+    r1d = ta.get('return_1d') or 0
+    r5d = ta.get('return_5d') or 0
+    r20d = ta.get('return_20d') or 0
+    print(f"  1D / 5D / 20D:  {r1d:+.2f}% / {r5d:+.2f}% / {r20d:+.2f}%")
+    print(f"  Company:  {fund_d.get('company_name', ticker)} | {fund_d.get('sector') or 'N/A'}")
 
     # Earnings alert
     if earn.get("earnings_imminent"):
@@ -90,9 +93,9 @@ def print_terminal_report(
 
     # Fundamentals
     print(f"\n{Fore.WHITE}  FUNDAMENTAL SIGNALS{Style.RESET_ALL}")
-    print(f"  P/E:        {fund_d.get('pe_ratio','N/A')} | Forward: {fund_d.get('forward_pe','N/A')}")
-    print(f"  Analyst:    {fund_d.get('analyst_recommend_key','N/A').upper()} | Target: ${fund_d.get('analyst_target','N/A')}")
-    print(f"  Insider:    {fund.get('insider',{}).get('insider_signal','N/A').upper()}")
+    print(f"  P/E:        {fund_d.get('pe_ratio') or 'N/A'} | Forward: {fund_d.get('forward_pe') or 'N/A'}")
+    print(f"  Analyst:    {str(fund_d.get('analyst_recommend_key') or 'N/A').upper()} | Target: ${fund_d.get('analyst_target') or 'N/A'}")
+    print(f"  Insider:    {str(fund.get('insider',{}).get('insider_signal') or 'N/A').upper()}")
 
     # AI Analysis
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")

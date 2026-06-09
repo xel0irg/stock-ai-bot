@@ -24,6 +24,7 @@ from core.logger    import get_logger
 from core.ai_engine import run_ai_synthesis
 from core.reporter  import print_terminal_report, save_report
 from core.telegram_notifier import send_telegram_alert, send_telegram_test
+from core.discord_notifier  import send_discord_alert, send_discord_test
 from analyzers.technical    import run_technical_analysis
 from analyzers.sentiment    import run_sentiment_analysis
 from analyzers.fundamentals import run_fundamental_analysis
@@ -93,9 +94,13 @@ def analyze_ticker(ticker: str) -> dict:
         json_path, txt_path = save_report(ticker, tech, sent, fund, ai)
 
         # Send Telegram alert if score meets threshold
-        from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+        from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL
         if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
             send_telegram_alert(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ticker, tech, sent, fund, ai)
+
+        # Send Discord alert if webhook configured
+        if DISCORD_WEBHOOK_URL:
+            send_discord_alert(DISCORD_WEBHOOK_URL, ticker, tech, sent, fund, ai)
 
         results.update({
             "technical":         tech,
@@ -173,11 +178,27 @@ def main():
         help="Comma-separated override watchlist, e.g. AAPL,TSLA,NVDA"
     )
     parser.add_argument(
+        "--test-discord",
+        action="store_true",
+        help="Send a test message to verify Discord webhook is configured correctly"
+    )
+    parser.add_argument(
         "--test-telegram",
         action="store_true",
         help="Send a test message to verify Telegram is configured correctly"
     )
     args = parser.parse_args()
+
+    # Discord test mode
+    if args.test_discord:
+        from config.settings import DISCORD_WEBHOOK_URL
+        log.info("Sending Discord test message...")
+        success = send_discord_test(DISCORD_WEBHOOK_URL)
+        if success:
+            log.info("✅ Discord is working! Check your server.")
+        else:
+            log.error("❌ Discord test failed. Check your DISCORD_WEBHOOK_URL in .env")
+        return
 
     # Telegram test mode
     if args.test_telegram:
