@@ -140,19 +140,23 @@ Explain the score in 1 sentence.
 **7. SUGGESTED BIAS**
 One word: BULLISH / BEARISH / NEUTRAL + confidence level (Low/Medium/High)
 
-**8. TRADE SETUP**
-Based on the bias above, give ONE concrete trade setup a swing trader could act on.
-Use EXACTLY this format (fill in real numbers, no ranges for entry/stop/target):
+**8. OPTIONS TRADE SETUP (0-2 DTE)**
+The trader uses SHORT-DATED OPTIONS (0-2 days to expiration). This means time decay (theta) is extreme — the move must happen TODAY or TOMORROW or the contract expires worthless. Only suggest a trade if the setup is high-conviction and has a clear near-term catalyst or momentum. If score < 55 or signals are mixed, use NONE — do not force a trade.
 
-TRADE DIRECTION: LONG or SHORT or NONE (if score < 50, use NONE)
-ENTRY PRICE: $X.XX (specific level to enter — e.g. on a bounce off support, or a breakout level)
-STOP LOSS: $X.XX (the level that invalidates the thesis — where you exit if wrong)
-TARGET 1: $X.XX (first take-profit level — conservative)
-TARGET 2: $X.XX (second take-profit level — full target)
-RISK/REWARD: X.X:1 (calculate as (Target1 - Entry) / (Entry - Stop) for LONG, reversed for SHORT)
-POSITION SIZE NOTE: one sentence on how aggressive to size this given the confluence score
-ENTRY CONDITION: one sentence describing WHEN exactly to enter (e.g. "Enter on a confirmed bounce off $391 with volume above 1.5x average")
-TRADE VALID UNTIL: X days (how many trading days before this setup expires if not triggered)
+Use EXACTLY this format (fill in real numbers):
+
+CONTRACT TYPE: CALL or PUT or NONE
+EXPIRY: 0DTE (today) or 1DTE (tomorrow) or 2DTE — pick based on how fast you expect the move
+STRIKE: $X.XX (choose slightly OTM for leverage, ATM for higher delta — specify which and why in one word)
+MONEYNESS: ATM or SLIGHTLY_OTM or OTM (ATM = within 0.5% of price; SLIGHTLY_OTM = 0.5-2%; OTM = >2%)
+STOCK PRICE TARGET: $X.XX (where the stock needs to get to for this to be profitable — be specific)
+EST. OPTION PREMIUM: $X.XX (rough estimate of what this contract costs right now given ATR and IV environment)
+MAX LOSS: 100% of premium paid (always true for long options — acknowledge this explicitly)
+PROFIT TARGET: XX% gain on the contract (e.g. 50% / 100% / 150% — scale to conviction)
+STOP RULE: Exit if premium drops to $X.XX (e.g. 50% of entry cost) OR if stock breaks $X.XX level
+ENTRY CONDITION: one sentence — the exact trigger to enter (price level, volume confirmation, time of day)
+AVOID IF: one sentence — the specific condition that kills this setup (e.g. "avoid if broad market selling, VIX spike above X, or stock gaps below $Y at open")
+KEY RISK: one sentence on the biggest risk specific to 0-2 DTE for this ticker right now (theta burn, earnings gap, low liquidity, wide bid-ask, etc.)
 
 Be analytical, not promotional. Call out contradictions in the data. Do not make this longer than necessary.
 """
@@ -181,11 +185,14 @@ def run_ai_synthesis(
             model="claude-opus-4-5",
             max_tokens=2048,
             system=(
-                "You are a professional quantitative analyst specializing in short-to-medium "
-                "term stock analysis. You synthesize technical, fundamental, and sentiment "
-                "data into clear, actionable scenario analysis. You are decisive, data-driven, "
-                "and highlight both bullish and bearish signals honestly. You write in a clear, "
-                "structured format that a trader can act on quickly."
+                "You are a professional quantitative analyst specializing in short-dated options trading. "
+                "The trader you serve uses 0-2 DTE (days to expiration) options exclusively — meaning "
+                "theta decay is severe and only high-conviction, near-term setups are worth trading. "
+                "You synthesize technical, fundamental, and sentiment data into clear, actionable analysis "
+                "with a strong focus on intraday momentum, volatility environment, and catalyst timing. "
+                "You are decisive and data-driven. You highlight both bullish and bearish signals honestly "
+                "and you are NOT afraid to say NONE when the setup does not warrant a 0-2 DTE trade. "
+                "Write in a clear, structured format a trader can act on in under 60 seconds."
             ),
             messages=[{"role": "user", "content": prompt}]
         )
@@ -201,7 +208,7 @@ def run_ai_synthesis(
         bias_match = re.search(r"SUGGESTED BIAS[:\s\n]+([A-Z]+)", analysis_text, re.IGNORECASE)
         bias = bias_match.group(1).upper() if bias_match else "NEUTRAL"
 
-        # Extract trade setup fields
+        # Extract trade setup fields (0-2 DTE options)
         def _extract_field(pattern, text, cast=str, default=None):
             m = re.search(pattern, text, re.IGNORECASE)
             if m:
@@ -211,41 +218,51 @@ def run_ai_synthesis(
                     return default
             return default
 
-        trade_direction = _extract_field(r"TRADE DIRECTION:\s*(LONG|SHORT|NONE)", analysis_text, str, "NONE")
-        entry_price     = _extract_field(r"ENTRY PRICE:\s*\$?([\d.]+)", analysis_text, float)
-        stop_loss       = _extract_field(r"STOP LOSS:\s*\$?([\d.]+)", analysis_text, float)
-        target_1        = _extract_field(r"TARGET 1:\s*\$?([\d.]+)", analysis_text, float)
-        target_2        = _extract_field(r"TARGET 2:\s*\$?([\d.]+)", analysis_text, float)
-        risk_reward     = _extract_field(r"RISK/REWARD:\s*([\d.]+):1", analysis_text, float)
-        size_note_m     = re.search(r"POSITION SIZE NOTE:\s*(.+?)(?:\n|$)", analysis_text, re.IGNORECASE)
-        size_note       = size_note_m.group(1).strip() if size_note_m else None
-        entry_cond_m    = re.search(r"ENTRY CONDITION:\s*(.+?)(?:\n|$)", analysis_text, re.IGNORECASE)
-        entry_condition = entry_cond_m.group(1).strip() if entry_cond_m else None
-        valid_days      = _extract_field(r"TRADE VALID UNTIL:\s*(\d+)\s*days?", analysis_text, int)
+        def _extract_line(label, text):
+            m = re.search(rf"{label}:\s*(.+?)(?:\n|$)", text, re.IGNORECASE)
+            return m.group(1).strip() if m else None
 
-        rr_quality = (
-            "POOR"       if risk_reward and risk_reward < 1.5  else
-            "ACCEPTABLE" if risk_reward and risk_reward < 2.0  else
-            "GOOD"       if risk_reward                        else
-            "UNKNOWN"
-        )
+        contract_type   = _extract_field(r"CONTRACT TYPE:\s*(CALL|PUT|NONE)", analysis_text, str, "NONE")
+        expiry          = _extract_field(r"EXPIRY:\s*(0DTE|1DTE|2DTE)", analysis_text, str)
+        strike          = _extract_field(r"STRIKE:\s*\$?([\d.]+)", analysis_text, float)
+        moneyness       = _extract_field(r"MONEYNESS:\s*(ATM|SLIGHTLY_OTM|OTM)", analysis_text, str)
+        stock_target    = _extract_field(r"STOCK PRICE TARGET:\s*\$?([\d.]+)", analysis_text, float)
+        est_premium     = _extract_field(r"EST\. OPTION PREMIUM:\s*\$?([\d.]+)", analysis_text, float)
+        profit_target   = _extract_field(r"PROFIT TARGET:\s*(\d+)%", analysis_text, int)
+        stop_pct_m      = re.search(r"STOP RULE:\s*(.+?)(?:\n|$)", analysis_text, re.IGNORECASE)
+        stop_rule       = stop_pct_m.group(1).strip() if stop_pct_m else None
+        entry_condition = _extract_line("ENTRY CONDITION", analysis_text)
+        avoid_if        = _extract_line("AVOID IF", analysis_text)
+        key_risk        = _extract_line("KEY RISK", analysis_text)
+
+        # Rough quality flag based on contract type + confluence
+        if contract_type == "NONE":
+            setup_quality = "NO TRADE"
+        elif confluence_score >= 70:
+            setup_quality = "HIGH CONVICTION"
+        elif confluence_score >= 55:
+            setup_quality = "MODERATE"
+        else:
+            setup_quality = "LOW CONVICTION"
 
         trade_setup = {
-            "direction":       trade_direction,
-            "entry_price":     entry_price,
-            "stop_loss":       stop_loss,
-            "target_1":        target_1,
-            "target_2":        target_2,
-            "risk_reward":     risk_reward,
-            "rr_quality":      rr_quality,
-            "size_note":       size_note,
+            "contract_type":   contract_type,
+            "expiry":          expiry,
+            "strike":          strike,
+            "moneyness":       moneyness,
+            "stock_target":    stock_target,
+            "est_premium":     est_premium,
+            "profit_target":   profit_target,
+            "stop_rule":       stop_rule,
             "entry_condition": entry_condition,
-            "valid_days":      valid_days,
+            "avoid_if":        avoid_if,
+            "key_risk":        key_risk,
+            "setup_quality":   setup_quality,
         }
 
         log.info(
             f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias} | "
-            f"Trade={trade_direction} | R/R={risk_reward}:1 ({rr_quality})"
+            f"{contract_type} {expiry} ${strike} | Quality={setup_quality}"
         )
 
         if confluence_score >= CONFLUENCE_THRESHOLD:

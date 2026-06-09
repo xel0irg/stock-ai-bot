@@ -108,34 +108,46 @@ def print_terminal_report(
     else:
         print(f"  {Fore.RED}AI analysis unavailable: {ai.get('error','Unknown error')}{Style.RESET_ALL}")
 
-    # Trade Decision Worksheet
-    ts_data = ai.get("trade_setup", {})
-    direction = ts_data.get("direction", "NONE")
-    dir_color = Fore.GREEN if direction == "LONG" else Fore.RED if direction == "SHORT" else Fore.YELLOW
-    rr        = ts_data.get("risk_reward")
-    rr_q      = ts_data.get("rr_quality", "UNKNOWN")
-    rr_color  = Fore.GREEN if rr_q == "GOOD" else Fore.YELLOW if rr_q == "ACCEPTABLE" else Fore.RED
+    # Options Trade Worksheet (0-2 DTE)
+    ts_data  = ai.get("trade_setup", {})
+    contract = ts_data.get("contract_type", "NONE")
+    quality  = ts_data.get("setup_quality", "NO TRADE")
+    expiry   = ts_data.get("expiry", "N/A")
+    strike   = ts_data.get("strike")
+    moneyness = ts_data.get("moneyness", "")
+
+    con_color  = Fore.GREEN if contract == "CALL" else Fore.RED if contract == "PUT" else Fore.YELLOW
+    qual_color = (Fore.GREEN  if quality == "HIGH CONVICTION" else
+                  Fore.YELLOW if quality == "MODERATE"        else
+                  Fore.RED)
 
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
-    print(f"{Fore.WHITE}  📋  TRADE DECISION WORKSHEET{Style.RESET_ALL}")
+    print(f"{Fore.WHITE}  🎯  OPTIONS TRADE SETUP  (0-2 DTE){Style.RESET_ALL}")
     print(f"{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
-    print(f"  Direction:    {dir_color}{direction}{Style.RESET_ALL}")
-    if direction != "NONE":
-        print(f"  Entry:        ${Fore.YELLOW}{ts_data.get('entry_price', 'N/A')}{Style.RESET_ALL}")
-        print(f"  Stop Loss:    ${Fore.RED}{ts_data.get('stop_loss', 'N/A')}{Style.RESET_ALL}  ← exit here if wrong")
-        print(f"  Target 1:     ${Fore.GREEN}{ts_data.get('target_1', 'N/A')}{Style.RESET_ALL}  ← take partial profit")
-        print(f"  Target 2:     ${Fore.GREEN}{ts_data.get('target_2', 'N/A')}{Style.RESET_ALL}  ← full target")
-        rr_display = f"{rr}:1" if rr else "N/A"
-        print(f"  Risk/Reward:  {rr_color}{rr_display} ({rr_q}){Style.RESET_ALL}")
+    print(f"  Contract:      {con_color}{contract}{Style.RESET_ALL}  |  Conviction: {qual_color}{quality}{Style.RESET_ALL}")
+
+    if contract != "NONE":
+        strike_display = f"${strike}" if strike else "N/A"
+        print(f"  Expiry:        {Fore.YELLOW}{expiry}{Style.RESET_ALL}")
+        print(f"  Strike:        {Fore.YELLOW}{strike_display}{Style.RESET_ALL}  ({moneyness})")
+        if ts_data.get("stock_target"):
+            print(f"  Stock needs:   ${Fore.GREEN}{ts_data['stock_target']}{Style.RESET_ALL}  ← where stock must go")
+        if ts_data.get("est_premium"):
+            print(f"  Est. premium:  ${Fore.YELLOW}{ts_data['est_premium']}{Style.RESET_ALL}  per contract × 100 shares")
+        if ts_data.get("profit_target"):
+            print(f"  Profit target: {Fore.GREEN}{ts_data['profit_target']}%{Style.RESET_ALL} gain on contract")
+        print(f"  Max loss:      {Fore.RED}100% of premium{Style.RESET_ALL}  (always true for long options)")
+        if ts_data.get("stop_rule"):
+            print(f"  Stop rule:     {ts_data['stop_rule']}")
         if ts_data.get("entry_condition"):
-            print(f"  When to enter: {ts_data['entry_condition']}")
-        if ts_data.get("size_note"):
-            print(f"  Position size: {ts_data['size_note']}")
-        if ts_data.get("valid_days"):
-            print(f"  Setup expires: in {ts_data['valid_days']} trading days")
+            print(f"  Enter when:    {ts_data['entry_condition']}")
+        if ts_data.get("avoid_if"):
+            print(f"  {Fore.RED}Avoid if:{Style.RESET_ALL}      {ts_data['avoid_if']}")
+        if ts_data.get("key_risk"):
+            print(f"  {Fore.YELLOW}Key risk:{Style.RESET_ALL}      {ts_data['key_risk']}")
     else:
-        print(f"  {Fore.YELLOW}No trade setup — score below 50 or signals too mixed.{Style.RESET_ALL}")
-        print(f"  Watch for a cleaner entry before committing capital.")
+        print(f"  {Fore.YELLOW}No trade — signals too mixed or score below threshold.{Style.RESET_ALL}")
+        print(f"  0-2 DTE requires high conviction. Sit this one out.")
 
     # Final verdict
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
@@ -189,25 +201,28 @@ def save_report(
         f.write(f"CONFLUENCE SCORE: {ai.get('confluence_score','N/A')}/100\n")
         f.write(f"SUGGESTED BIAS:   {ai.get('suggested_bias','N/A')}\n\n")
 
-        f.write("── TRADE DECISION WORKSHEET ─────────────────────────\n")
-        ts_data   = ai.get("trade_setup", {})
-        direction = ts_data.get("direction", "NONE")
-        f.write(f"  Direction:     {direction}\n")
-        if direction != "NONE":
-            f.write(f"  Entry:         ${ts_data.get('entry_price', 'N/A')}\n")
-            f.write(f"  Stop Loss:     ${ts_data.get('stop_loss', 'N/A')}\n")
-            f.write(f"  Target 1:      ${ts_data.get('target_1', 'N/A')}\n")
-            f.write(f"  Target 2:      ${ts_data.get('target_2', 'N/A')}\n")
-            rr = ts_data.get('risk_reward')
-            f.write(f"  Risk/Reward:   {f'{rr}:1' if rr else 'N/A'} ({ts_data.get('rr_quality','UNKNOWN')})\n")
+        f.write("── OPTIONS TRADE SETUP (0-2 DTE) ────────────────────\n")
+        ts_data  = ai.get("trade_setup", {})
+        contract = ts_data.get("contract_type", "NONE")
+        f.write(f"  Contract:      {contract}\n")
+        f.write(f"  Conviction:    {ts_data.get('setup_quality', 'N/A')}\n")
+        if contract != "NONE":
+            f.write(f"  Expiry:        {ts_data.get('expiry', 'N/A')}\n")
+            f.write(f"  Strike:        ${ts_data.get('strike', 'N/A')}  ({ts_data.get('moneyness', 'N/A')})\n")
+            f.write(f"  Stock target:  ${ts_data.get('stock_target', 'N/A')}\n")
+            f.write(f"  Est. premium:  ${ts_data.get('est_premium', 'N/A')}\n")
+            f.write(f"  Profit target: {ts_data.get('profit_target', 'N/A')}%\n")
+            f.write(f"  Max loss:      100% of premium\n")
+            if ts_data.get("stop_rule"):
+                f.write(f"  Stop rule:     {ts_data['stop_rule']}\n")
             if ts_data.get("entry_condition"):
-                f.write(f"  When to enter: {ts_data['entry_condition']}\n")
-            if ts_data.get("size_note"):
-                f.write(f"  Position size: {ts_data['size_note']}\n")
-            if ts_data.get("valid_days"):
-                f.write(f"  Setup expires: in {ts_data['valid_days']} trading days\n")
+                f.write(f"  Enter when:    {ts_data['entry_condition']}\n")
+            if ts_data.get("avoid_if"):
+                f.write(f"  Avoid if:      {ts_data['avoid_if']}\n")
+            if ts_data.get("key_risk"):
+                f.write(f"  Key risk:      {ts_data['key_risk']}\n")
         else:
-            f.write("  No trade setup — score below 50 or signals too mixed.\n")
+            f.write("  No trade — signals too mixed or score below threshold.\n")
         f.write("\n")
 
         f.write("── AI ANALYSIS ─────────────────────────────────────\n\n")
