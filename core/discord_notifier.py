@@ -61,10 +61,54 @@ def _build_embed(
     sent_label = sent.get("overall_label", "neutral").upper()
     mentions   = sent.get("total_mentions", 0)
 
-    # AI analysis — trim to fit Discord field limit (1024 chars)
+    # AI analysis — trim to first 2 sections to make room for trade setup
     analysis = ai.get("analysis") or "AI analysis not available"
-    if len(analysis) > 1900:
-        analysis = analysis[:1900] + "..."
+    analysis_lines = analysis.split("\n")
+    analysis_preview = []
+    section_count = 0
+    for line in analysis_lines:
+        if line.startswith("##"):
+            section_count += 1
+            if section_count > 2:
+                break
+        analysis_preview.append(line)
+    analysis_short = "\n".join(analysis_preview).strip()
+    if len(analysis_short) > 900:
+        analysis_short = analysis_short[:900] + "..."
+
+    # Options trade setup field
+    ts_data  = ai.get("trade_setup", {})
+    contract = ts_data.get("contract_type", "NONE")
+    quality  = ts_data.get("setup_quality", "NO TRADE")
+
+    if contract != "NONE":
+        con_emoji  = "🟢" if contract == "CALL" else "🔴"
+        qual_emoji = ("🔥" if quality == "HIGH CONVICTION" else
+                      "⚠️" if quality == "MODERATE" else "❌")
+        strike_str  = f"${ts_data['strike']}" if ts_data.get("strike") else "N/A"
+        premium_str = f"${ts_data['est_premium']}" if ts_data.get("est_premium") else "N/A"
+        target_str  = f"${ts_data['stock_target']}" if ts_data.get("stock_target") else "N/A"
+        profit_str  = f"{ts_data['profit_target']}%" if ts_data.get("profit_target") else "N/A"
+
+        setup_value = (
+            f"{con_emoji} **{contract}** | {ts_data.get('expiry', 'N/A')} | "
+            f"Strike: `{strike_str}` ({ts_data.get('moneyness', 'N/A')})\n"
+            f"📍 Stock target: `{target_str}` | Premium: `{premium_str}`\n"
+            f"💰 Profit target: `{profit_str}` | Max loss: `100% of premium`\n"
+        )
+        if ts_data.get("stop_rule"):
+            setup_value += f"🛑 Stop: {ts_data['stop_rule']}\n"
+        if ts_data.get("entry_condition"):
+            setup_value += f"✅ Enter: {ts_data['entry_condition']}\n"
+        if ts_data.get("avoid_if"):
+            setup_value += f"⛔ Avoid if: {ts_data['avoid_if']}\n"
+        if ts_data.get("key_risk"):
+            setup_value += f"⚠️ Risk: {ts_data['key_risk']}"
+        setup_value = setup_value.strip()
+        conviction_str = f"{qual_emoji} {quality}"
+    else:
+        setup_value    = "❌ No trade — signals too mixed or score below threshold.\nSit this one out."
+        conviction_str = "❌ NO TRADE"
 
     embed = {
         "title": f"{emoji}  {ticker} — Stock AI Bot Signal",
@@ -122,13 +166,18 @@ def _build_embed(
                 "inline": True,
             },
             {
-                "name": f"🤖 AI Analysis",
-                "value": analysis[:1024],
+                "name": "🤖 AI Scenario",
+                "value": analysis_short[:1024],
                 "inline": False,
             },
             {
-                "name": f"🎯 Confluence Score",
-                "value": f"`[{bar}] {score}/100`\n**BIAS: {bias}** {emoji}",
+                "name": f"🎯 Options Trade Setup (0-2 DTE)",
+                "value": setup_value[:1024],
+                "inline": False,
+            },
+            {
+                "name": f"📊 Confluence Score",
+                "value": f"`[{bar}] {score}/100`  **BIAS: {bias}** {emoji}  |  {conviction_str}",
                 "inline": False,
             },
         ],

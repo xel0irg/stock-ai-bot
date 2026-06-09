@@ -53,7 +53,40 @@ def _format_alert(
     sent_score = sent.get("overall_compound", 0.0)
     mentions   = sent.get("total_mentions", 0)
 
-    # AI analysis — first 3 sections only for Telegram
+    # Options trade setup block
+    ts_data  = ai.get("trade_setup", {})
+    contract = ts_data.get("contract_type", "NONE")
+    quality  = ts_data.get("setup_quality", "NO TRADE")
+
+    if contract != "NONE":
+        con_emoji = "🟢" if contract == "CALL" else "🔴"
+        qual_emoji = ("🔥" if quality == "HIGH CONVICTION" else
+                      "⚠️" if quality == "MODERATE" else "❌")
+        strike_str  = f"${ts_data['strike']}" if ts_data.get("strike") else "N/A"
+        premium_str = f"${ts_data['est_premium']}" if ts_data.get("est_premium") else "N/A"
+        target_str  = f"${ts_data['stock_target']}" if ts_data.get("stock_target") else "N/A"
+        profit_str  = f"{ts_data['profit_target']}%" if ts_data.get("profit_target") else "N/A"
+
+        trade_block = (
+            f"{con_emoji} *{contract}* | {ts_data.get('expiry', 'N/A')} | "
+            f"Strike: `{strike_str}` ({ts_data.get('moneyness', 'N/A')})\n"
+            f"Stock target: `{target_str}` | Premium: `{premium_str}`\n"
+            f"Profit target: `{profit_str}` | Max loss: `100% of premium`\n"
+        )
+        if ts_data.get("stop_rule"):
+            trade_block += f"Stop: _{ts_data['stop_rule']}_\n"
+        if ts_data.get("entry_condition"):
+            trade_block += f"Enter: _{ts_data['entry_condition']}_\n"
+        if ts_data.get("avoid_if"):
+            trade_block += f"⛔ Avoid if: _{ts_data['avoid_if']}_\n"
+        if ts_data.get("key_risk"):
+            trade_block += f"⚠️ Risk: _{ts_data['key_risk']}_"
+        conviction_line = f"{qual_emoji} *{quality}*"
+    else:
+        trade_block     = "_No trade — signals too mixed or score below threshold._\n_Sit this one out._"
+        conviction_line = "❌ *NO TRADE*"
+
+    # AI analysis — first 2 sections only (market scenario + bull/bear)
     analysis = ai.get("analysis", "")
     short_analysis = ""
     if analysis:
@@ -63,13 +96,12 @@ def _format_alert(
         for line in lines:
             if line.startswith("##"):
                 section_count += 1
-                if section_count > 3:
+                if section_count > 2:
                     break
             preview.append(line)
         short_analysis = "\n".join(preview).strip()
-        # Trim to 2000 chars for Telegram
-        if len(short_analysis) > 2000:
-            short_analysis = short_analysis[:2000] + "..."
+        if len(short_analysis) > 800:
+            short_analysis = short_analysis[:800] + "..."
 
     msg = f"""
 {emoji} *STOCK AI BOT — {ticker}* {emoji}
@@ -95,10 +127,13 @@ Volume: `{ta.get('volume_ratio', 'N/A')}x` avg ({(ta.get('volume_signal') or 'N/
 📋 *FUNDAMENTALS*
 P/E: `{fund_d.get('pe_ratio', 'N/A')}` | Analyst: `{(fund_d.get('analyst_recommend_key') or 'N/A').upper()}` | Target: `${fund_d.get('analyst_target', 'N/A')}`
 
-🤖 *AI ANALYSIS*
+🤖 *AI SCENARIO*
 {short_analysis}
 
-🎯 *CONFLUENCE: [{bar}] {score}/100*
+🎯 *OPTIONS TRADE SETUP*
+{trade_block}
+
+*CONFLUENCE: [{bar}] {score}/100* | {conviction_line}
 *BIAS: {bias}* {emoji}
 """.strip()
 
