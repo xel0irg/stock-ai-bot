@@ -143,20 +143,20 @@ One word: BULLISH / BEARISH / NEUTRAL + confidence level (Low/Medium/High)
 **8. OPTIONS TRADE SETUP (0-2 DTE)**
 The trader uses SHORT-DATED OPTIONS (0-2 days to expiration). This means time decay (theta) is extreme — the move must happen TODAY or TOMORROW or the contract expires worthless. Only suggest a trade if the setup is high-conviction and has a clear near-term catalyst or momentum. If score < 55 or signals are mixed, use NONE — do not force a trade.
 
-Use EXACTLY this format (fill in real numbers):
+IMPORTANT: Output this section as plain key-value pairs ONLY. Do NOT use markdown tables, bold, or any formatting. Use exactly this format:
 
 CONTRACT TYPE: CALL or PUT or NONE
-EXPIRY: 0DTE (today) or 1DTE (tomorrow) or 2DTE — pick based on how fast you expect the move
-STRIKE: $X.XX (choose slightly OTM for leverage, ATM for higher delta — specify which and why in one word)
-MONEYNESS: ATM or SLIGHTLY_OTM or OTM (ATM = within 0.5% of price; SLIGHTLY_OTM = 0.5-2%; OTM = >2%)
-STOCK PRICE TARGET: $X.XX (where the stock needs to get to for this to be profitable — be specific)
-EST. OPTION PREMIUM: $X.XX (rough estimate of what this contract costs right now given ATR and IV environment)
-MAX LOSS: 100% of premium paid (always true for long options — acknowledge this explicitly)
-PROFIT TARGET: XX% gain on the contract (e.g. 50% / 100% / 150% — scale to conviction)
-STOP RULE: Exit if premium drops to $X.XX (e.g. 50% of entry cost) OR if stock breaks $X.XX level
-ENTRY CONDITION: one sentence — the exact trigger to enter (price level, volume confirmation, time of day)
-AVOID IF: one sentence — the specific condition that kills this setup (e.g. "avoid if broad market selling, VIX spike above X, or stock gaps below $Y at open")
-KEY RISK: one sentence on the biggest risk specific to 0-2 DTE for this ticker right now (theta burn, earnings gap, low liquidity, wide bid-ask, etc.)
+EXPIRY: 0DTE or 1DTE or 2DTE
+STRIKE: $X.XX
+MONEYNESS: ATM or SLIGHTLY_OTM or OTM
+STOCK PRICE TARGET: $X.XX
+EST. OPTION PREMIUM: $X.XX
+PROFIT TARGET: XX%
+MAX LOSS: 100% of premium paid
+STOP RULE: (one sentence)
+ENTRY CONDITION: (one sentence)
+AVOID IF: (one sentence)
+KEY RISK: (one sentence)
 
 Be analytical, not promotional. Call out contradictions in the data. Do not make this longer than necessary.
 """
@@ -209,28 +209,70 @@ def run_ai_synthesis(
         bias = bias_match.group(1).upper() if bias_match else "NEUTRAL"
 
         # Extract trade setup fields (0-2 DTE options)
-        def _extract_field(pattern, text, cast=str, default=None):
-            m = re.search(pattern, text, re.IGNORECASE)
-            if m:
-                try:
-                    return cast(m.group(1).strip())
-                except (ValueError, AttributeError):
-                    return default
+        # Claude sometimes outputs as plain "KEY: VALUE" and sometimes as markdown table
+        # "| **KEY** | **VALUE** |" — both patterns are handled below.
+        def _extract_field(patterns, text, cast=str, default=None):
+            if isinstance(patterns, str):
+                patterns = [patterns]
+            for pattern in patterns:
+                m = re.search(pattern, text, re.IGNORECASE)
+                if m:
+                    try:
+                        return cast(m.group(1).strip(" *|"))
+                    except (ValueError, AttributeError):
+                        continue
             return default
 
         def _extract_line(label, text):
-            m = re.search(rf"{label}:\s*(.+?)(?:\n|$)", text, re.IGNORECASE)
-            return m.group(1).strip() if m else None
+            # Match both "LABEL: value" and "| **LABEL** | value |"
+            patterns = [
+                rf"\|\s*\*{{0,2}}{label}\*{{0,2}}\s*\|\s*(.+?)\s*\|",
+                rf"{label}:\s*(.+?)(?:\n|$)",
+            ]
+            for pattern in patterns:
+                m = re.search(pattern, text, re.IGNORECASE)
+                if m:
+                    val = m.group(1).strip(" *|")
+                    if val:
+                        return val
+            return None
 
-        contract_type   = _extract_field(r"CONTRACT TYPE:\s*(CALL|PUT|NONE)", analysis_text, str, "NONE")
-        expiry          = _extract_field(r"EXPIRY:\s*(0DTE|1DTE|2DTE)", analysis_text, str)
-        strike          = _extract_field(r"STRIKE:\s*\$?([\d.]+)", analysis_text, float)
-        moneyness       = _extract_field(r"MONEYNESS:\s*(ATM|SLIGHTLY_OTM|OTM)", analysis_text, str)
-        stock_target    = _extract_field(r"STOCK PRICE TARGET:\s*\$?([\d.]+)", analysis_text, float)
-        est_premium     = _extract_field(r"EST\. OPTION PREMIUM:\s*\$?([\d.]+)", analysis_text, float)
-        profit_target   = _extract_field(r"PROFIT TARGET:\s*(\d+)%", analysis_text, int)
-        stop_pct_m      = re.search(r"STOP RULE:\s*(.+?)(?:\n|$)", analysis_text, re.IGNORECASE)
-        stop_rule       = stop_pct_m.group(1).strip() if stop_pct_m else None
+        contract_type = _extract_field([
+            r"CONTRACT TYPE:\s*(CALL|PUT|NONE)",
+            r"\|\s*\*{0,2}CONTRACT TYPE\*{0,2}\s*\|\s*\*{0,2}(CALL|PUT|NONE)\*{0,2}\s*\|",
+        ], analysis_text, str, "NONE")
+
+        expiry = _extract_field([
+            r"EXPIRY:\s*(0DTE|1DTE|2DTE)",
+            r"\|\s*\*{0,2}EXPIRY\*{0,2}\s*\|\s*\*{0,2}(0DTE|1DTE|2DTE)\*{0,2}\s*\|",
+        ], analysis_text, str)
+
+        strike = _extract_field([
+            r"STRIKE:\s*\$?([\d.]+)",
+            r"\|\s*\*{0,2}STRIKE\*{0,2}\s*\|\s*\*{0,2}\$?([\d.]+)",
+        ], analysis_text, float)
+
+        moneyness = _extract_field([
+            r"MONEYNESS:\s*(ATM|SLIGHTLY_OTM|OTM)",
+            r"\|\s*\*{0,2}MONEYNESS\*{0,2}\s*\|\s*\*{0,2}(ATM|SLIGHTLY_OTM|OTM)\*{0,2}\s*\|",
+        ], analysis_text, str)
+
+        stock_target = _extract_field([
+            r"STOCK PRICE TARGET:\s*\$?([\d.]+)",
+            r"\|\s*\*{0,2}STOCK PRICE TARGET\*{0,2}\s*\|\s*\*{0,2}\$?([\d.]+)",
+        ], analysis_text, float)
+
+        est_premium = _extract_field([
+            r"EST\.? OPTION PREMIUM:\s*\$?([\d.]+)",
+            r"\|\s*\*{0,2}EST\.? OPTION PREMIUM\*{0,2}\s*\|\s*\*{0,2}\$?([\d.]+)",
+        ], analysis_text, float)
+
+        profit_target = _extract_field([
+            r"PROFIT TARGET:\s*(\d+)%",
+            r"\|\s*\*{0,2}PROFIT TARGET\*{0,2}\s*\|\s*\*{0,2}(\d+)%",
+        ], analysis_text, int)
+
+        stop_rule       = _extract_line("STOP RULE", analysis_text)
         entry_condition = _extract_line("ENTRY CONDITION", analysis_text)
         avoid_if        = _extract_line("AVOID IF", analysis_text)
         key_risk        = _extract_line("KEY RISK", analysis_text)
