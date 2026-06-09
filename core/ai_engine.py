@@ -129,12 +129,14 @@ What unexpected events or data points could significantly change the direction? 
 Specific price levels based on the data: support(s), resistance(s), and the critical level that changes your thesis.
 
 **6. CONFLUENCE SCORE: X/100**
-Rate the overall directional conviction on a scale of 0-100 where:
-- 0-35: Bearish
-- 36-50: Weak/uncertain
-- 51-65: Slightly bullish
-- 66-80: Bullish
-- 81-100: Strongly bullish
+Rate the overall TRADE CONVICTION on a scale of 0-100 where conviction means "how clearly do the signals align to support a high-probability directional move in the next 1-2 days":
+- 0-30:   No trade — signals are contradictory or data is too thin
+- 31-54:  Low conviction — some signals align but too much noise for 0-2 DTE
+- 55-69:  Moderate conviction — majority of signals agree, watchable setup
+- 70-84:  High conviction — strong signal alignment with volume/momentum confirmation
+- 85-100: Exceptional — near-perfect setup with catalyst, volume, trend, and momentum all aligned
+
+IMPORTANT: This score is NOT a bullish/bearish meter. A clean bearish setup with all signals aligned should score just as high as a clean bullish one. Score based on CLARITY and ALIGNMENT of signals, not direction.
 Explain the score in 1 sentence.
 
 **7. SUGGESTED BIAS**
