@@ -80,52 +80,59 @@ def aggregate_sentiments(posts: List[Dict]) -> Dict[str, Any]:
 # ══════════════════════════════════════════════════════════
 #  REDDIT
 # ══════════════════════════════════════════════════════════
-def _make_reddit() -> Optional[praw.Reddit]:
-    if not REDDIT_CLIENT_ID or REDDIT_CLIENT_ID == "your_reddit_client_id":
-        log.warning("Reddit credentials not configured — skipping Reddit scrape")
-        return None
-    try:
-        r = praw.Reddit(
-            client_id=REDDIT_CLIENT_ID,
-            client_secret=REDDIT_CLIENT_SECRET,
-            user_agent=REDDIT_USER_AGENT,
-        )
-        r.user.me()  # test auth
-        return r
-    except Exception as e:
-        log.warning(f"Reddit auth failed: {e}")
-        return None
-
-
+# ══════════════════════════════════════════════════════════
+#  REDDIT — No API key needed, uses public JSON endpoints
+# ══════════════════════════════════════════════════════════
 def scrape_reddit(ticker: str, limit: int = 100) -> Dict[str, Any]:
-    reddit = _make_reddit()
-    if reddit is None:
-        return {"source": "reddit", "posts": [], "aggregated": aggregate_sentiments([])}
-
+    """
+    Scrape Reddit using their public JSON API — no credentials needed.
+    Works by hitting reddit.com/r/SUB/search.json directly.
+    """
     posts    = []
     mentions = 0
-    patterns = [
-        re.compile(rf"\b{re.escape(ticker)}\b", re.IGNORECASE),
-        re.compile(rf"\${re.escape(ticker)}\b", re.IGNORECASE),
-    ]
+    headers  = {"User-Agent": "StockAIBot/1.0 (research bot)"}
 
     for sub_name in REDDIT_SUBS:
         try:
-            sub = reddit.subreddit(sub_name)
-            for post in sub.hot(limit=limit // len(REDDIT_SUBS)):
-                text = f"{post.title} {post.selftext or ''}".strip()
-                if any(p.search(text) for p in patterns):
-                    mentions += 1
-                    sent = analyze_text(text)
-                    posts.append({
-                        "source":    f"r/{sub_name}",
-                        "title":     post.title[:200],
-                        "score":     post.score,
-                        "comments":  post.num_comments,
-                        "url":       f"https://reddit.com{post.permalink}",
-                        "sentiment": sent,
-                        "created":   datetime.fromtimestamp(post.created_utc).isoformat(),
-                    })
+            # Use hot posts endpoint — more permissive than search
+            url = f"https://old.reddit.com/r/{sub_name}/hot.json"
+            params = {"limit": max(25, limit // len(REDDIT_SUBS))}
+            resp = requests.get(url, headers=headers, params=params, timeout=10)
+            if resp.status_code != 200:
+                log.warning(f"Reddit r/{sub_name} returned {resp.status_code}")
+                continue
+
+            data = resp.json()
+            children = data.get("data", {}).get("children", [])
+
+            patterns = [
+                re.compile(rf"\b{re.escape(ticker)}\b", re.IGNORECASE),
+                re.compile(rf"\${re.escape(ticker)}\b", re.IGNORECASE),
+            ]
+
+            for child in children:
+                post = child.get("data", {})
+                title = post.get("title", "")
+                body  = post.get("selftext", "") or ""
+                text  = f"{title} {body}".strip()
+                if not any(p.search(text) for p in patterns):
+                    continue
+                sent = analyze_text(text)
+                mentions += 1
+                posts.append({
+                    "source":    f"r/{sub_name}",
+                    "title":     title[:200],
+                    "score":     post.get("score", 0),
+                    "comments":  post.get("num_comments", 0),
+                    "url":       f"https://reddit.com{post.get('permalink', '')}",
+                    "sentiment": sent,
+                    "created":   datetime.fromtimestamp(
+                        post.get("created_utc", 0)
+                    ).isoformat(),
+                })
+
+            time.sleep(1)  # Be polite to Reddit
+
         except Exception as e:
             log.warning(f"Reddit r/{sub_name} error: {e}")
 
@@ -141,59 +148,74 @@ def scrape_reddit(ticker: str, limit: int = 100) -> Dict[str, Any]:
 # ══════════════════════════════════════════════════════════
 #  STOCKTWITS
 # ══════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════
+#  STOCKTWITS — Web scrape (API now requires auth)
+# ══════════════════════════════════════════════════════════
 def scrape_stocktwits(ticker: str) -> Dict[str, Any]:
-    """Scrape StockTwits public API — no key required for basic access."""
-    url  = f"https://api.stocktwits.com/api/2/streams/symbol/{ticker}.json"
+    """
+    Scrape StockTwits sentiment data.
+    Their public API now returns 403 so we use their stream endpoint
+    with a browser-like user agent.
+    """
+    posts      = []
+    bull_count = 0
+    bear_count = 0
+
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        ),
+        "Accept": "application/json, text/plain, */*",
+        "Referer": f"https://stocktwits.com/symbol/{ticker}",
+    }
+
+    # Try the stream endpoint with browser headers
+    url = f"https://api.stocktwits.com/api/2/streams/symbol/{ticker}.json"
     params = {"limit": 30}
     if STOCKTWITS_TOKEN and STOCKTWITS_TOKEN != "optional_stocktwits_token":
         params["access_token"] = STOCKTWITS_TOKEN
 
-    posts = []
-    bull_count = 0
-    bear_count = 0
-
     try:
-        resp = requests.get(url, params=params, timeout=10)
-        if resp.status_code != 200:
-            log.warning(f"StockTwits returned {resp.status_code} for {ticker}")
-            return {"source": "stocktwits", "posts": [], "aggregated": aggregate_sentiments([])}
+        resp = requests.get(url, headers=headers, params=params, timeout=10)
 
-        data = resp.json()
-        messages = data.get("messages", [])
+        if resp.status_code == 200:
+            messages = resp.json().get("messages", [])
+            for msg in messages:
+                body = msg.get("body", "")
+                ent  = msg.get("entities", {}).get("sentiment", {})
+                basic = ent.get("basic", "").lower() if ent else ""
 
-        for msg in messages:
-            body  = msg.get("body", "")
-            ent   = msg.get("entities", {}).get("sentiment", {})
-            basic = ent.get("basic", "").lower() if ent else ""
+                if basic == "bullish":
+                    bull_count += 1
+                    forced_compound = 0.5
+                elif basic == "bearish":
+                    bear_count += 1
+                    forced_compound = -0.5
+                else:
+                    forced_compound = None
 
-            # Use StockTwits native bullish/bearish signal when available
-            if basic == "bullish":
-                bull_count += 1
-                forced_compound = 0.5
-            elif basic == "bearish":
-                bear_count += 1
-                forced_compound = -0.5
-            else:
-                forced_compound = None
+                sent = analyze_text(body)
+                if forced_compound is not None:
+                    sent["compound"] = forced_compound
 
-            sent = analyze_text(body)
-            if forced_compound is not None:
-                sent["compound"] = forced_compound
+                posts.append({
+                    "source":           "stocktwits",
+                    "text":             body[:200],
+                    "user":             msg.get("user", {}).get("username"),
+                    "native_sentiment": basic or "none",
+                    "sentiment":        sent,
+                    "created":          msg.get("created_at", ""),
+                    "likes":            msg.get("likes", {}).get("total", 0),
+                })
 
-            posts.append({
-                "source":    "stocktwits",
-                "text":      body[:200],
-                "user":      msg.get("user", {}).get("username"),
-                "native_sentiment": basic or "none",
-                "sentiment": sent,
-                "created":   msg.get("created_at", ""),
-                "likes":     msg.get("likes", {}).get("total", 0),
-            })
-
-        log.info(
-            f"StockTwits {ticker}: {len(messages)} messages | "
-            f"🐂 {bull_count} bull / 🐻 {bear_count} bear"
-        )
+            log.info(
+                f"StockTwits {ticker}: {len(messages)} messages | "
+                f"🐂 {bull_count} bull / 🐻 {bear_count} bear"
+            )
+        else:
+            log.warning(f"StockTwits returned {resp.status_code} for {ticker} — skipping")
 
     except Exception as e:
         log.warning(f"StockTwits error for {ticker}: {e}")
