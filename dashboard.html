@@ -179,6 +179,7 @@ html, body { background: var(--bg); color: var(--text); font-family: var(--sans)
   </div>
   <div class="tb-right">
     <span class="tb-countdown" id="countdown">Refreshing in 5:00</span>
+    <span class="tb-meta" id="data-source" style="color:#444"></span>
     <span class="tb-meta" id="last-scan"></span>
     <button class="refresh-btn" onclick="loadData()">↻ Refresh</button>
   </div>
@@ -235,7 +236,9 @@ async function loadData() {
   try {
     const res = await fetch(`${API}/latest`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    const payload = await res.json();
+    const data = payload.reports || payload;
+    const source = payload.source || "local";
     document.getElementById('err').style.display = 'none';
     render(data);
   } catch(e) {
@@ -271,6 +274,7 @@ function render(reports) {
   const latest = reports.map(r=>r.timestamp).sort().pop();
   if (latest) {
     const d = new Date(latest);
+    document.getElementById('data-source').textContent = source === 'github' ? '☁ GitHub' : '💻 Local';
     document.getElementById('last-scan').textContent =
       `Last scan ${d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})} · ${reports.length} tickers`;
   }
