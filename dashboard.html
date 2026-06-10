@@ -237,9 +237,11 @@ async function loadData() {
     const res = await fetch(`${API}/latest`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const payload = await res.json();
-    const data = payload.reports || payload;
-    const source = payload.source || "local";
+    const data = Array.isArray(payload) ? payload : (payload.reports || []);
+    const source = payload.source || 'local';
     document.getElementById('err').style.display = 'none';
+    const srcEl = document.getElementById('data-source');
+    if (srcEl) srcEl.textContent = source === 'github' ? '☁ GitHub' : '💻 Local';
     render(data);
   } catch(e) {
     const el = document.getElementById('err');
@@ -274,7 +276,6 @@ function render(reports) {
   const latest = reports.map(r=>r.timestamp).sort().pop();
   if (latest) {
     const d = new Date(latest);
-    document.getElementById('data-source').textContent = source === 'github' ? '☁ GitHub' : '💻 Local';
     document.getElementById('last-scan').textContent =
       `Last scan ${d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})} · ${reports.length} tickers`;
   }
