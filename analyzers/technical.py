@@ -507,6 +507,79 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
     return result
 
 
+def fetch_options_flow(ticker: str) -> Dict[str, Any]:
+    """
+    Fetch unusual options activity.
+    Uses Yahoo Finance options chain (free, no key needed).
+    """
+    result = {
+        "has_data": False,
+        "unusual_calls": [],
+        "unusual_puts": [],
+        "put_call_ratio": None,
+        "summary": "No options data available",
+    }
+    try:
+        tk = yf.Ticker(ticker)
+        exps = tk.options
+        if not exps:
+            return result
+
+        # Grab nearest expiration
+        exp = exps[0]
+        chain = tk.option_chain(exp)
+        calls = chain.calls
+        puts  = chain.puts
+
+        if calls.empty or puts.empty:
+            return result
+
+        # Put/Call ratio by volume
+        total_call_vol = calls["volume"].fillna(0).sum()
+        total_put_vol  = puts["volume"].fillna(0).sum()
+        pc_ratio = round(total_put_vol / total_call_vol, 2) if total_call_vol > 0 else None
+        result["put_call_ratio"] = pc_ratio
+
+        # Find unusual options (high volume relative to open interest)
+        def flag_unusual(df, kind):
+            unusual = []
+            for _, row in df.iterrows():
+                vol = row.get("volume", 0) or 0
+                oi  = row.get("openInterest", 1) or 1
+                if vol > 500 and vol / oi > 0.5:
+                    unusual.append({
+                        "strike":  row.get("strike"),
+                        "expiry":  exp,
+                        "volume":  int(vol),
+                        "oi":      int(oi),
+                        "iv":      round(row.get("impliedVolatility", 0) * 100, 1),
+                        "type":    kind,
+                    })
+            return sorted(unusual, key=lambda x: x["volume"], reverse=True)[:5]
+
+        result["unusual_calls"] = flag_unusual(calls, "CALL")
+        result["unusual_puts"]  = flag_unusual(puts, "PUT")
+
+        # Build summary string
+        unusual_count = len(result["unusual_calls"]) + len(result["unusual_puts"])
+        sentiment = (
+            "BULLISH OPTIONS FLOW" if len(result["unusual_calls"]) > len(result["unusual_puts"]) else
+            "BEARISH OPTIONS FLOW" if len(result["unusual_puts"]) > len(result["unusual_calls"]) else
+            "NEUTRAL OPTIONS FLOW"
+        )
+        result["has_data"] = True
+        result["summary"]  = (
+            f"{sentiment} | P/C Ratio: {pc_ratio} | "
+            f"Unusual activity: {unusual_count} contracts flagged"
+        )
+        log.info(f"Options flow for {ticker}: {result['summary']}")
+
+    except Exception as e:
+        log.warning(f"Options flow error for {ticker}: {e}")
+
+    return result
+
+
 def fetch_short_interest(ticker: str) -> Dict[str, Any]:
     """Fetch short interest data from Yahoo Finance info."""
     result = {"short_ratio": None, "short_pct_float": None, "summary": "No data"}
