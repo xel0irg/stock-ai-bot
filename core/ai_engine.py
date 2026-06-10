@@ -140,10 +140,20 @@ IMPORTANT: This score is NOT a bullish/bearish meter. A clean bearish setup with
 Explain the score in 1 sentence.
 
 **7. SUGGESTED BIAS**
-One word: BULLISH / BEARISH / NEUTRAL + confidence level (Low/Medium/High)
+State the direction AND the options contract it implies:
+- BULLISH → CALLS
+- BEARISH → PUTS  
+- NEUTRAL → NO TRADE
+Include confidence level (Low/Medium/High). Example: "BEARISH → PUTS (Medium confidence)"
 
 **8. OPTIONS TRADE SETUP (0-2 DTE)**
-The trader uses SHORT-DATED OPTIONS (0-2 days to expiration). This means time decay (theta) is extreme — the move must happen TODAY or TOMORROW or the contract expires worthless. Only suggest a trade if the setup is high-conviction and has a clear near-term catalyst or momentum. If score < 55 or signals are mixed, use NONE — do not force a trade.
+The trader uses SHORT-DATED OPTIONS (0-2 days to expiration) and trades BOTH directions equally — CALLS on bullish setups, PUTS on bearish setups. Theta decay is extreme so only suggest a trade if signals are clearly aligned in one direction with momentum confirmation.
+
+CRITICAL RULES:
+- If signals are clearly BEARISH and aligned → suggest PUT, not NONE
+- If signals are clearly BULLISH and aligned → suggest CALL, not NONE  
+- Only use NONE if signals are genuinely mixed/contradictory OR score < 55
+- Do NOT default to NONE just because the setup is bearish
 
 IMPORTANT: Output this section as plain key-value pairs ONLY. Do NOT use markdown tables, bold, or any formatting. Use exactly this format:
 
@@ -151,12 +161,12 @@ CONTRACT TYPE: CALL or PUT or NONE
 EXPIRY: 0DTE or 1DTE or 2DTE
 STRIKE: $X.XX
 MONEYNESS: ATM or SLIGHTLY_OTM or OTM
-STOCK PRICE TARGET: $X.XX
+STOCK PRICE TARGET: $X.XX (for PUTs this is where price needs to DROP to)
 EST. OPTION PREMIUM: $X.XX
 PROFIT TARGET: XX%
 MAX LOSS: 100% of premium paid
 STOP RULE: (one sentence)
-ENTRY CONDITION: (one sentence)
+ENTRY CONDITION: (one sentence — for PUTs this could be a breakdown below support or rejection at resistance)
 AVOID IF: (one sentence)
 KEY RISK: (one sentence)
 
@@ -188,12 +198,12 @@ def run_ai_synthesis(
             max_tokens=2048,
             system=(
                 "You are a professional quantitative analyst specializing in short-dated options trading. "
-                "The trader you serve uses 0-2 DTE (days to expiration) options exclusively — meaning "
-                "theta decay is severe and only high-conviction, near-term setups are worth trading. "
-                "You synthesize technical, fundamental, and sentiment data into clear, actionable analysis "
-                "with a strong focus on intraday momentum, volatility environment, and catalyst timing. "
-                "You are decisive and data-driven. You highlight both bullish and bearish signals honestly "
-                "and you are NOT afraid to say NONE when the setup does not warrant a 0-2 DTE trade. "
+                "The trader you serve uses 0-2 DTE (days to expiration) options exclusively and trades "
+                "BOTH directions equally — CALLS on bullish setups, PUTS on bearish setups. "
+                "Theta decay is severe so only high-conviction setups are worth trading, but a clean "
+                "bearish setup is just as valid a trade as a clean bullish one. Never default to NONE "
+                "simply because a setup is bearish — suggest PUTs when bearish signals are clearly aligned. "
+                "You are decisive and data-driven. Call out contradictions honestly. "
                 "Write in a clear, structured format a trader can act on in under 60 seconds."
             ),
             messages=[{"role": "user", "content": prompt}]
@@ -206,8 +216,8 @@ def run_ai_synthesis(
         score_match = re.search(r"CONFLUENCE SCORE[:\s]+(\d+)/100", analysis_text, re.IGNORECASE)
         confluence_score = int(score_match.group(1)) if score_match else 50
 
-        # Extract bias
-        bias_match = re.search(r"SUGGESTED BIAS[:\s\n]+([A-Z]+)", analysis_text, re.IGNORECASE)
+        # Extract bias — handles both old "BULLISH" and new "BEARISH → PUTS (Medium)" format
+        bias_match = re.search(r"SUGGESTED BIAS[:\s\n*]+([A-Z]+)", analysis_text, re.IGNORECASE)
         bias = bias_match.group(1).upper() if bias_match else "NEUTRAL"
 
         # Extract trade setup fields (0-2 DTE options)
