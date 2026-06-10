@@ -238,7 +238,203 @@ def score_technicals(ta: Dict[str, Any]) -> int:
     return max(0, min(100, score))
 
 
-def fetch_options_flow(ticker: str) -> Dict[str, Any]:
+def fetch_intraday(ticker: str) -> Dict[str, Any]:
+    """
+    Fetch 15-min and 1-hour intraday data and compute key signals
+    for entry timing on 0-2 DTE options trades.
+
+    Returns a dict with signals for both timeframes plus a combined
+    intraday bias that can confirm or contradict the daily trend.
+    """
+    result = {
+        "has_data":      False,
+        "tf_15m":        {},
+        "tf_1h":         {},
+        "intraday_bias": "NEUTRAL",
+        "confirms_daily": None,
+        "summary":       "No intraday data",
+    }
+
+    def _compute_intraday(df: pd.DataFrame, label: str) -> Dict[str, Any]:
+        """Compute intraday signals for one timeframe."""
+        if df.empty or len(df) < 10:
+            return {}
+
+        close  = df["close"].dropna()
+        high   = df["high"].dropna()
+        low    = df["low"].dropna()
+        volume = df["volume"].dropna()
+
+        if len(close) < 10:
+            return {}
+
+        last = float(close.iloc[-1])
+        if np.isnan(last) or last <= 0:
+            return {}
+
+        signals: Dict[str, Any] = {}
+        signals["last_price"] = round(last, 2)
+        signals["candles"]    = len(close)
+
+        # RSI (shorter window for intraday)
+        try:
+            rsi = float(RSIIndicator(close, window=9).rsi().iloc[-1])
+            signals["rsi"] = round(rsi, 2)
+            signals["rsi_signal"] = (
+                "oversold"   if rsi < 30 else
+                "overbought" if rsi > 70 else
+                "neutral"
+            )
+        except Exception:
+            signals["rsi"] = None
+
+        # MACD
+        try:
+            macd_ind  = MACD(close, window_fast=12, window_slow=26, window_sign=9)
+            macd_hist = float(macd_ind.macd_diff().iloc[-1])
+            macd_prev = float(macd_ind.macd_diff().iloc[-2])
+            signals["macd_hist"] = round(macd_hist, 4)
+            signals["macd_direction"] = (
+                "bullish_cross" if macd_hist > 0 and macd_prev <= 0 else
+                "bearish_cross" if macd_hist < 0 and macd_prev >= 0 else
+                "bullish"       if macd_hist > 0 else
+                "bearish"
+            )
+        except Exception:
+            signals["macd_direction"] = None
+
+        # EMA 9 and 21
+        try:
+            ema9  = float(EMAIndicator(close, window=9).ema_indicator().iloc[-1])
+            ema21 = float(EMAIndicator(close, window=21).ema_indicator().iloc[-1])
+            signals["ema9"]  = round(ema9, 2)
+            signals["ema21"] = round(ema21, 2)
+            signals["ema_trend"] = (
+                "bullish" if last > ema9 > ema21 else
+                "bearish" if last < ema9 < ema21 else
+                "mixed"
+            )
+        except Exception:
+            signals["ema_trend"] = None
+
+        # VWAP (key intraday level — price above = bullish, below = bearish)
+        try:
+            vwap = float(VolumeWeightedAveragePrice(
+                high, low, close, volume
+            ).volume_weighted_average_price().iloc[-1])
+            signals["vwap"] = round(vwap, 2)
+            signals["vwap_position"] = (
+                "above_vwap" if last > vwap else "below_vwap"
+            )
+            signals["vwap_distance_pct"] = round(((last - vwap) / vwap) * 100, 3)
+        except Exception:
+            signals["vwap"] = None
+            signals["vwap_position"] = None
+
+        # Volume surge on most recent candle
+        try:
+            vol_ma = float(volume.rolling(20).mean().iloc[-1])
+            last_vol = float(volume.iloc[-1])
+            vol_ratio = round(last_vol / vol_ma, 2) if vol_ma > 0 else 1.0
+            signals["volume_ratio"] = vol_ratio
+            signals["volume_signal"] = (
+                "surge"    if vol_ratio > 2.0 else
+                "elevated" if vol_ratio > 1.3 else
+                "normal"   if vol_ratio > 0.7 else
+                "low"
+            )
+        except Exception:
+            signals["volume_ratio"] = None
+
+        # Recent candle momentum (last 3 candles)
+        try:
+            recent_ret = float((close.iloc[-1] / close.iloc[-4] - 1) * 100)
+            signals["momentum_3c"] = round(recent_ret, 3)
+            signals["momentum_direction"] = "bullish" if recent_ret > 0 else "bearish"
+        except Exception:
+            signals["momentum_3c"] = None
+
+        # Determine overall intraday bias for this timeframe
+        bull_signals = 0
+        bear_signals = 0
+        if signals.get("macd_direction") in ("bullish", "bullish_cross"): bull_signals += 1
+        if signals.get("macd_direction") in ("bearish", "bearish_cross"): bear_signals += 1
+        if signals.get("ema_trend") == "bullish": bull_signals += 1
+        if signals.get("ema_trend") == "bearish": bear_signals += 1
+        if signals.get("vwap_position") == "above_vwap": bull_signals += 1
+        if signals.get("vwap_position") == "below_vwap": bear_signals += 1
+        if signals.get("momentum_direction") == "bullish": bull_signals += 1
+        if signals.get("momentum_direction") == "bearish": bear_signals += 1
+
+        signals["bias"] = (
+            "BULLISH" if bull_signals >= 3 else
+            "BEARISH" if bear_signals >= 3 else
+            "MIXED"
+        )
+        signals["bull_signals"] = bull_signals
+        signals["bear_signals"] = bear_signals
+
+        return signals
+
+    try:
+        # 15-minute: last 2 days of data
+        df_15m = yf.download(ticker, period="2d", interval="15m",
+                             progress=False, auto_adjust=True)
+        if isinstance(df_15m.columns, pd.MultiIndex):
+            df_15m.columns = [col[0].lower() for col in df_15m.columns]
+        else:
+            df_15m.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_15m.columns]
+
+        # 1-hour: last 5 days of data
+        df_1h = yf.download(ticker, period="5d", interval="1h",
+                            progress=False, auto_adjust=True)
+        if isinstance(df_1h.columns, pd.MultiIndex):
+            df_1h.columns = [col[0].lower() for col in df_1h.columns]
+        else:
+            df_1h.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_1h.columns]
+
+        tf_15m = _compute_intraday(df_15m, "15m")
+        tf_1h  = _compute_intraday(df_1h,  "1h")
+
+        if not tf_15m and not tf_1h:
+            return result
+
+        result["tf_15m"]   = tf_15m
+        result["tf_1h"]    = tf_1h
+        result["has_data"] = True
+
+        # Combined intraday bias — both timeframes must agree for HIGH conviction
+        bias_15m = tf_15m.get("bias", "MIXED")
+        bias_1h  = tf_1h.get("bias",  "MIXED")
+
+        if bias_15m == "BULLISH" and bias_1h == "BULLISH":
+            result["intraday_bias"] = "BULLISH"
+        elif bias_15m == "BEARISH" and bias_1h == "BEARISH":
+            result["intraday_bias"] = "BEARISH"
+        elif bias_15m == "BEARISH" or bias_1h == "BEARISH":
+            result["intraday_bias"] = "LEANING_BEARISH"
+        elif bias_15m == "BULLISH" or bias_1h == "BULLISH":
+            result["intraday_bias"] = "LEANING_BULLISH"
+        else:
+            result["intraday_bias"] = "MIXED"
+
+        # VWAP summary for prompt
+        vwap_15m = tf_15m.get("vwap_position", "")
+        vwap_1h  = tf_1h.get("vwap_position", "")
+        vwap_str = f"15m: {vwap_15m.replace('_', ' ').upper() if vwap_15m else 'N/A'} | 1H: {vwap_1h.replace('_', ' ').upper() if vwap_1h else 'N/A'}"
+
+        result["summary"] = (
+            f"Intraday Bias: {result['intraday_bias']} | "
+            f"VWAP: {vwap_str} | "
+            f"15m: {bias_15m} ({tf_15m.get('bull_signals',0)}B/{tf_15m.get('bear_signals',0)}Br) | "
+            f"1H: {bias_1h} ({tf_1h.get('bull_signals',0)}B/{tf_1h.get('bear_signals',0)}Br)"
+        )
+        log.info(f"Intraday signals for {ticker}: {result['summary']}")
+
+    except Exception as e:
+        log.warning(f"Intraday fetch error for {ticker}: {e}")
+
+    return result
     """
     Fetch unusual options activity.
     Uses Yahoo Finance options chain (free, no key needed).
@@ -350,8 +546,9 @@ def run_technical_analysis(ticker: str) -> Dict[str, Any]:
     ta  = compute_technicals(df)
     ta_score = score_technicals(ta)
 
-    options = fetch_options_flow(ticker)
-    short   = fetch_short_interest(ticker)
+    options  = fetch_options_flow(ticker)
+    short    = fetch_short_interest(ticker)
+    intraday = fetch_intraday(ticker)
 
     return {
         "ticker":         ticker,
@@ -360,4 +557,5 @@ def run_technical_analysis(ticker: str) -> Dict[str, Any]:
         "ta_score":       ta_score,
         "options_flow":   options,
         "short_interest": short,
+        "intraday":       intraday,
     }

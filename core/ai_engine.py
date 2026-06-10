@@ -46,9 +46,55 @@ def _build_analysis_prompt(
         for p in sent.get("reddit", {}).get("posts", [])[:3]
     ]) or "  No Reddit posts found"
 
+    intraday = tech.get("intraday", {})
+    tf_15m   = intraday.get("tf_15m", {})
+    tf_1h    = intraday.get("tf_1h", {})
+
+    # Format intraday section
+    if intraday.get("has_data"):
+        intraday_section = f"""
+═══════════════════════════════════════════════
+⏱  INTRADAY SIGNALS (Entry Timing)
+═══════════════════════════════════════════════
+Combined Intraday Bias: {intraday.get('intraday_bias', 'N/A')}
+{intraday.get('summary', '')}
+
+15-MINUTE TIMEFRAME:
+  Price vs VWAP: {tf_15m.get('vwap_position', 'N/A').replace('_', ' ').upper()} (VWAP=${tf_15m.get('vwap', 'N/A')})
+  VWAP Distance: {tf_15m.get('vwap_distance_pct', 'N/A')}%
+  EMA Trend:     {str(tf_15m.get('ema_trend', 'N/A')).upper()} (EMA9=${tf_15m.get('ema9', 'N/A')} / EMA21=${tf_15m.get('ema21', 'N/A')})
+  MACD:          {str(tf_15m.get('macd_direction', 'N/A')).upper()} (hist: {tf_15m.get('macd_hist', 'N/A')})
+  RSI (9):       {tf_15m.get('rsi', 'N/A')} ({str(tf_15m.get('rsi_signal', 'N/A')).upper()})
+  Volume:        {tf_15m.get('volume_ratio', 'N/A')}x avg ({str(tf_15m.get('volume_signal', 'N/A')).upper()})
+  3-Candle Mom:  {tf_15m.get('momentum_3c', 'N/A')}% ({str(tf_15m.get('momentum_direction', 'N/A')).upper()})
+  Bias:          {tf_15m.get('bias', 'N/A')} ({tf_15m.get('bull_signals', 0)} bull / {tf_15m.get('bear_signals', 0)} bear signals)
+
+1-HOUR TIMEFRAME:
+  Price vs VWAP: {tf_1h.get('vwap_position', 'N/A').replace('_', ' ').upper()} (VWAP=${tf_1h.get('vwap', 'N/A')})
+  VWAP Distance: {tf_1h.get('vwap_distance_pct', 'N/A')}%
+  EMA Trend:     {str(tf_1h.get('ema_trend', 'N/A')).upper()} (EMA9=${tf_1h.get('ema9', 'N/A')} / EMA21=${tf_1h.get('ema21', 'N/A')})
+  MACD:          {str(tf_1h.get('macd_direction', 'N/A')).upper()} (hist: {tf_1h.get('macd_hist', 'N/A')})
+  RSI (9):       {tf_1h.get('rsi', 'N/A')} ({str(tf_1h.get('rsi_signal', 'N/A')).upper()})
+  Volume:        {tf_1h.get('volume_ratio', 'N/A')}x avg ({str(tf_1h.get('volume_signal', 'N/A')).upper()})
+  3-Candle Mom:  {tf_1h.get('momentum_3c', 'N/A')}% ({str(tf_1h.get('momentum_direction', 'N/A')).upper()})
+  Bias:          {tf_1h.get('bias', 'N/A')} ({tf_1h.get('bull_signals', 0)} bull / {tf_1h.get('bear_signals', 0)} bear signals)
+
+TIMEFRAME CONFLUENCE:
+  Daily + 1H + 15m all BEARISH = HIGH CONVICTION PUT entry
+  Daily + 1H + 15m all BULLISH = HIGH CONVICTION CALL entry
+  Mixed timeframes = wait for alignment before entering
+"""
+    else:
+        intraday_section = """
+═══════════════════════════════════════════════
+⏱  INTRADAY SIGNALS (Entry Timing)
+═══════════════════════════════════════════════
+No intraday data available (market may be closed or data feed issue).
+"""
+
     prompt = f"""You are an elite quantitative analyst and trading AI. You have just completed a comprehensive multi-source data pull on the stock ticker: **{ticker}**
 
-Your job is to synthesize ALL of the data below into a clear, actionable analysis. Be direct, specific, and decisive. This is not investment advice — it is scenario analysis for an informed trader.
+Your job is to synthesize ALL of the data below into a clear, actionable analysis. Be direct, specific, and decisive. This is not investment advice - it is scenario analysis for an informed trader.
 
 ═══════════════════════════════════════════════
 📊 TECHNICAL ANALYSIS DATA
@@ -76,6 +122,8 @@ SHORT INTEREST:
 {short.get('summary', 'No short data')}
 Short % of Float: {short.get('short_pct_float', 'N/A')}% | Days to Cover: {short.get('short_ratio', 'N/A')}
 Short Squeeze Candidate: {'⚡ YES' if short.get('squeeze_candidate') else 'No'}
+
+{intraday_section}
 
 ═══════════════════════════════════════════════
 📰 SENTIMENT DATA
@@ -166,7 +214,7 @@ EST. OPTION PREMIUM: $X.XX
 PROFIT TARGET: XX%
 MAX LOSS: 100% of premium paid
 STOP RULE: (one sentence)
-ENTRY CONDITION: (one sentence — for PUTs this could be a breakdown below support or rejection at resistance)
+ENTRY CONDITION: (one sentence — use the intraday VWAP, EMA, and volume data to specify a precise trigger: e.g. "Enter on 15-min candle close below VWAP $X with volume above 1.5x avg" or "Enter on rejection at 1H EMA9 with bearish MACD cross on 15m")
 AVOID IF: (one sentence)
 KEY RISK: (one sentence)
 

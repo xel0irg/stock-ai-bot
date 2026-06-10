@@ -83,6 +83,21 @@ def print_terminal_report(
     print(f"  Shorts:    {short.get('summary','N/A')}")
     print(f"  TA Score:  {_score_bar(ta_sc)} {ta_sc}/100")
 
+    # Intraday signals
+    intraday = tech.get("intraday", {})
+    if intraday.get("has_data"):
+        tf15 = intraday.get("tf_15m", {})
+        tf1h = intraday.get("tf_1h",  {})
+        ib    = intraday.get("intraday_bias", "MIXED")
+        ib_color = Fore.GREEN if "BULL" in ib else Fore.RED if "BEAR" in ib else Fore.YELLOW
+        print(f"\n{Fore.WHITE}  INTRADAY SIGNALS{Style.RESET_ALL}")
+        print(f"  Bias:      {ib_color}{ib}{Style.RESET_ALL}")
+        vwap15 = tf15.get('vwap_position','N/A').replace('_',' ').upper()
+        vwap1h = tf1h.get('vwap_position','N/A').replace('_',' ').upper()
+        print(f"  VWAP:      15m: {vwap15}  |  1H: {vwap1h}")
+        print(f"  15m:       {tf15.get('bias','N/A')} | RSI {tf15.get('rsi','N/A')} | MACD {str(tf15.get('macd_direction','N/A')).upper()} | Vol {tf15.get('volume_ratio','N/A')}x")
+        print(f"  1H:        {tf1h.get('bias','N/A')} | RSI {tf1h.get('rsi','N/A')} | MACD {str(tf1h.get('macd_direction','N/A')).upper()} | Vol {tf1h.get('volume_ratio','N/A')}x")
+
     # Sentiment snapshot
     print(f"\n{Fore.WHITE}  SENTIMENT SIGNALS{Style.RESET_ALL}")
     sent_c = Fore.GREEN if "bull" in overall.lower() else Fore.RED if "bear" in overall.lower() else Fore.YELLOW
