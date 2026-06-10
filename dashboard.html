@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock AI Bot — Dashboard</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --bg2: #181818;
+    --bg3: #222222;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #e8e8e8;
+    --text2: #999;
+    --text3: #555;
+    --green: #22c55e;
+    --green-bg: rgba(34,197,94,0.1);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.1);
+    --yellow: #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.1);
+    --mono: 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; min-height: 100vh; }
+
+  /* Top bar */
+  .topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; border-bottom: 0.5px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 10; }
+  .topbar-left { display: flex; align-items: center; gap: 10px; }
+  .topbar-title { font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--text); }
+  .live-badge { display: flex; align-items: center; gap: 5px; font-size: 10px; font-family: var(--mono); color: var(--green); background: var(--green-bg); padding: 3px 8px; border-radius: 20px; }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .topbar-right { display: flex; align-items: center; gap: 16px; }
+  .topbar-meta { font-size: 11px; font-family: var(--mono); color: var(--text3); }
+  .refresh-btn { font-size: 11px; font-family: var(--mono); color: var(--text2); background: var(--bg3); border: 0.5px solid var(--border2); border-radius: 6px; padding: 4px 10px; cursor: pointer; transition: all .15s; }
+  .refresh-btn:hover { color: var(--text); border-color: var(--border2); }
+
+  /* Layout */
+  .main { padding: 20px 24px; max-width: 1100px; margin: 0 auto; }
+
+  /* Stat cards */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+  .stat { background: var(--bg2); border: 0.5px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .stat .label { font-size: 10px; font-family: var(--mono); color: var(--text3); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+  .stat .value { font-size: 24px; font-weight: 600; color: var(--text); }
+  .stat .sub { font-size: 11px; font-family: var(--mono); margin-top: 3px; }
+
+  /* Section label */
+  .section-label { font-size: 10px; font-family: var(--mono); color: var(--text3); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* Active signal cards */
+  .signal-card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 10px; position: relative; overflow: hidden; }
+  .signal-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+  .signal-card.put::before { background: var(--red); }
+  .signal-card.call::before { background: var(--green); }
+
+  .sc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .sc-ticker-group { display: flex; align-items: baseline; gap: 10px; }
+  .sc-ticker { font-size: 18px; font-weight: 600; color: var(--text); }
+  .sc-price { font-size: 13px; font-family: var(--mono); color: var(--text2); }
+  .sc-chg { font-size: 11px; font-family: var(--mono); }
+  .sc-right { display: flex; align-items: center; gap: 10px; }
+  .sc-score { font-size: 12px; font-family: var(--mono); color: var(--text2); }
+
+  .badge { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; font-family: var(--mono); letter-spacing: .03em; }
+  .badge.put { background: var(--red-bg); color: var(--red); }
+  .badge.call { background: var(--green-bg); color: var(--green); }
+  .badge.none { background: var(--bg3); color: var(--text3); }
+  .badge.moderate { background: var(--yellow-bg); color: var(--yellow); }
+
+  /* Score bar */
+  .bar-wrap { margin-bottom: 14px; }
+  .bar-track { height: 3px; background: var(--bg3); border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 2px; transition: width .4s ease; }
+
+  /* Fields grid */
+  .fields-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 12px; }
+  .field { background: var(--bg3); border-radius: 7px; padding: 8px 10px; }
+  .field .k { font-size: 9px; font-family: var(--mono); color: var(--text3); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; }
+  .field .v { font-size: 13px; font-weight: 600; font-family: var(--mono); }
+
+  /* Footer conditions */
+  .sc-footer { border-top: 0.5px solid var(--border); padding-top: 10px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .sc-footer-item .label { font-size: 9px; font-family: var(--mono); color: var(--text3); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; }
+  .sc-footer-item .val { font-size: 11px; color: var(--text2); line-height: 1.4; }
+
+  /* No trade rows */
+  .no-trade-list { display: flex; flex-direction: column; gap: 6px; }
+  .no-trade-row { background: var(--bg2); border: 0.5px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; border-left: 2px solid var(--border2); }
+  .nt-left { display: flex; align-items: center; gap: 14px; }
+  .nt-ticker { font-size: 14px; font-weight: 600; color: var(--text); min-width: 50px; }
+  .nt-price { font-size: 12px; font-family: var(--mono); color: var(--text2); }
+  .nt-signals { display: flex; gap: 10px; }
+  .nt-sig { font-size: 11px; font-family: var(--mono); color: var(--text3); }
+  .nt-right { display: flex; align-items: center; gap: 10px; }
+  .mini-bar { display: flex; align-items: center; gap: 6px; }
+  .mini-track { width: 48px; height: 3px; background: var(--bg3); border-radius: 2px; overflow: hidden; }
+  .mini-fill { height: 100%; border-radius: 2px; background: var(--text3); }
+  .nt-score { font-size: 11px; font-family: var(--mono); color: var(--text3); min-width: 42px; text-align: right; }
+
+  /* Countdown */
+  .countdown { font-size: 10px; font-family: var(--mono); color: var(--text3); }
+
+  /* Empty state */
+  .empty { text-align: center; padding: 60px 20px; color: var(--text3); font-family: var(--mono); }
+  .empty .big { font-size: 32px; margin-bottom: 10px; }
+  .empty p { font-size: 12px; line-height: 1.6; }
+
+  /* Error banner */
+  .error-banner { background: var(--red-bg); border: 0.5px solid var(--red); border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; font-size: 12px; font-family: var(--mono); color: var(--red); display: none; }
+
+  .g { color: var(--green); }
+  .r { color: var(--red); }
+  .y { color: var(--yellow); }
+  .m { color: var(--text2); }
+  .d { color: var(--text3); }
+
+  .timestamp-label { font-size: 10px; font-family: var(--mono); color: var(--text3); margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="live-badge"><div class="live-dot"></div>LIVE</div>
+    <span class="topbar-title">Stock AI Bot</span>
+  </div>
+  <div class="topbar-right">
+    <span class="countdown" id="countdown">Refreshing in 5:00</span>
+    <span class="topbar-meta" id="last-scan">—</span>
+    <button class="refresh-btn" onclick="loadData()">↻ Refresh now</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="error-banner" id="error-banner"></div>
+
+  <!-- Stat cards -->
+  <div class="stat-grid" id="stat-grid">
+    <div class="stat"><div class="label">Signals fired</div><div class="value" id="s-fired">—</div><div class="sub m" id="s-fired-sub">loading...</div></div>
+    <div class="stat"><div class="label">Top conviction</div><div class="value" id="s-top">—</div><div class="sub" id="s-top-sub">loading...</div></div>
+    <div class="stat"><div class="label">Avg score</div><div class="value" id="s-avg">—</div><div class="sub m" id="s-avg-sub">across watchlist</div></div>
+    <div class="stat"><div class="label">No trade</div><div class="value" id="s-none">—</div><div class="sub m" id="s-none-sub">loading...</div></div>
+  </div>
+
+  <!-- Active signals -->
+  <div class="section-label" style="margin-bottom:10px">Active setups</div>
+  <div id="active-signals"></div>
+
+  <!-- No trade -->
+  <div class="section-label" style="margin-top:20px;margin-bottom:10px">No trade</div>
+  <div class="no-trade-list" id="no-trade-list"></div>
+</div>
+
+<script>
+const API = 'http://localhost:7842';
+let countdown = 300;
+let countdownInterval;
+
+function fmtScore(s) {
+  if (s >= 70) return 'g';
+  if (s >= 55) return 'y';
+  return 'd';
+}
+
+function barColor(s) {
+  if (s >= 70) return 'var(--green)';
+  if (s >= 55) return 'var(--yellow)';
+  return '#444';
+}
+
+function fmtChg(v) {
+  if (v == null) return '';
+  const sign = v >= 0 ? '+' : '';
+  const cls = v >= 0 ? 'g' : 'r';
+  return `<span class="${cls}">${sign}${parseFloat(v).toFixed(2)}%</span>`;
+}
+
+function fmtPrice(v) {
+  if (v == null) return '—';
+  return '$' + parseFloat(v).toFixed(2);
+}
+
+async function loadData() {
+  try {
+    const res = await fetch(`${API}/latest`);
+    if (!res.ok) throw new Error(`Server returned ${res.status}`);
+    const data = await res.json();
+    document.getElementById('error-banner').style.display = 'none';
+    renderDashboard(data);
+  } catch(e) {
+    const banner = document.getElementById('error-banner');
+    banner.style.display = 'block';
+    banner.textContent = `⚠ Cannot connect to dashboard server. Run: python dashboard_server.py — Error: ${e.message}`;
+  }
+  resetCountdown();
+}
+
+function renderDashboard(reports) {
+  if (!reports || reports.length === 0) {
+    document.getElementById('active-signals').innerHTML = '<div class="empty"><div class="big">📭</div><p>No scan reports found yet.<br>Run the bot first: <code>python main.py</code></p></div>';
+    document.getElementById('no-trade-list').innerHTML = '';
+    return;
+  }
+
+  const active = reports.filter(r => r.trade_setup && r.trade_setup.contract_type && r.trade_setup.contract_type !== 'NONE');
+  const noTrade = reports.filter(r => !r.trade_setup || !r.trade_setup.contract_type || r.trade_setup.contract_type === 'NONE');
+
+  // Sort active by score desc
+  active.sort((a,b) => (b.confluence_score||0) - (a.confluence_score||0));
+  noTrade.sort((a,b) => (b.confluence_score||0) - (a.confluence_score||0));
+
+  // Stats
+  const avgScore = reports.length ? Math.round(reports.reduce((s,r) => s + (r.confluence_score||0), 0) / reports.length) : 0;
+  const top = active[0] || reports.sort((a,b)=>(b.confluence_score||0)-(a.confluence_score||0))[0];
+  const ts = reports.map(r=>r.timestamp).sort().pop();
+
+  document.getElementById('s-fired').textContent = active.length;
+  document.getElementById('s-fired-sub').innerHTML = active.length > 0
+    ? active.map(r => `<span class="${r.trade_setup.contract_type==='CALL'?'g':'r'}">${r.trade_setup.contract_type}</span>`).join(' + ')
+    : '<span class="d">no signals</span>';
+
+  if (top) {
+    const ts2 = top.trade_setup || {};
+    document.getElementById('s-top').textContent = top.ticker;
+    document.getElementById('s-top-sub').innerHTML = `<span class="${fmtScore(top.confluence_score)}">${ts2.contract_type||'NONE'} · ${top.confluence_score}/100</span>`;
+  }
+
+  document.getElementById('s-avg').textContent = avgScore;
+  document.getElementById('s-avg-sub').textContent = `across ${reports.length} ticker${reports.length!==1?'s':''}`;
+  document.getElementById('s-none').textContent = noTrade.length;
+  document.getElementById('s-none-sub').textContent = `below threshold`;
+
+  if (ts) {
+    const d = new Date(ts);
+    document.getElementById('last-scan').textContent = `Last scan: ${d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} · ${reports.length} tickers`;
+  }
+
+  // Active signal cards
+  const activeEl = document.getElementById('active-signals');
+  if (active.length === 0) {
+    activeEl.innerHTML = '<div style="color:var(--text3);font-family:var(--mono);font-size:12px;padding:16px 0">No active setups this scan. Scores below threshold.</div>';
+  } else {
+    activeEl.innerHTML = active.map(r => buildSignalCard(r)).join('');
+  }
+
+  // No trade rows
+  document.getElementById('no-trade-list').innerHTML = noTrade.map(r => buildNoTradeRow(r)).join('');
+}
+
+function buildSignalCard(r) {
+  const ts = r.trade_setup || {};
+  const tech = r.technicals || {};
+  const contract = ts.contract_type || 'NONE';
+  const cls = contract === 'CALL' ? 'call' : 'put';
+  const score = r.confluence_score || 0;
+  const quality = ts.setup_quality || 'NO TRADE';
+  const qualCls = quality === 'HIGH CONVICTION' ? 'call' : quality === 'MODERATE' ? 'moderate' : 'none';
+  const price = tech.last_price;
+  const chg1d = tech.return_1d;
+
+  return `
+  <div class="signal-card ${cls}">
+    <div class="sc-top">
+      <div class="sc-ticker-group">
+        <span class="sc-ticker">${r.ticker}</span>
+        <span class="sc-price">${fmtPrice(price)}</span>
+        <span class="sc-chg">${fmtChg(chg1d)}</span>
+      </div>
+      <div class="sc-right">
+        <span class="sc-score">${score}/100</span>
+        <span class="badge ${qualCls}">${quality}</span>
+        <span class="badge ${cls}">${contract} · ${ts.expiry || '?'}</span>
+      </div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-track"><div class="bar-fill" style="width:${score}%;background:${barColor(score)}"></div></div>
+    </div>
+    <div class="fields-grid">
+      <div class="field"><div class="k">Strike</div><div class="v ${cls==='call'?'g':'r'}">${ts.strike ? '$'+ts.strike : '—'}</div></div>
+      <div class="field"><div class="k">Moneyness</div><div class="v m">${(ts.moneyness||'—').replace('SLIGHTLY_OTM','SL.OTM')}</div></div>
+      <div class="field"><div class="k">Stock target</div><div class="v ${cls==='call'?'g':'r'}">${ts.stock_target ? '$'+ts.stock_target : '—'}</div></div>
+      <div class="field"><div class="k">Premium</div><div class="v">${ts.est_premium ? '$'+ts.est_premium : '—'}</div></div>
+      <div class="field"><div class="k">Profit target</div><div class="v g">${ts.profit_target ? ts.profit_target+'%' : '—'}</div></div>
+      <div class="field"><div class="k">Max loss</div><div class="v r">100%</div></div>
+    </div>
+    <div class="sc-footer">
+      <div class="sc-footer-item"><div class="label">Enter when</div><div class="val">${ts.entry_condition || '—'}</div></div>
+      <div class="sc-footer-item"><div class="label">Avoid if</div><div class="val">${ts.avoid_if || '—'}</div></div>
+      <div class="sc-footer-item"><div class="label">Key risk</div><div class="val">${ts.key_risk || '—'}</div></div>
+    </div>
+  </div>`;
+}
+
+function buildNoTradeRow(r) {
+  const tech = r.technicals || {};
+  const score = r.confluence_score || 0;
+  const ts = r.trade_setup || {};
+  const isEarnings = (ts.setup_quality||'').includes('EARNINGS');
+  const price = tech.last_price;
+  const chg1d = tech.return_1d;
+  const chgStr = chg1d != null ? `<span class="${chg1d>=0?'g':'r'}">${chg1d>=0?'+':''}${parseFloat(chg1d).toFixed(2)}%</span>` : '';
+
+  return `
+  <div class="no-trade-row">
+    <div class="nt-left">
+      <span class="nt-ticker">${r.ticker}</span>
+      <span class="nt-price">${fmtPrice(price)} ${chgStr}</span>
+      <div class="nt-signals">
+        <span class="nt-sig">RSI ${tech.rsi ? parseFloat(tech.rsi).toFixed(1) : '—'}</span>
+        <span class="nt-sig">MACD ${(tech.macd_crossover||'—').toUpperCase()}</span>
+        <span class="nt-sig">VOL ${tech.volume_ratio ? parseFloat(tech.volume_ratio).toFixed(1)+'x' : '—'}</span>
+      </div>
+    </div>
+    <div class="nt-right">
+      <div class="mini-bar">
+        <div class="mini-track"><div class="mini-fill" style="width:${score}%"></div></div>
+      </div>
+      <span class="nt-score">${score}/100</span>
+      <span class="badge none">${isEarnings ? '⚡ EARNINGS' : 'NONE'}</span>
+    </div>
+  </div>`;
+}
+
+function resetCountdown() {
+  countdown = 300;
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    countdown--;
+    const m = Math.floor(countdown / 60);
+    const s = countdown % 60;
+    document.getElementById('countdown').textContent = `Refreshing in ${m}:${s.toString().padStart(2,'0')}`;
+    if (countdown <= 0) loadData();
+  }, 1000);
+}
+
+loadData();
+</script>
+</body>
+</html>
