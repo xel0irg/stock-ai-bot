@@ -73,6 +73,18 @@ def analyze_ticker(ticker: str) -> dict:
             results["error"] = tech["error"]
             return results
 
+        # ── Data quality gate ─────────────────────────────────
+        # If last_price is missing or NaN, yfinance returned bad data.
+        # Skip the AI call entirely rather than sending corrupted data to Claude.
+        import math
+        last_price = tech.get("technicals", {}).get("last_price")
+        if last_price is None or (isinstance(last_price, float) and math.isnan(last_price)):
+            log.warning(f"⚠  {ticker}: last_price is NaN/missing — yfinance data unreliable. "
+                        f"Skipping AI synthesis to avoid corrupted analysis. "
+                        f"This usually self-resolves during market hours.")
+            results["error"] = "bad_price_data"
+            return results
+
         # Step 2: Sentiment
         log.info(f"[2/4] Sentiment Analysis (Reddit, StockTwits, Twitter, News)...")
         company_name = ""  # Will be filled from fundamentals if available

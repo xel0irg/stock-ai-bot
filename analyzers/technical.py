@@ -52,6 +52,23 @@ def compute_technicals(df: pd.DataFrame) -> Dict[str, Any]:
     low    = df["low"]
     volume = df["volume"]
 
+    # ── Data quality guard ────────────────────────────────
+    # Drop any trailing NaN rows that yfinance sometimes appends
+    # outside market hours or during data feed hiccups
+    close  = close.dropna()
+    high   = high.dropna()
+    low    = low.dropna()
+    volume = volume.dropna()
+
+    if len(close) < 30:
+        log.warning("Insufficient clean price data after NaN removal")
+        return {}
+
+    last_close = float(close.iloc[-1])
+    if np.isnan(last_close) or last_close <= 0:
+        log.warning(f"last_close is invalid ({last_close}) — skipping technicals")
+        return {}
+
     results: Dict[str, Any] = {}
 
     # ── RSI ───────────────────────────────────────────────
@@ -90,7 +107,6 @@ def compute_technicals(df: pd.DataFrame) -> Dict[str, Any]:
     bb_upper = float(bb.bollinger_hband().iloc[-1])
     bb_lower = float(bb.bollinger_lband().iloc[-1])
     bb_mid   = float(bb.bollinger_mavg().iloc[-1])
-    last_close = float(close.iloc[-1])
     bb_pct = (last_close - bb_lower) / (bb_upper - bb_lower) if (bb_upper - bb_lower) != 0 else 0.5
     results["bb_upper"]  = round(bb_upper, 2)
     results["bb_lower"]  = round(bb_lower, 2)
