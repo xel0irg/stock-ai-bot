@@ -12,6 +12,7 @@ Default port: 7842
 """
 from __future__ import annotations
 import json
+import math
 import os
 from pathlib import Path
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -19,6 +20,19 @@ from datetime import datetime
 
 LOG_DIR = Path(__file__).resolve().parent / "logs"
 PORT = 7842
+
+
+def sanitize(obj):
+    """Recursively replace NaN/Inf floats with None so JSON is browser-safe."""
+    if isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return None
+        return obj
+    if isinstance(obj, dict):
+        return {k: sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [sanitize(i) for i in obj]
+    return obj
 
 
 def get_latest_reports() -> list[dict]:
@@ -45,8 +59,14 @@ def get_latest_reports() -> list[dict]:
     for ticker, path in latest.items():
         try:
             with open(path, "r", encoding="utf-8") as fh:
-                data = json.load(fh)
-                reports.append(data)
+                raw = fh.read()
+                # Replace NaN/Infinity before parsing — Python writes these
+                # but browsers can't parse them as valid JSON
+                raw = raw.replace(': NaN', ': null').replace(':NaN', ':null')
+                raw = raw.replace(': Infinity', ': null').replace(':Infinity', ':null')
+                raw = raw.replace(': -Infinity', ': null').replace(':-Infinity', ':null')
+                data = json.loads(raw)
+                reports.append(sanitize(data))
         except (json.JSONDecodeError, OSError):
             continue
 
@@ -89,7 +109,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         # Suppress default request logging — keep terminal clean
         ts = datetime.now().strftime("%H:%M:%S")
-        if "/latest" in (args[0] if args else ""):
+        if args and "/latest" in str(args[0]):
             print(f"[{ts}] Dashboard refreshed — serving {len(get_latest_reports())} tickers")
 
 
