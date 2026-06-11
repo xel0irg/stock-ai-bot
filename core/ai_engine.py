@@ -153,7 +153,17 @@ Analyst Consensus: {str(fund_d.get('analyst_recommend_key') or 'N/A').upper()} (
 Valuation Signal: {str(fund_d.get('valuation_signal') or 'N/A').upper()}
 
 EARNINGS: {earn.get('signal', 'N/A')} | Earnings Imminent: {'⚡ YES' if earn.get('earnings_imminent') else 'No'}
-INSIDER ACTIVITY: {inside.get('insider_signal', 'N/A').upper()} | Form 4s (90D): {inside.get('form4_count_90d', 0)}
+
+INSIDER ACTIVITY (OpenInsider — Form 4, last 90 days):
+  Signal:      {inside.get('insider_signal', 'N/A').upper()}{' ⚡ CLUSTER BUY' if inside.get('cluster_buy') else ''}
+  Buys (90d):  {inside.get('buys_90d', 0)} transactions | Total value: ${inside.get('buy_value_90d', 0):,.0f}
+  Sells (90d): {inside.get('sells_90d', 0)} transactions | Total value: ${inside.get('sell_value_90d', 0):,.0f}
+  Summary:     {inside.get('summary', 'No data')}
+{chr(10).join(f"  [{t['date']}] {t['name']} ({t['title']}) {t['type']} {t['qty']:,.0f} shares @ ${t['price']:,.2f} = ${t['value']:,.0f}" for t in inside.get('recent_trades', [])[:3]) if inside.get('recent_trades') else '  No recent transactions'}
+
+NOTE: Cluster buying (3+ insiders buying within 30 days) is one of the strongest bullish signals in markets.
+Insider selling is usually less significant than buying (diversification, taxes) unless it's heavy across multiple insiders.
+
 SEC Filings (90D): {len(fund.get('sec_filings', []))} recent filings
 
 ═══════════════════════════════════════════════

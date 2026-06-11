@@ -83,19 +83,195 @@ def fetch_recent_filings(ticker: str, form_types: List[str] = None) -> List[Dict
     return filings_out
 
 
-def parse_insider_trades(ticker: str, filings: List[Dict]) -> Dict[str, Any]:
-    """Parse Form 4 filings to detect insider buying/selling."""
-    form4 = [f for f in filings if f["form"] == "4"]
-    # We summarize counts; deep XML parsing is optional
-    return {
-        "form4_count_90d": len(form4),
-        "latest_form4": form4[0]["date"] if form4 else None,
-        "insider_signal": (
-            "active_insider_reporting" if len(form4) > 3 else
-            "some_insider_activity"    if len(form4) > 0 else
-            "no_recent_insider_filings"
-        ),
+def fetch_openinsider(ticker: str) -> Dict[str, Any]:
+    """
+    Scrape OpenInsider for real Form 4 insider buy/sell transactions.
+    No API key needed — public site, structured HTML table.
+
+    Signals we extract:
+    - Recent insider buys (Purchase) in last 90 days
+    - Cluster buying (3+ insiders buying in same 30-day window)
+    - Total $ value of buys vs sells
+    - Most recent transaction details
+    """
+    result = {
+        "has_data":        False,
+        "buys_90d":        0,
+        "sells_90d":       0,
+        "buy_value_90d":   0.0,
+        "sell_value_90d":  0.0,
+        "cluster_buy":     False,
+        "recent_trades":   [],
+        "insider_signal":  "NO_RECENT_INSIDER_FILINGS",
+        "summary":         "No insider data",
     }
+
+    try:
+        url = (
+            f"http://openinsider.com/screener?"
+            f"s={ticker}&o=&pl=&ph=&ll=&lh=&fd=90&td=&tdr=&fdlyl=&fdlyh="
+            f"&daysago=&xs=1&vl=&vh=&ocl=&och=&sic1=-1&sicl=100&sich=9999"
+            f"&grp=0&nfl=&nfh=&nil=&nih=&nol=&noh=&v2l=&v2h=&oc2l=&oc2h="
+            f"&sortcol=0&cnt=20&Action=1"
+        )
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "text/html,application/xhtml+xml",
+        }
+        resp = requests.get(url, headers=headers, timeout=10)
+        if resp.status_code != 200:
+            log.warning(f"OpenInsider returned {resp.status_code} for {ticker}")
+            return result
+
+        # Parse the HTML table
+        from html.parser import HTMLParser
+
+        class TableParser(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.in_table = False
+                self.in_row   = False
+                self.in_cell  = False
+                self.rows     = []
+                self.cur_row  = []
+                self.cur_cell = ""
+                self.td_count = 0
+
+            def handle_starttag(self, tag, attrs):
+                attrs_dict = dict(attrs)
+                if tag == "table" and "tinytable" in attrs_dict.get("class", ""):
+                    self.in_table = True
+                if self.in_table and tag == "tr":
+                    self.in_row = True
+                    self.cur_row = []
+                if self.in_row and tag in ("td", "th"):
+                    self.in_cell = True
+                    self.cur_cell = ""
+
+            def handle_endtag(self, tag):
+                if tag == "table" and self.in_table:
+                    self.in_table = False
+                if self.in_table and tag == "tr":
+                    self.in_row = False
+                    if self.cur_row:
+                        self.rows.append(self.cur_row)
+                if self.in_row and tag in ("td", "th"):
+                    self.in_cell = False
+                    self.cur_row.append(self.cur_cell.strip())
+
+            def handle_data(self, data):
+                if self.in_cell:
+                    self.cur_cell += data
+
+        parser = TableParser()
+        parser.feed(resp.text)
+
+        rows = parser.rows
+        if len(rows) < 2:
+            return result
+
+        # Column indices for OpenInsider tinytable:
+        # 0=X, 1=Filing Date, 2=Trade Date, 3=Ticker, 4=Company,
+        # 5=Insider Name, 6=Title, 7=Trade Type, 8=Price,
+        # 9=Qty, 10=Owned, 11=ΔOwn, 12=Value
+        COL_DATE  = 2   # Trade date
+        COL_NAME  = 5   # Insider name
+        COL_TITLE = 6   # Title (CEO, CFO, Director, etc.)
+        COL_TYPE  = 7   # P = Purchase, S = Sale
+        COL_PRICE = 8
+        COL_QTY   = 9
+        COL_VALUE = 12
+
+        buys, sells = [], []
+        now = datetime.now()
+
+        for row in rows[1:]:  # skip header
+            if len(row) < 13:
+                continue
+            trade_type = row[COL_TYPE].strip().upper()
+            if trade_type not in ("P - PURCHASE", "S - SALE", "P", "S"):
+                continue
+
+            # Parse value — strip $, commas
+            def _parse_num(s):
+                try:
+                    return float(s.replace("$", "").replace(",", "").replace("+", "").strip())
+                except (ValueError, AttributeError):
+                    return 0.0
+
+            trade = {
+                "date":  row[COL_DATE].strip(),
+                "name":  row[COL_NAME].strip(),
+                "title": row[COL_TITLE].strip(),
+                "type":  "BUY" if "P" in trade_type else "SELL",
+                "price": _parse_num(row[COL_PRICE]),
+                "qty":   _parse_num(row[COL_QTY]),
+                "value": abs(_parse_num(row[COL_VALUE])),
+            }
+
+            if trade["type"] == "BUY":
+                buys.append(trade)
+                result["buy_value_90d"] += trade["value"]
+            else:
+                sells.append(trade)
+                result["sell_value_90d"] += trade["value"]
+
+        result["buys_90d"]      = len(buys)
+        result["sells_90d"]     = len(sells)
+        result["recent_trades"] = (buys + sells)[:5]  # top 5 most recent
+
+        # Cluster buy: 3+ insiders buying within 30 days
+        if len(buys) >= 3:
+            # Check if 3 buys happened within any 30-day window
+            try:
+                dates = []
+                for b in buys:
+                    try:
+                        d = datetime.strptime(b["date"], "%Y-%m-%d")
+                        dates.append(d)
+                    except ValueError:
+                        pass
+                dates.sort()
+                for i in range(len(dates) - 2):
+                    if (dates[i+2] - dates[i]).days <= 30:
+                        result["cluster_buy"] = True
+                        break
+            except Exception:
+                pass
+
+        # Determine signal
+        total_buy_value  = result["buy_value_90d"]
+        total_sell_value = result["sell_value_90d"]
+
+        if result["cluster_buy"] and total_buy_value > 100_000:
+            result["insider_signal"] = "CLUSTER_BUY"
+        elif len(buys) >= 2 and total_buy_value > 50_000:
+            result["insider_signal"] = "MULTIPLE_INSIDERS_BUYING"
+        elif len(buys) == 1 and total_buy_value > 100_000:
+            result["insider_signal"] = "SIGNIFICANT_INSIDER_BUY"
+        elif len(buys) >= 1:
+            result["insider_signal"] = "MINOR_INSIDER_BUY"
+        elif len(sells) > len(buys) * 2:
+            result["insider_signal"] = "INSIDER_SELLING"
+        elif len(sells) > 0:
+            result["insider_signal"] = "SOME_INSIDER_SELLING"
+        else:
+            result["insider_signal"] = "NO_RECENT_INSIDER_FILINGS"
+
+        result["has_data"] = True
+
+        # Human-readable summary
+        buy_str  = f"{len(buys)} buys (${total_buy_value:,.0f})"  if buys  else "0 buys"
+        sell_str = f"{len(sells)} sells (${total_sell_value:,.0f})" if sells else "0 sells"
+        cluster  = " ⚡ CLUSTER BUY" if result["cluster_buy"] else ""
+        result["summary"] = f"{result['insider_signal']}{cluster} | 90d: {buy_str} / {sell_str}"
+
+        log.info(f"OpenInsider for {ticker}: {result['summary']}")
+
+    except Exception as e:
+        log.warning(f"OpenInsider scrape error for {ticker}: {e}")
+
+    return result
 
 
 # ══════════════════════════════════════════════════════════
@@ -201,7 +377,7 @@ def run_fundamental_analysis(ticker: str) -> Dict[str, Any]:
 
     fundamentals = fetch_fundamentals(ticker)
     filings      = fetch_recent_filings(ticker)
-    insider      = parse_insider_trades(ticker, filings)
+    insider      = fetch_openinsider(ticker)
     earnings     = check_earnings_proximity(ticker, fundamentals)
 
     return {

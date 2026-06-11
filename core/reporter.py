@@ -110,7 +110,24 @@ def print_terminal_report(
     print(f"\n{Fore.WHITE}  FUNDAMENTAL SIGNALS{Style.RESET_ALL}")
     print(f"  P/E:        {fund_d.get('pe_ratio') or 'N/A'} | Forward: {fund_d.get('forward_pe') or 'N/A'}")
     print(f"  Analyst:    {str(fund_d.get('analyst_recommend_key') or 'N/A').upper()} | Target: ${fund_d.get('analyst_target') or 'N/A'}")
-    print(f"  Insider:    {str(fund.get('insider',{}).get('insider_signal') or 'N/A').upper()}")
+
+    # OpenInsider signal
+    insider_data   = fund.get("insider", {})
+    insider_signal = str(insider_data.get("insider_signal") or "N/A").upper()
+    cluster        = insider_data.get("cluster_buy", False)
+    buys_90d       = insider_data.get("buys_90d", 0)
+    sells_90d      = insider_data.get("sells_90d", 0)
+    buy_val        = insider_data.get("buy_value_90d", 0)
+    insider_color  = (
+        Fore.MAGENTA if cluster else
+        Fore.GREEN   if buys_90d > sells_90d else
+        Fore.RED     if sells_90d > buys_90d * 2 else
+        Fore.YELLOW
+    )
+    cluster_str = f"  {Fore.MAGENTA}⚡ CLUSTER BUY{Style.RESET_ALL}" if cluster else ""
+    print(f"  Insider:    {insider_color}{insider_signal}{Style.RESET_ALL}{cluster_str}")
+    if buys_90d > 0 or sells_90d > 0:
+        print(f"              90d: {buys_90d} buys (${buy_val:,.0f}) / {sells_90d} sells")
 
     # AI Analysis
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")
