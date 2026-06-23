@@ -2,10 +2,12 @@ name: Stock AI Bot — Scheduled Scan
 
 on:
   # Run every 30 minutes during market hours (Mon-Fri 9:30 AM - 3:30 PM ET = 13:30-19:30 UTC)
-  # Stops at 19:30 UTC (3:30 PM ET) instead of 20:00 to avoid GitHub Actions runner
-  # delays pushing the last scan past market close (4:00 PM ET)
+  # Offset to :07 and :37 instead of :00/:30 — GitHub Actions explicitly warns that
+  # schedules on the hour/half-hour hit peak global load and are frequently delayed
+  # or dropped. This was causing scans to silently skip all day and only fire once,
+  # late, near market close. See: https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
-    - cron: "*/30 13-19 * * 1-5"
+    - cron: "7,37 13-19 * * 1-5"
 
   # Allow manual trigger from GitHub Actions tab
   workflow_dispatch:
