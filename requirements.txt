@@ -29,3 +29,8 @@ anthropic>=0.34.0
 python-dotenv>=1.0.0
 colorama>=0.4.6
 schedule>=1.2.0
+
+# Discord interactive commands (webhook server)
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pynacl>=1.5.0

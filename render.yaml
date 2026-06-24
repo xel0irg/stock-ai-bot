@@ -1,0 +1,23 @@
+# render.yaml — Render.com deployment config for the Discord /scan command service
+#
+# This deploys discord_bot/server.py as a free-tier web service.
+# Render auto-detects this file when you create a new Blueprint deploy,
+# or you can configure these settings manually in the Render dashboard.
+#
+# IMPORTANT: Set these as SECRET environment variables in the Render
+# dashboard (Settings > Environment) — do NOT commit actual values here:
+#   DISCORD_PUBLIC_KEY
+#   DISCORD_APPLICATION_ID
+#   ANTHROPIC_API_KEY
+#   (plus any other secrets analyze_ticker() needs — see config/settings.py)
+
+services:
+  - type: web
+    name: stock-ai-bot-discord
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn discord_bot.server:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
