@@ -3,19 +3,16 @@ name: Stock AI Bot — Scheduled Scan
 on:
   # PRIMARY TRIGGER: repository_dispatch, fired by an external scheduler
   # (cron-job.org) hitting GitHub's API every 30 min during market hours.
-  # GitHub's own `schedule:` cron below is kept as a best-effort backup,
-  # but it is NOT reliable for sub-hourly triggers — GitHub explicitly
-  # documents that schedules near peak load (incl. every :00/:30) are
-  # frequently delayed or dropped entirely. In practice this caused the
-  # bot to fire only ~once/day, at random times in the afternoon.
+  #
+  # The native `schedule:` cron trigger has been REMOVED. Keeping both
+  # active caused two parallel workflow runs to fire ~90 seconds apart
+  # (one from GitHub's schedule, one from cron-job.org), each scanning
+  # the full watchlist independently and both posting to Discord —
+  # which produced duplicate/interleaved alerts for every ticker.
+  #
+  # cron-job.org is now the single source of truth for scheduling.
   repository_dispatch:
     types: [scan-trigger]
-
-  # BACKUP ONLY — unreliable, do not depend on this for trading signals.
-  # Kept so the bot still fires occasionally even if the external
-  # scheduler is ever down.
-  schedule:
-    - cron: "7,37 13-19 * * 1-5"
 
   # Allow manual trigger from GitHub Actions tab
   workflow_dispatch:
@@ -33,6 +30,12 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    # Safety net: if two triggers ever land close together again,
+    # cancel the older in-progress run instead of letting both post
+    # duplicate alerts simultaneously.
+    concurrency:
+      group: stock-ai-bot-scan
+      cancel-in-progress: true
 
     steps:
       - name: Checkout repository
