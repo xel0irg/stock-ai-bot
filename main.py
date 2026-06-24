@@ -105,6 +105,12 @@ def analyze_ticker(ticker: str) -> dict:
         print_terminal_report(ticker, tech, sent, fund, ai)
         json_path, txt_path = save_report(ticker, tech, sent, fund, ai)
 
+        # Backtest logging — record EVERY signal regardless of score,
+        # so we can later validate whether the threshold itself is
+        # well-calibrated, not just whether high-conviction signals work
+        from backtest.signal_logger import log_signal
+        log_signal(ticker, tech, ai)
+
         # Send Telegram alert if score meets threshold
         from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL
         if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:

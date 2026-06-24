@@ -1,0 +1,46 @@
+name: Stock AI Bot — Backtest Outcome Check
+
+on:
+  # Runs once daily before market open to evaluate outcomes for signals
+  # that are now old enough (20+ hours) to have a knowable result.
+  # This commits the updated signals_log.csv back to the repo so the
+  # backtest dataset persists permanently, independent of the 30-day
+  # artifact retention window.
+  schedule:
+    - cron: "30 12 * * 1-5"   # 8:30 AM ET (12:30 UTC during EDT)
+
+  workflow_dispatch: {}
+
+jobs:
+  check-outcomes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write   # needed to commit the updated CSV back to the repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run outcome checker
+        run: python -m backtest.outcome_checker
+
+      - name: Generate backtest report
+        run: python -m backtest.report
+
+      - name: Commit updated signal log
+        run: |
+          git config user.name "Stock AI Bot"
+          git config user.email "bot@stockaibot.dev"
+          git add backtest/signals_log.csv
+          git diff --staged --quiet || git commit -m "chore: update backtest outcomes [skip ci]"
+          git push
