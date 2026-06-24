@@ -23,11 +23,11 @@ from config.settings import WATCHLIST, SCAN_INTERVAL_MINUTES, CONFLUENCE_THRESHO
 from core.logger    import get_logger
 from core.ai_engine import run_ai_synthesis
 from core.reporter  import print_terminal_report, save_report
-from core.telegram_notifier import send_telegram_alert, send_telegram_test
-from core.discord_notifier  import send_discord_alert, send_discord_test
+from core.telegram_notifier import send_telegram_alert, send_telegram_test, send_earnings_alert as send_telegram_earnings_alert
+from core.discord_notifier  import send_discord_alert, send_discord_test, send_earnings_alert as send_discord_earnings_alert
 from analyzers.technical    import run_technical_analysis
 from analyzers.sentiment    import run_sentiment_analysis
-from analyzers.fundamentals import run_fundamental_analysis
+from analyzers.fundamentals import run_fundamental_analysis, check_watchlist_earnings
 
 log = get_logger("StockAIBot")
 
@@ -199,6 +199,11 @@ def main():
         action="store_true",
         help="Send a test message to verify Telegram is configured correctly"
     )
+    parser.add_argument(
+        "--check-earnings",
+        action="store_true",
+        help="Proactively check the entire watchlist for upcoming earnings and alert if any are within 5 days"
+    )
     args = parser.parse_args()
 
     # Discord test mode
@@ -221,6 +226,27 @@ def main():
             log.info("✅ Telegram is working! Check your phone.")
         else:
             log.error("❌ Telegram test failed. Check your token and chat ID in .env")
+        return
+
+    # Proactive earnings calendar check mode
+    if args.check_earnings:
+        from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL
+        tickers = [t.strip().upper() for t in args.watchlist.split(",")] if args.watchlist else WATCHLIST
+        log.info(f"Checking earnings calendar for {len(tickers)} tickers: {', '.join(tickers)}")
+        earnings_data = check_watchlist_earnings(tickers)
+
+        if not earnings_data.get("has_alerts"):
+            log.info("✅ No earnings risk in the watchlist for the next 5 days — clear to trade normally")
+        else:
+            log.warning(
+                f"⚠️ Earnings risk detected — Today: {len(earnings_data['today'])} | "
+                f"Tomorrow: {len(earnings_data['tomorrow'])} | "
+                f"This week: {len(earnings_data['this_week'])}"
+            )
+            if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+                send_telegram_earnings_alert(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, earnings_data)
+            if DISCORD_WEBHOOK_URL:
+                send_discord_earnings_alert(DISCORD_WEBHOOK_URL, earnings_data)
         return
 
     # Determine tickers

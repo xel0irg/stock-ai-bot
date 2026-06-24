@@ -345,6 +345,75 @@ def fetch_fundamentals(ticker: str) -> Dict[str, Any]:
 # ══════════════════════════════════════════════════════════
 #  EARNINGS CALENDAR
 # ══════════════════════════════════════════════════════════
+def check_watchlist_earnings(watchlist: List[str], lookahead_days: int = 5) -> Dict[str, Any]:
+    """
+    Proactive earnings check across the entire watchlist — run once before
+    market open rather than waiting for a regular per-ticker scan to discover it.
+
+    Returns a summary with tickers grouped by urgency:
+    - today: earnings today (highest risk — exclude from 0-2 DTE entirely)
+    - tomorrow: earnings tomorrow (high risk — IV crush incoming)
+    - this_week: earnings within lookahead_days (caution — IV may already be elevated)
+    """
+    result = {
+        "checked_at":  datetime.now().isoformat(),
+        "today":       [],
+        "tomorrow":    [],
+        "this_week":   [],
+        "clear":       [],
+        "has_alerts":  False,
+    }
+
+    for ticker in watchlist:
+        try:
+            tk   = yf.Ticker(ticker)
+            info = tk.info
+            earnings_date = info.get("earningsDate") or info.get("earningsTimestamp")
+
+            if earnings_date and isinstance(earnings_date, (list, tuple)):
+                earnings_date = earnings_date[0]
+
+            if not earnings_date:
+                result["clear"].append(ticker)
+                continue
+
+            if hasattr(earnings_date, "timestamp"):
+                ed = datetime.fromtimestamp(earnings_date.timestamp())
+            else:
+                ed = datetime.fromtimestamp(int(earnings_date))
+
+            days = (ed.date() - datetime.now().date()).days
+
+            entry = {
+                "ticker":        ticker,
+                "earnings_date": ed.strftime("%Y-%m-%d"),
+                "days_away":     days,
+            }
+
+            if days == 0:
+                result["today"].append(entry)
+                result["has_alerts"] = True
+            elif days == 1:
+                result["tomorrow"].append(entry)
+                result["has_alerts"] = True
+            elif 1 < days <= lookahead_days:
+                result["this_week"].append(entry)
+                result["has_alerts"] = True
+            else:
+                result["clear"].append(ticker)
+
+        except Exception as e:
+            log.debug(f"Earnings check failed for {ticker}: {e}")
+            result["clear"].append(ticker)
+
+    log.info(
+        f"Watchlist earnings check: {len(result['today'])} today, "
+        f"{len(result['tomorrow'])} tomorrow, {len(result['this_week'])} this week, "
+        f"{len(result['clear'])} clear"
+    )
+    return result
+
+
 def check_earnings_proximity(ticker: str, fundamentals: Dict) -> Dict[str, Any]:
     """Check if earnings is imminent — a major catalyst for volatility."""
     result = {"earnings_imminent": False, "days_to_earnings": None}

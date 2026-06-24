@@ -191,6 +191,64 @@ def send_telegram_alert(
         return False
 
 
+def send_earnings_alert(token: str, chat_id: str, earnings_data: Dict[str, Any]) -> bool:
+    """
+    Send a proactive earnings calendar alert before market open.
+    Always sends if there are any alerts (today/tomorrow/this_week) — not
+    gated by confluence score since this is informational, not a trade signal.
+    """
+    if not token or not chat_id:
+        return False
+
+    if not earnings_data.get("has_alerts"):
+        log.info("Earnings check: no upcoming earnings in lookahead window — no alert sent")
+        return False
+
+    lines = ["📅 *EARNINGS CALENDAR ALERT*", "_Pre-market watchlist check_", ""]
+
+    today = earnings_data.get("today", [])
+    if today:
+        lines.append("🚨 *EARNINGS TODAY — DO NOT TRADE 0-2 DTE:*")
+        for e in today:
+            lines.append(f"  • *{e['ticker']}* reports today")
+        lines.append("")
+
+    tomorrow = earnings_data.get("tomorrow", [])
+    if tomorrow:
+        lines.append("⚠️ *EARNINGS TOMORROW — IV crush risk, avoid new entries:*")
+        for e in tomorrow:
+            lines.append(f"  • *{e['ticker']}* reports tomorrow ({e['earnings_date']})")
+        lines.append("")
+
+    this_week = earnings_data.get("this_week", [])
+    if this_week:
+        lines.append("📌 *EARNINGS THIS WEEK — elevated IV likely:*")
+        for e in sorted(this_week, key=lambda x: x["days_away"]):
+            lines.append(f"  • *{e['ticker']}* in {e['days_away']} days ({e['earnings_date']})")
+        lines.append("")
+
+    clear = earnings_data.get("clear", [])
+    if clear:
+        lines.append(f"✅ *Clear to trade normally:* {', '.join(clear)}")
+
+    message = "\n".join(lines)
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {"chat_id": chat_id, "text": message, "parse_mode": "Markdown"}
+
+    try:
+        resp = requests.post(url, json=payload, timeout=15)
+        if resp.status_code == 200:
+            log.info("✅ Earnings calendar alert sent")
+            return True
+        else:
+            log.error(f"Earnings alert failed: {resp.status_code} — {resp.text[:200]}")
+            return False
+    except Exception as e:
+        log.error(f"Earnings alert send error: {e}")
+        return False
+
+
 def send_telegram_test(token: str, chat_id: str) -> bool:
     """Send a test message to verify bot is working."""
     url  = f"https://api.telegram.org/bot{token}/sendMessage"

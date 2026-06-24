@@ -1,0 +1,68 @@
+name: Stock AI Bot — Earnings Calendar Check
+
+on:
+  # Runs once daily before market open to proactively flag any watchlist
+  # ticker reporting earnings today, tomorrow, or within the next 5 days.
+  # This is informational/protective — it does NOT run the full AI
+  # analysis pipeline, just a lightweight yfinance earnings date check
+  # across the whole watchlist, so it costs near-zero tokens.
+  #
+  # Native schedule: cron is acceptable here (unlike the 30-min trading
+  # scan) because a few minutes of delay on a once-daily pre-market
+  # check is harmless — there's no theta decay clock running on this.
+  schedule:
+    - cron: "0 13 * * 1-5"   # 9:00 AM ET (13:00 UTC during EDT)
+
+  # Allow manual trigger from GitHub Actions tab or external scheduler
+  repository_dispatch:
+    types: [earnings-check-trigger]
+
+  workflow_dispatch:
+    inputs:
+      watchlist:
+        description: "Custom watchlist (comma-separated, overrides .env)"
+        required: false
+        default: ""
+
+jobs:
+  check-earnings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: stock-ai-bot-earnings-check
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create .env from secrets
+        run: |
+          cat > .env << EOF
+          DISCORD_WEBHOOK_URL=${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
+          WATCHLIST=${{ secrets.WATCHLIST }}
+          LOG_LEVEL=INFO
+          EOF
+
+      - name: Run earnings calendar check
+        run: |
+          if [ -n "${{ github.event.inputs.watchlist }}" ]; then
+            python main.py --check-earnings --watchlist "${{ github.event.inputs.watchlist }}"
+          else
+            python main.py --check-earnings
+          fi
+
+      - name: Clean up .env
+        if: always()
+        run: rm -f .env

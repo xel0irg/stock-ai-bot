@@ -229,6 +229,78 @@ def send_discord_alert(
         return False
 
 
+def send_earnings_alert(webhook_url: str, earnings_data: Dict[str, Any]) -> bool:
+    """
+    Send a proactive earnings calendar alert before market open as a
+    Discord embed. Always sends if there are any alerts — informational,
+    not gated by confluence score.
+    """
+    if not webhook_url:
+        return False
+
+    if not earnings_data.get("has_alerts"):
+        log.info("Earnings check: no upcoming earnings in lookahead window — no alert sent")
+        return False
+
+    fields = []
+
+    today = earnings_data.get("today", [])
+    if today:
+        fields.append({
+            "name":  "🚨 EARNINGS TODAY — DO NOT TRADE 0-2 DTE",
+            "value": "\n".join(f"**{e['ticker']}** reports today" for e in today),
+            "inline": False,
+        })
+
+    tomorrow = earnings_data.get("tomorrow", [])
+    if tomorrow:
+        fields.append({
+            "name":  "⚠️ EARNINGS TOMORROW — IV crush risk",
+            "value": "\n".join(f"**{e['ticker']}** reports tomorrow ({e['earnings_date']})" for e in tomorrow),
+            "inline": False,
+        })
+
+    this_week = earnings_data.get("this_week", [])
+    if this_week:
+        sorted_week = sorted(this_week, key=lambda x: x["days_away"])
+        fields.append({
+            "name":  "📌 EARNINGS THIS WEEK — elevated IV likely",
+            "value": "\n".join(f"**{e['ticker']}** in {e['days_away']} days ({e['earnings_date']})" for e in sorted_week),
+            "inline": False,
+        })
+
+    clear = earnings_data.get("clear", [])
+    if clear:
+        fields.append({
+            "name":  "✅ Clear to trade normally",
+            "value": ", ".join(clear),
+            "inline": False,
+        })
+
+    embed = {
+        "title":       "📅 Earnings Calendar Alert",
+        "description": "Pre-market watchlist check",
+        "color":       0xF59E0B,
+        "timestamp":   datetime.utcnow().isoformat(),
+        "fields":      fields,
+        "footer":      {"text": "Stock AI Bot — Earnings Guard"},
+    }
+
+    payload = {"embeds": [embed]}
+
+    try:
+        resp = requests.post(webhook_url, json=payload, timeout=15)
+        if resp.status_code in (200, 204):
+            log.info("✅ Earnings calendar alert sent to Discord")
+            return True
+        else:
+            log.error(f"Earnings alert failed: {resp.status_code} — {resp.text[:200]}")
+            return False
+    except Exception as e:
+        log.error(f"Earnings alert send error: {e}")
+        return False
+
+
 def send_discord_test(webhook_url: str) -> bool:
     """Send a test message to verify webhook is working."""
     payload = {
