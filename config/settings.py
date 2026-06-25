@@ -28,6 +28,12 @@ WATCHLIST = [t.strip().upper() for t in os.getenv("WATCHLIST", "AAPL,TSLA,NVDA,S
 SCAN_INTERVAL_MINUTES = int(os.getenv("SCAN_INTERVAL_MINUTES", "15"))
 SENTIMENT_THRESHOLD   = float(os.getenv("SENTIMENT_THRESHOLD", "0.6"))
 CONFLUENCE_THRESHOLD  = int(os.getenv("CONFLUENCE_THRESHOLD", "65"))
+
+# Custom daily Anthropic API spend cap, enforced in code since Anthropic
+# only supports monthly limits natively. Defaults to $10/day — generous
+# enough for normal scanning + a handful of /scan commands, but caps a
+# runaway loop or unexpected spike well before it becomes a real bill.
+DAILY_SPEND_LIMIT_USD = float(os.getenv("DAILY_SPEND_LIMIT_USD", "5.0"))
 LOG_LEVEL             = os.getenv("LOG_LEVEL", "INFO")
 
 # ── Telegram ──────────────────────────────────────────────

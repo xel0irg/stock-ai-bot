@@ -101,6 +101,11 @@ def analyze_ticker(ticker: str) -> dict:
         log.info(f"[4/4] Running Claude AI Synthesis...")
         ai = run_ai_synthesis(ticker, tech, sent, fund)
 
+        if ai.get("error", "").startswith("daily_spend_limit_reached"):
+            log.warning(f"⛔ {ticker}: {ai['error']} — skipping report/alerts for this ticker")
+            results["error"] = ai["error"]
+            return results
+
         # Output
         print_terminal_report(ticker, tech, sent, fund, ai)
         json_path, txt_path = save_report(ticker, tech, sent, fund, ai)
@@ -210,6 +215,11 @@ def main():
         action="store_true",
         help="Proactively check the entire watchlist for upcoming earnings and alert if any are within 5 days"
     )
+    parser.add_argument(
+        "--spend",
+        action="store_true",
+        help="Show today's accumulated Anthropic API spend and the configured daily cap"
+    )
     args = parser.parse_args()
 
     # Discord test mode
@@ -232,6 +242,17 @@ def main():
             log.info("✅ Telegram is working! Check your phone.")
         else:
             log.error("❌ Telegram test failed. Check your token and chat ID in .env")
+        return
+
+    # Show today's spend
+    if args.spend:
+        from core.spend_tracker import get_today_spend
+        from config.settings import DAILY_SPEND_LIMIT_USD
+        spent = get_today_spend()
+        pct = (spent / DAILY_SPEND_LIMIT_USD * 100) if DAILY_SPEND_LIMIT_USD > 0 else 0
+        log.info(f"💰 Today's Anthropic spend: ${spent:.4f} / ${DAILY_SPEND_LIMIT_USD:.2f} ({pct:.1f}%)")
+        if spent >= DAILY_SPEND_LIMIT_USD:
+            log.warning("⛔ Daily limit reached — further AI calls today will be skipped")
         return
 
     # Proactive earnings calendar check mode

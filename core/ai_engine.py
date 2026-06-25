@@ -10,7 +10,8 @@ from typing import Dict, Any
 import anthropic
 
 from core.logger import get_logger, log_banner
-from config.settings import ANTHROPIC_API_KEY, CONFLUENCE_THRESHOLD
+from core.spend_tracker import check_daily_limit, record_spend
+from config.settings import ANTHROPIC_API_KEY, CONFLUENCE_THRESHOLD, DAILY_SPEND_LIMIT_USD
 
 log = get_logger("AIEngine")
 
@@ -245,6 +246,16 @@ def run_ai_synthesis(
         log.error("ANTHROPIC_API_KEY not set — cannot run AI synthesis")
         return {"error": "Missing ANTHROPIC_API_KEY", "analysis": None}
 
+    # ── Daily spend cap guard ─────────────────────────────────
+    # Anthropic only supports monthly limits natively — this enforces
+    # a custom daily cap before making the call at all.
+    allowed, current_spend = check_daily_limit(DAILY_SPEND_LIMIT_USD)
+    if not allowed:
+        return {
+            "error": f"daily_spend_limit_reached (${current_spend:.2f}/${DAILY_SPEND_LIMIT_USD:.2f})",
+            "analysis": None,
+        }
+
     log.info(f"Sending {ticker} data to Claude for AI synthesis...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -397,6 +408,11 @@ def run_ai_synthesis(
         if confluence_score >= CONFLUENCE_THRESHOLD:
             log_banner(log, ticker, confluence_score)
 
+        # Record actual spend for the daily cap tracker
+        input_tokens  = message.usage.input_tokens
+        output_tokens = message.usage.output_tokens
+        record_spend(ticker, message.model, input_tokens, output_tokens)
+
         return {
             "ticker":            ticker,
             "timestamp":         datetime.now().isoformat(),
@@ -405,7 +421,7 @@ def run_ai_synthesis(
             "suggested_bias":    bias,
             "trade_setup":       trade_setup,
             "model":             message.model,
-            "tokens_used":       message.usage.input_tokens + message.usage.output_tokens,
+            "tokens_used":       input_tokens + output_tokens,
         }
 
     except anthropic.APIError as e:
