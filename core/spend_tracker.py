@@ -35,11 +35,12 @@ LOG_FILE = Path(__file__).resolve().parent.parent / "spend_log.csv"
 
 FIELDNAMES = ["timestamp", "date", "ticker", "model", "input_tokens", "output_tokens", "cost_usd"]
 
-# Current Claude Opus 4.5 pricing (per Anthropic's pricing page, June 2026):
-# $5 / MTok input, $25 / MTok output. Update these if the model or
-# pricing changes.
-PRICE_PER_MTOK_INPUT  = 5.00
-PRICE_PER_MTOK_OUTPUT = 25.00
+# Current Claude Sonnet 4.6 pricing (per Anthropic's pricing page, June 2026):
+# $3 / MTok input, $15 / MTok output. Update these if the model or
+# pricing changes — see config/settings.py / core/ai_engine.py for the
+# model string actually in use.
+PRICE_PER_MTOK_INPUT  = 3.00
+PRICE_PER_MTOK_OUTPUT = 15.00
 
 
 def _ensure_log_exists():

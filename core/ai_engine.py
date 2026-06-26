@@ -263,7 +263,7 @@ def run_ai_synthesis(
 
     try:
         message = client.messages.create(
-            model="claude-opus-4-5",
+            model="claude-sonnet-4-6",
             max_tokens=2048,
             system=(
                 "You are a professional quantitative analyst specializing in short-dated options trading. "
