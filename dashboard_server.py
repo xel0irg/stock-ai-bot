@@ -75,6 +75,52 @@ def _gh_request(url: str) -> bytes | None:
         return None
 
 
+def _download_artifact_zip(artifact_id) -> bytes | None:
+    """
+    Download an artifact's zip archive. The GitHub API's /zip endpoint
+    returns a 302 redirect to an Azure Blob Storage URL — that redirected
+    request must NOT carry the GitHub Authorization header, or Azure
+    rejects it with 401 AuthenticationFailed. urlopen() follows redirects
+    automatically while keeping the original headers, which triggers
+    exactly that failure, so this is handled manually instead.
+    """
+    import urllib.request
+    from urllib.error import HTTPError
+
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{artifact_id}/zip"
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "stock-ai-bot-dashboard/1.0",
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+    }
+
+    class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, hdrs, newurl):
+            return None  # Don't auto-follow — fetch newurl ourselves, auth-free
+
+    opener = urllib.request.build_opener(NoRedirectHandler)
+    req = Request(url, headers=headers, method="GET")
+
+    try:
+        try:
+            resp = opener.open(req, timeout=15)
+            return resp.read()
+        except HTTPError as e:
+            if e.code in (301, 302, 303, 307, 308):
+                redirect_url = e.headers.get("Location")
+                if not redirect_url:
+                    print("[GitHub API] Artifact redirect had no Location header")
+                    return None
+                plain_req = Request(redirect_url, method="GET")
+                with urlopen(plain_req, timeout=20) as resp2:
+                    return resp2.read()
+            print(f"[GitHub API] Artifact download failed: {e.code}")
+            return None
+    except URLError as e:
+        print(f"[GitHub API] Artifact download network error: {e}")
+        return None
+
+
 # ── GitHub Artifacts ──────────────────────────────────────────────────────────
 def fetch_from_github() -> list[dict]:
     """
@@ -120,8 +166,7 @@ def fetch_from_github() -> list[dict]:
     print(f"[GitHub] Found artifact: {artifact_name} (created {created_at})")
 
     # Step 3: Download the artifact zip
-    download_url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{artifact_id}/zip"
-    zip_bytes = _gh_request(download_url)
+    zip_bytes = _download_artifact_zip(artifact_id)
     if not zip_bytes:
         print("[GitHub] Failed to download artifact zip")
         return []

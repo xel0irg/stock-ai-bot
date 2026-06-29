@@ -52,6 +52,53 @@ def _gh_request(url: str, method: str = "GET", body: dict | None = None) -> tupl
         return 0, b""
 
 
+def _download_artifact_zip(artifact_id: int) -> bytes | None:
+    """
+    Download an artifact's zip archive. The GitHub API's /zip endpoint
+    returns a 302 redirect to an Azure Blob Storage URL — that redirected
+    request must NOT carry the GitHub Authorization header, or Azure
+    rejects it with 401 AuthenticationFailed. Python's urlopen follows
+    redirects automatically while keeping the original headers, which
+    triggers exactly that failure, so this is handled manually instead.
+    """
+    import urllib.request
+
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{artifact_id}/zip"
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "stock-ai-bot-discord/1.0",
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+    }
+
+    class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, hdrs, newurl):
+            return None  # Don't auto-follow — we'll fetch newurl ourselves, auth-free
+
+    opener = urllib.request.build_opener(NoRedirectHandler)
+    req = Request(url, headers=headers, method="GET")
+
+    try:
+        try:
+            resp = opener.open(req, timeout=15)
+            # No redirect occurred (unlikely for this endpoint, but handle it)
+            return resp.read()
+        except HTTPError as e:
+            if e.code in (301, 302, 303, 307, 308):
+                redirect_url = e.headers.get("Location")
+                if not redirect_url:
+                    log.error("Artifact download redirected but no Location header found")
+                    return None
+                # Fetch the redirect target with NO auth header at all
+                plain_req = Request(redirect_url, method="GET")
+                with urlopen(plain_req, timeout=20) as resp2:
+                    return resp2.read()
+            log.error(f"Artifact download failed: {e.code} — {e.read()[:200]}")
+            return None
+    except URLError as e:
+        log.error(f"Artifact download network error: {e}")
+        return None
+
+
 def _sanitize(obj):
     """Recursively replace NaN/Inf floats with None so JSON stays valid."""
     if isinstance(obj, float):
@@ -91,11 +138,9 @@ def fetch_latest_reports() -> list[dict]:
         return []
 
     latest = sorted(artifacts, key=lambda a: a.get("created_at", ""), reverse=True)[0]
-    status, zip_bytes = _gh_request(
-        f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{latest['id']}/zip"
-    )
-    if status != 200 or not zip_bytes:
-        log.warning(f"Artifact download failed: {status}")
+    zip_bytes = _download_artifact_zip(latest["id"])
+    if not zip_bytes:
+        log.warning("Artifact download failed — see previous log line for detail")
         return []
 
     reports = []
@@ -126,18 +171,30 @@ def fetch_latest_reports() -> list[dict]:
     return reports
 
 
-def get_watchlist_variable() -> str | None:
-    """Read the current WATCHLIST repository variable value."""
+def get_watchlist_variable() -> tuple[str | None, bool]:
+    """
+    Read the current WATCHLIST repository variable value.
+    Returns (value, ok) where:
+      - (value, True)  — successfully read an existing value
+      - (None, True)   — variable doesn't exist yet (404) — NOT an error,
+                          just means it's never been created/migrated yet
+      - (None, False)  — a real failure (auth, network, permissions, etc)
+    """
     status, raw = _gh_request(
         f"https://api.github.com/repos/{GITHUB_REPO}/actions/variables/WATCHLIST"
     )
+    if status == 404:
+        log.info("WATCHLIST variable doesn't exist yet — will be created on first write")
+        return None, True
+
     if status != 200:
         log.warning(f"WATCHLIST variable read failed: {status} — {raw[:200]}")
-        return None
+        return None, False
+
     try:
-        return json.loads(raw).get("value")
+        return json.loads(raw).get("value"), True
     except json.JSONDecodeError:
-        return None
+        return None, False
 
 
 def set_watchlist_variable(new_value: str) -> bool:

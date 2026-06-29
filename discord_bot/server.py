@@ -193,14 +193,22 @@ def handle_watchlist_command(action: str, tickers_arg: str | None) -> str:
     /watchlist — view or update the WATCHLIST GitHub repository variable.
     No AI call. 'view' just reads; 'add'/'remove'/'set' modify the list.
     """
-    current_raw = get_watchlist_variable()
-    if current_raw is None:
+    current_raw, ok = get_watchlist_variable()
+    if not ok:
         return "⚠️ Could not read the current watchlist from GitHub. Check GITHUB_TOKEN permissions."
 
-    current = [t.strip().upper() for t in current_raw.split(",") if t.strip()]
+    if current_raw is None:
+        # Variable has never been created — fall back to the default
+        # watchlist from config so /watchlist still works on first use.
+        from config.settings import WATCHLIST as DEFAULT_WATCHLIST
+        current = list(DEFAULT_WATCHLIST)
+        note = "\n_(Note: this is the local default — no WATCHLIST GitHub variable exists yet. It will be created on your first add/remove/set.)_"
+    else:
+        current = [t.strip().upper() for t in current_raw.split(",") if t.strip()]
+        note = ""
 
     if action == "view":
-        return f"📋 **Current watchlist:** {', '.join(current)}"
+        return f"📋 **Current watchlist:** {', '.join(current)}{note}"
 
     if not tickers_arg:
         return "⚠️ Please provide ticker(s), e.g. `/watchlist action:add tickers:GOOGL,AMD`"
