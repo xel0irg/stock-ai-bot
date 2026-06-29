@@ -1,13 +1,19 @@
 name: Stock AI Bot — Backtest Outcome Check
 
 on:
-  # Runs once daily before market open to evaluate outcomes for signals
-  # that are now old enough (20+ hours) to have a knowable result.
-  # This commits the updated signals_log.csv back to the repo so the
-  # backtest dataset persists permanently, independent of the 30-day
-  # artifact retention window.
+  # PRIMARY TRIGGER: repository_dispatch, fired by an external scheduler
+  # (cron-job.org) once daily before market open. The native schedule:
+  # cron below is kept ONLY as a low-stakes backup — we've already
+  # confirmed via scan.yml's run history that GitHub's own scheduler
+  # drops the large majority of triggers and fires at unpredictable
+  # times, sometimes not at all for days. A once-daily backtest check
+  # tolerates that backup running late far better than the 30-min
+  # trading scan does, but it should not be relied on alone either.
+  repository_dispatch:
+    types: [backtest-check-trigger]
+
   schedule:
-    - cron: "30 12 * * 1-5"   # 8:30 AM ET (12:30 UTC during EDT)
+    - cron: "30 12 * * 1-5"   # 8:30 AM ET (12:30 UTC during EDT) — backup only
 
   workflow_dispatch: {}
 
@@ -17,6 +23,9 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: write   # needed to commit the updated CSV back to the repo
+    concurrency:
+      group: stock-ai-bot-backtest-check
+      cancel-in-progress: true
 
     steps:
       - name: Checkout repository
@@ -43,4 +52,5 @@ jobs:
           git config user.email "bot@stockaibot.dev"
           git add backtest/signals_log.csv
           git diff --staged --quiet || git commit -m "chore: update backtest outcomes [skip ci]"
+          git pull --rebase --autostash || true
           git push
