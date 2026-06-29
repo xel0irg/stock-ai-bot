@@ -1,10 +1,10 @@
 """
-discord_bot/register_commands.py — One-time setup to register /scan with Discord
+discord_bot/register_commands.py — One-time setup to register Discord commands
 
-Run this once (and again any time you change the command definition) to
-tell Discord that your application supports /scan. This uses Discord's
-REST API directly — registers a GUILD command (instant) rather than a
-global command (which can take up to an hour to propagate).
+Run this once (and again any time you change a command definition) to
+tell Discord which slash commands your application supports. This uses
+Discord's REST API directly — registers GUILD commands (instant) rather
+than global commands (which can take up to an hour to propagate).
 
 Usage:
     python -m discord_bot.register_commands
@@ -36,6 +36,39 @@ SCAN_COMMAND = {
     ],
 }
 
+STATUS_COMMAND = {
+    "name": "status",
+    "description": "Show the latest scan results at a glance (no AI call, instant)",
+    "options": [],
+}
+
+WATCHLIST_COMMAND = {
+    "name": "watchlist",
+    "description": "View or update the ticker watchlist (no AI call)",
+    "options": [
+        {
+            "name": "action",
+            "description": "What to do with the watchlist",
+            "type": 3,  # STRING
+            "required": False,
+            "choices": [
+                {"name": "view",   "value": "view"},
+                {"name": "add",    "value": "add"},
+                {"name": "remove", "value": "remove"},
+                {"name": "set",    "value": "set"},
+            ],
+        },
+        {
+            "name": "tickers",
+            "description": "Comma-separated tickers, e.g. GOOGL,AMD (required for add/remove/set)",
+            "type": 3,  # STRING
+            "required": False,
+        },
+    ],
+}
+
+ALL_COMMANDS = [SCAN_COMMAND, STATUS_COMMAND, WATCHLIST_COMMAND]
+
 
 def register():
     if not all([DISCORD_BOT_TOKEN, DISCORD_APPLICATION_ID, DISCORD_GUILD_ID]):
@@ -48,14 +81,13 @@ def register():
     )
     headers = {"Authorization": f"Bot {DISCORD_BOT_TOKEN}"}
 
-    resp = requests.post(url, headers=headers, json=SCAN_COMMAND, timeout=15)
-
-    if resp.status_code in (200, 201):
-        print("✅ /scan command registered successfully!")
-        print(resp.json())
-    else:
-        print(f"❌ Registration failed: {resp.status_code}")
-        print(resp.text)
+    for command in ALL_COMMANDS:
+        resp = requests.post(url, headers=headers, json=command, timeout=15)
+        if resp.status_code in (200, 201):
+            print(f"✅ /{command['name']} registered successfully!")
+        else:
+            print(f"❌ /{command['name']} registration failed: {resp.status_code}")
+            print(resp.text)
 
 
 if __name__ == "__main__":

@@ -59,7 +59,7 @@ jobs:
           TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
           REDDIT_USER_AGENT=${{ secrets.REDDIT_USER_AGENT }}
-          WATCHLIST=${{ secrets.WATCHLIST }}
+          WATCHLIST=${{ vars.WATCHLIST || secrets.WATCHLIST }}
           CONFLUENCE_THRESHOLD=${{ secrets.CONFLUENCE_THRESHOLD }}
           DAILY_SPEND_LIMIT_USD=${{ secrets.DAILY_SPEND_LIMIT_USD }}
           SCAN_INTERVAL_MINUTES=30

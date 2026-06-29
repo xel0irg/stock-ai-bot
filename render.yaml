@@ -9,6 +9,10 @@
 #   DISCORD_PUBLIC_KEY
 #   DISCORD_APPLICATION_ID
 #   ANTHROPIC_API_KEY
+#   GITHUB_TOKEN     — Personal Access Token with repo scope, needed by
+#                      /status (read scan artifacts) and /watchlist
+#                      (read/write the WATCHLIST repo variable)
+#   GITHUB_REPO      — e.g. "xel0irg/stock-ai-bot" (defaults to that if unset)
 #   (plus any other secrets analyze_ticker() needs — see config/settings.py)
 
 services:

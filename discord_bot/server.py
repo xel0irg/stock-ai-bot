@@ -36,6 +36,11 @@ from nacl.exceptions import BadSignatureError
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from core.logger import get_logger
+from discord_bot.github_helper import (
+    fetch_latest_reports,
+    get_watchlist_variable,
+    set_watchlist_variable,
+)
 
 log = get_logger("DiscordBot")
 
@@ -109,12 +114,121 @@ async def interactions(request: Request, background_tasks: BackgroundTasks):
             background_tasks.add_task(run_scan_and_respond, ticker, interaction_token)
             return JSONResponse({"type": RESPONSE_DEFERRED_CHANNEL_MESSAGE})
 
+        if command_name == "status":
+            # No AI call — just reads the latest saved reports. Fast enough
+            # to respond immediately without deferring.
+            content = build_status_message()
+            return JSONResponse({
+                "type": RESPONSE_CHANNEL_MESSAGE_WITH_SOURCE,
+                "data": {"content": content},
+            })
+
+        if command_name == "watchlist":
+            options = data.get("data", {}).get("options", [])
+            action  = next((o["value"] for o in options if o["name"] == "action"), "view")
+            tickers_arg = next((o["value"] for o in options if o["name"] == "tickers"), None)
+            content = handle_watchlist_command(action, tickers_arg)
+            return JSONResponse({
+                "type": RESPONSE_CHANNEL_MESSAGE_WITH_SOURCE,
+                "data": {"content": content},
+            })
+
         return JSONResponse({
             "type": RESPONSE_CHANNEL_MESSAGE_WITH_SOURCE,
             "data": {"content": f"Unknown command: {command_name}"},
         })
 
     return JSONResponse({"type": RESPONSE_PONG})
+
+
+def build_status_message() -> str:
+    """
+    /status — no AI call, just reads the most recent saved scan reports
+    from GitHub Actions artifacts and summarizes them. Mirrors the same
+    data the web dashboard shows.
+    """
+    try:
+        reports = fetch_latest_reports()
+    except Exception as e:
+        log.error(f"/status failed to fetch reports: {e}")
+        return "⚠️ Could not fetch the latest scan results. Try again shortly."
+
+    if not reports:
+        return "📭 No recent scan reports found. The bot may not have run yet today."
+
+    active = [r for r in reports if (r.get("trade_setup") or {}).get("contract_type") not in (None, "NONE")]
+    active.sort(key=lambda r: r.get("confluence_score") or 0, reverse=True)
+
+    latest_ts = max((r.get("timestamp") for r in reports if r.get("timestamp")), default=None)
+
+    lines = ["📊 **Latest Scan Status**"]
+    if latest_ts:
+        lines.append(f"_Last updated: {latest_ts}_")
+    lines.append("")
+
+    if active:
+        lines.append("**Active setups:**")
+        for r in active[:6]:  # cap to avoid hitting Discord's message length limit
+            ts = r.get("trade_setup", {})
+            emoji = "🟢" if ts.get("contract_type") == "CALL" else "🔴"
+            lines.append(
+                f"{emoji} **{r['ticker']}** — {ts.get('contract_type')} "
+                f"{ts.get('expiry', '')} | Strike ${ts.get('strike', 'N/A')} | "
+                f"Score {r.get('confluence_score', 'N/A')}/100"
+            )
+    else:
+        lines.append("No active setups right now — all signals below threshold.")
+
+    no_trade = [r for r in reports if r not in active]
+    if no_trade:
+        lines.append("")
+        lines.append(f"_{len(no_trade)} other ticker(s) scanned, no trade: "
+                      + ", ".join(r["ticker"] for r in no_trade[:10]) + "_")
+
+    return "\n".join(lines)
+
+
+def handle_watchlist_command(action: str, tickers_arg: str | None) -> str:
+    """
+    /watchlist — view or update the WATCHLIST GitHub repository variable.
+    No AI call. 'view' just reads; 'add'/'remove'/'set' modify the list.
+    """
+    current_raw = get_watchlist_variable()
+    if current_raw is None:
+        return "⚠️ Could not read the current watchlist from GitHub. Check GITHUB_TOKEN permissions."
+
+    current = [t.strip().upper() for t in current_raw.split(",") if t.strip()]
+
+    if action == "view":
+        return f"📋 **Current watchlist:** {', '.join(current)}"
+
+    if not tickers_arg:
+        return "⚠️ Please provide ticker(s), e.g. `/watchlist action:add tickers:GOOGL,AMD`"
+
+    new_tickers = [t.strip().upper() for t in tickers_arg.split(",") if t.strip()]
+
+    if action == "add":
+        updated = sorted(set(current) | set(new_tickers))
+        added = sorted(set(new_tickers) - set(current))
+        msg_extra = f"Added: {', '.join(added)}" if added else "No new tickers — already in list."
+    elif action == "remove":
+        updated = sorted(set(current) - set(new_tickers))
+        removed = sorted(set(new_tickers) & set(current))
+        msg_extra = f"Removed: {', '.join(removed)}" if removed else "None of those were in the list."
+    elif action == "set":
+        updated = sorted(set(new_tickers))
+        msg_extra = "Watchlist replaced entirely."
+    else:
+        return f"⚠️ Unknown action '{action}'. Use view, add, remove, or set."
+
+    if not updated:
+        return "⚠️ That would leave an empty watchlist — refusing to save."
+
+    success = set_watchlist_variable(",".join(updated))
+    if not success:
+        return "⚠️ Failed to update the watchlist on GitHub. Check GITHUB_TOKEN permissions."
+
+    return f"✅ {msg_extra}\n📋 **New watchlist:** {', '.join(updated)}"
 
 
 def run_scan_and_respond(ticker: str, interaction_token: str):
