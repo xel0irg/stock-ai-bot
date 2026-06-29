@@ -23,17 +23,41 @@ STOCKTWITS_TOKEN = os.getenv("STOCKTWITS_ACCESS_TOKEN", "")
 # ── Twitter/X ─────────────────────────────────────────────
 TWITTER_BEARER = os.getenv("TWITTER_BEARER_TOKEN", "")
 
+def _safe_float(env_var: str, default: float) -> float:
+    """Parse an env var as float, falling back to default on blank/invalid values.
+    Guards against GitHub Secrets that exist but are set to an empty string —
+    os.getenv()'s own default only applies when the var is unset entirely."""
+    raw = os.getenv(env_var, "").strip()
+    if not raw:
+        return default
+    try:
+        return float(raw)
+    except ValueError:
+        return default
+
+
+def _safe_int(env_var: str, default: int) -> int:
+    """Same as _safe_float but for int settings."""
+    raw = os.getenv(env_var, "").strip()
+    if not raw:
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        return default
+
+
 # ── Bot Behaviour ─────────────────────────────────────────
 WATCHLIST = [t.strip().upper() for t in os.getenv("WATCHLIST", "AAPL,TSLA,NVDA,SPY").split(",")]
-SCAN_INTERVAL_MINUTES = int(os.getenv("SCAN_INTERVAL_MINUTES", "15"))
-SENTIMENT_THRESHOLD   = float(os.getenv("SENTIMENT_THRESHOLD", "0.6"))
-CONFLUENCE_THRESHOLD  = int(os.getenv("CONFLUENCE_THRESHOLD", "65"))
+SCAN_INTERVAL_MINUTES = _safe_int("SCAN_INTERVAL_MINUTES", 15)
+SENTIMENT_THRESHOLD   = _safe_float("SENTIMENT_THRESHOLD", 0.6)
+CONFLUENCE_THRESHOLD  = _safe_int("CONFLUENCE_THRESHOLD", 65)
 
 # Custom daily Anthropic API spend cap, enforced in code since Anthropic
-# only supports monthly limits natively. Defaults to $10/day — generous
+# only supports monthly limits natively. Defaults to $5/day — generous
 # enough for normal scanning + a handful of /scan commands, but caps a
 # runaway loop or unexpected spike well before it becomes a real bill.
-DAILY_SPEND_LIMIT_USD = float(os.getenv("DAILY_SPEND_LIMIT_USD", "5.0"))
+DAILY_SPEND_LIMIT_USD = _safe_float("DAILY_SPEND_LIMIT_USD", 5.0)
 LOG_LEVEL             = os.getenv("LOG_LEVEL", "INFO")
 
 # ── Telegram ──────────────────────────────────────────────
