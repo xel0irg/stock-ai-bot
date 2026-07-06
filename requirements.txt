@@ -25,6 +25,9 @@ aiohttp>=3.9.0
 # AI engine
 anthropic>=0.34.0
 
+# Image rendering (Discord signal cards)
+Pillow>=10.0.0
+
 # Utilities
 python-dotenv>=1.0.0
 colorama>=0.4.6

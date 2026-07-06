@@ -230,12 +230,35 @@ def send_discord_alert(
         return False
 
     embed = _build_embed(ticker, tech, sent, fund, ai)
-    payload = {"embeds": [embed]}
+
+    # ── Signal card image ─────────────────────────────────────
+    # Render a dashboard-style PNG card and attach it so the embed
+    # shows a readable visual summary above the text breakdown.
+    # If rendering fails for ANY reason we silently fall back to
+    # the text-only embed — the alert always goes out.
+    card_png = None
+    try:
+        from core.signal_card import render_signal_card
+        card_png = render_signal_card(ticker, tech, ai)
+    except Exception as e:
+        log.warning(f"Signal card unavailable for {ticker}: {e}")
 
     try:
-        resp = requests.post(webhook_url, json=payload, timeout=15)
+        if card_png:
+            import json as _json
+            embed["image"] = {"url": "attachment://signal_card.png"}
+            resp = requests.post(
+                webhook_url,
+                data={"payload_json": _json.dumps({"embeds": [embed]})},
+                files={"files[0]": ("signal_card.png", card_png, "image/png")},
+                timeout=20,
+            )
+        else:
+            resp = requests.post(webhook_url, json={"embeds": [embed]}, timeout=15)
+
         if resp.status_code in (200, 204):
-            log.info(f"✅ Discord alert sent for {ticker} (score={score})")
+            log.info(f"✅ Discord alert sent for {ticker} (score={score}"
+                     f"{', with card' if card_png else ''})")
             return True
         else:
             log.error(f"Discord webhook error: {resp.status_code} — {resp.text[:200]}")
