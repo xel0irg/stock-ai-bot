@@ -226,6 +226,7 @@ PROFIT TARGET: XX%
 MAX LOSS: 100% of premium paid
 STOP RULE: (one sentence)
 ENTRY CONDITION: (one sentence — use the intraday VWAP, EMA, and volume data to specify a precise trigger: e.g. "Enter on 15-min candle close below VWAP $X with volume above 1.5x avg" or "Enter on rejection at 1H EMA9 with bearish MACD cross on 15m")
+ENTRY TRIGGER PRICE: $X.XX (the single numeric stock price level from the entry condition above — for PUTs the level price must break BELOW, for CALLs the level price must break ABOVE)
 AVOID IF: (one sentence)
 KEY RISK: (one sentence)
 
@@ -358,6 +359,11 @@ def run_ai_synthesis(
         avoid_if        = _extract_line("AVOID IF", analysis_text)
         key_risk        = _extract_line("KEY RISK", analysis_text)
 
+        entry_trigger = _extract_field([
+            r"ENTRY TRIGGER PRICE:\s*\$?([\d.]+)",
+            r"\|\s*\*{0,2}ENTRY TRIGGER PRICE\*{0,2}\s*\|\s*\*{0,2}\$?([\d.]+)",
+        ], analysis_text, float)
+
         # Rough quality flag based on contract type + confluence
         if contract_type == "NONE":
             setup_quality = "NO TRADE"
@@ -395,6 +401,7 @@ def run_ai_synthesis(
             "profit_target":   profit_target,
             "stop_rule":       stop_rule,
             "entry_condition": entry_condition,
+            "entry_trigger":   entry_trigger,
             "avoid_if":        avoid_if,
             "key_risk":        key_risk,
             "setup_quality":   setup_quality,

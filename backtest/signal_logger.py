@@ -36,6 +36,9 @@ FIELDNAMES = [
     "stock_target",      # where AI predicted price needs to go
     "stop_level",        # AI's invalidation level (parsed from stop_rule text)
     "expiry",            # 0DTE / 1DTE / 2DTE
+    "entry_trigger",     # numeric entry trigger price from the AI
+    "freshness_consumed_pct",  # % of trigger→target move consumed at alert time
+    "freshness_stale",   # yes/no — was the signal flagged STALE at alert time
     # Filled in later by outcome_checker.py:
     "checked",           # "yes" once outcome has been evaluated
     "checked_at",
@@ -49,12 +52,33 @@ FIELDNAMES = [
 
 
 def _ensure_log_exists():
-    """Create the CSV with headers if it doesn't exist yet."""
+    """
+    Create the CSV with headers if it doesn't exist yet.
+    If it exists with an OLDER schema (fewer columns), migrate it in
+    place: rewrite with the new header and pad old rows with blanks.
+    This keeps the git-committed history intact when we add columns.
+    """
     if not LOG_FILE.exists():
         with open(LOG_FILE, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
             writer.writeheader()
         log.info(f"Created new backtest log at {LOG_FILE}")
+        return
+
+    # Schema migration check
+    with open(LOG_FILE, "r", newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        header = next(reader, [])
+        if header == FIELDNAMES:
+            return  # up to date
+        old_rows = list(csv.DictReader(open(LOG_FILE, newline="", encoding="utf-8")))
+
+    log.info(f"Migrating backtest log schema: {len(header)} → {len(FIELDNAMES)} columns")
+    with open(LOG_FILE, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=FIELDNAMES, extrasaction="ignore")
+        writer.writeheader()
+        for row in old_rows:
+            writer.writerow({k: row.get(k, "") for k in FIELDNAMES})
 
 
 def _extract_stop_level(stop_rule_text: str, contract_type: str) -> float | None:
@@ -106,6 +130,10 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
                                      trade_setup.get("contract_type", "")
                                  ),
             "expiry":            trade_setup.get("expiry"),
+            "entry_trigger":     trade_setup.get("entry_trigger"),
+            "freshness_consumed_pct": (ai.get("freshness") or {}).get("consumed_pct", ""),
+            "freshness_stale":   ("yes" if (ai.get("freshness") or {}).get("is_stale") else
+                                  "no" if (ai.get("freshness") or {}).get("checked") else ""),
             "checked":           "",
             "checked_at":        "",
             "outcome_price":     "",

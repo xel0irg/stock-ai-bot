@@ -106,6 +106,25 @@ def analyze_ticker(ticker: str) -> dict:
             results["error"] = ai["error"]
             return results
 
+        # ── Signal freshness check ─────────────────────────────
+        # The scan data can be 30+ min old by the time the alert fires.
+        # Re-fetch the LIVE price now and measure how much of the
+        # trigger→target move has already been consumed. If the move
+        # already happened (the NVDA case), flag the signal STALE so
+        # nobody chases a dead entry.
+        ts = ai.get("trade_setup", {})
+        if ts.get("contract_type") in ("CALL", "PUT"):
+            from core.freshness import check_signal_freshness
+            ai["freshness"] = check_signal_freshness(
+                ticker=ticker,
+                contract_type=ts.get("contract_type"),
+                entry_trigger=ts.get("entry_trigger"),
+                stock_target=ts.get("stock_target"),
+                snapshot_price=tech.get("technicals", {}).get("last_price"),
+            )
+            if ai["freshness"].get("is_stale"):
+                log.warning(f"⏱ {ticker}: signal flagged STALE — {ai['freshness']['note']}")
+
         # Output
         print_terminal_report(ticker, tech, sent, fund, ai)
         json_path, txt_path = save_report(ticker, tech, sent, fund, ai)
@@ -220,6 +239,11 @@ def main():
         action="store_true",
         help="Show today's accumulated Anthropic API spend and the configured daily cap"
     )
+    parser.add_argument(
+        "--force", "-f",
+        action="store_true",
+        help="Bypass the market-hours check and scan even when the market is closed"
+    )
     args = parser.parse_args()
 
     # Discord test mode
@@ -287,17 +311,33 @@ def main():
     log.info(f"Watchlist: {', '.join(tickers)}")
     log.info(f"Confluence threshold: {CONFLUENCE_THRESHOLD}/100 for high-conviction signals")
 
+    # ── Market-hours gate ─────────────────────────────────────
+    # Skip scans on weekends, NYSE holidays, and outside the
+    # 9:30 AM – 4:00 PM ET session (1:00 PM on early-close days).
+    # No more manually disabling the cron-job.org trigger on holidays.
+    # Bypass with --force for testing / off-hours analysis.
+    from core.market_hours import market_status
+
     if args.loop:
         log.info(f"Loop mode: scanning every {SCAN_INTERVAL_MINUTES} minutes. Press Ctrl+C to stop.\n")
         try:
             while True:
-                run_scan(tickers)
-                next_run = datetime.now()
-                log.info(f"Next scan in {SCAN_INTERVAL_MINUTES} minutes...")
+                status = market_status()
+                if args.force or status["is_open"]:
+                    run_scan(tickers)
+                else:
+                    log.info(f"⏸  Skipping scan — {status['reason']}")
+                log.info(f"Next check in {SCAN_INTERVAL_MINUTES} minutes...")
                 time.sleep(SCAN_INTERVAL_MINUTES * 60)
         except KeyboardInterrupt:
             log.info("Bot stopped by user.")
     else:
+        status = market_status()
+        if not args.force and not status["is_open"]:
+            log.info(f"⏸  Market closed — {status['reason']}. Skipping scan. (Use --force to override.)")
+            return
+        if status.get("is_early_close"):
+            log.info("🕐 Early-close day — market closes at 1:00 PM ET today")
         run_scan(tickers)
 
 

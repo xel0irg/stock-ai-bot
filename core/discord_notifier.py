@@ -105,6 +105,22 @@ def _build_embed(
         if ts_data.get("key_risk"):
             setup_value += f"⚠️ Risk: {ts_data['key_risk']}"
         setup_value = setup_value.strip()
+
+        # ── Freshness banner ──────────────────────────────────
+        # Injected by core/freshness.py at alert time. A STALE flag
+        # means the trigger→target move already mostly happened
+        # before this alert fired — entering now is chasing.
+        fresh = ai.get("freshness", {})
+        if fresh.get("is_stale"):
+            setup_value = (
+                f"🚨 **STALE SIGNAL — DO NOT CHASE** 🚨\n"
+                f"⏱ {fresh.get('note', 'Move already happened before this alert.')}\n\n"
+                + setup_value
+            )
+            quality = f"STALE — {quality}"
+        elif fresh.get("checked") and fresh.get("note"):
+            setup_value += f"\n⏱ Freshness: {fresh['note']}"
+
         conviction_str = f"{qual_emoji} {quality}"
     elif "EARNINGS" in quality:
         setup_value    = f"⚡ **EARNINGS IMMINENT — NO TRADE**\n{ts_data.get('key_risk', 'IV crush risk is extreme. Do not trade 0-2 DTE into earnings.')}"
