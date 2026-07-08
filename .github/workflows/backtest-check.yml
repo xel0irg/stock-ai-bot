@@ -41,7 +41,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run outcome checker
-        run: python -m backtest.outcome_checker
+        run: python -m backtest.outcome_checker --recheck
 
       - name: Generate backtest report
         run: python -m backtest.report
