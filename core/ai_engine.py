@@ -100,7 +100,15 @@ TIMEFRAME CONFLUENCE:
 No intraday data available (market may be closed or data feed issue).
 """
 
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    _et_now = datetime.now(ZoneInfo("America/New_York"))
+    _time_str = _et_now.strftime("%I:%M %p ET")
+    _after_2pm = _et_now.hour >= 14
+
     prompt = f"""You are an elite quantitative analyst and trading AI. You have just completed a comprehensive multi-source data pull on the stock ticker: **{ticker}**
+
+Current time: {_time_str}{"  ⚠️ It is after 2 PM ET — 0DTE is NOT permitted (theta decay too severe in final hours)." if _after_2pm else ""}
 
 Your job is to synthesize ALL of the data below into a clear, actionable analysis. Be direct, specific, and decisive. This is not investment advice - it is scenario analysis for an informed trader.
 
@@ -223,6 +231,12 @@ CRITICAL RULES:
 - Only use NONE if signals are genuinely mixed/contradictory OR score < 55
 - Do NOT default to NONE just because the setup is bearish
 - TARGET REALISM (non-negotiable): the STOCK PRICE TARGET must sit WITHIN the expected move for your chosen expiry (shown in the technical data above). Backtest data shows targets beyond the expected move lose ~96% of the time even when direction is correct. Aim for 0.5–0.8x the expected move. If your thesis requires a move beyond ±1x expected move, the trade is not viable in 0-2 DTE — pick a closer target or output NONE.
+- EXPIRY SELECTION (non-negotiable): base expiry on confluence score AND setup characteristics:
+    • Score 55–69 (LOW/MODERATE): use 1DTE or 2DTE only. 0DTE requires precision timing this setup cannot support — theta will punish hesitation.
+    • Score 70–84 (HIGH CONVICTION): use 0DTE if the trigger is intraday and imminent (clear level, strong volume, time before 2 PM ET), otherwise 1DTE.
+    • Score 85+ (EXTREME CONVICTION): prefer 0DTE. The setup is strong enough to absorb intraday noise.
+    • Always use 2DTE if: VIX is elevated (>22), the setup requires a multi-session move, or the entry trigger has not yet been reached and may need time.
+    • Never use 0DTE after 2 PM ET — theta decay accelerates sharply in the final two hours.
 
 IMPORTANT: Output this section as plain key-value pairs ONLY. Do NOT use markdown tables, bold, or any formatting. Use exactly this format:
 
