@@ -31,6 +31,13 @@ def _build_analysis_prompt(
     earn   = fund.get("earnings", {})
     inside = fund.get("insider", {})
     reddit = sent.get("reddit", {}).get("aggregated", {})
+
+    # Market regime context (cached — fetched once per scan, shared across tickers)
+    try:
+        from core.market_regime import regime_for_ticker
+        regime_block = regime_for_ticker(ticker)
+    except Exception:
+        regime_block = ""
     twits  = sent.get("stocktwits", {})
     news   = sent.get("news", {}).get("aggregated", {})
     tw     = sent.get("twitter", {}).get("aggregated", {})
@@ -110,6 +117,7 @@ EMA Trend: {ta.get('ema_trend', 'N/A').upper()} (EMA9={ta.get('ema9')} / EMA21={
 Bollinger Band Position: {ta.get('bb_pct', 'N/A')} ({ta.get('bb_signal', 'N/A').upper()}) | Upper={ta.get('bb_upper')} / Lower={ta.get('bb_lower')}
 Stochastic K/D: {ta.get('stoch_k')}/{ta.get('stoch_d')} → {ta.get('stoch_signal', 'N/A').upper()}
 ATR: {ta.get('atr')} ({ta.get('atr_pct')}% of price)
+{tech.get('expected_move', {}).get('summary', '')}
 OBV Trend: {ta.get('obv_trend', 'N/A').upper()}
 Volume: {ta.get('volume_last') or 'N/A'} vs 20D MA {ta.get('volume_ma20') or 'N/A'} → {str(ta.get('volume_signal') or 'N/A').upper()} (ratio: {ta.get('volume_ratio') or 'N/A'}x)
 20D Support: ${ta.get('support_20d', 'N/A')} | 20D Resistance: ${ta.get('resistance_20d', 'N/A')}
@@ -125,6 +133,7 @@ Short % of Float: {short.get('short_pct_float', 'N/A')}% | Days to Cover: {short
 Short Squeeze Candidate: {'⚡ YES' if short.get('squeeze_candidate') else 'No'}
 
 {intraday_section}
+{regime_block}
 
 ═══════════════════════════════════════════════
 📰 SENTIMENT DATA
@@ -213,6 +222,7 @@ CRITICAL RULES:
 - If signals are clearly BULLISH and aligned → suggest CALL, not NONE  
 - Only use NONE if signals are genuinely mixed/contradictory OR score < 55
 - Do NOT default to NONE just because the setup is bearish
+- TARGET REALISM (non-negotiable): the STOCK PRICE TARGET must sit WITHIN the expected move for your chosen expiry (shown in the technical data above). Backtest data shows targets beyond the expected move lose ~96% of the time even when direction is correct. Aim for 0.5–0.8x the expected move. If your thesis requires a move beyond ±1x expected move, the trade is not viable in 0-2 DTE — pick a closer target or output NONE.
 
 IMPORTANT: Output this section as plain key-value pairs ONLY. Do NOT use markdown tables, bold, or any formatting. Use exactly this format:
 
@@ -406,6 +416,28 @@ def run_ai_synthesis(
             "key_risk":        key_risk,
             "setup_quality":   setup_quality,
         }
+
+        # ── Expected-move target validation ───────────────────
+        em_data = tech.get("expected_move", {})
+        if em_data.get("method") and contract_type in ("CALL", "PUT"):
+            try:
+                from core.expected_move import validate_target
+                vt = validate_target(
+                    contract_type=contract_type,
+                    expiry=expiry,
+                    spot=ta.get("last_price"),
+                    stock_target=stock_target,
+                    expected_move=em_data,
+                )
+                if vt["adjusted"]:
+                    trade_setup["stock_target"]    = vt["target"]
+                    trade_setup["target_original"] = vt["target_original"]
+                    trade_setup["target_note"]     = vt["note"]
+                    log.warning(f"🎯 {ticker}: {vt['note']}")
+                trade_setup["target_em_ratio"] = vt.get("target_em_ratio")
+                trade_setup["em_pct"]          = vt.get("em_pct")
+            except Exception as e:
+                log.debug(f"{ticker}: validate_target failed — {e}")
 
         log.info(
             f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias} | "

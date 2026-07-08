@@ -39,6 +39,9 @@ FIELDNAMES = [
     "entry_trigger",     # numeric entry trigger price from the AI
     "freshness_consumed_pct",  # % of trigger→target move consumed at alert time
     "freshness_stale",   # yes/no — was the signal flagged STALE at alert time
+    "em_pct",            # expected move % for the chosen expiry
+    "target_em_ratio",   # target distance / expected move (>1.0 = beyond EM)
+    "target_adjusted",   # yes if target was clamped by validate_target()
     # Filled in later by outcome_checker.py:
     "checked",           # "yes" once outcome has been evaluated
     "checked_at",
@@ -134,6 +137,9 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
             "freshness_consumed_pct": (ai.get("freshness") or {}).get("consumed_pct", ""),
             "freshness_stale":   ("yes" if (ai.get("freshness") or {}).get("is_stale") else
                                   "no" if (ai.get("freshness") or {}).get("checked") else ""),
+            "em_pct":            trade_setup.get("em_pct", ""),
+            "target_em_ratio":   trade_setup.get("target_em_ratio", ""),
+            "target_adjusted":   "yes" if trade_setup.get("target_original") else "no",
             "checked":           "",
             "checked_at":        "",
             "outcome_price":     "",

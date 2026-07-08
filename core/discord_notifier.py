@@ -90,10 +90,18 @@ def _build_embed(
         target_str  = f"${ts_data['stock_target']}" if ts_data.get("stock_target") else "N/A"
         profit_str  = f"{ts_data['profit_target']}%" if ts_data.get("profit_target") else "N/A"
 
+        # Show original target if clamped + EM context
+        target_display = f"`{target_str}`"
+        if ts_data.get("target_original"):
+            target_display = f"`{target_str}` *(was ${ts_data['target_original']:.2f} — clamped to EM)*"
+        em_pct = ts_data.get("em_pct")
+        ratio  = ts_data.get("target_em_ratio")
+        em_str = f" | EM ±{em_pct}% ({ratio:.1f}x)" if em_pct and ratio else ""
+
         setup_value = (
             f"{con_emoji} **{contract}** | {ts_data.get('expiry', 'N/A')} | "
             f"Strike: `{strike_str}` ({ts_data.get('moneyness', 'N/A')})\n"
-            f"📍 Stock target: `{target_str}` | Premium: `{premium_str}`\n"
+            f"📍 Stock target: {target_display}{em_str} | Premium: `{premium_str}`\n"
             f"💰 Profit target: `{profit_str}` | Max loss: `100% of premium`\n"
         )
         if ts_data.get("stop_rule"):

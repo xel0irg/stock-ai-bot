@@ -97,6 +97,21 @@ def analyze_ticker(ticker: str) -> dict:
         # Update company name for sentiment if we got it
         company_name = fund.get("fundamentals", {}).get("company_name", ticker)
 
+        # ── Expected Move (options-implied) ───────────────────
+        # Fetch ATM straddle EM so the AI can calibrate targets.
+        # Stored on tech dict — accessible in ai_engine and notifier.
+        try:
+            from core.expected_move import get_expected_move
+            ta = tech.get("technicals", {})
+            tech["expected_move"] = get_expected_move(
+                ticker=ticker,
+                spot=ta.get("last_price"),
+                atr_pct=ta.get("atr_pct"),
+            )
+        except Exception as em_err:
+            log.warning(f"{ticker}: expected move fetch failed — {em_err}")
+            tech["expected_move"] = {}
+
         # Step 4: AI Synthesis
         log.info(f"[4/4] Running Claude AI Synthesis...")
         ai = run_ai_synthesis(ticker, tech, sent, fund)
