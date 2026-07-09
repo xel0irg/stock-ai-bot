@@ -165,6 +165,7 @@ def analyze_ticker(ticker: str) -> dict:
             "sentiment":         sent,
             "fundamental":       fund,
             "ai":                ai,
+            "tech":              tech,   # alias for pre-screener cache
             "confluence_score":  ai.get("confluence_score", 50),
             "suggested_bias":    ai.get("suggested_bias", "NEUTRAL"),
             "reports":           {"json": json_path, "txt": txt_path},
@@ -186,20 +187,53 @@ def analyze_ticker(ticker: str) -> dict:
     return results
 
 
-def run_scan(watchlist: list[str]) -> list[dict]:
-    """Scan all tickers in the watchlist."""
-    log.info(f"Starting scan of {len(watchlist)} tickers: {', '.join(watchlist)}")
-    all_results = []
+def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]:
+    """
+    Two-tier scan:
+      Tier 1 — lightweight pre-screener (fast_info quote, volume, RSI, VWAP)
+               Runs on every ticker. Zero Claude cost.
+      Tier 2 — full AI synthesis. Only runs on tickers flagged by Tier 1,
+               plus any ticker not scanned in the last FORCE_SCAN_MINUTES.
 
-    for ticker in watchlist:
+    tech_cache: {ticker: last_tech_result} — passed in from the loop so
+                RSI/VWAP checks don't require extra fetches.
+    """
+    from core.prescreener import run_prescreener, force_full_scan_interval, mark_full_scan
+
+    FORCE_SCAN_MINUTES = 30   # always run full scan after this many minutes
+
+    log.info(f"⚡ Tier 1 pre-screen: {len(watchlist)} tickers...")
+    flagged, prescreen_results = run_prescreener(watchlist, tech_cache)
+
+    # Also add tickers overdue for a full scan (even if quiet)
+    force_tickers = force_full_scan_interval(watchlist, FORCE_SCAN_MINUTES)
+    to_scan = list(dict.fromkeys(flagged + force_tickers))  # preserve order, dedupe
+
+    if not to_scan:
+        log.info("📊 No tickers flagged — skipping AI synthesis this interval")
+        return []
+
+    log.info(f"🤖 Tier 2 AI synthesis: {len(to_scan)}/{len(watchlist)} tickers "
+             f"({', '.join(to_scan)})")
+
+    all_results = []
+    for ticker in to_scan:
         result = analyze_ticker(ticker)
         all_results.append(result)
-        time.sleep(2)  # Be polite to APIs
+        mark_full_scan(ticker)
+        time.sleep(2)
 
-    # Print summary table
     log.info("\n" + "="*55)
     log.info("  SCAN COMPLETE — SUMMARY")
     log.info("="*55)
+
+    # Show skipped tickers too
+    skipped = [t for t in watchlist if t not in to_scan]
+    for t in skipped:
+        ps = prescreen_results.get(t, {})
+        log.info(f"  {t:<8} ⏭  No trigger (price=${ps.get('price', '?'):.2f}, "
+                 f"vol={ps.get('volume_ratio', 0):.1f}x)")
+
     for r in all_results:
         score = r.get("confluence_score", "?")
         bias  = r.get("suggested_bias", "N/A")
@@ -335,12 +369,18 @@ def main():
     from core.market_hours import market_status
 
     if args.loop:
-        log.info(f"Loop mode: scanning every {SCAN_INTERVAL_MINUTES} minutes. Press Ctrl+C to stop.\n")
+        log.info(f"Loop mode: two-tier scan every {SCAN_INTERVAL_MINUTES} minutes. Press Ctrl+C to stop.\n")
+        tech_cache: dict = {}
         try:
             while True:
                 status = market_status()
                 if args.force or status["is_open"]:
-                    run_scan(tickers)
+                    results = run_scan(tickers, tech_cache)
+                    # Update tech cache with fresh results for next pre-screen
+                    for r in results:
+                        t = r.get("ticker")
+                        if t and r.get("tech"):
+                            tech_cache[t] = r["tech"]
                 else:
                     log.info(f"⏸  Skipping scan — {status['reason']}")
                 log.info(f"Next check in {SCAN_INTERVAL_MINUTES} minutes...")
