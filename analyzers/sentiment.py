@@ -324,66 +324,45 @@ def scrape_news(ticker: str, company_name: str = "") -> Dict[str, Any]:
 #  COMBINED SENTIMENT ENGINE
 # ══════════════════════════════════════════════════════════
 def run_sentiment_analysis(ticker: str, company_name: str = "") -> Dict[str, Any]:
-    """Run all sentiment sources and merge into a single weighted score."""
-    log.info(f"Running sentiment analysis for {ticker}...")
+    """
+    Sentiment analysis — news RSS only.
 
-    reddit   = scrape_reddit(ticker)
-    twits    = scrape_stocktwits(ticker)
-    twitter  = scrape_twitter(ticker)
-    news     = scrape_news(ticker, company_name)
+    Reddit (scraping hot posts, not ticker-specific), StockTwits (API
+    returns 403), and Twitter (requires paid API) have all been removed.
+    They were consuming tokens without contributing signal. News RSS is
+    the only source that reliably returns ticker-specific data.
+    """
+    log.info(f"Running sentiment analysis for {ticker} (news RSS only)...")
 
-    # Weighted compound: news > reddit > stocktwits > twitter
-    weights = {"news": 0.35, "reddit": 0.30, "stocktwits": 0.25, "twitter": 0.10}
+    news = scrape_news(ticker, company_name)
+    news_agg = news.get("aggregated", {})
 
-    weighted_compound = 0.0
-    weight_used       = 0.0
-
-    source_scores = {}
-    for source, data, w in [
-        ("news",       news,    weights["news"]),
-        ("reddit",     reddit,  weights["reddit"]),
-        ("stocktwits", twits,   weights["stocktwits"]),
-        ("twitter",    twitter, weights["twitter"]),
-    ]:
-        agg = data.get("aggregated", {})
-        if agg.get("count", 0) > 0:
-            compound = agg.get("avg_compound", 0.0)
-            weighted_compound += compound * w
-            weight_used       += w
-            source_scores[source] = compound
-
-    if weight_used > 0:
-        weighted_compound /= weight_used
-
+    compound     = news_agg.get("avg_compound", 0.0)
     overall_label = (
-        "strongly_bullish" if weighted_compound > 0.3  else
-        "bullish"          if weighted_compound > 0.05 else
-        "strongly_bearish" if weighted_compound < -0.3 else
-        "bearish"          if weighted_compound < -0.05 else
+        "strongly_bullish" if compound >  0.3  else
+        "bullish"          if compound >  0.05 else
+        "strongly_bearish" if compound < -0.3  else
+        "bearish"          if compound < -0.05 else
         "neutral"
     )
 
-    total_mentions = (
-        reddit.get("mentions", 0) +
-        len(twits.get("posts", [])) +
-        len(twitter.get("posts", [])) +
-        len(news.get("articles", []))
-    )
-
+    article_count = len(news.get("articles", []))
     log.info(
         f"Sentiment for {ticker}: {overall_label.upper()} "
-        f"(compound={weighted_compound:.3f}, mentions={total_mentions})"
+        f"(compound={compound:.3f}, articles={article_count})"
     )
 
     return {
-        "ticker":             ticker,
-        "timestamp":          datetime.now().isoformat(),
-        "overall_compound":   round(weighted_compound, 3),
-        "overall_label":      overall_label,
-        "total_mentions":     total_mentions,
-        "source_scores":      source_scores,
-        "reddit":             reddit,
-        "stocktwits":         twits,
-        "twitter":            twitter,
-        "news":               news,
+        "ticker":           ticker,
+        "timestamp":        datetime.now().isoformat(),
+        "overall_compound": round(compound, 3),
+        "overall_label":    overall_label,
+        "total_mentions":   article_count,
+        "source_scores":    {"news": compound} if article_count else {},
+        "news":             news,
+        # kept as empty dicts so any downstream code referencing these
+        # keys doesn't crash — they just return no data
+        "reddit":           {"aggregated": {"count": 0}, "posts": []},
+        "stocktwits":       {"aggregated": {"count": 0}},
+        "twitter":          {"aggregated": {"count": 0}},
     }

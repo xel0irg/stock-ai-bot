@@ -30,29 +30,20 @@ def _build_analysis_prompt(
     fund_d = fund.get("fundamentals", {})
     earn   = fund.get("earnings", {})
     inside = fund.get("insider", {})
-    reddit = sent.get("reddit", {}).get("aggregated", {})
-
     # Market regime context (cached — fetched once per scan, shared across tickers)
     try:
         from core.market_regime import regime_for_ticker
         regime_block = regime_for_ticker(ticker)
     except Exception:
         regime_block = ""
-    twits  = sent.get("stocktwits", {})
-    news   = sent.get("news", {}).get("aggregated", {})
-    tw     = sent.get("twitter", {}).get("aggregated", {})
 
-    # Pull top 3 news headlines
+    news     = sent.get("news", {}).get("aggregated", {})
+
+    # Top 5 news headlines for the prompt
     top_news = "\n".join([
         f"  - [{a.get('source')}] {a.get('title', '')}"
-        for a in sent.get("news", {}).get("articles", [])[:3]
+        for a in sent.get("news", {}).get("articles", [])[:5]
     ]) or "  No news found"
-
-    # Pull top 3 reddit posts
-    top_reddit = "\n".join([
-        f"  - [{p.get('source')}] {p.get('title', '')} (upvotes: {p.get('score', 0)})"
-        for p in sent.get("reddit", {}).get("posts", [])[:3]
-    ]) or "  No Reddit posts found"
 
     intraday = tech.get("intraday", {})
     tf_15m   = intraday.get("tf_15m", {})
@@ -144,21 +135,13 @@ Short Squeeze Candidate: {'⚡ YES' if short.get('squeeze_candidate') else 'No'}
 {regime_block}
 
 ═══════════════════════════════════════════════
-📰 SENTIMENT DATA
+📰 NEWS SENTIMENT
 ═══════════════════════════════════════════════
-OVERALL SENTIMENT: {sent.get('overall_label', 'N/A').upper()} (compound: {sent.get('overall_compound', 'N/A')})
-Total Mentions Across Platforms: {sent.get('total_mentions', 0)}
+OVERALL: {sent.get('overall_label', 'N/A').upper()} (compound: {sent.get('overall_compound', 'N/A')}) | Articles found: {sent.get('total_mentions', 0)}
+Note: Social sentiment (Reddit/StockTwits/Twitter) removed — APIs unavailable or returning non-ticker-specific data.
 
-Reddit:       {reddit.get('sentiment_label', 'N/A').upper()} | {reddit.get('count', 0)} posts | Bull {reddit.get('bullish_pct', 0)}% / Bear {reddit.get('bearish_pct', 0)}%
-StockTwits:   {twits.get('aggregated', {}).get('sentiment_label', 'N/A').upper()} | Native Bull: {twits.get('native_bull_pct', 0)}% | Bull {twits.get('bull_count', 0)} / Bear {twits.get('bear_count', 0)}
-Twitter/X:    {tw.get('sentiment_label', 'N/A').upper()} | {tw.get('count', 0)} tweets
-News:         {news.get('sentiment_label', 'N/A').upper()} | {news.get('count', 0)} articles
-
-Top News Headlines:
+Top Headlines:
 {top_news}
-
-Top Reddit Posts:
-{top_reddit}
 
 ═══════════════════════════════════════════════
 📋 FUNDAMENTAL & MACRO DATA
