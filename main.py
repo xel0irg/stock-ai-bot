@@ -27,7 +27,8 @@ from core.telegram_notifier import send_telegram_alert, send_telegram_test, send
 from core.discord_notifier  import send_discord_alert, send_discord_test, send_earnings_alert as send_discord_earnings_alert
 from analyzers.technical    import run_technical_analysis
 from analyzers.sentiment    import run_sentiment_analysis
-from analyzers.fundamentals import run_fundamental_analysis, check_watchlist_earnings
+from analyzers.fundamentals import check_watchlist_earnings
+from core.fundamentals_cache import get_fundamentals
 
 log = get_logger("StockAIBot")
 
@@ -90,9 +91,9 @@ def analyze_ticker(ticker: str) -> dict:
         company_name = ""  # Will be filled from fundamentals if available
         sent = run_sentiment_analysis(ticker, company_name)
 
-        # Step 3: Fundamentals
-        log.info(f"[3/4] Fundamental Analysis (SEC, Earnings, Valuation)...")
-        fund = run_fundamental_analysis(ticker)
+        # Step 3: Fundamentals (cached daily — SEC/yfinance data doesn't change intraday)
+        log.info(f"[3/4] Fundamental Analysis (cached daily)...")
+        fund = get_fundamentals(ticker)
 
         # Update company name for sentiment if we got it
         company_name = fund.get("fundamentals", {}).get("company_name", ticker)
