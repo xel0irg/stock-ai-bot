@@ -4,48 +4,48 @@
       "price": 316.239990234375,
       "volume_ratio": 0.0,
       "ts": 1783966861.914468,
-      "last_full_scan_ts": 1783965727.9273088
+      "last_full_scan_ts": 1783967520.6817353
     },
     "AMZN": {
-      "price": 248.1649932861328,
+      "price": 248.4600067138672,
       "volume_ratio": 0.0,
-      "ts": 1783966862.077244,
+      "ts": 1783967468.3679934,
       "last_full_scan_ts": 1783965773.937248
     },
     "META": {
-      "price": 661.22998046875,
+      "price": 662.77001953125,
       "volume_ratio": 0.0,
-      "ts": 1783966862.2615063,
+      "ts": 1783967468.54922,
       "last_full_scan_ts": 1783965826.9347394
     },
     "MSFT": {
-      "price": 392.2900085449219,
+      "price": 392.2550048828125,
       "volume_ratio": 0.0,
-      "ts": 1783966862.5774336,
+      "ts": 1783967468.8239639,
       "last_full_scan_ts": 1783965878.210592
     },
     "NVDA": {
-      "price": 203.89999389648438,
+      "price": 203.48800659179688,
       "volume_ratio": 0.0,
-      "ts": 1783966862.9310255,
+      "ts": 1783967469.0588837,
       "last_full_scan_ts": 1783965927.430974
     },
     "QQQ": {
-      "price": 712.1799926757812,
+      "price": 711.6400146484375,
       "volume_ratio": 0.0,
-      "ts": 1783966863.2041852,
+      "ts": 1783967469.2786708,
       "last_full_scan_ts": 1783965975.8228528
     },
     "SPY": {
-      "price": 749.2100219726562,
+      "price": 749.030029296875,
       "volume_ratio": 0.0,
-      "ts": 1783966863.8401468,
+      "ts": 1783967469.6953168,
       "last_full_scan_ts": 1783966028.7867126
     },
     "TSLA": {
-      "price": 393.20001220703125,
+      "price": 392.8699951171875,
       "volume_ratio": 0.0,
-      "ts": 1783966864.0812237,
+      "ts": 1783967469.882558,
       "last_full_scan_ts": 1783966078.8531044
     }
   },
@@ -78,7 +78,36 @@
       "was_flagged": false,
       "cached_at": 1783965878.2105944,
       "score": 48
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-07-13T18:32:00.675506",
+        "analysis": "# AAPL \u2014 SHORT-DATED OPTIONS ANALYSIS\n**02:31 PM ET | Price: $316.71 | 0DTE BLOCKED (post-2PM)**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL has staged a strong 20-day recovery (+8.79%), carrying price to current resistance at the 20D high of $316.71 \u2014 exactly where price sits now. The dominant trend is bullish on daily/hourly timeframes, but momentum indicators (Stochastic 86/94, RSI 63.87, Bollinger position 0.868) are flashing overbought/exhaustion signals at a technically significant ceiling. The most plausible 5-15 day scenario is a **sideways-to-modest-pullback consolidation** near current levels before the next directional leg resolves, with a downside drift toward $308-$310 being the path of least resistance if buyers don't materially push through $316.71.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram +2.6439 (Daily, Bullish):** Positive and expanding \u2014 intermediate trend momentum remains upward, implying dip buyers are still active.\n- **1H Timeframe: Bullish (3/4 signals):** Price above 1H VWAP ($316.53), EMA9 > EMA21, bullish MACD on the hour \u2014 intraday structure favors continuation attempts.\n- **OBV Trend Rising:** Accumulation on balance remains positive, suggesting institutional money has not rotated out despite the recent run.\n- **20D Momentum (+8.79%):** A sustained multi-week trend of this magnitude typically requires a catalyst reversal to break \u2014 no obvious reversal catalyst is present in today's data.\n\n---\n\n## 3. BEAR CASE\n\n- **Price = 20D Resistance ($316.71):** AAPL is sitting precisely at its 20-day resistance ceiling. This is not a coincidence \u2014 it is the highest probability point for rejection or stall.\n- **Stochastic K/D: 86.45/94.01 (Overbought) + RSI 63.87 (Near Overbought):** Both oscillators are extended. The Stochastic D (94) significantly exceeds K (86), which is a classic bearish divergence setup \u2014 K crossing below D here would confirm a near-term top signal.\n- **Volume Severely Depressed: 0.41x 20D Average:** Today's up-move lacks conviction. Low-volume advances at resistance are textbook distribution or exhaustion patterns \u2014 smart money not chasing.\n- **15M MACD Bearish (-0.1997) + Mixed Intraday Signals:** The shortest timeframe is already leaning bearish with a negative MACD histogram, and 3-candle momentum on the 1H is -0.206% (bearish). Intraday buying pressure is fading at exactly the wrong level.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **EMA200 = NaN (Missing Data):** The absence of a 200-day EMA is a data red flag. If AAPL is genuinely trading below or near its 200D EMA, that context changes the entire thesis \u2014 a rally into the 200D from below is a classic resistance zone with high failure rates.\n- **No Options Flow / PCR Unavailable:** Without options data, there is zero confirmation of institutional hedging or directional conviction. A large block print or unusual options activity could invalidate the current setup immediately.\n- **10 SEC Filings in 90 Days:** Worth monitoring \u2014 while not specifically identified, regulatory filings can precede material disclosures.\n- **Macro/News Vacuum:** Zero news articles found. AAPL is susceptible to sudden macro catalysts (Fed speak, tariff headlines, supply chain news) that could gap the stock significantly in either direction overnight.\n- **Bollinger Upper Band at $323.04:** If price breaks through $316.71 resistance on volume, the next magnet is the upper band at $323 \u2014 a $6.33 extension that would represent a clean 1DTE-sized move.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance / Current** | $316.71 | 20D resistance ceiling \u2014 price sitting on this now |\n| **Bollinger Upper Band** | $323.04 | Bull breakout target if $316.71 clears on volume |\n| **1H VWAP** | $316.53 | Intraday bull/bear dividing line \u2014 most important near-term level |\n| **EMA9 (Daily)** | $309.28 | First meaningful pullback support \u2014 ~$7.40 below |\n| **Thesis-Change Level (Bull)** | $318.50+ on volume | Sustained close above with volume >1x avg flips to confirmed breakout |\n| **Thesis-Change Level (Bear)** | Break below $314.00 | Signals rejection at resistance and opens path to $309 |\n| **20D Support** | $275.15 | Far-term structural floor \u2014 not relevant for 1-2 DTE |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nThe score reflects **genuine signal contradiction** \u2014 bullish daily trend and OBV fighting directly against overbought oscillators, a volume-deficient advance sitting exactly at resistance, mixed intraday timeframes, and a complete absence of options flow data to confirm institutional directional commitment. This is not a high-conviction setup in either direction; it is a **contested zone requiring resolution**.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\n*Rationale:* The bull and bear signals are nearly equally weighted and directly contradictory. The single most important data point \u2014 price sitting exactly at 20D resistance on 0.41x volume \u2014 means the market itself hasn't decided yet. Forcing a directional trade here is guessing, not trading.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 do not override with discretion.\nENTRY CONDITION: Do not enter. Wait for either a confirmed volume-backed breakout above $318.50 (CALL setup) OR a confirmed 1H candle close below $314.00 with volume >1x average (PUT setup) \u2014 neither condition is met at 02:31 PM ET.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Score is below 55 \u2014 which it is (42/100).\nKEY RISK: Forcing a trade at price-equals-resistance on 0.41x volume in the final hours of the day with no options flow confirmation is how short-dated premium gets destroyed \u2014 the setup does not exist yet, but may by tomorrow morning.\n\n---\n\n**\u26a1 WATCHLIST NOTE FOR TOMORROW (1DTE/2DTE Setup Forming):**\nMonitor the open. If AAPL gaps UP through $316.71 on volume >1x average \u2192 **CALL setup activates** (target $322-$323, 1DTE). If AAPL opens flat/down and rejects $316.71 in the first 30 minutes \u2192 **PUT setup activates** (target $309-$310, 1DTE or 2DTE). The setup is close \u2014 it just needs resolution.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade \u2014 do not override with discretion.",
+          "entry_condition": "Do not enter. Wait for either a confirmed volume-backed breakout above $318.50 (CALL setup) OR a confirmed 1H candle close below $314.00 with volume >1x average (PUT setup) \u2014 neither condition is met at 02:31 PM ET.",
+          "entry_trigger": null,
+          "avoid_if": "Score is below 55 \u2014 which it is (42/100).",
+          "key_risk": "Forcing a trade at price-equals-resistance on 0.41x volume in the final hours of the day with no options flow confirmation is how short-dated premium gets destroyed \u2014 the setup does not exist yet, but may by tomorrow morning.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 4878
+      },
+      "was_flagged": true,
+      "cached_at": 1783967520.6817377,
+      "score": 42
     }
   },
-  "saved_at": "2026-07-13T14:21:04-04:00"
+  "saved_at": "2026-07-13T14:32:02-04:00"
 }
