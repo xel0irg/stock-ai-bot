@@ -1,0 +1,22 @@
+diff --git a/.github/workflows/scan.yml b/.github/workflows/scan.yml
+index 9ae6098..3c1089c 100644
+--- a/.github/workflows/scan.yml
++++ b/.github/workflows/scan.yml
+@@ -32,12 +32,13 @@ jobs:
+     timeout-minutes: 25
+     permissions:
+       contents: write   # needed to commit backtest/signals_log.csv back to the repo
+-    # Safety net: if two triggers ever land close together again,
+-    # cancel the older in-progress run instead of letting both post
+-    # duplicate alerts simultaneously.
++    # With 5-min cron triggers and ~5-7 min scan runtimes, a new trigger
++    # fires before the current scan finishes. cancel-in-progress: false
++    # means the RUNNING scan completes and the QUEUED one is dropped —
++    # the opposite of the old behavior which cancelled the running scan.
+     concurrency:
+       group: stock-ai-bot-scan
+-      cancel-in-progress: true
++      cancel-in-progress: false
+ 
+     steps:
+       - name: Checkout repository
