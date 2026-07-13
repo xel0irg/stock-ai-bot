@@ -114,8 +114,25 @@ def analyze_ticker(ticker: str) -> dict:
             tech["expected_move"] = {}
 
         # Step 4: AI Synthesis
+        # Option 4 — check cache first. If this ticker wasn't flagged by
+        # Tier 1 AND the last result was NONE (no trade) AND the cache is
+        # fresh, skip the Claude call and reuse the cached result.
         log.info(f"[4/4] Running Claude AI Synthesis...")
-        ai = run_ai_synthesis(ticker, tech, sent, fund)
+        # Option 4: try AI cache before calling Claude.
+        # cache_ai_result only caches NONE/no-trade results, so if anything
+        # actionable was last seen, get_cached_ai_result returns None → fresh call.
+        _cached_ai = None
+        try:
+            from core.prescreener import get_cached_ai_result
+            _cached_ai = get_cached_ai_result(ticker)
+        except Exception:
+            pass
+
+        if _cached_ai is not None:
+            ai = _cached_ai
+            log.info(f"✅ {ticker}: AI result served from cache — Claude call skipped")
+        else:
+            ai = run_ai_synthesis(ticker, tech, sent, fund)
 
         if ai.get("error", "").startswith("daily_spend_limit_reached"):
             log.warning(f"⛔ {ticker}: {ai['error']} — skipping report/alerts for this ticker")
@@ -190,27 +207,22 @@ def analyze_ticker(ticker: str) -> dict:
 def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]:
     """
     Two-tier scan:
-      Tier 1 — lightweight pre-screener (fast_info quote, volume, RSI, VWAP)
-               Runs on every ticker. Zero Claude cost.
-      Tier 2 — full AI synthesis. Only runs on tickers flagged by Tier 1,
-               plus any ticker not scanned in the last FORCE_SCAN_MINUTES.
-
-    tech_cache: {ticker: last_tech_result} — passed in from the loop so
-                RSI/VWAP checks don't require extra fetches.
+      Tier 1 — pre-screener: fast_info quote, volume, RSI, VWAP. Zero Claude cost.
+      Tier 2 — AI synthesis: only flagged tickers + force-scan overdue ones.
+      Option 4 — AI cache: skip Claude if ticker quiet and last result was NONE.
     """
-    from core.prescreener import run_prescreener, force_full_scan_interval, mark_full_scan
-
-    FORCE_SCAN_MINUTES = 30   # always run full scan after this many minutes
+    from core.prescreener import (run_prescreener, force_full_scan_interval,
+                                   mark_full_scan, cache_ai_result, save_state)
 
     log.info(f"⚡ Tier 1 pre-screen: {len(watchlist)} tickers...")
     flagged, prescreen_results = run_prescreener(watchlist, tech_cache)
 
-    # Also add tickers overdue for a full scan (even if quiet)
-    force_tickers = force_full_scan_interval(watchlist, FORCE_SCAN_MINUTES)
-    to_scan = list(dict.fromkeys(flagged + force_tickers))  # preserve order, dedupe
+    force_tickers = force_full_scan_interval(watchlist)
+    to_scan = list(dict.fromkeys(flagged + force_tickers))
 
     if not to_scan:
         log.info("📊 No tickers flagged — skipping AI synthesis this interval")
+        save_state()
         return []
 
     log.info(f"🤖 Tier 2 AI synthesis: {len(to_scan)}/{len(watchlist)} tickers "
@@ -218,16 +230,21 @@ def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]
 
     all_results = []
     for ticker in to_scan:
+        was_flagged = ticker in flagged
         result = analyze_ticker(ticker)
+        result["_was_flagged"] = was_flagged
         all_results.append(result)
         mark_full_scan(ticker)
+        if result.get("ai"):
+            cache_ai_result(ticker, result["ai"], was_flagged)
         time.sleep(2)
+
+    save_state()
 
     log.info("\n" + "="*55)
     log.info("  SCAN COMPLETE — SUMMARY")
     log.info("="*55)
 
-    # Show skipped tickers too
     skipped = [t for t in watchlist if t not in to_scan]
     for t in skipped:
         ps = prescreen_results.get(t, {})
