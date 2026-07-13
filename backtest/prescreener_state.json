@@ -1,0 +1,84 @@
+{
+  "snapshots": {
+    "AAPL": {
+      "price": 316.32000732421875,
+      "volume_ratio": 0.0,
+      "ts": 1783965673.119807,
+      "last_full_scan_ts": 1783965727.9273088
+    },
+    "AMZN": {
+      "price": 248.00999450683594,
+      "volume_ratio": 0.0,
+      "ts": 1783965673.357296,
+      "last_full_scan_ts": 1783965773.937248
+    },
+    "META": {
+      "price": 660.010009765625,
+      "volume_ratio": 0.0,
+      "ts": 1783965673.795567,
+      "last_full_scan_ts": 1783965826.9347394
+    },
+    "MSFT": {
+      "price": 391.9599914550781,
+      "volume_ratio": 0.0,
+      "ts": 1783965674.196112,
+      "last_full_scan_ts": 1783965878.210592
+    },
+    "NVDA": {
+      "price": 203.97999572753906,
+      "volume_ratio": 0.0,
+      "ts": 1783965674.5071628,
+      "last_full_scan_ts": 1783965927.430974
+    },
+    "QQQ": {
+      "price": 712.780029296875,
+      "volume_ratio": 0.0,
+      "ts": 1783965674.840527,
+      "last_full_scan_ts": 1783965975.8228528
+    },
+    "SPY": {
+      "price": 749.6599731445312,
+      "volume_ratio": 0.0,
+      "ts": 1783965675.2683885,
+      "last_full_scan_ts": 1783966028.7867126
+    },
+    "TSLA": {
+      "price": 393.5758972167969,
+      "volume_ratio": 0.0,
+      "ts": 1783965675.607227,
+      "last_full_scan_ts": 1783966078.8531044
+    }
+  },
+  "ai_cache": {
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-07-13T18:04:38.206996",
+        "analysis": "# MSFT \u2014 SHORT-DATED OPTIONS ANALYSIS\n**02:03 PM ET | Last: $392.32 | 1DTE/2DTE Only**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT is in a short-term bullish intraday trend, trading above VWAP on both the 15m and 1H timeframes with supportive MACD and rising OBV, but the broader structural picture is compromised \u2014 price remains below the EMA50 ($394.78) and far below EMA200, classifying the daily chart as bearish trend. The most plausible scenario over the next 5-15 days is a continued grind toward the $394.78\u2013$399.76 resistance zone before sellers reassert control. A clean breakout above $399.76 would materially change the medium-term thesis; failure there would likely revert price toward the $385\u2013$387 EMA cluster.\n\n---\n\n## 2. BULL CASE\n\n- **Intraday VWAP dominance (15m + 1H):** Price is above both VWAP levels with bullish EMA9/EMA21 crosses on both timeframes \u2014 short-term momentum is clearly in buyer hands.\n- **MACD Histogram positive (daily +2.88):** The daily MACD histogram is meaningfully positive, signaling that the recent bounce has conviction beyond a single-day spike.\n- **OBV Rising:** Despite low volume today, the 20-day OBV trend is rising \u2014 accumulation bias is present beneath the surface.\n- **Analyst consensus & fundamental floor:** 55 analysts with a STRONG_BUY consensus and $559 price target provides a long-term demand anchor; any macro/sector tailwind could accelerate rotation back into MSFT.\n\n---\n\n## 3. BEAR CASE\n\n- **EMA structure is bearish (BEAR_BELOW_200):** Price is below EMA50 ($394.78) and EMA200 \u2014 the dominant trend on the daily chart is still bearish. Today's move is a rally within a downtrend until proven otherwise.\n- **Stochastic deeply overbought (K=92.99 / D=82.08):** This is a high-probability mean-reversion warning at short timeframes. Stochastic at these levels in a BEAR_BELOW_200 context historically precedes pullbacks.\n- **Volume collapse (0.34x 20D MA):** Today's 1.87% up move is happening on less than 35% of average volume \u2014 thin moves at resistance without volume confirmation are classic bull traps.\n- **1H RSI at 77 (overbought):** The hourly RSI has entered overbought territory, raising the risk of an intraday reversal particularly as afternoon liquidity thins.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro/Sector rotation:** No earnings catalyst imminent for MSFT, but any broad tech sector news (AI spending updates, Fed commentary, competitor earnings) could swing the tape significantly given MSFT's beta of 1.13.\n- **Options expiry dynamics:** P/C ratio of 0.28 is extremely call-heavy \u2014 a sudden reversal would be amplified as market makers hedge delta. If price reverses, the unwind could be sharp.\n- **No recent insider activity:** The complete absence of insider buying despite the stock sitting ~29% below its 52W high is a quiet yellow flag \u2014 insiders aren't loading up at these levels.\n- **Thin volume + afternoon session:** With current volume at only 0.34x average and the session entering the final two hours, a single institutional seller or macro headline could produce an outsized move relative to the expected range.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Primary Resistance** | $394.78 | EMA50 \u2014 bulls must close above this to shift daily structure |\n| **Secondary Resistance** | $399.76 | 20D resistance ceiling; breakout above = bull thesis confirmed |\n| **Bollinger Upper** | $403.09 | Extreme bull extension; unlikely in 1-2 sessions |\n| **VWAP Support (1H)** | $386.48 | Loss of 1H VWAP = intraday trend flip |\n| **VWAP Support (15m)** | $391.26 | Near-term bull/bear line; break below = short-term reversal signal |\n| **EMA9/EMA21 cluster** | $385\u2013$387 | Daily demand zone; failure here = bearish continuation toward $370s |\n| **Thesis-changer (bull)** | $399.76+ | Close above = new setup for multi-day continuation |\n| **Thesis-changer (bear)** | $386.48 | 1H VWAP loss = intraday bull thesis invalidated |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Score rationale:** Intraday signals are cleanly bullish, but they directly contradict the broader daily structure (BEAR_BELOW_200, EMA50 overhead), overbought stochastic/hourly RSI at resistance, and critically thin volume \u2014 too many structural headwinds make a high-conviction directional call in the next 1-2 sessions too risky for short-dated premium.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday trend is bullish but the risk/reward for short-dated options is unfavorable: price is pinned between clear overhead resistance (EMA50 at $394.78) and a VWAP floor only $1 below current price, the expected move for 1DTE is only \u00b1$2.59, volume is absent, and stochastic/RSI are flashing overbought at the exact level where sellers should appear. Neither a CALL (buying into overbought resistance with no volume) nor a PUT (fading a clean intraday uptrend) offers sufficient edge at this hour.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: No trade placed \u2014 no stop required.\n\nENTRY CONDITION: No trade. Reassess at tomorrow's open if price either \n  (a) holds above EMA50 $394.78 on volume \u22651x avg \u2192 CALL setup, or \n  (b) fails EMA50 and reclaims 1H VWAP as resistance \u2192 PUT setup.\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: Volume remains below 0.5x average \u2014 directional moves on \n  thin tape are unreliable for 0-2 DTE premium.\n\nKEY RISK: The core contradiction here is real \u2014 a clean bullish intraday \n  tape running directly into EMA50 overhead resistance on 35% of normal \n  volume, with overbought hourly RSI and a 1DTE expected move of only \n  \u00b1$2.59, leaves insufficient room for error in either direction.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** This is the right outcome \u2014 a 48/100 score below the 55 threshold correctly filters out a setup where signals genuinely conflict. Come back to MSFT tomorrow morning. If it gaps above EMA50 ($394.78) with volume, the CALL setup becomes high conviction. If it opens weak and breaks 1H VWAP, the PUT setup is clean.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade placed \u2014 no stop required.",
+          "entry_condition": "No trade. Reassess at tomorrow's open if price either",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.5x average \u2014 directional moves on",
+          "key_risk": "The core contradiction here is real \u2014 a clean bullish intraday",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 4952
+      },
+      "was_flagged": false,
+      "cached_at": 1783965878.2105944,
+      "score": 48
+    }
+  },
+  "saved_at": "2026-07-13T14:08:00-04:00"
+}
