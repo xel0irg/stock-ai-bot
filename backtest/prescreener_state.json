@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 314.05999755859375,
+      "price": 314.739990234375,
       "volume_ratio": 0.0,
-      "ts": 1784048475.3015745,
+      "ts": 1784049066.8248553,
       "last_full_scan_ts": 1784047331.5885472
     },
     "AMZN": {
-      "price": 246.3000030517578,
+      "price": 246.05999755859375,
       "volume_ratio": 0.0,
-      "ts": 1784048475.7564073,
-      "last_full_scan_ts": 1784044947.5273442
+      "ts": 1784049067.3791645,
+      "last_full_scan_ts": 1784049148.4054332
     },
     "META": {
-      "price": 664.3900146484375,
+      "price": 662.10498046875,
       "volume_ratio": 0.0,
-      "ts": 1784048476.0805175,
-      "last_full_scan_ts": 1784047280.4333932
+      "ts": 1784049067.92917,
+      "last_full_scan_ts": 1784049085.602818
     },
     "MSFT": {
-      "price": 387.8399963378906,
+      "price": 387.1099853515625,
       "volume_ratio": 0.0,
-      "ts": 1784048476.5068457,
+      "ts": 1784049068.5547056,
       "last_full_scan_ts": 1784046773.5421164
     },
     "NVDA": {
-      "price": 211.0749969482422,
+      "price": 211.19000244140625,
       "volume_ratio": 0.0,
-      "ts": 1784048477.0192845,
+      "ts": 1784049069.1618898,
       "last_full_scan_ts": 1784048492.927534
     },
     "QQQ": {
-      "price": 720.7899169921875,
+      "price": 721.14501953125,
       "volume_ratio": 0.0,
-      "ts": 1784048477.5110703,
+      "ts": 1784049069.8134131,
       "last_full_scan_ts": 1784046818.3717616
     },
     "SPY": {
-      "price": 752.0,
+      "price": 752.1699829101562,
       "volume_ratio": 0.0,
-      "ts": 1784048477.9925146,
+      "ts": 1784049070.4620726,
       "last_full_scan_ts": 1784048613.0650678
     },
     "TSLA": {
-      "price": 395.6202087402344,
+      "price": 395.80999755859375,
       "volume_ratio": 0.0,
-      "ts": 1784048478.3157618,
+      "ts": 1784049071.0346935,
       "last_full_scan_ts": 1784048553.4745061
     }
   },
@@ -134,7 +134,7 @@
         "tokens_used": 4916
       },
       "was_flagged": true,
-      "cached_at": 1784047280.4333963,
+      "cached_at": 1784049085.6028206,
       "score": 52
     },
     "MSFT": {
@@ -165,7 +165,36 @@
       "was_flagged": true,
       "cached_at": 1784046773.5421195,
       "score": 32
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-07-14T17:12:28.401342",
+        "analysis": "# AMZN \u2014 0-2 DTE OPTIONS ANALYSIS\n**As of 1:11 PM ET | Price: $246.09**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is consolidating near the top of its 20-day range with price hugging the 20D resistance at $247.31 and trading just below the 1H VWAP ($246.67) while above the 15M VWAP ($245.51). The most plausible scenario over the next 5-15 sessions is a choppy, range-bound drift between $240\u2013$252 as the stock lacks both directional volume conviction (0.22x average) and a near-term catalyst. A clean break above $247.31 opens a push toward $252 (Bollinger upper band); failure there risks a pullback toward $240\u2013$242.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (1.77, Bullish):** Daily MACD is positive and expanding \u2014 momentum on the primary timeframe favors continuation higher, not reversal.\n- **OBV Rising:** On-balance volume trend is up, suggesting accumulation is occurring beneath the surface despite low daily volume.\n- **15M Timeframe Clean Bullish (3B/0Br):** All three 15M signals align bullish \u2014 price above VWAP, bullish MACD, positive 3-candle momentum. Short-term intraday bias leans up.\n- **Analyst Consensus: STRONG BUY | PT $314.27:** 61 analysts with a mean score of 1.32/5 provides a structural floor for institutional interest; any macro tailwind accelerates rotation into this name.\n\n---\n\n## 3. BEAR CASE\n\n- **EMA Structure: BEAR_BELOW_200 / EMA50 Above Price ($248.17):** Price is below the 50-day EMA \u2014 this is a structural headwind. EMA50 sits at $248.17, acting as immediate resistance overhead.\n- **Stochastic Overbought (80.59/81.22):** Both K and D lines are in overbought territory on the daily. At this level with low volume, mean reversion risk is elevated.\n- **1H Bias: MIXED/BEARISH (1B/2Br) + Below 1H VWAP:** The 1-hour chart is registering more bearish signals than bullish, and price is below the 1H VWAP \u2014 the dominant intraday anchored price level favors sellers on the hourly.\n- **Volume Collapse (0.22x 20D Average):** A move toward resistance with only 22% of average volume is a textbook low-conviction rally. Without volume expansion, the move stalls or fades at $247.31.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro/Sector Shock:** With no AMZN-specific news today (0 articles), this stock is fully macro-driven. A surprise Fed speaker, tariff headline, or consumer spending data drop could instantly move AMZN \u00b12-3% given its Beta of 1.46.\n- **Options Expiry Wall at $247.31:** Price is pressing directly into the 20D resistance. If there is a gamma wall near $247-$248, market makers may actively pin or repel price \u2014 watch for a sharp rejection or breakout with volume into EOD.\n- **Unusual Options Activity (10 contracts flagged, 5/5 split):** The perfectly balanced unusual flow (5 calls, 5 puts) is either a hedge structure or a straddle \u2014 it implies sophisticated players are NOT taking a directional bet, consistent with an expected consolidation or a binary volatility event.\n- **EMA200 = NaN:** This is a data anomaly worth noting. If the 200-day EMA is genuinely unavailable, it may reflect an insufficient history window \u2014 but traders relying on 200D support/resistance should independently verify this level.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $247.31 | 20D resistance \u2014 breakout above confirms bullish push |\n| **EMA50 Resistance** | $248.17 | Must clear for bulls to regain structural control |\n| **Bollinger Upper Band** | $252.45 | Bull target if breakout confirmed |\n| **1H VWAP** | $246.67 | Reclaim = bullish; continued rejection = bearish |\n| **15M VWAP** | $245.51 | Near-term intraday support |\n| **Thesis Flip Level** | $244.16 | Break below EMA21 on daily = bearish momentum shift |\n| **20D Support** | $227.01 | Structural floor \u2014 only matters in a multi-day breakdown |\n\n**Critical Level:** $247.31 \u2014 A 15M candle close above this WITH volume above 1x average turns the short-term bias decisively bullish. A rejection here with a bearish engulfing candle on low volume is the bear trigger.\n\n---\n\n## 6. CONFLUENCE SCORE: 38/100\n\nSignals are genuinely split across timeframes \u2014 daily MACD is bullish but Stochastics are overbought, 15M is clean bullish but 1H is mixed-to-bearish, volume is severely depressed removing conviction from ANY directional read, and the balanced unusual options flow (5/5) signals institutional uncertainty rather than directional positioning.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe 15M bullish signals are real but insufficient to override the 1H contradictions, stochastic overbought condition, and near-total volume collapse. The stock is at a decision point \u2014 not mid-trend.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\n\nENTRY CONDITION: No trade at current time \u2014 wait for\n  a 15M candle close above $247.31 on volume \u22651x avg\n  (CALL trigger) OR a 15M candle close below $245.51\n  (15M VWAP) with bearish MACD cross and volume\n  expansion (PUT trigger) before committing capital.\n\nENTRY TRIGGER PRICE: $247.31 (CALL) / $245.51 (PUT)\n\nAVOID IF: Volume remains below 0.5x average \u2014 any\n  directional break on thin volume is a trap, not a\n  trend.\n\nKEY RISK: With only 22% of average volume and\n  balanced unusual options flow, this setup has high\n  whipsaw probability; 0-2 DTE theta decay will\n  punish a premature directional bet before the level\n  resolves.\n```\n\n---\n\n**BOTTOM LINE:** AMZN is at a critical decision zone ($246\u2013$247.31) with deeply contradictory signals and virtually no volume. The data is telling you to *wait*, not to fade. Set alerts at $247.31 (bull break) and $245.51 (bear break) and let the market reveal its hand before deploying capital into an expiring option.",
+        "confluence_score": 38,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No trade at current time \u2014 wait for",
+          "entry_trigger": 247.31,
+          "avoid_if": "Volume remains below 0.5x average \u2014 any",
+          "key_risk": "With only 22% of average volume and",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 4862
+      },
+      "was_flagged": false,
+      "cached_at": 1784049148.4054363,
+      "score": 38
     }
   },
-  "saved_at": "2026-07-14T13:03:35-04:00"
+  "saved_at": "2026-07-14T13:12:30-04:00"
 }
