@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 313.82000732421875,
+      "price": 313.9898986816406,
       "volume_ratio": 0.0,
-      "ts": 1784037673.7450523,
+      "ts": 1784038267.0280962,
       "last_full_scan_ts": 1784037110.1904585
     },
     "AMZN": {
-      "price": 245.91000366210938,
+      "price": 245.27699279785156,
       "volume_ratio": 0.0,
-      "ts": 1784037673.895775,
+      "ts": 1784038267.2121978,
       "last_full_scan_ts": 1784037719.4711185
     },
     "META": {
-      "price": 661.2550048828125,
+      "price": 657.7050170898438,
       "volume_ratio": 0.0,
-      "ts": 1784037674.090722,
-      "last_full_scan_ts": 1784037203.6046345
+      "ts": 1784038267.4001987,
+      "last_full_scan_ts": 1784038313.0785134
     },
     "MSFT": {
-      "price": 384.82501220703125,
+      "price": 383.5199890136719,
       "volume_ratio": 0.0,
-      "ts": 1784037674.359415,
-      "last_full_scan_ts": 1784037797.3618894
+      "ts": 1784038267.656218,
+      "last_full_scan_ts": 1784038361.7463784
     },
     "NVDA": {
-      "price": 204.7698974609375,
+      "price": 204.3300018310547,
       "volume_ratio": 0.0,
-      "ts": 1784037674.574997,
+      "ts": 1784038267.9228787,
       "last_full_scan_ts": 1784037208.4103544
     },
     "QQQ": {
-      "price": 719.0499877929688,
+      "price": 716.22998046875,
       "volume_ratio": 0.0,
-      "ts": 1784037674.808225,
-      "last_full_scan_ts": 1784036183.1354482
+      "ts": 1784038268.1274745,
+      "last_full_scan_ts": 1784038407.7812102
     },
     "SPY": {
-      "price": 750.9500122070312,
+      "price": 749.905029296875,
       "volume_ratio": 0.0,
-      "ts": 1784037675.2007551,
+      "ts": 1784038268.439446,
       "last_full_scan_ts": 1784036278.9303334
     },
     "TSLA": {
-      "price": 398.4800109863281,
+      "price": 398.2799987792969,
       "volume_ratio": 0.0,
-      "ts": 1784037675.4455218,
+      "ts": 1784038268.6096516,
       "last_full_scan_ts": 1784036231.902508
     }
   },
@@ -136,7 +136,36 @@
       "was_flagged": false,
       "cached_at": 1784036278.9303372,
       "score": 38
+    },
+    "QQQ": {
+      "result": {
+        "ticker": "QQQ",
+        "timestamp": "2026-07-14T14:13:27.778916",
+        "analysis": "# QQQ ANALYSIS \u2014 10:12 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is grinding in a compressed range near $717, sitting below the 1H VWAP ($717.72) but above the 15M VWAP ($714.53) \u2014 a classic intraday squeeze with no clear commitment. The dominant daily/weekly trend is bearish (20D return -3.53%, MACD negative, price in lower Bollinger half), but intraday momentum shows a bullish lean on the 15M timeframe. The most plausible scenario over 5-15 days is continued consolidation between $706 and $726, with the path of least resistance mildly downward unless price reclaims the 1H VWAP and holds above $718-719.\n\n---\n\n## 2. BULL CASE\n\n- **15M Intraday Momentum (+0.74%, price above 15M VWAP $714.53):** Short-term buying pressure is present; if this sustains, price could push toward $720-724 intraday.\n- **OBV Rising:** On-balance volume is trending up, suggesting accumulation is occurring beneath the surface despite low volume today \u2014 a divergence that can precede moves higher.\n- **Strong 20D Support at $706.52:** Price is sitting 1.5% above key support, giving bulls room to operate and reducing downside risk for call buyers near current levels.\n- **3-Candle Momentum Bullish on Both Timeframes:** Both 15M and 1H show +0.70-0.74% 3-candle momentum \u2014 price action itself, not just indicators, confirms short-term buyers are in control.\n\n---\n\n## 3. BEAR CASE\n\n- **MACD Histogram Negative (-1.343) on Daily:** The daily MACD remains bearish and deepening \u2014 institutional-level momentum has not turned, and any intraday bounce is occurring within a downtrend.\n- **Price Below 1H VWAP ($717.72) and All Short-Term EMAs (EMA9=$718.12, EMA21=$718.86):** QQQ cannot sustain above key dynamic resistance levels; sellers are defending at the VWAP and EMAs \u2014 this is textbook distribution behavior.\n- **20D Return -3.53% + Bollinger Position 0.383 (Lower Half):** The intermediate trend is clearly bearish; price is rejected from the upper band and the structural trend pressure is downward.\n- **Volume Extremely Low (0.19x 20D MA):** At 7.8M shares vs. 41.6M average, today's \"bullish\" intraday move has virtually no institutional backing. Low-volume bounces in downtrends are typically faded.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro Data / Fed Speakers:** No earnings for QQQ itself, but any surprise economic data (CPI revisions, FOMC commentary, jobless claims) this week could swing the Nasdaq complex hard in either direction \u2014 this is the primary tail risk.\n- **Volume Explosion:** Volume is running at 0.19x average. If volume surges above 1.5x average intraday, it will confirm whichever direction price is moving and could compress a full day's expected move into hours.\n- **Options Expiry Dynamics:** With 5 unusual calls and 5 unusual puts flagged and a P/C of 1.2, the options market is in uneasy equilibrium. Any dealer gamma flip near $716-718 could create a self-reinforcing move.\n- **1H VWAP Reclaim or Rejection:** This is today's binary pivot. A clean reclaim of $717.72 on elevated volume flips the intraday bias bullish. A rejection and break below $714.53 (15M VWAP) confirms the bear case and opens $706.52.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| $706.52 | 20D Support | Major floor; break here = accelerated breakdown |\n| $708.17 | EMA50 | Medium-term trend support |\n| $714.53 | 15M VWAP | Must hold for bulls; loss = intraday bias flips bearish |\n| $716.93 | Current Price | Reference |\n| $717.72 | 1H VWAP | Critical pivot \u2014 reclaim = bullish, rejection = bearish |\n| $718.12-718.86 | EMA9/EMA21 | Resistance cluster; price needs to close above both to shift bias |\n| $725.82 | 0DTE upper EM | +$8.89 max realistic 0DTE target from current |\n| $743.18 | 20D Resistance | Full recovery target \u2014 not relevant for 0-2 DTE |\n\n**Thesis-changing level:** $717.72 (1H VWAP). Trade accordingly based on which side price is on when volume picks up.\n\n---\n\n## 6. CONFLUENCE SCORE: 38/100\n\nSignals are genuinely contradictory across timeframes \u2014 the 15M is bullish, the 1H is mixed, the daily is bearish, volume is absent, and options flow is neutral. There is no clean directional alignment to justify a high-conviction 0-2 DTE trade at this moment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in staying out)**\n\nThe 15M setup looks tempting but the combination of razor-thin volume (0.19x average), price pinned between two competing VWAPs, and MACD bearish on both the daily and both intraday timeframes creates too much noise for a 0-2 DTE trade. The reward-to-theta-burn ratio is unfavorable right now.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter \u2014 wait for price to clearly reclaim AND close above 1H VWAP\n                 $717.72 on 1.5x+ average volume for a CALL setup, OR break and close\n                 below 15M VWAP $714.53 on elevated volume for a PUT setup.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x 20D average \u2014 the move will not have legs.\nKEY RISK: With volume at 0.19x average, any directional bet is gambling on a phantom\n          move; theta will destroy premium before a low-volume drift delivers profit.\n```\n\n---\n\n**BOTTOM LINE:** QQQ is in a dead zone right now. The daily trend is bearish, the 15M trend is bullish, and almost nobody is trading it. This is the worst environment for 0-2 DTE options \u2014 you pay theta to watch a drift. **Come back when volume exceeds 0.5x average AND price has made a definitive move through either $714.53 (bearish \u2192 PUTs) or $718.86 (bullish \u2192 CALLs).** Both setups are valid when they trigger.",
+        "confluence_score": 38,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "Do not enter \u2014 wait for price to clearly reclaim AND close above 1H VWAP",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.5x 20D average \u2014 the move will not have legs.",
+          "key_risk": "With volume at 0.19x average, any directional bet is gambling on a phantom",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 4794
+      },
+      "was_flagged": true,
+      "cached_at": 1784038407.781214,
+      "score": 38
     }
   },
-  "saved_at": "2026-07-14T10:03:19-04:00"
+  "saved_at": "2026-07-14T10:13:29-04:00"
 }
