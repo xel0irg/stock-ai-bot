@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 313.69000244140625,
+      "price": 314.05999755859375,
       "volume_ratio": 0.0,
-      "ts": 1784047872.170856,
+      "ts": 1784048475.3015745,
       "last_full_scan_ts": 1784047331.5885472
     },
     "AMZN": {
-      "price": 245.92999267578125,
+      "price": 246.3000030517578,
       "volume_ratio": 0.0,
-      "ts": 1784047872.5747774,
+      "ts": 1784048475.7564073,
       "last_full_scan_ts": 1784044947.5273442
     },
     "META": {
-      "price": 664.0349731445312,
+      "price": 664.3900146484375,
       "volume_ratio": 0.0,
-      "ts": 1784047873.0619335,
+      "ts": 1784048476.0805175,
       "last_full_scan_ts": 1784047280.4333932
     },
     "MSFT": {
-      "price": 387.0950012207031,
+      "price": 387.8399963378906,
       "volume_ratio": 0.0,
-      "ts": 1784047873.6233768,
+      "ts": 1784048476.5068457,
       "last_full_scan_ts": 1784046773.5421164
     },
     "NVDA": {
-      "price": 210.18499755859375,
+      "price": 211.0749969482422,
       "volume_ratio": 0.0,
-      "ts": 1784047874.1471057,
-      "last_full_scan_ts": 1784046080.1845856
+      "ts": 1784048477.0192845,
+      "last_full_scan_ts": 1784048492.927534
     },
     "QQQ": {
-      "price": 720.219970703125,
+      "price": 720.7899169921875,
       "volume_ratio": 0.0,
-      "ts": 1784047874.659917,
+      "ts": 1784048477.5110703,
       "last_full_scan_ts": 1784046818.3717616
     },
     "SPY": {
-      "price": 751.3800048828125,
+      "price": 752.0,
       "volume_ratio": 0.0,
-      "ts": 1784047875.2658694,
-      "last_full_scan_ts": 1784044413.6382375
+      "ts": 1784048477.9925146,
+      "last_full_scan_ts": 1784048613.0650678
     },
     "TSLA": {
-      "price": 396.8500061035156,
+      "price": 395.6202087402344,
       "volume_ratio": 0.0,
-      "ts": 1784047875.7656317,
-      "last_full_scan_ts": 1784044892.1374986
+      "ts": 1784048478.3157618,
+      "last_full_scan_ts": 1784048553.4745061
     }
   },
   "ai_cache": {
@@ -76,66 +76,8 @@
         "tokens_used": 4864
       },
       "was_flagged": true,
-      "cached_at": 1784046080.184589,
+      "cached_at": 1784048492.927537,
       "score": 38
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-07-14T13:37:11.899190",
-        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis\n**Time: 09:36 AM ET | Price: $396.99**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is trading in a technically weak posture \u2014 below all key EMAs on the daily, MACD bearish cross, and sitting in the lower half of the Bollinger Band \u2014 but is showing an intraday bounce off the open that has pushed the 15m frame above its VWAP. The most plausible scenario over the next 5-15 days is a continued grind lower toward the $375 support zone, with the current intraday strength being a mean-reversion pop within a broader downtrend. Resistance at $401-$402 (EMA cluster) is likely to cap any rally attempt, making failed bounces into that zone the primary bearish trigger.\n\n---\n\n## 2. BULL CASE\n\n- **OBV Trend Rising** \u2014 Despite price weakness, accumulation is occurring. Suggests institutional buying into dips, which could support a short-term reversal.\n- **15m Price Above VWAP ($393.91) with Elevated Volume (1.93x avg)** \u2014 Real intraday momentum to the upside; buyers showed up at the open with conviction.\n- **3-Candle Momentum Bullish on Both Timeframes (+1.26% / +1.12%)** \u2014 Short-term price action is accelerating upward regardless of the daily trend.\n- **Analyst Consensus BUY / Price Target $425.24** \u2014 7% upside to consensus target; provides a ceiling for rallies but also a gravitational pull over multi-week timeframes.\n\n---\n\n## 3. BEAR CASE\n\n- **Price Below All Daily EMAs (EMA9=$401.35 / EMA21=$402.44 / EMA50=$401.23)** \u2014 The EMA cluster at $401-$402 is a dense overhead resistance wall. Bears control the daily trend.\n- **Daily MACD Bearish Cross (hist: -0.0221)** \u2014 Fresh bearish momentum signal on the primary timeframe; this is the most structurally significant technical signal in the dataset.\n- **1H Price Below VWAP ($401.38) with Low Volume (0.43x avg)** \u2014 The higher timeframe VWAP tells the real story: this bounce lacks institutional participation on the 1H frame.\n- **20D Return -3.44% / Bollinger Band Lower Half (0.443)** \u2014 Medium-term trend is clearly down; price has been compressing downward for 20 days, consistent with distribution.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Found** \u2014 An information vacuum at market open is dangerous for short-dated options. Any macro headline (Fed speaker, tariff news, EV policy) will move TSLA disproportionately given Beta of 1.80.\n- **Beta 1.80 + ATR $17.71 (4.46%)** \u2014 A broad market move of even 1% translates to ~1.8% on TSLA. SPY/QQQ direction today will likely dictate whether the intraday bounce holds or fades.\n- **8 Recent SEC Filings (90 days)** \u2014 Worth monitoring; could include shelf registrations or material agreements. Not immediately actionable but worth a quick check.\n- **Volume Catastrophically Low (0.04x 20D MA)** \u2014 Only 9 minutes into the session, but if volume remains suppressed, price action will be noise-driven and whippy \u2014 dangerous for 0DTE positions. Watch for volume confirmation.\n- **P/C Ratio 0.87 (Balanced) + Equal Unusual Calls/Puts (5/5)** \u2014 No smart money positioning signal. The market is genuinely undecided.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$402.44** | Resistance | EMA21 daily \u2014 bears control above here |\n| **$401.23\u2013$401.38** | Resistance Zone | EMA50 daily + 1H VWAP cluster \u2014 the wall |\n| **$396.99** | Current Price | \u2014 |\n| **$394.31** | Intraday Support | 15m EMA21 |\n| **$393.91** | Intraday Support | 15m VWAP \u2014 loss of this flips intraday bearish |\n| **$388.00** | Pivot | Midpoint of Bollinger Band / intermediate support |\n| **$375.12** | Major Support | 20D support \u2014 bear target if breakdown confirmed |\n\n**Thesis-changing level:** A clean 15m candle close ABOVE $402.50 with volume >2x avg would invalidate the bearish setup entirely. A break BELOW $393.91 (15m VWAP) on volume confirms bearish re-entry.\n\n---\n\n## 6. CONFLUENCE SCORE: 38/100\n\nThe signals are genuinely bifurcated \u2014 daily trend is clearly bearish but intraday momentum is clearly bullish, volume is too thin to confirm either direction, and news/sentiment are absent. This is a contradictory, low-data setup with no directional clarity at the 0-2 DTE timeframe \u2014 the mixed signals produce high false-trigger risk on short-dated options.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in neutrality)**\n\nThe intraday bounce directly conflicts with the daily bearish structure. Entering either direction before the 15m RSI (71.55, overbought) resolves and before volume normalizes is premature. The correct trade is to WAIT for the setup to clarify \u2014 either a rejection at the $401-$402 EMA wall (bearish entry trigger) or a confirmed break above it on volume (bullish entry trigger). Neither has occurred yet.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Monitor for two specific triggers \u2014 (1) BEARISH: 15m candle close below 15m VWAP $393.91 with volume above 1.5x avg, OR (2) BULLISH: 15m candle close above $402.50 EMA cluster with volume above 2x avg \u2014 only then consider entering a PUT or CALL respectively.\nENTRY TRIGGER PRICE: $393.91 (PUT trigger below) / $402.50 (CALL trigger above)\nAVOID IF: Volume remains below 0.5x 20D average \u2014 price moves in thin tape are unreliable for 0-2 DTE direction.\nKEY RISK: Beta 1.80 means an unrelated macro headline will override all technical setups instantly \u2014 this is the dominant risk given the news vacuum at open.\n\n---\n\n**ANALYST NOTE:** The honest read here is that TSLA is in a tug-of-war between a daily downtrend and an intraday morning bounce. Entering a 0-2 DTE position before one side wins is paying theta to watch a coin flip. Set alerts at $393.91 and $402.50. Come back when the market tells you who won.",
-        "confluence_score": 38,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Monitor for two specific triggers \u2014 (1) BEARISH: 15m candle close below 15m VWAP $393.91 with volume above 1.5x avg, OR (2) BULLISH: 15m candle close above $402.50 EMA cluster with volume above 2x avg \u2014 only then consider entering a PUT or CALL respectively.",
-          "entry_trigger": 393.91,
-          "avoid_if": "Volume remains below 0.5x 20D average \u2014 price moves in thin tape are unreliable for 0-2 DTE direction.",
-          "key_risk": "Beta 1.80 means an unrelated macro headline will override all technical setups instantly \u2014 this is the dominant risk given the news vacuum at open.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 4852
-      },
-      "was_flagged": true,
-      "cached_at": 1784044892.137502,
-      "score": 38
-    },
-    "SPY": {
-      "result": {
-        "ticker": "SPY",
-        "timestamp": "2026-07-14T15:53:33.633648",
-        "analysis": "# SPY ANALYSIS \u2014 11:52 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is grinding near resistance at $754.95 with extremely low volume (0.27x 20D average), stochastic deeply overbought (88/90), and timeframe signals fully mixed \u2014 no directional conviction is present. Price is sitting ~$4 below the 52W high of $760.40, caught between technical exhaustion signals and a MACD that remains constructive on the daily. The most plausible scenario over the next 5-15 days is continued chop/consolidation between $745-$755 with a mild downside lean given overbought conditions and volume failure at resistance.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram Bullish (0.7032 daily):** Momentum histogram is positive and expanding on the daily \u2014 trend structure is not broken and buyers have not fully capitulated.\n- **OBV Rising:** On-balance volume trend is rising, suggesting accumulation is still intact beneath the low-volume surface grind.\n- **Price in Upper Bollinger Band (0.726):** Price is in the upper half of the band, consistent with an ongoing uptrend \u2014 not yet at band squeeze or breakdown.\n- **EMA Stack Bullish Short-Term:** EMA9 ($748.64) > EMA21 ($745.34) > EMA50 ($737.52) on the daily \u2014 the short/medium-term trend is constructive and price is above all three. (Note: EMA200 unavailable.)\n\n---\n\n## 3. BEAR CASE\n\n- **Stochastic Overbought (88.61/90.44):** Both K and D are in extreme overbought territory \u2014 historically high-probability mean reversion zone, particularly when price is approaching 52W highs.\n- **Volume Collapse (0.27x 20D MA):** The rally to resistance is occurring on near-zero volume. Low-volume moves into resistance have a high failure rate. This is the most structurally bearish element of the data.\n- **Price Below 1H VWAP ($751.61):** On the hourly, price is trading below VWAP, meaning the dominant intraday participants at that timeframe are underwater \u2014 a subtle but real distribution signal.\n- **20D Resistance at $754.95 / 52W High $760.40:** Price is sandwiched between two major ceilings with no volume catalyst to break through. Resistance confluence here is strong and rejection risk is elevated.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data releases:** No news was found, but SPY is highly sensitive to Fed speakers, CPI/PPI revisions, or any surprise macro print that could break the low-volume stasis immediately.\n- **Options expiry dynamics:** Neutral P/C (0.79) with 10 contracts flagged unusual (5 calls/5 puts equally) \u2014 dealer hedging flows are balanced but could shift sharply if price breaks $754.95 or $748.\n- **52W High magnetic pull vs. rejection:** $760.40 is within 1.25% \u2014 a low-volatility grind toward ATH could trigger gamma squeeze on calls, or a hard rejection at $755 could cascade quickly in 0DTE land.\n- **VIX/volatility spike:** Any macro shock (geopolitical, Fed surprise) could reprice the expected move dramatically, making current OTM premiums underpriced.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$754.95** | 20D Resistance | Critical ceiling \u2014 rejection here confirms bear lean |\n| **$758.78** | Upper Bollinger Band | Band tag = overbought exhaustion signal |\n| **$760.40** | 52W High | Breakout above = full bull continuation; rejection = major double-top risk |\n| **$750.18** | 15m VWAP | Near-term pivot \u2014 losing this flips 15m structure bearish |\n| **$751.61** | 1H VWAP | Already below \u2014 reclaim needed for intraday bull case |\n| **$748.64** | Daily EMA9 | Loss of this level invalidates short-term bull trend |\n| **$728.99** | 20D Support | Downside target if $748 breaks with volume |\n\n**Thesis-changing level:** A 15-min candle CLOSE above $754.95 on volume > 1.0x average would force a bullish reassessment. A break below $750.18 (15m VWAP) with expanding volume shifts intraday bias decisively bearish.\n\n---\n\n## 6. CONFLUENCE SCORE: 34/100\n\nSignals are genuinely contradictory across every timeframe \u2014 daily momentum is bullish while intraday is mixed, volume is absent, stochastic is overbought but MACD is positive, and the options flow is perfectly balanced. There is no directional alignment sufficient to risk theta-decay capital on a 0-2 DTE position right now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the no-trade call)**\n\nMixed signals, volume vacuum, and balanced options flow provide no edge. The setup does not meet the minimum threshold (55+) for 0-2 DTE positioning.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter \u2014 no directional alignment exists across timeframes at this time.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: Volume is 0.27x normal \u2014 any trade entered in this environment is fighting an illiquid, unconfirmed move where fills will be poor and the direction can reverse instantly with zero warning.\n```\n\n---\n\n### \u26a1 BOTTOM LINE\n\nThe honest read: **SPY is grinding into resistance on fumes.** The bull trend structure is technically intact but volume has evaporated, stochastic is pinned in overbought, and intraday signals are completely indecisive. This is a **wait-for-confirmation** environment. The trade worth taking is either:\n- **A PUT** if price decisively rejects $754.95\u2013$755 with a 15m close back below $750 on expanding volume, OR\n- **A CALL** if price closes a 15m candle above $754.95 with volume confirming.\n\nNeither trigger has fired. **Stand aside.**",
-        "confluence_score": 34,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter \u2014 no directional alignment exists across timeframes at this time.",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "Volume is 0.27x normal \u2014 any trade entered in this environment is fighting an illiquid, unconfirmed move where fills will be poor and the direction can reverse instantly with zero warning.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 4636
-      },
-      "was_flagged": false,
-      "cached_at": 1784044413.638241,
-      "score": 34
     },
     "QQQ": {
       "result": {
@@ -225,5 +167,5 @@
       "score": 32
     }
   },
-  "saved_at": "2026-07-14T12:51:15-04:00"
+  "saved_at": "2026-07-14T13:03:35-04:00"
 }
