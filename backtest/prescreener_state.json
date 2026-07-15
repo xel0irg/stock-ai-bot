@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 327.55999755859375,
+      "price": 327.4601135253906,
       "volume_ratio": 0.0,
-      "ts": 1784138476.384367,
+      "ts": 1784139062.2042503,
       "last_full_scan_ts": 1784137328.7468412
     },
     "AMZN": {
-      "price": 254.82000732421875,
+      "price": 254.79989624023438,
       "volume_ratio": 0.0,
-      "ts": 1784138476.8052745,
+      "ts": 1784139062.5438461,
       "last_full_scan_ts": 1784136135.398849
     },
     "META": {
-      "price": 676.3099975585938,
+      "price": 675.9249877929688,
       "volume_ratio": 0.0,
-      "ts": 1784138477.257012,
-      "last_full_scan_ts": 1784134891.8727314
+      "ts": 1784139062.8483586,
+      "last_full_scan_ts": 1784139115.5029001
     },
     "MSFT": {
-      "price": 395.80999755859375,
+      "price": 396.1499938964844,
       "volume_ratio": 0.0,
-      "ts": 1784138477.7356808,
+      "ts": 1784139063.1359282,
       "last_full_scan_ts": 1784138539.5575795
     },
     "NVDA": {
-      "price": 209.86500549316406,
+      "price": 210.3699951171875,
       "volume_ratio": 0.0,
-      "ts": 1784138478.1902392,
+      "ts": 1784139063.5865154,
       "last_full_scan_ts": 1784136077.1012387
     },
     "QQQ": {
-      "price": 717.5900268554688,
+      "price": 718.2100219726562,
       "volume_ratio": 0.0,
-      "ts": 1784138478.7105458,
+      "ts": 1784139063.8567986,
       "last_full_scan_ts": 1784138587.0147996
     },
     "SPY": {
-      "price": 754.27001953125,
+      "price": 754.6699829101562,
       "volume_ratio": 0.0,
-      "ts": 1784138479.2693212,
-      "last_full_scan_ts": 1784134962.5112684
+      "ts": 1784139064.262169,
+      "last_full_scan_ts": 1784139161.6453815
     },
     "TSLA": {
-      "price": 399.010009765625,
+      "price": 398.2200012207031,
       "volume_ratio": 0.0,
-      "ts": 1784138479.6283534,
+      "ts": 1784139064.4741874,
       "last_full_scan_ts": 1784137279.310983
     }
   },
@@ -140,8 +140,8 @@
     "META": {
       "result": {
         "ticker": "META",
-        "timestamp": "2026-07-15T14:02:31.640380",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 10:01 AM ET | Price: $662.23**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is in a short-term overbought condition after a strong 20-day run (+10.33%), pressing against key resistance at $669.21 with price sitting at BB position 0.908 (upper band). The most plausible scenario over the next 5-15 days is a consolidation or modest pullback toward $640-$650 before any continuation higher toward analyst targets near $826. For the next 1-2 sessions specifically, the dominant risk is a fade from upper-band resistance, though intraday momentum remains bullish and volume is extremely thin \u2014 making conviction in either direction difficult.\n\n---\n\n## 2. BULL CASE\n\n- **Intraday momentum is fully bullish.** Price is above VWAP on both 15m and 1H, EMA9 > EMA21 on both timeframes, and 3-candle momentum is positive. This is the cleanest signal in the dataset right now.\n- **MACD Histogram (daily) at +11.29 \u2014 strongly bullish.** Daily trend momentum has not rolled over; the path of least resistance remains upward until this flips.\n- **OBV rising + strong fundamentals.** Revenue growth 33%, earnings growth 62%, Forward P/E of 18.2, PEG of 0.97 \u2014 fundamental support is real and analysts have a $826 target (~25% upside). Smart money is not abandoning this name.\n- **5D return of +4.87% with no news catalyst.** Organic price appreciation without a headline suggests institutional accumulation rather than a short-term spike.\n\n---\n\n## 3. BEAR CASE\n\n- **Options flow is heavily bearish: P/C Ratio of 2.71 with 5 unusual put contracts flagged.** This is the loudest contradicting signal. Smart money hedging or positioning for downside is meaningful at this price level.\n- **RSI 63.72 (near overbought) + Stochastic 88.65/87.03 (overbought) + BB position 0.908.** Triple overbought confirmation. At current levels, the probability of mean reversion toward the middle band (~$597) is elevated over a 5-15 day horizon.\n- **20D Resistance at $669.21 is 1.05% away.** Price is pressing into defined resistance with no volume to punch through it \u2014 volume is only 0.07x the 20D average. Without volume, breakouts fail.\n- **Volume is critically low (0.07x average).** This is the most important caveat to the bull case. Moves without volume are suspect. A bullish trend with zero participation suggests either institutional hesitation at resistance or a pre-catalyst pause. It also means a single large sell order can reverse intraday direction sharply.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Heavy put flow (P/C 2.71)** \u2014 either a major institutional hedge or directional bet. If this is informed, a catalyst may be imminent that is not yet public. Worth watching for any macro or company-specific news drop during the session.\n- **Volume spike.** At 0.07x average volume, any normalization toward average volume will define direction with force. A volume surge into resistance ($669) = rejection and fast drop. A volume surge above $669 = breakout continuation.\n- **Macro risk.** No news in the dataset, but META is a beta-1.25 large-cap highly correlated to Nasdaq. Any SPX/QQQ catalyst (Fed commentary, CPI revision, geopolitical shock) moves META disproportionately.\n- **EMA200 = NaN (data anomaly).** This suggests a data issue \u2014 if the actual 200D EMA is near current price, it would be critical resistance. Traders should verify this independently.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $669.21 | 20D resistance + near upper Bollinger Band ($676.82) \u2014 rejection here = PUT thesis |\n| **Upper Bollinger Band** | $676.82 | Hard ceiling on current volatility; breach needs volume |\n| **VWAP (15m/1H)** | $660.21 / $659.82 | Loss of VWAP flips intraday bias bearish immediately |\n| **EMA9 (1H)** | $660.66 | First intraday support; breach = momentum stall |\n| **EMA21 (1H)** | $654.46 | Deeper intraday support; sustained close below = trend shift |\n| **Thesis-Changing Level** | **$659.00** | Loss of both VWAPs + EMA9 on 15m on elevated volume = bear signal confirmed |\n| **20D Support** | $542.87 | Not relevant for 0-2 DTE |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score rationale:** The intraday signals are bullish but the macro/options flow signals are contradictory (P/C 2.71 bearish vs. VWAP/EMA bullish), volume is near-absent making all signals unreliable for 0-2 DTE sizing, and the price is pinned near resistance without the momentum required to confidently trade either direction in a short-dated option.\n\nThe signals are not aligned \u2014 they are split across timeframes and data sources in a way that does not support a high-conviction 0-2 DTE trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the no-trade call)**\n\nThe intraday structure is mildly bullish but the options flow says smart money is buying puts. At 0.07x volume, neither direction is confirmed. Trading into this with 0-2 DTE options means paying theta on a coin flip near resistance.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade until volume normalizes above 0.5x 20D average AND\n  price either breaks/holds above $669.21 on volume (CALL setup) OR breaks\n  below VWAP $659.50 on expanding volume with 15m candle close (PUT setup).\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.15x 20D average \u2014 no trade is valid in this\n  liquidity vacuum regardless of directional signal.\nKEY RISK: The P/C ratio of 2.71 with 5 unusual put contracts is the most\n  meaningful signal in this dataset and is directly contradicting the intraday\n  bullish structure \u2014 trading calls into that flow is a low-probability bet.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** This is a \"wait at the gate\" scenario. The setup has two valid contingency trades:\n\n- **PUT trigger:** $659.00 break on 15m close with volume > 0.3x avg \u2192 buy 1DTE ATM put, target $650, expected move supports it\n- **CALL trigger:** Clean breakout above $669.21 on volume > 0.5x avg \u2192 buy 1DTE ATM call, target $676, within 1DTE expected move of \u00b1$18\n\nNeither trigger has fired at 10:01 AM. Patience here is the edge.",
+        "timestamp": "2026-07-15T18:11:55.497948",
+        "analysis": "# META \u2014 SHORT-DATED OPTIONS ANALYSIS\n**Time: 2:11 PM ET | Last Price: $675.92 | 0DTE PROHIBITED**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has staged an impressive multi-week run (+12.6% over 20 days) and is now pressing against its current 20D resistance at $675.92 with momentum indicators flashing overbought. The most plausible scenario over the next 5-15 days is a **short-term pause or mean-reversion pullback** toward the $655-$665 zone, before any resumption of the broader uptrend \u2014 particularly given that Tech (XLK) is the worst-performing sector today (-1.0%) while META is trading below its 15m VWAP and showing bearish intraday momentum. The price target of $826 from 58 analysts provides a longer-term bullish anchor, but the short-term setup favors digestion, not continuation.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram +12.17 (Daily)** | Strong positive momentum on the daily timeframe \u2014 the dominant trend is still upward and has not broken |\n| **OBV Rising** | Institutional accumulation ongoing; buyers are absorbing supply on volume |\n| **Strong Analyst Consensus (1.32/5, PT $826)** | 58 analysts with a $150+ upside target creates a fundamental demand floor on dips |\n| **1H Price Above VWAP (+1.37%)** | On the hourly view, buyers remain in control intraday \u2014 broader session trend not broken |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Bollinger Band Position 0.976 (AT UPPER BAND)** | Price at 97.6th percentile of 20D range \u2014 statistically mean-reversion prone; the band itself is $679.93, within 0.6% above current price |\n| **Stochastic 93/88 \u2014 OVERBOUGHT** | Both K and D lines in deeply overbought territory; historically precedes short-term cooling |\n| **15m MACD Bearish (-0.65 histogram) + BELOW 15m VWAP** | Intraday momentum has flipped \u2014 sellers controlling the final hours of this session |\n| **Tech Sector (XLK) -1.0% Today** | META trading against a weak sector backdrop; sector rotation away from tech creates a near-term headwind even for strong names |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Detected:** The absence of news with a +2.25% daily move is notable \u2014 this could be pure momentum/options-driven. An unexplained move makes the setup less reliable.\n- **Options Flow Balanced (P/C 0.42, 5 unusual calls / 5 unusual puts):** The equal unusual activity on both sides suggests institutional hedging, not a directional bet \u2014 increases uncertainty.\n- **20D Resistance = Current Price ($675.92):** This is the exact resistance level. A clean break and hold above this on volume would shift the setup decisively bullish. A rejection here (the more probable near-term outcome given overbought conditions) confirms the bear case.\n- **10 SEC Filings in 90D:** No specific catalyst identified, but elevated filing activity warrants monitoring.\n- **QQQ Divergence:** QQQ is -0.53% while SPY is +0.21% \u2014 tech-specific weakness that could weigh further on META into tomorrow.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Resistance** | $679.93 | Bollinger Band upper \u2014 rejection zone |\n| **20D Resistance / Current Price** | $675.92 | Price is AT resistance; must break and hold to be bullish |\n| **15m VWAP** | $678.74 | Reclaiming this flips intraday to bullish |\n| **1H VWAP** | $666.81 | First real intraday support; a break below this signals sustained weakness |\n| **EMA9 (Daily)** | $638.73 | Bull/bear line for the multi-week trend |\n| **Thesis-Change Level** | $681+ close | A daily close above $681 on above-average volume invalidates the pullback thesis |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signals are meaningfully split \u2014 the daily trend is bullish but overbought, intraday is showing fatigue, volume is weak, and the options flow is genuinely neutral \u2014 there is no clean directional alignment sufficient for a 0-2 DTE options trade.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in neutrality)**\n\nThe daily trend is bullish, but overbought conditions + AT resistance + weak intraday momentum + low volume + balanced options flow = no clear edge for a short-dated bet. Bears have a real case but no confirming volume or breakdown catalyst yet. Bulls have trend but no follow-through today.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade today \u2014 signals are contradictory across timeframes.\n  Monitor for: (A) a clean 15m close BELOW 1H VWAP $666.81 on volume \u22651.5x avg\n  for a 1DTE PUT entry tomorrow morning, or (B) a daily close above $681 on\n  volume >20M for a 1DTE CALL entry.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.7x average \u2014 there is no conviction behind\n  any move today in either direction.\nKEY RISK: A false breakout above $679.93 followed by reversal would trap\n  both sides \u2014 the current low-volume, overbought, at-resistance setup is the\n  definition of a choppy no-man's-land for short-dated options.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** The setup is not bad \u2014 it is *ambiguous*. Price at exact resistance + overbought oscillators + bearish intraday MACD + low volume is a legitimate watchlist setup for **tomorrow morning's open**. If META gaps down and reclaims 15m VWAP from below with volume, reassess for a PUT. If it breaks $681 on volume at the open, reassess for a CALL. Tonight's close and pre-market action will determine which scenario activates. Do not force a trade here.",
         "confluence_score": 42,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
@@ -153,17 +153,17 @@
           "est_premium": null,
           "profit_target": null,
           "stop_rule": "N/A",
-          "entry_condition": "No trade until volume normalizes above 0.5x 20D average AND",
+          "entry_condition": "No trade today \u2014 signals are contradictory across timeframes.",
           "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.15x 20D average \u2014 no trade is valid in this",
-          "key_risk": "The P/C ratio of 2.71 with 5 unusual put contracts is the most",
+          "avoid_if": "Volume remains below 0.7x average \u2014 there is no conviction behind",
+          "key_risk": "A false breakout above $679.93 followed by reversal would trap",
           "setup_quality": "NO TRADE"
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 4920
+        "tokens_used": 5015
       },
-      "was_flagged": true,
-      "cached_at": 1784134891.8727345,
+      "was_flagged": false,
+      "cached_at": 1784139115.502903,
       "score": 42
     },
     "QQQ": {
@@ -194,7 +194,36 @@
       "was_flagged": false,
       "cached_at": 1784138587.0148027,
       "score": 38
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-07-15T18:12:41.642769",
+        "analysis": "# SPY OPTIONS ANALYSIS \u2014 02:12 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is trading at $754.72, pressing near its 20D resistance of $754.95 and within striking distance of the 52W high at $760.40, supported by a bullish intraday structure across both the 15m and 1H timeframes. However, the setup is stretched: Stochastic is deeply overbought (97.79/90.82), volume is running at just 0.45x the 20-day average, and QQQ is diverging negatively (-0.53%) with Tech sector down -1.0%. The most plausible 5-15 day scenario is a consolidation or shallow pullback from current resistance levels before any sustained breakout attempt, with the immediate next session likely to test whether the $754.95 resistance holds or fails.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram Positive (+0.8656):** Daily MACD momentum remains constructive, signaling that intermediate-term buyers are still in control and the trend has not rolled over.\n- **15m & 1H Full Bullish Alignment:** All intraday signals (VWAP, EMA, 3-candle momentum) confirm buyers are dominant on the tape right now; price is above both VWAP levels and trending higher.\n- **Bollinger Band Position (0.845):** Price is riding the upper half of the band near the upper rail ($759.23), which in trending markets can act as a magnet rather than a ceiling.\n- **OBV Rising + Consumer Discretionary +1.2% / Financials +0.5%:** Underlying buying pressure persists in key large-cap S&P sectors, providing fundamental support for index continuation.\n\n---\n\n## 3. BEAR CASE\n\n- **Stochastic K/D: 97.79/90.82 \u2014 Deeply Overbought:** This is an extreme reading. At these levels on a daily chart, mean reversion risk is elevated; the probability of a continued near-vertical extension without consolidation is low historically.\n- **Volume at 0.45x 20D Average \u2014 Anemic:** A rally into resistance on less than half of average volume is a textbook low-conviction move. This is distribution territory, not accumulation. No institutional sponsorship visible.\n- **QQQ Divergence (-0.53%) + Tech Sector -1.0%:** SPY's largest sector component (Tech) is the weakest sector today. SPY is being held up by cyclicals, not its heaviest-weighted names. This divergence is a warning sign for sustainability.\n- **Price at 20D Resistance ($754.95) Near 52W High ($760.40):** SPY is pinned against layered supply \u2014 the 20D resistance, Bollinger upper band ($759.23), and the 52W high cluster all within $5.68 above current price. Risk/reward for new longs is compressed.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro Data / Fed Speakers (post-2 PM):** No news found in this scan, but any Fed commentary in the afternoon session could move VIX sharply. VIX at 15.74 is calm \u2014 a surprise hawkish statement could spike it fast and hit SPY hard.\n- **QQQ Continued Weakness:** If NASDAQ accelerates its decline into close, SPY's Tech exposure could drag the broader index below VWAP, flipping intraday bias.\n- **Options Pinning Near $755:** P/C ratio of 1.01 is balanced, but with 10 unusual contracts flagged evenly, there is potential for gamma-driven pinning near $755 into expiry \u2014 a 0DTE non-event that traps directional traders on both sides.\n- **Breakout Above $760.40 (52W High):** If SPY prints above the 52W high on volume tomorrow, it would be a momentum breakout signal that invalidates the resistance thesis entirely and triggers systematic buying.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $754.95 | 20D resistance \u2014 currently being tested |\n| **Bollinger Upper Band** | $759.23 | Next supply target if $754.95 breaks |\n| **52W High** | $760.40 | Bull/bear line for breakout confirmation |\n| **15m VWAP** | $752.52 | Intraday support \u2014 break changes short-term bias |\n| **1H VWAP** | $751.55 | Key intraday floor; sustained break = bearish flip |\n| **20D Support** | $728.99 | Macro support; not relevant for 1-2 DTE |\n| **Thesis Change Level** | $757.00+ on volume | Clears resistance cluster, invalidates pullback thesis |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score Rationale:** Intraday bias is bullish, but the setup is contradicted by extreme overbought readings, critically low volume, tech/QQQ divergence, and price stalling at layered resistance \u2014 the signals are too split to support a high-probability 1-2 DTE directional bet.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday structure is bullish but fighting resistance on low volume with overbought momentum and sector divergence. Neither the bull nor bear case has clean enough alignment to justify the premium cost of 1-2 DTE options where theta is punishing. The conflicting signals \u2014 especially the QQQ/Tech divergence against the bullish intraday VWAP structure \u2014 create too much noise.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No clean directional trigger \u2014 price is at resistance on 0.45x volume with overbought stochastics and QQQ diverging; neither bulls nor bears have a clear edge.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: Forcing a directional bet at 2:12 PM ET on 0.45x volume at 52W resistance with overbought Stochastics is a low-probability use of capital in a severe theta environment.\n```\n\n---\n\n### \u26a0\ufe0f ANALYST NOTE\n\nThe single most important data point here is **volume at 0.45x average**. A market near 52W highs on half the normal volume is not a conviction environment \u2014 it is a drift. Drift markets punish short-dated options buyers on both sides. **The correct trade today is waiting for a higher-volume session with a cleaner setup.** Watch for: (1) SPY breaking and holding above $757 on volume >1.0x average \u2192 consider 1DTE CALL; or (2) SPY breaking below 1H VWAP $751.55 with QQQ accelerating lower \u2192 consider 1DTE PUT. Neither trigger is active right now.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No clean directional trigger \u2014 price is at resistance on 0.45x volume with overbought stochastics and QQQ diverging; neither bulls nor bears have a clear edge.",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "Forcing a directional bet at 2:12 PM ET on 0.45x volume at 52W resistance with overbought Stochastics is a low-probability use of capital in a severe theta environment.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5022
+      },
+      "was_flagged": false,
+      "cached_at": 1784139161.6453836,
+      "score": 42
     }
   },
-  "saved_at": "2026-07-15T14:03:09-04:00"
+  "saved_at": "2026-07-15T14:12:43-04:00"
 }
