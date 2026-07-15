@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 326.9750061035156,
+      "price": 326.5950012207031,
       "volume_ratio": 0.0,
-      "ts": 1784135474.6837509,
+      "ts": 1784136069.2768674,
       "last_full_scan_ts": 1784133089.3090885
     },
     "AMZN": {
-      "price": 255.1750030517578,
+      "price": 255.1300048828125,
       "volume_ratio": 0.0,
-      "ts": 1784135475.204876,
-      "last_full_scan_ts": 1784131878.792983
+      "ts": 1784136069.7953165,
+      "last_full_scan_ts": 1784136135.398849
     },
     "META": {
-      "price": 675.7899169921875,
+      "price": 674.405029296875,
       "volume_ratio": 0.0,
-      "ts": 1784135475.6743338,
+      "ts": 1784136070.1457665,
       "last_full_scan_ts": 1784134891.8727314
     },
     "MSFT": {
-      "price": 395.6000061035156,
+      "price": 395.5899963378906,
       "volume_ratio": 0.0,
-      "ts": 1784135476.1826906,
+      "ts": 1784136070.6373658,
       "last_full_scan_ts": 1784134303.6696892
     },
     "NVDA": {
-      "price": 208.22999572753906,
+      "price": 208.9550018310547,
       "volume_ratio": 0.0,
-      "ts": 1784135476.7669346,
-      "last_full_scan_ts": 1784135485.5147758
+      "ts": 1784136071.0652466,
+      "last_full_scan_ts": 1784136077.1012387
     },
     "QQQ": {
-      "price": 714.02001953125,
+      "price": 714.7800903320312,
       "volume_ratio": 0.0,
-      "ts": 1784135477.401132,
+      "ts": 1784136071.5739398,
       "last_full_scan_ts": 1784134374.1226857
     },
     "SPY": {
-      "price": 752.2495727539062,
+      "price": 752.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1784135478.1373854,
+      "ts": 1784136072.13807,
       "last_full_scan_ts": 1784134962.5112684
     },
     "TSLA": {
-      "price": 394.82000732421875,
+      "price": 395.375,
       "volume_ratio": 0.0,
-      "ts": 1784135478.727555,
+      "ts": 1784136072.503654,
       "last_full_scan_ts": 1784134906.4434316
     }
   },
@@ -76,15 +76,15 @@
         "tokens_used": 4706
       },
       "was_flagged": true,
-      "cached_at": 1784135485.5147793,
+      "cached_at": 1784136077.1012416,
       "score": 48
     },
     "AMZN": {
       "result": {
         "ticker": "AMZN",
-        "timestamp": "2026-07-15T13:32:54.346618",
-        "analysis": "# AMZN \u2014 0-2 DTE OPTIONS ANALYSIS\n**09:32 AM ET | Price: $251.89**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN has ripped ~3.4% over 5 days and is now pressing hard against its 20-day resistance at $251.89 \u2014 which is literally the current price. The stock is extended at the upper Bollinger Band (0.934 position), Stochastic is in extreme overbought territory (96/86), and both intraday RSIs are elevated (83 on 15m, 77 on 1H). The most plausible near-term scenario is a mean-reversion pause or shallow pullback toward VWAP/EMA support (~$247-248) before any continuation higher, with a sustained breakout above $253.52 (upper BB) being the bull case extension.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram +2.14 (Daily)** | Positive momentum with room to extend; not yet a sell signal |\n| **All timeframes above VWAP + EMA bullish (15m & 1H)** | Intraday structure is fully intact; dip-buyers are active |\n| **OBV Rising** | Accumulation pressure underneath supports the trend |\n| **Analyst consensus STRONG BUY / $314 target** | 24%+ upside to mean target; institutional bid remains present |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Stochastic 96.29/86.45 (Extreme Overbought)** | Historically one of the highest-probability short-term mean-reversion signals |\n| **Bollinger Band position 0.934 (AT UPPER)** | Price is statistically stretched; upper band at $253.52 is hard resistance |\n| **Volume 0.03x 20D MA (Critically Low)** | This morning's move has near-zero participation \u2014 weak-volume breakouts fail at resistance regularly |\n| **20D Resistance = Current Price ($251.89)** | Price is sitting exactly at resistance with no confirmed breakout; rejection risk is high |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume anomaly is the biggest wildcard**: If volume surges into the open, a thin-volume breakout could become a real one \u2014 or a real reversal. Watch the first 30 minutes carefully.\n- **No news today**: The move is happening in an information vacuum, which makes it more susceptible to snap-back. A macro risk-off headline (Fed speaker, geopolitical) could accelerate a pullback.\n- **Options flow is balanced (P/C 0.33, 5 unusual calls / 5 unusual puts)**: No directional conviction from smart money options flow \u2014 this is a coin-flip from the options market's perspective.\n- **EMA200 is NaN / BEAR_BELOW_200 (daily)**: This suggests longer-term trend structure is broken. Any sustained rally may face overhead supply from longer-term holders looking to exit.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $253.52 | Upper Bollinger Band \u2014 sustained break = bull continuation |\n| **Current Resistance** | $251.89 | 20D resistance = current price; rejection here = put trigger |\n| **15m VWAP** | $247.62 | First intraday support; loss of this = bearish structure shift |\n| **EMA9/21 Cluster** | $247-$248 | Intraday EMA support; likely magnet on any pullback |\n| **Thesis-Change Level (Bear)** | $253.52 close | Confirmed upper BB breakout on volume invalidates pullback thesis |\n| **Thesis-Change Level (Bull)** | $247.00 loss | Break of VWAP + EMA cluster = momentum reversal confirmed |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signals are split: intraday momentum is genuinely bullish but price is simultaneously sitting at hard resistance on critically low volume with extreme overbought oscillators \u2014 these contradictions meaningfully reduce trade clarity for a 0-2 DTE position.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in neutrality)**\n\nThe bull and bear signals are nearly equal in quality and directly contradict each other. Momentum says up; structure and oscillators say exhaustion at resistance. Volume confirms nothing. This is precisely the scenario where 0-2 DTE theta decay punishes indecision.\n\n**Exception trigger**: If price either (a) rejects hard at $251.89-$253.52 with a high-volume bearish reversal candle \u2192 bias flips BEARISH \u2192 PUTS, or (b) breaks and closes above $253.52 on volume >1.5x avg \u2192 bias flips BULLISH \u2192 CALLS.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade initiated \u2014 reassess on a confirmed directional trigger\nENTRY CONDITION: Wait for either a bearish rejection candle close below $250.50 on 15m volume >1.5x avg (PUT trigger) OR a sustained 15m candle close above $253.52 on volume >1.5x avg (CALL trigger)\nENTRY TRIGGER PRICE: $250.50 for PUTs / $253.52 for CALLs\nAVOID IF: Volume remains below 0.5x 20D average \u2014 this move has no conviction in either direction\nKEY RISK: Score is 52/100 \u2014 below the 55 minimum threshold for 0-2 DTE; entering here means paying theta for a setup that has not resolved directionally, and with ATR of $7.41, a false move in either direction is expensive\n\n---\n\n**BOTTOM LINE**: AMZN is at a genuine inflection point sitting on 20D resistance with contradictory signals. The setup isn't there yet. Set price alerts at $250.50 (bear trigger) and $253.52 (bull trigger) and re-run analysis when one fires with volume confirmation.",
-        "confluence_score": 52,
+        "timestamp": "2026-07-15T17:22:15.395848",
+        "analysis": "# AMZN 0-2 DTE OPTIONS ANALYSIS\n**Time: 01:21 PM ET | Price: $255.19**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is running hot on a multi-day momentum push (+3.1% today, +3.3% 5D) with price sitting precisely at 20D resistance ($255.19) and the upper Bollinger Band ($254.52) \u2014 a zone where parabolic moves either pause or reverse sharply. The most plausible near-term scenario (5-15 days) is a consolidation or mild pullback from this resistance cluster as overbought oscillators (Stochastic 95/89, 1H RSI 78.77) mean-revert, before any continuation higher toward analyst targets (~$314). Upside momentum from Consumer Discretionary sector strength (+1.19%) and bullish MACD on the daily provides a floor, but a breakout above $255.19 on today's low volume (0.42x avg) has low credibility.\n\n---\n\n## 2. BULL CASE\n\n**1. MACD Histogram Bullish (2.25) + Rising OBV**\nDaily momentum is genuinely positive. OBV rising confirms accumulation. Bulls remain in control on the primary timeframe.\n\n**2. 1H Timeframe Bias: 3 Bull / 1 Bear + Price Above Both VWAPs**\nPrice is 2.04% above the 1H VWAP and riding bullish EMAs intraday. Short-term institutional order flow is net buying.\n\n**3. Consumer Discretionary Outperforming (+1.19%) While Tech Sells Off (-1.7%)**\nAMZN is acting as a defensive rotation play within its sector. Capital is actively rotating INTO this name today despite broad QQQ weakness (-1.03%). This is a significant divergence and a bullish tell.\n\n**4. Analyst Consensus: Strong Buy, PT $314.26 (61 analysts)**\nFundamental tailwinds are intact. Revenue growth +16.6%, earnings growth +74.8% \u2014 these numbers drive long-term institutional accumulation and provide a bid under dips.\n\n---\n\n## 3. BEAR CASE\n\n**1. Price at Exact 20D Resistance + Upper Bollinger Band**\n$255.19 IS the 20D resistance level. Price is sitting directly on the upper Bollinger Band (1.026 position). This is a textbook \"sell the wall\" setup. Resistance here is well-defined and historically reliable for mean-reversion.\n\n**2. Stochastic 95.83/89.11 + 1H RSI 78.77 = Dual Overbought Readings**\nBoth oscillators are in extreme territory. On 0-2 DTE timeframes, mean-reversion from overbought extremes is the highest-probability short-dated outcome. These readings alone historically precede 1-3% cooling moves.\n\n**3. Volume Collapse: 0.42x 20D Average**\nToday's +3.1% move is happening on less than half the normal volume. A breakout at resistance on thin volume is a red flag \u2014 it suggests the move is not institutionally sponsored at this level. Low-volume resistance tests fail more often than they succeed.\n\n**4. QQQ -1.03% + Tech Sector -1.7% Macro Drag**\nAMZN's sector divergence is bullish until it isn't. If tech selling broadens or QQQ accelerates lower, AMZN's beta (1.46) becomes a liability. A correlated risk-off flush could override the sector rotation bid quickly.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the single biggest 0-2 DTE catalyst. Clean slate either way.\n- **QQQ Deterioration Risk**: QQQ is already below both EMA9 and EMA21, falling further. If SPY rolls over from flat (-0.11%) to negative, AMZN's 1.46 beta amplifies any broad selloff.\n- **Volume Spike Trigger**: If volume surges above 1.5x average (>90M shares) in either direction, it will define the next 2-3% move decisively. Currently at 0.42x \u2014 the first big volume candle after 1:30 PM is the tell.\n- **No News / No Catalyst**: The absence of headlines is itself a data point. The +3.1% move has no obvious news driver in this data, making it more technically-driven and therefore more susceptible to technical reversal at defined resistance.\n- **SEC filings (10 recent)**: Not an immediate catalyst but worth monitoring for material disclosures.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $255.19 | 20D resistance + current price = the wall |\n| **Upper Bollinger Band** | $254.52 | Already breached slightly \u2014 bearish if reclaimed from above |\n| **15m VWAP** | $254.85 | Nearest intraday support; loss = momentum shift |\n| **1H VWAP** | $250.07 | Deeper support; reclaim bearish for intraday |\n| **EMA21 (daily)** | $245.28 | Pullback target on any real bearish thrust |\n| **20D Support** | $227.01 | Only relevant for 5-15 day swing scenario |\n| **Thesis-changer ABOVE** | $257.50+ | Breakout above EM on strong volume = bull continuation confirmed |\n| **Thesis-changer BELOW** | $253.00 | Loss of 15m VWAP + EMA9 = bearish reversal confirmed |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score rationale:** Signals are genuinely split \u2014 daily momentum and 1H bias are bullish while RSI/Stochastic extreme overbought, resistance confluence, and volume failure create strong countervailing bearish evidence; neither directional case dominates with sufficient clarity for a high-conviction 0-2 DTE entry at this exact moment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the NO TRADE call)**\n\nThe setup is not bullish enough to chase (resistance + volume failure + overbought) and not bearish enough yet to short (daily MACD still bullish, sector divergence, no confirmed reversal candle). This is a textbook \"wait for resolution\" moment at a major level.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Score 42/100 falls below the 55-minimum threshold required\nfor a 0-2 DTE trade \u2014 do not enter until signals resolve directionally.\nENTRY TRIGGER PRICE: Watch $253.00 (PUT trigger on breakdown below 15m VWAP\nand EMA9) OR $257.50 (CALL trigger on volume-confirmed breakout above EM).\nAVOID IF: Volume remains below 0.5x average \u2014 directionless drift at\nresistance is not a tradeable setup in short-dated options.\nKEY RISK: Confluence score of 42/100 reflects genuine signal conflict;\nforced entry at current levels risks theta decay in a stock that may simply\ngrind sideways at resistance, destroying premium from both sides.\n```\n\n---\n\n**\u26a0\ufe0f TRADER'S NOTE \u2014 CONDITIONAL SETUPS IF YOU WANT TO STALK THIS:**\n\n**If bearish resolution triggers ($253.00 break on volume):**\n\u2192 1DTE PUT, $253 strike, target $251.00 (within 1DTE EM of \u00b1$2.81), premium ~$1.80-2.20, PT 60-80%\n\n**If bullish resolution triggers ($257.50+ breakout on >1.2x volume):**\n\u2192 1DTE CALL, $257 strike, target $258.50 (within 1DTE EM), premium ~$1.50-1.90, PT 60-80%\n\n*Neither trade exists yet. Price is at the decision point. Let the market show its hand first.*",
+        "confluence_score": 42,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -94,19 +94,19 @@
           "stock_target": null,
           "est_premium": null,
           "profit_target": null,
-          "stop_rule": "No trade initiated \u2014 reassess on a confirmed directional trigger",
-          "entry_condition": "Wait for either a bearish rejection candle close below $250.50 on 15m volume >1.5x avg (PUT trigger) OR a sustained 15m candle close above $253.52 on volume >1.5x avg (CALL trigger)",
-          "entry_trigger": 250.5,
-          "avoid_if": "Volume remains below 0.5x 20D average \u2014 this move has no conviction in either direction",
-          "key_risk": "Score is 52/100 \u2014 below the 55 minimum threshold for 0-2 DTE; entering here means paying theta for a setup that has not resolved directionally, and with ATR of $7.41, a false move in either direction is expensive",
+          "stop_rule": "N/A",
+          "entry_condition": "Score 42/100 falls below the 55-minimum threshold required",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.5x average \u2014 directionless drift at",
+          "key_risk": "Confluence score of 42/100 reflects genuine signal conflict;",
           "setup_quality": "NO TRADE"
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 4653
+        "tokens_used": 5392
       },
-      "was_flagged": true,
-      "cached_at": 1784131878.7929857,
-      "score": 52
+      "was_flagged": false,
+      "cached_at": 1784136135.3988519,
+      "score": 42
     },
     "AAPL": {
       "result": {
@@ -225,5 +225,5 @@
       "score": 42
     }
   },
-  "saved_at": "2026-07-15T13:11:27-04:00"
+  "saved_at": "2026-07-15T13:22:17-04:00"
 }
