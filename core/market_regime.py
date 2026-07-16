@@ -143,21 +143,41 @@ def get_market_regime(force_refresh: bool = False) -> Dict[str, Any]:
     spy_trend = spy.get("trend", "UNKNOWN")
     qqq_trend = qqq.get("trend", "UNKNOWN")
     vix = result["vix"] or 20
+    result["spy_trend"] = spy_trend
+    result["qqq_trend"] = qqq_trend
+
     if spy_trend == "ABOVE" and qqq_trend == "ABOVE" and vix < 20:
         lines.append(
-            "⚠️  REGIME SIGNAL: Broad market trending BULLISH with low fear. "
-            "Counter-trend PUT setups need significantly higher confluence. "
-            "CALL setups get a tailwind."
+            "🚨 HARD REGIME GATE — BULLISH TAPE: SPY and QQQ are both trending "
+            "ABOVE their EMA9 and EMA21 with VIX below 20. This is a confirmed "
+            "bull regime. STRICT RULES THAT OVERRIDE ALL OTHER SIGNALS:\n"
+            "  1. DO NOT generate PUT signals on SPY or QQQ themselves — fading "
+            "the index in a bull regime is never a high-probability trade.\n"
+            "  2. PUT signals on individual tickers REQUIRE score >= 75 AND a "
+            "confirmed intraday breakdown (price below BOTH 15m and 1H VWAP) "
+            "AND volume above 1.5x average. A PUT without all three is NONE.\n"
+            "  3. CALL signals only need score >= 55 — the tape is your tailwind.\n"
+            "  4. If you are tempted to output a PUT below score 75, output NONE instead."
         )
     elif spy_trend == "BELOW" and qqq_trend == "BELOW" and vix > 20:
         lines.append(
-            "⚠️  REGIME SIGNAL: Broad market trending BEARISH with elevated fear. "
-            "PUT setups get a tailwind. Counter-trend CALL setups need higher confluence."
+            "🚨 HARD REGIME GATE — BEARISH TAPE: SPY and QQQ are both trending "
+            "BELOW their EMA9 and EMA21 with elevated VIX. Confirmed bear regime.\n"
+            "  1. PUT signals only need score >= 55 — tape is your tailwind.\n"
+            "  2. CALL signals REQUIRE score >= 75 AND confirmed intraday strength "
+            "(price above BOTH 15m and 1H VWAP) AND volume above 1.5x average.\n"
+            "  3. If tempted to output a CALL below score 75, output NONE instead."
         )
     elif spy_trend == "MIXED" or qqq_trend == "MIXED":
         lines.append(
-            "ℹ️  REGIME SIGNAL: Mixed/choppy broad market — "
-            "individual ticker setups carry more weight than market direction."
+            "⚠️  REGIME: Mixed/choppy market — both directions viable but NEITHER "
+            "gets a score discount. Require score >= 65 for any directional trade. "
+            "Below 65 = NONE regardless of individual ticker signals."
+        )
+    else:
+        lines.append(
+            "ℹ️  REGIME: Trend data unclear — apply standard score thresholds. "
+            "Require confirmed VWAP + volume before any directional trade."
         )
 
     result["summary"] = "\n".join(lines)
