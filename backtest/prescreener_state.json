@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 332.2850036621094,
+      "price": 332.69000244140625,
       "volume_ratio": 0.0,
-      "ts": 1784222445.6660864,
+      "ts": 1784223056.3857708,
       "last_full_scan_ts": 1784220662.2754626
     },
     "AMZN": {
-      "price": 256.5,
+      "price": 256.489990234375,
       "volume_ratio": 0.0,
-      "ts": 1784222445.8531053,
+      "ts": 1784223056.982618,
       "last_full_scan_ts": 1784221903.106489
     },
     "META": {
-      "price": 669.7349853515625,
+      "price": 669.6500244140625,
       "volume_ratio": 0.0,
-      "ts": 1784222446.0119696,
-      "last_full_scan_ts": 1784218859.4683506
+      "ts": 1784223057.3915832,
+      "last_full_scan_ts": 1784223180.7660952
     },
     "MSFT": {
-      "price": 402.3500061035156,
+      "price": 403.8299865722656,
       "volume_ratio": 0.0,
-      "ts": 1784222446.276743,
-      "last_full_scan_ts": 1784221851.8922296
+      "ts": 1784223057.894679,
+      "last_full_scan_ts": 1784223063.7342978
     },
     "NVDA": {
-      "price": 207.00999450683594,
+      "price": 207.25999450683594,
       "volume_ratio": 0.0,
-      "ts": 1784222446.4997365,
+      "ts": 1784223058.3800778,
       "last_full_scan_ts": 1784220766.5137076
     },
     "QQQ": {
-      "price": 707.718994140625,
+      "price": 708.6799926757812,
       "volume_ratio": 0.0,
-      "ts": 1784222446.8015814,
+      "ts": 1784223058.9354873,
       "last_full_scan_ts": 1784219507.1358979
     },
     "SPY": {
-      "price": 752.25,
+      "price": 752.719970703125,
       "volume_ratio": 0.0,
-      "ts": 1784222447.357148,
+      "ts": 1784223059.4781241,
       "last_full_scan_ts": 1784221301.665388
     },
     "TSLA": {
-      "price": 387.7099914550781,
+      "price": 389.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1784222447.5608788,
-      "last_full_scan_ts": 1784222503.0912075
+      "ts": 1784223059.9833434,
+      "last_full_scan_ts": 1784223121.5298479
     }
   },
   "ai_cache": {
@@ -134,7 +134,7 @@
         "tokens_used": 5524
       },
       "was_flagged": true,
-      "cached_at": 1784221851.892233,
+      "cached_at": 1784223063.7343004,
       "score": 42
     },
     "SPY": {
@@ -165,35 +165,6 @@
       "was_flagged": false,
       "cached_at": 1784221301.6653912,
       "score": 48
-    },
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-07-16T15:21:36.185176",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:20 AM ET | Price: $676.71**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is extended after a 19% 20-day run, pressing against the $681 resistance ceiling with Bollinger Band position at 0.916 (nearly touching the upper band). The most plausible scenario over the next 5-15 days is a **mean-reversion pullback toward the $650-660 zone** before any further upside attempt, as overbought technicals (Stoch 93/92, RSI 65+) meet a Tech sector down 2.1% today and QQQ breaking below its key EMAs. Intraday, the path of least resistance is lower, with price struggling to reclaim VWAP at $677.65 on near-zero volume (0.25x average).\n\n---\n\n## 2. BULL CASE\n\n- **Strong 20-day momentum (+19.23%)** \u2014 trend is structurally intact; dip buyers have stepped in repeatedly\n- **1H timeframe is BULLISH (3B/1Br)** \u2014 hourly trend structure favors bulls and price is above 1H VWAP ($672.40)\n- **Analyst consensus STRONG BUY, $826 target** \u2014 22% upside to institutional price target creates floor demand on dips\n- **MACD histogram +11.92 (daily)** \u2014 macro momentum remains positive; any flush may be brief and bought aggressively\n\n---\n\n## 3. BEAR CASE\n\n- **Price at AT_UPPER_BAND (0.916) with immediate resistance at $681.31** \u2014 Bollinger upper band and 20D resistance converge here; this is a textbook fade level\n- **5m is BEARISH (0B/3Br) with price BELOW 5m VWAP ($677.65)** \u2014 intraday sellers in control right now; 3-candle momentum -0.425%\n- **Tech sector (XLK) -2.14% today, QQQ below EMA9 and EMA21** \u2014 sector headwind is real and dragging large-cap tech lower\n- **Volume catastrophically low (0.25x 20D avg)** \u2014 any directional move lacks conviction, but low-volume moves at resistance in a weak sector typically resolve downward\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news detected** \u2014 a surprise headline (AI regulation, ad revenue data, macro macro print) could trigger outsized move given the ATR of $25 (3.7%)\n- **Options implied move is wide** \u2014 2DTE \u00b1$22.94 means the market is pricing in meaningful uncertainty; a systematic unwind of recent momentum could accelerate quickly\n- **QQQ technical deterioration** \u2014 if QQQ continues breaking below both EMAs (-1.07% today), META could see sympathy selling that exceeds the 0DTE implied move of $11.50\n- **P/C ratio of 0.37 is heavily call-skewed** \u2014 if call holders begin hedging or rolling, delta unwind could add selling pressure rapidly\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Resistance** | $681.31 | 20D resistance + BB upper band \u2014 rejection here confirms bear thesis |\n| **VWAP (5m)** | $677.65 | Reclaim = short-term bearish momentum breaks; fail = puts stay valid |\n| **VWAP (15m)** | $675.68 | Loss of this level accelerates downside toward $670 |\n| **First Support** | $670.00 | Round number + 1H VWAP buffer zone |\n| **Key Support** | $664-$665 | EMA9 daily ($647) is too far \u2014 $665 is structural intraday pivot |\n| **Bull Thesis Invalidation** | Close above $682 | Confirmed breakout above BB/resistance \u2192 thesis flips |\n\n**Critical level:** $677.65 (5m VWAP). If META cannot reclaim this, the directional bias remains bearish intraday.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Moderate-low conviction** \u2014 bearish signals dominate the short-term (5m, 15m, sector, resistance) but the 1H bullish structure and lack of volume confirmation prevent a clean, high-conviction directional trade; the mixed timeframe alignment (5m BEARISH / 1H BULLISH) is a direct contradiction that undermines precision entry for 0-2 DTE sizing.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS (Low confidence)**\n\nIntraday bias leans bearish at resistance, but 1H bullish structure and volume drought create meaningful noise risk for short-dated options.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: No trade at this time \u2014 wait for 15m candle close below\n$675.68 VWAP with volume above 1.5x average before reassessing PUT entry.\n\nENTRY TRIGGER PRICE: $675.68\n\nAVOID IF: Volume remains at sub-0.5x average or price reclaims $677.65 on\nany 5m candle close.\n\nKEY RISK: The 1H bullish structure (3B/1Br) is a direct contradiction to the\n5m/15m bearish setup \u2014 this timeframe conflict is the primary reason for\nNONE; a low-volume squeeze above $681 could reverse puts catastrophically.\n```\n\n---\n\n**\u26a0\ufe0f BOTTOM LINE:** The setup is directionally interesting (bearish lean at resistance, weak sector, overbought technicals) but the **timeframe conflict between 5m/15m BEARISH vs. 1H BULLISH**, combined with **volume at 0.25x average**, fails the entry quality standard for 0-2 DTE capital deployment. The confluence score of 52 falls below the 55 minimum threshold. **Wait for either: (a) volume to pick up above 1.5x avg on a 15m VWAP break of $675.68, OR (b) 1H structure to confirm with a break below 1H VWAP at $672.40.** Either scenario would upgrade this to a legitimate PUT setup worth sizing into.",
-        "confluence_score": 52,
-        "suggested_bias": "BEARISH",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "No trade at this time \u2014 wait for 15m candle close below",
-          "entry_trigger": 675.68,
-          "avoid_if": "Volume remains at sub-0.5x average or price reclaims $677.65 on",
-          "key_risk": "The 1H bullish structure (3B/1Br) is a direct contradiction to the",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5407
-      },
-      "was_flagged": true,
-      "cached_at": 1784218859.4683537,
-      "score": 52
     },
     "NVDA": {
       "result": {
@@ -254,5 +225,5 @@
       "score": 72
     }
   },
-  "saved_at": "2026-07-16T13:21:45-04:00"
+  "saved_at": "2026-07-16T13:33:02-04:00"
 }
