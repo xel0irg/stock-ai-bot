@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 331.989990234375,
+      "price": 332.2850036621094,
       "volume_ratio": 0.0,
-      "ts": 1784221846.8353965,
+      "ts": 1784222445.6660864,
       "last_full_scan_ts": 1784220662.2754626
     },
     "AMZN": {
-      "price": 255.97999572753906,
+      "price": 256.5,
       "volume_ratio": 0.0,
-      "ts": 1784221847.00127,
+      "ts": 1784222445.8531053,
       "last_full_scan_ts": 1784221903.106489
     },
     "META": {
-      "price": 669.2349853515625,
+      "price": 669.7349853515625,
       "volume_ratio": 0.0,
-      "ts": 1784221847.1921587,
+      "ts": 1784222446.0119696,
       "last_full_scan_ts": 1784218859.4683506
     },
     "MSFT": {
-      "price": 401.6549987792969,
+      "price": 402.3500061035156,
       "volume_ratio": 0.0,
-      "ts": 1784221847.4375522,
+      "ts": 1784222446.276743,
       "last_full_scan_ts": 1784221851.8922296
     },
     "NVDA": {
-      "price": 207.52000427246094,
+      "price": 207.00999450683594,
       "volume_ratio": 0.0,
-      "ts": 1784221847.7604249,
+      "ts": 1784222446.4997365,
       "last_full_scan_ts": 1784220766.5137076
     },
     "QQQ": {
-      "price": 708.5401000976562,
+      "price": 707.718994140625,
       "volume_ratio": 0.0,
-      "ts": 1784221847.9844847,
+      "ts": 1784222446.8015814,
       "last_full_scan_ts": 1784219507.1358979
     },
     "SPY": {
-      "price": 752.6699829101562,
+      "price": 752.25,
       "volume_ratio": 0.0,
-      "ts": 1784221848.4568946,
+      "ts": 1784222447.357148,
       "last_full_scan_ts": 1784221301.665388
     },
     "TSLA": {
-      "price": 388.54998779296875,
+      "price": 387.7099914550781,
       "volume_ratio": 0.0,
-      "ts": 1784221848.6408293,
-      "last_full_scan_ts": 1784218257.15642
+      "ts": 1784222447.5608788,
+      "last_full_scan_ts": 1784222503.0912075
     }
   },
   "ai_cache": {
@@ -195,35 +195,6 @@
       "cached_at": 1784218859.4683537,
       "score": 52
     },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-07-16T15:32:34.217476",
-        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 11:31 AM ET | Price: $393.86**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a soft bearish drift \u2014 sitting below all key daily EMAs (9/21/50) with a negative MACD histogram and falling OBV \u2014 but the intraday picture is muddled by a short-term 5m/15m bounce that has pushed price just above VWAP. The most plausible scenario over 5-15 days is continued range compression between $375 (support) and $402-403 (EMA cluster resistance), with a modest downside bias unless price can reclaim the EMA50 at $402.56. Today's session looks like a low-conviction intraday bounce inside a broader bearish structure.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|--------|-------------|\n| 5m price above VWAP ($393.62) with bullish EMA9/21 | Short-term momentum has flipped intraday; suggests bears lack follow-through right now |\n| 15m MACD histogram positive (+0.2896) | Intraday buying pressure building on the intermediate timeframe |\n| XLY sector green +0.84% | TSLA's sector is outperforming broad market weakness \u2014 mild tailwind |\n| Analyst consensus BUY with $425.61 target | ~8% upside to target; provides a fundamental floor for dip buyers |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|--------|-------------|\n| 1H: 0 bull / 4 bear signals, below VWAP $395.49 | Dominant timeframe for 0-2 DTE is fully bearish \u2014 trend direction is down |\n| All daily EMAs stacked bearishly (EMA9 < EMA21 < EMA50, all below price but declining) | Price is decelerating into overhead resistance at the EMA cluster $398-403 |\n| Daily MACD histogram -0.5827 + OBV falling | Selling pressure on the daily frame not resolved; institutional distribution likely |\n| 5D return -3.41%, price in lower half of Bollinger Band (0.412) | Medium-term trend is bearish; no reversal confirmation yet |\n\n---\n\n## 4. WILDCARDS / CATALYSTS\n\n- **Volume collapse (0.32x 20D avg):** Today's low volume means the 5m bounce is low-conviction and can reverse violently on any news spike. A volume surge in either direction could produce a 1.5-2x expected move.\n- **Tech sector weakness (QQQ -1.01%, Tech -2.1%):** If QQQ continues lower into the afternoon, TSLA's sector support (+0.84%) could evaporate quickly, accelerating the bear case.\n- **SPY strength vs QQQ divergence:** SPY above EMAs but QQQ below \u2014 this split-regime is unstable and creates regime uncertainty that can whipsaw high-beta names like TSLA (Beta 1.802).\n- **No news / no catalyst:** Empty news environment means price is purely technically driven \u2014 EMA cluster at $398-403 becomes the key inflection. A break of that zone either way could be clean.\n- **Options activity balanced (5 unusual calls / 5 unusual puts):** Neither side is getting aggressive smart-money positioning \u2014 suggests market makers also see range-bound behavior.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| **Critical resistance** | $395.49 | 1H VWAP \u2014 must reclaim to invalidate bear thesis |\n| **EMA resistance cluster** | $398.65 \u2013 $402.56 | EMA9/21/50 daily \u2014 bull thesis only above this zone |\n| **Intraday pivot** | $393.62 | 5m VWAP \u2014 current battleground |\n| **Key support** | $387.28 | Midpoint of Bollinger Band lower half (~0DTE target zone) |\n| **20D Support** | $375.12 | Major structural support; a break here is a significant bearish signal |\n| **Thesis-changing level** | $402.56 | EMA50 reclaim = bull thesis activated; failure here = bears in control |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score rationale:** The 1H frame is clearly bearish (4/4 signals) and the daily structure is bearish, but the 5m/15m intraday bounce creates direct contradiction with the directional signal \u2014 combined with ultra-low volume (0.32x) that strips conviction from any signal, this does not meet the 55+ threshold for a tradeable setup.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**MIXED \u2192 NO TRADE (Medium confidence in staying out)**\n\nThe 1H bear structure is real, but the 5m/15m bounce creates a genuine signal conflict. More importantly, the regime is ambiguous (SPY bullish EMAs, QQQ bearish EMAs) and volume is 0.32x average \u2014 neither bulls nor bears have committed capital. A PUT setup that would otherwise score 60-65 is dragged below threshold by the volume failure and intraday counter-trend bounce.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: Do not enter \u2014 confluence score 52/100 falls below the 55 minimum\nthreshold. Wait for 1H VWAP reclaim (bull trigger: $395.49) or 5m/15m VWAP breakdown\n(bear trigger: price closes below $393.62 on 15m candle with volume > 1.5x avg) to\nresolve the intraday contradiction before committing.\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: Volume remains below 0.5x average \u2014 no directional trade is reliable\nin a volume vacuum with this level of timeframe contradiction.\n\nKEY RISK: TSLA's ATR of $17.10 (4.34%) means a single news spike or macro\nshock can instantly invalidate any short-dated position; with no news catalyst\nand beta of 1.80, whipsaw risk on QQQ moves is elevated.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** The bear structure is real and worth monitoring. If price **fails at 1H VWAP ($395.49) with a rejection candle on the 15m and volume picks up above 1.0x average**, reassess immediately \u2014 that would push the confluence score to 65-70 and a 1DTE PUT toward $387-388 becomes viable. Set an alert at $395.50 for a re-evaluation trigger. Do not chase the current 5m bounce with calls \u2014 the daily/1H structure does not support it.",
-        "confluence_score": 52,
-        "suggested_bias": "MIXED",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter \u2014 confluence score 52/100 falls below the 55 minimum",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.5x average \u2014 no directional trade is reliable",
-          "key_risk": "TSLA's ATR of $17.10 (4.34%) means a single news spike or macro",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5520
-      },
-      "was_flagged": true,
-      "cached_at": 1784218257.1564236,
-      "score": 52
-    },
     "NVDA": {
       "result": {
         "ticker": "NVDA",
@@ -283,5 +254,5 @@
       "score": 72
     }
   },
-  "saved_at": "2026-07-16T13:11:45-04:00"
+  "saved_at": "2026-07-16T13:21:45-04:00"
 }
