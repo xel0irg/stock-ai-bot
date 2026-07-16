@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 330.364990234375,
+      "price": 330.7850036621094,
       "volume_ratio": 0.0,
-      "ts": 1784212264.0160096,
+      "ts": 1784212872.2202854,
       "last_full_scan_ts": 1784211673.230208
     },
     "AMZN": {
-      "price": 255.75,
+      "price": 256.6700134277344,
       "volume_ratio": 0.0,
-      "ts": 1784212264.5779853,
-      "last_full_scan_ts": 1784211678.7805805
+      "ts": 1784212872.646958,
+      "last_full_scan_ts": 1784212878.5444376
     },
     "META": {
-      "price": 677.760009765625,
+      "price": 677.6199951171875,
       "volume_ratio": 0.0,
-      "ts": 1784212265.4018903,
+      "ts": 1784212873.045694,
       "last_full_scan_ts": 1784212330.9675913
     },
     "MSFT": {
-      "price": 396.5400085449219,
+      "price": 396.7149963378906,
       "volume_ratio": 0.0,
-      "ts": 1784212265.979498,
+      "ts": 1784212873.491501,
       "last_full_scan_ts": 1784212353.8650765
     },
     "NVDA": {
-      "price": 208.73500061035156,
+      "price": 208.02499389648438,
       "volume_ratio": 0.0,
-      "ts": 1784212266.4860728,
-      "last_full_scan_ts": 1784211164.886296
+      "ts": 1784212874.0290983,
+      "last_full_scan_ts": 1784212924.592184
     },
     "QQQ": {
-      "price": 711.989990234375,
+      "price": 711.47998046875,
       "volume_ratio": 0.0,
-      "ts": 1784212267.0859084,
+      "ts": 1784212874.556941,
       "last_full_scan_ts": 1784211210.3706279
     },
     "SPY": {
-      "price": 754.2899780273438,
+      "price": 753.97998046875,
       "volume_ratio": 0.0,
-      "ts": 1784212267.7632656,
-      "last_full_scan_ts": 1784209060.7708385
+      "ts": 1784212875.0503073,
+      "last_full_scan_ts": 1784212970.8344212
     },
     "TSLA": {
-      "price": 393.79998779296875,
+      "price": 393.0299987792969,
       "volume_ratio": 0.0,
-      "ts": 1784212268.2374735,
+      "ts": 1784212875.406339,
       "last_full_scan_ts": 1784211735.506608
     }
   },
@@ -76,7 +76,7 @@
         "tokens_used": 5392
       },
       "was_flagged": true,
-      "cached_at": 1784211678.7805831,
+      "cached_at": 1784212878.5444407,
       "score": 52
     },
     "AAPL": {
@@ -136,7 +136,36 @@
       "was_flagged": true,
       "cached_at": 1784212353.865079,
       "score": 42
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-07-16T14:42:50.831446",
+        "analysis": "# SPY OPTIONS ANALYSIS \u2014 10:42 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is trading near $754, pressing against 20D resistance at $754.95 and within striking distance of the 52W high at $760.40. The dominant scenario over the next 5-15 days is a **range-bound consolidation with modest upside bias**, capped by the upper Bollinger Band ($760.01) and the 52W high. A pullback to the $745-$748 zone is plausible before any sustained breakout, given overbought stochastics and Tech sector drag. Expect choppy, low-conviction price action until volume returns to meaningful levels.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **MACD Histogram +0.8121 (Daily)** | Bullish momentum is intact on the primary timeframe \u2014 sellers haven't committed |\n| **Price Above All Short EMAs (Intraday)** | 15m and 1H EMA9/EMA21 stacked bullishly, VWAP holding as support \u2014 structure favors longs |\n| **OBV Rising** | Accumulation is ongoing beneath the surface despite low volume \u2014 institutional buying bias |\n| **Healthcare +2.1%, Staples +1.5%** | Defensive rotation is holding SPY up \u2014 suggests institutional risk management, not panic selling |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **Stochastic K/D: 95.92/94.9 \u2014 Extreme Overbought** | Near-term mean reversion risk is high; historically this Stoch level precedes pullbacks within 1-3 sessions |\n| **QQQ -0.81%, Below EMA9 & EMA21** | Tech drag is real and accelerating \u2014 QQQ is diverging bearishly from SPY, which cannot hold indefinitely |\n| **Volume 0.17x 20D Average \u2014 Critically Low** | This rally has almost no volume behind it; breakouts on 0.17x volume have extremely low follow-through probability |\n| **Bollinger Band Position 0.80 + 52W High $760.40 Overhead** | Price is pinched between upper BB and all-time/52W high resistance \u2014 asymmetric risk to downside in this zone |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro Data Surprises**: No news flagged \u2014 but any Fed speaker, CPI revision, or economic data release could rapidly reprice the market; check economic calendar immediately.\n- **Tech Contagion**: QQQ -0.81% is a live wildcard. If large-cap Tech accelerates lower mid-session, SPY correlation forces a breakdown regardless of current intraday structure.\n- **Volume Normalization**: If volume spikes toward the 20D MA ($51.7M vs. current $8.6M), whichever direction it accompanies becomes the real move. Low volume setups can reverse violently on any institutional entry.\n- **52W High Magnet**: A clean break above $754.95 resistance on volume could trigger momentum buying toward $760.40 \u2014 the magnet effect of the 52W high is a real behavioral phenomenon.\n- **Options Expiry Dynamics**: Balanced P/C of 1.22 with equal unusual calls/puts (5 each) suggests dealer hedging is two-way \u2014 no clear gamma pin or directional squeeze visible.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|-------|------|--------------|\n| **$754.95** | Resistance | 20D resistance \u2014 must clear on volume for bullish continuation |\n| **$760.01** | Resistance | Upper Bollinger Band + 52W High zone \u2014 major ceiling |\n| **$753.50** | Pivot | 15m VWAP \u2014 loss of this flips intraday bias immediately |\n| **$753.05** | Pivot | 1H VWAP \u2014 loss of this = intraday structure broken |\n| **$750.80** | Support | Daily EMA9 \u2014 first meaningful daily support |\n| **$746.99** | Support | Daily EMA21 \u2014 loss here would signal trend deterioration |\n| **$728.99** | Support | 20D support \u2014 only relevant in a major breakdown scenario |\n\n**Thesis-changing level**: A 15m close **below $753.05** (1H VWAP) on above-average volume flips this to a short-term bearish setup. A 15m close **above $754.95** on volume >1.0x avg confirms bullish breakout.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score explanation**: Signals are meaningfully split \u2014 intraday structure is bullish but volume is critically absent (0.17x), Stochastics are at extreme overbought, QQQ is diverging bearishly, and MACD on both intraday timeframes shows `nan` (data gap), removing a key confirmation layer; directional conviction is too low for 0-2 DTE capital commitment.\n\n*The `nan` MACD on both 15m and 1H is flagged as a data quality issue \u2014 it removes a critical momentum confirmation signal and adds uncertainty.*\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the NO TRADE call)**\n\nThe setup is genuinely contradictory: bullish intraday structure against extreme overbought readings, critically low volume, Tech sector divergence, and missing MACD data on both intraday timeframes. Neither a CALL nor a PUT clears the minimum signal alignment threshold for short-dated premium at today's theta cost.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade is placed \u2014 monitor for trigger conditions before re-evaluating.\nENTRY CONDITION: Re-evaluate if SPY prints a 15m candle close below 1H VWAP $753.05 on volume above 0.8x 15m average (bearish trigger), OR a confirmed break above $754.95 on volume above 1.2x 15m average (bullish trigger) \u2014 neither condition is met at 10:42 AM.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x average \u2014 any directional move on this volume is a trap.\nKEY RISK: The primary risk of NO TRADE is missing a sudden volume-driven breakout above $754.95 or breakdown below $753.05 \u2014 set price alerts at both levels and re-run analysis if triggered.\n\n---\n\n**BOTTOM LINE**: This is a *wait-for-setup* situation, not a no-opportunity environment. The levels are clean. The trigger conditions are specific. Let price come to you with volume confirmation before paying theta.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade is placed \u2014 monitor for trigger conditions before re-evaluating.",
+          "entry_condition": "Re-evaluate if SPY prints a 15m candle close below 1H VWAP $753.05 on volume above 0.8x 15m average (bearish trigger), OR a confirmed break above $754.95 on volume above 1.2x 15m average (bullish trigger) \u2014 neither condition is met at 10:42 AM.",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.5x average \u2014 any directional move on this volume is a trap.",
+          "key_risk": "The primary risk of NO TRADE is missing a sudden volume-driven breakout above $754.95 or breakdown below $753.05 \u2014 set price alerts at both levels and re-run analysis if triggered.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 4937
+      },
+      "was_flagged": false,
+      "cached_at": 1784212970.834424,
+      "score": 42
     }
   },
-  "saved_at": "2026-07-16T10:32:35-04:00"
+  "saved_at": "2026-07-16T10:42:52-04:00"
 }
