@@ -1,0 +1,238 @@
+diff --git a/analyzers/technical.py b/analyzers/technical.py
+index 9f7f5f1..b301ec9 100644
+--- a/analyzers/technical.py
++++ b/analyzers/technical.py
+@@ -240,19 +240,20 @@ def score_technicals(ta: Dict[str, Any]) -> int:
+ 
+ def fetch_intraday(ticker: str) -> Dict[str, Any]:
+     """
+-    Fetch 15-min and 1-hour intraday data and compute key signals
++    Fetch 5-min, 15-min and 1-hour intraday data and compute key signals
+     for entry timing on 0-2 DTE options trades.
+ 
+-    Returns a dict with signals for both timeframes plus a combined
+-    intraday bias that can confirm or contradict the daily trend.
++    Three timeframes: 5m (entry precision) + 15m (setup confirmation)
++    + 1H (trend direction). All three aligned = highest conviction.
+     """
+     result = {
+-        "has_data":      False,
+-        "tf_15m":        {},
+-        "tf_1h":         {},
+-        "intraday_bias": "NEUTRAL",
++        "has_data":       False,
++        "tf_5m":          {},
++        "tf_15m":         {},
++        "tf_1h":          {},
++        "intraday_bias":  "NEUTRAL",
+         "confirms_daily": None,
+-        "summary":       "No intraday data",
++        "summary":        "No intraday data",
+     }
+ 
+     def _compute_intraday(df: pd.DataFrame, label: str) -> Dict[str, Any]:
+@@ -377,6 +378,14 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
+         return signals
+ 
+     try:
++        # 5-minute: last 1 day (entry precision)
++        df_5m = yf.download(ticker, period="1d", interval="5m",
++                            progress=False, auto_adjust=True)
++        if isinstance(df_5m.columns, pd.MultiIndex):
++            df_5m.columns = [col[0].lower() for col in df_5m.columns]
++        else:
++            df_5m.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_5m.columns]
++
+         # 15-minute: last 2 days of data
+         df_15m = yf.download(ticker, period="2d", interval="15m",
+                              progress=False, auto_adjust=True)
+@@ -393,39 +402,52 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
+         else:
+             df_1h.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_1h.columns]
+ 
++        tf_5m  = _compute_intraday(df_5m,  "5m")
+         tf_15m = _compute_intraday(df_15m, "15m")
+         tf_1h  = _compute_intraday(df_1h,  "1h")
+ 
+         if not tf_15m and not tf_1h:
+             return result
+ 
++        result["tf_5m"]    = tf_5m
+         result["tf_15m"]   = tf_15m
+         result["tf_1h"]    = tf_1h
+         result["has_data"] = True
+ 
+-        # Combined intraday bias — both timeframes must agree for HIGH conviction
++        # Three-timeframe confluence — all three aligned = highest conviction
++        bias_5m  = tf_5m.get("bias",  "MIXED") if tf_5m else "MIXED"
+         bias_15m = tf_15m.get("bias", "MIXED")
+         bias_1h  = tf_1h.get("bias",  "MIXED")
+ 
+-        if bias_15m == "BULLISH" and bias_1h == "BULLISH":
++        all_bull = all(b == "BULLISH" for b in [bias_5m, bias_15m, bias_1h])
++        all_bear = all(b == "BEARISH" for b in [bias_5m, bias_15m, bias_1h])
++        two_bull = [bias_5m, bias_15m, bias_1h].count("BULLISH") >= 2
++        two_bear = [bias_5m, bias_15m, bias_1h].count("BEARISH") >= 2
++
++        if all_bull:
+             result["intraday_bias"] = "BULLISH"
+-        elif bias_15m == "BEARISH" and bias_1h == "BEARISH":
++        elif all_bear:
+             result["intraday_bias"] = "BEARISH"
+-        elif bias_15m == "BEARISH" or bias_1h == "BEARISH":
++        elif two_bear:
+             result["intraday_bias"] = "LEANING_BEARISH"
+-        elif bias_15m == "BULLISH" or bias_1h == "BULLISH":
++        elif two_bull:
+             result["intraday_bias"] = "LEANING_BULLISH"
+         else:
+             result["intraday_bias"] = "MIXED"
+ 
+-        # VWAP summary for prompt
++        vwap_5m  = tf_5m.get("vwap_position",  "") if tf_5m else ""
+         vwap_15m = tf_15m.get("vwap_position", "")
+-        vwap_1h  = tf_1h.get("vwap_position", "")
+-        vwap_str = f"15m: {vwap_15m.replace('_', ' ').upper() if vwap_15m else 'N/A'} | 1H: {vwap_1h.replace('_', ' ').upper() if vwap_1h else 'N/A'}"
++        vwap_1h  = tf_1h.get("vwap_position",  "")
++        vwap_str = (
++            f"5m: {vwap_5m.replace('_',' ').upper() if vwap_5m else 'N/A'} | "
++            f"15m: {vwap_15m.replace('_',' ').upper() if vwap_15m else 'N/A'} | "
++            f"1H: {vwap_1h.replace('_',' ').upper() if vwap_1h else 'N/A'}"
++        )
+ 
+         result["summary"] = (
+             f"Intraday Bias: {result['intraday_bias']} | "
+             f"VWAP: {vwap_str} | "
++            f"5m: {bias_5m} ({tf_5m.get('bull_signals',0) if tf_5m else 0}B/{tf_5m.get('bear_signals',0) if tf_5m else 0}Br) | "
+             f"15m: {bias_15m} ({tf_15m.get('bull_signals',0)}B/{tf_15m.get('bear_signals',0)}Br) | "
+             f"1H: {bias_1h} ({tf_1h.get('bull_signals',0)}B/{tf_1h.get('bear_signals',0)}Br)"
+         )
+diff --git a/core/market_hours.py b/core/market_hours.py
+index 243dd82..6635154 100644
+--- a/core/market_hours.py
++++ b/core/market_hours.py
+@@ -49,6 +49,16 @@ MARKET_OPEN        = time(9, 30)
+ MARKET_CLOSE       = time(16, 0)
+ EARLY_MARKET_CLOSE = time(13, 0)
+ 
++# Scans are blocked until this time ET — volume normalizes around 10:30 AM.
++# The first hour is high-noise/low-volume; setups generated before 10:30
++# consistently score 8-12 points lower due to volume penalty and produce
++# false signals that reverse once real participation arrives.
++SCAN_START_TIME    = time(10, 30)
++
++# Scans stop at this time ET — 0DTE theta too destructive after 2 PM,
++# and 1DTE signals this late in session have no time to set up properly.
++SCAN_END_TIME      = time(14, 0)
++
+ 
+ # ── Date helpers ──────────────────────────────────────────────────────
+ 
+@@ -180,22 +190,27 @@ def market_status(now: datetime | None = None) -> dict:
+ 
+     if today.weekday() >= 5:
+         return {
+-            "is_open": False,
++            "is_open": False, "scan_open": False,
+             "reason": f"Weekend ({today.strftime('%A')})",
++            "scan_reason": f"Weekend ({today.strftime('%A')})",
+             "session_open": None, "session_close": None,
++            "scan_start": None, "scan_end": None,
+             "is_early_close": False,
+         }
+ 
+     if today in nyse_holidays(today.year):
+         return {
+-            "is_open": False,
++            "is_open": False, "scan_open": False,
+             "reason": f"NYSE holiday ({today.isoformat()})",
++            "scan_reason": f"NYSE holiday ({today.isoformat()})",
+             "session_open": None, "session_close": None,
++            "scan_start": None, "scan_end": None,
+             "is_early_close": False,
+         }
+ 
+     early = today in early_close_days(today.year)
+     close = EARLY_MARKET_CLOSE if early else MARKET_CLOSE
++    scan_close = min(SCAN_END_TIME, close)
+     t = now.time()
+ 
+     if t < MARKET_OPEN:
+@@ -209,11 +224,31 @@ def market_status(now: datetime | None = None) -> dict:
+         reason = "Market open" + (" (early close today at 1:00 PM ET)" if early else "")
+         open_now = True
+ 
++    # Scan window: 10:30 AM – 2:00 PM ET
++    if open_now and t < SCAN_START_TIME:
++        scan_open = False
++        scan_reason = (f"⏳ Opening hour — scan window opens at "
++                       f"{SCAN_START_TIME.strftime('%I:%M %p')} ET "
++                       f"(now {now.strftime('%I:%M %p')} ET). "
++                       f"Volume too low before 10:30 for reliable signals.")
++    elif open_now and t >= scan_close:
++        scan_open = False
++        scan_reason = (f"⏸ Scan window closed at "
++                       f"{scan_close.strftime('%I:%M %p')} ET — "
++                       f"theta too destructive for new 0-2 DTE entries.")
++    else:
++        scan_open = open_now
++        scan_reason = reason
++
+     return {
+-        "is_open": open_now,
+-        "reason": reason,
++        "is_open":      open_now,
++        "scan_open":    scan_open,
++        "reason":       reason,
++        "scan_reason":  scan_reason,
+         "session_open": "09:30",
+         "session_close": close.strftime("%H:%M"),
++        "scan_start":   SCAN_START_TIME.strftime("%H:%M"),
++        "scan_end":     scan_close.strftime("%H:%M"),
+         "is_early_close": early,
+     }
+ 
+@@ -223,6 +258,11 @@ def is_market_open(now: datetime | None = None) -> bool:
+     return market_status(now)["is_open"]
+ 
+ 
++def scan_window_open(now: datetime | None = None) -> bool:
++    """True if within the high-quality scan window (10:30 AM – 2:00 PM ET)."""
++    return market_status(now)["scan_open"]
++
++
+ if __name__ == "__main__":
+     # Quick self-check
+     s = market_status()
+diff --git a/main.py b/main.py
+index 237101d..6ab0ee5 100644
+--- a/main.py
++++ b/main.py
+@@ -391,23 +391,22 @@ def main():
+         try:
+             while True:
+                 status = market_status()
+-                if args.force or status["is_open"]:
++                if args.force or status["scan_open"]:
+                     results = run_scan(tickers, tech_cache)
+-                    # Update tech cache with fresh results for next pre-screen
+                     for r in results:
+                         t = r.get("ticker")
+                         if t and r.get("tech"):
+                             tech_cache[t] = r["tech"]
+                 else:
+-                    log.info(f"⏸  Skipping scan — {status['reason']}")
++                    log.info(f"⏸  Skipping scan — {status['scan_reason']}")
+                 log.info(f"Next check in {SCAN_INTERVAL_MINUTES} minutes...")
+                 time.sleep(SCAN_INTERVAL_MINUTES * 60)
+         except KeyboardInterrupt:
+             log.info("Bot stopped by user.")
+     else:
+         status = market_status()
+-        if not args.force and not status["is_open"]:
+-            log.info(f"⏸  Market closed — {status['reason']}. Skipping scan. (Use --force to override.)")
++        if not args.force and not status["scan_open"]:
++            log.info(f"⏸  {status['scan_reason']} (Use --force to override.)")
+             return
+         if status.get("is_early_close"):
+             log.info("🕐 Early-close day — market closes at 1:00 PM ET today")

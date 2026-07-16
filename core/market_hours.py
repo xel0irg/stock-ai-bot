@@ -49,6 +49,16 @@ MARKET_OPEN        = time(9, 30)
 MARKET_CLOSE       = time(16, 0)
 EARLY_MARKET_CLOSE = time(13, 0)
 
+# Scans are blocked until this time ET — volume normalizes around 10:30 AM.
+# The first hour is high-noise/low-volume; setups generated before 10:30
+# consistently score 8-12 points lower due to volume penalty and produce
+# false signals that reverse once real participation arrives.
+SCAN_START_TIME    = time(10, 30)
+
+# Scans stop at this time ET — 0DTE theta too destructive after 2 PM,
+# and 1DTE signals this late in session have no time to set up properly.
+SCAN_END_TIME      = time(14, 0)
+
 
 # ── Date helpers ──────────────────────────────────────────────────────
 
@@ -180,22 +190,27 @@ def market_status(now: datetime | None = None) -> dict:
 
     if today.weekday() >= 5:
         return {
-            "is_open": False,
+            "is_open": False, "scan_open": False,
             "reason": f"Weekend ({today.strftime('%A')})",
+            "scan_reason": f"Weekend ({today.strftime('%A')})",
             "session_open": None, "session_close": None,
+            "scan_start": None, "scan_end": None,
             "is_early_close": False,
         }
 
     if today in nyse_holidays(today.year):
         return {
-            "is_open": False,
+            "is_open": False, "scan_open": False,
             "reason": f"NYSE holiday ({today.isoformat()})",
+            "scan_reason": f"NYSE holiday ({today.isoformat()})",
             "session_open": None, "session_close": None,
+            "scan_start": None, "scan_end": None,
             "is_early_close": False,
         }
 
     early = today in early_close_days(today.year)
     close = EARLY_MARKET_CLOSE if early else MARKET_CLOSE
+    scan_close = min(SCAN_END_TIME, close)
     t = now.time()
 
     if t < MARKET_OPEN:
@@ -209,11 +224,31 @@ def market_status(now: datetime | None = None) -> dict:
         reason = "Market open" + (" (early close today at 1:00 PM ET)" if early else "")
         open_now = True
 
+    # Scan window: 10:30 AM – 2:00 PM ET
+    if open_now and t < SCAN_START_TIME:
+        scan_open = False
+        scan_reason = (f"⏳ Opening hour — scan window opens at "
+                       f"{SCAN_START_TIME.strftime('%I:%M %p')} ET "
+                       f"(now {now.strftime('%I:%M %p')} ET). "
+                       f"Volume too low before 10:30 for reliable signals.")
+    elif open_now and t >= scan_close:
+        scan_open = False
+        scan_reason = (f"⏸ Scan window closed at "
+                       f"{scan_close.strftime('%I:%M %p')} ET — "
+                       f"theta too destructive for new 0-2 DTE entries.")
+    else:
+        scan_open = open_now
+        scan_reason = reason
+
     return {
-        "is_open": open_now,
-        "reason": reason,
+        "is_open":      open_now,
+        "scan_open":    scan_open,
+        "reason":       reason,
+        "scan_reason":  scan_reason,
         "session_open": "09:30",
         "session_close": close.strftime("%H:%M"),
+        "scan_start":   SCAN_START_TIME.strftime("%H:%M"),
+        "scan_end":     scan_close.strftime("%H:%M"),
         "is_early_close": early,
     }
 
@@ -221,6 +256,11 @@ def market_status(now: datetime | None = None) -> dict:
 def is_market_open(now: datetime | None = None) -> bool:
     """Convenience wrapper — True if the NYSE session is live right now."""
     return market_status(now)["is_open"]
+
+
+def scan_window_open(now: datetime | None = None) -> bool:
+    """True if within the high-quality scan window (10:30 AM – 2:00 PM ET)."""
+    return market_status(now)["scan_open"]
 
 
 if __name__ == "__main__":

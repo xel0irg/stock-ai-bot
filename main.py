@@ -391,23 +391,22 @@ def main():
         try:
             while True:
                 status = market_status()
-                if args.force or status["is_open"]:
+                if args.force or status["scan_open"]:
                     results = run_scan(tickers, tech_cache)
-                    # Update tech cache with fresh results for next pre-screen
                     for r in results:
                         t = r.get("ticker")
                         if t and r.get("tech"):
                             tech_cache[t] = r["tech"]
                 else:
-                    log.info(f"⏸  Skipping scan — {status['reason']}")
+                    log.info(f"⏸  Skipping scan — {status['scan_reason']}")
                 log.info(f"Next check in {SCAN_INTERVAL_MINUTES} minutes...")
                 time.sleep(SCAN_INTERVAL_MINUTES * 60)
         except KeyboardInterrupt:
             log.info("Bot stopped by user.")
     else:
         status = market_status()
-        if not args.force and not status["is_open"]:
-            log.info(f"⏸  Market closed — {status['reason']}. Skipping scan. (Use --force to override.)")
+        if not args.force and not status["scan_open"]:
+            log.info(f"⏸  {status['scan_reason']} (Use --force to override.)")
             return
         if status.get("is_early_close"):
             log.info("🕐 Early-close day — market closes at 1:00 PM ET today")

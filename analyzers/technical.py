@@ -240,19 +240,20 @@ def score_technicals(ta: Dict[str, Any]) -> int:
 
 def fetch_intraday(ticker: str) -> Dict[str, Any]:
     """
-    Fetch 15-min and 1-hour intraday data and compute key signals
+    Fetch 5-min, 15-min and 1-hour intraday data and compute key signals
     for entry timing on 0-2 DTE options trades.
 
-    Returns a dict with signals for both timeframes plus a combined
-    intraday bias that can confirm or contradict the daily trend.
+    Three timeframes: 5m (entry precision) + 15m (setup confirmation)
+    + 1H (trend direction). All three aligned = highest conviction.
     """
     result = {
-        "has_data":      False,
-        "tf_15m":        {},
-        "tf_1h":         {},
-        "intraday_bias": "NEUTRAL",
+        "has_data":       False,
+        "tf_5m":          {},
+        "tf_15m":         {},
+        "tf_1h":          {},
+        "intraday_bias":  "NEUTRAL",
         "confirms_daily": None,
-        "summary":       "No intraday data",
+        "summary":        "No intraday data",
     }
 
     def _compute_intraday(df: pd.DataFrame, label: str) -> Dict[str, Any]:
@@ -377,6 +378,14 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
         return signals
 
     try:
+        # 5-minute: last 1 day (entry precision)
+        df_5m = yf.download(ticker, period="1d", interval="5m",
+                            progress=False, auto_adjust=True)
+        if isinstance(df_5m.columns, pd.MultiIndex):
+            df_5m.columns = [col[0].lower() for col in df_5m.columns]
+        else:
+            df_5m.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_5m.columns]
+
         # 15-minute: last 2 days of data
         df_15m = yf.download(ticker, period="2d", interval="15m",
                              progress=False, auto_adjust=True)
@@ -393,39 +402,52 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
         else:
             df_1h.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_1h.columns]
 
+        tf_5m  = _compute_intraday(df_5m,  "5m")
         tf_15m = _compute_intraday(df_15m, "15m")
         tf_1h  = _compute_intraday(df_1h,  "1h")
 
         if not tf_15m and not tf_1h:
             return result
 
+        result["tf_5m"]    = tf_5m
         result["tf_15m"]   = tf_15m
         result["tf_1h"]    = tf_1h
         result["has_data"] = True
 
-        # Combined intraday bias — both timeframes must agree for HIGH conviction
+        # Three-timeframe confluence — all three aligned = highest conviction
+        bias_5m  = tf_5m.get("bias",  "MIXED") if tf_5m else "MIXED"
         bias_15m = tf_15m.get("bias", "MIXED")
         bias_1h  = tf_1h.get("bias",  "MIXED")
 
-        if bias_15m == "BULLISH" and bias_1h == "BULLISH":
+        all_bull = all(b == "BULLISH" for b in [bias_5m, bias_15m, bias_1h])
+        all_bear = all(b == "BEARISH" for b in [bias_5m, bias_15m, bias_1h])
+        two_bull = [bias_5m, bias_15m, bias_1h].count("BULLISH") >= 2
+        two_bear = [bias_5m, bias_15m, bias_1h].count("BEARISH") >= 2
+
+        if all_bull:
             result["intraday_bias"] = "BULLISH"
-        elif bias_15m == "BEARISH" and bias_1h == "BEARISH":
+        elif all_bear:
             result["intraday_bias"] = "BEARISH"
-        elif bias_15m == "BEARISH" or bias_1h == "BEARISH":
+        elif two_bear:
             result["intraday_bias"] = "LEANING_BEARISH"
-        elif bias_15m == "BULLISH" or bias_1h == "BULLISH":
+        elif two_bull:
             result["intraday_bias"] = "LEANING_BULLISH"
         else:
             result["intraday_bias"] = "MIXED"
 
-        # VWAP summary for prompt
+        vwap_5m  = tf_5m.get("vwap_position",  "") if tf_5m else ""
         vwap_15m = tf_15m.get("vwap_position", "")
-        vwap_1h  = tf_1h.get("vwap_position", "")
-        vwap_str = f"15m: {vwap_15m.replace('_', ' ').upper() if vwap_15m else 'N/A'} | 1H: {vwap_1h.replace('_', ' ').upper() if vwap_1h else 'N/A'}"
+        vwap_1h  = tf_1h.get("vwap_position",  "")
+        vwap_str = (
+            f"5m: {vwap_5m.replace('_',' ').upper() if vwap_5m else 'N/A'} | "
+            f"15m: {vwap_15m.replace('_',' ').upper() if vwap_15m else 'N/A'} | "
+            f"1H: {vwap_1h.replace('_',' ').upper() if vwap_1h else 'N/A'}"
+        )
 
         result["summary"] = (
             f"Intraday Bias: {result['intraday_bias']} | "
             f"VWAP: {vwap_str} | "
+            f"5m: {bias_5m} ({tf_5m.get('bull_signals',0) if tf_5m else 0}B/{tf_5m.get('bear_signals',0) if tf_5m else 0}Br) | "
             f"15m: {bias_15m} ({tf_15m.get('bull_signals',0)}B/{tf_15m.get('bear_signals',0)}Br) | "
             f"1H: {bias_1h} ({tf_1h.get('bull_signals',0)}B/{tf_1h.get('bear_signals',0)}Br)"
         )
