@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 331.0640869140625,
+      "price": 331.2149963378906,
       "volume_ratio": 0.0,
-      "ts": 1784218852.699893,
+      "ts": 1784219450.7637637,
       "last_full_scan_ts": 1784215905.3353846
     },
     "AMZN": {
-      "price": 255.71499633789062,
+      "price": 255.6999969482422,
       "volume_ratio": 0.0,
-      "ts": 1784218853.1905239,
+      "ts": 1784219451.0649407,
       "last_full_scan_ts": 1784217711.1565504
     },
     "META": {
-      "price": 668.6799926757812,
+      "price": 670.0465698242188,
       "volume_ratio": 0.0,
-      "ts": 1784218853.7199764,
+      "ts": 1784219451.3908005,
       "last_full_scan_ts": 1784218859.4683506
     },
     "MSFT": {
-      "price": 400.1000061035156,
+      "price": 400.9880065917969,
       "volume_ratio": 0.0,
-      "ts": 1784218854.2755911,
+      "ts": 1784219452.1415317,
       "last_full_scan_ts": 1784216553.4794765
     },
     "NVDA": {
-      "price": 206.78500366210938,
+      "price": 207.38999938964844,
       "volume_ratio": 0.0,
-      "ts": 1784218854.7897232,
+      "ts": 1784219452.785179,
       "last_full_scan_ts": 1784216497.1771662
     },
     "QQQ": {
-      "price": 707.4199829101562,
+      "price": 708.114990234375,
       "volume_ratio": 0.0,
-      "ts": 1784218855.3053224,
-      "last_full_scan_ts": 1784215346.452972
+      "ts": 1784219453.0675642,
+      "last_full_scan_ts": 1784219507.1358979
     },
     "SPY": {
-      "price": 751.7899780273438,
+      "price": 752.0499877929688,
       "volume_ratio": 0.0,
-      "ts": 1784218855.9072928,
+      "ts": 1784219453.375526,
       "last_full_scan_ts": 1784217113.4881074
     },
     "TSLA": {
-      "price": 388.5799865722656,
+      "price": 388.8550109863281,
       "volume_ratio": 0.0,
-      "ts": 1784218856.328656,
+      "ts": 1784219453.5535502,
       "last_full_scan_ts": 1784218257.15642
     }
   },
@@ -252,7 +252,36 @@
       "was_flagged": true,
       "cached_at": 1784216497.17717,
       "score": 62
+    },
+    "QQQ": {
+      "result": {
+        "ticker": "QQQ",
+        "timestamp": "2026-07-16T16:31:46.881877",
+        "analysis": "# QQQ OPTIONS ANALYSIS \u2014 12:31 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is in a confirmed multi-timeframe bearish trend, trading below all intraday VWAPs and below EMA9/EMA21 on every timeframe. The most plausible scenario over the next 5\u201315 trading days is continued pressure toward the 20D support at $706.52 and potentially the lower Bollinger Band at $700.47, as Tech underperforms the broader market by a significant margin (-2.3% vs SPY +0.0%). The key complication: SPY is above its EMAs in a relative bull posture, creating a sector rotation environment rather than a broad market breakdown \u2014 this limits PUT conviction on QQQ specifically.\n\n---\n\n## 2. BULL CASE\n\n1. **Stochastic Oversold (K=19.63/D=38.88):** Deeply oversold on the daily timeframe \u2014 historically a mean-reversion trigger, particularly when RSI is not yet extreme (46 daily RSI leaves room for bounce reads).\n2. **20D Support at $706.52:** Price is only $1.59 above tested support \u2014 puts are already partially \"in\" on the move; risk/reward for new puts diminishes near support.\n3. **SPY Relative Strength:** SPY is above its EMA9/EMA21 and down only -0.34% vs QQQ -1.34% \u2014 broad market is not confirming a systemic selloff, suggesting QQQ weakness is rotation-driven and potentially temporary.\n4. **Low Volume (0.41x avg):** Selling is not conviction-driven today. Below-average volume on a down move is a weak bear signal \u2014 absence of strong supply does not confirm continuation.\n\n---\n\n## 3. BEAR CASE\n\n1. **Full Timeframe Bear Cascade:** Daily + 1H + 15m + 5m ALL bearish (12/12 timeframe signals bear-aligned). This is the \"EXCEPTIONAL PUT entry\" confluence condition explicitly flagged in the data. Price is below VWAP on every measured horizon.\n2. **MACD Histogram Bearish Across Timeframes:** Daily MACD hist at -1.5337, 15m at -0.3449, 5m at -0.2661 \u2014 momentum is negative and accelerating on the 15m (3-candle momentum -0.297%).\n3. **Tech Sector Underperformance (-2.3%):** Defensive sectors leading (Staples +2.1%, Healthcare +2.0%) while Tech is the worst performer by a wide margin \u2014 this is classic risk-off rotation into QQQ's largest sector weighting.\n4. **OBV Falling + Price Below BB Midpoint (0.198):** Distribution is ongoing. Price sitting in the lower 20% of the Bollinger Band range with falling OBV confirms sellers are in control structurally.\n\n---\n\n## 4. WILDCARDS / CATALYSTS\n\n- **No news found:** Zero headline catalyst. This is a low-information environment \u2014 a single macro headline (Fed speaker, geopolitical event, large-cap tech announcement) could spike volatility in either direction instantly.\n- **VIX at 16.4 (low):** Market is not pricing in fear. A VIX spike toward 20+ would disproportionately crush short-dated option buyers on the wrong side. Conversely, current low IV makes options premiums relatively cheap.\n- **SPY/QQQ Divergence Risk:** If SPY rolls over to join QQQ's weakness, the PUT case dramatically strengthens. If SPY accelerates upward and drags tech, QQQ PUTs get whipsawed.\n- **P/C Ratio 1.36 (elevated but neutral-flagged):** Suggests hedging activity is elevated but not extreme. An unwind of put hedges into close could trigger a short-covering squeeze.\n- **Options Expiry Flow:** Balanced unusual activity (5 calls / 5 puts flagged) \u2014 no directional edge from options flow. Gamma effects near $705\u2013$710 strikes could pin or accelerate price at close.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Support** | $706.52 | 20D support \u2014 a close below flips medium-term structure bearish |\n| **Lower BB** | $700.47 | Maximum downside target within 1-2 sessions at current ATR |\n| **Current VWAP (5m)** | $709.34 | Immediate resistance \u2014 reclaim invalidates intraday bear case |\n| **15m VWAP** | $710.88 | Confirmation level \u2014 failure to reclaim keeps bear momentum intact |\n| **1H VWAP** | $715.25 | Bull recovery level \u2014 a push here requires significant reversal catalyst |\n| **EMA50 (daily)** | $709.56 | Near-term magnet \u2014 price is flirting with this level; break below confirms next leg |\n| **Thesis-Change Level** | $712.00 | Sustained trade above this (VWAP reclaim + EMA9 reclaim) invalidates bear setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 72/100\n\n**Score rationale:** All four timeframes are bearish-aligned (maximum directional confluence), sector rotation confirms the macro pressure on QQQ, and MACD momentum is negative across the board \u2014 however, SPY's relative bull posture, low volume on the selloff, stochastic oversold, and proximity to $706.52 support introduce enough counter-pressure to prevent an \"exceptional\" score. The regime gate (SPY above EMAs) also constrains conviction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS (Medium confidence)**\n\n*Confidence is Medium, not High, due to the SPY bull regime creating a regime gate constraint \u2014 this limits the score threshold required for PUT execution. The bear signals are technically clean; the regime context introduces asymmetric risk.*\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n**\u26a0\ufe0f REGIME GATE EVALUATION:**\nSPY is ABOVE its EMA9/EMA21 (bull regime). The hard regime gate requires: score \u2265 75 + price below BOTH VWAPs + volume > 1.5x for a PUT on QQQ.\n- Score: 72/100 \u2014 **FAILS the \u226575 threshold**\n- Price below both VWAPs: \u2705 YES\n- Volume > 1.5x avg: \u274c NO (volume is 0.41x avg \u2014 severely below threshold)\n\n**The regime gate is not satisfied. Two of three conditions fail.**\n\n---\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 regime gate not satisfied; do not override.\nENTRY CONDITION: Re-evaluate if volume surges above 1.5x average AND score re-rates above 75 on a momentum acceleration below $706.52 support.\nENTRY TRIGGER PRICE: $706.52 (support break with volume confirmation required)\nAVOID IF: Volume remains below 1.0x average or SPY accelerates above $754 \u2014 both increase whipsaw risk significantly.\nKEY RISK: In a SPY bull regime, QQQ PUT signals on low volume have a historically near-zero win rate; the regime gate exists precisely to block this setup despite strong directional alignment on technicals.\n\n---\n\n**\u26a1 WATCH LIST \u2014 NOT YET A TRADE:**\nIf volume picks up materially (>30M shares by 1:30 PM) AND price breaks and closes a 15-minute candle below $706.52 with MACD histogram widening negative, re-run the confluence score \u2014 that scenario likely pushes to 78-82 and satisfies the regime gate for a 1DTE PUT targeting $703\u2013$704 (within the \u00b1$4.82 1DTE expected move). **Until then: hands off.**",
+        "confluence_score": 72,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade \u2014 regime gate not satisfied; do not override.",
+          "entry_condition": "Re-evaluate if volume surges above 1.5x average AND score re-rates above 75 on a momentum acceleration below $706.52 support.",
+          "entry_trigger": 706.52,
+          "avoid_if": "Volume remains below 1.0x average or SPY accelerates above $754 \u2014 both increase whipsaw risk significantly.",
+          "key_risk": "In a SPY bull regime, QQQ PUT signals on low volume have a historically near-zero win rate; the regime gate exists precisely to block this setup despite strong directional alignment on technicals.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5670
+      },
+      "was_flagged": false,
+      "cached_at": 1784219507.1359022,
+      "score": 72
     }
   },
-  "saved_at": "2026-07-16T12:21:01-04:00"
+  "saved_at": "2026-07-16T12:31:49-04:00"
 }
