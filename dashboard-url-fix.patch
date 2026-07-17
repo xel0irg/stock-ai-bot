@@ -1,0 +1,45 @@
+diff --git a/dashboard.html b/dashboard.html
+index cb834b4..3d62203 100644
+--- a/dashboard.html
++++ b/dashboard.html
+@@ -3,7 +3,7 @@
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-<title>Stock AI Bot</title>
++<title>Degënic$</title>
+ 
+ 
+ <style>
+@@ -175,7 +175,7 @@ html, body { background: var(--bg); color: var(--text); font-family: var(--sans)
+ <div class="topbar">
+   <div class="tb-left">
+     <div class="live-badge"><div class="live-dot"></div>LIVE</div>
+-    <span class="tb-title">Stock AI Bot</span>
++    <span class="tb-title">Degënic$</span>
+   </div>
+   <div class="tb-right">
+     <span class="tb-countdown" id="countdown">Refreshing in 5:00</span>
+@@ -221,7 +221,12 @@ html, body { background: var(--bg); color: var(--text); font-family: var(--sans)
+ </div>
+ 
+ <script>
+-const API = 'http://localhost:7842';
++// Auto-detect environment:
++// - On Render (or any non-localhost domain) → use same origin (the dashboard server IS the host)
++// - Locally → fall back to localhost:7842
++const API = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
++  ? 'http://localhost:7842'
++  : window.location.origin;
+ let countdown = 300, timer;
+ 
+ const barColor = s => s >= 70 ? '#22c55e' : s >= 55 ? '#f59e0b' : '#333';
+@@ -246,7 +251,7 @@ async function loadData() {
+   } catch(e) {
+     const el = document.getElementById('err');
+     el.style.display = 'block';
+-    el.textContent = `⚠  Cannot reach dashboard server — run: python dashboard_server.py   (${e.message})`;
++    el.textContent = `⚠  Cannot reach dashboard server — ${e.message}`;
+   }
+   resetTimer();
+ }
