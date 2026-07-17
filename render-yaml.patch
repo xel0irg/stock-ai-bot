@@ -1,0 +1,23 @@
+diff --git a/render.yaml b/render.yaml
+index 01f6c0b..4c72567 100644
+--- a/render.yaml
++++ b/render.yaml
+@@ -25,3 +25,18 @@ services:
+     envVars:
+       - key: PYTHON_VERSION
+         value: "3.11"
++
++  - type: web
++    name: degenic-dashboard
++    runtime: python
++    plan: free
++    buildCommand: "pip install -r requirements.txt"
++    startCommand: "uvicorn dashboard_server:app --host 0.0.0.0 --port $PORT"
++    envVars:
++      - key: PYTHON_VERSION
++        value: "3.11"
++      - key: GITHUB_REPO
++        value: "xel0irg/stock-ai-bot"
++      # Set GITHUB_TOKEN in Render dashboard → Environment (keep it secret)
++      # Settings > Environment > Add Environment Variable
++      # Key: GITHUB_TOKEN  Value: your GitHub PAT with repo scope

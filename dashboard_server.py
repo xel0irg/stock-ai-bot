@@ -1,37 +1,41 @@
 """
-dashboard_server.py — Local server for Degënic$ dashboard
+dashboard_server.py — Degënic$ dashboard server
 
 Serves the latest scan results as JSON so dashboard.html can display them.
+Runs locally AND on Render.com (FastAPI/uvicorn, port from $PORT env var).
 
 Data sources (in priority order):
 1. GitHub Actions artifacts — fetches latest run's JSON reports from GitHub API
-   (works for public repos with no token; private repos need GITHUB_TOKEN in .env)
-2. Local logs/ folder — fallback if GitHub fetch fails or repo is unavailable
+2. Local logs/ folder — fallback if GitHub fetch fails
 
-Usage:
+Local usage:
     python dashboard_server.py
+    Then open http://localhost:7842 in your browser.
 
-Then open dashboard.html in your browser.
-Default port: 7842
+Render.com:
+    Deployed automatically via render.yaml as a web service.
+    Set GITHUB_TOKEN in Render environment variables.
 """
 from __future__ import annotations
+
+import io
 import json
 import math
-import io
 import os
+import urllib.request
 import zipfile
-from pathlib import Path
-from http.server import HTTPServer, BaseHTTPRequestHandler
 from datetime import datetime
-from urllib.request import urlopen, Request
-from urllib.error import URLError
+from pathlib import Path
+
+from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse
 
 # ── Config ────────────────────────────────────────────────────────────────────
-LOG_DIR    = Path(__file__).resolve().parent / "logs"
-PORT       = 7842
-GITHUB_REPO = "xel0irg/stock-ai-bot"
+LOG_DIR     = Path(__file__).resolve().parent / "logs"
+PORT        = int(os.environ.get("PORT", 7842))
+GITHUB_REPO = os.environ.get("GITHUB_REPO", "xel0irg/stock-ai-bot")
 
-# Optional: set GITHUB_TOKEN in .env for private repo access
 def _load_env():
     env_path = Path(__file__).resolve().parent / ".env"
     if env_path.exists():
@@ -43,14 +47,21 @@ def _load_env():
 _load_env()
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
+# ── FastAPI app ───────────────────────────────────────────────────────────────
+app = FastAPI(title="Degënic$ Dashboard")
 
-# ── Sanitize ──────────────────────────────────────────────────────────────────
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["GET", "OPTIONS"],
+    allow_headers=["*"],
+)
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
 def sanitize(obj):
-    """Recursively replace NaN/Inf floats with None so JSON is browser-safe."""
+    """Recursively replace NaN/Inf floats with None for browser-safe JSON."""
     if isinstance(obj, float):
-        if math.isnan(obj) or math.isinf(obj):
-            return None
-        return obj
+        return None if (math.isnan(obj) or math.isinf(obj)) else obj
     if isinstance(obj, dict):
         return {k: sanitize(v) for k, v in obj.items()}
     if isinstance(obj, list):
@@ -59,48 +70,42 @@ def sanitize(obj):
 
 
 def _gh_request(url: str) -> bytes | None:
-    """Make a GitHub API request, returns raw bytes or None on failure."""
     headers = {
-        "Accept": "application/vnd.github+json",
+        "Accept":     "application/vnd.github+json",
         "User-Agent": "degenic-dashboard/1.0",
     }
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     try:
-        req = Request(url, headers=headers)
-        with urlopen(req, timeout=10) as resp:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.read()
-    except (URLError, Exception) as e:
+    except Exception as e:
         print(f"[GitHub API] Request failed: {e}")
         return None
 
 
 def _download_artifact_zip(artifact_id) -> bytes | None:
     """
-    Download an artifact's zip archive. The GitHub API's /zip endpoint
-    returns a 302 redirect to an Azure Blob Storage URL — that redirected
-    request must NOT carry the GitHub Authorization header, or Azure
-    rejects it with 401 AuthenticationFailed. urlopen() follows redirects
-    automatically while keeping the original headers, which triggers
-    exactly that failure, so this is handled manually instead.
+    Download artifact zip. GitHub redirects to Azure Blob — the redirect
+    must NOT carry the Authorization header or Azure rejects it.
     """
-    import urllib.request
     from urllib.error import HTTPError
 
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{artifact_id}/zip"
+    url = (f"https://api.github.com/repos/{GITHUB_REPO}"
+           f"/actions/artifacts/{artifact_id}/zip")
     headers = {
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "degenic-dashboard/1.0",
+        "Accept":        "application/vnd.github+json",
+        "User-Agent":    "degenic-dashboard/1.0",
         "Authorization": f"Bearer {GITHUB_TOKEN}",
     }
 
     class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
         def redirect_request(self, req, fp, code, msg, hdrs, newurl):
-            return None  # Don't auto-follow — fetch newurl ourselves, auth-free
+            return None
 
     opener = urllib.request.build_opener(NoRedirectHandler)
-    req = Request(url, headers=headers, method="GET")
-
+    req = urllib.request.Request(url, headers=headers, method="GET")
     try:
         try:
             resp = opener.open(req, timeout=15)
@@ -109,111 +114,78 @@ def _download_artifact_zip(artifact_id) -> bytes | None:
             if e.code in (301, 302, 303, 307, 308):
                 redirect_url = e.headers.get("Location")
                 if not redirect_url:
-                    print("[GitHub API] Artifact redirect had no Location header")
                     return None
-                plain_req = Request(redirect_url, method="GET")
-                with urlopen(plain_req, timeout=20) as resp2:
+                plain_req = urllib.request.Request(redirect_url, method="GET")
+                with urllib.request.urlopen(plain_req, timeout=20) as resp2:
                     return resp2.read()
             print(f"[GitHub API] Artifact download failed: {e.code}")
             return None
-    except URLError as e:
-        print(f"[GitHub API] Artifact download network error: {e}")
+    except Exception as e:
+        print(f"[GitHub API] Network error: {e}")
         return None
 
 
-# ── GitHub Artifacts ──────────────────────────────────────────────────────────
 def fetch_from_github() -> list[dict]:
-    """
-    Fetch the latest analysis reports from GitHub Actions artifacts.
-    Works on public repos without a token.
-    Returns a list of report dicts, or empty list on failure.
-    """
-    # Step 1: Get list of artifacts for this repo
-    artifacts_url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts?per_page=10"
+    artifacts_url = (f"https://api.github.com/repos/{GITHUB_REPO}"
+                     f"/actions/artifacts?per_page=10")
     raw = _gh_request(artifacts_url)
     if not raw:
         return []
-
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
         return []
 
-    artifacts = data.get("artifacts", [])
-    if not artifacts:
-        return []
-
-    # Step 2: Find the most recent analysis-reports artifact
-    analysis_artifacts = [
-        a for a in artifacts
+    artifacts = [
+        a for a in data.get("artifacts", [])
         if a.get("name", "").startswith("analysis-reports")
         and not a.get("expired", False)
     ]
-    if not analysis_artifacts:
+    if not artifacts:
         print("[GitHub] No valid analysis-reports artifacts found")
         return []
 
-    # Sort by created_at descending, pick most recent
-    latest = sorted(
-        analysis_artifacts,
-        key=lambda a: a.get("created_at", ""),
-        reverse=True
-    )[0]
+    latest = sorted(artifacts, key=lambda a: a.get("created_at", ""), reverse=True)[0]
+    print(f"[GitHub] Found artifact: {latest['name']} ({latest.get('created_at', '')})")
 
-    artifact_id   = latest["id"]
-    artifact_name = latest["name"]
-    created_at    = latest.get("created_at", "")
-    print(f"[GitHub] Found artifact: {artifact_name} (created {created_at})")
-
-    # Step 3: Download the artifact zip
-    zip_bytes = _download_artifact_zip(artifact_id)
+    zip_bytes = _download_artifact_zip(latest["id"])
     if not zip_bytes:
-        print("[GitHub] Failed to download artifact zip")
         return []
 
-    # Step 4: Extract JSON files from the zip
     reports = []
     try:
         with zipfile.ZipFile(io.BytesIO(zip_bytes)) as zf:
             json_files = [f for f in zf.namelist() if f.endswith(".json")]
-
-            # Group by ticker, keep most recent per ticker
             ticker_files: dict[str, str] = {}
             for fname in json_files:
                 parts = Path(fname).stem.split("_")
                 if len(parts) < 3:
                     continue
                 ticker = parts[0]
-                # Use filename as sort key (YYYYMMDD_HHMMSS is lexicographically sortable)
                 if ticker not in ticker_files or fname > ticker_files[ticker]:
                     ticker_files[ticker] = fname
-
             for ticker, fname in ticker_files.items():
                 try:
                     raw_text = zf.read(fname).decode("utf-8")
-                    raw_text = raw_text.replace(": NaN", ": null").replace(":NaN", ":null")
-                    raw_text = raw_text.replace(": Infinity", ": null").replace(":Infinity", ":null")
-                    raw_text = raw_text.replace(": -Infinity", ": null").replace(":-Infinity", ":null")
-                    report = json.loads(raw_text)
-                    reports.append(sanitize(report))
-                except (json.JSONDecodeError, KeyError):
+                    for bad, good in ((": NaN", ": null"), (":NaN", ":null"),
+                                      (": Infinity", ": null"), (":Infinity", ":null"),
+                                      (": -Infinity", ": null"), (":-Infinity", ":null")):
+                        raw_text = raw_text.replace(bad, good)
+                    reports.append(sanitize(json.loads(raw_text)))
+                except Exception:
                     continue
-
     except zipfile.BadZipFile:
-        print("[GitHub] Bad zip file received")
+        print("[GitHub] Bad zip file")
         return []
 
     reports.sort(key=lambda r: r.get("confluence_score") or 0, reverse=True)
-    print(f"[GitHub] Loaded {len(reports)} reports from artifact")
+    print(f"[GitHub] Loaded {len(reports)} reports")
     return reports
 
 
-# ── Local fallback ────────────────────────────────────────────────────────────
 def fetch_from_local() -> list[dict]:
-    """Read the most recent .json report per ticker from local logs/ folder."""
     if not LOG_DIR.exists():
         return []
-
     latest: dict[str, Path] = {}
     for f in LOG_DIR.glob("*.json"):
         parts = f.stem.split("_")
@@ -222,42 +194,33 @@ def fetch_from_local() -> list[dict]:
         ticker = parts[0]
         if ticker not in latest or f.stat().st_mtime > latest[ticker].stat().st_mtime:
             latest[ticker] = f
-
     reports = []
-    for ticker, path in latest.items():
+    for path in latest.values():
         try:
             raw = path.read_text(encoding="utf-8")
-            raw = raw.replace(": NaN", ": null").replace(":NaN", ":null")
-            raw = raw.replace(": Infinity", ": null").replace(":Infinity", ":null")
-            raw = raw.replace(": -Infinity", ": null").replace(":-Infinity", ":null")
-            data = json.loads(raw)
-            reports.append(sanitize(data))
-        except (json.JSONDecodeError, OSError):
+            for bad, good in ((": NaN", ": null"), (":NaN", ":null")):
+                raw = raw.replace(bad, good)
+            reports.append(sanitize(json.loads(raw)))
+        except Exception:
             continue
-
     reports.sort(key=lambda r: r.get("confluence_score") or 0, reverse=True)
     return reports
 
 
 # ── Cache ─────────────────────────────────────────────────────────────────────
 _cache: dict = {"reports": [], "fetched_at": None, "source": "none"}
-CACHE_TTL_SECONDS = 300  # 5 minutes
+CACHE_TTL = 300  # 5 minutes
 
 
-def get_reports() -> tuple[list[dict], str]:
-    """Return reports and source label, using cache when fresh."""
+def get_reports(force: bool = False) -> tuple[list[dict], str]:
     global _cache
     now = datetime.utcnow()
     age = (now - _cache["fetched_at"]).total_seconds() if _cache["fetched_at"] else 999
-
-    if age < CACHE_TTL_SECONDS and _cache["reports"]:
+    if not force and age < CACHE_TTL and _cache["reports"]:
         return _cache["reports"], _cache["source"]
 
-    # Try GitHub first
     reports = fetch_from_github()
     source  = "github"
-
-    # Fall back to local
     if not reports:
         reports = fetch_from_local()
         source  = "local"
@@ -266,70 +229,43 @@ def get_reports() -> tuple[list[dict], str]:
     return reports, source
 
 
-# ── HTTP Handler ──────────────────────────────────────────────────────────────
-class DashboardHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        if self.path in ("/latest", "/latest?force=1"):
-            force = "force=1" in self.path
-            if force:
-                _cache["fetched_at"] = None  # invalidate cache
-            reports, source = get_reports()
-            payload = {"reports": reports, "source": source, "count": len(reports)}
-            body = json.dumps(payload, default=str).encode("utf-8")
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.send_header("Content-Length", len(body))
-            self.send_header("Access-Control-Allow-Origin", "*")
-            self.end_headers()
-            self.wfile.write(body)
-
-        elif self.path == "/health":
-            reports, source = get_reports()
-            body = json.dumps({"status": "ok", "reports": len(reports), "source": source}).encode()
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
-            self.end_headers()
-            self.wfile.write(body)
-
-        else:
-            self.send_response(404)
-            self.end_headers()
-
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, OPTIONS")
-        self.end_headers()
-
-    def log_message(self, format, *args):
-        ts = datetime.now().strftime("%H:%M:%S")
-        if args and "/latest" in str(args[0]):
-            reports, source = get_reports()
-            print(f"[{ts}] Dashboard refresh — {len(reports)} reports (source: {source})")
+# ── Routes ────────────────────────────────────────────────────────────────────
+DASHBOARD_HTML = Path(__file__).resolve().parent / "dashboard.html"
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
-def main():
+@app.get("/")
+async def root():
+    """Serve the dashboard HTML."""
+    if DASHBOARD_HTML.exists():
+        return FileResponse(DASHBOARD_HTML, media_type="text/html")
+    return JSONResponse({"error": "dashboard.html not found"}, status_code=404)
+
+
+@app.get("/latest")
+async def latest(force: bool = Query(False)):
+    """Return latest scan reports as JSON."""
+    reports, source = get_reports(force=force)
+    return {"reports": reports, "source": source, "count": len(reports)}
+
+
+@app.get("/health")
+async def health():
+    """Health check — used by Render to confirm service is alive."""
+    reports, source = get_reports()
+    return {"status": "ok", "reports": len(reports), "source": source,
+            "repo": GITHUB_REPO, "token_set": bool(GITHUB_TOKEN)}
+
+
+# ── Local dev entry point ─────────────────────────────────────────────────────
+if __name__ == "__main__":
+    import uvicorn
     print(f"""
 ╔══════════════════════════════════════════════╗
-║        Degënic$ — Dashboard Server       ║
+║        Degënic$ — Dashboard Server           ║
 ╚══════════════════════════════════════════════╝
-
-  Repo:        {GITHUB_REPO}
-  Local logs:  {LOG_DIR}
-  Port:        {PORT}
-  Data source: GitHub Actions artifacts (falls back to local)
-
-  Open dashboard.html in your browser.
-  Press Ctrl+C to stop.
+  Repo:   {GITHUB_REPO}
+  Port:   {PORT}
+  URL:    http://localhost:{PORT}
+  Token:  {'✅ set' if GITHUB_TOKEN else '❌ not set — set GITHUB_TOKEN in .env'}
 """)
-    server = HTTPServer(("localhost", PORT), DashboardHandler)
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\n[Server stopped]")
-
-
-if __name__ == "__main__":
-    main()
+    uvicorn.run("dashboard_server:app", host="0.0.0.0", port=PORT, reload=False)
