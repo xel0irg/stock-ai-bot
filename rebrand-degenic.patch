@@ -1,0 +1,260 @@
+diff --git a/analyzers/fundamentals.py b/analyzers/fundamentals.py
+index ae174c1..8b2458a 100644
+--- a/analyzers/fundamentals.py
++++ b/analyzers/fundamentals.py
+@@ -11,7 +11,7 @@ from core.logger import get_logger
+ 
+ log = get_logger("Fundamentals")
+ 
+-HEADERS = {"User-Agent": "StockAIBot/1.0 (research@stockaibot.com)"}
++HEADERS = {"User-Agent": "Degenic$/1.0 (research@degenic.com)"}
+ 
+ 
+ # ══════════════════════════════════════════════════════════
+diff --git a/analyzers/sentiment.py b/analyzers/sentiment.py
+index bced1f9..c92f24a 100644
+--- a/analyzers/sentiment.py
++++ b/analyzers/sentiment.py
+@@ -90,7 +90,7 @@ def scrape_reddit(ticker: str, limit: int = 100) -> Dict[str, Any]:
+     """
+     posts    = []
+     mentions = 0
+-    headers  = {"User-Agent": "StockAIBot/1.0 (research bot)"}
++    headers  = {"User-Agent": "Degenic$/1.0 (research bot)"}
+ 
+     for sub_name in REDDIT_SUBS:
+         try:
+diff --git a/config/settings.py b/config/settings.py
+index 070b0d4..9ee828f 100644
+--- a/config/settings.py
++++ b/config/settings.py
+@@ -15,7 +15,7 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+ # ── Reddit ────────────────────────────────────────────────
+ REDDIT_CLIENT_ID     = os.getenv("REDDIT_CLIENT_ID", "")
+ REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET", "")
+-REDDIT_USER_AGENT    = os.getenv("REDDIT_USER_AGENT", "StockAIBot/1.0")
++REDDIT_USER_AGENT    = os.getenv("REDDIT_USER_AGENT", "Degenic$/1.0")
+ 
+ # ── StockTwits ────────────────────────────────────────────
+ STOCKTWITS_TOKEN = os.getenv("STOCKTWITS_ACCESS_TOKEN", "")
+diff --git a/core/discord_notifier.py b/core/discord_notifier.py
+index a8c25fe..69ebce5 100644
+--- a/core/discord_notifier.py
++++ b/core/discord_notifier.py
+@@ -1,5 +1,5 @@
+ """
+-core/discord_notifier.py — Discord webhook alert system for Stock AI Bot
++core/discord_notifier.py — Discord webhook alert system for Degënic$
+ Sends rich embed alerts directly to your Discord channel.
+ """
+ from __future__ import annotations
+@@ -138,10 +138,10 @@ def _build_embed(
+         conviction_str = "❌ NO TRADE"
+ 
+     embed = {
+-        "title": f"{emoji}  {ticker} — Stock AI Bot Signal",
++        "title": f"{emoji}  {ticker} — Degënic$ Signal",
+         "color": color,
+         "timestamp": datetime.utcnow().isoformat(),
+-        "footer": {"text": f"Stock AI Bot v1.0 • {ts}"},
++        "footer": {"text": f"Degënic$ v1.0 • {ts}"},
+         "fields": [
+             {
+                 "name": "💰 Price Snapshot",
+@@ -330,7 +330,7 @@ def send_earnings_alert(webhook_url: str, earnings_data: Dict[str, Any]) -> bool
+         "color":       0xF59E0B,
+         "timestamp":   datetime.utcnow().isoformat(),
+         "fields":      fields,
+-        "footer":      {"text": "Stock AI Bot — Earnings Guard"},
++        "footer":      {"text": "Degënic$ — Earnings Guard"},
+     }
+ 
+     payload = {"embeds": [embed]}
+@@ -352,10 +352,10 @@ def send_discord_test(webhook_url: str) -> bool:
+     """Send a test message to verify webhook is working."""
+     payload = {
+         "embeds": [{
+-            "title": "✅ Stock AI Bot Connected!",
++            "title": "✅ Degënic$ Connected!",
+             "description": "You'll receive rich signal alerts here when high-conviction trades are detected.",
+             "color": 0x00C851,
+-            "footer": {"text": "Stock AI Bot v1.0"},
++            "footer": {"text": "Degënic$ v1.0"},
+             "timestamp": datetime.utcnow().isoformat(),
+         }]
+     }
+diff --git a/core/logger.py b/core/logger.py
+index c2178fa..369dd40 100644
+--- a/core/logger.py
++++ b/core/logger.py
+@@ -38,7 +38,7 @@ class ColorFormatter(logging.Formatter):
+         return f"{Style.DIM}[{ts}]{Style.RESET_ALL} {color}{icon} {msg}{Style.RESET_ALL}"
+ 
+ 
+-def get_logger(name: str = "StockAIBot") -> logging.Logger:
++def get_logger(name: str = "Degenic$") -> logging.Logger:
+     logger = logging.getLogger(name)
+     if logger.handlers:
+         return logger
+diff --git a/core/telegram_notifier.py b/core/telegram_notifier.py
+index 18d7bb0..ce90ce3 100644
+--- a/core/telegram_notifier.py
++++ b/core/telegram_notifier.py
+@@ -1,5 +1,5 @@
+ """
+-core/telegram_notifier.py — Telegram alert system for Stock AI Bot
++core/telegram_notifier.py — Telegram alert system for Degënic$
+ Sends formatted signal alerts directly to your Telegram chat.
+ """
+ from __future__ import annotations
+@@ -254,7 +254,7 @@ def send_telegram_test(token: str, chat_id: str) -> bool:
+     url  = f"https://api.telegram.org/bot{token}/sendMessage"
+     payload = {
+         "chat_id":    chat_id,
+-        "text":       "✅ *Stock AI Bot is connected!*\nYou'll receive alerts here when high-conviction signals are detected.",
++        "text":       "✅ *Degënic$ is connected!*\nYou'll receive alerts here when high-conviction signals are detected.",
+         "parse_mode": "Markdown",
+     }
+     try:
+diff --git a/dashboard.html b/dashboard.html
+index cb834b4..cb98ef0 100644
+--- a/dashboard.html
++++ b/dashboard.html
+@@ -3,7 +3,7 @@
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-<title>Stock AI Bot</title>
++<title>Degënic$</title>
+ 
+ 
+ <style>
+@@ -175,7 +175,7 @@ html, body { background: var(--bg); color: var(--text); font-family: var(--sans)
+ <div class="topbar">
+   <div class="tb-left">
+     <div class="live-badge"><div class="live-dot"></div>LIVE</div>
+-    <span class="tb-title">Stock AI Bot</span>
++    <span class="tb-title">Degënic$</span>
+   </div>
+   <div class="tb-right">
+     <span class="tb-countdown" id="countdown">Refreshing in 5:00</span>
+diff --git a/dashboard_server.py b/dashboard_server.py
+index f6f80c9..36c813a 100644
+--- a/dashboard_server.py
++++ b/dashboard_server.py
+@@ -1,5 +1,5 @@
+ """
+-dashboard_server.py — Local server for Stock AI Bot dashboard
++dashboard_server.py — Local server for Degënic$ dashboard
+ 
+ Serves the latest scan results as JSON so dashboard.html can display them.
+ 
+@@ -62,7 +62,7 @@ def _gh_request(url: str) -> bytes | None:
+     """Make a GitHub API request, returns raw bytes or None on failure."""
+     headers = {
+         "Accept": "application/vnd.github+json",
+-        "User-Agent": "stock-ai-bot-dashboard/1.0",
++        "User-Agent": "degenic-dashboard/1.0",
+     }
+     if GITHUB_TOKEN:
+         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+@@ -90,7 +90,7 @@ def _download_artifact_zip(artifact_id) -> bytes | None:
+     url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{artifact_id}/zip"
+     headers = {
+         "Accept": "application/vnd.github+json",
+-        "User-Agent": "stock-ai-bot-dashboard/1.0",
++        "User-Agent": "degenic-dashboard/1.0",
+         "Authorization": f"Bearer {GITHUB_TOKEN}",
+     }
+ 
+@@ -313,7 +313,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
+ def main():
+     print(f"""
+ ╔══════════════════════════════════════════════╗
+-║        Stock AI Bot — Dashboard Server       ║
++║        Degënic$ — Dashboard Server       ║
+ ╚══════════════════════════════════════════════╝
+ 
+   Repo:        {GITHUB_REPO}
+diff --git a/discord_bot/register_commands.py b/discord_bot/register_commands.py
+index e50f988..3d5ac7a 100644
+--- a/discord_bot/register_commands.py
++++ b/discord_bot/register_commands.py
+@@ -25,7 +25,7 @@ DISCORD_GUILD_ID       = os.environ.get("DISCORD_GUILD_ID", "")
+ 
+ SCAN_COMMAND = {
+     "name": "scan",
+-    "description": "Run an on-demand Stock AI Bot analysis for a ticker",
++    "description": "Run an on-demand Degënic$ analysis for a ticker",
+     "options": [
+         {
+             "name": "ticker",
+diff --git a/discord_bot/server.py b/discord_bot/server.py
+index e6d4e20..270c3fd 100644
+--- a/discord_bot/server.py
++++ b/discord_bot/server.py
+@@ -44,7 +44,7 @@ from discord_bot.github_helper import (
+ 
+ log = get_logger("DiscordBot")
+ 
+-app = FastAPI(title="Stock AI Bot — Discord Commands")
++app = FastAPI(title="Degënic$ — Discord Commands")
+ 
+ DISCORD_PUBLIC_KEY     = os.environ.get("DISCORD_PUBLIC_KEY", "")
+ DISCORD_APPLICATION_ID = os.environ.get("DISCORD_APPLICATION_ID", "")
+@@ -73,7 +73,7 @@ def verify_signature(signature: str, timestamp: str, body: bytes) -> bool:
+ @app.get("/")
+ async def health():
+     """Simple health check — also what keeps cold-start checks happy."""
+-    return {"status": "ok", "service": "stock-ai-bot-discord"}
++    return {"status": "ok", "service": "degenic-discord"}
+ 
+ 
+ @app.post("/interactions")
+@@ -110,7 +110,7 @@ async def interactions(request: Request, background_tasks: BackgroundTasks):
+             interaction_token = data.get("token")
+ 
+             # Defer immediately (must respond within 3 seconds) — Discord
+-            # shows "Stock AI Bot is thinking..." while we run the analysis
++            # shows "Degënic$ is thinking..." while we run the analysis
+             background_tasks.add_task(run_scan_and_respond, ticker, interaction_token)
+             return JSONResponse({"type": RESPONSE_DEFERRED_CHANNEL_MESSAGE})
+ 
+diff --git a/main.py b/main.py
+index 6ab0ee5..9cbbbe0 100644
+--- a/main.py
++++ b/main.py
+@@ -1,5 +1,5 @@
+ """
+-main.py — Stock AI Bot Entry Point
++main.py — Degënic$ Entry Point
+ Orchestrates technical, sentiment, fundamental analysis + AI synthesis.
+ 
+ Usage:
+@@ -30,7 +30,7 @@ from analyzers.sentiment    import run_sentiment_analysis
+ from analyzers.fundamentals import check_watchlist_earnings
+ from core.fundamentals_cache import get_fundamentals
+ 
+-log = get_logger("StockAIBot")
++log = get_logger("Degenic$")
+ 
+ 
+ BANNER = r"""
+@@ -43,7 +43,7 @@ BANNER = r"""
+ ║   ███████║   ██║   ╚██████╔╝╚██████╗██║  ██╗            ║
+ ║   ╚══════╝   ╚═╝    ╚═════╝  ╚═════╝╚═╝  ╚═╝            ║
+ ║                                                          ║
+-║          AI-POWERED STOCK ANALYSIS BOT v1.0             ║
++║          DEGËNIC$ — AI OPTIONS SIGNAL ENGINE             ║
+ ║   Technical · Sentiment · Options · SEC · AI Engine      ║
+ ╚══════════════════════════════════════════════════════════╝
+ """
+@@ -269,7 +269,7 @@ def main():
+     print(BANNER)
+ 
+     parser = argparse.ArgumentParser(
+-        description="Stock AI Bot — Multi-source market analysis"
++        description="Degënic$ — Multi-source market analysis"
+     )
+     parser.add_argument(
+         "--ticker", "-t",

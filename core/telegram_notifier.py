@@ -1,5 +1,5 @@
 """
-core/telegram_notifier.py — Telegram alert system for Stock AI Bot
+core/telegram_notifier.py — Telegram alert system for Degënic$
 Sends formatted signal alerts directly to your Telegram chat.
 """
 from __future__ import annotations
@@ -254,7 +254,7 @@ def send_telegram_test(token: str, chat_id: str) -> bool:
     url  = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {
         "chat_id":    chat_id,
-        "text":       "✅ *Stock AI Bot is connected!*\nYou'll receive alerts here when high-conviction signals are detected.",
+        "text":       "✅ *Degënic$ is connected!*\nYou'll receive alerts here when high-conviction signals are detected.",
         "parse_mode": "Markdown",
     }
     try:

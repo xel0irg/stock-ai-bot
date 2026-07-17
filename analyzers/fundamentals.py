@@ -11,7 +11,7 @@ from core.logger import get_logger
 
 log = get_logger("Fundamentals")
 
-HEADERS = {"User-Agent": "StockAIBot/1.0 (research@stockaibot.com)"}
+HEADERS = {"User-Agent": "Degenic$/1.0 (research@degenic.com)"}
 
 
 # ══════════════════════════════════════════════════════════

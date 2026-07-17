@@ -90,7 +90,7 @@ def scrape_reddit(ticker: str, limit: int = 100) -> Dict[str, Any]:
     """
     posts    = []
     mentions = 0
-    headers  = {"User-Agent": "StockAIBot/1.0 (research bot)"}
+    headers  = {"User-Agent": "Degenic$/1.0 (research bot)"}
 
     for sub_name in REDDIT_SUBS:
         try:

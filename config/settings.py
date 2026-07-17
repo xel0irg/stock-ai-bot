@@ -15,7 +15,7 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 # ── Reddit ────────────────────────────────────────────────
 REDDIT_CLIENT_ID     = os.getenv("REDDIT_CLIENT_ID", "")
 REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET", "")
-REDDIT_USER_AGENT    = os.getenv("REDDIT_USER_AGENT", "StockAIBot/1.0")
+REDDIT_USER_AGENT    = os.getenv("REDDIT_USER_AGENT", "Degenic$/1.0")
 
 # ── StockTwits ────────────────────────────────────────────
 STOCKTWITS_TOKEN = os.getenv("STOCKTWITS_ACCESS_TOKEN", "")

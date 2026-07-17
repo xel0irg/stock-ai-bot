@@ -1,5 +1,5 @@
 """
-dashboard_server.py — Local server for Stock AI Bot dashboard
+dashboard_server.py — Local server for Degënic$ dashboard
 
 Serves the latest scan results as JSON so dashboard.html can display them.
 
@@ -62,7 +62,7 @@ def _gh_request(url: str) -> bytes | None:
     """Make a GitHub API request, returns raw bytes or None on failure."""
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "stock-ai-bot-dashboard/1.0",
+        "User-Agent": "degenic-dashboard/1.0",
     }
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
@@ -90,7 +90,7 @@ def _download_artifact_zip(artifact_id) -> bytes | None:
     url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/artifacts/{artifact_id}/zip"
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "stock-ai-bot-dashboard/1.0",
+        "User-Agent": "degenic-dashboard/1.0",
         "Authorization": f"Bearer {GITHUB_TOKEN}",
     }
 
@@ -313,7 +313,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
 def main():
     print(f"""
 ╔══════════════════════════════════════════════╗
-║        Stock AI Bot — Dashboard Server       ║
+║        Degënic$ — Dashboard Server       ║
 ╚══════════════════════════════════════════════╝
 
   Repo:        {GITHUB_REPO}

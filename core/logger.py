@@ -38,7 +38,7 @@ class ColorFormatter(logging.Formatter):
         return f"{Style.DIM}[{ts}]{Style.RESET_ALL} {color}{icon} {msg}{Style.RESET_ALL}"
 
 
-def get_logger(name: str = "StockAIBot") -> logging.Logger:
+def get_logger(name: str = "Degenic$") -> logging.Logger:
     logger = logging.getLogger(name)
     if logger.handlers:
         return logger

@@ -1,5 +1,5 @@
 """
-core/discord_notifier.py — Discord webhook alert system for Stock AI Bot
+core/discord_notifier.py — Discord webhook alert system for Degënic$
 Sends rich embed alerts directly to your Discord channel.
 """
 from __future__ import annotations
@@ -138,10 +138,10 @@ def _build_embed(
         conviction_str = "❌ NO TRADE"
 
     embed = {
-        "title": f"{emoji}  {ticker} — Stock AI Bot Signal",
+        "title": f"{emoji}  {ticker} — Degënic$ Signal",
         "color": color,
         "timestamp": datetime.utcnow().isoformat(),
-        "footer": {"text": f"Stock AI Bot v1.0 • {ts}"},
+        "footer": {"text": f"Degënic$ v1.0 • {ts}"},
         "fields": [
             {
                 "name": "💰 Price Snapshot",
@@ -330,7 +330,7 @@ def send_earnings_alert(webhook_url: str, earnings_data: Dict[str, Any]) -> bool
         "color":       0xF59E0B,
         "timestamp":   datetime.utcnow().isoformat(),
         "fields":      fields,
-        "footer":      {"text": "Stock AI Bot — Earnings Guard"},
+        "footer":      {"text": "Degënic$ — Earnings Guard"},
     }
 
     payload = {"embeds": [embed]}
@@ -352,10 +352,10 @@ def send_discord_test(webhook_url: str) -> bool:
     """Send a test message to verify webhook is working."""
     payload = {
         "embeds": [{
-            "title": "✅ Stock AI Bot Connected!",
+            "title": "✅ Degënic$ Connected!",
             "description": "You'll receive rich signal alerts here when high-conviction trades are detected.",
             "color": 0x00C851,
-            "footer": {"text": "Stock AI Bot v1.0"},
+            "footer": {"text": "Degënic$ v1.0"},
             "timestamp": datetime.utcnow().isoformat(),
         }]
     }
