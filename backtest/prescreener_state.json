@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 330.5799865722656,
+      "price": 330.9700012207031,
       "volume_ratio": 0.0,
-      "ts": 1784304650.0131848,
+      "ts": 1784305260.0764568,
       "last_full_scan_ts": 1784304657.0622292
     },
     "AMZN": {
-      "price": 247.7899932861328,
+      "price": 248.22500610351562,
       "volume_ratio": 0.0,
-      "ts": 1784304650.4584563,
+      "ts": 1784305260.5299957,
       "last_full_scan_ts": 1784304708.745198
     },
     "META": {
-      "price": 633.1500244140625,
+      "price": 644.5349731445312,
       "volume_ratio": 0.0,
-      "ts": 1784304651.2500825,
-      "last_full_scan_ts": 1784304124.9457853
+      "ts": 1784305260.998618,
+      "last_full_scan_ts": 1784305314.2571807
     },
     "MSFT": {
-      "price": 391.5,
+      "price": 392.6499938964844,
       "volume_ratio": 0.0,
-      "ts": 1784304651.8562772,
+      "ts": 1784305261.519671,
       "last_full_scan_ts": 1784302302.179075
     },
     "NVDA": {
-      "price": 204.9600067138672,
+      "price": 205.17999267578125,
       "volume_ratio": 0.0,
-      "ts": 1784304652.4178765,
+      "ts": 1784305261.8469462,
       "last_full_scan_ts": 1784304173.7071276
     },
     "QQQ": {
-      "price": 699.6900024414062,
+      "price": 699.4600219726562,
       "volume_ratio": 0.0,
-      "ts": 1784304652.8425858,
+      "ts": 1784305262.1923547,
       "last_full_scan_ts": 1784304220.774037
     },
     "SPY": {
-      "price": 746.1500244140625,
+      "price": 746.239990234375,
       "volume_ratio": 0.0,
-      "ts": 1784304653.4252858,
+      "ts": 1784305262.6818511,
       "last_full_scan_ts": 1784302956.368129
     },
     "TSLA": {
-      "price": 383.739990234375,
+      "price": 383.6846923828125,
       "volume_ratio": 0.0,
-      "ts": 1784304653.879728,
+      "ts": 1784305263.0464845,
       "last_full_scan_ts": 1784304273.270013
     }
   },
@@ -107,7 +107,36 @@
       "was_flagged": true,
       "cached_at": 1784304173.7071302,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-07-17T16:21:54.252468",
+        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 12:21 PM ET | Price: $644.71**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is in a short-term pullback within a strong 20-day uptrend (+11.69%), currently bouncing off intraday lows with a sharp 5m/15m recovery but still firmly below the 1H VWAP ($660.94). The most plausible scenario over 5-15 days is continued chop between $620-$681 as the stock digests recent gains, with downside pressure dominant intraday given the 1H bearish structure. A sustained reclaim of $660 (1H VWAP) would flip the intraday picture bullish; failure to hold $636 (5m VWAP) re-opens a retest of $620-$617 support zone.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **5m/15m momentum surge** \u2014 4/4 bull signals, RSI 81, 3-candle mom +2.23% | Active intraday buyers stepping in; short-term bottom may be in |\n| **MACD Histogram +8.39 (daily)** | Underlying daily momentum still net positive; pullback is corrective not reversal |\n| **OBV Rising + 15m volume 2.18x surge** | Accumulation signal on the bounce; not purely technical |\n| **Analyst consensus STRONG_BUY, PT $826** | Fundamental floor; institutions likely buyers on -3% down days |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **1H fully bearish (0B/4Br), price -2.48% below 1H VWAP $660.94** | Dominant intraday trend is still down; bounce may be a dead-cat |\n| **Daily -2.98%, total daily volume only 0.46x average** | Low-volume bounce \u2014 lack of conviction from buyers at scale |\n| **5m RSI 81 (overbought) on the bounce** | Intraday bounce likely exhausting; mean reversion risk is high right now |\n| **QQQ/SPY both below EMAs, Tech sector -0.12%** | Macro headwinds \u2014 no sector tailwind to sustain a META recovery today |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **\"Why META Stock Dropped on Friday\"** \u2014 single article, no elaboration. Unknown catalyst from prior session could still be in play; check if news was a one-off or ongoing.\n- **Options expiry dynamics**: 10 unusual contracts flagged (5C/5P balanced) \u2014 suggests hedging, not directional conviction. Could amplify moves near key strikes.\n- **Low volume (0.46x)**: thin tape means a moderate institutional order could gap price violently in either direction \u2014 slippage risk is real.\n- **VIX at 18.17**: elevated enough that options premiums are not cheap; be disciplined on premium paid.\n- **No earnings imminent** \u2014 removes the single biggest binary risk. No gap risk from a catalyst.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Support** | $636.31 | 5m VWAP \u2014 holding above = bounce intact |\n| **Critical Support** | $617-$622 | EMA50 + 20D support zone \u2014 loss = trend break |\n| **Pivot / Thesis Change** | $641.41 | 15m VWAP \u2014 reclaim sustains bounce |\n| **Bull Confirmation** | $660.94 | 1H VWAP \u2014 must reclaim to flip intraday trend bullish |\n| **Resistance** | $681.31 | 20D resistance \u2014 target ceiling for any bullish swing |\n| **Downside Target** | $630-$632 | 0.7x expected 1DTE move below current price |\n\n**Thesis change level: $660.94** \u2014 reclaim = bullish; rejection = bearish continuation.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Rationale:** The timeframe conflict is severe and unresolvable right now \u2014 5m/15m screaming bullish while 1H is 0/4 bearish, and daily is -3% on half the normal volume. Signals directly contradict each other across timeframes, which is the definition of low conviction for a 0-2 DTE trade where you cannot afford to be on the wrong side of a resolution. The overbought 5m RSI (81) into a 1H bearish structure is particularly dangerous for a CALL entry here.\n\nScore 42 = **below the 55 minimum threshold \u2192 NO TRADE.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NO TRADE call)**\n\nThe 5m/15m bullish bounce is real, but it is a counter-trend move against a 1H bearish structure on low daily volume. Neither direction clears the signal alignment bar required for 0-2 DTE with extreme theta decay. The current setup is a trap for impatient traders in both directions.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade at this time \u2014 await 1H/5m timeframe resolution\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: Timeframe conflict (5m bullish vs 1H bearish on low volume) makes directional commitment on 0-2 DTE a coin flip; theta decay will punish an undecided position\n```\n\n---\n\n### \u26a1 WHAT TO WATCH FOR NEXT\n\n**IF META reclaims $660.94 (1H VWAP) on volume > 1.5x avg:** Reassess for a CALL. That would align 5m + 15m + 1H bullish with volume confirmation \u2014 score would likely jump to 68-72.\n\n**IF META fails $636.31 (5m VWAP) and breaks below $641 (15m VWAP) with volume spike:** Reassess for a PUT. That would confirm the 1H bearish structure is absorbing the bounce \u2014 score would likely reach 65-70, potentially triggering a 1DTE PUT entry targeting $625-$628.\n\n**Do not chase the current bounce. Wait for resolution.**",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No trade at this time \u2014 await 1H/5m timeframe resolution",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "Timeframe conflict (5m bullish vs 1H bearish on low volume) makes directional commitment on 0-2 DTE a coin flip; theta decay will punish an undecided position",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5478
+      },
+      "was_flagged": true,
+      "cached_at": 1784305314.2571838,
+      "score": 42
     }
   },
-  "saved_at": "2026-07-17T12:11:50-04:00"
+  "saved_at": "2026-07-17T12:21:56-04:00"
 }
