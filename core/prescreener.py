@@ -149,10 +149,31 @@ def _fast_quote(ticker: str) -> Optional[Dict[str, Any]]:
         fi = yf.Ticker(ticker).fast_info
         price      = float(fi.last_price      or 0)
         volume     = float(fi.three_month_average_volume or 0)
-        day_vol    = float(getattr(fi, "regular_market_volume", 0) or 0)
         prev_close = float(fi.previous_close  or 0)
         if price <= 0:
             return None
+
+        # Try multiple volume attributes — yfinance fast_info is inconsistent
+        # regular_market_volume often returns 0; fall back to today_volume or
+        # a 1-day history fetch if needed
+        day_vol = 0.0
+        for attr in ("regular_market_volume", "today_volume", "volume"):
+            val = float(getattr(fi, attr, 0) or 0)
+            if val > 0:
+                day_vol = val
+                break
+
+        # If still 0, fetch from 1-day history (slightly slower but reliable)
+        if day_vol == 0 and volume > 0:
+            try:
+                import yfinance as yf
+                hist = yf.Ticker(ticker).history(period="1d", interval="1m",
+                                                  progress=False, auto_adjust=True)
+                if not hist.empty:
+                    day_vol = float(hist["Volume"].sum())
+            except Exception:
+                pass
+
         return {
             "price":        price,
             "prev_close":   prev_close,
