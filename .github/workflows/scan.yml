@@ -80,8 +80,25 @@ jobs:
             python main.py
           fi
 
-      - name: Upload analysis reports
+      # Only upload an artifact if the scan actually produced ticker
+      # reports. Scans blocked by the time gate (or with nothing flagged)
+      # write only a SCAN_SUMMARY file — uploading those creates a stream
+      # of empty artifacts that bury the last real scan and force the
+      # dashboard to fall back to local data.
+      - name: Check for ticker reports
         if: always()
+        id: check_reports
+        run: |
+          count=$(find logs -name '*.json' ! -name 'SCAN_SUMMARY_*' 2>/dev/null | wc -l)
+          echo "count=$count" >> $GITHUB_OUTPUT
+          if [ "$count" -gt 0 ]; then
+            echo "Found $count ticker report(s) — artifact will be uploaded."
+          else
+            echo "No ticker reports this run — skipping artifact upload."
+          fi
+
+      - name: Upload analysis reports
+        if: always() && steps.check_reports.outputs.count != '0'
         uses: actions/upload-artifact@v4
         with:
           name: analysis-reports-${{ github.run_number }}

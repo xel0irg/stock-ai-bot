@@ -35,6 +35,7 @@ from fastapi.responses import FileResponse, JSONResponse
 LOG_DIR     = Path(__file__).resolve().parent / "logs"
 PORT        = int(os.environ.get("PORT", 7842))
 GITHUB_REPO = os.environ.get("GITHUB_REPO", "xel0irg/stock-ai-bot")
+ARTIFACT_LOOKBACK = int(os.environ.get("ARTIFACT_LOOKBACK", 30))
 
 def _load_env():
     env_path = Path(__file__).resolve().parent / ".env"
@@ -145,13 +146,16 @@ def fetch_from_github() -> list[dict]:
         print("[GitHub] No valid analysis-reports artifacts found")
         return []
 
-    # Try up to 5 most recent artifacts — skip ones with no ticker reports
-    # (empty-scan artifacts that only contain SCAN_SUMMARY files)
+    # Try up to ARTIFACT_LOOKBACK most recent artifacts — skip ones with no
+    # ticker reports. The lookback must span quiet stretches (weekends,
+    # pre-10:30 and post-2PM scans) where every artifact is empty, so it
+    # needs to be generous — 5 was not enough to reach past a weekend.
     sorted_artifacts = sorted(artifacts, key=lambda a: a.get("created_at", ""), reverse=True)
     zip_bytes = None
     latest = None
-    for candidate in sorted_artifacts[:5]:
-        print(f"[GitHub] Trying artifact: {candidate['name']} ({candidate.get('created_at', '')})")
+    skipped = 0
+    for candidate in sorted_artifacts[:ARTIFACT_LOOKBACK]:
+
         zb = _download_artifact_zip(candidate["id"])
         if not zb:
             continue
@@ -169,15 +173,18 @@ def fetch_from_github() -> list[dict]:
                 zip_bytes = zb
                 latest = candidate
                 break
-            print(f"[GitHub] Artifact {candidate['name']} has no ticker reports — trying older")
+            skipped += 1
         except Exception:
             zip_bytes = zb
             latest = candidate
             break
 
     if not zip_bytes or not latest:
+        print(f"[GitHub] No artifact with ticker reports in last "
+              f"{len(sorted_artifacts[:ARTIFACT_LOOKBACK])} artifacts")
         return []
-    print(f"[GitHub] Using artifact: {latest['name']}")
+    print(f"[GitHub] Using artifact: {latest['name']} "
+          f"({latest.get('created_at','')}) — skipped {skipped} empty")
 
     reports = []
     try:
@@ -252,6 +259,15 @@ def get_reports(force: bool = False) -> tuple[list[dict], str]:
 
     reports = fetch_from_github()
     source  = "github"
+
+    # If GitHub returned nothing but we have a previous good result,
+    # keep serving it rather than dropping to the local fallback.
+    # A quiet scan period should not blank out the dashboard.
+    if not reports and _cache.get("reports") and _cache.get("source") == "github":
+        print("[Cache] GitHub returned no reports — serving last known good data")
+        _cache["fetched_at"] = now
+        return _cache["reports"], "github"
+
     if not reports:
         reports = fetch_from_local()
         source  = "local"
