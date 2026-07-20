@@ -211,19 +211,33 @@ def score_technicals(ta: Dict[str, Any]) -> int:
     # EMA trend
     trend = ta.get("ema_trend", "")
     if trend == "strong_bull":    score += 12
-    elif trend == "bull_above_200": score += 6
+    elif trend == "bull_above_200": score += 3   # mirrors bear_below_200
     elif trend == "strong_bear":  score -= 12
-    elif trend == "bear_below_200": score -= 6
+    elif trend == "bear_below_200": score -= 3   # was -6; weak evidence for 0-2 DTE
 
     # Volume surge (smart money signal)
-    vol_sig = ta.get("volume_signal", "normal")
-    if vol_sig == "extreme_surge": score += 12
-    elif vol_sig == "high":        score += 7
-    elif vol_sig == "low":         score -= 4
+    # Thresholds rescaled: the old bands required vol_ratio > 2.0 for any
+    # positive contribution, which essentially never happens on this
+    # watchlist intraday (typical readings are 0.3-0.8x). That made the
+    # volume block a permanent -4 penalty and part of a structural
+    # bearish floor. Bands now reflect realistic intraday ranges.
+    vol_ratio = ta.get("volume_ratio")
+    if vol_ratio is None:
+        pass                                    # no data -> neutral
+    elif vol_ratio >= 2.0:  score += 12         # genuine surge
+    elif vol_ratio >= 1.5:  score += 8
+    elif vol_ratio >= 1.0:  score += 4          # at or above average
+    elif vol_ratio >= 0.5:  pass                # normal intraday -> neutral
+    else:                   score -= 4          # genuinely thin
 
     # OBV
-    if ta.get("obv_trend") == "rising": score += 5
-    else:                               score -= 5
+    # The old logic was `if rising: +5 else: -5`, so ANY non-"rising"
+    # value — including "flat", missing keys, or None — scored as
+    # bearish. Every other indicator here treats unknown as neutral.
+    obv = ta.get("obv_trend")
+    if obv == "rising":    score += 5
+    elif obv == "falling": score -= 5
+    # anything else (flat / unknown / missing) -> neutral
 
     # Stochastic
     stoch = ta.get("stoch_signal", "neutral")
