@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 325.2099914550781,
+      "price": 324.9200134277344,
       "volume_ratio": 0.0,
-      "ts": 1784564444.169033,
+      "ts": 1784565047.1672318,
       "last_full_scan_ts": 1784562132.9707909
     },
     "AMZN": {
-      "price": 252.3300018310547,
+      "price": 252.35000610351562,
       "volume_ratio": 0.0,
-      "ts": 1784564444.3848245,
+      "ts": 1784565047.6446033,
       "last_full_scan_ts": 1784562264.4153814
     },
     "META": {
-      "price": 647.875,
+      "price": 652.3900146484375,
       "volume_ratio": 0.0,
-      "ts": 1784564444.6302118,
-      "last_full_scan_ts": 1784563956.1230907
+      "ts": 1784565048.1665025,
+      "last_full_scan_ts": 1784565054.412953
     },
     "MSFT": {
-      "price": 400.6000061035156,
+      "price": 401.9949951171875,
       "volume_ratio": 0.0,
-      "ts": 1784564445.0747325,
-      "last_full_scan_ts": 1784562315.4079094
+      "ts": 1784565048.6941254,
+      "last_full_scan_ts": 1784565106.1996443
     },
     "NVDA": {
-      "price": 205.55499267578125,
+      "price": 205.22000122070312,
       "volume_ratio": 0.0,
-      "ts": 1784564445.332769,
+      "ts": 1784565049.1293054,
       "last_full_scan_ts": 1784564449.070784
     },
     "QQQ": {
-      "price": 703.7783813476562,
+      "price": 703.2100219726562,
       "volume_ratio": 0.0,
-      "ts": 1784564445.7690778,
+      "ts": 1784565049.7510464,
       "last_full_scan_ts": 1784562375.7429206
     },
     "SPY": {
-      "price": 746.6799926757812,
+      "price": 746.489990234375,
       "volume_ratio": 0.0,
-      "ts": 1784564446.0115366,
+      "ts": 1784565050.2991767,
       "last_full_scan_ts": 1784562425.1009705
     },
     "TSLA": {
-      "price": 375.06500244140625,
+      "price": 375.34991455078125,
       "volume_ratio": 0.0,
-      "ts": 1784564446.1857429,
+      "ts": 1784565050.7326217,
       "last_full_scan_ts": 1784564503.1038072
     }
   },
@@ -191,10 +191,39 @@
         "model": "claude-sonnet-4-6",
         "tokens_used": 5413
       },
-      "was_flagged": false,
-      "cached_at": 1784563956.1230936,
+      "was_flagged": true,
+      "cached_at": 1784565054.4129558,
       "score": 48
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-07-20T16:31:46.195717",
+        "analysis": "# MSFT OPTIONS ANALYSIS \u2014 12:31 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT is in a strong intraday uptrend, printing above VWAP on all three timeframes with clean bullish momentum off recent lows. The most plausible scenario over the next 5-15 trading days is continued consolidation near the $395-$407 range, with the stock pressing against its 20D resistance at $401.95 (current price) acting as a potential ceiling. Near-term upside is capped by overbought conditions and extremely low volume (0.26x 20D average), which undermines conviction in any breakout attempt above $407.\n\n---\n\n## 2. BULL CASE\n\n**1. Multi-timeframe VWAP dominance** \u2014 Price sits above VWAP on the 5m, 15m, and 1H simultaneously. This is a textbook bullish intraday structure and the single most reliable short-term momentum signal available.\n\n**2. MACD Histogram expansion (+3.54 daily)** \u2014 Daily MACD is rising meaningfully, confirming the 9.42% 20-day trend is supported by underlying momentum, not just gap-fill noise.\n\n**3. OBV rising + price near upper Bollinger Band (0.896)** \u2014 Rising OBV with price in the upper half of the BB confirms distribution has not begun. Buyers are still absorbing supply.\n\n**4. Analyst consensus STRONG BUY / $557 target** \u2014 With a 38% upside to consensus target and forward P/E of 20.7x, institutional buyers have fundamental cover to accumulate on any pullback, providing a structural bid.\n\n---\n\n## 3. BEAR CASE\n\n**1. Stochastic 89.52/84.48 \u2014 OVERBOUGHT on daily** \u2014 Both %K and %D are deeply overbought. In low-volatility regimes, this consistently precedes mean-reversion moves within 1-3 sessions.\n\n**2. Volume is critically thin (0.26x 20D average)** \u2014 A 2%+ up day on one-quarter of average volume is a low-conviction rally. Moves on thin volume are frequently reversed. This is the loudest red flag in the data.\n\n**3. 20D Resistance = Current Price ($401.95)** \u2014 MSFT is sitting exactly at its 20-day resistance level. First-touch rejections at established resistance are common, especially with no catalyst (zero news) driving the breakout.\n\n**4. 5m RSI at 91.74 and 15m RSI at 82.16** \u2014 Intraday RSI is at extreme overbought levels rarely sustained. A snap pullback to VWAP ($394.75-$399.17) is the high-probability mean-reversion trade when RSI is this extended with no volume behind it.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Zero news / zero catalyst**: The entire 2% move today is technically driven with no news anchor. Headline-driven reversal risk is asymmetric \u2014 any negative macro headline (Fed speak, geopolitical, sector rotation) could gap MSFT back through VWAP rapidly.\n- **Options flow neutral (P/C 0.21)**: The extremely low P/C ratio suggests minimal hedging. If market makers begin delta-hedging a reversal, the unwind could be sharp with no put wall cushion.\n- **EMA200 = NaN (data gap)**: The 200-day EMA is not calculable from available data. This is a significant blind spot \u2014 the label \"BEAR_BELOW_200\" suggests price is below its 200D EMA, which would make this entire rally a counter-trend move in a longer-term downtrend. If true, this is material to any bullish thesis.\n- **SPY/QQQ macro regime**: No macro regime data provided. A soft-tape afternoon could accelerate any VWAP reversion sharply given MSFT's 1.13 beta.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| Hard Resistance | $407.13 | Upper Bollinger Band \u2014 breakout or rejection zone |\n| Current Resistance | $401.95 | 20D resistance = current price. Must hold as support on any dip |\n| 1H VWAP | $396.33 | Loss of this level flips 1H bias bearish |\n| 15m VWAP | $394.75 | Key pivot \u2014 loss here confirms intraday reversal |\n| 5m VWAP | $399.17 | First intraday line of defense |\n| EMA50 (daily) | $397.29 | Confluence with VWAPs \u2014 major support zone $394-$397 |\n| **Thesis-change level** | **$394.75** | **Sustained close below 15m VWAP invalidates bull case entirely** |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score rationale:** The directional signal is clearly bullish across intraday timeframes, but critically undermined by three hard contradictions \u2014 extreme overbought RSI on all short timeframes, volume at 0.26x average (the weakest possible volume confirmation), and price sitting exactly at 20D resistance with no news catalyst. The \"BEAR_BELOW_200\" EMA regime flag is a structural warning that cannot be dismissed. Clean momentum signal, terrible confirmation quality.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in inaction)**\n\nThe intraday setup *looks* bullish on the surface, but the volume collapse, overbought extreme, and resistance-at-price combination make this an unreliable entry for 0-2 DTE. The risk/reward does not justify theta exposure today.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: No trade, no stop needed.\n\nENTRY CONDITION: Do not enter. Volume at 0.26x average disqualifies any 0-2 DTE entry \u2014 momentum without volume has no follow-through edge and theta will punish a stalled move aggressively.\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: Volume remains below 1.0x 20D average and price holds below $402.50 into the 1PM hour \u2014 the setup is stalling, not breaking out.\n\nKEY RISK: The single greatest risk of trading this setup is entering a CALL at resistance on overbought RSI with thin volume and watching price stall, then decay directly into theta erosion with no directional payoff \u2014 a scenario with near-100% loss probability.\n\n---\n\n**\u26a0\ufe0f WATCH LIST NOTE:** If MSFT breaks and holds above $407 (upper BB) with volume surging above 1.5x average, reassess immediately \u2014 that would be a genuine breakout setup worth a 1DTE call. Alternatively, if price fails at current levels and drops through $399 VWAP on volume, a PUT to the $394-$396 zone becomes viable. **Wait for the tell. Don't force it.**",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade, no stop needed.",
+          "entry_condition": "Do not enter. Volume at 0.26x average disqualifies any 0-2 DTE entry \u2014 momentum without volume has no follow-through edge and theta will punish a stalled move aggressively.",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 1.0x 20D average and price holds below $402.50 into the 1PM hour \u2014 the setup is stalling, not breaking out.",
+          "key_risk": "The single greatest risk of trading this setup is entering a CALL at resistance on overbought RSI with thin volume and watching price stall, then decay directly into theta erosion with no directional payoff \u2014 a scenario with near-100% loss probability.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5294
+      },
+      "was_flagged": true,
+      "cached_at": 1784565106.1996474,
+      "score": 52
     }
   },
-  "saved_at": "2026-07-20T12:21:45-04:00"
+  "saved_at": "2026-07-20T12:31:48-04:00"
 }
