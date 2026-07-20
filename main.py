@@ -223,6 +223,28 @@ def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]
     if not to_scan:
         log.info("📊 No tickers flagged — skipping AI synthesis this interval")
         save_state()
+        # Write a minimal scan summary so the artifact is never empty.
+        # An empty logs/ folder means the dashboard falls back to local.
+        try:
+            from pathlib import Path
+            from datetime import datetime, timezone
+            import json as _json
+            _log_dir = Path("logs")
+            _log_dir.mkdir(exist_ok=True)
+            _ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+            _summary = {
+                "scan_summary": True,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "tickers_scanned": 0,
+                "tickers_skipped": len(watchlist),
+                "reason": "No Tier 1 triggers — all tickers quiet",
+                "watchlist": watchlist,
+            }
+            (_log_dir / f"SCAN_SUMMARY_{_ts}.json").write_text(
+                _json.dumps(_summary, indent=2)
+            )
+        except Exception:
+            pass
         return []
 
     log.info(f"🤖 Tier 2 AI synthesis: {len(to_scan)}/{len(watchlist)} tickers "

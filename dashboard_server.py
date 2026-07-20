@@ -145,12 +145,39 @@ def fetch_from_github() -> list[dict]:
         print("[GitHub] No valid analysis-reports artifacts found")
         return []
 
-    latest = sorted(artifacts, key=lambda a: a.get("created_at", ""), reverse=True)[0]
-    print(f"[GitHub] Found artifact: {latest['name']} ({latest.get('created_at', '')})")
+    # Try up to 5 most recent artifacts — skip ones with no ticker reports
+    # (empty-scan artifacts that only contain SCAN_SUMMARY files)
+    sorted_artifacts = sorted(artifacts, key=lambda a: a.get("created_at", ""), reverse=True)
+    zip_bytes = None
+    latest = None
+    for candidate in sorted_artifacts[:5]:
+        print(f"[GitHub] Trying artifact: {candidate['name']} ({candidate.get('created_at', '')})")
+        zb = _download_artifact_zip(candidate["id"])
+        if not zb:
+            continue
+        # Peek inside — skip if no ticker JSON files
+        try:
+            import zipfile as _zf, io as _io
+            with _zf.ZipFile(_io.BytesIO(zb)) as z:
+                has_ticker = any(
+                    not Path(f).stem.startswith("SCAN_SUMMARY")
+                    and len(Path(f).stem.split("_")) >= 3
+                    and f.endswith(".json")
+                    for f in z.namelist()
+                )
+            if has_ticker:
+                zip_bytes = zb
+                latest = candidate
+                break
+            print(f"[GitHub] Artifact {candidate['name']} has no ticker reports — trying older")
+        except Exception:
+            zip_bytes = zb
+            latest = candidate
+            break
 
-    zip_bytes = _download_artifact_zip(latest["id"])
-    if not zip_bytes:
+    if not zip_bytes or not latest:
         return []
+    print(f"[GitHub] Using artifact: {latest['name']}")
 
     reports = []
     try:
@@ -158,7 +185,11 @@ def fetch_from_github() -> list[dict]:
             json_files = [f for f in zf.namelist() if f.endswith(".json")]
             ticker_files: dict[str, str] = {}
             for fname in json_files:
-                parts = Path(fname).stem.split("_")
+                stem = Path(fname).stem
+                # Skip scan summary files — not ticker reports
+                if stem.startswith("SCAN_SUMMARY"):
+                    continue
+                parts = stem.split("_")
                 if len(parts) < 3:
                     continue
                 ticker = parts[0]
