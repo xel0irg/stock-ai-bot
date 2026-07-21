@@ -149,30 +149,45 @@ def get_market_regime(force_refresh: bool = False) -> Dict[str, Any]:
     if spy_trend == "ABOVE" and qqq_trend == "ABOVE" and vix < 20:
         lines.append(
             "🚨 HARD REGIME GATE — BULLISH TAPE: SPY and QQQ are both trending "
-            "ABOVE their EMA9 and EMA21 with VIX below 20. This is a confirmed "
-            "bull regime. STRICT RULES THAT OVERRIDE ALL OTHER SIGNALS:\n"
+            "ABOVE their EMA9 and EMA21 with VIX below 20. Confirmed bull regime. "
+            "STRICT RULES THAT OVERRIDE ALL OTHER SIGNALS:\n"
             "  1. DO NOT generate PUT signals on SPY or QQQ themselves — fading "
             "the index in a bull regime is never a high-probability trade.\n"
-            "  2. PUT signals on individual tickers REQUIRE score >= 75 AND a "
-            "confirmed intraday breakdown (price below BOTH 15m and 1H VWAP) "
-            "AND volume above 1.5x average. A PUT without all three is NONE.\n"
-            "  3. CALL signals only need score >= 55 — the tape is your tailwind.\n"
-            "  4. If you are tempted to output a PUT below score 75, output NONE instead."
+            "  2. PUT signals on individual tickers REQUIRE score >= 75 AND price "
+            "below BOTH 15m and 1H VWAP AND volume >= 0.8x average. Without all "
+            "three, output NONE.\n"
+            "  3. CALL signals are FAVORED: score >= 55 is sufficient. Do not "
+            "demand extra confirmation for a CALL in a bull tape — the trend is "
+            "the confirmation. If technicals are neutral-to-positive and price is "
+            "above at least one VWAP, a CALL is the correct call, not NONE.\n"
+            "  4. If tempted to output a PUT below score 75, output NONE instead."
         )
     elif spy_trend == "BELOW" and qqq_trend == "BELOW" and vix > 20:
         lines.append(
             "🚨 HARD REGIME GATE — BEARISH TAPE: SPY and QQQ are both trending "
             "BELOW their EMA9 and EMA21 with elevated VIX. Confirmed bear regime.\n"
-            "  1. PUT signals only need score >= 55 — tape is your tailwind.\n"
-            "  2. CALL signals REQUIRE score >= 75 AND confirmed intraday strength "
-            "(price above BOTH 15m and 1H VWAP) AND volume above 1.5x average.\n"
+            "  1. PUT signals are FAVORED: score >= 55 is sufficient. Do not demand "
+            "extra confirmation for a PUT in a bear tape — the trend is the "
+            "confirmation.\n"
+            "  2. CALL signals REQUIRE score >= 75 AND price above BOTH 15m and 1H "
+            "VWAP AND volume >= 0.8x average. Without all three, output NONE.\n"
             "  3. If tempted to output a CALL below score 75, output NONE instead."
         )
     elif spy_trend == "MIXED" or qqq_trend == "MIXED":
         lines.append(
-            "⚠️  REGIME: Mixed/choppy market — both directions viable but NEITHER "
-            "gets a score discount. Require score >= 65 for any directional trade. "
-            "Below 65 = NONE regardless of individual ticker signals."
+            "⚠️  REGIME: Mixed/choppy broad market (SPY/QQQ not trending cleanly).\n"
+            "  1. NEITHER direction gets an automatic discount from the index — "
+            "but you MUST still take a directional read from THE TICKER'S OWN "
+            "data rather than defaulting to bearish.\n"
+            "  2. Use the ticker's own 1D return, its intraday VWAP position, and "
+            "its sector ETF direction as the tiebreaker. A ticker UP on the day, "
+            "above its 15m VWAP, in a green sector, is a CALL candidate — not a "
+            "NONE and never a PUT.\n"
+            "  3. Require score >= 65 for any directional trade. Below 65 = NONE.\n"
+            "  4. IMPORTANT: a flat index does NOT mean bearish. Do not treat "
+            "'below the 200 EMA' as a bearish signal on a 0-2 DTE timeframe — it "
+            "is a long-horizon indicator and is nearly always true on this "
+            "watchlist. Weight intraday structure far above it."
         )
     else:
         lines.append(
