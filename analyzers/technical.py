@@ -190,8 +190,18 @@ def compute_technicals(df: pd.DataFrame) -> Dict[str, Any]:
     return results
 
 
-def score_technicals(ta: Dict[str, Any]) -> int:
-    """Convert technical signals into a 0-100 bullish confluence score."""
+def score_technicals(ta: Dict[str, Any],
+                     intraday: Dict[str, Any] | None = None) -> int:
+    """
+    Convert technical signals into a 0-100 bullish confluence score.
+
+    `ta` carries DAILY indicators. `intraday` carries the 5m/15m/1H
+    structure. For 0-2 DTE trades the intraday tape matters more than
+    the daily structure — a stock can be below its 200 EMA (true for
+    nearly every ticker on this watchlist) while being cleanly bullish
+    on the session. Scoring on daily indicators alone is what produced
+    a flood of PUT signals against rising tickers.
+    """
     score = 50  # Start neutral
 
     # RSI
@@ -248,6 +258,46 @@ def score_technicals(ta: Dict[str, Any]) -> int:
     bb_pct = ta.get("bb_pct", 0.5)
     if bb_pct < 0.1:   score += 8
     elif bb_pct > 0.9: score -= 8
+
+    # ── INTRADAY STRUCTURE (0-2 DTE weighting) ───────────────────────
+    # Weighted deliberately heavily: this is the timeframe the trade
+    # actually lives on. Previously contributed nothing at all — it was
+    # fetched AFTER scoring ran, so the scorer never saw it.
+    if intraday and intraday.get("has_data"):
+        tf5  = intraday.get("tf_5m")  or {}
+        tf15 = intraday.get("tf_15m") or {}
+        tf1h = intraday.get("tf_1h")  or {}
+
+        # VWAP position across the three timeframes (+4 each way, max ±12).
+        # Being above VWAP on all three is the cleanest bullish structure
+        # available intraday; below all three is the cleanest bearish.
+        for tf in (tf5, tf15, tf1h):
+            pos = (tf.get("vwap_position") or "").lower()
+            if "above" in pos:   score += 4
+            elif "below" in pos: score -= 4
+
+        # Combined intraday bias
+        ib = (intraday.get("intraday_bias") or "").upper()
+        if ib == "BULLISH":            score += 10
+        elif ib == "LEANING_BULLISH":  score += 5
+        elif ib == "BEARISH":          score -= 10
+        elif ib == "LEANING_BEARISH":  score -= 5
+
+        # 3-candle momentum on the 15m — short-term directional thrust
+        mom = tf15.get("momentum_3c")
+        if isinstance(mom, (int, float)):
+            if mom >= 1.0:    score += 6
+            elif mom >= 0.3:  score += 3
+            elif mom <= -1.0: score -= 6
+            elif mom <= -0.3: score -= 3
+
+        # Intraday overextension guard — a parabolic 5m RSI is a poor
+        # entry in EITHER direction. Pull the score back toward neutral
+        # rather than rewarding a chase.
+        rsi5 = tf5.get("rsi")
+        if isinstance(rsi5, (int, float)):
+            if rsi5 >= 85 and score > 50:   score -= 8
+            elif rsi5 <= 15 and score < 50: score += 8
 
     return max(0, min(100, score))
 
@@ -652,12 +702,16 @@ def run_technical_analysis(ticker: str) -> Dict[str, Any]:
     if df.empty:
         return {"error": f"No data for {ticker}"}
 
-    ta  = compute_technicals(df)
-    ta_score = score_technicals(ta)
+    ta = compute_technicals(df)
 
     options  = fetch_options_flow(ticker)
     short    = fetch_short_interest(ticker)
     intraday = fetch_intraday(ticker)
+
+    # Score AFTER intraday is available — previously score_technicals()
+    # ran before fetch_intraday(), so intraday structure could not
+    # possibly influence the score.
+    ta_score = score_technicals(ta, intraday)
 
     return {
         "ticker":         ticker,
