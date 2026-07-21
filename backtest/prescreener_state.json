@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 326.9599914550781,
+      "price": 327.17999267578125,
       "volume_ratio": 0.0,
-      "ts": 1784645445.669725,
+      "ts": 1784646046.7275174,
       "last_full_scan_ts": 1784644899.1312194
     },
     "AMZN": {
-      "price": 248.28480529785156,
+      "price": 247.77000427246094,
       "volume_ratio": 0.0,
-      "ts": 1784645446.1329207,
+      "ts": 1784646046.9686768,
       "last_full_scan_ts": 1784644944.431469
     },
     "META": {
-      "price": 649.1300048828125,
+      "price": 647.0999755859375,
       "volume_ratio": 0.0,
-      "ts": 1784645446.5489106,
-      "last_full_scan_ts": 1784645180.1449237
+      "ts": 1784646047.1741877,
+      "last_full_scan_ts": 1784646098.1328127
     },
     "MSFT": {
-      "price": 400.55999755859375,
+      "price": 398.57000732421875,
       "volume_ratio": 0.0,
-      "ts": 1784645446.9622731,
-      "last_full_scan_ts": 1784644994.505888
+      "ts": 1784646047.465429,
+      "last_full_scan_ts": 1784646103.370248
     },
     "NVDA": {
-      "price": 205.43499755859375,
+      "price": 206.33999633789062,
       "volume_ratio": 0.0,
-      "ts": 1784645447.4336696,
-      "last_full_scan_ts": 1784645042.2422235
+      "ts": 1784646047.667725,
+      "last_full_scan_ts": 1784646109.3702362
     },
     "QQQ": {
-      "price": 706.8200073242188,
+      "price": 707.0599975585938,
       "volume_ratio": 0.0,
-      "ts": 1784645447.9822917,
+      "ts": 1784646047.9044137,
       "last_full_scan_ts": 1784645086.7204082
     },
     "SPY": {
-      "price": 746.9199829101562,
+      "price": 746.780029296875,
       "volume_ratio": 0.0,
-      "ts": 1784645448.4209383,
+      "ts": 1784646048.2236793,
       "last_full_scan_ts": 1784645222.3299596
     },
     "TSLA": {
-      "price": 383.2550048828125,
+      "price": 382.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1784645448.762971,
+      "ts": 1784646048.504915,
       "last_full_scan_ts": 1784645136.1566992
     }
   },
@@ -76,7 +76,7 @@
         "tokens_used": 5383
       },
       "was_flagged": true,
-      "cached_at": 1784645042.2422266,
+      "cached_at": 1784646109.3702397,
       "score": 38
     },
     "SPY": {
@@ -163,7 +163,7 @@
         "tokens_used": 5735
       },
       "was_flagged": true,
-      "cached_at": 1784644994.505891,
+      "cached_at": 1784646103.3702514,
       "score": 52
     },
     "AAPL": {
@@ -252,7 +252,36 @@
       "was_flagged": true,
       "cached_at": 1784645136.1567023,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-07-21T15:01:38.126190",
+        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**As of 11:00 AM ET | Price: $647.10**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is grinding in a narrow range near $647, caught between a sharply bearish intraday structure (price below 5m and 15m VWAP, EMA stack compressed) and a strongly bullish macro backdrop (Tech sector +2.22%, QQQ +1.61%, broad risk-on). The most plausible 5-15 day scenario is continued consolidation between $620\u2013$681 as the stock digests its 20D +15.1% run, with intraday chop dominating. Today specifically, the tension between a sector ripping and a stock underperforming it is the defining conflict \u2014 resolution likely comes via either a sector-led catch-up bid or a failed rally confirming distribution.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Tech sector +2.22% / QQQ +1.61%** | META is materially underperforming its sector \u2014 mean reversion catch-up is a real intraday risk |\n| **MACD Histogram +4.38 (Daily)** | Daily momentum is still positive; the multi-day selloff hasn't broken the macro bid |\n| **Bollinger Band position 0.694** | Price in upper half of bands \u2014 structure remains technically constructive on a daily basis |\n| **Analyst consensus STRONG BUY / $822 target** | Fundamental backdrop limits downside conviction; dip-buyers are institutionally supported |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Price below 5m AND 15m VWAP** | Intraday sellers in control at $647.56/$648.15 \u2014 immediate structure is bearish |\n| **OBV Trend: FALLING** | Volume is flowing out on net; distribution pattern consistent with 5D -5.02% decline |\n| **Volume 0.11x 20D average** | Extremely thin tape \u2014 this cuts both ways, but with OBV falling, the lean is weak/uninspired buying |\n| **1H EMA9/21 bearish cross ($647.78 vs $651.96)** | Hourly trend structure is rolling over; EMAs compressed and falling |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Sector catch-up:** QQQ +1.61% with META barely +0.19% is anomalous. If institutional rotation into mega-cap tech accelerates into the afternoon, META could rip $10+ quickly \u2014 this is the single biggest wildcard for PUT holders today.\n- **Thin tape risk:** At 0.11x average volume, a single large institutional order can move price sharply in either direction \u2014 any spike in volume is a genuine signal change.\n- **Options flow balanced:** 5 unusual calls + 5 unusual puts with P/C 0.4 \u2014 the \"smart money\" options flow is actually call-leaning (low P/C), which mildly contradicts the bearish intraday read.\n- **News headline:** \"Bulls circling META again\" \u2014 sentiment inflection article could attract retail FOMO buying on any positive intraday catalyst.\n- **No upcoming earnings** \u2014 removes binary risk, which keeps premium somewhat muted relative to ATR.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$648.15** | 15m VWAP | Immediate resistance \u2014 reclaim = bullish flip |\n| **$651.96** | 1H EMA21 | Hourly trend resistance; rejection here confirms bear case |\n| **$647.56** | 5m VWAP | Micro pivot \u2014 price oscillating around this |\n| **$635\u2013$638** | Intraday support zone | ~1.5% below current; PUT target zone |\n| **$657\u2013$660** | 0DTE resistance band | ~0.5x expected move above; CALL profit zone |\n| **$681.31** | 20D Resistance | Bull case invalidated only above here |\n| **$542.87** | 20D Support | Distant floor \u2014 irrelevant for 0-2 DTE |\n\n**Thesis-changing level:** A 15m candle close ABOVE $651.96 (1H EMA21) on volume expansion invalidates the bear case entirely. A rejection there is the bear's best entry.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score rationale:** The intraday signals are genuinely bearish (5m/15m/1H all bearish, price below multiple VWAPs), but the macro context directly contradicts \u2014 Tech +2.22%, QQQ +1.61%, and META underperforming its own sector is a setup for catch-up, not breakdown. The P/C ratio of 0.4 (call-skewed), flat news, and balanced unusual options flow add noise. Signals are too split to assign high conviction to either direction \u2014 this is a genuine conflict, not a defaulted neutral.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe intraday structure is bearish but the macro context is strongly bullish and directly contradicts. With volume at 0.11x average, the tape has no conviction in either direction. Trading into this conflict on 0-2 DTE options with theta eating premium every minute is a negative expected value setup.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter \u2014 wait for resolution of the intraday/macro conflict; \n  specifically, wait for either (a) 15m candle close above $651.96 on volume >1.5x avg \n  for a CALL setup, or (b) Tech sector (XLK) to roll negative AND META breaks below $645 \n  on volume expansion for a PUT setup.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x average \u2014 thin tape makes any move unreliable.\nKEY RISK: META is underperforming Tech +2.22% by ~2% \u2014 sector catch-up is the dominant \n  tail risk and would rapidly destroy any PUT position entered here.\n```\n\n---\n\n**\u26a0\ufe0f CONTRADICTION CALLOUT:** The system's own confluence matrix says \"EXCEPTIONAL PUT entry\" when all timeframes are bearish \u2014 but this fires without accounting for the sector +2.22% override. A stock barely positive while its sector is ripping is NOT a clean bearish setup; it's a coiled spring. The honest read is: bearish intraday micro-structure inside a bullish macro envelope = wait. Do not trade the conflict.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "Do not enter \u2014 wait for resolution of the intraday/macro conflict;",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.5x average \u2014 thin tape makes any move unreliable.",
+          "key_risk": "META is underperforming Tech +2.22% by ~2% \u2014 sector catch-up is the dominant",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5929
+      },
+      "was_flagged": true,
+      "cached_at": 1784646098.1328158,
+      "score": 52
     }
   },
-  "saved_at": "2026-07-21T10:50:48-04:00"
+  "saved_at": "2026-07-21T11:01:51-04:00"
 }
