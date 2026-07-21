@@ -273,23 +273,49 @@ def score_technicals(ta: Dict[str, Any],
         # available intraday; below all three is the cleanest bearish.
         for tf in (tf5, tf15, tf1h):
             pos = (tf.get("vwap_position") or "").lower()
-            if "above" in pos:   score += 4
-            elif "below" in pos: score -= 4
+            if "above" in pos:   score += 3
+            elif "below" in pos: score -= 3
 
         # Combined intraday bias
         ib = (intraday.get("intraday_bias") or "").upper()
-        if ib == "BULLISH":            score += 10
-        elif ib == "LEANING_BULLISH":  score += 5
-        elif ib == "BEARISH":          score -= 10
-        elif ib == "LEANING_BEARISH":  score -= 5
+        if ib == "BULLISH":            score += 12
+        elif ib == "LEANING_BULLISH":  score += 8
+        elif ib == "BEARISH":          score -= 12
+        elif ib == "LEANING_BEARISH":  score -= 8
+
+        # Full VWAP alignment bonus.
+        # Price above (or below) VWAP on ALL THREE timeframes is the
+        # cleanest structural read available intraday — it means every
+        # participant timeframe agrees on control. Worth more than the
+        # sum of its parts, so add a bonus on top of the per-timeframe
+        # scoring above.
+        positions = [(tf.get("vwap_position") or "").lower()
+                     for tf in (tf5, tf15, tf1h)]
+        if positions and all("above" in p for p in positions):
+            score += 8
+        elif positions and all("below" in p for p in positions):
+            score -= 8
+
+        # Daily-MACD override.
+        # Daily MACD is a multi-day lagging indicator. When it disagrees
+        # with a clean intraday structure it is usually describing last
+        # week, not today — e.g. QQQ up 1.76% intraday with daily MACD
+        # still printing bearish. For a 0-2 DTE trade the intraday tape
+        # is the better evidence, so refund most of the daily MACD
+        # penalty when intraday structure clearly contradicts it.
+        macd_dir = (ta.get("macd_crossover") or "")
+        if all("above" in p for p in positions) and macd_dir in ("bearish", "bearish_cross"):
+            score += 5   # partially refund the -7 / -15 daily penalty
+        elif all("below" in p for p in positions) and macd_dir in ("bullish", "bullish_cross"):
+            score -= 5
 
         # 3-candle momentum on the 15m — short-term directional thrust
         mom = tf15.get("momentum_3c")
         if isinstance(mom, (int, float)):
-            if mom >= 1.0:    score += 6
-            elif mom >= 0.3:  score += 3
-            elif mom <= -1.0: score -= 6
-            elif mom <= -0.3: score -= 3
+            if mom >= 1.0:    score += 4
+            elif mom >= 0.3:  score += 2
+            elif mom <= -1.0: score -= 4
+            elif mom <= -0.3: score -= 2
 
         # Intraday overextension guard — a parabolic 5m RSI is a poor
         # entry in EITHER direction. Pull the score back toward neutral
