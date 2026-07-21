@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 328.114990234375,
+      "price": 327.125,
       "volume_ratio": 0.0,
-      "ts": 1784654444.043836,
-      "last_full_scan_ts": 1784651559.8563957
+      "ts": 1784655047.8501844,
+      "last_full_scan_ts": 1784655098.4989123
     },
     "AMZN": {
-      "price": 248.20989990234375,
+      "price": 248.4949951171875,
       "volume_ratio": 0.0,
-      "ts": 1784654444.7213879,
+      "ts": 1784655048.20758,
       "last_full_scan_ts": 1784653312.2553437
     },
     "META": {
-      "price": 645.89501953125,
+      "price": 646.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1784654445.2624712,
+      "ts": 1784655048.4807632,
       "last_full_scan_ts": 1784654500.3645284
     },
     "MSFT": {
-      "price": 398.6000061035156,
+      "price": 399.4049987792969,
       "volume_ratio": 0.0,
-      "ts": 1784654446.1581035,
+      "ts": 1784655048.859347,
       "last_full_scan_ts": 1784654543.660648
     },
     "NVDA": {
-      "price": 206.14999389648438,
+      "price": 206.25999450683594,
       "volume_ratio": 0.0,
-      "ts": 1784654446.7425988,
+      "ts": 1784655049.1059217,
       "last_full_scan_ts": 1784651514.9396584
     },
     "QQQ": {
-      "price": 709.27001953125,
+      "price": 709.5800170898438,
       "volume_ratio": 0.0,
-      "ts": 1784654447.3996809,
+      "ts": 1784655049.3996613,
       "last_full_scan_ts": 1784653361.338866
     },
     "SPY": {
-      "price": 748.3150024414062,
+      "price": 748.469970703125,
       "volume_ratio": 0.0,
-      "ts": 1784654448.0913904,
+      "ts": 1784655049.7787192,
       "last_full_scan_ts": 1784653407.2315958
     },
     "TSLA": {
-      "price": 379.57000732421875,
+      "price": 379.875,
       "volume_ratio": 0.0,
-      "ts": 1784654448.7129362,
+      "ts": 1784655049.9337487,
       "last_full_scan_ts": 1784653457.260049
     }
   },
@@ -77,35 +77,6 @@
       },
       "was_flagged": false,
       "cached_at": 1784644944.431472,
-      "score": 48
-    },
-    "AAPL": {
-      "result": {
-        "ticker": "AAPL",
-        "timestamp": "2026-07-21T16:32:39.853396",
-        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $328.34 | Time: 12:32 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is trading near its 52-week high ($334.99) with strong 20-day momentum (+11.56%) and broad tech sector tailwinds (+2.67% today). The most plausible scenario over the next 5-15 days is a continued grind toward the 52W high with potential consolidation/pullback near $333-335 resistance, given overbought oscillators and price sitting ~2% below that ceiling. Intraday structure is choppy and mixed, suggesting the near-term path is sideways-to-slightly-higher with elevated two-way risk rather than a clean directional impulse.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Tech sector +2.67% / SPY +0.89%** | AAPL has macro/sector wind at its back today \u2014 broad risk-on favors continuation |\n| **MACD Histogram +2.27 (Daily), Bullish** | Daily momentum still positive; trend not broken |\n| **15m Timeframe: 3 bull / 1 bear** | Dominant intraday trend on the setup confirmation frame is bullish |\n| **OBV Rising + Price +0.53% on day** | Accumulation bias beneath the surface despite low volume |\n\n**Implication:** Stock wants to test $333-335 resistance if market holds. Bulls need a clean 15m VWAP hold and volume pickup.\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI 64.94 + Stochastic 85.47/89.24** | Dual overbought signals on daily \u2014 mean reversion risk is elevated |\n| **5m Timeframe: 0 bull / 3 bear (BELOW VWAP)** | Intraday near-term momentum has rolled over; price failing at $328.67 VWAP |\n| **Volume 0.27x 20D MA (extremely low)** | Rally lacks conviction \u2014 thin tape means no institutional sponsorship today |\n| **Price at 20D resistance $333.74 / 52W high $334.99** | Double resistance confluence overhead; failed breakout scenario is real |\n\n**Implication:** A rejection near $330-334 with volume confirmation could produce a sharp intraday drop back toward $324-325 support zone.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news today (0 articles):** Any sudden headline \u2014 tariff update, iPhone demand data, analyst revision \u2014 moves immediately into an illiquid tape (0.27x volume = violent moves on catalysts)\n- **52W High Proximity ($334.99):** A breakout above would trigger momentum-chasing algos; a rejection would be equally sharp\n- **Options Expiry Pinning:** Balanced P/C (0.62), 10 flagged unusual contracts (5C/5P) \u2014 market makers may pin near $327-330 into close, limiting directional move\n- **Afternoon Volume Surge:** If volume normalizes toward the 64M average, any directional move accelerates significantly \u2014 current 17M volume is dangerously thin for 0DTE\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$334.99** | 52W High / Hard Resistance | Breakout above = momentum ignition; rejection = short-term top |\n| **$333.74** | 20D Resistance | First ceiling; where bears are positioned |\n| **$328.67** | 5m VWAP | Currently below = near-term bearish; reclaim = bullish flip |\n| **$326.29** | 15m VWAP | Bull/bear line for intraday structure; loss = setup shifts bearish |\n| **$323-324** | EMA9 Daily zone | First meaningful support on a pullback |\n| **$275.15** | 20D Support | Only matters on a macro shock \u2014 irrelevant for 0-2 DTE |\n\n**Thesis-changing level:** Reclaim of $328.67 (5m VWAP) with volume \u2192 bullish. Lose $326.29 (15m VWAP) \u2192 bearish structure confirmed.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSignals are genuinely split: daily trend and sector are bullish, but intraday (5m) is clearly bearish, volume is alarmingly low across all timeframes (0.17x on 5m, 0.03x on 15m), and the stock is wedged between VWAP levels with no clean directional momentum. The balanced unusual options flow (5C/5P) and neutral P/C ratio add no directional edge. This is a choppy, low-volume consolidation at resistance \u2014 not a clean setup in either direction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe 5m is bearish, 15m is bullish, 1H is mixed \u2014 textbook \"wait for alignment\" per the confluence rules. A ticker UP on the day in a green sector with rising OBV is NOT a put candidate, but the lack of volume and stalled intraday momentum means it's not a clean call setup either. Below the threshold for a 0-2 DTE trade.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter \u2014 wait for timeframe confluence (5m, 15m, 1H all aligned in same direction)\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains at <0.30x 20D average (no conviction behind any move)\nKEY RISK: At 0.27x average volume, any short-dated option will suffer outsized bid/ask spread and slippage; a correct directional call can still lose on execution alone in this tape\n```\n\n---\n\n### \u26a0\ufe0f TRADER'S NOTE\n**The setup to watch for:** If price reclaims **$328.67** (5m VWAP) on a 15m candle close with volume above 0.5x avg \u2192 **CALL candidate, 1DTE $329-330 strike**. If price loses **$326.29** (15m VWAP) on a 15m close with volume confirmation \u2192 **PUT candidate, 1DTE $327-328 strike**. Neither trigger has fired yet. Patience here is capital preservation \u2014 theta on a 0DTE in this volume environment is a guaranteed drain without a clear edge.",
-        "confluence_score": 48,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter \u2014 wait for timeframe confluence (5m, 15m, 1H all aligned in same direction)",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains at <0.30x 20D average (no conviction behind any move)",
-          "key_risk": "At 0.27x average volume, any short-dated option will suffer outsized bid/ask spread and slippage; a correct directional call can still lose on execution alone in this tape",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5906
-      },
-      "was_flagged": false,
-      "cached_at": 1784647856.1223567,
       "score": 48
     },
     "NVDA": {
@@ -196,5 +167,5 @@
       "score": 42
     }
   },
-  "saved_at": "2026-07-21T13:22:25-04:00"
+  "saved_at": "2026-07-21T13:31:40-04:00"
 }
