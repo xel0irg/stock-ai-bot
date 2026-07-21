@@ -262,6 +262,11 @@ def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]
         time.sleep(2)
 
     save_state()
+    try:
+        from core.alert_cooldown import save_state as save_cooldown
+        save_cooldown()
+    except Exception:
+        pass
 
     log.info("\n" + "="*55)
     log.info("  SCAN COMPLETE — SUMMARY")

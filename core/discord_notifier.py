@@ -237,6 +237,23 @@ def send_discord_alert(
         log.info(f"Discord: {ticker} score {score} below threshold — no alert")
         return False
 
+    # ── Duplicate suppression ─────────────────────────────────
+    # The same setup re-alerting every scan interval is noise, not
+    # signal. Suppress repeats of the same ticker+direction inside
+    # the cooldown window unless the score materially improved.
+    direction = (ai.get("trade_setup") or {}).get("contract_type", "NONE")
+    if not force:
+        try:
+            from core.alert_cooldown import should_alert
+            allowed, reason = should_alert(ticker, direction, score)
+            if not allowed:
+                log.info(f"Discord: {ticker} suppressed — {reason}")
+                return False
+            if reason:
+                log.info(f"Discord: {ticker} alerting — {reason}")
+        except Exception as e:
+            log.warning(f"Cooldown check failed for {ticker} ({e}) — alerting anyway")
+
     embed = _build_embed(ticker, tech, sent, fund, ai)
 
     # ── Signal card image ─────────────────────────────────────
@@ -267,6 +284,11 @@ def send_discord_alert(
         if resp.status_code in (200, 204):
             log.info(f"✅ Discord alert sent for {ticker} (score={score}"
                      f"{', with card' if card_png else ''})")
+            try:
+                from core.alert_cooldown import record_alert
+                record_alert(ticker, direction, score)
+            except Exception:
+                pass
             return True
         else:
             log.error(f"Discord webhook error: {resp.status_code} — {resp.text[:200]}")
