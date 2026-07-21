@@ -49,7 +49,7 @@ BANNER = r"""
 """
 
 
-def analyze_ticker(ticker: str) -> dict:
+def analyze_ticker(ticker: str, was_flagged: bool = False) -> dict:
     """
     Full pipeline for a single ticker:
     1. Technical Analysis (OHLCV, indicators, options, short interest)
@@ -119,14 +119,20 @@ def analyze_ticker(ticker: str) -> dict:
         # fresh, skip the Claude call and reuse the cached result.
         log.info(f"[4/4] Running Claude AI Synthesis...")
         # Option 4: try AI cache before calling Claude.
-        # cache_ai_result only caches NONE/no-trade results, so if anything
-        # actionable was last seen, get_cached_ai_result returns None → fresh call.
+        # CRITICAL: if Tier 1 flagged this ticker, something changed —
+        # price moved, volume spiked, VWAP crossed. Serving a stale
+        # cached result in that case defeats the entire purpose of the
+        # pre-screener: it would detect the move and then throw the
+        # escalation away. Flagged tickers ALWAYS get fresh analysis.
         _cached_ai = None
-        try:
-            from core.prescreener import get_cached_ai_result
-            _cached_ai = get_cached_ai_result(ticker)
-        except Exception:
-            pass
+        if was_flagged:
+            log.info(f"{ticker}: flagged by pre-screen — bypassing AI cache")
+        else:
+            try:
+                from core.prescreener import get_cached_ai_result
+                _cached_ai = get_cached_ai_result(ticker)
+            except Exception:
+                pass
 
         if _cached_ai is not None:
             ai = _cached_ai
@@ -253,7 +259,7 @@ def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]
     all_results = []
     for ticker in to_scan:
         was_flagged = ticker in flagged
-        result = analyze_ticker(ticker)
+        result = analyze_ticker(ticker, was_flagged=was_flagged)
         result["_was_flagged"] = was_flagged
         all_results.append(result)
         mark_full_scan(ticker)

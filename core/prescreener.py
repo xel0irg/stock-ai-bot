@@ -110,10 +110,16 @@ def cache_ai_result(ticker: str, ai_result: Dict[str, Any],
         # Never cache actionable signals
         _AI_CACHE.pop(ticker, None)
         return
+    # Preserve the ORIGINAL cache timestamp when re-caching the same
+    # NONE result. Overwriting cached_at on every scan reset the expiry
+    # clock continuously, so the cache never aged out and a ticker that
+    # once scored NONE could stay stale indefinitely.
+    prev = _AI_CACHE.get(ticker)
+    cached_at = prev["cached_at"] if prev and "cached_at" in prev else time.time()
     _AI_CACHE[ticker] = {
         "result":      ai_result,
         "was_flagged": was_flagged,
-        "cached_at":   time.time(),
+        "cached_at":   cached_at,
         "score":       ai_result.get("confluence_score", 0),
     }
 
