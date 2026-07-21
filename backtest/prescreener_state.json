@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 328.6400146484375,
+      "price": 328.114990234375,
       "volume_ratio": 0.0,
-      "ts": 1784653844.1303406,
+      "ts": 1784654444.043836,
       "last_full_scan_ts": 1784651559.8563957
     },
     "AMZN": {
-      "price": 248.10000610351562,
+      "price": 248.20989990234375,
       "volume_ratio": 0.0,
-      "ts": 1784653844.61083,
+      "ts": 1784654444.7213879,
       "last_full_scan_ts": 1784653312.2553437
     },
     "META": {
-      "price": 646.5698852539062,
+      "price": 645.89501953125,
       "volume_ratio": 0.0,
-      "ts": 1784653845.133011,
-      "last_full_scan_ts": 1784650287.9330115
+      "ts": 1784654445.2624712,
+      "last_full_scan_ts": 1784654500.3645284
     },
     "MSFT": {
-      "price": 398.4100036621094,
+      "price": 398.6000061035156,
       "volume_ratio": 0.0,
-      "ts": 1784653845.6639168,
-      "last_full_scan_ts": 1784650334.4852676
+      "ts": 1784654446.1581035,
+      "last_full_scan_ts": 1784654543.660648
     },
     "NVDA": {
-      "price": 205.9250030517578,
+      "price": 206.14999389648438,
       "volume_ratio": 0.0,
-      "ts": 1784653846.0717206,
+      "ts": 1784654446.7425988,
       "last_full_scan_ts": 1784651514.9396584
     },
     "QQQ": {
-      "price": 709.52001953125,
+      "price": 709.27001953125,
       "volume_ratio": 0.0,
-      "ts": 1784653846.6171057,
+      "ts": 1784654447.3996809,
       "last_full_scan_ts": 1784653361.338866
     },
     "SPY": {
-      "price": 748.5900268554688,
+      "price": 748.3150024414062,
       "volume_ratio": 0.0,
-      "ts": 1784653847.1734734,
+      "ts": 1784654448.0913904,
       "last_full_scan_ts": 1784653407.2315958
     },
     "TSLA": {
-      "price": 380.07000732421875,
+      "price": 379.57000732421875,
       "volume_ratio": 0.0,
-      "ts": 1784653847.6581922,
+      "ts": 1784654448.7129362,
       "last_full_scan_ts": 1784653457.260049
     }
   },
@@ -108,35 +108,6 @@
       "cached_at": 1784647856.1223567,
       "score": 48
     },
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-07-21T16:11:27.928375",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:10 PM ET | $646.84**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is caught in a meaningful intraday conflict: the short-term (5m/15m) tape is bearish with price sitting below VWAP on low volume, but the macro backdrop is strongly bullish with Tech sector up +2.62% and QQQ up +1.84%. The most plausible scenario over the next 5-15 sessions is a consolidation/grind higher toward the $681 resistance zone, supported by strong fundamentals and sector tailwinds, but today's intraday session may see continued drift with no clear momentum catalyst. The 5-day return of -5.06% against a +15.06% 20-day return signals a healthy pullback within a broader uptrend that has not yet resolved to the upside.\n\n---\n\n## 2. BULL CASE\n\n1. **Tech sector +2.62% / QQQ +1.84% today** \u2014 META is underperforming its own sector significantly ($646.84, +0.15%) while everything around it rips. Sector rotation or catch-up move is plausible; it would be unusual for META to stay flat while Tech surges this much intraday.\n2. **Daily MACD Histogram: +4.3682 (BULLISH)** \u2014 On the daily timeframe, momentum remains constructively positive. MACD histograms of this magnitude don't reverse on a single weak session.\n3. **Fundamentals: Forward P/E 17.8, PEG 0.94, Revenue Growth +33%, Earnings Growth +62%** \u2014 Analyst consensus STRONG BUY, $822 price target (+27%). These don't drive 0-2 DTE, but they prevent sustained selling pressure without a catalyst.\n4. **1H VWAP holding above price / 1H bias is MIXED, not bearish** \u2014 The 1H timeframe shows 2B/2Br signals and price is microscopically above the 1H VWAP ($646.69 vs $646.84). Bulls haven't fully lost control on the broader intraday structure.\n\n---\n\n## 3. BEAR CASE\n\n1. **5m and 15m are 0/4 bearish signals with price below VWAP** \u2014 Every short-term momentum indicator on the 5m and 15m frames is aligned bearish. This is the cleanest signal in the dataset.\n2. **OBV Trend: FALLING** \u2014 On-balance volume is declining, meaning sellers are distributing into price. This is a meaningful divergence given the broader green tape.\n3. **Volume: 0.15x the 20-day average (critically low)** \u2014 Only 2.8M shares traded vs 19.4M average. Low-volume sessions on down-moves can extend; there is no buying conviction defending price here.\n4. **5-day return -5.06% vs sector +2.62% today** \u2014 META has been a notable underperformer. Relative weakness in a rising market is a red flag for short-dated bearish setups.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Sector catch-up (BULLISH):** If QQQ continues to accelerate, META's underperformance becomes a coiled spring. A single large buyer could close the gap rapidly within the session.\n- **Macro reversal (BEARISH):** SPY/QQQ are up big on relatively unclear regime context. If that reverses in the afternoon, META's weak tape and falling OBV make it a higher-beta drag.\n- **No news / no earnings imminent:** The absence of any news is actually notable \u2014 0 articles found. With no catalyst, the stock is purely tape-driven, which makes volume signals the most important real-time indicator.\n- **Options flow neutral (P/C 0.40):** The put/call ratio is low (call-heavy), consistent with the sector being bullish. Unusual flags split evenly 5/5. No obvious smart money directional bet to follow.\n- **VIX 17.21:** Normal. Not elevated, no volatility event. Premium is not inflated, which is fine for buyers.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $681.31 | 20-day resistance; breakout here confirms bull resumption |\n| **VWAP (5m/15m)** | $647.65\u2013$648.12 | Reclaiming these flips intraday bias to neutral/bullish |\n| **EMA9 (5m/15m)** | ~$647.40\u2013$647.51 | Current bearish EMA structure pivot |\n| **Current Price** | $646.84 | Pivot: close below $645 confirms intraday bear control |\n| **Near Support** | $636\u2013$638 | Approximate intraday support zone (gap fill area) |\n| **20D Support** | $542.87 | Deep structural support \u2014 not relevant for 0-2 DTE |\n| **Thesis-Changing Level** | $648.50 reclaim | Reclaiming 15m VWAP + EMA21 would invalidate the bearish intraday case entirely |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Score explanation:** The intraday bearish signals (5m/15m) are clean in isolation, but they directly conflict with a strongly bullish macro/sector backdrop (Tech +2.62%, QQQ +1.84%), ultra-low volume that lacks conviction in either direction, and a daily MACD that remains bullish \u2014 too much contradiction for a high-probability 0-2 DTE entry.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday bearish structure is real, but trading a PUT against a sector that's up +2.62% on 0.15x normal volume is a low-probability bet. The catch-up risk is asymmetric and unquantifiable without a volume confirmation. The bullish case is equally unactionable \u2014 price is drifting below VWAP with no momentum behind it. This is a wait-and-see session.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\n```\n\n**Rationale for NONE:**\nScore is 48/100, which falls in the No Trade zone (0\u201354). The primary contradiction disqualifying both directions:\n\n- **Against PUTs:** Tech +2.62%, QQQ +1.84%, daily MACD bullish, call-heavy flow (P/C 0.40). META drifting lower on ultra-thin volume (0.15x avg) against a green sector is a catch-up risk, not a confirmed breakdown. Volume confirmation is absent \u2014 a core requirement per regime rules.\n- **Against CALLs:** Price is below 5m and 15m VWAP with 0/4 bearish signals on both short timeframes. Entering a CALL before reclaiming VWAP + volume acceleration is premature.\n\n**WATCHLIST TRIGGER:** If volume picks up (>0.5x avg) AND META reclaims the 15m VWAP at $648.12 with a bullish candle close \u2192 reassess a 1DTE CALL targeting $655\u2013$658. If META breaks $644 on a volume spike with sector weakening \u2192 reassess a 1DTE PUT targeting $636\u2013$638. Neither trigger is present at 12:10 PM ET.",
-        "confluence_score": 48,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5937
-      },
-      "was_flagged": false,
-      "cached_at": 1784646098.1328158,
-      "score": 48
-    },
     "NVDA": {
       "result": {
         "ticker": "NVDA",
@@ -194,7 +165,36 @@
       "was_flagged": false,
       "cached_at": 1784653457.260052,
       "score": 42
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-07-21T17:22:23.655517",
+        "analysis": "# MSFT \u2014 0-2 DTE Options Analysis\n**Current Price: $398.57 | Time: 1:21 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT is trading in a consolidation zone near $398-399, caught between short-term bullish momentum on the 5m frame and bearish pressure on the 15m/1H frames. The most plausible scenario over the next 5-15 days is a continued grind toward the $402 resistance area, supported by a strong sector tailwind (Tech +2.73%) and a healthy daily MACD. However, the intraday structure is muddied by sub-average volume (0.29x 20D MA) and conflicting VWAP signals, suggesting price needs a catalyst or volume surge to break the $402 cap cleanly.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Tech Sector +2.73%** | MSFT is lagging its sector badly (-0.92% vs +2.73%) \u2014 mean reversion pressure is bullish; capital rotation into MSFT is likely |\n| **Daily MACD Histogram +3.34 (BULLISH)** | Intermediate momentum is positive; the 5-15 day drift favors upside continuation |\n| **OBV Rising** | Accumulation is occurring on balance despite today's down day; smart money not distributing |\n| **5m Bias: 3/3 Bullish signals** | Price above 5m VWAP, bullish MACD, and positive 3-candle momentum \u2014 immediate short-term tape is recovering |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **15m Bias: 3/3 Bearish signals** | Price below 15m VWAP ($399.18), bearish EMA9/21 cross, and bearish MACD on the confirmation timeframe |\n| **1H 3-Candle Momentum: -0.632%** | The dominant hourly trend is downward; 1H structure shows selling pressure |\n| **Volume: 0.29x 20D MA** | Extremely low volume means today's moves lack conviction \u2014 breakouts on this volume are unreliable |\n| **Stochastic K/D: 77.27/80.42** | Stochastic is rolling over from overbought \u2014 historically a near-term pullback precursor |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Sector lag anomaly**: MSFT is down -0.92% while Tech is up +2.73% \u2014 this is a +3.65% divergence that is unusual and could snap back violently in either direction depending on whether the lagging reflects stock-specific selling or delayed catch-up\n- **Options flow**: P/C ratio of 0.26 is extremely skewed toward calls \u2014 suggests options market participants are positioned bullishly despite today's weakness; could signal either a squeeze or a trap\n- **No news today**: Zero news articles means any headline drop (analyst note, product announcement, macro event) has outsized impact on this low-volume session\n- **Late-day options pinning**: With 0DTE activity, $400 is a magnetic strike level \u2014 price may gravitate toward $400 into the close, limiting both call and put profitability\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$402.29** | 20D Resistance | Primary cap \u2014 failure here confirms bearish thesis |\n| **$400.00** | Psychological / Gamma | Max pain / pin risk for 0DTE; key intraday pivot |\n| **$399.18** | 15m VWAP | Reclaiming this level flips 15m bias bullish \u2014 key trigger |\n| **$398.36** | 5m VWAP | Current near-term support; losing it confirms intraday bears winning |\n| **$397.84** | EMA50 (Daily) | Nearest dynamic support; breach increases bearish momentum |\n| **$394.07** | EMA9 (Daily) | Bull thesis invalidated below here |\n\n**Thesis-changing level**: Close **above $399.18** (15m VWAP) on volume > 1.5x avg = bullish flip. Close **below $397.84** (EMA50) = bearish confirmation.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Timeframes are genuinely split** \u2014 5m bullish, 15m bearish, 1H mixed \u2014 with no volume confirmation on any frame, creating a low-clarity, low-actionability setup that cannot support a high-conviction 0-2 DTE trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in neutrality)**\n\n**Reasoning**: The directional conflict is real, not manufactured. The stock is lagging its sector by ~3.65%, which is the most interesting data point \u2014 but it cuts both ways (catch-up rally OR continued distribution). The 15m bearish structure is clearly offset by the 5m bullish recovery and the strong daily MACD. Volume at 0.29x average means none of these signals carry sufficient weight for a 0-2 DTE bet. The P/C ratio of 0.26 leans bullish but with ultra-low volume, it may simply reflect the absence of put buyers rather than active call conviction.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade to manage.\nENTRY CONDITION: Do not enter until 15m and 5m timeframes align \u2014 either both bullish (15m VWAP reclaim + bullish MACD cross) or both bearish (5m VWAP loss + 15m EMA9 rolling below EMA21 on expanding volume).\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x 20D average \u2014 moves on this tape are unreliable for short-dated options.\nKEY RISK: The 3.65% underperformance vs Tech sector today could snap back sharply in either direction on any volume surge; being in the wrong-side option on thin volume would result in a fast, full loss.\n\n---\n\n**BOTTOM LINE**: MSFT is in genuine no-man's land at 1:21 PM ET. The signal conflict is honest \u2014 daily structure is bullish, intraday is split, volume is absent. The more compelling trade will set up when the sector-lag anomaly resolves, likely tomorrow, when a 1DTE call on a clean 15m VWAP reclaim above $399.18 would be a credible entry. **Sit on hands today.**",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade to manage.",
+          "entry_condition": "Do not enter until 15m and 5m timeframes align \u2014 either both bullish (15m VWAP reclaim + bullish MACD cross) or both bearish (5m VWAP loss + 15m EMA9 rolling below EMA21 on expanding volume).",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.5x 20D average \u2014 moves on this tape are unreliable for short-dated options.",
+          "key_risk": "The 3.65% underperformance vs Tech sector today could snap back sharply in either direction on any volume surge; being in the wrong-side option on thin volume would result in a fast, full loss.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5891
+      },
+      "was_flagged": false,
+      "cached_at": 1784654543.6606517,
+      "score": 42
     }
   },
-  "saved_at": "2026-07-21T13:10:47-04:00"
+  "saved_at": "2026-07-21T13:22:25-04:00"
 }
