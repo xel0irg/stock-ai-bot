@@ -23,7 +23,14 @@ def _load_completed_rows() -> list[dict]:
         return []
     with open(LOG_FILE, "r", newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
-    return [r for r in rows if r.get("checked") == "yes" and r.get("result") in ("WIN", "LOSS")]
+    # A trade is "resolved" if it actually triggered and produced an
+    # outcome: WIN, LOSS, or FLAT (triggered but expired without reaching
+    # profit — a real theta loss on an option). NOT_TRIGGERED means price
+    # never reached the entry, so no trade would have been taken; those
+    # are excluded from win rate but reported separately.
+    return [r for r in rows
+            if r.get("checked") == "yes"
+            and r.get("result") in ("WIN", "LOSS", "FLAT")]
 
 
 def _score_bucket(score: str) -> str:
@@ -40,9 +47,10 @@ def _score_bucket(score: str) -> str:
 
 
 def _win_rate(rows: list[dict]) -> tuple[int, int, float]:
-    wins   = sum(1 for r in rows if r["result"] == "WIN")
-    total  = len(rows)
-    rate   = round((wins / total) * 100, 1) if total else 0.0
+    # FLAT counts as a non-win (option expired without reaching profit).
+    wins  = sum(1 for r in rows if r["result"] == "WIN")
+    total = len(rows)   # WIN + LOSS + FLAT
+    rate  = round((wins / total) * 100, 1) if total else 0.0
     return wins, total, rate
 
 
@@ -108,7 +116,7 @@ def generate_report() -> str:
     lines.append("")
 
     lines.append("═" * 50)
-    lines.append(f"Total signals in dataset: {total} (only WIN/LOSS counted; NO_TRIGGER excluded)")
+    lines.append(f"Resolved trades: {total} (WIN/LOSS/FLAT; NOT_TRIGGERED excluded as no entry occurred)")
 
     report = "\n".join(lines)
     return report

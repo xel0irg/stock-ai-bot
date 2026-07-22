@@ -50,7 +50,8 @@ FIELDNAMES = [
     "max_adverse_pct",   # worst % move against prediction within window
     "hit_target",        # yes/no — did price reach stock_target
     "hit_stop",          # yes/no — did price reach stop_level first
-    "result",            # WIN / LOSS / NO_TRIGGER / PENDING
+    "entry_triggered",   # yes/no — did price reach the entry_trigger level
+    "result",            # WIN / LOSS / FLAT / NOT_TRIGGERED / NO_DATA / PENDING
 ]
 
 

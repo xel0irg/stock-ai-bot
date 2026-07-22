@@ -213,54 +213,121 @@ def _evaluate_signal(row: dict, price_df: Optional[pd.DataFrame]) -> dict:
         update["result"] = "BAD_DATA"
         return update
 
-    closes      = price_df["close"]
+    closes = price_df["close"]
+    highs  = price_df["high"] if "high" in price_df.columns else closes
+    lows   = price_df["low"]  if "low"  in price_df.columns else closes
     final_price = float(closes.iloc[-1])
     update["outcome_price"] = round(final_price, 2)
 
-    if contract_type == "PUT":
-        favorable_move = entry_price - float(closes.min())
-        adverse_move   = float(closes.max()) - entry_price
-        hit_target     = bool((closes <= stock_target).any())
-        hit_stop       = bool((closes >= stop_level).any()) if stop_level else False
-    else:  # CALL
-        favorable_move = float(closes.max()) - entry_price
-        adverse_move   = entry_price - float(closes.min())
-        hit_target     = bool((closes >= stock_target).any())
-        hit_stop       = bool((closes <= stop_level).any()) if stop_level else False
+    # ── Entry trigger ────────────────────────────────────────────────
+    # Did price actually reach the entry trigger level? A signal whose
+    # trigger was never reached is genuinely un-actionable — that is the
+    # ONLY case that should be labelled NOT_TRIGGERED. Everything else is
+    # a real outcome (win, loss, or a partial move that expired flat).
+    try:
+        entry_trigger = float(row["entry_trigger"]) if row.get("entry_trigger") else None
+    except (ValueError, TypeError):
+        entry_trigger = None
 
-    update["max_favorable_pct"] = round((favorable_move / entry_price) * 100, 2)
-    update["max_adverse_pct"]   = round((adverse_move   / entry_price) * 100, 2)
-    update["hit_target"]        = "yes" if hit_target else "no"
-    update["hit_stop"]          = "yes" if hit_stop   else "no"
-
-    if hit_target and not hit_stop:
-        update["result"] = "WIN"
-    elif hit_target and hit_stop:
-        # Both hit — determine which came first
+    if entry_trigger:
         if contract_type == "PUT":
-            t_idx = closes[closes <= stock_target].index.min()
-            s_idx = closes[closes >= stop_level].index.min() if stop_level else None
+            triggered = bool((lows <= entry_trigger).any())
         else:
-            t_idx = closes[closes >= stock_target].index.min()
-            s_idx = closes[closes <= stop_level].index.min() if stop_level else None
-        update["result"] = "WIN" if (s_idx is None or t_idx < s_idx) else "LOSS"
+            triggered = bool((highs >= entry_trigger).any())
+    else:
+        # No numeric trigger logged — treat as triggered so we still
+        # measure the outcome rather than discarding the signal.
+        triggered = True
+
+    update["entry_triggered"] = "yes" if triggered else "no"
+
+    if not triggered:
+        # Price never reached the entry — no trade would have been taken.
+        update["result"] = "NOT_TRIGGERED"
+        update["max_favorable_pct"] = 0.0
+        update["max_adverse_pct"]   = 0.0
+        update["hit_target"] = "no"
+        update["hit_stop"]   = "no"
+        return update
+
+    # ── Favorable / adverse excursion from the trigger ───────────────
+    ref = entry_trigger if entry_trigger else entry_price
+    if contract_type == "PUT":
+        favorable_move = ref - float(lows.min())
+        adverse_move   = float(highs.max()) - ref
+        hit_target     = bool((lows  <= stock_target).any())
+        hit_stop       = bool((highs >= stop_level).any()) if stop_level else False
+    else:  # CALL
+        favorable_move = float(highs.max()) - ref
+        adverse_move   = ref - float(lows.min())
+        hit_target     = bool((highs >= stock_target).any())
+        hit_stop       = bool((lows  <= stop_level).any()) if stop_level else False
+
+    fav_pct = (favorable_move / ref) * 100
+    adv_pct = (adverse_move   / ref) * 100
+    update["max_favorable_pct"] = round(fav_pct, 2)
+    update["max_adverse_pct"]   = round(adv_pct, 2)
+    update["hit_target"] = "yes" if hit_target else "no"
+    update["hit_stop"]   = "yes" if hit_stop   else "no"
+
+    # ── Profit threshold ─────────────────────────────────────────────
+    # An options trade does not need to reach the exact stock target to
+    # be profitable — the premium moves with the underlying. Count a
+    # trade as a WIN if the favorable move reached a realistic fraction
+    # of the expected move (default 0.5x EM) BEFORE the stop was hit.
+    # This is what actually determines whether the position could have
+    # been closed green, and it stops the checker from discarding real
+    # winners like the +1.72% META move that never touched a too-far target.
+    try:
+        em_pct = float(row["em_pct"]) if row.get("em_pct") else None
+    except (ValueError, TypeError):
+        em_pct = None
+
+    # Profit threshold in %: half the expected move, floored at 0.3%
+    profit_threshold = max((em_pct or 0) * 0.5, 0.3)
+    reached_profit = fav_pct >= profit_threshold
+
+    # Timing: did the favorable target come before the stop?
+    def _first_idx(mask):
+        idx = closes[mask].index
+        return idx.min() if len(idx) else None
+
+    if contract_type == "PUT":
+        stop_idx = _first_idx(highs >= stop_level) if stop_level else None
+        prof_idx = _first_idx(lows <= ref * (1 - profit_threshold/100))
+    else:
+        stop_idx = _first_idx(lows <= stop_level) if stop_level else None
+        prof_idx = _first_idx(highs >= ref * (1 + profit_threshold/100))
+
+    if reached_profit and (stop_idx is None or (prof_idx is not None and prof_idx <= stop_idx)):
+        update["result"] = "WIN"
     elif hit_stop:
         update["result"] = "LOSS"
+    elif reached_profit:
+        # profit level touched but stop came first
+        update["result"] = "LOSS"
     else:
-        update["result"] = "NO_TRIGGER"
+        # Triggered, but never reached profit threshold or stop —
+        # expired roughly flat. A small real loss on an option (theta).
+        update["result"] = "FLAT"
 
     return update
 
 
 # ── Main entry point ──────────────────────────────────────────────────
 
-def run_outcome_check(recheck_no_data: bool = False) -> dict:
+def run_outcome_check(recheck_no_data: bool = False,
+                      recheck_all: bool = False) -> dict:
     """
     Check all eligible pending signals and update the log.
 
     Args:
         recheck_no_data: if True, also re-evaluate rows previously
-                         marked NO_DATA (useful after fixing this bug).
+                         marked NO_DATA.
+        recheck_all: if True, re-evaluate EVERY already-checked row.
+                     Use after changing the evaluation logic itself
+                     (e.g. the NO_TRIGGER -> WIN/LOSS/FLAT rework) so the
+                     historical stats reflect the corrected definitions.
     """
     rows = _load_rows()
     if not rows:
@@ -275,11 +342,14 @@ def run_outcome_check(recheck_no_data: bool = False) -> dict:
         already_checked = row.get("checked") == "yes"
         is_no_data      = row.get("result") == "NO_DATA"
 
-        if already_checked and not (recheck_no_data and is_no_data):
-            continue
-
-        if already_checked and is_no_data:
-            recheck_count += 1
+        # Decide whether to (re)evaluate this row
+        if already_checked:
+            if recheck_all:
+                recheck_count += 1
+            elif recheck_no_data and is_no_data:
+                recheck_count += 1
+            else:
+                continue
 
         signal_time = _parse_ts(row.get("timestamp", ""))
         if signal_time is None:
@@ -316,7 +386,11 @@ def run_outcome_check(recheck_no_data: bool = False) -> dict:
 
 
 if __name__ == "__main__":
-    recheck = "--recheck" in sys.argv
-    if recheck:
+    recheck     = "--recheck" in sys.argv
+    recheck_all = "--recheck-all" in sys.argv
+    if recheck_all:
+        log.info("--recheck-all mode: re-evaluating EVERY checked row "
+                 "against current logic")
+    elif recheck:
         log.info("--recheck mode: will re-evaluate all NO_DATA rows")
-    run_outcome_check(recheck_no_data=recheck)
+    run_outcome_check(recheck_no_data=recheck, recheck_all=recheck_all)
