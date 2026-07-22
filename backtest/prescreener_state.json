@@ -1,84 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 324.7149963378906,
+      "price": 324.6499938964844,
       "volume_ratio": 0.0,
-      "ts": 1784737243.3491662,
+      "ts": 1784737846.3081172,
       "last_full_scan_ts": 1784734307.6784883
     },
     "AMZN": {
-      "price": 243.68499755859375,
+      "price": 244.0399932861328,
       "volume_ratio": 0.0,
-      "ts": 1784737243.582199,
+      "ts": 1784737846.8832693,
       "last_full_scan_ts": 1784735496.314303
     },
     "META": {
-      "price": 629.0924072265625,
+      "price": 629.0900268554688,
       "volume_ratio": 0.0,
-      "ts": 1784737243.9196897,
+      "ts": 1784737847.5476122,
       "last_full_scan_ts": 1784735544.9169824
     },
     "MSFT": {
-      "price": 388.3699951171875,
+      "price": 388.9549865722656,
       "volume_ratio": 0.0,
-      "ts": 1784737244.2438593,
+      "ts": 1784737848.1776578,
       "last_full_scan_ts": 1784735596.9663079
     },
     "NVDA": {
-      "price": 214.1699981689453,
+      "price": 213.6750030517578,
       "volume_ratio": 0.0,
-      "ts": 1784737244.5544503,
+      "ts": 1784737848.828773,
       "last_full_scan_ts": 1784737301.6153514
     },
     "QQQ": {
-      "price": 709.1599731445312,
+      "price": 709.0194702148438,
       "volume_ratio": 0.0,
-      "ts": 1784737244.9598927,
+      "ts": 1784737849.4710128,
       "last_full_scan_ts": 1784735643.877349
     },
     "SPY": {
-      "price": 749.8599853515625,
+      "price": 749.8300170898438,
       "volume_ratio": 0.0,
-      "ts": 1784737245.4579008,
+      "ts": 1784737850.3320987,
       "last_full_scan_ts": 1784735689.3372133
     },
     "TSLA": {
-      "price": 377.5899963378906,
+      "price": 377.31060791015625,
       "volume_ratio": 0.0,
-      "ts": 1784737245.693242,
-      "last_full_scan_ts": 1784733705.1644442
+      "ts": 1784737851.0012004,
+      "last_full_scan_ts": 1784737905.3461888
     }
   },
   "ai_cache": {
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-07-22T15:21:45.155448",
-        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time of Analysis: 11:21 AM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a weak consolidation phase, trading near $378.60 \u2014 roughly mid-range between its 20D support ($369.57) and the cluster of daily EMAs overhead ($385\u2013$399). The most plausible scenario over the next 5-15 days is continued chop with a slight bearish drift, as daily momentum (MACD, OBV, EMA stack) remains negative and the sector (XLY -0.56%) is underperforming. However, intraday structure today is mildly constructive \u2014 price is holding above VWAP across all three intraday timeframes \u2014 creating a genuine directional conflict that argues against pressing either side aggressively right now.\n\n---\n\n## 2. BULL CASE\n\n- **Price above VWAP (5m/15m/1H):** TSLA is trading above VWAP on all three intraday timeframes, a consistent short-term structural bullish signal. This is the strongest near-term bullish data point.\n- **Stochastic K/D deeply oversold (14.57/9.92):** At these levels, mean-reversion bounces are statistically more probable. The daily chart is coiled for a snap-back if selling pressure eases.\n- **Bollinger Band lower half (0.249) \u2014 near lower band (~$362.50):** Price proximity to the lower band historically increases the probability of a mean-reversion toward the midline (~$394.85), giving a defined upside target.\n- **Analyst consensus BUY, price target $425:** Provides a sentiment floor and potential catalyst for institutional buying on any positive narrative shift.\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD histogram deeply negative (-2.55):** This is the clearest daily momentum signal and points to sustained selling pressure, not a reversal.\n- **EMA cascade bearish (EMA9 < EMA21 < EMA50):** All short-to-medium term EMAs are stacked bearishly. Price is below EMA9 ($385.71), confirming the downtrend structure.\n- **OBV falling on LOW volume (0.23x 20D average):** Volume today is just 23% of its 20-day average. Rallies on thin volume in a downtrend are typically suspect \u2014 the up-VWAP reading lacks conviction.\n- **XLY sector -0.56%, 5-day return -3.19%:** Sector and recent price history both confirm bearish momentum. TSLA is fighting uphill against both its sector and its own recent trend.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news today (0 articles):** Absence of news means price is moving on pure technical/flow dynamics \u2014 any sudden headline (Musk macro commentary, delivery data, tariff news, EV policy) could create an outsized move given TSLA's beta of 1.80.\n- **Volume anomaly (0.23x avg):** Extreme low volume means this intraday VWAP support could evaporate instantly if a large order hits. Thin tape = violent moves on catalyst.\n- **Options flow balanced (5 unusual calls / 5 unusual puts, P/C 0.77):** Neither side is telegraphing conviction. A sudden skew toward calls or puts in the flow would be an actionable tell.\n- **7 recent SEC filings:** Worth monitoring \u2014 any 8-K or material disclosure could move price sharply in either direction.\n- **Expected move is wide:** At \u00b1$21.96 for 2DTE, the market is pricing in significant uncertainty. This creates option mispricing opportunities if direction firms up.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| Immediate support | $377.32 | 5m VWAP \u2014 losing this flips intraday bias |\n| Key intraday support | $376.95 | 1H VWAP \u2014 must hold for bulls |\n| Hard support | $369.57 | 20D support \u2014 break here = trend continuation down |\n| Bollinger lower band | $362.50 | Major support / oversold extreme |\n| Thesis-changing resistance | $385.71 | EMA9 (daily) \u2014 reclaim this = bear thesis weakening |\n| EMA21 resistance | $393.22 | Second wall; above this = short-term trend shifts |\n| 20D resistance | $425.30 | Analyst target zone \u2014 not relevant for 0-2 DTE |\n\n**Critical level:** $377.32 (5m VWAP). Holding = modest bull lean intraday. Losing = path to $369.57 test.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score rationale:** Signals are genuinely split \u2014 daily momentum is clearly bearish (MACD, EMA stack, OBV, sector) while intraday structure is mildly bullish (all-timeframe above-VWAP, 3-candle momentum positive, oversold stochastic). Volume is too thin (0.23x avg) to trust either read. The balanced options flow and neutral RSI add no directional edge. This is a low-conviction, contradictory setup \u2014 exactly the profile where 0-2 DTE theta decay punishes guessing.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NO TRADE)**\n\nThe bull and bear cases are nearly perfectly balanced today. Daily structure is bearish, intraday structure is mildly bullish \u2014 these directly contradict each other. The 42/100 confluence score falls well below the 55 minimum threshold. Forcing a direction here into thin volume on a mixed setup would be gambling, not trading.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 score of 42/100 is below the 55 minimum threshold required for any directional 0-2 DTE position.\nENTRY CONDITION: Reassess if TSLA breaks and holds below 1H VWAP ($376.95) on volume >1.5x current avg (bearish setup forming) OR closes a 15m candle above EMA9 on the daily (~$385.71) with expanding volume (bullish setup forming).\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x 20D average \u2014 thin tape invalidates any directional bias.\nKEY RISK: With beta of 1.80 and extreme low volume, a single headline or large order could create a 2-3% spike in either direction without warning \u2014 exactly the environment where short-dated options get destroyed by whipsaw.\n\n---\n\n**BOTTOM LINE:** TSLA is a ticker in conflict with itself today. The daily trend says down, the intraday structure says up, and volume says nobody is committed to either view. This is not a trade \u2014 it's a wait. Re-evaluate after a clear directional break with volume confirmation.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "No trade \u2014 score of 42/100 is below the 55 minimum threshold required for any directional 0-2 DTE position.",
-          "entry_condition": "Reassess if TSLA breaks and holds below 1H VWAP ($376.95) on volume >1.5x current avg (bearish setup forming) OR closes a 15m candle above EMA9 on the daily (~$385.71) with expanding volume (bullish setup forming).",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.5x 20D average \u2014 thin tape invalidates any directional bias.",
-          "key_risk": "With beta of 1.80 and extreme low volume, a single headline or large order could create a 2-3% spike in either direction without warning \u2014 exactly the environment where short-dated options get destroyed by whipsaw.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5976
-      },
-      "was_flagged": true,
-      "cached_at": 1784733705.1644483,
-      "score": 42
-    },
     "SPY": {
       "result": {
         "ticker": "SPY",
@@ -109,5 +80,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-07-22T12:21:43-04:00"
+  "saved_at": "2026-07-22T12:31:47-04:00"
 }
