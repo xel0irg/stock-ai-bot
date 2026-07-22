@@ -245,22 +245,56 @@ def run_scan_and_respond(ticker: str, interaction_token: str):
     as a followup to the deferred response. Runs in a background task so
     the initial /interactions request can return within Discord's 3s limit.
     """
-    try:
-        log.info(f"Discord /scan {ticker} — starting analysis...")
+    # Validate the ticker up front so obvious typos ("NVD") get an
+    # instant, clear reply instead of a slow failure deep in the pipeline.
+    from config.settings import WATCHLIST
+    tkr = (ticker or "").strip().upper()
+    if tkr not in WATCHLIST:
+        _send_followup(
+            interaction_token,
+            f"⚠️ **{ticker}** isn't on the watchlist. "
+            f"Try one of: {', '.join(WATCHLIST)}"
+        )
+        return
+
+    # Run the scan under a hard timeout. Without this, a yfinance rate
+    # limit (e.g. after a heavy backtest recheck) makes analyze_ticker
+    # block deep in retries — long enough that it neither completes nor
+    # raises, so the "thinking..." message hangs forever. The timeout
+    # guarantees the deferred message always resolves to something.
+    import concurrent.futures as _cf
+
+    def _do_scan():
         from main import analyze_ticker
-        result = analyze_ticker(ticker)
+        return analyze_ticker(tkr)
+
+    try:
+        log.info(f"Discord /scan {tkr} — starting analysis...")
+        with _cf.ThreadPoolExecutor(max_workers=1) as ex:
+            future = ex.submit(_do_scan)
+            try:
+                result = future.result(timeout=90)   # seconds
+            except _cf.TimeoutError:
+                log.warning(f"Discord /scan {tkr} — timed out after 90s")
+                _send_followup(
+                    interaction_token,
+                    f"⏱️ Scan for **{tkr}** timed out — the market data "
+                    f"provider may be rate-limited right now. Try again in "
+                    f"a few minutes."
+                )
+                return
 
         if result.get("error"):
-            content = f"⚠️ Could not complete analysis for **{ticker}**: {result['error']}"
+            content = f"⚠️ Could not complete analysis for **{tkr}**: {result['error']}"
         else:
-            content = _format_discord_summary(ticker, result)
+            content = _format_discord_summary(tkr, result)
 
         _send_followup(interaction_token, content)
-        log.info(f"Discord /scan {ticker} — completed and sent")
+        log.info(f"Discord /scan {tkr} — completed and sent")
 
     except Exception as e:
-        log.error(f"Discord /scan {ticker} failed: {e}")
-        _send_followup(interaction_token, f"⚠️ Scan for **{ticker}** failed: {e}")
+        log.error(f"Discord /scan {tkr} failed: {e}")
+        _send_followup(interaction_token, f"⚠️ Scan for **{tkr}** failed: {e}")
 
 
 def _format_discord_summary(ticker: str, result: dict) -> str:
