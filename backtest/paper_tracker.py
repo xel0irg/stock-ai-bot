@@ -1,0 +1,335 @@
+"""
+backtest/paper_tracker.py — Forward paper-trading tracker
+
+Why this exists:
+    Historical option premiums cannot be reconstructed from free data —
+    yfinance only exposes the LIVE chain, not intraday history. And the
+    stock-path backtest can't reliably tell whether profit or stop came
+    first inside a 15-minute bar. So the only trustworthy performance
+    measure is FORWARD tracking: snapshot the real option premium when a
+    signal fires, snapshot it again at close, and record the actual P&L.
+
+    This produces zero data on day one and accumulates real, unambiguous
+    results over the following weeks — premium-based, not inferred.
+
+What it records, per signal (in backtest/paper_trades.csv):
+    At signal time:
+        - contract (ticker, strike, expiry date, CALL/PUT)
+        - live option premium (mid of bid/ask)
+        - stock price, entry trigger, target, stop
+        - entered_at_signal = yes  (this cohort always "enters")
+    Through the day (each scan updates the open row):
+        - entered_on_trigger: flips to yes the first scan the stock
+          crosses the entry trigger; stamps the premium at that moment
+        - hit_target / hit_stop: whichever the stock touches first
+    At close (~3:55 PM ET):
+        - final premium snapshot
+        - P&L computed four ways:
+            {entry@signal, entry@trigger} x {hold-to-close, target/stop exit}
+
+Nothing here touches signals_log.csv or the existing backtest.
+"""
+from __future__ import annotations
+
+import csv
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, Optional
+from zoneinfo import ZoneInfo
+
+from core.logger import get_logger
+
+log = get_logger("PaperTracker")
+ET = ZoneInfo("America/New_York")
+
+TRADES_FILE = Path("backtest/paper_trades.csv")
+
+FIELDS = [
+    "signal_id",            # ticker + ISO timestamp, unique per signal
+    "signal_time",          # ET ISO timestamp
+    "ticker",
+    "contract_type",        # CALL / PUT
+    "strike",
+    "expiry_date",          # actual calendar date of the contract (YYYY-MM-DD)
+    "dte_label",            # 0DTE / 1DTE / 2DTE as the AI chose
+    "confluence_score",
+    # ── entry snapshots ──
+    "stock_at_signal",
+    "premium_at_signal",    # mid price when the signal fired
+    "entry_trigger",        # stock level that "arms" the trade
+    "stock_target",
+    "stop_level",
+    # ── trigger tracking ──
+    "entered_on_trigger",   # yes/no — did stock cross the entry trigger
+    "premium_at_trigger",   # option mid when trigger first crossed
+    "stock_at_trigger",
+    # ── intraday path ──
+    "hit_target",           # yes/no — stock reached target before stop
+    "hit_stop",             # yes/no — stock reached stop before target
+    "premium_at_exit_ts",   # option mid at the moment target/stop hit
+    # ── close ──
+    "premium_at_close",
+    "stock_at_close",
+    # ── computed P&L (% of premium) ──
+    "pnl_signal_hold",      # entry@signal  -> close
+    "pnl_signal_exit",      # entry@signal  -> target/stop exit
+    "pnl_trigger_hold",     # entry@trigger -> close
+    "pnl_trigger_exit",     # entry@trigger -> target/stop exit
+    # ── bookkeeping ──
+    "status",               # OPEN / DONE
+    "last_update",
+]
+
+
+def _now_et() -> datetime:
+    return datetime.now(ET)
+
+
+def _signal_id(ticker: str, signal_time: str) -> str:
+    return f"{ticker}_{signal_time}"
+
+
+def _option_mid(ticker: str, contract_type: str, strike: float,
+                expiry_date: str) -> Optional[float]:
+    """
+    Fetch the current mid price (bid+ask)/2 for a specific contract from
+    the live yfinance chain. Returns None if unavailable.
+    """
+    try:
+        import yfinance as yf
+        t = yf.Ticker(ticker)
+        chain = t.option_chain(expiry_date)
+        table = chain.calls if contract_type == "CALL" else chain.puts
+        row = table[table["strike"] == strike]
+        if row.empty:
+            # nearest strike fallback
+            row = table.iloc[(table["strike"] - strike).abs().argsort()].iloc[:1]
+        if row.empty:
+            return None
+        bid = float(row["bid"].iloc[0] or 0)
+        ask = float(row["ask"].iloc[0] or 0)
+        last = float(row["lastPrice"].iloc[0] or 0)
+        if bid > 0 and ask > 0:
+            return round((bid + ask) / 2, 2)
+        return round(last, 2) if last > 0 else None
+    except Exception as e:
+        log.debug(f"{ticker}: option mid fetch failed — {e}")
+        return None
+
+
+def _resolve_expiry_date(ticker: str, dte_label: str) -> Optional[str]:
+    """Map a 0/1/2DTE label to an actual expiry date string from the chain."""
+    try:
+        import yfinance as yf
+        expiries = list(yf.Ticker(ticker).options or [])
+        if not expiries:
+            return None
+        idx = {"0DTE": 0, "1DTE": 1, "2DTE": 2}.get(dte_label, 0)
+        return expiries[min(idx, len(expiries) - 1)]
+    except Exception:
+        return None
+
+
+def _load() -> list[dict]:
+    if not TRADES_FILE.exists():
+        return []
+    with open(TRADES_FILE, "r", newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def _save(rows: list[dict]) -> None:
+    TRADES_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(TRADES_FILE, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+
+
+def open_paper_trade(ticker: str, ai: Dict[str, Any]) -> None:
+    """
+    Called when a signal fires. Snapshots the live contract premium and
+    opens a paper trade. Only acts on real CALL/PUT signals.
+    """
+    ts = ai.get("trade_setup", {}) or {}
+    ct = ts.get("contract_type", "NONE")
+    if ct not in ("CALL", "PUT"):
+        return
+
+    strike = ts.get("strike")
+    if strike is None:
+        return
+    try:
+        strike = float(strike)
+    except (ValueError, TypeError):
+        return
+
+    dte_label = ts.get("expiry", "0DTE")
+    expiry_date = _resolve_expiry_date(ticker, dte_label)
+    if not expiry_date:
+        log.warning(f"{ticker}: no expiry date resolved — paper trade skipped")
+        return
+
+    signal_time = _now_et().isoformat(timespec="seconds")
+    sid = _signal_id(ticker, signal_time)
+
+    rows = _load()
+    # De-dup: one open paper trade per ticker+direction at a time
+    for r in rows:
+        if (r["ticker"] == ticker and r["contract_type"] == ct
+                and r["status"] == "OPEN"):
+            log.info(f"{ticker} {ct}: paper trade already open — not duplicating")
+            return
+
+    premium = _option_mid(ticker, ct, strike, expiry_date)
+    if premium is None:
+        log.warning(f"{ticker} {ct} ${strike}: no live premium — paper trade skipped")
+        return
+
+    stock = ts.get("stock_price_at_signal") or ts.get("entry_trigger")
+    row = {f: "" for f in FIELDS}
+    row.update({
+        "signal_id":         sid,
+        "signal_time":       signal_time,
+        "ticker":            ticker,
+        "contract_type":     ct,
+        "strike":            strike,
+        "expiry_date":       expiry_date,
+        "dte_label":         dte_label,
+        "confluence_score":  ai.get("confluence_score", ""),
+        "stock_at_signal":   stock or "",
+        "premium_at_signal": premium,
+        "entry_trigger":     ts.get("entry_trigger", ""),
+        "stock_target":      ts.get("stock_target", ""),
+        "stop_level":        ts.get("stop_level", ""),
+        "entered_on_trigger": "no",
+        "hit_target":        "no",
+        "hit_stop":          "no",
+        "status":            "OPEN",
+        "last_update":       signal_time,
+    })
+    rows.append(row)
+    _save(rows)
+    log.info(f"📝 Paper trade opened: {ticker} {ct} ${strike} @ ${premium} "
+             f"({dte_label}, exp {expiry_date})")
+
+
+def update_open_trades(current_prices: Dict[str, float]) -> None:
+    """
+    Called each scan. For every OPEN paper trade, check whether the stock
+    crossed its entry trigger, target, or stop, and snapshot the option
+    premium at those moments.
+
+    current_prices: {ticker: latest_stock_price}
+    """
+    rows = _load()
+    if not rows:
+        return
+    changed = False
+    now = _now_et().isoformat(timespec="seconds")
+
+    for r in rows:
+        if r["status"] != "OPEN":
+            continue
+        tk = r["ticker"]
+        px = current_prices.get(tk)
+        if px is None:
+            continue
+        ct = r["contract_type"]
+
+        def _f(key):
+            try:
+                return float(r[key]) if r[key] not in ("", None) else None
+            except (ValueError, TypeError):
+                return None
+
+        trigger = _f("entry_trigger")
+        target  = _f("stock_target")
+        stop    = _f("stop_level")
+        strike  = _f("strike")
+
+        # Trigger crossing
+        if r["entered_on_trigger"] == "no" and trigger is not None:
+            crossed = (px >= trigger) if ct == "CALL" else (px <= trigger)
+            if crossed:
+                prem = _option_mid(tk, ct, strike, r["expiry_date"])
+                r["entered_on_trigger"] = "yes"
+                r["premium_at_trigger"] = prem if prem is not None else ""
+                r["stock_at_trigger"]   = round(px, 2)
+                changed = True
+                log.info(f"📝 {tk} {ct}: entry trigger hit @ ${px:.2f} "
+                         f"(premium ${prem})")
+
+        # Target / stop — first touch wins
+        if r["hit_target"] == "no" and r["hit_stop"] == "no":
+            hit_t = target is not None and ((px >= target) if ct == "CALL" else (px <= target))
+            hit_s = stop   is not None and ((px <= stop)   if ct == "CALL" else (px >= stop))
+            if hit_t or hit_s:
+                prem = _option_mid(tk, ct, strike, r["expiry_date"])
+                r["premium_at_exit_ts"] = prem if prem is not None else ""
+                if hit_t and not hit_s:
+                    r["hit_target"] = "yes"
+                elif hit_s and not hit_t:
+                    r["hit_stop"] = "yes"
+                else:
+                    # both in same scan interval — conservative: stop first
+                    r["hit_stop"] = "yes"
+                changed = True
+                log.info(f"📝 {tk} {ct}: {'TARGET' if r['hit_target']=='yes' else 'STOP'} "
+                         f"hit @ ${px:.2f} (premium ${prem})")
+
+        r["last_update"] = now
+
+    if changed:
+        _save(rows)
+
+
+def close_out_trades() -> None:
+    """
+    Called once near market close (~3:55 PM ET). Snapshots the final
+    premium for every OPEN trade, computes P&L four ways, marks DONE.
+    """
+    rows = _load()
+    if not rows:
+        return
+    changed = False
+    now = _now_et().isoformat(timespec="seconds")
+
+    for r in rows:
+        if r["status"] != "OPEN":
+            continue
+        tk, ct = r["ticker"], r["contract_type"]
+
+        def _f(key):
+            try:
+                return float(r[key]) if r[key] not in ("", None) else None
+            except (ValueError, TypeError):
+                return None
+
+        strike = _f("strike")
+        close_prem = _option_mid(tk, ct, strike, r["expiry_date"])
+        r["premium_at_close"] = close_prem if close_prem is not None else ""
+
+        p_signal  = _f("premium_at_signal")
+        p_trigger = _f("premium_at_trigger")
+        p_exit    = _f("premium_at_exit_ts")
+
+        def pnl(entry, exit_):
+            if entry and exit_ and entry > 0:
+                return round((exit_ - entry) / entry * 100, 1)
+            return ""
+
+        # hold-to-close uses close premium; exit uses target/stop premium
+        r["pnl_signal_hold"]  = pnl(p_signal,  close_prem)
+        r["pnl_signal_exit"]  = pnl(p_signal,  p_exit) if p_exit else ""
+        r["pnl_trigger_hold"] = pnl(p_trigger, close_prem) if p_trigger else ""
+        r["pnl_trigger_exit"] = pnl(p_trigger, p_exit) if (p_trigger and p_exit) else ""
+
+        r["status"] = "DONE"
+        r["last_update"] = now
+        changed = True
+        log.info(f"📝 Paper trade closed: {tk} {ct} | "
+                 f"signal->close {r['pnl_signal_hold']}% | "
+                 f"trigger->exit {r['pnl_trigger_exit']}%")
+
+    if changed:
+        _save(rows)

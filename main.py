@@ -174,6 +174,15 @@ def analyze_ticker(ticker: str, was_flagged: bool = False) -> dict:
         from backtest.signal_logger import log_signal
         log_signal(ticker, tech, ai)
 
+        # Forward paper-tracking: snapshot the real option premium NOW so
+        # we can measure actual P&L at close. This is the only trustworthy
+        # performance measure — historical option prices can't be fetched.
+        try:
+            from backtest.paper_tracker import open_paper_trade
+            open_paper_trade(ticker, ai)
+        except Exception as e:
+            log.warning(f"Paper trade open failed for {ticker}: {e}")
+
         # Send Telegram alert if score meets threshold
         from config.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL
         if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
@@ -273,6 +282,19 @@ def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]
         save_cooldown()
     except Exception:
         pass
+
+    # Forward paper-tracking: update any open trades with the latest
+    # prices fetched during this scan. Close-out at 4pm is handled by a
+    # separate cron trigger (--close-paper), because the scan window ends
+    # at 2pm and nothing runs at 3:55.
+    try:
+        from backtest.paper_tracker import update_open_trades
+        from core.prescreener import _SNAPSHOTS as _PS
+        prices = {tk: v.get("price") for tk, v in _PS.items() if v.get("price")}
+        if prices:
+            update_open_trades(prices)
+    except Exception as e:
+        log.warning(f"Paper tracker update failed: {e}")
 
     log.info("\n" + "="*55)
     log.info("  SCAN COMPLETE — SUMMARY")
@@ -447,4 +469,11 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--close-paper" in sys.argv:
+        # Dedicated end-of-day close-out for forward paper trades.
+        # Triggered by cron-job.org at ~4:00 PM ET.
+        from backtest.paper_tracker import close_out_trades
+        log.info("Closing out forward paper trades for the day...")
+        close_out_trades()
+        sys.exit(0)
     main()
