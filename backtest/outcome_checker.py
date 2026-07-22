@@ -250,66 +250,92 @@ def _evaluate_signal(row: dict, price_df: Optional[pd.DataFrame]) -> dict:
         update["hit_stop"]   = "no"
         return update
 
-    # ── Favorable / adverse excursion from the trigger ───────────────
+    # ── Sequenced outcome: walk bars in order from the trigger ───────
+    # The ONLY correct way to decide win vs loss is to replay the bars
+    # chronologically from the moment the entry triggered and see which
+    # comes FIRST — the profit level or the stop. Checking max-favorable
+    # and max-adverse independently (the previous approach) counted a
+    # trade that was stopped out and LATER rallied as a win, which
+    # inflated the CALL win rate to an impossible 94%.
     ref = entry_trigger if entry_trigger else entry_price
-    if contract_type == "PUT":
-        favorable_move = ref - float(lows.min())
-        adverse_move   = float(highs.max()) - ref
-        hit_target     = bool((lows  <= stock_target).any())
-        hit_stop       = bool((highs >= stop_level).any()) if stop_level else False
-    else:  # CALL
-        favorable_move = float(highs.max()) - ref
-        adverse_move   = ref - float(lows.min())
-        hit_target     = bool((highs >= stock_target).any())
-        hit_stop       = bool((lows  <= stop_level).any()) if stop_level else False
 
-    fav_pct = (favorable_move / ref) * 100
-    adv_pct = (adverse_move   / ref) * 100
-    update["max_favorable_pct"] = round(fav_pct, 2)
-    update["max_adverse_pct"]   = round(adv_pct, 2)
-    update["hit_target"] = "yes" if hit_target else "no"
-    update["hit_stop"]   = "yes" if hit_stop   else "no"
-
-    # ── Profit threshold ─────────────────────────────────────────────
-    # An options trade does not need to reach the exact stock target to
-    # be profitable — the premium moves with the underlying. Count a
-    # trade as a WIN if the favorable move reached a realistic fraction
-    # of the expected move (default 0.5x EM) BEFORE the stop was hit.
-    # This is what actually determines whether the position could have
-    # been closed green, and it stops the checker from discarding real
-    # winners like the +1.72% META move that never touched a too-far target.
     try:
         em_pct = float(row["em_pct"]) if row.get("em_pct") else None
     except (ValueError, TypeError):
         em_pct = None
+    profit_threshold = max((em_pct or 0) * 0.5, 0.3)   # % move to count as a win
 
-    # Profit threshold in %: half the expected move, floored at 0.3%
-    profit_threshold = max((em_pct or 0) * 0.5, 0.3)
-    reached_profit = fav_pct >= profit_threshold
+    if contract_type == "CALL":
+        profit_level = ref * (1 + profit_threshold / 100)
+        stop_price   = stop_level if stop_level else ref * (1 - profit_threshold / 100)
+    else:  # PUT
+        profit_level = ref * (1 - profit_threshold / 100)
+        stop_price   = stop_level if stop_level else ref * (1 + profit_threshold / 100)
 
-    # Timing: did the favorable target come before the stop?
-    def _first_idx(mask):
-        idx = closes[mask].index
-        return idx.min() if len(idx) else None
-
-    if contract_type == "PUT":
-        stop_idx = _first_idx(highs >= stop_level) if stop_level else None
-        prof_idx = _first_idx(lows <= ref * (1 - profit_threshold/100))
+    # Restrict to bars AT OR AFTER the trigger was first reached
+    if entry_trigger:
+        if contract_type == "CALL":
+            trig_mask = highs >= entry_trigger
+        else:
+            trig_mask = lows <= entry_trigger
+        trig_hits = trig_mask[trig_mask].index
+        trig_idx  = trig_hits.min() if len(trig_hits) else price_df.index[0]
     else:
-        stop_idx = _first_idx(lows <= stop_level) if stop_level else None
-        prof_idx = _first_idx(highs >= ref * (1 + profit_threshold/100))
+        trig_idx = price_df.index[0]
 
-    if reached_profit and (stop_idx is None or (prof_idx is not None and prof_idx <= stop_idx)):
-        update["result"] = "WIN"
-    elif hit_stop:
-        update["result"] = "LOSS"
-    elif reached_profit:
-        # profit level touched but stop came first
-        update["result"] = "LOSS"
-    else:
-        # Triggered, but never reached profit threshold or stop —
-        # expired roughly flat. A small real loss on an option (theta).
-        update["result"] = "FLAT"
+    seq = price_df[price_df.index >= trig_idx]
+    seq_high = seq["high"] if "high" in seq.columns else seq["close"]
+    seq_low  = seq["low"]  if "low"  in seq.columns else seq["close"]
+
+    result = "FLAT"
+    max_fav = 0.0
+    max_adv = 0.0
+    hit_target = False
+    hit_stop   = False
+
+    for _, bar in seq.iterrows():
+        hi = float(bar["high"]) if "high" in bar else float(bar["close"])
+        lo = float(bar["low"])  if "low"  in bar else float(bar["close"])
+
+        if contract_type == "CALL":
+            fav = (hi - ref) / ref * 100
+            adv = (ref - lo) / ref * 100
+            profit_touched = hi >= profit_level
+            stop_touched   = lo <= stop_price
+            target_touched = hi >= stock_target
+        else:
+            fav = (ref - lo) / ref * 100
+            adv = (hi - ref) / ref * 100
+            profit_touched = lo <= profit_level
+            stop_touched   = hi >= stop_price
+            target_touched = lo <= stock_target
+
+        max_fav = max(max_fav, fav)
+        max_adv = max(max_adv, adv)
+        if target_touched: hit_target = True
+
+        # Within a single 15m bar we cannot know whether the high or the
+        # low came first. Resolve conservatively: if BOTH profit and stop
+        # are touched in the same bar, count it as a LOSS (assume the
+        # adverse excursion hit first). This biases the win rate DOWN,
+        # which is the honest direction for a backtest.
+        if stop_touched and profit_touched:
+            hit_stop = True
+            result = "LOSS"
+            break
+        if stop_touched:
+            hit_stop = True
+            result = "LOSS"
+            break
+        if profit_touched:
+            result = "WIN"
+            break
+
+    update["max_favorable_pct"] = round(max_fav, 2)
+    update["max_adverse_pct"]   = round(max_adv, 2)
+    update["hit_target"] = "yes" if hit_target else "no"
+    update["hit_stop"]   = "yes" if hit_stop   else "no"
+    update["result"]     = result   # WIN / LOSS / FLAT (never resolved in-window)
 
     return update
 
