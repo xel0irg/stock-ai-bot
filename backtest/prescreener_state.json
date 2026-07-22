@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 325.42498779296875,
+      "price": 325.30999755859375,
       "volume_ratio": 0.0,
-      "ts": 1784734850.588492,
+      "ts": 1784735445.729961,
       "last_full_scan_ts": 1784734307.6784883
     },
     "AMZN": {
-      "price": 243.94000244140625,
+      "price": 243.88499450683594,
       "volume_ratio": 0.0,
-      "ts": 1784734853.011507,
-      "last_full_scan_ts": 1784731355.7414749
+      "ts": 1784735446.2297628,
+      "last_full_scan_ts": 1784735496.314303
     },
     "META": {
-      "price": 630.3049926757812,
+      "price": 630.2650146484375,
       "volume_ratio": 0.0,
-      "ts": 1784734856.1752203,
-      "last_full_scan_ts": 1784731406.8338
+      "ts": 1784735446.6900861,
+      "last_full_scan_ts": 1784735544.9169824
     },
     "MSFT": {
-      "price": 388.30999755859375,
+      "price": 389.1900939941406,
       "volume_ratio": 0.0,
-      "ts": 1784734858.331387,
-      "last_full_scan_ts": 1784731461.692979
+      "ts": 1784735447.3307357,
+      "last_full_scan_ts": 1784735596.9663079
     },
     "NVDA": {
-      "price": 212.22329711914062,
+      "price": 212.3300018310547,
       "volume_ratio": 0.0,
-      "ts": 1784734859.79171,
+      "ts": 1784735447.8586903,
       "last_full_scan_ts": 1784733145.705068
     },
     "QQQ": {
-      "price": 708.52001953125,
+      "price": 708.7999877929688,
       "volume_ratio": 0.0,
-      "ts": 1784734861.6218889,
-      "last_full_scan_ts": 1784731554.4309192
+      "ts": 1784735448.5704799,
+      "last_full_scan_ts": 1784735643.877349
     },
     "SPY": {
-      "price": 749.1500244140625,
+      "price": 749.4000244140625,
       "volume_ratio": 0.0,
-      "ts": 1784734864.0997474,
-      "last_full_scan_ts": 1784731651.7729237
+      "ts": 1784735449.1807988,
+      "last_full_scan_ts": 1784735689.3372133
     },
     "TSLA": {
-      "price": 377.83990478515625,
+      "price": 378.54998779296875,
       "volume_ratio": 0.0,
-      "ts": 1784734868.8315175,
+      "ts": 1784735449.6033688,
       "last_full_scan_ts": 1784733705.1644442
     }
   },
@@ -78,7 +78,36 @@
       "was_flagged": true,
       "cached_at": 1784733705.1644483,
       "score": 42
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-07-22T15:54:49.332572",
+        "analysis": "# SPY ANALYSIS \u2014 11:54 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is grinding modestly higher near $749.35, holding above all intraday VWAPs with clean bullish structure across 5m/15m/1H timeframes, but operating on exceptionally low volume (0.22x 20D average) that undermines conviction in the move. The most plausible scenario over 5-15 days is continued range-bound consolidation between the $740-$755 zone, with resistance at $754.95 (20D high) and the 52W high at $760.40 acting as a ceiling. A break above $755 on volume would be meaningful; absent that, this is drift, not trend.\n\n---\n\n## 2. BULL CASE\n\n- **Intraday VWAP dominance across all 3 timeframes**: Price is above VWAP on 5m, 15m, and 1H \u2014 the strongest intraday structural signal available. This is clean bullish tape.\n- **15m timeframe: 4/4 bullish signals, zero bear**: The 15m shows EMA bullish, MACD bullish, VWAP above, momentum positive \u2014 near-perfect short-term alignment. This is the setup confirmation timeframe and it is unambiguous.\n- **Price above all short-term EMAs**: EMA9 ($747.96) < EMA21 ($746.51) < Price ($749.35) \u2014 aligned bullish stack on the daily. Intraday EMAs (9/21) are also bullish on every timeframe.\n- **Bollinger position at 0.631 with room to upper band**: Upper band sits at $759.50. Price has ~$10 of room before hitting a compression zone, suggesting directional extension is not yet exhausted.\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD histogram negative (-0.4333)**: The daily MACD is in bearish territory. This is a medium-term momentum deterioration signal and the primary structural bear argument.\n- **Volume catastrophically low (0.22x 20D average)**: Moves on sub-25% of average volume are untrustworthy. This rally lacks participation. Institutions are not buying this push.\n- **OBV trending down**: Falling On-Balance Volume while price creeps up = distribution signal. Smart money is not confirming this move.\n- **Near key resistance at $754.95**: The 20D resistance is only $5.60 away (~0.75%). With 1DTE expected move of \u00b1$3.37, price cannot reach resistance and still offer a viable risk/reward on upside options.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news, zero articles**: The data vacuum is itself a risk. An unexpected macro print (Fed speaker, economic data release) or geopolitical headline could move SPY 1-2% instantly, blowing through expected move ranges.\n- **Options expiry positioning**: P/C ratio of 1.07 is nearly flat \u2014 no strong directional positioning from options market. With 10 unusual contracts flagged (5 calls/5 puts), no clear institutional lean is visible.\n- **VIX at 16.89**: Low but not complacent. A VIX spike toward 20+ would be a tell that the low-volume drift is breaking down. Watch for VIX expansion.\n- **52W high at $760.40**: If price somehow clears $755 on volume, momentum chasers could accelerate a move toward the annual high \u2014 a breakout catalyst that isn't priced in.\n- **QQQ below its EMA21 ($715.26)**: Tech/QQQ divergence from SPY is a warning sign. SPY leadership is coming from Energy/Staples (defensive), not growth. This is not a healthy bull market character.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Support | $748.53 | 5m VWAP \u2014 loss here weakens intraday bull case |\n| Primary Support | $746.51 | EMA21 daily \u2014 critical bull/bear line |\n| Secondary Support | $740.97 | EMA50 daily \u2014 structural floor |\n| 20D Support | $728.99 | Only relevant if daily trend breaks |\n| Immediate Resistance | $751.75 | ~0.32% above (0DTE expected move ceiling) |\n| Key Resistance | $754.95 | 20D resistance \u2014 thesis-changing level |\n| Bull Breakout Level | $760.40 | 52W high \u2014 changes narrative entirely |\n| **Thesis-Flip Level** | **$746.51** | Break and hold below EMA21 shifts intraday bias bearish |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nThe intraday signals are cleanly bullish but the combination of anemic volume (0.22x), falling OBV, negative daily MACD, and immediate resistance within the expected move range creates enough noise to prevent a high-conviction 0-2 DTE entry.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BULLISH \u2192 CALLS (Low confidence)**\n\nIntraday structure is real and consistently bullish across all timeframes, but volume is so thin that the signal is untrustworthy for a short-dated options trade requiring fast, sustained follow-through.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: No trade. Intraday VWAP/EMA structure is bullish but volume at 0.22x average disqualifies the setup \u2014 a call trade requires volume confirmation that price discovery is real, not thin-market drift. Additionally, immediate resistance at $754.95 sits within 1DTE expected move territory, meaning risk/reward is compressed even if direction is correct. Score of 52 is below the 55 minimum threshold.\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: The primary risk of entering a call here is paying premium into a low-volume drift that reverses on any macro headline, with resistance just $5.60 away limiting upside before theta overwhelms any gain. Wait for volume to confirm the move (ratio above 0.6x average) or a clean pullback to VWAP with a bounce setup before entering.\n\n---\n\n**SUMMARY IN ONE LINE**: Clean intraday bull structure on a tape with no volume \u2014 don't pay for theta in a vacuum. Sit on hands, watch for $748.53 VWAP hold with volume surge as the trigger to re-evaluate.",
+        "confluence_score": 52,
+        "suggested_bias": "BULLISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No trade. Intraday VWAP/EMA structure is bullish but volume at 0.22x average disqualifies the setup \u2014 a call trade requires volume confirmation that price discovery is real, not thin-market drift. Additionally, immediate resistance at $754.95 sits within 1DTE expected move territory, meaning risk/reward is compressed even if direction is correct. Score of 52 is below the 55 minimum threshold.",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "The primary risk of entering a call here is paying premium into a low-volume drift that reverses on any macro headline, with resistance just $5.60 away limiting upside before theta overwhelms any gain. Wait for volume to confirm the move (ratio above 0.6x average) or a clean pullback to VWAP with a bounce setup before entering.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5572
+      },
+      "was_flagged": false,
+      "cached_at": 1784735689.3372166,
+      "score": 52
     }
   },
-  "saved_at": "2026-07-22T11:41:08-04:00"
+  "saved_at": "2026-07-22T11:54:51-04:00"
 }
