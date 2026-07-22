@@ -61,20 +61,32 @@ def _build_embed(
     sent_label = sent.get("overall_label", "neutral").upper()
     mentions   = sent.get("total_mentions", 0)
 
-    # AI analysis — trim to first 2 sections to make room for trade setup
-    analysis = ai.get("analysis") or "AI analysis not available"
-    analysis_lines = analysis.split("\n")
-    analysis_preview = []
-    section_count = 0
-    for line in analysis_lines:
-        if line.startswith("##"):
-            section_count += 1
-            if section_count > 2:
+    # AI analysis — extract ONLY the market scenario prose (one tight
+    # paragraph). The card carries the trade mechanics; the text just
+    # needs to say what's going on. Everything else was redundant.
+    analysis = ai.get("analysis") or ""
+    scenario = ""
+    lines = analysis.split("\n")
+    capture = False
+    for line in lines:
+        if line.strip().startswith("##") and "SCENARIO" in line.upper():
+            capture = True
+            continue
+        if capture:
+            if line.strip().startswith("##") or line.strip().startswith("---"):
                 break
-        analysis_preview.append(line)
-    analysis_short = "\n".join(analysis_preview).strip()
-    if len(analysis_short) > 900:
-        analysis_short = analysis_short[:900] + "..."
+            if line.strip():
+                scenario += line.strip() + " "
+    scenario = scenario.strip()
+    # Trim to ~2 sentences for readability
+    if scenario:
+        parts = scenario.split(". ")
+        scenario = ". ".join(parts[:2]).strip()
+        if scenario and not scenario.endswith("."):
+            scenario += "."
+    if len(scenario) > 400:
+        scenario = scenario[:400].rsplit(" ", 1)[0] + "..."
+    analysis_short = scenario or "See card below for the setup."
 
     # Options trade setup field
     ts_data  = ai.get("trade_setup", {})
@@ -98,21 +110,16 @@ def _build_embed(
         ratio  = ts_data.get("target_em_ratio")
         em_str = f" | EM ±{em_pct}% ({ratio:.1f}x)" if em_pct and ratio else ""
 
-        setup_value = (
-            f"{con_emoji} **{contract}** | {ts_data.get('expiry', 'N/A')} | "
-            f"Strike: `{strike_str}` ({ts_data.get('moneyness', 'N/A')})\n"
-            f"📍 Stock target: {target_display}{em_str} | Premium: `{premium_str}`\n"
-            f"💰 Profit target: `{profit_str}` | Max loss: `100% of premium`\n"
-        )
-        if ts_data.get("stop_rule"):
-            setup_value += f"🛑 Stop: {ts_data['stop_rule']}\n"
+        # The card below shows strike / target / premium / max-loss.
+        # Text keeps ONLY the actionable conditions the card truncates.
+        setup_value = ""
         if ts_data.get("entry_condition"):
-            setup_value += f"✅ Enter: {ts_data['entry_condition']}\n"
+            setup_value += f"✅ **Enter:** {ts_data['entry_condition']}\n"
+        if ts_data.get("stop_rule"):
+            setup_value += f"🛑 **Stop:** {ts_data['stop_rule']}\n"
         if ts_data.get("avoid_if"):
-            setup_value += f"⛔ Avoid if: {ts_data['avoid_if']}\n"
-        if ts_data.get("key_risk"):
-            setup_value += f"⚠️ Risk: {ts_data['key_risk']}"
-        setup_value = setup_value.strip()
+            setup_value += f"⛔ **Avoid if:** {ts_data['avoid_if']}"
+        setup_value = setup_value.strip() or "See card below for full setup."
 
         # ── Freshness banner ──────────────────────────────────
         # Injected by core/freshness.py at alert time. A STALE flag
@@ -144,67 +151,25 @@ def _build_embed(
         "footer": {"text": f"Degënic$ v1.0 • {ts}"},
         "fields": [
             {
-                "name": "💰 Price Snapshot",
+                "name": f"{emoji} ${ta.get('last_price', 'N/A')}  ·  {score}/100  ·  {conviction_str}",
                 "value": (
-                    f"**${ta.get('last_price', 'N/A')}**  "
-                    f"1D: `{ta.get('return_1d', 0):+.2f}%`  "
-                    f"5D: `{ta.get('return_5d', 0):+.2f}%`  "
-                    f"20D: `{ta.get('return_20d', 0):+.2f}%`\n"
-                    f"_{fund_d.get('company_name', ticker)} | {fund_d.get('sector', 'N/A')}_"
+                    f"1D `{ta.get('return_1d', 0):+.2f}%`  "
+                    f"5D `{ta.get('return_5d', 0):+.2f}%`  "
+                    f"20D `{ta.get('return_20d', 0):+.2f}%`  ·  "
+                    f"RSI `{ta.get('rsi', 'N/A')}`  ·  "
+                    f"Vol `{ta.get('volume_ratio', 'N/A')}x`"
                     f"{earn_warning}"
                 ),
                 "inline": False,
             },
             {
-                "name": "📊 Technical Signals",
-                "value": (
-                    f"RSI: `{ta.get('rsi', 'N/A')}` ({(ta.get('rsi_signal') or 'N/A').upper()})\n"
-                    f"MACD: `{(ta.get('macd_crossover') or 'N/A').upper()}`\n"
-                    f"EMAs: `{(ta.get('ema_trend') or 'N/A').upper()}`\n"
-                    f"Volume: `{ta.get('volume_ratio', 'N/A')}x` avg ({(ta.get('volume_signal') or 'N/A').upper()})"
-                ),
-                "inline": True,
-            },
-            {
-                "name": "📈 Options & Shorts",
-                "value": (
-                    f"{opts.get('summary', 'No options data')}\n"
-                    f"{short.get('summary', 'No short data')}"
-                ),
-                "inline": True,
-            },
-            {
-                "name": "💬 Sentiment",
-                "value": (
-                    f"**{sent_label}** | {mentions} mentions\n"
-                    f"Compound: `{sent.get('overall_compound', 0.0)}`"
-                ),
-                "inline": True,
-            },
-            {
-                "name": "📋 Fundamentals",
-                "value": (
-                    f"P/E: `{fund_d.get('pe_ratio', 'N/A')}` | "
-                    f"Fwd P/E: `{fund_d.get('forward_pe', 'N/A')}`\n"
-                    f"Analyst: `{(fund_d.get('analyst_recommend_key') or 'N/A').upper()}` | "
-                    f"Target: `${fund_d.get('analyst_target', 'N/A')}`\n"
-                    f"Insider: `{fund.get('insider', {}).get('insider_signal', 'N/A').upper()}`"
-                ),
-                "inline": True,
-            },
-            {
-                "name": "🤖 AI Scenario",
-                "value": analysis_short[:1024],
+                "name": "🤖 Read",
+                "value": analysis_short[:600],
                 "inline": False,
             },
             {
-                "name": f"🎯 Options Trade Setup (0-2 DTE)",
+                "name": "🎯 How to play it",
                 "value": setup_value[:1024],
-                "inline": False,
-            },
-            {
-                "name": f"📊 Confluence Score",
-                "value": f"`[{bar}] {score}/100`  **BIAS: {bias}** {emoji}  |  {conviction_str}",
                 "inline": False,
             },
         ],
