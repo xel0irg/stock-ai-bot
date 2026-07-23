@@ -1,0 +1,58 @@
+name: Stock AI Bot — Paper Trade Close-Out
+
+on:
+  # PRIMARY TRIGGER: repository_dispatch fired by cron-job.org at ~4:05 PM
+  # ET, after the regular session closes. This snapshots the final option
+  # premium for every open forward paper trade and computes the day's P&L.
+  # The scan window ends at 2 PM, so no scheduled scan runs late enough to
+  # do this — it needs its own end-of-day trigger.
+  repository_dispatch:
+    types: [paper-close-trigger]
+
+  schedule:
+    - cron: "5 20 * * 1-5"   # 4:05 PM ET (20:05 UTC during EDT) — backup only
+
+  workflow_dispatch: {}
+
+jobs:
+  close-paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    concurrency:
+      group: stock-ai-bot-paper-close
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Create .env from secrets
+        run: |
+          echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" >> .env
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Close out forward paper trades
+        run: python main.py --close-paper
+
+      - name: Commit paper trade results
+        run: |
+          git config user.name "Stock AI Bot"
+          git config user.email "bot@stockaibot.dev"
+          if [ -f backtest/paper_trades.csv ]; then
+            git add backtest/paper_trades.csv
+            git diff --staged --quiet || git commit -m "chore: close out paper trades [skip ci]"
+            git pull --rebase --autostash || true
+            git push
+          else
+            echo "backtest/paper_trades.csv does not exist yet — no paper trades opened. Nothing to close."
+          fi
