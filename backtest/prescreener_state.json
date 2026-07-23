@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 320.94000244140625,
+      "price": 320.6600036621094,
       "volume_ratio": 0.0,
-      "ts": 1784827839.4760535,
+      "ts": 1784828443.3535056,
       "last_full_scan_ts": 1784825105.127
     },
     "AMZN": {
-      "price": 234.36500549316406,
+      "price": 234.3260040283203,
       "volume_ratio": 0.0,
-      "ts": 1784827839.961001,
+      "ts": 1784828443.7857773,
       "last_full_scan_ts": 1784824908.5299604
     },
     "META": {
-      "price": 605.4400024414062,
+      "price": 605.6799926757812,
       "volume_ratio": 0.0,
-      "ts": 1784827840.4553094,
+      "ts": 1784828444.1834402,
       "last_full_scan_ts": 1784824958.3744633
     },
     "MSFT": {
-      "price": 381.2950134277344,
+      "price": 380.79998779296875,
       "volume_ratio": 0.0,
-      "ts": 1784827840.9477346,
+      "ts": 1784828444.5067868,
       "last_full_scan_ts": 1784826105.7483037
     },
     "NVDA": {
-      "price": 210.17990112304688,
+      "price": 209.32000732421875,
       "volume_ratio": 0.0,
-      "ts": 1784827841.3904107,
-      "last_full_scan_ts": 1784825003.2496662
+      "ts": 1784828444.8210013,
+      "last_full_scan_ts": 1784828492.2681856
     },
     "QQQ": {
-      "price": 692.9500122070312,
+      "price": 691.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1784827841.850857,
+      "ts": 1784828445.1749837,
       "last_full_scan_ts": 1784825555.8189166
     },
     "SPY": {
-      "price": 738.7100219726562,
+      "price": 737.469970703125,
       "volume_ratio": 0.0,
-      "ts": 1784827842.3772392,
+      "ts": 1784828445.6733272,
       "last_full_scan_ts": 1784825608.613172
     },
     "TSLA": {
-      "price": 321.82501220703125,
+      "price": 320.7200012207031,
       "volume_ratio": 0.0,
-      "ts": 1784827842.892032,
-      "last_full_scan_ts": 1784826162.621119
+      "ts": 1784828446.060386,
+      "last_full_scan_ts": 1784828548.1685133
     }
   },
   "ai_cache": {
@@ -78,7 +78,36 @@
       "was_flagged": true,
       "cached_at": 1784826105.7483115,
       "score": 52
+    },
+    "NVDA": {
+      "result": {
+        "ticker": "NVDA",
+        "timestamp": "2026-07-23T17:41:32.259963",
+        "analysis": "# NVDA \u2014 SHORT-DATED OPTIONS ANALYSIS\n**Time: 1:40 PM ET | Price: $209.32**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is consolidating near the upper half of its Bollinger Band after a solid 20-day run (+6.94%), now pulling back intraday with the broad tech sector (XLK -1.51%, QQQ -1.93%). The most plausible scenario over the next 5-15 days is continued chop/mild drift lower toward $205-$206 support (the EMA50/EMA21 cluster), followed by a potential recovery toward $212-$215 resistance. The immediate 1-2 day path is modestly bearish given intraday structure, but the move is constrained by low volume \u2014 this is not a high-velocity breakdown setup.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **MACD Histogram +1.07 (Daily)** | Positive daily momentum; trend not yet broken on the higher timeframe |\n| **OBV Rising** | Accumulation pressure underneath; dips being bought structurally |\n| **BB Position 0.755 (Upper Half)** | Price holding above the BB midpoint despite intraday weakness \u2014 not a breakdown |\n| **15m VWAP: ABOVE ($208.33)** | On the 15m confirmation timeframe, price is still holding above VWAP \u2014 the setup-defining frame is not fully bearish |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **5m Bias: BEARISH (0B/3Br)** | All three short-term precision signals point down; immediate momentum is negative |\n| **Price below 1H VWAP ($210.15)** | Broader intraday trend pressure is downward on the hourly structure |\n| **Tech sector (XLK -1.51%) + QQQ -1.93%** | NVDA is not decoupling from macro headwinds; sector tailwind is absent today |\n| **Volume 0.47x 20D MA** | Extremely thin volume \u2014 moves are unreliable, but thin volume on a down day often means weak buying interest rather than active selling |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro tape deterioration**: QQQ down nearly 2% \u2014 if selling accelerates into the close, NVDA could breach $207 (EMA cluster) quickly\n- **Low volume risk (both ways)**: Volume at 0.47x average means a single institutional order could spike price $2-3 in either direction; thin markets amplify noise\n- **No news catalyst**: Zero articles found \u2014 this move is purely technical/macro-driven, not fundamental; that means reversals can be equally sharp with no narrative anchor\n- **Options expiry activity**: P/C 0.53 with 5 unusual calls AND 5 unusual puts \u2014 balanced unusual flow suggests market makers are hedging both ways; no strong directional lean from smart money\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| **Immediate Resistance** | $210.15 | 1H VWAP \u2014 reclaiming this flips intraday structure bullish |\n| **Intraday Pivot** | $209.87 | 5m VWAP \u2014 price is currently just below; bears must hold it below |\n| **Near Support** | $207.32 | EMA9 daily / EMA50 cluster \u2014 key defense for bulls |\n| **Critical Support** | $205.80 | EMA21 daily \u2014 losing this invalidates the 20-day uptrend |\n| **Resistance Target** | $212.50 | 20D resistance level \u2014 bull target for any bounce |\n| **Thesis-Change Level** | $210.15 | Reclaim of 1H VWAP on volume would invalidate the bearish intraday read |\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\n**Rationale**: Signals are genuinely split \u2014 the 5m frame is bearish, the 15m is mixed (and actually above VWAP), the 1H is mixed, the daily MACD is bullish, volume is critically low on all frames (0.09x\u20130.47x average), and options flow is balanced. The bearish signals are real but not dominant enough to override the competing bullish data points. This is a noise-heavy, low-volume, mixed-signal environment that does not meet the 55+ threshold required for a 0-2 DTE trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the no-trade call)**\n\nThe bearish intraday signals (5m structure, below 1H VWAP) are real, but they are directly contradicted by: price above 15m VWAP, rising daily OBV, bullish daily MACD, and critically \u2014 volume so thin that any momentum read is unreliable. Neither direction has the alignment clarity required to deploy theta-burning 0-2 DTE premium.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade to manage.\nENTRY CONDITION: Do not enter \u2014 await 15m candle close clearly below 15m VWAP ($208.33) on volume \u22651.0x average for PUT consideration, OR 15m candle close above 1H VWAP ($210.15) on volume \u22651.0x average for CALL consideration.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.6x average \u2014 thin tape invalidates momentum reads in either direction.\nKEY RISK: With ATR at $7.30 and volume at 0.47x normal, whipsaw risk around the $209-$210 range is extremely high; theta decay on 0-2 DTE contracts in a choppy, low-volume tape is a near-certain way to lose premium even if direction is eventually correct.",
+        "confluence_score": 47,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade to manage.",
+          "entry_condition": "Do not enter \u2014 await 15m candle close clearly below 15m VWAP ($208.33) on volume \u22651.0x average for PUT consideration, OR 15m candle close above 1H VWAP ($210.15) on volume \u22651.0x average for CALL consideration.",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.6x average \u2014 thin tape invalidates momentum reads in either direction.",
+          "key_risk": "With ATR at $7.30 and volume at 0.47x normal, whipsaw risk around the $209-$210 range is extremely high; theta decay on 0-2 DTE contracts in a choppy, low-volume tape is a near-certain way to lose premium even if direction is eventually correct.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5737
+      },
+      "was_flagged": true,
+      "cached_at": 1784828492.2681892,
+      "score": 47
     }
   },
-  "saved_at": "2026-07-23T13:30:42-04:00"
+  "saved_at": "2026-07-23T13:42:30-04:00"
 }
