@@ -359,6 +359,37 @@ def run_ai_synthesis(
             r"\|\s*\*{0,2}STRIKE\*{0,2}\s*\|\s*\*{0,2}\$?([\d.]+)",
         ], analysis_text, float)
 
+        # Snap the AI's strike to one that ACTUALLY EXISTS on the option
+        # chain. The model invents strikes like $321 for AAPL or $234 for
+        # AMZN, but those trade in $2.50 increments at those levels — the
+        # contract doesn't exist and the trade can't be placed as written.
+        if strike and contract_type in ("CALL", "PUT"):
+            try:
+                import yfinance as yf
+                from datetime import date, timedelta
+                _days = {"0DTE": 0, "1DTE": 1, "2DTE": 2}.get(expiry, 0)
+                _t = datetime.now().date()
+                _added = 0
+                while _added < _days:
+                    _t += timedelta(days=1)
+                    if _t.weekday() < 5:
+                        _added += 1
+                _exps = list(yf.Ticker(ticker).options or [])
+                _exp = next((e for e in _exps
+                             if date.fromisoformat(e) >= _t), None)
+                if _exp:
+                    _ch = yf.Ticker(ticker).option_chain(_exp)
+                    _tbl = _ch.calls if contract_type == "CALL" else _ch.puts
+                    if not _tbl.empty:
+                        _strikes = _tbl["strike"].tolist()
+                        _near = min(_strikes, key=lambda s: abs(s - strike))
+                        if abs(_near - strike) > 0.01:
+                            log.info(f"{ticker}: strike ${strike} not tradeable "
+                                     f"— using ${_near} (exp {_exp})")
+                            strike = float(_near)
+            except Exception as _e:
+                log.debug(f"{ticker}: strike validation skipped — {_e}")
+
         moneyness = _extract_field([
             r"MONEYNESS:\s*(ATM|SLIGHTLY_OTM|OTM)",
             r"\|\s*\*{0,2}MONEYNESS\*{0,2}\s*\|\s*\*{0,2}(ATM|SLIGHTLY_OTM|OTM)\*{0,2}\s*\|",

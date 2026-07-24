@@ -118,15 +118,77 @@ def _option_mid(ticker: str, contract_type: str, strike: float,
 
 
 def _resolve_expiry_date(ticker: str, dte_label: str) -> Optional[str]:
-    """Map a 0/1/2DTE label to an actual expiry date string from the chain."""
+    """
+    Map a 0/1/2DTE label to the real expiry DATE.
+
+    BUG THIS FIXES: the old version used list POSITIONS —
+    expiries[1] for "1DTE". But yfinance's expiry list is just the
+    available expiries in order, which for most tickers jumps from
+    today straight to the next weekly. So "1DTE" resolved to a
+    contract 4+ days out, and every recorded premium was inflated
+    because it carried far more time value than the real 1DTE.
+
+    Now we compute the actual target calendar date and pick the
+    closest available expiry ON OR AFTER it.
+    """
     try:
         import yfinance as yf
+        from datetime import date, timedelta
+
         expiries = list(yf.Ticker(ticker).options or [])
         if not expiries:
             return None
-        idx = {"0DTE": 0, "1DTE": 1, "2DTE": 2}.get(dte_label, 0)
-        return expiries[min(idx, len(expiries) - 1)]
-    except Exception:
+
+        days = {"0DTE": 0, "1DTE": 1, "2DTE": 2}.get(dte_label, 0)
+        today = _now_et().date()
+
+        # Walk forward `days` TRADING days (skip weekends)
+        target = today
+        added = 0
+        while added < days:
+            target += timedelta(days=1)
+            if target.weekday() < 5:      # Mon-Fri
+                added += 1
+
+        # Pick the first available expiry on or after the target date
+        for e in expiries:
+            try:
+                ed = date.fromisoformat(e)
+            except ValueError:
+                continue
+            if ed >= target:
+                return e
+
+        return expiries[-1]   # nothing that far out; use the longest available
+    except Exception as e:
+        log.debug(f"{ticker}: expiry resolution failed — {e}")
+        return None
+
+
+def _nearest_valid_strike(ticker: str, contract_type: str,
+                          strike: float, expiry_date: str) -> Optional[float]:
+    """
+    Snap the AI's requested strike to one that ACTUALLY EXISTS on the chain.
+
+    BUG THIS FIXES: the AI invents strikes like $321 for AAPL or $234 for
+    AMZN, but those tickers trade in $2.50 increments at those levels — the
+    contracts don't exist. Anyone following the card literally could not
+    place the trade. We snap to the closest real strike and record that.
+    """
+    try:
+        import yfinance as yf
+        chain = yf.Ticker(ticker).option_chain(expiry_date)
+        table = chain.calls if contract_type == "CALL" else chain.puts
+        if table.empty:
+            return None
+        strikes = table["strike"].tolist()
+        nearest = min(strikes, key=lambda s: abs(s - strike))
+        if abs(nearest - strike) > 0.01:
+            log.info(f"{ticker}: strike ${strike} not on chain — "
+                     f"snapped to ${nearest}")
+        return float(nearest)
+    except Exception as e:
+        log.debug(f"{ticker}: strike validation failed — {e}")
         return None
 
 
@@ -179,6 +241,11 @@ def open_paper_trade(ticker: str, ai: Dict[str, Any]) -> None:
                 and r["status"] == "OPEN"):
             log.info(f"{ticker} {ct}: paper trade already open — not duplicating")
             return
+
+    # Snap to a strike that actually exists on the chain before pricing
+    valid_strike = _nearest_valid_strike(ticker, ct, strike, expiry_date)
+    if valid_strike is not None:
+        strike = valid_strike
 
     premium = _option_mid(ticker, ct, strike, expiry_date)
     if premium is None:
