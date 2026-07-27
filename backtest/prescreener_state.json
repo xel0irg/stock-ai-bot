@@ -1,84 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 336.1400146484375,
+      "price": 336.4200134277344,
       "volume_ratio": 0.0,
-      "ts": 1785173447.8690844,
+      "ts": 1785174044.3316026,
       "last_full_scan_ts": 1785171147.561037
     },
     "AMZN": {
-      "price": 231.6300048828125,
+      "price": 231.72500610351562,
       "volume_ratio": 0.0,
-      "ts": 1785173448.2902102,
+      "ts": 1785174044.5588708,
       "last_full_scan_ts": 1785171198.3213956
     },
     "META": {
-      "price": 597.0599975585938,
+      "price": 595.85498046875,
       "volume_ratio": 0.0,
-      "ts": 1785173448.8780582,
+      "ts": 1785174044.8039646,
       "last_full_scan_ts": 1785172889.8449798
     },
     "MSFT": {
-      "price": 391.864990234375,
+      "price": 392.1099853515625,
       "volume_ratio": 0.0,
-      "ts": 1785173449.4597971,
+      "ts": 1785174045.0515852,
       "last_full_scan_ts": 1785171241.5913122
     },
     "NVDA": {
-      "price": 195.59010314941406,
+      "price": 195.88009643554688,
       "volume_ratio": 0.0,
-      "ts": 1785173449.948322,
+      "ts": 1785174045.2487242,
       "last_full_scan_ts": 1785171702.045961
     },
     "QQQ": {
-      "price": 677.5,
+      "price": 677.8900146484375,
       "volume_ratio": 0.0,
-      "ts": 1785173450.568189,
-      "last_full_scan_ts": 1785169956.0316083
+      "ts": 1785174045.5821953,
+      "last_full_scan_ts": 1785174096.7731502
     },
     "SPY": {
-      "price": 736.2750244140625,
+      "price": 736.5560302734375,
       "volume_ratio": 0.0,
-      "ts": 1785173451.1412039,
+      "ts": 1785174045.8733227,
       "last_full_scan_ts": 1785171291.0956676
     },
     "TSLA": {
-      "price": 307.375,
+      "price": 307.8550109863281,
       "volume_ratio": 0.0,
-      "ts": 1785173451.717623,
+      "ts": 1785174046.0729373,
       "last_full_scan_ts": 1785171097.0650911
     }
   },
   "ai_cache": {
-    "QQQ": {
-      "result": {
-        "ticker": "QQQ",
-        "timestamp": "2026-07-27T16:32:36.027989",
-        "analysis": "# QQQ ANALYSIS \u2014 12:31 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is sitting exactly at its 20-day lower Bollinger Band support ($681.88) after a sustained multi-week downtrend (-5.81% 20D), with price below all short-term EMAs on the daily. The most plausible near-term scenario is a brief consolidation/bounce attempt at this technical support level, with the 5m timeframe showing short-term upside momentum, but the 1H structure remaining bearish and capping any rally below $685\u2013$689. Without a macro catalyst or volume expansion, the path of least resistance over 5\u201315 days remains lower, targeting the $672\u2013$675 zone.\n\n---\n\n## 2. BULL CASE\n\n- **Bollinger Band Lower Band Touch ($681.88):** Price is essentially sitting on the lower BB. Historically, this is a mean-reversion trigger, implying a bounce toward the midband (~$710) over days \u2014 though that's beyond 0-2 DTE scope.\n- **5m Timeframe: Fully Bullish (3B/0Br):** Price above 5m VWAP ($679.21), MACD histogram positive (+0.6312), 3-candle momentum +0.445%. Short-term buyers are active right now.\n- **Stochastic Oversold (K=11.96/D=9.69):** Extreme oversold reading on daily timeframe suggests the rubber band is stretched \u2014 a snapback rally is probabilistically overdue.\n- **RSI Near Oversold (38.33 daily):** Approaching the 30-level oversold zone where counter-trend buying historically accelerates in index ETFs.\n\n---\n\n## 3. BEAR CASE\n\n- **1H Timeframe: Fully Bearish (1B/3Br):** Price below 1H VWAP ($685.82), EMA9 < EMA21 on 1H, and 3-candle momentum is bullish but the overarching 1H structure is deteriorating \u2014 short-term bounces are selling opportunities.\n- **Daily EMA Cascade Bearish:** EMA9 ($696.97) < EMA21 ($706.11) < EMA50 ($707.49), all well above price. This is a fully confirmed daily bear structure with significant overhead resistance.\n- **MACD Daily Deeply Negative (-3.5414):** Not just bearish \u2014 deeply bearish histogram reading suggesting sustained downside momentum with no cross in sight.\n- **OBV Falling + Volume Below Average (0.64x):** Distribution pattern with low volume on bounces implies institutional sellers are absorbing rallies, not accumulating. Today's bounce lacks conviction.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data/Fed commentary:** QQQ is tech-heavy (Nasdaq-100). Any surprise Fed speak, CPI revisions, or yields spiking could accelerate the selloff. Conversely, dovish commentary could ignite a sharp short-cover bounce.\n- **Options expiry dynamics:** With 0DTE/1DTE contracts active, market makers may pin price near the $682\u2013$685 zone if that's where gamma is concentrated, suppressing volatility intraday.\n- **Volume inflection:** Today's volume is only 0.64x the 20D average. If volume surges significantly in the afternoon, it will be directionally significant \u2014 either confirming the bounce (bull) or confirming breakdown (bear).\n- **Broad market correlation:** QQQ moves in lockstep with SPY/NDX sentiment. Any risk-off headline (geopolitical, credit event, earnings pre-announcement from a top-10 holding) could break the $681.88 support decisively.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Support** | $681.88 | Lower Bollinger Band \u2014 current floor |\n| **Critical Support** | $679.21 | 5m VWAP \u2014 loss here flips 5m bearish |\n| **Secondary Support** | $675.00 | Round number / next technical void |\n| **Immediate Resistance** | $682.47 | 15m VWAP \u2014 currently capping price |\n| **Key Resistance** | $685.82 | 1H VWAP \u2014 must reclaim for bull thesis |\n| **Major Resistance** | $689.45 | 1H EMA21 \u2014 trend-changing level |\n| **Thesis Flip Level** | $685.82 | Sustained close above 1H VWAP shifts bias to neutral/bullish |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score rationale:** The data is genuinely conflicted \u2014 5m is fully bullish while 1H is fully bearish, volume is anemic across all timeframes (0.01\u20130.09x average), and options flow is perfectly balanced (P/C 0.9, 5 unusual calls / 5 unusual puts). This is a textbook mixed-signal environment; neither direction has sufficient alignment for a 0-2 DTE trade with acceptable probability.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe 5m bullish momentum and the 1H bearish structure are in direct opposition. The lower BB touch creates genuine two-way risk. Volume is too thin to confirm either direction. This is precisely the scenario where 0-2 DTE theta decay punishes indecision.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 do not enter without timeframe alignment.\nENTRY CONDITION: Wait for either (a) sustained 15m candle close above 1H VWAP $685.82 with volume above 1.0x average for CALL entry, OR (b) 5m candle close below 5m VWAP $679.21 with volume expansion for PUT entry.\nENTRY TRIGGER PRICE: $685.82 (CALL trigger) or $679.21 (PUT trigger)\nAVOID IF: Volume remains below 0.5x average \u2014 directionless chop will decay premium rapidly regardless of direction.\nKEY RISK: The lower Bollinger Band at $681.88 creates a natural floor that makes PUT entries here low-probability; simultaneously, the 1H bearish structure makes CALL entries premature \u2014 this is a no-man's-land for 0-2 DTE positioning.\n\n---\n\n**BOTTOM LINE:** QQQ is at a genuine inflection point sitting on Bollinger Band support with conflicting timeframe signals and abnormally low volume. The correct trade is patience \u2014 let price declare itself by either reclaiming $685.82 (call setup) or breaking $679.21 (put setup) with volume confirmation before committing premium to theta decay.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "No trade \u2014 do not enter without timeframe alignment.",
-          "entry_condition": "Wait for either (a) sustained 15m candle close above 1H VWAP $685.82 with volume above 1.0x average for CALL entry, OR (b) 5m candle close below 5m VWAP $679.21 with volume expansion for PUT entry.",
-          "entry_trigger": 685.82,
-          "avoid_if": "Volume remains below 0.5x average \u2014 directionless chop will decay premium rapidly regardless of direction.",
-          "key_risk": "The lower Bollinger Band at $681.88 creates a natural floor that makes PUT entries here low-probability; simultaneously, the 1H bearish structure makes CALL entries premature \u2014 this is a no-man's-land for 0-2 DTE positioning.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5384
-      },
-      "was_flagged": true,
-      "cached_at": 1785169956.0316114,
-      "score": 42
-    },
     "MSFT": {
       "result": {
         "ticker": "MSFT",
@@ -109,5 +80,5 @@
       "score": 38
     }
   },
-  "saved_at": "2026-07-27T13:30:51-04:00"
+  "saved_at": "2026-07-27T13:41:38-04:00"
 }
