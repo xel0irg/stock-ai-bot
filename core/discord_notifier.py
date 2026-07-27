@@ -32,6 +32,42 @@ def _get_score_bar(score: int) -> str:
     return "█" * filled + "░" * empty
 
 
+# ── Auto-threading (fully decoupled, opt-in) ──────────────────────────
+# Creates a discussion thread on a signal message so per-trade chatter
+# stays organised and the main channel stays a clean signal feed.
+#
+# SAFETY: this NEVER runs inside the webhook POST. It only fires AFTER a
+# signal has already been delivered, takes the message ID Discord echoed
+# back, and creates a thread via the bot token. If it fails, is disabled,
+# or the bot token is missing, the signal is already sent — delivery and
+# paper-trade data are completely unaffected.
+def _maybe_create_thread(message_id: str, ticker: str, direction: str,
+                         strike: str) -> None:
+    import os
+    bot_token = os.environ.get("DISCORD_BOT_TOKEN", "")
+    channel_id = os.environ.get("DISCORD_SIGNAL_CHANNEL_ID", "")
+    # Feature is OFF unless BOTH are configured. Missing either = no-op.
+    if not bot_token or not channel_id or not message_id:
+        return
+    try:
+        name = f"{ticker} {direction} ${strike} — discussion"[:100]
+        resp = requests.post(
+            f"https://discord.com/api/v10/channels/{channel_id}"
+            f"/messages/{message_id}/threads",
+            headers={"Authorization": f"Bot {bot_token}",
+                     "Content-Type": "application/json"},
+            json={"name": name, "auto_archive_duration": 1440},
+            timeout=10,
+        )
+        if resp.status_code in (200, 201):
+            log.info(f"🧵 Thread created for {ticker} {direction}")
+        else:
+            log.warning(f"Thread creation failed ({resp.status_code}) — "
+                        f"signal already delivered, no impact")
+    except Exception as e:
+        log.warning(f"Thread creation error ({e}) — signal already delivered")
+
+
 def _build_embed(
     ticker:  str,
     tech:    Dict[str, Any],
@@ -234,17 +270,22 @@ def send_discord_alert(
         log.warning(f"Signal card unavailable for {ticker}: {e}")
 
     try:
+        # ?wait=true makes Discord return the created message (with its id)
+        # instead of an empty 204. This does NOT change delivery — same
+        # POST, Discord just echoes the message back so we can optionally
+        # thread on it afterwards.
+        post_url = webhook_url + ("?wait=true" if "?" not in webhook_url else "&wait=true")
         if card_png:
             import json as _json
             embed["image"] = {"url": "attachment://signal_card.png"}
             resp = requests.post(
-                webhook_url,
+                post_url,
                 data={"payload_json": _json.dumps({"embeds": [embed]})},
                 files={"files[0]": ("signal_card.png", card_png, "image/png")},
                 timeout=20,
             )
         else:
-            resp = requests.post(webhook_url, json={"embeds": [embed]}, timeout=15)
+            resp = requests.post(post_url, json={"embeds": [embed]}, timeout=15)
 
         if resp.status_code in (200, 204):
             log.info(f"✅ Discord alert sent for {ticker} (score={score}"
@@ -252,6 +293,15 @@ def send_discord_alert(
             try:
                 from core.alert_cooldown import record_alert
                 record_alert(ticker, direction, score)
+            except Exception:
+                pass
+            # Optional auto-threading — strictly after successful delivery.
+            # Wrapped so nothing here can affect the return value.
+            try:
+                msg_id = ""
+                if resp.status_code == 200:
+                    msg_id = (resp.json() or {}).get("id", "")
+                _maybe_create_thread(msg_id, ticker, direction, str(strike_str))
             except Exception:
                 pass
             return True
