@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 337.6499938964844,
+      "price": 337.3900146484375,
       "volume_ratio": 0.0,
-      "ts": 1785163244.35593,
+      "ts": 1785163846.5595849,
       "last_full_scan_ts": 1785162697.9613266
     },
     "AMZN": {
-      "price": 234.02999877929688,
+      "price": 233.10000610351562,
       "volume_ratio": 0.0,
-      "ts": 1785163244.5577729,
-      "last_full_scan_ts": 1785163060.1950622
+      "ts": 1785163846.8277931,
+      "last_full_scan_ts": 1785163896.3542387
     },
     "META": {
-      "price": 602.219970703125,
+      "price": 600.864990234375,
       "volume_ratio": 0.0,
-      "ts": 1785163244.7567818,
+      "ts": 1785163847.105391,
       "last_full_scan_ts": 1785163296.4414482
     },
     "MSFT": {
-      "price": 390.6000061035156,
+      "price": 389.6499938964844,
       "volume_ratio": 0.0,
-      "ts": 1785163244.9716463,
+      "ts": 1785163847.4066103,
       "last_full_scan_ts": 1785162797.0917287
     },
     "NVDA": {
-      "price": 198.7100067138672,
+      "price": 199.44000244140625,
       "volume_ratio": 0.0,
-      "ts": 1785163245.1924412,
-      "last_full_scan_ts": 1785162851.7582045
+      "ts": 1785163847.709003,
+      "last_full_scan_ts": 1785163946.6646152
     },
     "QQQ": {
-      "price": 677.1500244140625,
+      "price": 680.0150146484375,
       "volume_ratio": 0.0,
-      "ts": 1785163245.448284,
-      "last_full_scan_ts": 1785162912.29381
+      "ts": 1785163848.0139842,
+      "last_full_scan_ts": 1785164002.755284
     },
     "SPY": {
-      "price": 737.4998168945312,
+      "price": 738.5999755859375,
       "volume_ratio": 0.0,
-      "ts": 1785163245.674642,
+      "ts": 1785163848.3668873,
       "last_full_scan_ts": 1785162964.8366776
     },
     "TSLA": {
-      "price": 305.9200134277344,
+      "price": 307.135009765625,
       "volume_ratio": 0.0,
-      "ts": 1785163245.830182,
-      "last_full_scan_ts": 1785163015.2511415
+      "ts": 1785163848.782893,
+      "last_full_scan_ts": 1785164055.8611476
     }
   },
   "ai_cache": {
@@ -107,36 +107,7 @@
       "was_flagged": true,
       "cached_at": 1784914391.1344185,
       "score": 38
-    },
-    "AMZN": {
-      "result": {
-        "ticker": "AMZN",
-        "timestamp": "2026-07-27T14:37:40.191572",
-        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis\n**Time: 10:37 AM ET | Price: $233.84**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in a short-term bearish trend (-5.54% over 5 days) but is sitting directly at the lower Bollinger Band (~$232.42) with deeply oversold Stochastic (9.35/6.14) and RSI nearing oversold territory (39.24). The most plausible near-term scenario is a continued grind near current levels with a slight mean-reversion bounce attempt toward $236\u2013$238, as technical exhaustion of the downside conflicts with persistent bearish trend structure. A decisive break below $232.11 support would accelerate the move toward $229\u2013$230; a hold here sets up a weak bounce that likely fails at the EMAs overhead.\n\n---\n\n## 2. BULL CASE\n\n1. **Stochastic at 9.35/6.14 (deeply oversold)** \u2014 historically, readings this extreme on a large-cap like AMZN precede short-term bounces; mean-reversion pressure is real.\n2. **Price at lower Bollinger Band ($232.42)** \u2014 BB position of 0.062 signals the stock is statistically stretched; bands tend to act as elastic, pulling price back toward the midline (~$243).\n3. **15m and 1H price ABOVE VWAP** \u2014 intraday structure on the higher timeframes shows buyers defending VWAP ($233.05/$233.01); the stock is not collapsing intraday despite the weak broader trend.\n4. **1H 3-candle momentum +1.009% BULLISH** \u2014 the most recent hourly impulse is upward, suggesting short-term buyers are stepping in near support.\n\n---\n\n## 3. BEAR CASE\n\n1. **MACD Histogram -1.1996 (daily BEARISH) + MACD bearish across all intraday timeframes** \u2014 momentum is structurally negative; no histogram reversal is visible yet.\n2. **EMA stack fully bearish (EMA9=240.4 > EMA21=242.98 > EMA50=247.54)** \u2014 price is 3\u20136% below all key EMAs; every rally attempt faces supply overhead.\n3. **OBV falling + volume at 0.18x 20-day average** \u2014 the rally attempt has no conviction. Low volume bounces at support are hallmarks of continuation, not reversal.\n4. **5-minute bias is BEARISH (0 bull / 3 bear signals) with price below 5m VWAP $234.52** \u2014 the most precise intraday timeframe is pointed lower right now.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro/Tariff headline risk**: AMZN (Consumer Cyclical, ~34% revenue exposure to retail/third-party sellers) is highly sensitive to trade policy headlines. A tariff de-escalation spike or escalation dump could easily exceed the expected move.\n- **Sector rotation**: Tech/Consumer Cyclical has been under pressure; any Fed speaker or CPI re-pricing today could move the sector sharply.\n- **Options expiry (0DTE gamma)**: With P/C ratio at 0.98 and 10 unusual contracts flagged evenly split, market makers are likely gamma-hedging near current levels \u2014 this compresses intraday movement and may pin price near $233\u2013$234 through expiry.\n- **Volume vacuum**: Volume at 0.18x average is dangerous for short-dated options \u2014 it means the move, if it comes, could be sharp and sudden once a catalyst arrives, but until then, theta will grind premium holders without directional follow-through.\n- **No news/earnings**: The absence of a catalyst is itself a risk factor for 0DTE \u2014 without a trigger, the expected move ($2.01 for 0DTE) may simply not be reached.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Support** | $232.11 | 20D support / near lower BB ($232.42) \u2014 break here opens $229 |\n| **Lower BB** | $232.42 | Elastic support; close below = acceleration, not mean reversion |\n| **5m VWAP** | $234.52 | Immediate intraday resistance for bearish continuation |\n| **15m/1H VWAP** | $233.01\u2013$233.05 | Bull/bear line for intraday structure |\n| **EMA9 (daily)** | $240.40 | First meaningful resistance on any bounce |\n| **Thesis-flip level** | $235.50 | Reclaim of 5m VWAP + 15m EMA9 ($233.47) with volume = bias shifts bullish short-term |\n\n---\n\n## 6. CONFLUENCE SCORE: 38/100\n\n**Score rationale**: Signals are genuinely split \u2014 the daily/5m structure is bearish but oversold technicals (Stochastic, BB position), bullish 15m/1H VWAP positioning, and a 1H momentum candle that is upward create real contradiction; low volume (0.18x) means neither direction has confirmation, making a 0-2 DTE directional bet a coin flip with theta working against you.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe data is not ambiguous because it's weak \u2014 it's genuinely contradictory. The 5m structure is bearish while 15m/1H VWAP positioning is bullish. The stock is oversold at support with no volume to confirm either a break or a bounce. This is the textbook definition of a mixed signal environment where theta will punish both directions.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 do not force a position into a volume vacuum with contradictory timeframe signals.\nENTRY CONDITION: No entry condition met. Monitor for either (a) 5m candle close below $232.11 with volume >1.5x 5m average (PUT trigger) or (b) reclaim of 5m VWAP $234.52 with 15m bullish EMA9/21 cross and volume confirmation (CALL trigger).\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x average \u2014 premium will decay faster than price moves in either direction.\nKEY RISK: A no-news, low-volume day near oversold support is precisely the environment where 0-2 DTE options go to zero on theta alone regardless of which direction you bet; the risk/reward is structurally poor until a clear catalyst or volume surge materializes.",
-        "confluence_score": 38,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "No trade \u2014 do not force a position into a volume vacuum with contradictory timeframe signals.",
-          "entry_condition": "No entry condition met. Monitor for either (a) 5m candle close below $232.11 with volume >1.5x 5m average (PUT trigger) or (b) reclaim of 5m VWAP $234.52 with 15m bullish EMA9/21 cross and volume confirmation (CALL trigger).",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.5x average \u2014 premium will decay faster than price moves in either direction.",
-          "key_risk": "A no-news, low-volume day near oversold support is precisely the environment where 0-2 DTE options go to zero on theta alone regardless of which direction you bet; the risk/reward is structurally poor until a clear catalyst or volume surge materializes.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5430
-      },
-      "was_flagged": false,
-      "cached_at": 1785163060.1950665,
-      "score": 38
     }
   },
-  "saved_at": "2026-07-27T10:41:38-04:00"
+  "saved_at": "2026-07-27T10:54:17-04:00"
 }
