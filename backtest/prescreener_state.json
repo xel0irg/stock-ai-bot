@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 337.2449951171875,
+      "price": 337.25,
       "volume_ratio": 0.0,
-      "ts": 1785168048.141186,
+      "ts": 1785168641.0563815,
       "last_full_scan_ts": 1785166893.7429602
     },
     "AMZN": {
-      "price": 232.0800018310547,
+      "price": 231.89999389648438,
       "volume_ratio": 0.0,
-      "ts": 1785168048.3979745,
+      "ts": 1785168641.2591696,
       "last_full_scan_ts": 1785166945.6300786
     },
     "META": {
-      "price": 601.5781860351562,
+      "price": 599.2100219726562,
       "volume_ratio": 0.0,
-      "ts": 1785168048.6890004,
-      "last_full_scan_ts": 1785165087.624366
+      "ts": 1785168641.5667264,
+      "last_full_scan_ts": 1785168694.0852232
     },
     "MSFT": {
-      "price": 390.67498779296875,
+      "price": 390.5050048828125,
       "volume_ratio": 0.0,
-      "ts": 1785168049.298232,
+      "ts": 1785168641.878293,
       "last_full_scan_ts": 1785166993.8992045
     },
     "NVDA": {
-      "price": 197.5800018310547,
+      "price": 198.3842010498047,
       "volume_ratio": 0.0,
-      "ts": 1785168049.8123956,
-      "last_full_scan_ts": 1785168100.6367323
+      "ts": 1785168642.0705342,
+      "last_full_scan_ts": 1785168744.9193423
     },
     "QQQ": {
-      "price": 678.9550170898438,
+      "price": 680.7999877929688,
       "volume_ratio": 0.0,
-      "ts": 1785168050.0275762,
+      "ts": 1785168642.3818858,
       "last_full_scan_ts": 1785168151.3733432
     },
     "SPY": {
-      "price": 737.5549926757812,
+      "price": 738.5598754882812,
       "volume_ratio": 0.0,
-      "ts": 1785168050.5397751,
+      "ts": 1785168642.748434,
       "last_full_scan_ts": 1785167096.4672716
     },
     "TSLA": {
-      "price": 308.6499938964844,
+      "price": 309.5799865722656,
       "volume_ratio": 0.0,
-      "ts": 1785168050.9753134,
-      "last_full_scan_ts": 1785164615.9566133
+      "ts": 1785168642.9018037,
+      "last_full_scan_ts": 1785168791.5445893
     }
   },
   "ai_cache": {
@@ -82,8 +82,8 @@
     "TSLA": {
       "result": {
         "ticker": "TSLA",
-        "timestamp": "2026-07-27T15:03:35.953872",
-        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 11:02 AM ET | Price: $308.64**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a confirmed multi-week downtrend (-25% over 20 days) and is sitting precisely at its 52-week low support zone ($297.82). The most plausible scenario over the next 5-15 days is continued pressure toward the $297-$300 range with potential for a technical bounce given extreme oversold readings (RSI 27, Stochastic 4/4.5) \u2014 but no reversal catalyst is currently visible. The path of least resistance remains down unless price can reclaim the 20D Bollinger Band midpoint (~$385), which is structurally distant and unlikely within 2 DTE.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **RSI 27 / Stochastic 4.0** \u2014 deeply oversold on daily | Mean-reversion bounce risk is real; oversold can persist but snapbacks can be violent |\n| **52W Low proximity ($297.82)** \u2014 price at $308.64 | Major support level nearby; institutional buyers may defend this level creating a technical floor |\n| **5m price ABOVE VWAP ($307.93)** with +0.84% 3-candle momentum | Short-term buyers present intraday; micro-structure slightly favors upside right now |\n| **Volume only 0.42x average** | Low-volume selloffs are less reliable as trend continuations; could be exhaustion selling rather than panic capitulation |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **1H fully bearish (0 bull / 4 bear signals), price -2.08% below 1H VWAP** | Dominant intraday trend is clearly down; the controlling timeframe favors sellers |\n| **MACD Histogram -9.47 (daily), bearish on 15m and 1H** | Momentum is deeply negative across multiple timeframes; no bullish cross in sight |\n| **EMA structure: EMA9=349 / EMA21=373 / EMA50=388** \u2014 all stacked above price | Every short- and medium-term moving average is resistance; no upside structure exists |\n| **OBV falling + P/C ratio 1.38** | Real money is exiting; options market is tilted toward puts, confirming bearish sentiment |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W Low test ($297.82):** This is the single most important level. A break below it triggers technical stops and momentum algo selling \u2014 acceleration risk to $275-$280. A hold/bounce could ignite a sharp short-cover rally given the oversold condition.\n- **Macro / broader market:** TSLA beta is 1.80. Any broad market risk-off or risk-on move amplifies TSLA by ~1.8x. An SPX catalyst (FOMC language, macro data, tariff headlines) could override the entire technical picture.\n- **Musk/regulatory headline:** TSLA is highly sensitive to Elon Musk news, DOGE headlines, or any Tesla-specific news (delivery data, recall, policy). Zero current news is a void that can be filled instantly.\n- **Short squeeze risk is LOW:** Only 2% short float / 1.63 days to cover. A short squeeze is not a realistic catalyst here.\n- **7 recent SEC filings:** Worth monitoring, but no specific signal extractable from count alone.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| **Critical Support / Make-or-Break** | $297.82 | 52W Low \u2014 break here changes the game structurally bearish |\n| **Immediate Support** | $300.00 | Psychological round number; likely where retail defends |\n| **Intraday Pivot (5m VWAP)** | $307.93 | Currently holding above; lose this \u2192 bears control intraday |\n| **15m VWAP (resistance)** | $310.17 | Reclaim this \u2192 short-cover bounce accelerates |\n| **1H VWAP (strong resistance)** | $315.21 | Reclaiming this would signal potential intraday trend reversal |\n| **BB Lower Band** | $318.37 | Closing above this on daily would signal oversold bounce |\n| **Thesis-change level** | $315+ sustained | Above this invalidates the intraday bear structure |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Reasoning:** The daily and 1H timeframes are clearly bearish, but the 5m and 15m are mixed/neutral, price is sitting directly on critical 52W low support, volume is severely depressed (0.42x average), and the oversold condition on RSI/Stochastic creates genuine mean-reversion risk \u2014 the signals do not cleanly align for a high-conviction directional 0-2 DTE entry in either direction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe contradiction is structural: the trend is bearish, but price is at 52W low support with extreme oversold readings and depressed volume \u2014 exactly the conditions where puts get destroyed by a sudden reversal and calls lose slowly to continued grinding. Neither setup is clean enough for 0-2 DTE premium risk.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: No trade \u2014 await resolution of the 52W low\ntest at $297.82 OR reclaim of 1H VWAP at $315.21 with\nabove-average volume confirming directional commitment.\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: Price is at 52W structural support ($297.82) with\nRSI at 27 and volume at 0.42x average \u2014 puts face violent\nreversal risk, calls face continued grinding lower; neither\nside has volume or momentum confirmation to justify theta\nexposure in 0-2 DTE.\n```\n\n---\n\n**\u26a0\ufe0f CONTRADICTION CALLOUT:** The system's timeframe confluence rule states \"Daily + 1H + 15m all BEARISH (5m mixed) = HIGH CONVICTION PUT (70-84).\" However, the raw data shows the 15m is explicitly flagged MIXED (1 bull / 2 bear), NOT bearish, and critically, price is sitting at its 52-week low \u2014 a structural support level that fundamentally changes the risk/reward of a put entry. Additionally, volume at 0.42x average means there is no confirmation of a breakdown in progress. The confluence framework score was therefore overridden by the support proximity and volume gate. **Wait for the 52W low to either hold (buy calls above $315 with volume) or break convincingly (puts below $297 with volume surge).**",
+        "timestamp": "2026-07-27T16:13:11.540972",
+        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis\n**Current Price: $309.83 | Time: 12:12 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a sustained multi-week downtrend (-24.77% over 20 days) and is trading near its 52-week low of $297.82, sitting at the lower Bollinger Band with deeply oversold daily RSI (27.29) and Stochastic (5.1). The most plausible scenario over 5-15 days is continued grinding lower toward the $297-300 zone, with periodic oversold bounces that fail at short-term resistance. The 1H timeframe is the cleanest signal: bearish MACD, bearish EMAs, price well below VWAP \u2014 but the 5m/15m show a micro-bounce underway on low volume, which is more likely noise than a reversal.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **RSI Oversold (27.29 daily, 27.88 on 1H)** | Mean-reversion bounce possible; extreme readings historically precede short-covering rallies |\n| **Price at 52W Low ($297.82) / Lower BB ($318.70)** | Hard structural support nearby; buyers may defend this zone |\n| **5m/15m Micro-momentum positive** | Short-term bullish momentum (3-candle: +0.35%, +0.40%); price above 5m VWAP |\n| **Analyst consensus BUY, target $401** | Institutional price target ~30% above current \u2014 any sentiment shift could trigger sharp snap-back |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **1H timeframe fully bearish (0B/4Br)** | Dominant intraday trend is down; price -1.3% below 1H VWAP ($313.96) |\n| **MACD Histogram -9.40 (daily), deeply negative** | Strong downside momentum; no curl or inflection yet |\n| **EMA stack fully bearish (9/21/50 all declining, price below all)** | No structural support from any moving average above price |\n| **OBV falling on 5D -18.24% / 20D -24.77%** | Institutional distribution ongoing; no accumulation signal |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Proximity to 52W Low ($297.82):** A breach would be a major psychological event \u2014 could accelerate selling OR trigger a sharp capitulation bounce. This is the single most important wildcard.\n- **Elon Musk headline risk:** TSLA is highly sensitive to Musk-related news (government, social media, DOGE, Twitter/X). No news today, but this is always present.\n- **Volume collapse (0.53x 20D average):** Extremely thin participation. A volume surge in either direction would be disproportionately impactful on price \u2014 short-dated options can move violently.\n- **Macro/sector:** Consumer Cyclical sector sensitivity to rate-sensitive sentiment; any macro catalyst (Fed speakers, economic data) could overwhelm technicals.\n- **SEC filings (7 in 90 days):** Worth monitoring but no specific catalyst identified.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|-------|------|-------------|\n| **$297.82** | Hard Support / 52W Low | Breach = waterfall risk or capitulation bottom |\n| **$305.00** | Near Support | Round number / psychological; breakdown below targets $297 |\n| **$309.83** | Current Price / 20D Support | Holding this level is critical for micro-bounce |\n| **$310.28** | 15m VWAP | Reclaim = short-term bullish; rejection = bear continuation |\n| **$313.96** | 1H VWAP | Key resistance; must reclaim for any meaningful bounce |\n| **$318.70** | Lower Bollinger Band | Upper boundary of oversold compression zone |\n| **$325.48** | 1H EMA21 | First major resistance for any reversal attempt |\n\n**Thesis-changing level:** $313.96 (1H VWAP). Reclaim on volume = bounce trade viable. Sustained rejection = puts back in play.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Reasoning:** The daily and 1H frames are clearly bearish, but the 5m and 15m are mixed/slightly bullish, volume is dangerously thin (0.28\u20130.41x average), and price is at extreme oversold levels near a 52W low \u2014 the micro-bounce underway creates genuine ambiguity for a 0-2 DTE entry right now. Signals do not cleanly align for high-conviction directional entry at this specific moment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in staying out)**\n\n**Contradiction to acknowledge:** The daily/1H trend is unambiguously bearish, which would normally favor PUTs. However, the 5m and 15m are showing a live micro-bounce with positive 3-candle momentum, price is above 5m VWAP, and TSLA is within ~4% of its 52-week low. Fading a bounce at extreme oversold readings near a 52W low on low volume is a low-probability 0-2 DTE PUT entry. Equally, chasing calls into a bearish 1H structure is dangerous. The correct answer here is patience.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: No trade to manage.\n\nENTRY CONDITION: Monitor for 1H VWAP ($313.96) reclaim on volume >1.5x average for CALL entry, OR breakdown below $305.00 on volume >1.5x average with 15m MACD turning negative for PUT entry \u2014 neither condition is met at 12:12 PM ET.\n\nENTRY TRIGGER PRICE: $313.96 (CALL trigger, break above) / $305.00 (PUT trigger, break below)\n\nAVOID IF: Volume remains below 0.7x average \u2014 thin tape makes options pricing unpredictable and fills unreliable.\n\nKEY RISK: The 52W low at $297.82 creates a hard bounce risk for PUTs; the bearish 1H structure creates a hard rejection risk for CALLs \u2014 this is a no-man's-land entry zone at current price with current volume.\n\n---\n\n> **Tactical note:** Set alerts at $313.96 (1H VWAP reclaim on volume) and $305.00 (breakdown). If $313.96 is reclaimed with volume >1.5x, reassess for a 1DTE CALL. If $305 breaks on volume, reassess for a 1DTE PUT with $297.82 as target. Do not trade the middle.",
         "confluence_score": 52,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
@@ -94,20 +94,20 @@
           "stock_target": null,
           "est_premium": null,
           "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "No trade \u2014 await resolution of the 52W low",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "Price is at 52W structural support ($297.82) with",
+          "stop_rule": "No trade to manage.",
+          "entry_condition": "Monitor for 1H VWAP ($313.96) reclaim on volume >1.5x average for CALL entry, OR breakdown below $305.00 on volume >1.5x average with 15m MACD turning negative for PUT entry \u2014 neither condition is met at 12:12 PM ET.",
+          "entry_trigger": 313.96,
+          "avoid_if": "Volume remains below 0.7x average \u2014 thin tape makes options pricing unpredictable and fills unreliable.",
+          "key_risk": "The 52W low at $297.82 creates a hard bounce risk for PUTs; the bearish 1H structure creates a hard rejection risk for CALLs \u2014 this is a no-man's-land entry zone at current price with current volume.",
           "setup_quality": "NO TRADE"
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 5483
+        "tokens_used": 5492
       },
       "was_flagged": true,
       "cached_at": 1785164615.9566162,
       "score": 52
     }
   },
-  "saved_at": "2026-07-27T12:02:33-04:00"
+  "saved_at": "2026-07-27T12:13:13-04:00"
 }
