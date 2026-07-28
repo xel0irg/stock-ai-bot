@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 339.59991455078125,
+      "price": 339.20001220703125,
       "volume_ratio": 0.0,
-      "ts": 1785253238.8255138,
+      "ts": 1785253848.6457777,
       "last_full_scan_ts": 1785251518.568138
     },
     "AMZN": {
-      "price": 230.3699951171875,
+      "price": 230.57000732421875,
       "volume_ratio": 0.0,
-      "ts": 1785253239.0231,
+      "ts": 1785253848.935231,
       "last_full_scan_ts": 1785252100.5694046
     },
     "META": {
-      "price": 593.4099731445312,
+      "price": 594.22998046875,
       "volume_ratio": 0.0,
-      "ts": 1785253239.2032893,
+      "ts": 1785253849.1809976,
       "last_full_scan_ts": 1785252150.412524
     },
     "MSFT": {
-      "price": 399.1400146484375,
+      "price": 397.1000061035156,
       "volume_ratio": 0.0,
-      "ts": 1785253239.4688988,
-      "last_full_scan_ts": 1785252214.1888452
+      "ts": 1785253849.4505305,
+      "last_full_scan_ts": 1785253899.044478
     },
     "NVDA": {
-      "price": 197.22000122070312,
+      "price": 198.22000122070312,
       "volume_ratio": 0.0,
-      "ts": 1785253239.6659794,
-      "last_full_scan_ts": 1785253301.1594274
+      "ts": 1785253849.6643622,
+      "last_full_scan_ts": 1785253949.674266
     },
     "QQQ": {
-      "price": 677.3699951171875,
+      "price": 678.0999755859375,
       "volume_ratio": 0.0,
-      "ts": 1785253239.879965,
+      "ts": 1785253849.8986454,
       "last_full_scan_ts": 1785252309.690867
     },
     "SPY": {
-      "price": 741.4824829101562,
+      "price": 741.875,
       "volume_ratio": 0.0,
-      "ts": 1785253240.2776482,
+      "ts": 1785253850.1500578,
       "last_full_scan_ts": 1785252362.0906699
     },
     "TSLA": {
-      "price": 306.69000244140625,
+      "price": 307.60870361328125,
       "volume_ratio": 0.0,
-      "ts": 1785253240.504466,
+      "ts": 1785253850.3372564,
       "last_full_scan_ts": 1785252413.7373922
     }
   },
@@ -165,7 +165,65 @@
       "was_flagged": true,
       "cached_at": 1785252309.690872,
       "score": 47
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-07-28T15:51:39.029275",
+        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:50 AM ET | Price: $397.09**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT is in a short-term recovery within a longer-term downtrend from its 52W high, currently pressing against near-term resistance at $402.29. The 15m and 1H timeframes are bullish, but the 5m is rolling over below VWAP ($398.22), suggesting a minor intraday pullback is underway before the next directional decision. The most plausible scenario over the next 5-15 days is continued grinding toward $402-403 resistance, with risk of rejection there given Tech sector weakness today (-1.17%) and MSFT trading well below its 52W high.\n\n---\n\n## 2. BULL CASE\n\n1. **Daily MACD histogram positive (1.001) + OBV rising** \u2014 momentum is building on the daily timeframe, implying institutional accumulation over recent sessions supports further upside.\n2. **15m and 1H both firmly bullish** \u2014 price is above both VWAPs on the two dominant intraday timeframes, EMA9 > EMA21 on 15m ($396.70 vs $394.76), confirming near-term trend structure favors buyers.\n3. **Bollinger position at 0.779** \u2014 price is in the upper half of the band, a trending environment not yet at the squeeze point; room to push toward the upper band at $403.38.\n4. **Strong analyst consensus (STRONG_BUY, $556 target) + solid fundamentals** \u2014 18.3% revenue growth, 23.4% earnings growth, forward P/E of 20.5 provides a floor; long-horizon buyers will defend dips.\n\n---\n\n## 3. BEAR CASE\n\n1. **5m fully bearish (0 bull / 3 bear signals), price below 5m VWAP ($398.22)** \u2014 the highest-frequency signal is pointing down, meaning immediate entry on calls carries timing risk; the intraday micro-structure is deteriorating.\n2. **Tech sector down -1.17% today; QQQ -0.48% with price well below EMA9/21** \u2014 MSFT is fighting sector headwinds. Sector rotation into Staples/Healthcare is drawing capital away from Tech specifically.\n3. **Volume at 0.45x 20D average** \u2014 the current rally lacks conviction. Low volume moves are statistically more likely to reverse. No institutional sponsorship visible intraday.\n4. **Resistance cluster at $402.29-$403.38 (20D resistance + Bollinger upper band)** \u2014 only $5-6 above current price; limited upside runway before a defined wall appears.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found** \u2014 absence of catalyst means price is purely technical/macro-driven. Any surprise macro release (Fed commentary, jobs data, geopolitical event) could move the tape sharply.\n- **VIX at 18.11** \u2014 not elevated but not complacent; an intraday VIX spike above 20 would reprice 0DTE premiums significantly and invalidate tight setups.\n- **Options expiry dynamics** \u2014 0DTE expected move is \u00b1$11.75; any gamma squeeze through $403 or breakdown through $390 could be self-reinforcing via dealer hedging.\n- **QQQ deterioration** \u2014 if QQQ accelerates lower from its current position far below EMA9/21, MSFT will likely follow regardless of its own micro-structure.\n- **10 recent SEC filings** \u2014 worth monitoring for any material disclosure, though no insider transactions in 90 days suggests no imminent corporate event.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$403.38** | Hard Resistance | Bollinger upper band; rejection here is high probability |\n| **$402.29** | Resistance | 20D resistance; needs clean break with volume |\n| **$398.22** | Pivot | 5m VWAP \u2014 reclaiming this bullish, failing here extends pullback |\n| **$396.46** | Support | EMA50 daily \u2014 loss of this level shifts daily structure bearish |\n| **$394.56** | Support | 15m VWAP \u2014 must hold for bull case to remain intact |\n| **$390.66** | Critical Support | EMA9 daily \u2014 break below this invalidates the recent recovery entirely |\n| **$373.02** | Major Support | 20D support / demand zone |\n\n**Thesis-changing level:** A 15m close above $398.22 (5m VWAP reclaim) with volume > 1x average confirms the pullback is over and the bull case is live. A 15m close below $394.56 (15m VWAP) puts the bear case in play.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSignals are genuinely split \u2014 daily and higher TF bullish, 5m bearish, sector headwinds present, volume absent on both sides, and resistance is close overhead. Timeframe alignment is mixed (not all BEARISH, not all BULLISH), which by the system's own rules flags as \"wait for alignment.\" The mixed score reflects honest disagreement in the data, not a default to caution.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe 5m is bearish, 15m/1H are bullish, sector is red, volume is absent. The timeframe conflict is real and not resolvable at this moment. The setup is watching, not trading \u2014 but it is one trigger away from becoming a CALL setup if $398.22 is reclaimed on volume.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\n\nENTRY CONDITION: Do not enter now \u2014 wait for 15m candle close\nabove 5m VWAP $398.22 with volume at least 0.8x average to\nconfirm 5m/15m/1H alignment before considering a CALL; OR wait\nfor 15m close below 15m VWAP $394.56 with volume confirmation\nto consider a PUT.\n\nENTRY TRIGGER PRICE: $398.22 (CALL trigger, break above) or\n$394.56 (PUT trigger, break below)\n\nAVOID IF: Volume continues at sub-0.5x average on any\ndirectional move \u2014 low-volume breakdowns and breakouts in MSFT\ntoday are untrustworthy.\n\nKEY RISK: Tech sector is the weakest sector today (-1.17%) and\nQQQ is well below its EMAs, meaning even a 5m/15m bullish\nalignment in MSFT carries elevated sector-drag risk that could\ntruncate any call gains before reaching a viable target.\n```\n\n---\n\n**BOTTOM LINE:** MSFT is a setup in progress, not a setup ready to trade. The 5m bearish rollover beneath VWAP is the bottleneck. Reclaim $398.22 on volume \u2192 CALL becomes viable (1DTE, ~$400-401 strike, target $402-403). Fail $394.56 \u2192 PUT becomes viable. Right now, with score at 48 and timeframes split, theta makes this a losing proposition. Watch the levels, wait for the trigger.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "Do not enter now \u2014 wait for 15m candle close",
+          "entry_trigger": 398.22,
+          "avoid_if": "Volume continues at sub-0.5x average on any",
+          "key_risk": "Tech sector is the weakest sector today (-1.17%) and",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5858
+      },
+      "was_flagged": true,
+      "cached_at": 1785253899.0444825,
+      "score": 48
+    },
+    "NVDA": {
+      "result": {
+        "ticker": "NVDA",
+        "timestamp": "2026-07-28T15:52:29.669643",
+        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 11:51 AM ET | Price: $197.78**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is in a short-term bear trend (below all major daily EMAs, 5D return -6.73%) but is experiencing an intraday bounce on low volume. The most plausible scenario over 5-15 days is continued range compression between $194.83 support and the $203-$206 EMA cluster overhead, with the path of least resistance remaining downward unless volume expands meaningfully on this bounce. The intraday bid is real but looks corrective rather than impulsive \u2014 a dead-cat bounce within a larger bearish daily structure.\n\n---\n\n## 2. BULL CASE\n\n1. **Intraday momentum on 5m/15m is genuinely bullish** \u2014 price is above both 5m and 15m VWAP, EMA9 > EMA21 on 5m, and 15m MACD histogram is positive (+0.39). This is real intraday buying pressure.\n2. **RSI at 43 + Stochastic 23/33** \u2014 both are in oversold-to-neutral territory on the daily, leaving room for a mean-reversion bounce toward $203-$206 without any structural breakout needed.\n3. **Bollinger Band position 0.243** \u2014 price is near the lower band ($192.20), which historically precedes mean-reversion bounces toward the midline (~$203.70).\n4. **Analyst consensus: STRONG BUY, PT $302** \u2014 while not a 0-2 DTE catalyst, extreme analyst conviction reduces the probability of a catastrophic break; market makers are unlikely to let it free-fall on no news.\n\n---\n\n## 3. BEAR CASE\n\n1. **Daily EMA structure is fully bearish** \u2014 EMA9 ($203.56) < EMA21 ($204.37) < EMA50 ($206.43), all stacked bearishly above price. Every EMA level is overhead resistance.\n2. **1-Hour timeframe is structurally bearish** \u2014 price is BELOW 1H VWAP ($199.41), EMA9 ($197.94) < EMA21 ($201.35), and the 1H bias scores 1 bull / 3 bear. This is the most important short-term timeframe for 0-2 DTE and it is bearish.\n3. **Tech sector (XLK) -1.17% today vs. broad market +0.40%** \u2014 NVDA is selling off into a green tape. Sector rotation away from Tech is a headwind that can persist for sessions.\n4. **OBV falling + volume at 0.5x 20D average** \u2014 the intraday bounce is happening on anemic volume (0.18x-0.40x avg across timeframes). Low-volume bounces in bearish daily structures fail at resistance more often than not.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the biggest 0-2 DTE binary risk. Clean.\n- **10 unusual options contracts flagged (5 calls / 5 puts)** \u2014 perfectly balanced unusual flow gives no edge signal. Watch for a skew developing in the next 30-60 minutes; a sudden surge in call sweeps above $199 VWAP would be a directional tell.\n- **Macro rotation** \u2014 defensive sectors (Staples +2.8%, Healthcare +1.6%) are leading hard while Tech is -1.2%. If this rotation accelerates into close, NVDA could revisit $194.83 support regardless of the intraday bounce quality.\n- **$194.83 support break** \u2014 a daily close below this level would likely trigger technical stop-outs and accelerate to the $190-$192 zone, which is 0-2 DTE put territory.\n- **No news/no catalyst** \u2014 the absence of news means this is purely price-action-driven. No gap risk overnight, but also no catalyst to power through the EMA wall at $203-$206.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$192.20** | Support | Lower Bollinger Band \u2014 bounce zone / put target |\n| **$194.83** | Support | 20D support \u2014 critical daily floor |\n| **$197.05** | Pivot | 5m VWAP \u2014 loss of this flips intraday bias bearish |\n| **$197.78** | Current | Price now |\n| **$199.41** | Resistance | 1H VWAP \u2014 bull thesis requires a close above this |\n| **$203.56** | Resistance | EMA9 daily \u2014 first major overhead wall |\n| **$206.43** | Resistance | EMA50 daily \u2014 invalidates bear thesis if broken |\n\n**Critical level that changes the thesis:** $199.41 (1H VWAP). A sustained break and hold ABOVE $199.41 on expanding volume shifts the intraday structure bullish and makes calls viable. Failure to break it confirms the bounce is corrective.\n\n---\n\n## 6. CONFLUENCE SCORE: 44/100\n\n**Score rationale:** The core problem is a genuine, unresolved conflict between a bearish daily/1H structure and a bullish 5m/15m intraday bounce \u2014 neither direction has clean alignment across all timeframes, which is precisely the condition the system flags as \"wait for alignment.\" The trade is not no-trade because it's bearish; it's no-trade because the timeframes are actively contradicting each other right now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the neutral call)**\n\nThe 1H is bearish, the daily is bearish, but the 5m/15m are actively bullish with positive momentum \u2014 this is a textbook mixed-timeframe conflict. Entering a put here means fighting the live intraday momentum; entering a call means fighting the daily and 1H structure. Neither is high-probability for 0-2 DTE.\n\n**HOWEVER \u2014 Contingent directional bias:**\n- If price **holds below $199.41 (1H VWAP) for 2+ 15m candle closes** \u2192 **BEARISH \u2192 PUTS**\n- If price **breaks and holds above $199.41 on volume \u2265 1.5x avg** \u2192 **BULLISH \u2192 CALLS**\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE \u2014 signals are genuinely mixed across timeframes; no high-probability directional edge at current price\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: Re-evaluate at 12:15 PM ET \u2014 if two consecutive 15-minute candles close BELOW 5m VWAP $197.05 with volume above 1.0x avg, the PUT setup triggers (target $194.83, 1DTE $197P); if two consecutive 15-minute candles close ABOVE 1H VWAP $199.41 with volume above 1.5x avg, the CALL setup triggers (target $201.50, 1DTE $199C)\n\nENTRY TRIGGER PRICE: $197.05 for PUT trigger | $199.41 for CALL trigger\n\nAVOID IF: Volume remains below 0.5x average \u2014 low-volume moves in either direction are noise and will not sustain through the expected move range\n\nKEY RISK: The 1H VWAP at $199.41 and 5m VWAP at $197.05 are only $2.36 apart \u2014 price is in a compression zone where both triggers could whipsaw within a single 15-minute candle; wait for candle CLOSES, not intrabar touches\n\n---\n\n**\u26a0\ufe0f CONTRADICTION FLAG:** The system's timeframe confluence rules explicitly state \"Mixed timeframes = wait for alignment before entering.\" The 5m/15m are bullish; the 1H/daily are bearish. This is the exact mixed-timeframe scenario. The correct action is to define your triggers above and wait \u2014 not to force a directional bet into the noise. The levels above give you a clean binary: one level activates puts, the other activates calls.",
+        "confluence_score": 44,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "Re-evaluate at 12:15 PM ET \u2014 if two consecutive 15-minute candles close BELOW 5m VWAP $197.05 with volume above 1.0x avg, the PUT setup triggers (target $194.83, 1DTE $197P); if two consecutive 15-minute candles close ABOVE 1H VWAP $199.41 with volume above 1.5x avg, the CALL setup triggers (target $201.50, 1DTE $199C)",
+          "entry_trigger": 197.05,
+          "avoid_if": "Volume remains below 0.5x average \u2014 low-volume moves in either direction are noise and will not sustain through the expected move range",
+          "key_risk": "The 1H VWAP at $199.41 and 5m VWAP at $197.05 are only $2.36 apart \u2014 price is in a compression zone where both triggers could whipsaw within a single 15-minute candle; wait for candle CLOSES, not intrabar touches",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6051
+      },
+      "was_flagged": true,
+      "cached_at": 1785253949.6742702,
+      "score": 44
     }
   },
-  "saved_at": "2026-07-28T11:41:43-04:00"
+  "saved_at": "2026-07-28T11:52:31-04:00"
 }
