@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 339.8674011230469,
+      "price": 339.79998779296875,
       "volume_ratio": 0.0,
-      "ts": 1785258053.5911086,
+      "ts": 1785258645.2727897,
       "last_full_scan_ts": 1785255753.9310265
     },
     "AMZN": {
-      "price": 231.5229034423828,
+      "price": 231.9199981689453,
       "volume_ratio": 0.0,
-      "ts": 1785258053.8170252,
+      "ts": 1785258645.5059593,
       "last_full_scan_ts": 1785256368.7112513
     },
     "META": {
-      "price": 594.1300048828125,
+      "price": 593.0,
       "volume_ratio": 0.0,
-      "ts": 1785258054.0373535,
+      "ts": 1785258645.7509863,
       "last_full_scan_ts": 1785255106.3631728
     },
     "MSFT": {
-      "price": 398.8399963378906,
+      "price": 398.4200134277344,
       "volume_ratio": 0.0,
-      "ts": 1785258054.2798758,
+      "ts": 1785258646.0051634,
       "last_full_scan_ts": 1785255701.1347072
     },
     "NVDA": {
-      "price": 198.0399932861328,
+      "price": 197.4300994873047,
       "volume_ratio": 0.0,
-      "ts": 1785258054.4764352,
-      "last_full_scan_ts": 1785256912.8228498
+      "ts": 1785258646.2270405,
+      "last_full_scan_ts": 1785258695.772281
     },
     "QQQ": {
-      "price": 679.0,
+      "price": 677.8300170898438,
       "volume_ratio": 0.0,
-      "ts": 1785258054.7503078,
+      "ts": 1785258646.470723,
       "last_full_scan_ts": 1785256421.241665
     },
     "SPY": {
-      "price": 742.7449951171875,
+      "price": 742.1950073242188,
       "volume_ratio": 0.0,
-      "ts": 1785258055.062162,
+      "ts": 1785258646.7237813,
       "last_full_scan_ts": 1785256467.2097392
     },
     "TSLA": {
-      "price": 307.739990234375,
+      "price": 307.54998779296875,
       "volume_ratio": 0.0,
-      "ts": 1785258055.2758057,
+      "ts": 1785258646.9841537,
       "last_full_scan_ts": 1785256966.7915158
     }
   },
@@ -194,36 +194,7 @@
       "was_flagged": false,
       "cached_at": 1785256467.2097428,
       "score": 38
-    },
-    "NVDA": {
-      "result": {
-        "ticker": "NVDA",
-        "timestamp": "2026-07-28T16:41:52.814715",
-        "analysis": "# NVDA \u2014 0\u20132 DTE OPTIONS ANALYSIS\n**12:41 PM ET | Price: $197.54**\n\n---\n\n## 1. MARKET SCENARIO\n\nThe most plausible scenario over the next 5\u201315 days is continued sideways-to-lower drift toward the $192\u2013$195 support zone, with NVDA lagging a defensive market rotation. Price is below all major EMAs on the daily timeframe, the 5-day return is -6.85%, and Tech is the worst-performing sector today. However, the 15-minute intraday structure is temporarily bullish, creating a short-term counter-trend bounce risk before the broader downtrend reasserts. The $194.83 support shelf is the key level \u2014 a breach there opens a measured move toward $190.\n\n---\n\n## 2. BULL CASE\n\n**1. 15-Minute Structure is Bullish (3B/1Br)**\nPrice is above the 15m VWAP ($195.66), EMA9/21 are stacked bullishly, and MACD histogram is positive (+0.3661). This is the most actionable short-term bullish signal and suggests buyers are defending intraday.\n\n**2. Forward P/E of 15.35 / PEG of 0.57**\nFundamentally undervalued relative to growth. Analyst consensus is STRONG BUY with a $302 target \u2014 53% upside. This limits aggressive downside over the medium term and creates demand at oversold levels.\n\n**3. Stochastic at 22.17 \u2014 Oversold on Daily**\nStochastic K at 22 is in territory where mean-reversion bounces historically occur. Combined with RSI at 43 (not yet deeply oversold but approaching), there is room for a relief rally.\n\n**4. News Sentiment Mildly Bullish (+0.101)**\nBoth headlines position NVDA as a beneficiary of AI infrastructure buildout (OpenAI, Meta partnerships). No negative catalysts in recent news flow.\n\n---\n\n## 3. BEAR CASE\n\n**1. Daily EMA Structure is Bearish \u2014 Price Below EMA9/21/50**\nEMA9=203.51, EMA21=204.35, EMA50=206.42. Price at $197.54 is below all three by $6\u2013$9. This is a bearish stack with no near-term catalyst to flip it. *Note: Weighted appropriately for the timeframe \u2014 this is a 5\u201310 day headwind, not an intraday trigger.*\n\n**2. 1-Hour Bias is Bearish (1B/3Br) + Below 1H VWAP**\nThe 1-hour timeframe \u2014 the most relevant for 0-2 DTE direction \u2014 is bearish. EMA9/21 are rolling over (197.78/200.96), price is below 1H VWAP at $198.92, and 3 of 4 signals are bearish. This is the dominant structural signal.\n\n**3. OBV Falling + Volume at 0.58x Average**\nFalling On-Balance Volume on below-average volume (73.9M vs 127M avg) indicates distribution, not accumulation. Bulls are not stepping in with conviction \u2014 this is a weak-volume bounce attempt at best.\n\n**4. Tech Sector -1.2% + Broader Defensive Rotation**\nConsumer Staples +2.4%, Healthcare +1.6% \u2014 classic defensive rotation. QQQ -0.49% while SPY +0.38%. NVDA is in the worst-performing sector today. Macro tailwind for puts is clear.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **VIX at 18.12 (Normal):** Not elevated \u2014 options are relatively fairly priced. No volatility crush risk post-event.\n- **Unusual Options Activity (10 contracts flagged, 5 calls / 5 puts):** Balanced unusual flow with P/C of 0.59 (call-skewed but not extreme) \u2014 no smart money directional conviction readable here. This is a genuine neutral reading, not a masked directional bet.\n- **No Earnings Imminent:** No binary event risk. Clean technical trade with no gap risk from earnings.\n- **AI Narrative Momentum:** Any major AI infrastructure announcement (Microsoft capex, OpenAI deal, export regulation reversal) could produce a sharp +3-5% gap that overwhelms the bearish technical structure overnight.\n- **$194.83 Support Test:** If price breaks this level on volume, it becomes a meaningful technical trigger for accelerated selling toward $190.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|-------|------|--------------|\n| $192.16 | Bollinger Lower Band / Hard Support | Floor of current range; breach = breakdown |\n| $194.83 | 20D Support | Critical near-term support; loss = bearish acceleration |\n| $197.54 | Current Price | Pivot |\n| $197.73 | 5m VWAP | Immediate intraday resistance |\n| $198.92 | 1H VWAP | Bears must defend this level; reclaim = bull signal |\n| $203.51 | Daily EMA9 | First meaningful resistance; reclaim = thesis change |\n| $212.50 | 20D Resistance | Major resistance ceiling |\n\n**Thesis-changing level:** A 15-minute candle close ABOVE $198.92 (1H VWAP) on above-average volume invalidates the bear setup and shifts bias to neutral/bullish. A break BELOW $194.83 on volume confirms acceleration toward $192.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Rationale:** The 1-hour and daily structures are bearish, but the 15-minute is bullish and actively contradicting the higher-timeframe thesis \u2014 this is a genuine timeframe conflict, not a clean setup. Volume is low across all frames (0.18x on 1H is particularly weak), which means no momentum confirmation exists for either direction. The regime note specifically requires \"confirmed VWAP + volume before any directional trade,\" and volume is not confirmed. Score lands in the 31\u201354 range: some signals align on the bear side, but contradictions are real and volume is absent.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe 15-minute bullish structure actively contradicts the 1-hour bearish structure. Volume is 0.58x average on the daily and sub-0.2x on the 1-hour \u2014 momentum is absent in both directions. The regime gate explicitly requires VWAP + volume confirmation. This is not a fearful deferral to NONE \u2014 it is an honest read of contradictory timeframes with no volume to resolve the conflict.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0\u20132 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: Do not enter. Timeframes are in genuine conflict\n(15m BULLISH vs 1H BEARISH) and volume is 0.58x average on the\ndaily and 0.18x on the 1-hour. The regime gate requires confirmed\nVWAP + volume before entry \u2014 neither condition is met.\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: Volume remains below 1.0x average and price remains\nbetween $194.83 and $198.92 (compressed range = chop, not trend).\n\nKEY RISK: A breakout above $198.92 (1H VWAP) on volume would flip\nbias to BULLISH \u2192 CALL; a breakdown below $194.83 on volume would\nflip bias to BEARISH \u2192 PUT. Monitor these triggers \u2014 the setup\nresolves, just not yet.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:**\nThis is a rare but honest NONE. The bear case is real and well-supported by daily/1H structure. The problem is the 15-minute is actively running counter-trend and volume is absent \u2014 entering a PUT here means fighting a live intraday bounce with no momentum behind the thesis. The trade exists on both sides; it simply hasn't triggered yet. Watch $194.83 breakdown and $198.92 reclaim as your live binary triggers. Whichever breaks on volume is the trade.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter. Timeframes are in genuine conflict",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 1.0x average and price remains",
-          "key_risk": "A breakout above $198.92 (1H VWAP) on volume would flip",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6120
-      },
-      "was_flagged": true,
-      "cached_at": 1785256912.822855,
-      "score": 52
     }
   },
-  "saved_at": "2026-07-28T13:00:55-04:00"
+  "saved_at": "2026-07-28T13:11:37-04:00"
 }
