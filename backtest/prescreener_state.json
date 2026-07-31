@@ -1,84 +1,54 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 300.80010986328125,
+      "price": 300.6199951171875,
       "volume_ratio": 0.0,
-      "ts": 1785516047.9354584,
+      "ts": 1785516643.9212675,
       "last_full_scan_ts": 1785515510.9425893
     },
     "AMZN": {
-      "price": 270.760009765625,
+      "price": 270.92999267578125,
       "volume_ratio": 0.0,
-      "ts": 1785516048.200504,
+      "ts": 1785516644.1776958,
       "last_full_scan_ts": 1785514297.8956838
     },
     "META": {
-      "price": 551.1950073242188,
+      "price": 549.2150268554688,
       "volume_ratio": 0.0,
-      "ts": 1785516048.6202724,
-      "last_full_scan_ts": 1785516091.9790223
+      "ts": 1785516644.448676,
+      "last_full_scan_ts": 1785516694.5856762
     },
     "MSFT": {
-      "price": 463.1199951171875,
+      "price": 463.5400085449219,
       "volume_ratio": 0.0,
-      "ts": 1785516048.8356624,
+      "ts": 1785516644.7654905,
       "last_full_scan_ts": 1785514949.7070215
     },
     "NVDA": {
-      "price": 197.9499969482422,
+      "price": 198.02999877929688,
       "volume_ratio": 0.0,
-      "ts": 1785516049.0124636,
+      "ts": 1785516645.067328,
       "last_full_scan_ts": 1785515556.1268594
     },
     "QQQ": {
-      "price": 686.875,
+      "price": 686.9000244140625,
       "volume_ratio": 0.0,
-      "ts": 1785516049.2389386,
+      "ts": 1785516645.3910859,
       "last_full_scan_ts": 1785516133.3083916
     },
     "SPY": {
       "price": 744.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1785516049.5691257,
-      "last_full_scan_ts": 1785512717.1132834
+      "ts": 1785516645.7363615,
+      "last_full_scan_ts": 1785516741.169007
     },
     "TSLA": {
-      "price": 309.69500732421875,
+      "price": 309.95001220703125,
       "volume_ratio": 0.0,
-      "ts": 1785516049.8130739,
+      "ts": 1785516645.9952786,
       "last_full_scan_ts": 1785515610.7136784
     }
   },
-  "ai_cache": {
-    "SPY": {
-      "result": {
-        "ticker": "SPY",
-        "timestamp": "2026-07-31T15:45:17.110390",
-        "analysis": "# SPY \u2014 0-2 DTE Options Analysis | 11:44 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is grinding sideways in low-volume, mixed-signal territory near $741.69, holding fractionally above VWAP across all three intraday timeframes but showing bearish MACD divergence on the daily and all intraday frames. The most plausible 5-15 day scenario is continued range-bound chop between the 20D support at $729.46 and 20D resistance at $754.95, with a mild bearish lean driven by tech weakness (QQQ -0.77%, Tech sector -1.2%) and negative daily MACD. A decisive directional break requires a catalyst that is not currently present.\n\n---\n\n## 2. BULL CASE\n\n- **Price above VWAP on all three intraday timeframes (5m/15m/1H):** Intraday structure is technically constructive \u2014 buyers are defending VWAP and haven't ceded control.\n- **5m 3-candle momentum +0.189%:** Short-term price action shows mild upward impulse, suggesting the most recent micro-trend is bullish.\n- **15m and 1H EMA9 > EMA21:** Both intermediate intraday EMAs are in bullish alignment, implying the intraday trend structure favors continuation.\n- **Bollinger Band support + OBV rising:** Price in lower half of bands with rising OBV suggests accumulation and potential mean-reversion toward the midband (~$745.40).\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD histogram negative (-1.0815) and all intraday MACDs bearish:** Momentum is negative across every timeframe \u2014 the most consistent signal in the data.\n- **QQQ -0.77% with Tech sector -1.2%:** The dominant sector driver of SPY is under clear selling pressure, creating overhead drag.\n- **15m and 1H 3-candle momentum negative:** The most recent multi-candle sequences are bearish, conflicting with VWAP positioning.\n- **Volume severely depressed (0.45x 20D average):** Thin volume means the VWAP hold is unconvincing \u2014 a single institutional sell program could break it without resistance.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data / Fed speak:** Any intraday Fed commentary or surprise economic print (jobless claims, Fed minutes) could break the range decisively in either direction.\n- **QQQ acceleration lower:** If QQQ deteriorates further through the session (currently -0.77%), SPY correlation would pull it below VWAP and potentially toward $737-$738 support.\n- **Volume surge into close:** Extremely low volume (0.45x average) means a volume spike in either direction would carry outsized price impact \u2014 watch for 1.5x+ volume as a directional signal.\n- **Options expiry pin risk:** With 10 unusual contracts flagged equally split calls/puts and a P/C of 1.11, max pain dynamics could keep SPY pinned near $741-$742 into close.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate VWAP support** | $741.62\u2013$741.64 | Loss of 15m VWAP = bearish flip |\n| **EMA21 (daily)** | $742.61 | Reclaim = bullish; current price below it |\n| **Critical support** | $737.77 | 1H VWAP \u2014 break here changes intraday thesis to bearish |\n| **Key support** | $732.72 | Lower Bollinger Band |\n| **20D support** | $729.46 | Range floor \u2014 break = trend deterioration |\n| **Resistance** | $745.40 | Bollinger midband / logical mean-reversion target |\n| **20D resistance** | $754.95 | Range ceiling |\n\n**Thesis-changing level:** A 15m candle close below $741.00 (VWAP) on above-average volume shifts the setup to bearish. Conversely, a clean break and hold above $743.00 (EMA21 reclaim) shifts to bullish.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSignals are genuinely split \u2014 VWAP structure is bullish, MACD structure is bearish across all timeframes, volume is too thin to confirm either, and momentum indicators are neutral. This is textbook mixed-signal noise, not a tradeable directional alignment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in neutrality)**\n\nThe bullish VWAP structure and bearish MACD are directly contradicting each other across every timeframe simultaneously. Neither bull nor bear has a clean edge. The low-volume environment means any current positioning could be fake-out. This is not a case where one side is \"close\" \u2014 it is genuinely indeterminate.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter \u2014 wait for 15m candle close either below $741.00 VWAP on volume >1.5x avg (PUT trigger) or above $743.00 EMA21 reclaim on volume >1.5x avg (CALL trigger) before considering a trade.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.7x average \u2014 thin markets punish directional options positions.\nKEY RISK: MACD bearish + VWAP bullish is the most common \"chop trap\" in short-dated options \u2014 entering now risks theta decay in a sideways grind with no resolution.\n```\n\n---\n\n**BOTTOM LINE:** SPY is in a genuine no-man's-land. The score of 42 is not a close call \u2014 it reflects a real signal conflict between structure (VWAP bullish) and momentum (MACD bearish) in a volume vacuum. With 0-2 DTE theta burning every minute, wait for the market to resolve the conflict at $741 or $743 before committing premium. There will be a better setup.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter \u2014 wait for 15m candle close either below $741.00 VWAP on volume >1.5x avg (PUT trigger) or above $743.00 EMA21 reclaim on volume >1.5x avg (CALL trigger) before considering a trade.",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.7x average \u2014 thin markets punish directional options positions.",
-          "key_risk": "MACD bearish + VWAP bullish is the most common \"chop trap\" in short-dated options \u2014 entering now risks theta decay in a sideways grind with no resolution.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5683
-      },
-      "was_flagged": false,
-      "cached_at": 1785422288.2764494,
-      "score": 42
-    }
-  },
-  "saved_at": "2026-07-31T12:42:15-04:00"
+  "ai_cache": {},
+  "saved_at": "2026-07-31T12:52:23-04:00"
 }
