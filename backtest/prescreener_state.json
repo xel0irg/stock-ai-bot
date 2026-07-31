@@ -1,54 +1,84 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 300.6199951171875,
+      "price": 300.9442138671875,
       "volume_ratio": 0.0,
-      "ts": 1785516643.9212675,
+      "ts": 1785517254.662906,
       "last_full_scan_ts": 1785515510.9425893
     },
     "AMZN": {
-      "price": 270.92999267578125,
+      "price": 271.239990234375,
       "volume_ratio": 0.0,
-      "ts": 1785516644.1776958,
+      "ts": 1785517254.9353771,
       "last_full_scan_ts": 1785514297.8956838
     },
     "META": {
-      "price": 549.2150268554688,
+      "price": 549.0250244140625,
       "volume_ratio": 0.0,
-      "ts": 1785516644.448676,
+      "ts": 1785517255.2025554,
       "last_full_scan_ts": 1785516694.5856762
     },
     "MSFT": {
-      "price": 463.5400085449219,
+      "price": 461.489990234375,
       "volume_ratio": 0.0,
-      "ts": 1785516644.7654905,
-      "last_full_scan_ts": 1785514949.7070215
+      "ts": 1785517255.516499,
+      "last_full_scan_ts": 1785517307.0389884
     },
     "NVDA": {
-      "price": 198.02999877929688,
+      "price": 198.36500549316406,
       "volume_ratio": 0.0,
-      "ts": 1785516645.067328,
+      "ts": 1785517255.8136232,
       "last_full_scan_ts": 1785515556.1268594
     },
     "QQQ": {
-      "price": 686.9000244140625,
+      "price": 687.4404907226562,
       "volume_ratio": 0.0,
-      "ts": 1785516645.3910859,
+      "ts": 1785517256.1967854,
       "last_full_scan_ts": 1785516133.3083916
     },
     "SPY": {
-      "price": 744.6900024414062,
+      "price": 744.8200073242188,
       "volume_ratio": 0.0,
-      "ts": 1785516645.7363615,
+      "ts": 1785517256.6131341,
       "last_full_scan_ts": 1785516741.169007
     },
     "TSLA": {
-      "price": 309.95001220703125,
+      "price": 310.0596923828125,
       "volume_ratio": 0.0,
-      "ts": 1785516645.9952786,
+      "ts": 1785517256.8676991,
       "last_full_scan_ts": 1785515610.7136784
     }
   },
-  "ai_cache": {},
-  "saved_at": "2026-07-31T12:52:23-04:00"
+  "ai_cache": {
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-07-31T17:01:47.030125",
+        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $461.42 | Time: 1:01 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has surged ~19% over the past 20 days and is now sitting precisely at 20D resistance ($461.42) while daily RSI and Stochastic are both deep in overbought territory (74 and 96 respectively). The most plausible near-term scenario is a sideways-to-mild-pullback consolidation as the stock digests an enormous run, with 5-minute price action already rolling over below the 5m VWAP at $463.06. Over the next 5-15 trading days, a retest of $440-$450 is more likely than a clean breakout to new highs, though the underlying bullish structure (strong MACD, rising OBV, strong earnings growth) keeps any pullback shallow.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram +7.26 (Daily) + Rising OBV:** Momentum and accumulation are firmly positive on the daily timeframe, implying institutional buying has not reversed.\n- **15m and 1H intraday structure bullish:** Price is above both the 15m VWAP ($458.75) and 1H VWAP ($444.49) with EMA9 > EMA21 on both timeframes \u2014 the intermediate intraday trend remains intact.\n- **1H 3-candle momentum +1.79%:** The hourly trend is still pushing higher; no confirmed reversal signal on the longer intraday frame.\n- **Strong analyst consensus + fundamental tailwinds:** 53 analysts at STRONG_BUY with a $561 price target and 31.7% earnings growth \u2014 longer-term buyers will buy any dip aggressively.\n\n---\n\n## 3. BEAR CASE\n\n- **RSI 74 + Stochastic 96/77 (Daily) \u2014 extreme overbought:** Both oscillators are at levels historically associated with mean reversion or at minimum stalling. The stock has run 19% in 20 days with no meaningful pullback.\n- **Price AT 20D Resistance ($461.42):** The current price IS the 20D resistance level \u2014 this is a textbook stall zone with no overhead room defined on the near-term chart.\n- **5m timeframe fully bearish (0 bull / 3 bear signals):** Price below 5m VWAP ($463.06), MACD histogram negative (-0.22), 3-candle momentum -0.55% \u2014 short-term sellers are in control right now.\n- **Tech sector (XLK) -0.52% on the day:** MSFT's sector is the second-worst performer today, acting as a headwind and reducing the probability of a breakout continuation.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the biggest binary risk, but also removes a catalyst that could justify a breakout above resistance.\n- **Options flow is perfectly balanced (5 unusual calls / 5 unusual puts, P/C 0.43):** The low P/C ratio (0.43) is call-skewed overall but unusual activity is split evenly \u2014 smart money appears to be hedging, not directionally committed. This is unusual after a 19% run and could signal insiders expect chop.\n- **10 SEC filings in 90 days:** Worth monitoring \u2014 any material filing (buyback announcement, guidance update, insider transaction) could accelerate a move in either direction.\n- **VIX at 17.01 is benign** \u2014 no macro panic bid. If VIX spikes on a macro headline (tariffs, Fed speak), MSFT at these extended levels would sell off sharply given its mega-cap weight.\n- **20D Support at $381 is far away** \u2014 there is no nearby technical support defined between $461 and $381, meaning any breakdown has air underneath it.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Resistance** | $463.06 | 5m VWAP \u2014 reclaim = bull continuation |\n| **Current Position / 20D Resistance** | $461.42 | Price is exactly here \u2014 decision zone |\n| **15m VWAP Support** | $458.75 | Loss of this level = intraday structure breaks |\n| **1H EMA21 / Key Support** | $434.63 | Major intraday support; breakdown = large-scale reversal |\n| **1H VWAP** | $444.49 | Intermediate support; losing this confirms bearish shift |\n| **Thesis Invalidation (Bull)** | $465.00+ | Clean break and hold above flips bias to breakout |\n| **Thesis Invalidation (Bear)** | $458.75 lost | 15m VWAP loss confirms near-term sellers in control |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Rationale:** The signals are genuinely split \u2014 daily momentum is bullish but overbought, 15m/1H intraday structure leans bullish, but the 5m is firmly bearish, price is pinned at resistance, sector is red, and options flow gives no directional edge. This is a mixed-to-contradictory setup without the alignment required for high-conviction 0-2 DTE trading.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the neutral call)**\n\nThe timeframe conflict is the deciding factor: 5m bearish vs. 15m/1H bullish, price exactly at resistance, sector headwind, perfectly balanced unusual options flow. This is precisely the \"wait for alignment\" scenario per the confluence rules.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter until either (a) price reclaims and holds above 5m VWAP $463.06 \n  with 15m MACD turning positive and volume >1.2x avg (CALL trigger) OR (b) price breaks \n  below 15m VWAP $458.75 on a confirmed 15m candle close with volume >1.2x avg (PUT trigger).\nENTRY TRIGGER PRICE: $463.06 (CALL) or $458.75 (PUT) \u2014 wait for one level to break cleanly\nAVOID IF: Price continues to chop between $458 and $463 with low volume \u2014 theta kills \n  any position in a tight range at these premium levels.\nKEY RISK: MSFT is at exactly its 20D resistance with 19% gains in 20 days \u2014 \n  breakout trades here have historically low follow-through in the first session \n  and failed breakdowns reverse sharply given underlying institutional demand.\n```\n\n---\n\n**BOTTOM LINE:** MSFT is at a genuine inflection point \u2014 not a directional trade, a *decision* point. The 5m/15m conflict with price pinned at resistance and sector headwinds makes this a coin flip until one side capitulates. **Watch the two trigger levels above. The first clean break with volume confirmation is the trade \u2014 not before.**",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "Do not enter until either (a) price reclaims and holds above 5m VWAP $463.06",
+          "entry_trigger": 463.06,
+          "avoid_if": "Price continues to chop between $458 and $463 with low volume \u2014 theta kills",
+          "key_risk": "MSFT is at exactly its 20D resistance with 19% gains in 20 days \u2014",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6035
+      },
+      "was_flagged": true,
+      "cached_at": 1785517307.0389915,
+      "score": 52
+    }
+  },
+  "saved_at": "2026-07-31T13:01:49-04:00"
 }
