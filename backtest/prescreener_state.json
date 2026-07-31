@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 301.0350036621094,
+      "price": 301.409912109375,
       "volume_ratio": 0.0,
-      "ts": 1785513651.2544427,
+      "ts": 1785514243.7624292,
       "last_full_scan_ts": 1785513093.1561017
     },
     "AMZN": {
-      "price": 269.17999267578125,
+      "price": 270.0199890136719,
       "volume_ratio": 0.0,
-      "ts": 1785513651.5849333,
-      "last_full_scan_ts": 1785513708.5639157
+      "ts": 1785514243.9509661,
+      "last_full_scan_ts": 1785514297.8956838
     },
     "META": {
-      "price": 546.0,
+      "price": 546.5800170898438,
       "volume_ratio": 0.0,
-      "ts": 1785513651.993344,
+      "ts": 1785514244.1613266,
       "last_full_scan_ts": 1785512521.764556
     },
     "MSFT": {
-      "price": 463.7449951171875,
+      "price": 461.9599914550781,
       "volume_ratio": 0.0,
-      "ts": 1785513652.2937102,
-      "last_full_scan_ts": 1785513757.4710817
+      "ts": 1785514244.475773,
+      "last_full_scan_ts": 1785514341.4949398
     },
     "NVDA": {
-      "price": 196.47000122070312,
+      "price": 196.5850067138672,
       "volume_ratio": 0.0,
-      "ts": 1785513652.5736423,
+      "ts": 1785514244.6956697,
       "last_full_scan_ts": 1785512623.0970895
     },
     "QQQ": {
-      "price": 684.9400024414062,
+      "price": 684.875,
       "volume_ratio": 0.0,
-      "ts": 1785513652.8673263,
+      "ts": 1785514244.9627736,
       "last_full_scan_ts": 1785512124.6578572
     },
     "SPY": {
-      "price": 743.2000122070312,
+      "price": 743.1900024414062,
       "volume_ratio": 0.0,
-      "ts": 1785513653.26592,
+      "ts": 1785514245.222448,
       "last_full_scan_ts": 1785512717.1132834
     },
     "TSLA": {
-      "price": 307.8402099609375,
+      "price": 307.94000244140625,
       "volume_ratio": 0.0,
-      "ts": 1785513653.5498219,
+      "ts": 1785514245.465146,
       "last_full_scan_ts": 1785512676.0250626
     }
   },
@@ -136,7 +136,36 @@
       "was_flagged": true,
       "cached_at": 1785512521.7645607,
       "score": 48
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-07-31T16:12:21.490629",
+        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:11 PM ET | Last: $462.09 | +2.44% today**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has staged a violent 18.76% 5-day rally and is sitting at its own 20-day resistance ($462.09) with RSI at 74, Stochastic at 97, and price pressing the upper Bollinger Band. The most plausible near-term scenario is a sideways-to-shallow-pullback consolidation as momentum stalls at resistance with below-average volume failing to confirm continuation. The 0-2 DTE window is unlikely to produce a sustained directional break; the stock is more likely to oscillate near current levels or bleed modestly lower as overbought oscillators mean-revert.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **+2.44% on day, above VWAP on all 3 intraday timeframes** | Intraday buyers are in control; short-term momentum is constructive |\n| **15m timeframe: 4/4 bullish signals, MACD hist +0.471, 3-candle mom +0.932%** | Best-quality intraday confirmation exists right now |\n| **MACD Histogram (daily): +7.29 and rising** | Daily trend is technically intact despite overbought readings |\n| **Analyst PT $561.58 / Strong Buy (53 analysts)** | Fundamental tailwind; any news catalyst could accelerate toward that gap |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI 74.19 (daily) + Stochastic K 97.46** | Historically extreme overbought \u2014 mean reversion risk is severe at this level |\n| **Price = 20D Resistance ($462.09) + AT upper Bollinger Band (1.284x)** | Stock is pressing a double-cap; breakouts through this on low volume fail often |\n| **Volume 0.77x 20D avg (below normal); 5m/15m/1H all 0.16x-0.55x avg** | The 19% 5-day rally is NOT being confirmed by volume today \u2014 exhaustion signature |\n| **XLK Tech sector -0.98% today; QQQ -0.49%** | Sector is dragging; MSFT is outperforming but sector headwind limits upside in a 0-2 DTE window |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news/earnings imminent** \u2014 removes event catalyst in both directions; this is a pure technicals trade\n- **10 unusual options contracts flagged (5 calls / 5 puts) \u2014 perfectly balanced** \u2014 suggests no informed directional bet; market makers are neutral\n- **Options implied move:** 0DTE \u00b1$3.60, 1DTE \u00b1$5.08, 2DTE \u00b1$7.21 \u2014 the market is pricing modest movement; a macro shock (Fed speak, geopolitical event) could invalidate any short-dated position\n- **ATR $15.82 (3.42%)** \u2014 the stock CAN move if a catalyst appears; absence of news means ATR is likely dormant today\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $462.09 | Current 20D resistance = current price; failure to break cleanly = bearish |\n| **Intraday VWAP (1H)** | $442.63 | Bull thesis breaks if price loses 1H VWAP \u2014 4.4% away, unlikely intraday |\n| **15m VWAP** | $456.60 | Near-term support; a close below this shifts 15m bias |\n| **5m VWAP** | $458.72 | Tightest actionable support \u2014 break below invalidates intraday bull |\n| **Downside Target (put scenario)** | ~$458\u2013$459 | 0.5x the 0DTE expected move ($1.80 below current) |\n| **Upside target (call scenario)** | ~$464\u2013$465 | 0.5x the 0DTE expected move above |\n| **Thesis-flip level (bearish)** | $455 | Below 15m VWAP + 5m VWAP = intraday structure breaks |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score rationale:** The 15m timeframe is cleanly bullish and intraday price structure is intact, BUT the daily is overbought at double-resistance with declining relative volume \u2014 the bull and bear signals are genuinely balanced rather than clearly aligned in one direction, making this a low-conviction setup despite a solid intraday position.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in staying flat)**\n\nThe contradiction is real and must be called out honestly: the 15m structure is bullish, but the stock is AT its own resistance with overbought oscillators, below-average volume, and a tech sector down 1%. Neither side has clean enough alignment to justify 0-2 DTE premium spend where theta is lethal.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade \u2014 await either a clean 15m candle close below $458.72\n  (5m VWAP) with volume above 1.0x avg for a PUT entry, OR a confirmed breakout\n  above $464 on 15m close with volume >1.0x avg for a CALL entry.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume continues below 0.5x average \u2014 no conviction means no edge\n  for premium buyers on either side.\nKEY RISK: A gap-through of $462 resistance on volume would invalidate the\n  neutral thesis and favor a CALL; a tech sector flush below -1.5% today\n  would favor a PUT \u2014 monitor both conditions actively.\n```\n\n---\n\n**\u26a1 BOTTOM LINE:** MSFT is a coin flip at resistance. Both cases are honest. The 15m is bullish, the daily is screaming overbought at its own ceiling, and volume is absent. Theta eats you alive when you're wrong at 0-2 DTE. Wait for a volume-confirmed break \u2014 in either direction \u2014 before committing premium.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No trade \u2014 await either a clean 15m candle close below $458.72",
+          "entry_trigger": null,
+          "avoid_if": "Volume continues below 0.5x average \u2014 no conviction means no edge",
+          "key_risk": "A gap-through of $462 resistance on volume would invalidate the",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5870
+      },
+      "was_flagged": true,
+      "cached_at": 1785514341.4949431,
+      "score": 52
     }
   },
-  "saved_at": "2026-07-31T12:02:39-04:00"
+  "saved_at": "2026-07-31T12:12:23-04:00"
 }
