@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 300.3445129394531,
+      "price": 300.80010986328125,
       "volume_ratio": 0.0,
-      "ts": 1785515447.009408,
+      "ts": 1785516047.9354584,
       "last_full_scan_ts": 1785515510.9425893
     },
     "AMZN": {
-      "price": 271.110107421875,
+      "price": 270.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1785515447.1827013,
+      "ts": 1785516048.200504,
       "last_full_scan_ts": 1785514297.8956838
     },
     "META": {
-      "price": 549.3300170898438,
+      "price": 551.1950073242188,
       "volume_ratio": 0.0,
-      "ts": 1785515447.4196458,
-      "last_full_scan_ts": 1785514898.878558
+      "ts": 1785516048.6202724,
+      "last_full_scan_ts": 1785516091.9790223
     },
     "MSFT": {
-      "price": 463.29998779296875,
+      "price": 463.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1785515447.6505384,
+      "ts": 1785516048.8356624,
       "last_full_scan_ts": 1785514949.7070215
     },
     "NVDA": {
-      "price": 197.92010498046875,
+      "price": 197.9499969482422,
       "volume_ratio": 0.0,
-      "ts": 1785515447.9083996,
+      "ts": 1785516049.0124636,
       "last_full_scan_ts": 1785515556.1268594
     },
     "QQQ": {
-      "price": 686.9600219726562,
+      "price": 686.875,
       "volume_ratio": 0.0,
-      "ts": 1785515448.1358411,
-      "last_full_scan_ts": 1785512124.6578572
+      "ts": 1785516049.2389386,
+      "last_full_scan_ts": 1785516133.3083916
     },
     "SPY": {
-      "price": 744.4613037109375,
+      "price": 744.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1785515448.4198017,
+      "ts": 1785516049.5691257,
       "last_full_scan_ts": 1785512717.1132834
     },
     "TSLA": {
-      "price": 309.135009765625,
+      "price": 309.69500732421875,
       "volume_ratio": 0.0,
-      "ts": 1785515448.5930018,
+      "ts": 1785516049.8130739,
       "last_full_scan_ts": 1785515610.7136784
     }
   },
@@ -78,36 +78,7 @@
       "was_flagged": false,
       "cached_at": 1785422288.2764494,
       "score": 42
-    },
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-07-31T16:21:38.869925",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**As of 12:20 PM ET | Price: $548.35**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is in a technical downtrend on the daily/weekly frame (-7.66% 5D, -8.65% 20D), but is staging an intraday recovery off near-oversold conditions, trading above VWAP across all three intraday timeframes. The most plausible 5-15 day scenario is a continued choppy, mean-reverting grind \u2014 price is sitting just above the lower Bollinger Band ($544.16) and the 20D support ($539.03), which may provide a short-term floor for bounces. However, the macro trend remains firmly bearish and any intraday rally is more likely a relief bounce than a trend reversal.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI/Stochastic Oversold** (RSI 35.2, Stoch K/D 14.77/9.01) | Mean-reversion pressure building; historically bounces occur from these levels |\n| **All 3 intraday timeframes above VWAP** (5m, 15m, 1H) | Active buyers controlling price today; intraday momentum is bullish |\n| **15m MACD + 5m MACD both bullish** | Short-term momentum turning positive with fresh cross signals |\n| **AT Lower Bollinger Band** ($544.16 band / price $548.35) | Price is statistically stretched to the downside; band reversion toward midpoint (~$620) is possible |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram deeply negative** (-11.81 daily) | Daily momentum still firmly bearish; the trend is not reversed |\n| **EMA stack fully bearish** (EMA9=585 / EMA21=601 / EMA50=604 all above price) | Price is suppressed well below all major moving averages \u2014 overhead supply is dense |\n| **OBV falling + volume below average** (0.66x 20D avg) | Today's bounce is on thin volume, suggesting weak conviction from buyers |\n| **Tech sector down -0.87% / QQQ below EMA21** | Sector tailwind is absent; macro environment is not supporting this bounce |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **News headline contradiction**: The lone article is classified STRONGLY_BEARISH algorithmically, but the actual headline (\"Don't Panic, Accumulate\") is constructive/bullish in tone \u2014 sentiment model appears to have misfired. Real news tone may be mildly supportive.\n- **No earnings imminent** \u2014 removes binary risk, but also removes a catalyst that could fuel a sharp directional move.\n- **Low volume bounce**: If volume fails to pick up this afternoon, the intraday rally could evaporate quickly into the close as sellers reassert.\n- **$539 support test**: A break below the 20D support ($539.03) and lower Bollinger Band ($544.16) in tandem would be a high-conviction bearish signal \u2014 that is the key level to watch for a potential 0DTE PUT entry that doesn't yet exist.\n- **Options flow balanced** (5 unusual calls / 5 unusual puts, P/C 0.74): Market makers not tipping their hand \u2014 no informational edge from flow.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$544.16** | Near support (Lower BB) | First defense; loss here signals breakdown |\n| **$539.03** | Key support (20D) | Bears take control below this; setup flips |\n| **$548.35** | Current price / pivot | Must hold above for bull case to stay intact |\n| **$553-555** | Intraday resistance | VWAP + EMA9/21 cluster on 5m/15m; breakout level |\n| **$560** | 1H EMA21 | Recapturing this would signal stronger bounce |\n| **$585-604** | Major resistance zone | EMA9/21/50 daily stack \u2014 ceiling for any multi-day rally |\n\n**Thesis-changing level**: $539.03. Below = bearish breakdown confirmed. Above $555 with volume = intraday bull case strengthens meaningfully.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score rationale**: The intraday structure is cleanly bullish (all 3 timeframes above VWAP, 5m and 15m MACD positive), but this directly contradicts the daily trend, sector direction, low volume, and falling OBV \u2014 the signals are genuinely split between timeframes, and the bounce lacks the volume confirmation needed to trust it for a directional 0-2 DTE trade.\n\n*Mixed-timeframe conflict with weak volume is precisely the scenario where theta punishes indecision \u2014 the setup does not meet the 55+ threshold.*\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe conflict is real: intraday says UP, daily says DOWN, volume says don't trust either. This is not a defaulted NONE \u2014 it is an honest read. The rally does not have volume support, and the daily trend does not have a catalyst to break it. Waiting for resolution at $539 (PUT trigger) or $555+ with volume (CALL trigger) is the correct discipline here.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\n\nENTRY CONDITION: Do not enter now. Set alert at $555.00 for CALL trigger\n(15m close above with volume > 1.2x avg) or $542.00 for PUT trigger\n(15m close below with volume > 1.2x avg and VWAP rejection confirmed).\n\nENTRY TRIGGER PRICE: $555.00 (CALL) or $542.00 (PUT) \u2014 conditional\n\nAVOID IF: Volume remains below 0.8x average through 1 PM ET \u2014 a low-volume\ndrift in either direction has high reversal risk and is not tradeable with\n0-2 DTE options.\n\nKEY RISK: Thin volume makes this a false-breakout environment; entering on\nprice alone without volume confirmation will result in whipsaw and full\npremium loss.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE**: The single cleanest trade here is a contingent setup \u2014 *if* META breaks $542 on volume with VWAP rejection, that is a high-conviction 1DTE PUT entry (score would re-rate to ~72). *If* META breaks $555+ on volume expansion, that is a 1DTE CALL entry. As of 12:20 PM neither trigger has fired. Patience is the edge here.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter now. Set alert at $555.00 for CALL trigger",
-          "entry_trigger": 555.0,
-          "avoid_if": "Volume remains below 0.8x average through 1 PM ET \u2014 a low-volume",
-          "key_risk": "Thin volume makes this a false-breakout environment; entering on",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5974
-      },
-      "was_flagged": true,
-      "cached_at": 1785512521.7645607,
-      "score": 52
     }
   },
-  "saved_at": "2026-07-31T12:33:32-04:00"
+  "saved_at": "2026-07-31T12:42:15-04:00"
 }
