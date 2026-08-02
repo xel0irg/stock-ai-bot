@@ -67,6 +67,10 @@ FIELDS = [
     "hit_target",           # yes/no — stock reached target before stop
     "hit_stop",             # yes/no — stock reached stop before target
     "premium_at_exit_ts",   # option mid at the moment target/stop hit
+    "premium_path",          # JSON list of [HH:MM, premium] sampled each scan
+                             # — builds the intraday premium curve so stop-loss
+                             # and take-profit rules can be backtested against
+                             # real paths instead of just entry/close endpoints
     # ── close ──
     "premium_at_close",
     "stock_at_close",
@@ -313,6 +317,28 @@ def update_open_trades(current_prices: Dict[str, float]) -> None:
         target  = _f("stock_target")
         stop    = _f("stop_level")
         strike  = _f("strike")
+
+        # ── Per-scan premium sample ──────────────────────────────────
+        # Record the live option premium every scan so we can later
+        # reconstruct the intraday premium curve and backtest exit rules
+        # (stop-loss / take-profit) against real paths. Purely additive —
+        # this never changes trigger/target/stop behaviour below.
+        try:
+            import json as _json
+            _p = _option_mid(tk, ct, strike, r["expiry_date"])
+            if _p is not None:
+                _hhmm = _now_et().strftime("%H:%M")
+                try:
+                    _path = _json.loads(r.get("premium_path") or "[]")
+                except (ValueError, TypeError):
+                    _path = []
+                # Avoid duplicate samples for the same minute
+                if not _path or _path[-1][0] != _hhmm:
+                    _path.append([_hhmm, _p])
+                    r["premium_path"] = _json.dumps(_path)
+                    changed = True
+        except Exception as _e:
+            log.debug(f"{tk}: premium path sample skipped — {_e}")
 
         # Trigger crossing
         if r["entered_on_trigger"] == "no" and trigger is not None:
