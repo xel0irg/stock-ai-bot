@@ -1,84 +1,54 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 303.7250061035156,
+      "price": 302.939697265625,
       "volume_ratio": 0.0,
-      "ts": 1785771642.819691,
+      "ts": 1785772252.9378743,
       "last_full_scan_ts": 1785771119.3444517
     },
     "AMZN": {
-      "price": 285.739990234375,
+      "price": 285.68499755859375,
       "volume_ratio": 0.0,
-      "ts": 1785771642.964455,
+      "ts": 1785772253.131275,
       "last_full_scan_ts": 1785771163.3197827
     },
     "META": {
-      "price": 594.3699951171875,
+      "price": 593.6856079101562,
       "volume_ratio": 0.0,
-      "ts": 1785771643.1775305,
+      "ts": 1785772253.3177106,
       "last_full_scan_ts": 1785769322.3403764
     },
     "MSFT": {
-      "price": 487.82501220703125,
+      "price": 485.80999755859375,
       "volume_ratio": 0.0,
-      "ts": 1785771643.3757832,
-      "last_full_scan_ts": 1785771686.8233256
+      "ts": 1785772253.5415864,
+      "last_full_scan_ts": 1785772308.7926862
     },
     "NVDA": {
-      "price": 206.72860717773438,
+      "price": 207.04559326171875,
       "volume_ratio": 0.0,
-      "ts": 1785771643.5513685,
-      "last_full_scan_ts": 1785768141.791127
+      "ts": 1785772253.7563622,
+      "last_full_scan_ts": 1785772366.9873528
     },
     "QQQ": {
-      "price": 697.0050048828125,
+      "price": 697.27001953125,
       "volume_ratio": 0.0,
-      "ts": 1785771643.7414985,
+      "ts": 1785772254.0119872,
       "last_full_scan_ts": 1785771741.7718563
     },
     "SPY": {
-      "price": 755.6300048828125,
+      "price": 756.0850219726562,
       "volume_ratio": 0.0,
-      "ts": 1785771643.9855256,
+      "ts": 1785772254.2916179,
       "last_full_scan_ts": 1785771796.3255525
     },
     "TSLA": {
-      "price": 323.7099914550781,
+      "price": 323.3900146484375,
       "volume_ratio": 0.0,
-      "ts": 1785771644.1264384,
+      "ts": 1785772254.5179813,
       "last_full_scan_ts": 1785770498.6835108
     }
   },
-  "ai_cache": {
-    "NVDA": {
-      "result": {
-        "ticker": "NVDA",
-        "timestamp": "2026-08-03T14:42:21.787096",
-        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 10:41 AM ET | Price: $206.04**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is running hard intraday (+2.64%) on low relative volume (0.31x 20D MA), sitting well above all intraday VWAPs with RSI overbought on the 5m, 15m, and 1H simultaneously. The most plausible near-term scenario is a **continuation pause or intraday pullback** before any further extension, with price likely oscillating between $203\u2013$210 over the next 1-5 sessions. A clean breakout above $210 (toward the $212.50 resistance) requires volume confirmation that is currently absent; without it, the move looks like a low-volume gap-fill/squeeze that is vulnerable to mean reversion toward VWAP.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Price above ALL intraday VWAPs (5m/15m/1H)** | Bulls in control of every short-term timeframe; sellers have not reclaimed VWAP |\n| **1H + 15m EMA9 > EMA21 (bullish cross)** | Short-term trend is up; momentum structure is intact |\n| **Tech sector +1.7%, SPY/QQQ both green** | Macro tailwind; sector rotation into tech supporting the bid |\n| **OBV trend rising + P/C ratio 0.29 (call-heavy)** | Accumulation on balance volume; options market is positioned bullishly |\n\n**Implication:** If NVDA consolidates above $204 (EMA50 on daily) and volume picks up, a test of $210\u2013$212.50 is plausible intraday or by tomorrow.\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **5m RSI = 94.57 / 15m RSI = 78.88 / 1H RSI = 79.67 \u2014 ALL overbought** | Extreme overbought on every intraday timeframe simultaneously; mean reversion risk is elevated |\n| **Volume = 0.31x 20D average** | This move is happening on thin air \u2014 low conviction; vulnerable to reversal on any selling pressure |\n| **Daily MACD histogram = -0.3047 (bearish)** | Underlying daily momentum is still net negative despite today's pop |\n| **1H VWAP distance = 3.916% above** | Price is stretched; historically, NVDA at 4% above 1H VWAP with low volume tends to snap back |\n\n**Implication:** A reversion to the 15m VWAP (~$201) or even 1H VWAP (~$198) is plausible if buyers step away \u2014 a $5\u2013$8 drawdown from current levels.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found (0 articles):** The move today is happening without a clear catalyst, which makes it MORE fragile \u2014 could be algo-driven or index-rebalance related; easily reverses.\n- **Earnings not imminent:** No binary event risk in the near term, which limits explosive upside surprise but also eliminates downside gap risk.\n- **Broad market regime remains choppy:** SPY/QQQ both \"mixed trend\" \u2014 if macro wobbles this afternoon, high-beta names like NVDA (Beta 2.21) will amplify the move in either direction.\n- **52W High $236.54 vs current $206:** There is significant overhead resistance zone from prior distribution; any macro headwind will remind traders this stock is 13% off highs.\n- **Options flow balanced (5 unusual calls / 5 unusual puts):** No dominant smart money directional bet is visible, reducing confidence in either direction.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard resistance** | $212.50 | 20D resistance \u2014 ceiling for this move |\n| **Secondary resistance** | $210.00 | Round number + prior intraday high zone |\n| **Current price** | $206.04 | \u2014 |\n| **Daily EMA50** | $204.11 | First key support; break below flips intraday bias |\n| **15m VWAP** | $201.12 | Bull/bear pivot for today's session |\n| **1H VWAP** | $198.25 | Deeper reversion target; break below invalidates bulls |\n| **20D support** | $190.01 | Structural floor \u2014 only relevant for 2+ DTE |\n\n**Thesis-changing level:** A 15-min candle CLOSE below $204.11 (daily EMA50) on above-average volume = bull structure breaks, opens door to $201 VWAP test.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nThe bullish intraday structure is real and undeniable (VWAP, EMA9/21, sector), but triple-overbought RSI across all intraday timeframes combined with 0.31x volume creates a setup where the entry risk/reward for CALLs is poor (chasing at the top) and for PUTs is premature (trend hasn't broken yet). Signals are internally contradictory: direction is bullish but the entry timing is dangerous.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe *direction* leans bullish but the *entry timing* is objectively terrible for 0-2 DTE options \u2014 buying calls when RSI is 94 on the 5m with 0.31x normal volume is a statistically poor entry. Buying puts requires a trend break that has not occurred. Neither setup has a clean trigger.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter now. Monitor for one of two triggers: (A) CALL trigger \u2014 15m \n  candle close above $207.50 with volume spike to >1.5x 5m average and RSI cooling below \n  80, or (B) PUT trigger \u2014 15m candle close below $204.11 (daily EMA50) with volume above \n  1.2x average confirming the breakdown.\nENTRY TRIGGER PRICE: CALL trigger: $207.50 break with RSI reset | PUT trigger: $204.11 \n  break to downside\nAVOID IF: RSI remains above 85 on 5m at any attempted call entry, or if price breaks above \n  $208 without volume \u2014 both indicate a trap. Avoid all trades after 2:00 PM ET on 0DTE.\nKEY RISK: With 0.31x normal volume, any institutional player stepping in \u2014 in either \n  direction \u2014 can move this $3-5 instantly; the low-volume environment makes stop management \n  extremely difficult.\n```\n\n---\n\n**\u26a0\ufe0f ANALYST NOTE \u2014 WHY NO TRADE:**\nThis is not a default \"safe\" NONE. This is a **timing NONE**. The bull structure is intact but the entry is at a RSI-94 5m reading after a +2.64% day on 31% of average volume \u2014 that is precisely the setup where call buyers get crushed by theta + reversion while the stock \"goes nowhere.\" The correct trade is to wait for either (A) a RSI reset + continuation break above $207.50, or (B) a structural break below $204 to enter puts. Neither condition is met at 10:41 AM. Re-evaluate at next 15m candle close.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter now. Monitor for one of two triggers: (A) CALL trigger \u2014 15m",
-          "entry_trigger": null,
-          "avoid_if": "RSI remains above 85 on 5m at any attempted call entry, or if price breaks above",
-          "key_risk": "With 0.31x normal volume, any institutional player stepping in \u2014 in either",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6142
-      },
-      "was_flagged": true,
-      "cached_at": 1785768141.7911308,
-      "score": 52
-    }
-  },
-  "saved_at": "2026-08-03T11:43:18-04:00"
+  "ai_cache": {},
+  "saved_at": "2026-08-03T11:52:48-04:00"
 }
