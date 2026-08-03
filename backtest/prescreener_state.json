@@ -1,84 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 304.0350036621094,
+      "price": 303.7250061035156,
       "volume_ratio": 0.0,
-      "ts": 1785771048.8715308,
+      "ts": 1785771642.819691,
       "last_full_scan_ts": 1785771119.3444517
     },
     "AMZN": {
-      "price": 285.69000244140625,
+      "price": 285.739990234375,
       "volume_ratio": 0.0,
-      "ts": 1785771049.3164341,
+      "ts": 1785771642.964455,
       "last_full_scan_ts": 1785771163.3197827
     },
     "META": {
-      "price": 593.75,
+      "price": 594.3699951171875,
       "volume_ratio": 0.0,
-      "ts": 1785771049.6769292,
+      "ts": 1785771643.1775305,
       "last_full_scan_ts": 1785769322.3403764
     },
     "MSFT": {
-      "price": 485.635009765625,
+      "price": 487.82501220703125,
       "volume_ratio": 0.0,
-      "ts": 1785771050.1993346,
-      "last_full_scan_ts": 1785771215.875341
+      "ts": 1785771643.3757832,
+      "last_full_scan_ts": 1785771686.8233256
     },
     "NVDA": {
-      "price": 206.97500610351562,
+      "price": 206.72860717773438,
       "volume_ratio": 0.0,
-      "ts": 1785771050.6811702,
+      "ts": 1785771643.5513685,
       "last_full_scan_ts": 1785768141.791127
     },
     "QQQ": {
-      "price": 696.5449829101562,
+      "price": 697.0050048828125,
       "volume_ratio": 0.0,
-      "ts": 1785771051.1627326,
-      "last_full_scan_ts": 1785767803.8740413
+      "ts": 1785771643.7414985,
+      "last_full_scan_ts": 1785771741.7718563
     },
     "SPY": {
-      "price": 755.3099975585938,
+      "price": 755.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1785771051.655333,
-      "last_full_scan_ts": 1785767869.1768305
+      "ts": 1785771643.9855256,
+      "last_full_scan_ts": 1785771796.3255525
     },
     "TSLA": {
-      "price": 323.7300109863281,
+      "price": 323.7099914550781,
       "volume_ratio": 0.0,
-      "ts": 1785771052.1070888,
+      "ts": 1785771644.1264384,
       "last_full_scan_ts": 1785770498.6835108
     }
   },
   "ai_cache": {
-    "SPY": {
-      "result": {
-        "ticker": "SPY",
-        "timestamp": "2026-08-03T14:37:49.172121",
-        "analysis": "# SPY \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:37 AM ET | Last: $754.61**\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is pushing into the upper Bollinger Band (upper=$758.84) and approaching 52W high territory ($760.40) on low volume (0.29x 20D MA), having already run +1.86% over 5 days. The most plausible scenario over the next 5-15 days is a short-term consolidation or shallow pullback from the $755\u2013$760 resistance zone before any continuation higher \u2014 the underlying uptrend structure remains intact but near-term momentum is stretched. For the next 1-2 sessions specifically, the path of least resistance is still modestly upward given intact VWAP structure, but the risk/reward for chasing deteriorates rapidly as price compresses against resistance on thin volume.\n\n---\n\n## 2. BULL CASE\n\n1. **VWAP structure fully bullish across all timeframes** \u2014 Price is above VWAP on 5m ($752.55), 15m ($748.99), and 1H ($744.16). This is the single most reliable short-dated intraday signal and it is unanimously green.\n2. **MACD bullish cross on daily** \u2014 Histogram at +0.2416 confirms recent momentum shift to the upside on the primary timeframe that governs multi-day option positions.\n3. **OBV rising + sector breadth broadly green** \u2014 Consumer Discretionary +2.0%, Tech +1.3%, Financials +0.8% confirm institutional participation in today's move; not a narrow or suspicious rally.\n4. **52W high proximity acts as a magnetic level** \u2014 $760.40 is only $5.79 (0.77%) away. In low-VIX environments (VIX=15.88), price approaching 52W highs on positive momentum tends to test the level before reversing, giving calls a short-lived but real target.\n\n---\n\n## 3. BEAR CASE\n\n1. **Stochastic K/D 96.34/70.53 \u2014 deeply overbought** \u2014 K at 96+ with D at 70 and a wide spread signals the fast line is due for mean reversion toward D; historically precedes intraday pullbacks of 0.3\u20130.6%.\n2. **RSI overbought across ALL intraday timeframes** \u2014 5m RSI=89.4, 15m RSI=85.49, 1H RSI=79.69. Simultaneous extreme readings across timeframes indicate a stretched move with minimal remaining upside momentum before a flush.\n3. **Critically low volume (0.29x 20D average)** \u2014 The rally is not confirmed by volume participation. Low-volume moves to resistance are the highest-probability locations for fades. This is the most concerning bear signal for sustaining the move today.\n4. **Bollinger Band position at 0.837 / near upper band ($758.84)** \u2014 Price at $754.61 is 0.84 of the way to the upper band; upper band tests at 52W highs on low volume have a high historical fade rate intraday.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W High break ($760.40):** A clean break above this level on expanding volume would be a momentum ignition signal and invalidate the fade thesis immediately \u2014 FOMO buying into new all-time territory is a real risk.\n- **Macro/Fed commentary:** No news flagged, but any intraday Fed speaker headline (especially rate path language) could move SPY 0.5\u20131.0% instantaneously, dwarfing the expected move.\n- **VIX spike:** VIX at 15.88 is benign but any geopolitical headline could rapidly reprice volatility and crush short-premium positions; also hurts OTM calls disproportionately.\n- **Options expiry dynamics (0DTE gamma):** With unusual activity on both calls and puts (5 each), dealer hedging flows near $755 and $758 strikes could act as magnetic or repelling forces intraday.\n- **PM session volume normalization:** If volume picks up toward the 20D average in the afternoon, the direction of that volume surge will be the determining factor.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| $760.40 | 52W High / Hard Resistance | Break above = momentum ignition; rejection = confirming the fade |\n| $758.84 | Bollinger Upper Band | First technical resistance ceiling |\n| $754.95 | 20D Resistance | Immediate overhead; price is currently testing this |\n| $754.61 | Current Price | Pivot \u2014 holding above is bullish, rejection here confirms the stall |\n| $752.55 | 5m VWAP | First intraday support; loss of this on volume is early warning |\n| $748.99 | 15m VWAP | Loss of this level shifts intraday bias to neutral/bearish |\n| $744.16 | 1H VWAP | Major intraday support; only meaningful for 1-2 DTE positioning |\n| $729.46 | 20D Support | Structural floor; irrelevant for 0DTE, relevant context for 2DTE |\n\n**Thesis-changing level:** $754.95 (20D resistance). Clean breakout above this on \u22651.0x volume = CALL thesis lives. Rejection and close below $752.55 (5m VWAP) = fade/PUT thesis activates.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSignals are directionally split \u2014 bullish VWAP structure and MACD cross argue for continuation, but universally overbought RSI readings (all three intraday timeframes), critically low volume, and price compressed against the 20D resistance/upper Bollinger Band create genuine ambiguity. The setup does not clearly favor either direction with sufficient conviction for a 0-2 DTE options trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe honest read: the intraday structure is leaning bullish (VWAP alignment favors calls) but the overbought readings are legitimate and the volume is genuinely disqualifying for a high-conviction entry at current levels. This is not a reflexive \"default to NONE\" \u2014 it is a genuine signal conflict between trend structure (bullish) and momentum exhaustion indicators (overbought on every timeframe, low volume, at resistance). Neither side has enough edge to justify extreme theta exposure.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No position to manage.\nENTRY CONDITION: Monitor for a breakout above $754.95 on volume \u22651.0x average (CALL trigger) OR a 15m candle close below 5m VWAP $752.55 on volume \u22651.2x average (PUT trigger) \u2014 either event would reclassify this as a 65+ score setup worth re-evaluating.\nENTRY TRIGGER PRICE: $754.95 for CALL reconsideration | $752.55 for PUT reconsideration\nAVOID IF: Volume remains below 0.5x average \u2014 low-volume moves in either direction are traps at this price level.\nKEY RISK: The current setup sits at the exact ambiguous intersection of bullish VWAP structure and overbought exhaustion against hard resistance on thin volume \u2014 paying theta into this without a cleaner trigger is the primary risk.\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** If SPY clears $754.95 with volume expanding toward 1.0x+ of the daily average, re-run the score \u2014 a breakout above 20D resistance toward the 52W high ($760.40) in a low-VIX environment with intact VWAP structure would score 68\u201372 and justify a **1DTE ATM CALL** targeting $757.00\u2013$758.00 (within 1x expected move of $2.57). That trade has a logical trigger. This one does not yet.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "No position to manage.",
-          "entry_condition": "Monitor for a breakout above $754.95 on volume \u22651.0x average (CALL trigger) OR a 15m candle close below 5m VWAP $752.55 on volume \u22651.2x average (PUT trigger) \u2014 either event would reclassify this as a 65+ score setup worth re-evaluating.",
-          "entry_trigger": 754.95,
-          "avoid_if": "Volume remains below 0.5x average \u2014 low-volume moves in either direction are traps at this price level.",
-          "key_risk": "The current setup sits at the exact ambiguous intersection of bullish VWAP structure and overbought exhaustion against hard resistance on thin volume \u2014 paying theta into this without a cleaner trigger is the primary risk.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6156
-      },
-      "was_flagged": true,
-      "cached_at": 1785767869.1768336,
-      "score": 52
-    },
     "NVDA": {
       "result": {
         "ticker": "NVDA",
@@ -109,5 +80,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-08-03T11:33:37-04:00"
+  "saved_at": "2026-08-03T11:43:18-04:00"
 }
