@@ -1,60 +1,60 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 306.96319580078125,
+      "price": 306.7200012207031,
       "volume_ratio": 0.0,
-      "ts": 1785778250.5906537,
-      "last_full_scan_ts": 1785774709.3648021
+      "ts": 1785778843.8791833,
+      "last_full_scan_ts": 1785778945.7516918
     },
     "AMZN": {
-      "price": 284.4150085449219,
+      "price": 284.1499938964844,
       "volume_ratio": 0.0,
-      "ts": 1785778250.7809358,
+      "ts": 1785778844.1326716,
       "last_full_scan_ts": 1785775303.8889308
     },
     "META": {
-      "price": 592.6300048828125,
+      "price": 591.4298706054688,
       "volume_ratio": 0.0,
-      "ts": 1785778250.9844737,
+      "ts": 1785778844.5957074,
       "last_full_scan_ts": 1785776517.1293235
     },
     "MSFT": {
-      "price": 489.1890869140625,
+      "price": 488.8599853515625,
       "volume_ratio": 0.0,
-      "ts": 1785778251.2013426,
+      "ts": 1785778844.9188116,
       "last_full_scan_ts": 1785776561.638974
     },
     "NVDA": {
-      "price": 208.52000427246094,
+      "price": 207.86500549316406,
       "volume_ratio": 0.0,
-      "ts": 1785778251.4224477,
-      "last_full_scan_ts": 1785778308.1614006
+      "ts": 1785778845.2661767,
+      "last_full_scan_ts": 1785778901.0154693
     },
     "QQQ": {
-      "price": 699.719970703125,
+      "price": 699.5349731445312,
       "volume_ratio": 0.0,
-      "ts": 1785778251.6773431,
+      "ts": 1785778845.6235669,
       "last_full_scan_ts": 1785775890.1353247
     },
     "SPY": {
-      "price": 757.135009765625,
+      "price": 757.219970703125,
       "volume_ratio": 0.0,
-      "ts": 1785778251.9488983,
+      "ts": 1785778845.9539785,
       "last_full_scan_ts": 1785775944.4814508
     },
     "TSLA": {
-      "price": 322.0,
+      "price": 322.5201110839844,
       "volume_ratio": 0.0,
-      "ts": 1785778252.1370306,
-      "last_full_scan_ts": 1785774820.4692986
+      "ts": 1785778846.1361983,
+      "last_full_scan_ts": 1785779000.7537982
     }
   },
   "ai_cache": {
     "AAPL": {
       "result": {
         "ticker": "AAPL",
-        "timestamp": "2026-08-03T16:31:49.354187",
-        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 12:31 PM ET | Price: $306.52**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is caught in a genuine tension: the stock is down -0.77% on the day and -9.87% over 5 days, sitting at the lower Bollinger Band, while the broad market (SPY +1.65%, QQQ +2.06%) and Tech sector (XLK +2.15%) are rallying hard. The most plausible scenario over the next 5-15 days is a mean-reversion bounce attempt back toward $310-315, driven by tech sector tailwinds and oversold technicals \u2014 but that bounce will face significant overhead resistance with all EMAs stacked well above current price. AAPL is underperforming its sector badly today, which is the dominant short-term contradiction in this data set.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Stochastic 14.63 \u2014 Deeply Oversold** | Historically reliably precedes short-term bounces; sitting near lower Bollinger Band ($303.53) confirms compression |\n| **5m VWAP + EMA bullish** | Intraday momentum is turning \u2014 price above 5m VWAP ($304.13), EMA9/21 curling up, MACD histogram positive; short-term buyers present |\n| **Tech sector +2.15% / QQQ +2.06%** | Broad sector sponsorship provides mean-reversion fuel; AAPL is stretched vs. peers and could catch a snap-back bid |\n| **Bollinger Band Position 0.073** | Price near lower band floor ($303.53) \u2014 statistically likely to revert toward midpoint (~$324) over multiple sessions |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **AAPL -0.77% while QQQ +2.06%** | This is the loudest signal in the data. AAPL is actively underperforming by ~2.8% relative to its sector index \u2014 institutional distribution in progress |\n| **MACD Histogram -2.74 (Daily)** | Strong negative momentum at the daily timeframe; not a fading signal, this is deeply negative |\n| **1H VWAP: BEARISH (3 bear/1 bull)** | The controlling intraday timeframe is structurally bearish; price below 1H VWAP ($306.89), EMA9 < EMA21 |\n| **OBV Falling + Volume 0.63x avg** | No accumulation. Falling OBV on low volume suggests weak demand rather than a genuine reversal |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **AAPL-specific macro risk:** Tariff/China supply chain headlines move AAPL disproportionately. Any reversal or escalation could create a 3-5% gap move regardless of technicals.\n- **Tech sector momentum catch-up:** If QQQ sustains +2% into close, AAPL could face forced rebalancing/catch-up buying \u2014 the gap between AAPL and QQQ performance today is anomalously wide.\n- **Options pinning:** P/C 0.69 with 10 unusual contracts flagged (balanced 5C/5P). Strikes near $305 and $310 could create pinning behavior into 0DTE expiry, limiting directional resolution today.\n- **No news catalyst found:** Absence of news means this is pure flow/technical. Could resolve violently on any headline.\n- **Analyst target $323.28:** 5.5% above current price \u2014 any reaffirmation of buy ratings adds tailwind.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard support** | $303.53 | Lower Bollinger Band \u2014 loss of this = acceleration lower |\n| **Intraday pivot** | $304.13 | 5m VWAP \u2014 current bull/bear line intraday |\n| **Critical level** | $306.69-$306.89 | 15m/1H VWAP cluster \u2014 reclaiming this flips intraday structure bullish |\n| **Near resistance** | $310.80 | EMA50 \u2014 first meaningful overhead target on a bounce |\n| **Bull thesis change** | $303.00 | Break here = lower Bollinger loss, confirms continuation lower |\n| **Bear thesis change** | $308.50 | Sustained hold above 1H VWAP + EMA convergence = sector catch-up trade valid |\n\n**Critical thesis-changing level: $306.80** \u2014 if AAPL reclaims and holds the 15m/1H VWAP cluster with expanding volume, the underperformance narrative flips to catch-up. If it continues to fail there, bears maintain control.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Rationale:** The signals are genuinely split and this is not a scoring penalty \u2014 it is an accurate read. Intraday structure is internally contradictory (5m bullish, 1H bearish), AAPL's underperformance vs. a +2% QQQ is a hard-to-ignore bear signal BUT also a classic mean-reversion setup, and low volume removes the conviction to bet on either direction with 0-2 DTE theta burning.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in neutrality)**\n\nThe core problem: AAPL is -0.77% while its sector is +2.15%. This is simultaneously the best bear argument (distribution) and the best bull argument (snap-back). These two interpretations are equally valid from the data and cannot be resolved by the remaining indicators. Forcing a direction here is speculation, not edge.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 no stop required.\nENTRY CONDITION: Do not enter. Monitor for resolution of the AAPL vs. QQQ divergence \u2014 if AAPL reclaims 1H VWAP ($306.89) on volume >1.0x avg, re-evaluate for a CALL; if AAPL breaks $303.53 lower Bollinger on volume expansion, re-evaluate for a PUT.\nENTRY TRIGGER PRICE: $306.89 (CALL re-eval) or $303.53 (PUT re-eval)\nAVOID IF: Signals remain split across timeframes and volume stays below 0.8x average \u2014 low volume means neither side has conviction.\nKEY RISK: The single biggest risk is paying for theta on a stock that is pinning between $303-$308 while the sector rallies around it \u2014 time decay will destroy both directional bets if AAPL simply chops.\n\n---\n\n**BOTTOM LINE:** The AAPL vs. QQQ divergence of ~2.8% today is the defining fact. It is equally consistent with a snapback CALL or continued distribution PUT. Neither case clears the 55-point threshold required for a 0-2 DTE trade. **Stand aside. Revisit at 1H VWAP reclaim or Bollinger breakdown with volume confirmation.**",
+        "timestamp": "2026-08-03T17:42:25.748084",
+        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $306.74 | Time: 1:41 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is in a technical tug-of-war: down -9.8% over 5 days and sitting at the lower Bollinger Band (~$303.58 lower band), but today's intraday structure is showing short-term stabilization/bounce as the 15m timeframe is cleanly bullish and the broader tech sector (XLK +2.37%) and QQQ (+2.21%) are having a strong up day. The most plausible 5-15 day scenario is a dead-cat bounce toward $310\u2013$315 as oversold conditions and sector tailwinds provide near-term relief, before the larger downtrend likely reasserts. The daily trend remains bearish but the intraday setup today is leaning bullish, creating a short-term vs. medium-term divergence that must be resolved on the trader's timeframe.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **XLK/Tech sector +2.37%, QQQ +2.21%** | Sector tide is strongly bullish today \u2014 AAPL is lagging its sector, meaning catch-up potential exists intraday |\n| **15m timeframe: 4/4 bullish signals** | Strongest intraday confirmation available; price above 15m VWAP ($305.42), EMAs bullish, MACD positive |\n| **Stochastic 15.13/33.67 \u2014 Oversold** | Extreme oversold on daily chart suggests short-term mean reversion pressure; price has limited downside momentum near the lower BB |\n| **Price at lower Bollinger Band (0.077 position)** | Lower BB at $303.58 is acting as a floor; statistically, BB reversals from extreme compression are common, implying a bounce toward the middle band (~$324) over days |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram -2.7269 (daily)** | Strong daily bearish momentum \u2014 the downtrend has real structural force behind it |\n| **-9.8% over 5 days, all EMAs bearish** | EMA9/21/50 all stacked bearish; price remains well below the 50-day EMA ($310.81), confirming the distribution phase |\n| **OBV falling, volume below 20D MA** | No accumulation occurring \u2014 the bounce lacks institutional conviction; thin volume today (0.77x avg) means this rally could fade |\n| **5m price now BELOW VWAP, 3-candle momentum -0.156%** | Despite the 15m bullish signal, the very near-term (last 15 min) is showing micro-bearish pressure suggesting the bounce may be stalling |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro/Index continuation**: If QQQ/SPY accelerate further into close, AAPL could play catch-up aggressively \u2014 the lagging behavior vs. XLK +2.37% is the biggest wildcard for a sharp intraday squeeze\n- **CXMT IPO headline** (the only news item): Framed as leverage for AAPL in memory chip supply chain \u2014 mildly positive but unlikely to move the needle today\n- **Lower Bollinger Band defense**: A firm close above $303.58 today would technically confirm BB support and could trigger algorithmic buying programs\n- **VIX at 15.6**: Low implied volatility means options premiums are relatively cheap, which slightly favors buyers \u2014 but also means the expected move is narrow (\u00b1$2.61 for 1DTE), reducing profit window\n- **No earnings imminent, no insider activity**: Removes tail-risk catalysts in both directions \u2014 trade is purely technical\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$303.58** | Hard Support | Lower Bollinger Band \u2014 loss of this flips thesis sharply bearish |\n| **$306.74** | Current/20D Support | Coincident with current price; holding here is critical |\n| **$306.76** | 5m VWAP | Micro-resistance just above; reclaiming this triggers bullish momentum |\n| **$310.81** | Resistance | 50-day EMA \u2014 first major ceiling for any bounce |\n| **$314.99** | Strong Resistance | 1H EMA21 \u2014 where the bear trend reasserts aggressively |\n| **$340.08** | 20D Resistance | Macro resistance ceiling; irrelevant for 0-2 DTE |\n\n**Thesis-changing level**: A 15m candle close above $307.50 with volume expansion = confirm CALL entry. A break below $303.58 on volume = abort all bullish positions, bear case takes over.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score rationale**: The 15m timeframe is cleanly bullish (4/4) and the sector context strongly favors upside today, but the daily trend is firmly bearish, volume is anemic (0.77x, 0.28x on 15m), the 5m is already showing micro-stalling, and the intraday bounce is occurring into a known downtrend without accumulation confirmation \u2014 too many structural contradictions to reach high conviction despite the intraday bullish signals.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\n*Rationale*: The 15m is bullish and sector is green (favoring CALLs), but daily MACD is deeply negative, volume is critically low across all timeframes (0.28x on 15m, 0.11x on 5m), and the 5m is already fading. The bounce exists but lacks the volume/momentum confirmation required for a high-conviction 0-2 DTE entry. Score of 52 falls below the 55 minimum threshold for a trade.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade to manage.\nENTRY CONDITION: Monitor for 15m candle close above $307.50 with volume exceeding 0.6x average on that candle \u2014 if triggered, reassess for a CALL on 1DTE basis; alternatively, a break below $303.58 on volume >1.0x average would justify a PUT reassessment.\nENTRY TRIGGER PRICE: $307.50 (CALL trigger) / $303.58 (PUT trigger)\nAVOID IF: Volume remains below 0.4x average \u2014 this bounce has no institutional backing and theta will destroy premium before price moves enough to profit.\nKEY RISK: Score is 52/100, below the minimum 55 threshold; the primary risk is paying theta for a move that stalls in the range between the lower BB and the 50-day EMA with no catalyst to break either direction decisively.",
         "confluence_score": 52,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
@@ -65,47 +65,18 @@
           "stock_target": null,
           "est_premium": null,
           "profit_target": null,
-          "stop_rule": "No trade \u2014 no stop required.",
-          "entry_condition": "Do not enter. Monitor for resolution of the AAPL vs. QQQ divergence \u2014 if AAPL reclaims 1H VWAP ($306.89) on volume >1.0x avg, re-evaluate for a CALL; if AAPL breaks $303.53 lower Bollinger on volume expansion, re-evaluate for a PUT.",
-          "entry_trigger": 306.89,
-          "avoid_if": "Signals remain split across timeframes and volume stays below 0.8x average \u2014 low volume means neither side has conviction.",
-          "key_risk": "The single biggest risk is paying for theta on a stock that is pinning between $303-$308 while the sector rallies around it \u2014 time decay will destroy both directional bets if AAPL simply chops.",
+          "stop_rule": "No trade to manage.",
+          "entry_condition": "Monitor for 15m candle close above $307.50 with volume exceeding 0.6x average on that candle \u2014 if triggered, reassess for a CALL on 1DTE basis; alternatively, a break below $303.58 on volume >1.0x average would justify a PUT reassessment.",
+          "entry_trigger": 307.5,
+          "avoid_if": "Volume remains below 0.4x average \u2014 this bounce has no institutional backing and theta will destroy premium before price moves enough to profit.",
+          "key_risk": "Score is 52/100, below the minimum 55 threshold; the primary risk is paying theta for a move that stalls in the range between the lower BB and the 50-day EMA with no catalyst to break either direction decisively.",
           "setup_quality": "NO TRADE"
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6041
+        "tokens_used": 6009
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1785774709.3648057,
-      "score": 52
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-08-03T16:33:40.464694",
-        "analysis": "# TSLA \u2014 SHORT-DATED OPTIONS ANALYSIS\n**12:33 PM ET | Price: $321.64 | 0-2 DTE Framework**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is bouncing intraday (+3.35% today) off deeply oversold territory within a dominant intermediate-term downtrend, trading more than 35% below its 52W high. The most plausible 5-15 day scenario is a continued dead-cat-bounce attempt toward the $335\u2013$349 zone before the structural bear trend reasserts \u2014 price is being carried by broad market tailwinds (SPY +1.65%, XLY +1.63%) rather than stock-specific conviction. Intraday, the 5m structure is rolling over below VWAP while 15m/1H remain constructive, suggesting the bounce is mature and momentum is stalling near current levels.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI 36.5 (Near Oversold) + Stochastic 22/15** | Mean-reversion setup; extreme readings can fuel sharp short-covering rallies toward $335\u2013$345 |\n| **1H and 15m bias BULLISH; price above both 15m and 1H VWAP** | Intraday structure is still net-constructive; institutional VWAP algos remain buyers above $318.70 |\n| **OBV Trend RISING despite price weakness** | Accumulation divergence \u2014 buyers stepping in on dips near the 52W low cluster |\n| **XLY sector +1.63%; SPY +1.65%** | Macro tailwind active today; TSLA correlates strongly (Beta 1.83) \u2014 broad risk-on supports further intraday drift higher |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram -4.71 (daily); price below EMA9/21/50** | Intermediate trend firmly bearish; any bounce is selling into structure overhead |\n| **5m bias FULLY BEARISH (0 bull/3 bear); price below 5m VWAP $323.17** | Short-term momentum has rolled over; the intraday bounce is losing steam at current levels |\n| **Volume 0.51x 20D average; 15m volume 0.08x** | This rally is happening on anemic participation \u2014 no institutional conviction behind the move; thin volume bounces fail |\n| **1H RSI 74.75 (Overbought on 1H)** | The fastest timeframe showing overbought readings; near-term exhaustion signal against the broader downtrend |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Elon Musk headlines**: Any political, Twitter/X, or regulatory news moves TSLA 3-5% instantly \u2014 biggest single wildcard with no current news available\n- **Broad market reversal**: SPY/QQQ are in \"mixed\" regime \u2014 if afternoon selling materializes, TSLA's Beta 1.83 amplifies downside sharply\n- **Low-volume squeeze**: At 0.51x normal volume, a sudden volume spike in either direction creates an outsized move relative to the expected move pricing \u2014 could blow through option strikes quickly\n- **Options expiry positioning**: Balanced P/C 0.53 with 5 unusual calls AND 5 unusual puts flagged \u2014 market makers may pin price or create a sharp late-day move depending on gamma exposure near round numbers ($320, $325)\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical intraday support** | $318.70 | 15m VWAP \u2014 loss of this level flips 15m structure bearish and removes the primary bull signal |\n| **5m VWAP resistance** | $323.17 | Price currently failing here; reclaim = intraday bullish resumption |\n| **Near resistance** | $324.03 | EMA9 daily \u2014 first structural overhead resistance |\n| **Thesis-change resistance** | $335\u2013$340 | Above here and the bounce has legs toward $349 (EMA21 daily) |\n| **Key support** | $311.95 | 1H VWAP \u2014 loss of this invalidates the entire intraday bull structure |\n| **Major support** | $297.38 | 52W Low \u2014 structural floor; a close below this is a major breakdown |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Rationale**: The two most tradeable timeframes (5m and 15m) are directly contradicting each other \u2014 5m is fully bearish with price below VWAP while 15m remains bullish; the 1H is technically bullish but overbought; daily MACD is deeply negative; volume is dangerously thin on both timeframes; and options flow is genuinely balanced (5 unusual calls, 5 unusual puts, P/C 0.53). This is a textbook mixed-signal environment with insufficient alignment to justify theta exposure.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe directional conflict between 5m (bearish, below VWAP) and 15m/1H (bullish, above VWAP) with extraordinarily low volume on both confirmation timeframes makes this a coin-flip intraday. The bullish signals are real but not strengthening; the bearish signals are real but the broader tape is green. Forcing a direction here is how theta burns accounts.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not enter \u2014 await either (a) 15m candle close back below 15m VWAP $318.70 with volume above 1.0x avg to confirm bearish flip, OR (b) 5m candle close back above $323.17 (5m VWAP) with MACD cross turning positive to confirm bullish resumption\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x average \u2014 directional conviction cannot be established in thin tape\nKEY RISK: TSLA's Beta 1.83 means any surprise macro print or Musk headline between now and close creates a 4-6% move that renders any current strike irrelevant; the no-trade stance preserves capital for a cleaner setup\n\n---\n\n**\u26a0\ufe0f BOTTOM LINE**: Score 52/100 \u2014 below the 55 minimum threshold. The CALL case is plausible (green tape, above key VWAPs, oversold daily RSI, OBV rising) but the 5m structure is actively rolling over and volume is so thin it cannot confirm direction. **Wait for either the 15m VWAP ($318.70) to break with volume (PUT trigger) or the 5m VWAP ($323.17) to reclaim with volume (CALL trigger).** Re-run analysis if a clear trigger fires before 2 PM ET.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter \u2014 await either (a) 15m candle close back below 15m VWAP $318.70 with volume above 1.0x avg to confirm bearish flip, OR (b) 5m candle close back above $323.17 (5m VWAP) with MACD cross turning positive to confirm bullish resumption",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.5x average \u2014 directional conviction cannot be established in thin tape",
-          "key_risk": "TSLA's Beta 1.83 means any surprise macro print or Musk headline between now and close creates a 4-6% move that renders any current strike irrelevant; the no-trade stance preserves capital for a cleaner setup",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6003
-      },
-      "was_flagged": true,
-      "cached_at": 1785774820.4693017,
       "score": 52
     },
     "AMZN": {
@@ -138,5 +109,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-08-03T13:31:50-04:00"
+  "saved_at": "2026-08-03T13:43:22-04:00"
 }
