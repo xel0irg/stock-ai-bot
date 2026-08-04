@@ -1,84 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 305.7101135253906,
+      "price": 306.385009765625,
       "volume_ratio": 0.0,
-      "ts": 1785857441.1202621,
+      "ts": 1785858048.0741549,
       "last_full_scan_ts": 1785854495.9712358
     },
     "AMZN": {
-      "price": 278.239990234375,
+      "price": 277.510009765625,
       "volume_ratio": 0.0,
-      "ts": 1785857441.3619275,
+      "ts": 1785858048.339315,
       "last_full_scan_ts": 1785857502.229931
     },
     "META": {
-      "price": 583.0700073242188,
+      "price": 582.530029296875,
       "volume_ratio": 0.0,
-      "ts": 1785857441.5697484,
+      "ts": 1785858048.7081943,
       "last_full_scan_ts": 1785854544.368448
     },
     "MSFT": {
-      "price": 498.4324951171875,
+      "price": 497.4200134277344,
       "volume_ratio": 0.0,
-      "ts": 1785857441.9130468,
+      "ts": 1785858049.047145,
       "last_full_scan_ts": 1785855156.0341454
     },
     "NVDA": {
-      "price": 209.8498992919922,
+      "price": 210.33999633789062,
       "volume_ratio": 0.0,
-      "ts": 1785857442.2786114,
-      "last_full_scan_ts": 1785854081.6946907
+      "ts": 1785858049.4295793,
+      "last_full_scan_ts": 1785858098.510904
     },
     "QQQ": {
-      "price": 717.8920288085938,
+      "price": 718.6500244140625,
       "volume_ratio": 0.0,
-      "ts": 1785857442.6728978,
-      "last_full_scan_ts": 1785854140.8245301
+      "ts": 1785858049.8837848,
+      "last_full_scan_ts": 1785858153.8950503
     },
     "SPY": {
-      "price": 767.4299926757812,
+      "price": 767.780029296875,
       "volume_ratio": 0.0,
-      "ts": 1785857443.0358582,
-      "last_full_scan_ts": 1785854204.885711
+      "ts": 1785858050.2231605,
+      "last_full_scan_ts": 1785858206.1121714
     },
     "TSLA": {
-      "price": 323.8800048828125,
+      "price": 324.2550048828125,
       "volume_ratio": 0.0,
-      "ts": 1785857443.2473974,
-      "last_full_scan_ts": 1785854320.61399
+      "ts": 1785858050.5423627,
+      "last_full_scan_ts": 1785858256.8343127
     }
   },
   "ai_cache": {
-    "SPY": {
-      "result": {
-        "ticker": "SPY",
-        "timestamp": "2026-08-04T14:36:44.881955",
-        "analysis": "# SPY OPTIONS ANALYSIS \u2014 10:35 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is pressing against its 52-week high ($765.38) with strong intraday momentum \u2014 up 0.97% on the day, holding above VWAP on all three timeframes, and riding a 5-day surge of +4.87%. The most plausible scenario for the next 5-15 days is a short-term consolidation or minor pullback from the 52W high resistance zone, followed by a resolution that depends heavily on macro catalysts, as volume is critically thin at 0.25x the 20D average. A breakout above $765.38 targets open air, but the exhaustion signals (RSI 63+, Stochastic 99, AT upper Bollinger Band) make a pause or mean-reversion to $755\u2013$758 more probable in the near term.\n\n---\n\n## 2. BULL CASE\n\n- **Strong intraday structure:** Price is above VWAP on the 5m, 15m, and 1H timeframes simultaneously. All three intraday bias reads are bullish or leaning bullish. This is the single strongest signal for 0-2 DTE.\n- **Daily MACD histogram positive (1.62):** Daily momentum is still expanding to the upside, no histogram reversal yet. Bears do not have macro momentum confirmation.\n- **52W high proximity = breakout potential:** At $765.02 with the 52W high at $765.38, a clean break and hold above $765.40 triggers a momentum breakout with no overhead supply. Options flow is neutral (not bearish-leaning), consistent with a squeeze above.\n- **OBV rising + QQQ +1.94%:** Tech leadership is strong. QQQ outperforming SPY on the day suggests growth/momentum appetite is alive. Sector data confirms Tech +2.9% is pulling the index.\n\n---\n\n## 3. BEAR CASE\n\n- **Exhaustion across multiple oscillators:** Stochastic K at 99.0, RSI (9) on 15m/1H at 87\u201388 \u2014 these are extreme readings. Price AT or above the upper Bollinger Band (1.074). Historically these levels precede mean-reversion, especially without strong volume.\n- **Volume critically absent:** Current volume is 0.25x the 20D average. Breakouts and sustained rallies require volume confirmation. A 52W high test on 25% of normal volume is a red flag \u2014 it suggests low conviction and vulnerability to fade.\n- **MACD bearish on all intraday timeframes:** The 5m, 15m, and 1H MACD histograms are all flagged BEARISH (or nan/not confirming). This creates a divergence: price making highs but intraday momentum not expanding. Classic exhaustion signal.\n- **Price at hard resistance \u2014 20D resistance = current price:** The 20D resistance is listed at exactly $765.02. Price is sitting at a calculated resistance ceiling, not breaking above it with conviction.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W High Breakout:** A clean close above $765.40 on any meaningful volume spike intraday would invalidate the exhaustion thesis and trigger momentum-chasing algos. This is the highest-impact wildcard.\n- **Macro data / Fed speakers:** No news found in the pull, but any intraday macro release or Fed commentary at this price level could provide the impulse either way. The options market is pricing \u00b1$2.83 (0DTE), so traders are not expecting a large move \u2014 any surprise amplifies.\n- **Options expiry dynamics:** With 10 unusual contracts flagged (5 calls / 5 puts equally), there's no clear directional gamma pressure, but near the 52W high, dealer gamma positioning could either pin price or cause a sharp release if a strike cluster is breached.\n- **Sector rotation risk:** Healthcare (-0.9%), Energy (-1.4%), Staples (-0.6%) are all under pressure. If risk-off broadens beyond these laggards into Financials or Tech, SPY loses its support structure quickly.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **52W High / Hard Resistance** | $765.38 | Break above = momentum breakout signal |\n| **Current Price / 20D Resistance** | $765.02 | Holding here = chop; rejection = puts activated |\n| **Intraday VWAP (15m)** | $759.82 | Loss of this = intraday trend breaks bearish |\n| **Intraday VWAP (1H)** | $753.55 | Major support; loss = trend reversal in play |\n| **EMA21 (daily)** | $746.29 | Multi-day reversion target if momentum stalls |\n| **20D Support** | $729.46 | Only relevant for 2+ week scenarios |\n\n**Thesis-changing level:** A 15-minute candle CLOSE BELOW $759.82 (15m VWAP) on volume \u22651.5x avg flips the intraday structure bearish and validates a put trade. Conversely, a 15-min close ABOVE $765.40 with volume expansion validates calls.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Rationale:** The bullish intraday structure (VWAP position, EMA alignment) directly contradicts the exhaustion oscillators (Stoch 99, RSI 87-88 intraday, AT upper band), and critically, volume is only 0.25x normal \u2014 making neither bulls nor bears trustworthy in this tape. The signals are not randomly mixed; they are specifically *diverging* in the classic exhaustion-at-resistance pattern, which means the correct call is to WAIT for resolution, not to trade the ambiguity.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe setup is not bearish enough to justify puts (intraday VWAP structure is fully bullish), and not clean enough to justify calls (oscillator exhaustion at 52W high on <25% normal volume is a genuine warning). This is a *wait for resolution* scenario, not a directional trade.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Do not trade the current setup \u2014 wait for a 15-minute candle \nclose either ABOVE $765.40 (triggers CALL re-evaluation) or BELOW $759.82 \non 1.5x+ volume (triggers PUT re-evaluation) before re-running analysis.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.5x the 20D average with no directional \nbreak from the $759.82\u2013$765.40 decision zone.\nKEY RISK: At 0.25x normal volume, any print can move price sharply in \neither direction on minimal flow \u2014 this is a low-liquidity trap environment \nat a 52W high where both directions have meaningful risk.\n```\n\n---\n\n**BOTTOM LINE:** SPY is sitting in a high-ambiguity zone \u2014 strong intraday momentum structure fighting against hard oscillator exhaustion at the 52W high on anemic volume. Neither the bull nor the bear case has achieved signal dominance. The disciplined play is to stay flat and watch for a volume-confirmed resolution above $765.40 or below $759.82 before committing premium to theta decay. Re-run analysis if either trigger is breached.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not trade the current setup \u2014 wait for a 15-minute candle",
-          "entry_trigger": null,
-          "avoid_if": "Volume remains below 0.5x the 20D average with no directional",
-          "key_risk": "At 0.25x normal volume, any print can move price sharply in",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6030
-      },
-      "was_flagged": true,
-      "cached_at": 1785854204.8857145,
-      "score": 52
-    },
     "AAPL": {
       "result": {
         "ticker": "AAPL",
@@ -109,5 +80,5 @@
       "score": 48
     }
   },
-  "saved_at": "2026-08-04T11:31:44-04:00"
+  "saved_at": "2026-08-04T11:44:18-04:00"
 }
