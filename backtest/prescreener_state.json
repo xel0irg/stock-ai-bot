@@ -1,84 +1,54 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 306.385009765625,
+      "price": 306.4700012207031,
       "volume_ratio": 0.0,
-      "ts": 1785858048.0741549,
-      "last_full_scan_ts": 1785854495.9712358
+      "ts": 1785858646.5056376,
+      "last_full_scan_ts": 1785858699.9037256
     },
     "AMZN": {
-      "price": 277.510009765625,
+      "price": 277.625,
       "volume_ratio": 0.0,
-      "ts": 1785858048.339315,
+      "ts": 1785858646.7353227,
       "last_full_scan_ts": 1785857502.229931
     },
     "META": {
-      "price": 582.530029296875,
+      "price": 582.969970703125,
       "volume_ratio": 0.0,
-      "ts": 1785858048.7081943,
-      "last_full_scan_ts": 1785854544.368448
+      "ts": 1785858646.924248,
+      "last_full_scan_ts": 1785858746.2302907
     },
     "MSFT": {
-      "price": 497.4200134277344,
+      "price": 497.55999755859375,
       "volume_ratio": 0.0,
-      "ts": 1785858049.047145,
+      "ts": 1785858647.3072321,
       "last_full_scan_ts": 1785855156.0341454
     },
     "NVDA": {
-      "price": 210.33999633789062,
+      "price": 210.62010192871094,
       "volume_ratio": 0.0,
-      "ts": 1785858049.4295793,
+      "ts": 1785858647.8654308,
       "last_full_scan_ts": 1785858098.510904
     },
     "QQQ": {
-      "price": 718.6500244140625,
+      "price": 719.1500244140625,
       "volume_ratio": 0.0,
-      "ts": 1785858049.8837848,
+      "ts": 1785858648.4248865,
       "last_full_scan_ts": 1785858153.8950503
     },
     "SPY": {
-      "price": 767.780029296875,
+      "price": 768.8400268554688,
       "volume_ratio": 0.0,
-      "ts": 1785858050.2231605,
+      "ts": 1785858648.7301621,
       "last_full_scan_ts": 1785858206.1121714
     },
     "TSLA": {
-      "price": 324.2550048828125,
+      "price": 323.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1785858050.5423627,
+      "ts": 1785858649.0647712,
       "last_full_scan_ts": 1785858256.8343127
     }
   },
-  "ai_cache": {
-    "AAPL": {
-      "result": {
-        "ticker": "AAPL",
-        "timestamp": "2026-08-04T14:41:35.962131",
-        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:40 AM ET | Price: $305.53**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is in a technically damaged daily structure (down 9.66% over 5 days, MACD deeply negative, OBV falling) but is showing an intraday stabilization bounce, trading above VWAP on all three intraday timeframes with today's +0.7% gain. The most plausible scenario over 5-15 days is a continued bearish drift with occasional relief bounces \u2014 price is likely to consolidate between $301-$310 before the next directional resolution. For today's 0-2 DTE window specifically, the intraday structure is mildly bullish but lacking conviction: low volume (0.33x 20D average), mixed momentum signals, and a sector tailwind from Tech (+2.98%) providing the primary upward pressure.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Tech sector +2.98% / QQQ +1.94%** | AAPL has direct sector tailwind; money rotating into tech creates buying pressure |\n| **All 3 intraday timeframes ABOVE VWAP** | Intraday buyers in control; VWAP acts as dynamic support at ~$305.00 |\n| **Stochastic 12.41/13.36 \u2014 OVERSOLD** | Daily chart compressed; near-term bounce relief is technically justified |\n| **Bollinger Band position 0.085 (AT LOWER BAND)** | Price at statistical extreme; mean reversion toward midband (~$323) is a multi-day possibility |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram -3.73 (Daily BEARISH)** | Momentum remains decisively negative on the primary timeframe; bounces are likely to be sold |\n| **OBV Falling** | Distribution in progress; institutional selling not yet absorbed despite today's bounce |\n| **Volume 0.33x 20D average** | Today's bounce is weak-handed \u2014 low volume rallies in downtrends fail consistently |\n| **5D Return -9.66% / EMA9 $319.21 >> Price $305.53** | Short-term trend firmly down; $319 represents a significant overhead resistance wall |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume spike catalyst:** Any macro headline (Fed commentary, tariff news, China demand concern re: AAPL) could trigger a directional move well beyond the expected range on a stock with this low baseline volume\n- **Sector rotation reversal:** Tech is green today (+2.98%) but the broader market is choppy. If QQQ momentum stalls, AAPL loses its primary bullish crutch\n- **Options flow ambiguity:** P/C ratio of 0.28 is extremely call-heavy, but with equal unusual calls AND puts flagged (5/5), the smart money signal is genuinely unclear \u2014 could indicate a straddle/strangle by a larger player anticipating a volatility event\n- **Analyst price target $324.01 vs current $305.53:** A +6% gap to consensus could catalyze incremental institutional buying if sentiment turns, but requires a multi-week setup, not 0-2 DTE relevant\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Intraday Support** | $305.00 | VWAP across all 3 timeframes \u2014 loss of this invalidates bull case immediately |\n| **Hard Support** | $303.42 | 20D statistical support; break below signals acceleration toward $301.80 |\n| **Lower Bollinger Band** | $301.80 | Final structural support; breach opens gap to $295 area |\n| **Intraday Resistance** | $307.50 | EMA9 on 5m/15m overhead; needs clean break for momentum |\n| **Critical Thesis-Change Level** | $310.50 | EMA50 on daily \u2014 reclaiming this changes the intermediate bias to neutral/bullish |\n| **Bull Target (Mean Reversion)** | $323-$325 | Analyst target / EMA9 daily \u2014 multi-day horizon only |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Directional signals are genuinely split: the daily trend is bearish but the intraday structure (all timeframes above VWAP, green sector, +0.7% on the day) is mildly bullish, and critically the bullish case is undermined by dangerously low volume (0.33x) which removes momentum confirmation from either direction.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence in any direction)**\n\nThe VWAP-above + green Tech sector argues for calls. The daily MACD -3.73 + OBV falling + 0.33x volume argue against chasing a call on a weak-volume bounce. Signals are genuinely contradictory at the 0-2 DTE resolution required \u2014 this is a textbook mixed setup, not a suppressed bearish call.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: Do not enter. Revisit if price either (a) holds\nabove $305 VWAP with volume expanding above 0.8x average on a\n15m candle close \u2014 bullish trigger for CALL setup, or (b) breaks\nand closes below $305 VWAP on 15m with volume confirmation \u2014\nbearish trigger for PUT setup.\n\nENTRY TRIGGER PRICE: $305.00 (either direction \u2014 wait for\nconfirmed break with volume)\n\nAVOID IF: Volume remains below 0.5x average \u2014 a directional\nmove on thin volume in a choppy broad market is a trap in both\ndirections.\n\nKEY RISK: The primary risk here is NOT being in the trade \u2014\nit is forcing a 0-2 DTE position into a low-volume, signal-\ncontradicted setup where theta decay will erode premium faster\nthan the directional move can materialize. \nScore 48/100 is below the 55 minimum threshold \u2014 no trade is\nthe correct output.\n```\n\n---\n\n**\u26a0\ufe0f TRADE MANAGEMENT NOTE:**\nAAPL's ATR of $9.54 means it can move violently once volume returns. Watch the 11 AM - 12 PM ET window: if Tech sector strength holds AND AAPL volume picks up toward 1x average with a clean VWAP hold, reassess for a 1DTE call setup targeting $308-$309 (within the 1DTE \u00b1$5.10 expected move). Do not preemptively enter ahead of that confirmation.",
-        "confluence_score": 48,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter. Revisit if price either (a) holds",
-          "entry_trigger": 305.0,
-          "avoid_if": "Volume remains below 0.5x average \u2014 a directional",
-          "key_risk": "The primary risk here is NOT being in the trade \u2014",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5918
-      },
-      "was_flagged": true,
-      "cached_at": 1785854495.9712396,
-      "score": 48
-    }
-  },
-  "saved_at": "2026-08-04T11:44:18-04:00"
+  "ai_cache": {},
+  "saved_at": "2026-08-04T11:52:28-04:00"
 }
