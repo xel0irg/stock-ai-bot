@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 306.4700012207031,
+      "price": 306.8299865722656,
       "volume_ratio": 0.0,
-      "ts": 1785861050.7672603,
+      "ts": 1785861649.1108952,
       "last_full_scan_ts": 1785858699.9037256
     },
     "AMZN": {
-      "price": 278.4150085449219,
+      "price": 278.57501220703125,
       "volume_ratio": 0.0,
-      "ts": 1785861051.169725,
-      "last_full_scan_ts": 1785857502.229931
+      "ts": 1785861649.2677627,
+      "last_full_scan_ts": 1785861696.7187622
     },
     "META": {
-      "price": 581.739990234375,
+      "price": 580.155029296875,
       "volume_ratio": 0.0,
-      "ts": 1785861051.4234152,
+      "ts": 1785861649.4665117,
       "last_full_scan_ts": 1785858746.2302907
     },
     "MSFT": {
-      "price": 495.7001037597656,
+      "price": 495.2099914550781,
       "volume_ratio": 0.0,
-      "ts": 1785861051.727078,
+      "ts": 1785861649.6707132,
       "last_full_scan_ts": 1785861103.995584
     },
     "NVDA": {
-      "price": 210.16000366210938,
+      "price": 210.13999938964844,
       "volume_ratio": 0.0,
-      "ts": 1785861052.0621402,
+      "ts": 1785861649.8699274,
       "last_full_scan_ts": 1785858098.510904
     },
     "QQQ": {
-      "price": 719.72998046875,
+      "price": 719.77001953125,
       "volume_ratio": 0.0,
-      "ts": 1785861052.336076,
+      "ts": 1785861650.119329,
       "last_full_scan_ts": 1785858153.8950503
     },
     "SPY": {
-      "price": 769.1599731445312,
+      "price": 769.4749755859375,
       "volume_ratio": 0.0,
-      "ts": 1785861052.7581706,
+      "ts": 1785861650.3578117,
       "last_full_scan_ts": 1785858206.1121714
     },
     "TSLA": {
-      "price": 324.8699951171875,
+      "price": 324.3599853515625,
       "volume_ratio": 0.0,
-      "ts": 1785861053.0515668,
+      "ts": 1785861650.573653,
       "last_full_scan_ts": 1785859895.635779
     }
   },
@@ -78,7 +78,36 @@
       "was_flagged": true,
       "cached_at": 1785859300.8779194,
       "score": 52
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-08-04T16:41:36.709497",
+        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 12:40 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN has surged 22.91% over 5 days and is now pressing against its 52-week high of $281.07, trading at $278.57 with a 1D return of -1.92% \u2014 meaning today is a pullback day within a powerful uptrend. The most plausible near-term scenario is continued consolidation or mild digestion just below the 52W high, with a potential breakout attempt if broad market momentum (Tech +4%, QQQ +2.56%) sustains. The 52W high at $281.07 is the critical gate \u2014 a clean break above it opens air toward $285-290; a rejection there accelerates the pullback.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **5-Day Return +22.91% with MACD Histogram +4.75** | Dominant upward momentum \u2014 institutions are accumulating, not distributing |\n| **Tech sector +4.0% today, QQQ +2.56%** | Macro tailwind is firmly behind AMZN; sector rotation into growth continues |\n| **5m timeframe: 4 bull / 0 bear signals, above VWAP** | Intraday structure on the shortest actionable timeframe is cleanly bullish |\n| **Analyst consensus STRONG_BUY, price target $323.29** | Fundamental backing gives the bull trend structural legs; 16% upside to consensus |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI 67.83 + Stochastic K/D 85.86/92.38, BB position 1.017** | Triple overbought reading \u2014 price is statistically extended; mean reversion risk is real |\n| **1D return -1.92% while market rips** | AMZN is underperforming an exceptional market day \u2014 relative weakness is a warning flag |\n| **1H and 15m both show price BELOW VWAP** | Intraday sellers are in control above the 5m timeframe; intraday structure is deteriorating on higher TFs |\n| **52W High $281.07 just $2.50 away** | Massive technical resistance overhead; prior highs attract sellers and profit-taking at scale |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W High breakout/rejection**: At $281.07, a clean break would be a momentum ignition event for CALLS; a hard rejection with volume would be the highest-conviction PUT trigger of the day\n- **No news today**: Absence of a catalyst on a -1.92% day in a ripping market is mildly suspicious \u2014 watch for any after-hours announcements\n- **10 flagged unusual options contracts (5 calls / 5 puts)**: Perfectly balanced unusual flow suggests someone is hedging a large position, not expressing directional conviction \u2014 this is a warning against over-committing\n- **Options expiry pressure**: With 52W highs near, max pain and pin risk are real intraday forces for 0DTE traders\n- **Volume only 0.75x average**: Low volume pullback is often buyable \u2014 but if volume surges to the downside, the move accelerates\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$281.07** | Hard Resistance / 52W High | Break above = breakout trade; rejection = highest-conviction short trigger |\n| **$280.26** | 1H VWAP | Reclaiming this level bullishly would flip 1H bias \u2014 key bull confirmation |\n| **$278.77** | 15m VWAP | Current battleground; price needs to hold above for bull case |\n| **$277.83** | 5m VWAP | Loss of this level = intraday structure turns fully bearish |\n| **$277.54** | Bollinger Upper Band | Closing back inside the band is a mean-reversion signal |\n| **$274.81** | 0DTE lower expected move | $278.57 - $3.76 = floor of options-implied range today |\n| **$226.65** | 20D Support | Structural floor \u2014 irrelevant for 0-2 DTE but anchors the broader range |\n\n**Thesis-changing level**: $281.07 \u2014 a sustained break above it turns this into an exceptional CALL setup; a confirmed rejection with volume turns it into the best PUT entry of the session.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSignals are genuinely split across timeframes: the 5m is cleanly bullish but 15m and 1H are mixed-to-bearish; AMZN is down -1.92% on a strongly green market day (relative weakness), yet the 5-day trend is dominant and the 5m structure is holding. The perfectly balanced unusual options flow (5 calls / 5 puts), overbought oscillators, and the approach to a major 52W high create a contested, ambiguous setup \u2014 not a clear directional edge in either direction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe data is genuinely contradictory: short-term (5m) says buy, medium-term (15m/1H) says caution, relative performance says weakness, but the trend says strength. This is exactly the scenario where 0-2 DTE theta decay punishes indecision. The better play is to **watch the $281.07 level** \u2014 that resolves the ambiguity cleanly.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 score below 55 threshold; signals are split across timeframes with no dominant directional edge\nENTRY CONDITION: Re-evaluate immediately if AMZN tests $281.07 (52W High) \u2014 a rejection with 5m MACD turning negative and volume above 1.5x avg on the 5m triggers a PUT consideration; a sustained close above $281.07 on 15m volume above 1.0x avg triggers a CALL consideration\nENTRY TRIGGER PRICE: $281.07 (the level that resolves directional ambiguity \u2014 monitor for reaction, not anticipation)\nAVOID IF: Volume remains below 0.75x average \u2014 low-volume price action at 52W highs is a trap in both directions\nKEY RISK: With only $2.50 to the 52W High, AMZN is in no-man's land for short-dated options \u2014 premium is elevated from the 5-day run, theta is brutal, and the setup resolves clearly only at the key level which has not been tested yet\n\n---\n\n**BOTTOM LINE**: AMZN is a textbook \"watch, not trade\" situation at 12:40 PM ET. The 52W high at $281.07 is the catalyst that creates a real setup. Set an alert there \u2014 the reaction to that level will be worth trading with conviction. Forcing a trade here in either direction is where 0-2 DTE theta eats your premium while the stock grinds sideways.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "profit_target": null,
+          "stop_rule": "No trade \u2014 score below 55 threshold; signals are split across timeframes with no dominant directional edge",
+          "entry_condition": "Re-evaluate immediately if AMZN tests $281.07 (52W High) \u2014 a rejection with 5m MACD turning negative and volume above 1.5x avg on the 5m triggers a PUT consideration; a sustained close above $281.07 on 15m volume above 1.0x avg triggers a CALL consideration",
+          "entry_trigger": 281.07,
+          "avoid_if": "Volume remains below 0.75x average \u2014 low-volume price action at 52W highs is a trap in both directions",
+          "key_risk": "With only $2.50 to the 52W High, AMZN is in no-man's land for short-dated options \u2014 premium is elevated from the 5-day run, theta is brutal, and the setup resolves clearly only at the key level which has not been tested yet",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6035
+      },
+      "was_flagged": false,
+      "cached_at": 1785861696.7187665,
+      "score": 48
     }
   },
-  "saved_at": "2026-08-04T12:31:45-04:00"
+  "saved_at": "2026-08-04T12:41:38-04:00"
 }
