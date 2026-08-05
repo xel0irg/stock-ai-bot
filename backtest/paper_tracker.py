@@ -96,9 +96,25 @@ def _signal_id(ticker: str, signal_time: str) -> str:
 def _option_mid(ticker: str, contract_type: str, strike: float,
                 expiry_date: str) -> Optional[float]:
     """
-    Fetch the current mid price (bid+ask)/2 for a specific contract from
-    the live yfinance chain. Returns None if unavailable.
+    Fetch the current mid price (bid+ask)/2 for a specific contract.
+
+    Alpaca is primary — its option quotes are tight and accurate (verified
+    to within the bid/ask spread of live broker prices), which fixes the
+    yfinance premium inflation that corrupted paper P&L (e.g. yfinance
+    recording $5.22 when the real contract was $2.07). yfinance remains an
+    automatic fallback if Alpaca is unconfigured or returns nothing.
     """
+    # Primary: Alpaca
+    try:
+        from core import alpaca_data
+        if alpaca_data.is_enabled():
+            mid = alpaca_data.get_option_mid(ticker, contract_type, strike, expiry_date)
+            if mid is not None:
+                return mid
+    except Exception as e:
+        log.debug(f"{ticker}: Alpaca option mid failed, falling back — {e}")
+
+    # Fallback: yfinance
     try:
         import yfinance as yf
         t = yf.Ticker(ticker)
@@ -178,7 +194,25 @@ def _nearest_valid_strike(ticker: str, contract_type: str,
     AMZN, but those tickers trade in $2.50 increments at those levels — the
     contracts don't exist. Anyone following the card literally could not
     place the trade. We snap to the closest real strike and record that.
+
+    Alpaca primary — it exposes the true tradable-contracts list with a
+    `tradable` flag, which is authoritative. yfinance is the fallback.
     """
+    # Primary: Alpaca's real tradable-contracts list
+    try:
+        from core import alpaca_data
+        if alpaca_data.is_enabled():
+            snapped = alpaca_data.nearest_tradable_strike(
+                ticker, contract_type, strike, expiry_date)
+            if snapped is not None:
+                if abs(snapped - strike) > 0.01:
+                    log.info(f"{ticker}: strike ${strike} not tradable "
+                             f"— snapped to ${snapped} (Alpaca)")
+                return snapped
+    except Exception as e:
+        log.debug(f"{ticker}: Alpaca strike snap failed, falling back — {e}")
+
+    # Fallback: yfinance
     try:
         import yfinance as yf
         chain = yf.Ticker(ticker).option_chain(expiry_date)

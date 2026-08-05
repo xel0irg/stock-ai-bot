@@ -447,13 +447,47 @@ def run_ai_synthesis(
                 f"Do not trade 0-2 DTE options into an earnings print."
             )
 
+        # ── Real option premium (Alpaca) ─────────────────────────
+        # Replace Claude's ESTIMATED premium with the actual live market
+        # price when available. The estimate was often ~2x off (e.g. card
+        # showing $4.50 when the real contract was $2.07), which misled
+        # anyone reading the card about cost and risk. `strike` here has
+        # already been snapped to a real tradable contract above, so the
+        # premium lookup is for a contract that genuinely exists.
+        real_premium = None
+        if contract_type in ("CALL", "PUT") and strike:
+            try:
+                from core import alpaca_data
+                from datetime import date, timedelta
+                if alpaca_data.is_enabled():
+                    _days = {"0DTE": 0, "1DTE": 1, "2DTE": 2}.get(expiry, 0)
+                    _t = datetime.now().date()
+                    _added = 0
+                    while _added < _days:
+                        _t += timedelta(days=1)
+                        if _t.weekday() < 5:
+                            _added += 1
+                    _exp = _t.isoformat()
+                    real_premium = alpaca_data.get_option_mid(
+                        ticker, contract_type, float(strike), _exp)
+                    if real_premium is not None:
+                        log.info(f"{ticker}: real premium ${real_premium} "
+                                 f"(was est ${est_premium})")
+            except Exception as _e:
+                log.debug(f"{ticker}: real premium lookup skipped — {_e}")
+
+        # Use the real premium on the card when we have it; else the estimate.
+        display_premium = real_premium if real_premium is not None else est_premium
+
         trade_setup = {
             "contract_type":   contract_type,
             "expiry":          expiry,
             "strike":          strike,
             "moneyness":       moneyness,
             "stock_target":    stock_target,
-            "est_premium":     est_premium,
+            "est_premium":     display_premium,
+            "est_premium_ai":  est_premium,
+            "premium_is_real": real_premium is not None,
             "profit_target":   profit_target,
             "stop_rule":       stop_rule,
             "entry_condition": entry_condition,
