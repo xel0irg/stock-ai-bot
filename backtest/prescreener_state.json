@@ -1,84 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 309.3599853515625,
+      "price": 309.75,
       "volume_ratio": 0.0,
-      "ts": 1785949846.1093268,
-      "last_full_scan_ts": 1785946320.1748676
+      "ts": 1785950440.8346262,
+      "last_full_scan_ts": 1785950487.6245956
     },
     "AMZN": {
-      "price": 272.0299987792969,
+      "price": 271.5799865722656,
       "volume_ratio": 0.0,
-      "ts": 1785949846.3332014,
+      "ts": 1785950441.035714,
       "last_full_scan_ts": 1785949311.937951
     },
     "META": {
-      "price": 584.2949829101562,
+      "price": 584.8099975585938,
       "volume_ratio": 0.0,
-      "ts": 1785949846.5421026,
+      "ts": 1785950441.224056,
       "last_full_scan_ts": 1785948687.4339538
     },
     "MSFT": {
-      "price": 488.0899963378906,
+      "price": 488.4200134277344,
       "volume_ratio": 0.0,
-      "ts": 1785949846.8128505,
+      "ts": 1785950441.4908605,
       "last_full_scan_ts": 1785948731.23511
     },
     "NVDA": {
-      "price": 220.94500732421875,
+      "price": 221.28990173339844,
       "volume_ratio": 0.0,
-      "ts": 1785949847.0939548,
+      "ts": 1785950441.696396,
       "last_full_scan_ts": 1785947545.0999336
     },
     "QQQ": {
-      "price": 720.7440185546875,
+      "price": 720.9500122070312,
       "volume_ratio": 0.0,
-      "ts": 1785949847.3667526,
+      "ts": 1785950441.967096,
       "last_full_scan_ts": 1785948773.7559187
     },
     "SPY": {
-      "price": 771.239990234375,
+      "price": 771.4000244140625,
       "volume_ratio": 0.0,
-      "ts": 1785949847.6595137,
+      "ts": 1785950442.2605915,
       "last_full_scan_ts": 1785948823.6194344
     },
     "TSLA": {
-      "price": 323.3450012207031,
+      "price": 323.510009765625,
       "volume_ratio": 0.0,
-      "ts": 1785949847.8574345,
+      "ts": 1785950442.413664,
       "last_full_scan_ts": 1785947591.4638233
     }
   },
   "ai_cache": {
-    "AAPL": {
-      "result": {
-        "ticker": "AAPL",
-        "timestamp": "2026-08-05T16:12:00.152115",
-        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:11 PM ET | Price: $309.14**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is grinding sideways-to-lower within a well-established bearish trend (down 7.3% over 5 days), currently consolidating near $309 with extremely low volume (0.38x 20D average). The most plausible scenario over the next 5-15 days is continued pressure toward the $303 support zone, with any bounces likely capped by the dense EMA cluster at $311\u2013$318. A sustained recovery above $318 would require a meaningful catalyst that is not present in the current data.\n\n---\n\n## 2. BULL CASE\n\n- **Stochastic K/D (20.5/16.4) in oversold territory** \u2014 after a 7.3% 5-day selloff, mean-reversion odds increase. A snap-back toward $312\u2013$315 is technically plausible.\n- **15m timeframe bias: BULLISH (3B/1Br)** \u2014 the cleanest short-term timeframe shows price above 15m VWAP with EMA9 > EMA21 and positive 3-candle momentum. Intraday structure is recovering.\n- **1H VWAP holding above $306.83 with +0.74% distance** \u2014 price is comfortably above the 1H VWAP, suggesting intraday buyers have not capitulated.\n- **Analyst consensus BUY with $324 target** \u2014 41 analysts with a $15 upside target provides a fundamental floor; any macro improvement could catalyze a squeeze toward that level.\n\n---\n\n## 3. BEAR CASE\n\n- **MACD Histogram deeply negative (-3.69 daily)** \u2014 this is the primary momentum signal and it is decisively bearish. Daily MACD divergence of this magnitude typically requires multiple sessions to neutralize.\n- **5-day return -7.29%, OBV falling, price below all key EMAs (EMA9=317.81, EMA21=318.53)** \u2014 structural downtrend firmly intact. The EMA stack above price acts as layered resistance, not support.\n- **Volume collapse (0.38x 20D MA)** \u2014 low volume on a potential intraday bounce is a red flag. No institutional accumulation is visible. Bounces on thin volume fail more often than not in this configuration.\n- **Bollinger Band position 0.167 (lower half), far from mid-band at ~$323** \u2014 mean-reversion to the mid-band is bullish in theory, but the band itself is wide, meaning the lower band at $301.87 remains a viable downside target before any reversion.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news currently** \u2014 an absence of catalyst means price is in drift mode, highly susceptible to macro tape (SPY/QQQ) or any surprise headline. Any Apple-specific news (China sales, product announcement, regulatory) could move 2-3% instantly.\n- **Options expiry dynamics** \u2014 P/C ratio of 0.45 (call-heavy) suggests market makers are short gamma on calls. If price drifts above $310\u2013$312, MM delta hedging could create a brief acceleration higher. Conversely, a break below $307 could trigger put delta hedging pressure.\n- **7 SEC filings in 90 days** \u2014 worth monitoring; any material disclosure within those filings could be a catalyst.\n- **Macro/VIX watch** \u2014 VIX at 16.18 is calm. A macro shock spiking VIX above 20 would accelerate AAPL's downside given its beta of 1.09.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Hard resistance | $311.14 | EMA50 \u2014 first overhead barrier |\n| EMA cluster resistance | $317.81\u2013$318.53 | EMA9/EMA21 \u2014 trend reclaim line |\n| 20D Resistance | $340.08 | Irrelevant at 0-2 DTE |\n| Current VWAP (5m) | $309.31 | Bull/bear line for scalp bias |\n| 20D Support | $303.42 | Key downside target |\n| Lower Bollinger Band | $301.87 | Maximum downside in the band |\n| **Thesis-change level** | **$312.00+** | Close above EMA50 on volume = bear thesis invalidated |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSignals are genuinely split: the daily/weekly trend and MACD are clearly bearish, but the 15m intraday structure is bullish, volume is too thin to confirm any directional move, and the 5m/1H are both mixed. This is a classic low-volume consolidation with no clean directional lock \u2014 not a setup where theta-decay options should be deployed.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the NONE call)**\n\nThe daily trend favors bears, but the 15m favors bulls, volume is 38% of normal (no momentum confirmation for either side), and the timeframe confluence score falls in the 31\u201354 range. There is no clean directional alignment sufficient to overcome severe 0-2 DTE theta.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade \u2014 timeframe confluence is split (15m bullish vs. 5m/1H mixed vs. daily bearish) and volume at 0.38x average provides no momentum confirmation for either direction. Confluence score 48 is below the 55 minimum threshold.\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: Entering a 0-2 DTE position in a low-volume, mixed-signal environment with a daily MACD of -3.69 and a recovering 15m is a coin-flip trade \u2014 theta will punish indecision regardless of which direction is chosen.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** Two clean re-entry signals to monitor:\n- **PUT trigger:** 15m candle close back *below* 15m VWAP ($308.82) with volume >1.0x average and 5m MACD turning negative \u2192 score re-evaluates to ~68\u201372, PUT viable targeting $306.00.\n- **CALL trigger:** Reclaim and hold of $311 (EMA50) on volume >1.2x average with 1H MACD flattening \u2192 score re-evaluates to ~65\u201370, CALL viable targeting $312.50.\n\nNeither trigger has fired yet at 12:11 PM ET.",
-        "confluence_score": 48,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "No trade \u2014 timeframe confluence is split (15m bullish vs. 5m/1H mixed vs. daily bearish) and volume at 0.38x average provides no momentum confirmation for either direction. Confluence score 48 is below the 55 minimum threshold.",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "Entering a 0-2 DTE position in a low-volume, mixed-signal environment with a daily MACD of -3.69 and a recovering 15m is a coin-flip trade \u2014 theta will punish indecision regardless of which direction is chosen.",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5891
-      },
-      "was_flagged": true,
-      "cached_at": 1785946320.174872,
-      "score": 48
-    },
     "QQQ": {
       "result": {
         "ticker": "QQQ",
@@ -138,5 +109,5 @@
       "score": 42
     }
   },
-  "saved_at": "2026-08-05T13:10:47-04:00"
+  "saved_at": "2026-08-05T13:21:29-04:00"
 }
