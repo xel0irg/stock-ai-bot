@@ -1,84 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 311.0950012207031,
+      "price": 311.57080078125,
       "volume_ratio": 0.0,
-      "ts": 1785942049.2781565,
+      "ts": 1785942642.8155448,
       "last_full_scan_ts": 1785941498.7394075
     },
     "AMZN": {
-      "price": 277.9320068359375,
+      "price": 276.6600036621094,
       "volume_ratio": 0.0,
-      "ts": 1785942049.4523041,
-      "last_full_scan_ts": 1785940383.0086422
+      "ts": 1785942642.955197,
+      "last_full_scan_ts": 1785942705.557528
     },
     "META": {
-      "price": 592.3400268554688,
+      "price": 589.4349975585938,
       "volume_ratio": 0.0,
-      "ts": 1785942049.6174235,
-      "last_full_scan_ts": 1785940445.5871892
+      "ts": 1785942643.106477,
+      "last_full_scan_ts": 1785942756.2509973
     },
     "MSFT": {
-      "price": 491.989990234375,
+      "price": 489.864990234375,
       "volume_ratio": 0.0,
-      "ts": 1785942049.8751352,
-      "last_full_scan_ts": 1785940507.6455283
+      "ts": 1785942643.285092,
+      "last_full_scan_ts": 1785942804.7980669
     },
     "NVDA": {
-      "price": 219.0800018310547,
+      "price": 219.27999877929688,
       "volume_ratio": 0.0,
-      "ts": 1785942050.0931268,
+      "ts": 1785942643.4575868,
       "last_full_scan_ts": 1785942102.5431397
     },
     "QQQ": {
-      "price": 723.6699829101562,
+      "price": 723.5999755859375,
       "volume_ratio": 0.0,
-      "ts": 1785942050.3293371,
+      "ts": 1785942643.6430264,
       "last_full_scan_ts": 1785940746.3260787
     },
     "SPY": {
-      "price": 773.8499755859375,
+      "price": 773.5800170898438,
       "volume_ratio": 0.0,
-      "ts": 1785942050.5692499,
+      "ts": 1785942643.8617098,
       "last_full_scan_ts": 1785940627.3305666
     },
     "TSLA": {
-      "price": 323.6700134277344,
+      "price": 323.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1785942050.7793317,
+      "ts": 1785942644.0101378,
       "last_full_scan_ts": 1785940687.1362495
     }
   },
   "ai_cache": {
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-08-05T14:34:05.583755",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 10:33 AM ET | Price: $592.47**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has ripped 9.91% over 5 days but sits in a consolidation/pullback zone, still well below key EMAs (21/50) and down 6.18% over 20 days. The most plausible near-term scenario is continued choppy digestion of the recent bounce, with price oscillating between $585\u2013$600 as sellers defend the 21-day EMA (~$599) and buyers support near the $585\u2013$588 zone. A clean directional break above $600 or below $585 is needed to establish the next leg.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **5D Return +9.91% / 1D +0.77%** | Strong recent momentum; buyers are in control over the past week, and the daily trend is still upward intraday |\n| **1H Bias: BULLISH (3B/1Br)** | The dominant hourly structure shows price above 1H VWAP ($589.04) with EMA9 > EMA21 on the 1H \u2014 clean bullish setup on the controlling timeframe |\n| **OBV Trend: RISING** | Accumulation is ongoing; big money is not distributing into this bounce, supporting further upside |\n| **Analyst Consensus: STRONG BUY / $759 target** | 57 analysts with a ~28% upside target acts as a gravitational pull; institutional buyers likely step in on dips |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram: -4.99 (Daily, BEARISH)** | Daily momentum is still deteriorating; the bounce has not yet generated a bullish MACD crossover \u2014 upside could be capped |\n| **5M Bias: BEARISH (0B/3Br) + Below 5M VWAP** | Short-term price action in the current session is rolling over; sellers are active at the open |\n| **Price below EMA21/50 ($599/$602)** | Key moving average resistance directly overhead \u2014 prior support is now acting as a ceiling |\n| **Tech sector (XLK) -0.20% today** | Sector headwind; META is fighting the sector current, reducing probability of a sustained breakout intraday |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume is 0.17x the 20D average** \u2014 this is dangerously thin. A single large order flow event (institutional block, news headline) could move price violently in either direction with little resistance. This is the #1 wildcard.\n- **No news found** \u2014 absence of a catalyst means the move, if it comes, is likely technical/flow-driven and thus more predictable \u2014 but also more susceptible to whipsawing.\n- **10 unusual options contracts flagged (5 calls / 5 puts)** \u2014 perfectly balanced unusual activity implies someone is positioning for a volatility event, not a directional move. Watch for a straddle unwind.\n- **SEC filings (10 in 90 days)** \u2014 routine but worth monitoring for any 8-K or proxy-related item that could move sentiment.\n- **ATR of $24.52 (4.14%)** \u2014 META is a high-volatility name; any macro catalyst (Fed speaker, macro data release) could trigger a move well beyond the 1DTE expected move of \u00b1$10.31.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$599.41** | Resistance | EMA21 \u2014 critical ceiling; a close above invalidates the bear case |\n| **$602.50** | Resistance | EMA50 \u2014 secondary resistance cluster with EMA21 |\n| **$592.18** | Pivot | 15M VWAP \u2014 current fulcrum; price is barely above it |\n| **$589.04** | Support | 1H VWAP \u2014 losing this flips 1H structure bearish |\n| **$588.78** | Support | EMA9 (daily) \u2014 key dynamic support |\n| **$585.00** | Support | Round number / intraday structural low zone |\n| **$541.11** | Support | Lower Bollinger Band \u2014 extreme downside scenario |\n\n**Thesis-changing level:** A confirmed break and hold **above $600** shifts bias decisively to CALLS. A break **below $589** (1H VWAP + EMA9 cluster) shifts bias to PUTS.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nThe timeframes are genuinely split \u2014 1H is bullish, 5M is bearish, 15M is mixed \u2014 with ultra-low volume providing no confirmation for either direction. Signals conflict enough that forcing a directional trade here carries significant whipsaw risk.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the \"no trade\" call)**\n\nThe 1H structure is bullish but the 5M is rolling over, volume is 0.17x normal (no confirmation), MACD is bearish on the daily, and price is coiled directly at $592 VWAP. This is a textbook wait-for-the-break setup, not an entry. The directional edge simply is not present yet.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\n\nENTRY CONDITION: Do not enter now. Monitor for one of two\nclean triggers: (A) CALL trigger \u2014 15M candle close ABOVE\n$600 (EMA21/50 cluster) with volume above 1.5x 15M average,\nconfirming breakout through resistance. (B) PUT trigger \u2014\n15M candle close BELOW $589.04 (1H VWAP) with volume above\n1.5x 15M average, confirming breakdown of the 1H bullish\nstructure.\n\nENTRY TRIGGER PRICE: $600.00 for CALLs / $589.04 for PUTs\n\nAVOID IF: Volume remains below 0.5x 15M average on any\nattempted breakout \u2014 this market is too thin to trust\ndirectional moves without volume confirmation.\n\nKEY RISK: The 5D rally of +9.91% has exhausted short-term\nmomentum buyers; a mean-reversion snapback toward $575 is\nplausible if $589 fails, while a grind through $600 on low\nvolume is equally likely to be a bull trap \u2014 neither scenario\nhas enough conviction to trade right now.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** Set price alerts at **$600.00** and **$589.00**. If the $600 break fires with volume, a 1DTE CALL at the $600 strike targeting $605\u2013$607 (within the \u00b1$10.31 1DTE expected move) becomes viable. If $589 breaks with volume, a 1DTE PUT at the $589 strike targeting $582\u2013$584 becomes viable. Do not chase without volume. Theta is burning \u2014 patience here saves premium.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "Do not enter now. Monitor for one of two",
-          "entry_trigger": 600.0,
-          "avoid_if": "Volume remains below 0.5x 15M average on any",
-          "key_risk": "The 5D rally of +9.91% has exhausted short-term",
-          "setup_quality": "NO TRADE"
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5991
-      },
-      "was_flagged": true,
-      "cached_at": 1785940445.5871923,
-      "score": 42
-    },
     "NVDA": {
       "result": {
         "ticker": "NVDA",
@@ -167,5 +138,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-08-05T11:01:44-04:00"
+  "saved_at": "2026-08-05T11:13:26-04:00"
 }
