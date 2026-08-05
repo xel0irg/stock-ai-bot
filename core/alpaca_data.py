@@ -29,20 +29,30 @@ from core.logger import get_logger
 
 log = get_logger("AlpacaData")
 
-_KEY = os.environ.get("ALPACA_KEY", "")
-_SECRET = os.environ.get("ALPACA_SECRET", "")
-
 DATA_BASE = "https://data.alpaca.markets"
 
+
+def _key() -> str:
+    return os.environ.get("ALPACA_KEY", "")
+
+
+def _secret() -> str:
+    return os.environ.get("ALPACA_SECRET", "")
+
+
 def is_enabled() -> bool:
-    """Alpaca is only active when both credentials are present."""
-    return bool(_KEY and _SECRET)
+    """
+    Alpaca is only active when both credentials are present. Read live
+    from the environment (not cached at import) so it works regardless of
+    whether load_dotenv() ran before or after this module was imported.
+    """
+    return bool(_key() and _secret())
 
 
 def _headers() -> Dict[str, str]:
     return {
-        "APCA-API-KEY-ID": _KEY,
-        "APCA-API-SECRET-KEY": _SECRET,
+        "APCA-API-KEY-ID": _key(),
+        "APCA-API-SECRET-KEY": _secret(),
         "accept": "application/json",
     }
 
