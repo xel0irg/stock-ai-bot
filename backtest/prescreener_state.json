@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 310.17999267578125,
+      "price": 310.25,
       "volume_ratio": 0.0,
-      "ts": 1786029812.2535532,
+      "ts": 1786030850.6932123,
       "last_full_scan_ts": 1786029912.6237671
     },
     "AMZN": {
-      "price": 273.8399963378906,
+      "price": 273.7099914550781,
       "volume_ratio": 0.0,
-      "ts": 1786029812.7076795,
+      "ts": 1786030851.0009859,
       "last_full_scan_ts": 1786028499.2744274
     },
     "META": {
-      "price": 588.9299926757812,
+      "price": 589.4998779296875,
       "volume_ratio": 0.0,
-      "ts": 1786029813.1914947,
+      "ts": 1786030851.450675,
       "last_full_scan_ts": 1786030002.8437843
     },
     "MSFT": {
-      "price": 495.0599060058594,
+      "price": 496.29998779296875,
       "volume_ratio": 0.0,
-      "ts": 1786029813.770529,
+      "ts": 1786030851.995306,
       "last_full_scan_ts": 1786030093.7834194
     },
     "NVDA": {
-      "price": 218.0449981689453,
+      "price": 217.66000366210938,
       "volume_ratio": 0.0,
-      "ts": 1786029814.299047,
-      "last_full_scan_ts": 1786026851.473327
+      "ts": 1786030852.430824,
+      "last_full_scan_ts": 1786030969.5820308
     },
     "QQQ": {
-      "price": 716.655029296875,
+      "price": 716.719970703125,
       "volume_ratio": 0.0,
-      "ts": 1786029814.8711724,
+      "ts": 1786030852.8848236,
       "last_full_scan_ts": 1786030182.2239492
     },
     "SPY": {
-      "price": 768.7899780273438,
+      "price": 768.8099975585938,
       "volume_ratio": 0.0,
-      "ts": 1786029815.4269567,
-      "last_full_scan_ts": 1786027024.762655
+      "ts": 1786030853.3699872,
+      "last_full_scan_ts": 1786031055.1721325
     },
     "TSLA": {
-      "price": 321.0421142578125,
+      "price": 320.80999755859375,
       "volume_ratio": 0.0,
-      "ts": 1786029815.949386,
+      "ts": 1786030853.7216744,
       "last_full_scan_ts": 1786030273.7434661
     }
   },
@@ -204,7 +204,38 @@
       "was_flagged": true,
       "cached_at": 1786030182.2239525,
       "score": 52
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-08-06T15:44:15.167304",
+        "analysis": "# SPY \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:43 AM ET | Current Price: $768.51**\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is trading within striking distance of its 52-week high ($771.82) and Bollinger upper band ($771.03), with intraday price action firmly below VWAP on all three timeframes. The most plausible scenario over the next 5-15 days is a **sideways-to-mild pullback consolidation** as price digests recent gains near all-time highs, followed by a continuation of the broader uptrend \u2014 consistent with a bull-regime ETF approaching near-term technical resistance. For the next 1-2 sessions specifically, the setup shows short-term intraday weakness but insufficient volume and momentum to drive a meaningful directional break in either direction.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram +3.12 (daily)** | Medium-term momentum remains firmly bullish; trend not broken |\n| **Bull Regime Confirmed (SPY/QQQ above EMA9/EMA21, VIX 15.46)** | Structural tailwind \u2014 fading this tape in 0-2 DTE has a historically poor win rate |\n| **OBV Rising + 5D Return +2.88%** | Institutional accumulation trend intact; dip-buyers likely active near support |\n| **52W High proximity ($771.82)** | A breakout above $771.82 triggers momentum buying and could produce a sharp extension \u2014 options market pricing \u00b1$5.99 for 2DTE |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Price below VWAP on ALL intraday timeframes (5m/15m/1H)** | Sellers in control of today's session; intraday structure is unambiguously bearish |\n| **RSI 63.63 (near overbought) + Stochastic 82/87 (overbought) + BB position 0.942** | Price compressed against upper band with momentum indicators stretched \u2014 mean reversion risk elevated |\n| **Volume 0.24x 20D average** | Critically thin volume undermines any directional conviction \u2014 breakouts AND breakdowns on low volume fail at high rates |\n| **All intraday timeframes: 0 bullish / 4 bearish signals each** | Intraday sellers have full control; no bullish intraday catalyst visible at this moment |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume collapse is the #1 wildcard**: Volume at 0.24x average is dangerously thin. A sudden surge in either direction could produce a violent move that exceeds the options-implied range \u2014 or the low volume signals institutional absence (pre-holiday, event wait) and price simply drifts.\n- **52W High breakout ($771.82)**: A clean break above $771.82 on even modest volume would trigger momentum algos and potentially extend $5-10 beyond current resistance \u2014 this is the asymmetric upside catalyst.\n- **Macro/Fed commentary**: No news currently, but any unscheduled Fed speak or macro data release could reprice VIX rapidly from its benign 15.46 reading.\n- **Options expiry dynamics**: P/C ratio of 0.47 (call-heavy) suggests market makers are short calls \u2014 a push toward $770-772 could trigger gamma squeeze mechanics that accelerate upside.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$771.03** | Resistance | Bollinger Upper Band |\n| **$771.82** | Critical Resistance | 52-Week High \u2014 thesis-changer on breakout |\n| **$769.77** | Near Resistance | 5m VWAP \u2014 must reclaim for any bull intraday case |\n| **$770.58** | Resistance | 15m VWAP |\n| **$765.00** | Near Support | Psychological round number / intraday structure |\n| **$757.01** | Support | EMA9 (daily) \u2014 major pullback support |\n| **$729.46** | Deep Support | 20D Support level |\n\n**Thesis-changing level**: A **close above $771.82** (52W high) flips to aggressive call bias. A **break below $765 on volume** opens a test of $757.\n\n---\n\n## 6. CONFLUENCE SCORE: 38/100\n\n**Score rationale**: The HARD REGIME GATE explicitly prohibits PUT signals on SPY in a confirmed bull regime, and the CALL case is undermined by price sitting below ALL VWAPs, overbought oscillators at resistance, and critically anemic volume (0.24x average) \u2014 the tape lacks the volume confirmation required to justify a 0-2 DTE call entry at these levels. Signals are structurally contradictory: bull regime macro vs. fully bearish intraday vs. no volume catalyst.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NONE call)**\n\nThe contradiction is real and must be called out honestly: intraday signals are unambiguously bearish (score would be 85+ for PUTs on the intraday data alone), BUT the Hard Regime Gate explicitly prohibits PUT signals on SPY itself in a confirmed bull regime \u2014 and that rule exists precisely because fading the index in a bull tape is the systematic loss pattern the historical data exposes. The CALL case fails on volume (0.24x avg, regime gate requires \u22650.8x for PUTs, and CALL entries at all-time-high resistance with price below all VWAPs carry unacceptable theta risk in 0-2 DTE). This is a **genuine conflict**, not a default to NONE.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade \u2014 regime gate prohibits SPY PUTs in confirmed bull regime; CALL setup\n  invalidated by price below all VWAPs, overbought oscillators at 52W high resistance,\n  and volume at 0.24x average (no momentum confirmation).\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: The single biggest risk to sitting out is a 52W high breakout above $771.82 on\n  volume that triggers a momentum squeeze \u2014 monitor this level actively; if it breaks\n  with volume >1x average, a 1DTE ATM call at that moment becomes a legitimate\n  high-conviction entry.\n```\n\n---\n\n**\u26a0\ufe0f CONTRADICTION DISCLOSURE**: This data presents a genuine analytical conflict. Intraday signals (5m/15m/1H) score 85+ for a PUT. The macro regime gate scores 0 for that same PUT. These two signals cannot both be right simultaneously. The resolution applied here is: **regime gate wins for SPY itself** (it is the index, not an individual ticker). If this were an individual sector ETF or stock showing identical intraday signals, the PUT would be the correct output. Sitting out SPY today is not timidity \u2014 it is systematic discipline.",
+        "confluence_score": 38,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No trade \u2014 regime gate prohibits SPY PUTs in confirmed bull regime; CALL setup",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "The single biggest risk to sitting out is a 52W high breakout above $771.82 on",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5942
+      },
+      "was_flagged": false,
+      "cached_at": 1786031055.1721365,
+      "score": 38
     }
   },
-  "saved_at": "2026-08-06T11:31:15-04:00"
+  "saved_at": "2026-08-06T11:44:17-04:00"
 }
