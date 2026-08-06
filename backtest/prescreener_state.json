@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 312.30609130859375,
+      "price": 312.9097900390625,
       "volume_ratio": 0.0,
-      "ts": 1786027241.6428232,
+      "ts": 1786027851.6228938,
       "last_full_scan_ts": 1786027290.49673
     },
     "AMZN": {
-      "price": 273.57000732421875,
+      "price": 272.9700012207031,
       "volume_ratio": 0.0,
-      "ts": 1786027241.8753633,
+      "ts": 1786027852.063424,
       "last_full_scan_ts": 1786027338.8944862
     },
     "META": {
-      "price": 593.1950073242188,
+      "price": 590.489990234375,
       "volume_ratio": 0.0,
-      "ts": 1786027242.1174934,
-      "last_full_scan_ts": 1786027390.6297302
+      "ts": 1786027852.5067399,
+      "last_full_scan_ts": 1786027901.9133523
     },
     "MSFT": {
-      "price": 496.9150085449219,
+      "price": 497.29998779296875,
       "volume_ratio": 0.0,
-      "ts": 1786027242.355699,
+      "ts": 1786027853.0054226,
       "last_full_scan_ts": 1786027438.2372885
     },
     "NVDA": {
-      "price": 218.9600067138672,
+      "price": 219.35499572753906,
       "volume_ratio": 0.0,
-      "ts": 1786027242.6257834,
+      "ts": 1786027853.4436524,
       "last_full_scan_ts": 1786026851.473327
     },
     "QQQ": {
-      "price": 716.2849731445312,
+      "price": 716.9400024414062,
       "volume_ratio": 0.0,
-      "ts": 1786027242.9327118,
+      "ts": 1786027853.9808307,
       "last_full_scan_ts": 1786026909.0551436
     },
     "SPY": {
-      "price": 769.8098754882812,
+      "price": 769.8900146484375,
       "volume_ratio": 0.0,
-      "ts": 1786027243.305745,
+      "ts": 1786027854.555593,
       "last_full_scan_ts": 1786027024.762655
     },
     "TSLA": {
-      "price": 321.1449890136719,
+      "price": 319.64,
       "volume_ratio": 0.0,
-      "ts": 1786027243.508806,
-      "last_full_scan_ts": 1786027087.9253068
+      "ts": 1786027854.9940677,
+      "last_full_scan_ts": 1786027955.746041
     }
   },
   "ai_cache": {
@@ -111,7 +111,38 @@
       "was_flagged": true,
       "cached_at": 1786027290.4967341,
       "score": 52
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-06T14:52:35.480333",
+        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 10:51 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is grinding lower within a well-established intermediate-term downtrend (-21.69% over 20 days), currently trading near $319 with all intraday timeframes (5m/15m/1H) aligned bearishly below their respective VWAPs. The most plausible scenario over the next 5-15 days is continued pressure toward the $297-$305 zone (52W low support), with any bounces likely capped by the $323-$342 EMA cluster overhead. Today's intraday action is sluggish (volume at 0.22x 20D average), which limits the magnitude of any directional move and increases noise risk for 0DTE positions.\n\n---\n\n## 2. BULL CASE\n\n- **RSI Near Oversold (36.72):** On a 20-day -21.7% decline, mean-reversion risk is real. Oversold conditions on daily RSI often precede snapback rallies of 3-5% in high-beta names like TSLA.\n- **OBV Trend Rising:** Despite price weakness, OBV is trending up \u2014 suggesting accumulation may be occurring quietly beneath the surface. This is a non-trivial divergence.\n- **Bollinger Band Lower Half (0.314) / Wide Bands:** Price at $319 is well above the lower band at $271.91. The band width implies significant implied volatility already baked into the range \u2014 a mean-reversion toward midband ($347) is statistically possible.\n- **Analyst Consensus BUY / PT $397.87:** 40 analysts with a mean buy rating and ~25% upside to target provides a fundamental floor for institutional buyers to step in near current levels.\n\n---\n\n## 3. BEAR CASE\n\n- **All Intraday Timeframes Bearish Below VWAP:** Price is below VWAP on 5m ($320.39), 15m ($320.56), and 1H ($323.51) \u2014 zero bullish signals across all three timeframes. This is textbook intraday bearish structure.\n- **EMA Stack Fully Bearish (Daily):** EMA9 ($323.16) < EMA21 ($342.70) < EMA50 ($369.63) \u2014 price is below all meaningful moving averages. The trend is unambiguously down on the daily timeframe.\n- **MACD Histogram Negative (-0.3064):** Bearish momentum is confirmed on the daily. Combined with 3-candle momentum of -0.553% (15m) and -1.055% (1H), selling pressure is persistent intraday.\n- **20-Day Return -21.69% / Sector Underperformance:** Consumer Discretionary is slightly negative (-0.24%) even as SPY/QQQ are green. TSLA is leading sector weakness, not bouncing with the tape.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume Collapse (0.22x avg):** Extremely low volume cuts both ways \u2014 a single institutional order flow event could create outsized moves in either direction. Today's price action is not reliable without volume confirmation.\n- **Macro Tape Divergence:** SPY (+0%) and QQQ (+0.06%) are holding gains in a bull regime. If broad market accelerates higher, TSLA could get a sympathy bid despite its individual weakness \u2014 this is the primary regime risk for a PUT position.\n- **No News / Catalyst Vacuum:** Zero news articles found. TSLA is notoriously sensitive to Musk tweets, EV policy news, delivery data, or macro sentiment shifts. An unexpected catalyst could easily gap the stock \u00b15% intraday.\n- **6 Recent SEC Filings (90 days):** Worth monitoring \u2014 any material disclosure or proxy-related filing could create directional volatility, though currently unquantified.\n- **52W Low Proximity ($297.38):** Price is only $22 (~6.9%) from its 52-week low. This level attracts both technical buyers (support) and stop-hunt sellers. If breached, momentum could accelerate sharply lower.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| **Immediate Resistance** | $320.39\u2013$320.57 | 5m and 15m VWAP \u2014 rejection here confirms bear bias |\n| **1H VWAP Resistance** | $323.51 | Reclaim of this level flips intraday bias neutral/bullish |\n| **EMA9 Daily Resistance** | $323.16 | First meaningful overhead supply on daily chart |\n| **Critical Bear Level** | $315.00 | Break below signals next leg toward 52W low zone |\n| **Major Support** | $297.38 | 52W low \u2014 institutional buyers likely defend this zone |\n| **20D Support** | $298.32 | Confluence with 52W low \u2014 high-probability bounce zone |\n| **Thesis-Flip Level (Bull)** | $323.51 | Sustained close above 1H VWAP + EMA9 = bias reversal |\n\n---\n\n## 6. CONFLUENCE SCORE: 72/100\n\n**Regime Gate Check:** Bull tape (SPY/QQQ above EMA9/EMA21, VIX 15.55). PUT signals on individual tickers require score \u226575 AND price below BOTH 15m and 1H VWAP AND volume \u22650.8x average.\n\n- \u2705 Score \u226575: **Score is 72 \u2014 FAILS this threshold by 3 points**\n- \u2705 Price below 15m VWAP ($320.56): YES\n- \u2705 Price below 1H VWAP ($323.51): YES\n- \u274c Volume \u22650.8x average: **0.22x \u2014 HARD FAIL**\n\n**Score rationale:** All four timeframes (daily/1H/15m/5m) are bearishly aligned with zero bullish intraday signals \u2014 this would normally support a score of 78-82. However, the volume collapse to 0.22x of average is a disqualifying data point: low-volume moves lack institutional commitment, increase false-breakout risk, and make intraday momentum trades unreliable. Score docked to 72 to reflect this structural weakness.\n\n**Regime Gate Result: PUT BLOCKED.** Score (72) is below the 75 threshold AND volume (0.22x) is catastrophically below the 0.8x minimum. Both conditions must be met simultaneously; neither is. The hard regime gate in a confirmed bull tape overrides the bearish signal alignment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NO TRADE call)**\n\nThe bearish signal alignment is real and noteworthy \u2014 this is not a case of mixed signals. The block is procedural: the Hard Regime Gate explicitly requires score \u226575 AND volume \u22650.8x for PUT signals in a bull tape. TSLA fails both conditions. Trading a PUT against this gate in a confirmed bull market regime with 0.22x volume is a low-probability, high-theta-decay bet with regime headwind.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade to manage.\nENTRY CONDITION: Do not enter. Re-evaluate if volume recovers above 0.8x 20D average (approximately 30.5M shares) AND TSLA scores 75+ on a fresh read, OR if SPY/QQQ break below their EMA9/EMA21 (regime shift to bearish/neutral tape, which removes the PUT gate).\nENTRY TRIGGER PRICE: N/A\nAVOID IF: Volume remains below 0.8x average \u2014 low-volume bearish moves in a bull tape are the highest-failure-rate setup in 0-2 DTE options due to sudden reversals and theta bleed with no follow-through.\nKEY RISK: The primary risk of trading this setup anyway is that TSLA, a high-beta name in a bull tape with RSI near oversold and OBV rising, is statistically prone to violent mean-reversion bounces precisely when it looks most bearish intra",
+        "confluence_score": 72,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "No trade to manage.",
+          "entry_condition": "Do not enter. Re-evaluate if volume recovers above 0.8x 20D average (approximately 30.5M shares) AND TSLA scores 75+ on a fresh read, OR if SPY/QQQ break below their EMA9/EMA21 (regime shift to bearish/neutral tape, which removes the PUT gate).",
+          "entry_trigger": null,
+          "avoid_if": "Volume remains below 0.8x average \u2014 low-volume bearish moves in a bull tape are the highest-failure-rate setup in 0-2 DTE options due to sudden reversals and theta bleed with no follow-through.",
+          "key_risk": "The primary risk of trading this setup anyway is that TSLA, a high-beta name in a bull tape with RSI near oversold and OBV rising, is statistically prone to violent mean-reversion bounces precisely when it looks most bearish intra",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6277
+      },
+      "was_flagged": true,
+      "cached_at": 1786027955.746045,
+      "score": 72
     }
   },
-  "saved_at": "2026-08-06T10:44:00-04:00"
+  "saved_at": "2026-08-06T10:52:37-04:00"
 }
