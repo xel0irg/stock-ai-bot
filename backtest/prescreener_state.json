@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 311.0299987792969,
+      "price": 311.5,
       "volume_ratio": 0.0,
-      "ts": 1786036611.8727143,
+      "ts": 1786038217.962222,
       "last_full_scan_ts": 1786036690.2229414
     },
     "AMZN": {
-      "price": 272.3949890136719,
+      "price": 271.7699890136719,
       "volume_ratio": 0.0,
-      "ts": 1786036612.0090628,
+      "ts": 1786038218.2332673,
       "last_full_scan_ts": 1786036853.4045014
     },
     "META": {
-      "price": 589.0900268554688,
+      "price": 588.3900146484375,
       "volume_ratio": 0.0,
-      "ts": 1786036612.376449,
+      "ts": 1786038218.4306793,
       "last_full_scan_ts": 1786036940.355238
     },
     "MSFT": {
-      "price": 496.2799987792969,
+      "price": 495.94500732421875,
       "volume_ratio": 0.0,
-      "ts": 1786036612.6787057,
+      "ts": 1786038218.65368,
       "last_full_scan_ts": 1786037014.5195925
     },
     "NVDA": {
-      "price": 219.39500427246094,
+      "price": 218.6678924560547,
       "volume_ratio": 0.0,
-      "ts": 1786036612.9770668,
-      "last_full_scan_ts": 1786036763.0902343
+      "ts": 1786038218.919195,
+      "last_full_scan_ts": 1786038292.7805445
     },
     "QQQ": {
-      "price": 715.3400268554688,
+      "price": 714.6400146484375,
       "volume_ratio": 0.0,
-      "ts": 1786036613.257079,
+      "ts": 1786038219.1831257,
       "last_full_scan_ts": 1786037097.87681
     },
     "SPY": {
-      "price": 768.1787719726562,
+      "price": 767.97998046875,
       "volume_ratio": 0.0,
-      "ts": 1786036613.6585715,
+      "ts": 1786038219.5163665,
       "last_full_scan_ts": 1786037159.7073376
     },
     "TSLA": {
-      "price": 318.4100036621094,
+      "price": 317.4549865722656,
       "volume_ratio": 0.0,
-      "ts": 1786036613.8495078,
+      "ts": 1786038219.6865892,
       "last_full_scan_ts": 1786037251.256997
     }
   },
@@ -235,7 +235,38 @@
       "was_flagged": false,
       "cached_at": 1786037251.2570035,
       "score": 72
+    },
+    "NVDA": {
+      "result": {
+        "ticker": "NVDA",
+        "timestamp": "2026-08-06T17:44:52.769868",
+        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $218.70 | Time: 1:44 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA has rallied ~9% over 5 days and is now pressing against the 20D resistance at $219.22 with momentum stalling \u2014 price is below VWAP on all three intraday timeframes and volume is running at only 0.57x its 20-day average. The most plausible scenario over the next 5-15 sessions is a consolidation/digestion of recent gains between $212-$221, with the path of least resistance modestly upward given the macro bull tape (SPY/QQQ above EMAs, VIX 15.4). A clean directional breakout either way requires a volume catalyst that is not currently present.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram +1.99 (Daily)** | Positive daily momentum is still intact; not rolling over yet |\n| **5D Return +8.94% / OBV Rising** | Institutional accumulation trend is real; buyers have been consistent |\n| **SPY/QQQ Bull Regime + Tech flat** | Broad tape strongly favors longs; sector is not actively breaking down |\n| **Analyst PT $302.82 / Strong Buy (58 analysts)** | Fundamental anchor well above current price; dip buyers likely near support |\n\n**Implication:** In a bull tape with positive daily MACD and a rising OBV, gravity is upward. A volume-driven push above $219.22 resistance could trigger a move toward $221-$223.\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Price below VWAP on ALL 3 intraday TFs** | Intraday sellers in control; distribution into the prior ramp |\n| **RSI 85.35 Stochastic / BB at 0.92** | Statistically overbought short-term; mean reversion pressure building |\n| **15m bias BEARISH (1B/3Br), low volume** | No buyers stepping in on the intraday timeframe \u2014 weakness of demand |\n| **Resistance at $219.22 holding** | Price has not been able to clear the 20D resistance level; ceiling is active |\n\n**Implication:** The short-term structure is soft. Without a volume surge, the path of least resistance intraday is a test of $215-$216 (EMA21/50 cluster on daily).\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume surge / institutional order flow:** Volume at 0.57x average \u2014 if a large block order prints in either direction, it will disproportionately move price given thin participation. Watch for prints above 1.5x average.\n- **Macro tape shift:** SPY/QQQ are both down ~0.3-0.4% today while NVDA is only -0.24%. If the broader market accelerates lower into close, NVDA beta of 2.2 would amplify any decline.\n- **No earnings imminent:** Reduces binary risk, but also removes the most common catalyst for a large directional move.\n- **10 flagged unusual contracts (5 calls / 5 puts):** Perfectly balanced unusual flow \u2014 could indicate a straddle or strangle position anticipating a move without directional conviction. Watch which side becomes more aggressive.\n- **Gamma/Delta at resistance $219.22:** Options dealers near this level may pin price or, if cleared, trigger accelerated upside.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$219.22** | Resistance / VWAP | 20D resistance + all intraday VWAPs; clearing this flips intraday bias bullish |\n| **$221.11** | Resistance | Upper Bollinger Band; maximum realistic near-term target |\n| **$215.56** | Support | 1H EMA21; first meaningful downside target if $217 fails |\n| **$212-$213** | Support | Daily EMA9/21 cluster; where bulls should defend on any pullback |\n| **$190.01** | Major Support | 20D floor; would require a macro shock to test |\n| **$218.00** | Thesis Pivot (Bull)** | Price must hold above here for any call setup to remain valid |\n\n**Critical Level:** $219.22 \u2014 a confirmed close above this on volume \u22651.2x average shifts bias to BULLISH; continued rejection below it sustains BEARISH intraday thesis.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score rationale:** Signals are genuinely split \u2014 daily MACD and macro tape are bullish while all intraday VWAPs, 15m trend, and stochastic/BB positioning are bearish \u2014 combined with critically low volume (0.57x), there is no setup clarity sufficient for a 0-2 DTE trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NONE)**\n\nThe directional contradiction is real and honest: the macro is bullish, but the intraday structure is soft with no volume confirmation. The Regime Gate requires PUT setups to score \u226575 AND volume \u22650.8x average \u2014 volume fails that gate at 0.57x. The bullish case requires price above at least one VWAP \u2014 it is currently below all three. Neither side clears its threshold.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: No trade at current time. Monitor for either (a) a 15m candle close ABOVE $219.22 on volume \u22651.2x average to consider a CALL, or (b) a confirmed break below $217.00 with 15m close below VWAP and volume \u22650.8x average to reconsider a PUT.\nENTRY TRIGGER PRICE: $219.22 (CALL trigger above) / $217.00 (PUT trigger below)\nAVOID IF: Volume remains below 0.7x average into the close \u2014 this is a low-conviction drift session with no edge for 0-2 DTE.\nKEY RISK: With theta decay accelerating after 2 PM ET and current time at 1:44 PM, even a correct directional read in a 0DTE position has minimal time to be right \u2014 the risk/reward is structurally unfavorable without an immediate, volume-confirmed trigger.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** This is a disciplined NONE \u2014 not a default. The bear and bull cases were evaluated with equal rigor. The genuine blocker is: (1) volume too low for the PUT regime gate, (2) price below VWAP blocks the CALL gate, and (3) score of 42 falls below the 55 minimum threshold for any 0-2 DTE trade. Set alerts at $219.22 and $217.00 and revisit if price breaks with conviction.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "No trade at current time. Monitor for either (a) a 15m candle close ABOVE $219.22 on volume \u22651.2x average to consider a CALL, or (b) a confirmed break below $217.00 with 15m close below VWAP and volume \u22650.8x average to reconsider a PUT.",
+          "entry_trigger": 219.22,
+          "avoid_if": "Volume remains below 0.7x average into the close \u2014 this is a low-conviction drift session with no edge for 0-2 DTE.",
+          "key_risk": "With theta decay accelerating after 2 PM ET and current time at 1:44 PM, even a correct directional read in a 0DTE position has minimal time to be right \u2014 the risk/reward is structurally unfavorable without an immediate, volume-confirmed trigger.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5988
+      },
+      "was_flagged": true,
+      "cached_at": 1786038292.7805486,
+      "score": 42
     }
   },
-  "saved_at": "2026-08-06T13:27:33-04:00"
+  "saved_at": "2026-08-06T13:44:54-04:00"
 }
