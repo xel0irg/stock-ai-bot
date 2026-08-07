@@ -1,54 +1,86 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 314.04998779296875,
+      "price": 313.0799865722656,
       "volume_ratio": 0.0,
-      "ts": 1786115451.694075,
-      "last_full_scan_ts": 1786113161.0944648
+      "ts": 1786116054.7046826,
+      "last_full_scan_ts": 1786116122.0725336
     },
     "AMZN": {
-      "price": 276.9458923339844,
+      "price": 277.510498046875,
       "volume_ratio": 0.0,
-      "ts": 1786115451.897612,
+      "ts": 1786116054.9467156,
       "last_full_scan_ts": 1786113253.9839594
     },
     "META": {
-      "price": 597.0599975585938,
+      "price": 597.219970703125,
       "volume_ratio": 0.0,
-      "ts": 1786115452.079932,
+      "ts": 1786116055.1249614,
       "last_full_scan_ts": 1786114859.0183601
     },
     "MSFT": {
-      "price": 502.68499755859375,
+      "price": 502.94500732421875,
       "volume_ratio": 0.0,
-      "ts": 1786115452.3098564,
+      "ts": 1786116055.3702302,
       "last_full_scan_ts": 1786113451.251854
     },
     "NVDA": {
-      "price": 223.81500244140625,
+      "price": 223.89999389648438,
       "volume_ratio": 0.0,
-      "ts": 1786115452.5167878,
+      "ts": 1786116055.6769972,
       "last_full_scan_ts": 1786115535.156234
     },
     "QQQ": {
-      "price": 721.5650024414062,
+      "price": 721.3499755859375,
       "volume_ratio": 0.0,
-      "ts": 1786115452.7417426,
+      "ts": 1786116055.9443848,
       "last_full_scan_ts": 1786113678.385251
     },
     "SPY": {
-      "price": 773.2899780273438,
+      "price": 773.030029296875,
       "volume_ratio": 0.0,
-      "ts": 1786115453.0600705,
+      "ts": 1786116056.2272167,
       "last_full_scan_ts": 1786113780.869053
     },
     "TSLA": {
-      "price": 330.097412109375,
+      "price": 330.6600036621094,
       "volume_ratio": 0.0,
-      "ts": 1786115453.233842,
+      "ts": 1786116056.4391077,
       "last_full_scan_ts": 1786114940.0827756
     }
   },
-  "ai_cache": {},
-  "saved_at": "2026-08-07T11:12:17-04:00"
+  "ai_cache": {
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-08-07T15:22:02.063649",
+        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 11:21 AM ET | Price: $313.07**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is consolidating in the lower half of its Bollinger Band, trading below its key EMAs (9/21) on the daily but above VWAP on the 15m and 1H timeframes \u2014 a classic intraday bounce within a softer daily trend. The most plausible scenario over the next 5-15 days is continued range-bound chop between $303\u2013$322, biased mildly upward given a bull tape (SPY/QQQ both trending above EMA9/21) and analyst price target of $322.81. Near-term upside is constrained by the EMA cluster at $316\u2013$318; a clean break above that zone would be the bull catalyst.\n\n---\n\n## 2. BULL CASE\n\n1. **Bull Market Regime (Hard Gate Active):** SPY +0.52%, QQQ +0.60%, both above EMA9/EMA21, VIX at 14.96. The macro tape is unambiguously bullish \u2014 AAPL gets a tailwind even when its own signals are soft.\n2. **1H Timeframe is Bullish (3B/1Br):** Price is 0.48% above 1H VWAP ($311.57), EMA9 > EMA21 on the hourly, and 3-candle momentum is positive (+0.157%). The dominant intraday trend is up.\n3. **OBV Rising + Strong 5-Day Return (+3.18%):** Accumulation is occurring on balance despite the low volume day. The 5D return confirms buyers have been in control of recent price action.\n4. **Analyst Consensus BUY / Price Target $322.81:** ~3.1% upside implied to consensus target; acts as a gravitational pull and provides fundamental cover for longs.\n\n---\n\n## 3. BEAR CASE\n\n1. **MACD Histogram Negative (-3.14) on Daily:** Momentum on the daily timeframe is deteriorating \u2014 this is the most credible intermediate-term bearish signal in the dataset.\n2. **Price Below EMA9/EMA21 Daily ($316.23/$317.67):** AAPL is trading below its short-term daily EMAs, confirming the daily trend is under pressure even as the broader market rallies.\n3. **5-Minute Bias Fully Bearish (0B/3Br):** Price is below 5m VWAP ($313.87), 3-candle momentum is -0.245%, and near-term price action shows sellers in control of the microstructure.\n4. **Volume Critically Low (0.2x 20D MA):** At only 10.9M shares vs. 55.2M average, today's move lacks conviction in either direction. Low volume limits follow-through on any breakout or breakdown.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro Catalyst (Non-AAPL):** With no AAPL-specific news today, the stock is a passenger on the macro tape. Any surprise from Fed speakers, economic data, or geopolitical headlines could move SPY sharply and drag AAPL with it.\n- **Volume Surge:** At 0.2x average volume, a sudden institutional order flow (buy or sell program) would have outsized price impact and could break price out of its current range quickly.\n- **Tech Sector Rotation:** XLK is only +0.54% despite SPY +0.52% \u2014 Tech is not leading today. A rotation INTO tech late-session could spike AAPL toward the $316\u2013$318 EMA resistance zone.\n- **Options Expiry Pinning:** With 5 unusual calls AND 5 unusual puts flagged (balanced), max pain dynamics near current strikes could pin price near $313 into close, limiting 0DTE move potential.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $316.23\u2013$317.67 | EMA9/EMA21 daily cluster \u2014 bull thesis requires breaking above |\n| **Intraday Resistance** | $313.87 | 5m VWAP \u2014 must reclaim for bull momentum |\n| **Current Price** | $313.07 | Pivoting around 5m/15m VWAP confluence |\n| **15m VWAP Support** | $312.69 | Hold = mild bullish; lose = 5m bearish bias extends |\n| **Key Support** | $311.57 | 1H VWAP / EMA50 ($311.57) \u2014 losing this flips 1H bias bearish |\n| **Major Support** | $303.42 | 20D support \u2014 only relevant on multi-day breakdown |\n| **Thesis Changer** | $316.50 | Reclaim of daily EMA9 = bull confirmation; rejection confirms continued bear structure |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Score Rationale:** Timeframes are split (5m bearish, 15m mixed, 1H bullish) with no directional alignment; the Hard Regime Gate favors calls but daily MACD and below-EMA9/21 price structure create legitimate friction \u2014 this is genuine signal conflict, not a forced NONE.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe bull regime gate favors calls, the 1H is bullish, and price is above 15m VWAP. However, the 5m is fully bearish, volume is at 0.2x average (critically insufficient for momentum confirmation), the daily MACD is negative, and price sits between the 5m VWAP (resistance) and 15m VWAP (support) in a tight chop zone. There is no clean directional entry trigger available at this moment.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: Monitor for 15m candle close above 5m VWAP $313.87 \n  with volume >= 0.8x avg AND 5m MACD turning positive \u2014 only then \n  does a CALL setup become valid under the bull regime gate.\nENTRY TRIGGER PRICE: $313.87 (CALL trigger, if monitoring)\nAVOID IF: Volume remains below 0.5x average \u2014 no follow-through possible.\nKEY RISK: Score 52/100 is below the 55 threshold required for any \n  0-2 DTE entry; theta decay on a low-volume chop day will erode \n  premium rapidly regardless of direction.\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE:** This is an honest NONE \u2014 not a default. The bull regime gate is active and favors calls, but the Hard Gate also requires volume \u2265 0.8x average for any PUT, and common sense requires meaningful volume for a CALL as well. At 0.2x average volume with timeframes split across three different biases, there is no edge available. **Set an alert at $313.87 (5m VWAP reclaim with volume)** \u2014 if that triggers with improving volume before 2 PM ET, re-evaluate for a 1DTE CALL toward $315.50\u2013$316.00.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "Monitor for 15m candle close above 5m VWAP $313.87",
+          "entry_trigger": 313.87,
+          "avoid_if": "Volume remains below 0.5x average \u2014 no follow-through possible.",
+          "key_risk": "Score 52/100 is below the 55 threshold required for any",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6071
+      },
+      "was_flagged": true,
+      "cached_at": 1786116122.072537,
+      "score": 52
+    }
+  },
+  "saved_at": "2026-08-07T11:22:04-04:00"
 }
