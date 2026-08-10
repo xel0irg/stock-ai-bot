@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 307.125,
+      "price": 306.6700134277344,
       "volume_ratio": 0.0,
-      "ts": 1786372244.9111373,
+      "ts": 1786373805.0358484,
       "last_full_scan_ts": 1786372351.5831845
     },
     "AMZN": {
-      "price": 277.7149963378906,
+      "price": 277.2650146484375,
       "volume_ratio": 0.0,
-      "ts": 1786372245.1400268,
+      "ts": 1786373805.260683,
       "last_full_scan_ts": 1786372451.7321267
     },
     "META": {
-      "price": 603.47998046875,
+      "price": 603.3305053710938,
       "volume_ratio": 0.0,
-      "ts": 1786372245.320503,
+      "ts": 1786373805.6888003,
       "last_full_scan_ts": 1786372546.7870796
     },
     "MSFT": {
-      "price": 512.9600219726562,
+      "price": 509.06500244140625,
       "volume_ratio": 0.0,
-      "ts": 1786372245.6090825,
-      "last_full_scan_ts": 1786372648.2431643
+      "ts": 1786373806.0237591,
+      "last_full_scan_ts": 1786373876.0532677
     },
     "NVDA": {
-      "price": 220.3300018310547,
+      "price": 220.10000610351562,
       "volume_ratio": 0.0,
-      "ts": 1786372245.8158085,
+      "ts": 1786373806.380213,
       "last_full_scan_ts": 1786372751.2840278
     },
     "QQQ": {
-      "price": 723.719970703125,
+      "price": 722.4400024414062,
       "volume_ratio": 0.0,
-      "ts": 1786372246.0534728,
+      "ts": 1786373806.9900475,
       "last_full_scan_ts": 1786372836.8037224
     },
     "SPY": {
-      "price": 774.3900146484375,
+      "price": 774.02001953125,
       "volume_ratio": 0.0,
-      "ts": 1786372246.3168626,
+      "ts": 1786373807.3723578,
       "last_full_scan_ts": 1786373013.819662
     },
     "TSLA": {
-      "price": 331.5450134277344,
+      "price": 329.8999938964844,
       "volume_ratio": 0.0,
-      "ts": 1786372246.5669773,
-      "last_full_scan_ts": 1786372923.040622
+      "ts": 1786373807.5756495,
+      "last_full_scan_ts": 1786373951.4182217
     }
   },
   "ai_cache": {
@@ -111,7 +111,38 @@
       "was_flagged": true,
       "cached_at": 1786372351.5831888,
       "score": 72
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-08-10T14:57:56.044302",
+        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 10:57 AM ET | Price: $509.11**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has surged 32% in 20 days and is now pressing against its 20D resistance at exactly $509.11 with RSI at 79.78 and Stochastics at 96/97 \u2014 both screaming overbought. The most plausible scenario is a short-term consolidation or mean-reversion pullback toward the $503\u2013505 zone before any continuation, as the daily trend is technically labelled BEAR_BELOW_200 despite the violent near-term rally. However, the broader bull tape (SPY/QQQ above EMAs, VIX at 15.2) and strong analyst consensus ($563 target) mean any dip is likely shallow and bought, making a sustained breakdown unlikely in 1-2 sessions.\n\n---\n\n## 2. BULL CASE\n\n- **1H Timeframe Firmly Bullish (3B/1Br):** Price is 1.4% above 1H VWAP ($502.07) with bullish EMA9/21 stack \u2014 the dominant trend structure favors buyers on any dip.\n- **MACD Histogram +10.70 on Daily:** Strongly positive daily MACD confirms momentum is with bulls; no bearish cross yet.\n- **Analyst Consensus: STRONG BUY, $563.84 target:** 53 analysts with a mean score of 1.36/5 implies institutional sponsorship ~10.7% above current price \u2014 fundamental tailwind.\n- **OBV Rising + Options P/C = 0.25:** Rising on-balance volume combined with 4:1 call dominance signals institutional accumulation bias, not distribution.\n\n---\n\n## 3. BEAR CASE\n\n- **RSI 79.78 + Stochastics 96.61/97.06:** Dual overbought readings at this extreme historically precede at least short-term mean reversion, especially with no catalyst (no earnings imminent, no news).\n- **Bollinger Band at 0.913 (AT_UPPER_BAND):** Price is statistically stretched; upper band at $525.91 is a hard ceiling, and band mean-reversion pressure is real.\n- **5m Structure Fully Bearish (0B/3Br), Price Below 5m VWAP $509.78:** Short-term selling pressure is present right now \u2014 the intraday high is in and early-session sellers are in control on the fastest timeframe.\n- **Volume at 0.26x 20D Average:** Deeply anemic volume on a breakout day is a red flag. Moves on thin volume are prone to rapid reversal when real sellers appear.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News / No Earnings:** The absence of a catalyst for a 32% 20-day move is itself a wildcard \u2014 if this is AI/cloud sentiment-driven, any macro tech headline (rate data, NVIDIA miss, Fed speak) can trigger sharp de-risking.\n- **Tech Sector Weak Today (-0.37% vs. SPY +0.06%):** Sector rotation away from Tech intraday could accelerate if QQQ fades further (-0.17% already). Watch QQQ closely \u2014 if it breaks below EMA9 ($710.16), that changes the regime gate.\n- **Options Expiry Gamma Dynamics:** With 5 unusual call contracts and 5 unusual put contracts flagged, market makers are hedging both directions. A gamma squeeze above $510 or a sharp reversal through $505 could be self-reinforcing.\n- **20D Resistance = Current Price ($509.11):** The system flags $509.11 as the exact 20D resistance. This is a defined ceiling. A failure here with no volume is a textbook rejection setup.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $509.11 | 20D resistance = current price; must break cleanly to continue |\n| **5m VWAP** | $509.78 | Price below here = intraday sellers in control |\n| **15m EMA9** | $507.24 | First intraday support; hold = bullish, break = weakness accelerating |\n| **15m VWAP** | $505.62 | Key support; holding above = bull regime intact for calls |\n| **1H VWAP** | $502.07 | Bull thesis invalidation level; break below triggers regime reconsideration |\n| **Thesis Change Level** | **$505.00** | If price reclaims and holds $509.78 (5m VWAP) on volume \u2192 CALL. If $505.62 (15m VWAP) breaks down \u2192 re-evaluate. |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nMixed timeframe alignment (1H bullish, 5m bearish, 15m mixed) combined with a regime gate that strongly favors calls but a price sitting exactly at resistance on low volume prevents clean directional conviction; the signals are not contradictory enough to score lower, but not aligned enough to trade with 0-2 DTE precision.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in standing aside)**\n\n*Rationale:* The regime gate favors calls (score \u226555 sufficient), but the entry trigger has not been reached. Price is at exact resistance on 0.26x volume with overbought daily readings. A call here is chasing; a put here violates the regime gate (price is above 15m VWAP, score <75). The correct answer is wait.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: No trade \u2014 stand aside until entry trigger is reached.\nENTRY CONDITION: Re-evaluate for CALL if price reclaims and closes a 5-minute candle ABOVE 5m VWAP $509.78 on volume \u22651.5x average, confirming the resistance break; re-evaluate for PUT only if price breaks below 15m VWAP $505.62 AND 1H VWAP $502.07 simultaneously (which would also require score reassessment vs. regime gate).\nENTRY TRIGGER PRICE: $509.78 (CALL trigger \u2014 break above) or $505.62 (PUT re-evaluation threshold \u2014 subject to regime gate requalification)\nAVOID IF: Volume remains below 0.8x average at any attempted breakout or breakdown \u2014 thin-volume moves in either direction are traps.\nKEY RISK: A 32% 20-day move with RSI at 79.78 sitting on resistance means both a breakout on no-news and a breakdown against the bull regime are low-probability outcomes \u2014 the highest-probability outcome is chop, which destroys 0-2 DTE premium from both sides.\n\n---\n\n**BOTTOM LINE:** MSFT is at a textbook pause point \u2014 overbought, at resistance, on thin volume, with mixed intraday signals. The bull regime gate prevents a PUT without a much stronger breakdown. A CALL requires reclaiming $509.78 on real volume first. **Neither condition is met right now. Preserve capital and wait for the trigger.**",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "No trade \u2014 stand aside until entry trigger is reached.",
+          "entry_condition": "Re-evaluate for CALL if price reclaims and closes a 5-minute candle ABOVE 5m VWAP $509.78 on volume \u22651.5x average, confirming the resistance break; re-evaluate for PUT only if price breaks below 15m VWAP $505.62 AND 1H VWAP $502.07 simultaneously (which would also require score reassessment vs. regime gate).",
+          "entry_trigger": 509.78,
+          "avoid_if": "Volume remains below 0.8x average at any attempted breakout or breakdown \u2014 thin-volume moves in either direction are traps.",
+          "key_risk": "A 32% 20-day move with RSI at 79.78 sitting on resistance means both a breakout on no-news and a breakdown against the bull regime are low-probability outcomes \u2014 the highest-probability outcome is chop, which destroys 0-2 DTE premium from both sides.",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6038
+      },
+      "was_flagged": true,
+      "cached_at": 1786373876.0532713,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-10T10:43:35-04:00"
+  "saved_at": "2026-08-10T10:59:13-04:00"
 }
