@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 306.705810546875,
+      "price": 306.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1786374650.2468243,
+      "ts": 1786375251.5726128,
       "last_full_scan_ts": 1786372351.5831845
     },
     "AMZN": {
-      "price": 278.8299865722656,
+      "price": 279.3500061035156,
       "volume_ratio": 0.0,
-      "ts": 1786374650.3719606,
+      "ts": 1786375251.7640007,
       "last_full_scan_ts": 1786374740.6422646
     },
     "META": {
-      "price": 601.3300170898438,
+      "price": 598.97998046875,
       "volume_ratio": 0.0,
-      "ts": 1786374650.504858,
-      "last_full_scan_ts": 1786372546.7870796
+      "ts": 1786375251.9577873,
+      "last_full_scan_ts": 1786375344.9082313
     },
     "MSFT": {
-      "price": 508.7200012207031,
+      "price": 508.32501220703125,
       "volume_ratio": 0.0,
-      "ts": 1786374650.6996627,
+      "ts": 1786375252.199832,
       "last_full_scan_ts": 1786373876.0532677
     },
     "NVDA": {
-      "price": 219.5399932861328,
+      "price": 219.19000244140625,
       "volume_ratio": 0.0,
-      "ts": 1786374650.8600543,
+      "ts": 1786375252.420075,
       "last_full_scan_ts": 1786372751.2840278
     },
     "QQQ": {
-      "price": 722.114990234375,
+      "price": 722.3599853515625,
       "volume_ratio": 0.0,
-      "ts": 1786374651.0343053,
+      "ts": 1786375252.662693,
       "last_full_scan_ts": 1786372836.8037224
     },
     "SPY": {
-      "price": 773.6300048828125,
+      "price": 774.0800170898438,
       "volume_ratio": 0.0,
-      "ts": 1786374651.2515297,
+      "ts": 1786375252.944725,
       "last_full_scan_ts": 1786373013.819662
     },
     "TSLA": {
-      "price": 329.4100036621094,
+      "price": 330.1300048828125,
       "volume_ratio": 0.0,
-      "ts": 1786374651.3763475,
+      "ts": 1786375253.1178443,
       "last_full_scan_ts": 1786373951.4182217
     }
   },
@@ -142,7 +142,38 @@
       "was_flagged": true,
       "cached_at": 1786373876.0532713,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-08-10T15:22:24.897149",
+        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:21 AM ET | Price: $598.98**\n\n---\n\n## 1. MARKET SCENARIO\n\nThe most plausible scenario over the next 5-15 sessions is continued **range compression** between ~$580\u2013$620, with a slight bullish bias driven by macro tailwinds (SPY/QQQ above EMAs, VIX at 15.2) offset by META-specific technical deterioration off the 52W high. The 20-day return of -9.39% reflects real selling pressure, but intraday structure shows the stock is stabilizing near the $597\u2013$600 zone rather than breaking lower. A drift toward the $610\u2013$615 resistance zone is plausible if broad tech finds footing; a flush toward $580\u2013$585 requires a catalyst or market deterioration.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **1H timeframe BULLISH (3B/1Br)** | The dominant intraday trend is up; price reclaimed 1H VWAP at $594.52 with elevated volume (1.32x avg) \u2014 this is the strongest short-term signal |\n| **Analyst consensus STRONG BUY, PT $756.94** | ~26% upside to target creates a fundamental floor; 57 analysts provide durable bid support on dips |\n| **OBV RISING despite price weakness** | Accumulation underway; buyers absorbing the 20D selloff \u2014 divergence between OBV and price is a classic bottoming signal |\n| **Forward P/E 17.1 / PEG 0.88** | Fairly valued at worst; PEG below 1 implies growth is not priced in \u2014 limits downside for longer-horizon holders and reduces put premium follow-through |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Daily MACD Histogram: -1.21 (BEARISH)** | Momentum on the daily is negative and decelerating \u2014 overhead pressure persists |\n| **Price below EMA50 ($600.82)** | 5-min price at $598.98 is under the 50-period daily EMA; EMA21 ($597.78) and EMA50 provide layered resistance just overhead |\n| **5-min fully bearish (0B/3Br), price below 5m VWAP $603.29** | Short-term selling pressure is real; 3-candle momentum -0.47% and RSI(9) at 37 suggest intraday weakness |\n| **Tech sector red (-0.34%) while broad market flat** | META underperforming sector rotation; relative weakness in the sector name most aligned with META is a near-term headwind |\n\n---\n\n## 4. WILDCARDS / CATALYSTS\n\n- **\"New AI path\" headline (Yahoo Finance):** META laying out AI strategy is narrative-moving \u2014 if follow-through coverage is bullish, it could ignite a sentiment reversal intraday. This is the single biggest upside wildcard today.\n- **Intel stock sale ($15B):** Broad tech sentiment drag if institutional risk appetite shifts; could weigh on all megacap tech names including META.\n- **Texas data center compliance:** Minor negative framing (\"costs won't hit consumers\" = costs exist), but unlikely to move price materially.\n- **Low volume (0.37x avg):** Thin tape = susceptibility to sharp moves in either direction on any catalyst. A single institutional order flow event could move META \u00b1$8\u201310 easily.\n- **No earnings imminent:** Removes the most common catalyst for 0-2 DTE blowouts \u2014 reduces tail risk in both directions.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$603.29** | 5m VWAP / Resistance | Price is below here \u2014 reclaim = bullish flip on 5m |\n| **$600.82** | EMA50 (daily) | Overhead resistance; must close above for bull momentum |\n| **$598.64** | 15m VWAP | Current support; holding above = mild bull edge |\n| **$594.52** | 1H VWAP | Critical bull/bear line for 0DTE; loss of this = trend flip bearish |\n| **$591.12** | EMA9 (daily) | First meaningful support below current price |\n| **$585\u2013$580** | Structural support zone | Below here, 20D support at $539 becomes realistic target (multi-day move) |\n| **$610\u2013$615** | Near-term resistance | Confluence of prior intraday highs and Bollinger midpoint area |\n\n**Thesis-changing level:** A **close above $603.29 (5m VWAP) with volume > 0.7x avg** flips the intraday setup fully bullish. A **break below $594.52 (1H VWAP)** confirms bears have control.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nThe timeframes are genuinely split \u2014 1H is bullish, 5m is bearish, 15m is mixed, daily MACD is bearish but OBV is rising, volume is dangerously thin (0.37x). The HARD REGIME GATE further constrains a PUT signal (requires score \u226575 + price below BOTH 15m and 1H VWAP + volume \u22650.8x \u2014 none of the three conditions are simultaneously met). This is a contradictory, low-volume, mixed-signal tape that does not support a high-conviction 0-2 DTE bet in either direction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NO TRADE call)**\n\nThe bull regime gate favors CALLs in principle, but the 5m/daily-level weakness and razor-thin volume create a timing trap \u2014 the setup isn't clean enough to execute with confidence at 11:21 AM. Monitor for level breaks described in Section 5.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\n```\n\n---\n\n### \u26a0\ufe0f CONDITIONAL CALL SETUP \u2014 IF TRIGGER IS MET\n\n*If META reclaims $603.29 (5m VWAP) on a 15m candle close with volume \u2265 0.6x average before 1:30 PM ET, the following CALL setup becomes viable:*\n\n```\nCONTRACT TYPE: CALL\nEXPIRY: 1DTE\nSTRIKE: $600.00\nMONEYNESS: SLIGHTLY_OTM\nSTOCK PRICE TARGET: $606.50\nEST. OPTION PREMIUM: $4.00\u2013$5.50\nPROFIT TARGET: 60\u201380%\nMAX LOSS: 100% of premium paid\nSTOP RULE: Exit immediately if price closes a 15m candle back below $598.64 (15m VWAP)\nENTRY CONDITION: Enter on confirmed 15m candle CLOSE above $603.29 with volume at least 0.6x average, confirming 5m/15m VWAP reclaim\nENTRY TRIGGER PRICE: $603.30\nAVOID IF: Tech sector (XLK) turns further negative or SPY drops below $771, or volume remains below 0.4x average at trigger\nKEY RISK: Thin volume (0.37x avg) means the 5m move could be a false breakout \u2014 volume confirmation at trigger is non-negotiable\n```\n\n*Note: $606.50 target = ~1.25% move, within the 1DTE expected move of \u00b1$7.91 (~\u00b11.32%). This is at ~0.95x EM \u2014 acceptable but borderline; trail stop aggressively above $604.*",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": "1DTE",
+          "strike": 600.0,
+          "moneyness": "SLIGHTLY_OTM",
+          "stock_target": 606.5,
+          "est_premium": 4.0,
+          "est_premium_ai": 4.0,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": 603.3,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE"
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6258
+      },
+      "was_flagged": true,
+      "cached_at": 1786375344.9082348,
+      "score": 48
     }
   },
-  "saved_at": "2026-08-10T11:12:22-04:00"
+  "saved_at": "2026-08-10T11:22:26-04:00"
 }
