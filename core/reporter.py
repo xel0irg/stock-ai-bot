@@ -184,8 +184,12 @@ def print_terminal_report(
             if ts_data.get("key_risk"):
                 print(f"  {Fore.MAGENTA}{ts_data['key_risk']}{Style.RESET_ALL}")
         else:
-            print(f"  {Fore.YELLOW}No trade — signals too mixed or score below threshold.{Style.RESET_ALL}")
-            print(f"  0-2 DTE requires high conviction. Sit this one out.")
+            _reason = ts_data.get("no_trade_reason")
+            if _reason:
+                print(f"  {Fore.YELLOW}No trade. {_reason}{Style.RESET_ALL}")
+            else:
+                print(f"  {Fore.YELLOW}No trade — no viable 0-2 DTE setup (target beyond expected move, mixed signals, or below threshold).{Style.RESET_ALL}")
+            print(f"  Sit this one out.")
 
     # Final verdict
     print(f"\n{Fore.CYAN}{'─'*65}{Style.RESET_ALL}")

@@ -177,7 +177,25 @@ def _build_embed(
         setup_value    = f"⚡ **EARNINGS IMMINENT — NO TRADE**\n{ts_data.get('key_risk', 'IV crush risk is extreme. Do not trade 0-2 DTE into earnings.')}"
         conviction_str = "⚡ NO TRADE — EARNINGS"
     else:
-        setup_value    = "❌ No trade — signals too mixed or score below threshold.\nSit this one out."
+        # Show the SPECIFIC reason for no trade instead of a generic line.
+        # A high score with NO TRADE is not a contradiction — the score
+        # measures signal CLARITY, while NO TRADE means no viable 0-2 DTE
+        # contract exists (e.g. the realistic target lies beyond the
+        # expected move, so premium can't pay). Surfacing the real reason
+        # stops the "72/100 but NO TRADE — why?" confusion.
+        reason = ts_data.get("no_trade_reason")
+        score_val = ai.get("confluence_score", 0) or 0
+        if reason:
+            setup_value = f"❌ **No trade.** {reason}\nSit this one out."
+        elif score_val >= 55:
+            # Clear signals but no tradeable setup — say so honestly.
+            setup_value = ("❌ **No trade.** Signals are clear, but no viable "
+                           "0-2 DTE setup fits here (target likely beyond the "
+                           "expected move, or regime gate blocks this direction).\n"
+                           "Sit this one out.")
+        else:
+            setup_value = ("❌ **No trade.** Signals are mixed or below the "
+                           "conviction threshold.\nSit this one out.")
         conviction_str = "❌ NO TRADE"
 
     embed = {

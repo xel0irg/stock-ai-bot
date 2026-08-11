@@ -254,6 +254,7 @@ ENTRY CONDITION: (one sentence — use the intraday VWAP, EMA, and volume data t
 ENTRY TRIGGER PRICE: $X.XX (the single numeric stock price level from the entry condition above — for PUTs the level price must break BELOW, for CALLs the level price must break ABOVE)
 AVOID IF: (one sentence)
 KEY RISK: (one sentence)
+NO TRADE REASON: (REQUIRED ONLY IF CONTRACT TYPE is NONE. One short sentence stating the SPECIFIC reason there is no trade. Be precise — distinguish between these cases: "signals genuinely conflict across timeframes"; "setup is clear but the realistic target lies beyond the 0-2 DTE expected move, so premium cannot pay"; "score below tradeable threshold"; "regime gate blocks this direction". Do NOT write a generic reason. If CONTRACT TYPE is CALL or PUT, omit this line.)
 
 Be analytical, not promotional. Call out contradictions in the data. Do not make this longer than necessary.
 """
@@ -414,6 +415,7 @@ def run_ai_synthesis(
         entry_condition = _extract_line("ENTRY CONDITION", analysis_text)
         avoid_if        = _extract_line("AVOID IF", analysis_text)
         key_risk        = _extract_line("KEY RISK", analysis_text)
+        no_trade_reason = _extract_line("NO TRADE REASON", analysis_text)
 
         entry_trigger = _extract_field([
             r"ENTRY TRIGGER PRICE:\s*\$?([\d.]+)",
@@ -495,6 +497,7 @@ def run_ai_synthesis(
             "avoid_if":        avoid_if,
             "key_risk":        key_risk,
             "setup_quality":   setup_quality,
+            "no_trade_reason": no_trade_reason,
         }
 
         # ── Expected-move target validation ───────────────────
