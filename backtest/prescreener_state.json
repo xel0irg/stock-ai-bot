@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 306.9049987792969,
+      "price": 307.04998779296875,
       "volume_ratio": 0.0,
-      "ts": 1786464637.1628172,
+      "ts": 1786465241.1773987,
       "last_full_scan_ts": 1786463564.52798
     },
     "AMZN": {
-      "price": 272.3800048828125,
+      "price": 271.67999267578125,
       "volume_ratio": 0.0,
-      "ts": 1786464637.3249753,
+      "ts": 1786465241.391371,
       "last_full_scan_ts": 1786462927.918289
     },
     "META": {
-      "price": 606.2249755859375,
+      "price": 605.159912109375,
       "volume_ratio": 0.0,
-      "ts": 1786464637.5192826,
+      "ts": 1786465241.630145,
       "last_full_scan_ts": 1786463043.2233038
     },
     "MSFT": {
-      "price": 502.3900146484375,
+      "price": 501.2650146484375,
       "volume_ratio": 0.0,
-      "ts": 1786464637.7844515,
+      "ts": 1786465241.8721743,
       "last_full_scan_ts": 1786464142.5692127
     },
     "NVDA": {
-      "price": 218.38319396972656,
+      "price": 218.50999450683594,
       "volume_ratio": 0.0,
-      "ts": 1786464638.0176854,
+      "ts": 1786465242.1109633,
       "last_full_scan_ts": 1786463134.4903882
     },
     "QQQ": {
-      "price": 719.4149780273438,
+      "price": 718.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1786464638.23553,
+      "ts": 1786465242.3702428,
       "last_full_scan_ts": 1786463646.6468189
     },
     "SPY": {
-      "price": 772.2479858398438,
+      "price": 772.0800170898438,
       "volume_ratio": 0.0,
-      "ts": 1786464638.4770236,
+      "ts": 1786465242.6449847,
       "last_full_scan_ts": 1786463757.277975
     },
     "TSLA": {
-      "price": 333.2200012207031,
+      "price": 331.902099609375,
       "volume_ratio": 0.0,
-      "ts": 1786464638.6532278,
-      "last_full_scan_ts": 1786464706.7464273
+      "ts": 1786465242.8391457,
+      "last_full_scan_ts": 1786465308.6980784
     }
   },
   "ai_cache": {
@@ -241,7 +241,39 @@
       "was_flagged": true,
       "cached_at": 1786462927.9182925,
       "score": 38
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-11T16:21:48.689161",
+        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:21 PM ET | Price: $331.90**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is drifting lower on an intraday basis, trading below both the 5m and 15m VWAP with bearish momentum on short timeframes, but sitting above the 1H VWAP and in a confirmed bull-regime tape (SPY/QQQ above EMA9/21, VIX 15.32). The most plausible 5-15 day scenario is a continued chop in the $315\u2013$350 range as price attempts to recover from the steep 20-day -15.86% drawdown, with direction contingent on whether macro sentiment remains supportive. For today, price is coiling in a low-volume drift \u2014 no catalyst means no strong momentum in either direction.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **1H Timeframe Bullish (3B/1Br)** | Dominant trend over the session is still upward; 1H VWAP at $330.37 is holding as support |\n| **Daily MACD Histogram +3.22** | Multi-day momentum is net positive; daily structure has been turning constructive |\n| **SPY/QQQ Bull Regime** | Hard tailwind \u2014 index trend favors long exposure on individual names |\n| **Analyst Target $396.62, BUY consensus** | 40-analyst mean target implies ~19% upside, providing fundamental backstop against sharp selloffs |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **5m & 15m Both Fully Bearish (0B/4Br, 0B/3Br)** | Immediate intraday pressure is down; price action is deteriorating on entry timeframes |\n| **Price Below 5m and 15m VWAP** | Sellers in control intraday; VWAP at $332.92\u2013$332.94 is overhead resistance right now |\n| **20D Return -15.86%** | Structural damage \u2014 rallies are selling opportunities until daily structure repairs |\n| **Volume 0.36x 20D Average** | Extremely thin volume means any move lacks conviction; bearish drift on low volume is often a fade, not a trend |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume collapse (0.36x avg):** This is the dominant wildcard. A sudden volume surge in either direction would invalidate the current drift narrative and create a sharp directional move \u2014 watch for any headline spike.\n- **Elon Musk headline risk:** TSLA remains uniquely vulnerable to social/political news from Musk. Zero articles found today, but this can flip instantly.\n- **Sector rotation:** Consumer Discretionary (XLY) is -0.50% today. If rotation accelerates into or out of discretionary, TSLA amplifies it at 1.83 beta.\n- **Options expiry pinning:** ATM straddle implies \u00b1$4.51 (0DTE). With low volume and no catalyst, market makers may pin price near $330\u2013$332 through close.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$332.92\u2013$332.94** | Intraday Resistance | 5m/15m VWAP confluence \u2014 reclaiming this flips short-term bias |\n| **$330.37** | Intraday Support | 1H VWAP \u2014 losing this confirms bearish intraday control |\n| **$327.39** | Downside Target | ~0.65x of 1DTE expected move ($6.41) below current price \u2014 realistic PUT target |\n| **$336.31** | Upside Target | ~0.65x of 1DTE expected move above current \u2014 realistic CALL target |\n| **$320\u2013$322** | Key Support Zone | Near 20D support floor ($298.32 is extreme); structural level that would signal breakdown |\n| **$339.79** | EMA21 (daily) | First meaningful resistance above; reclaiming would shift daily bias |\n\n**Thesis-changing level:** $332.94 VWAP reclaim (bullish flip) or $330.37 1H VWAP break (bearish acceleration).\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is moderate but the Regime Gate blocks a PUT, and CALL signals lack the volume and 15m alignment required to justify entry \u2014 tradeability caps the score decisively.** Specifically: PUT fails the Regime Gate's three-part test (volume 0.36x vs. required 0.8x minimum); CALL lacks 15m VWAP reclaim and intraday momentum confirmation. Neither direction meets the 0-2 DTE tradeability threshold today.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in neutrality)**\n\nThe intraday bearish signals (5m/15m) directly conflict with the 1H bullish structure and the hard bull-regime context. The PUT is regime-gated on volume alone. The CALL has no entry trigger with price below 5m/15m VWAP and momentum declining. This is a genuine conflict, not a default.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime Gate explicitly blocks the PUT (volume at 0.36x avg fails the required 0.8x minimum for individual-ticker puts in a bull regime); the CALL has no valid entry trigger with price currently below both 5m and 15m VWAP and intraday momentum declining \u2014 signals genuinely conflict across the 15m/1H timeframe split.\n```\n\n---\n\n**\u26a1 ACTIONABLE SUMMARY:** Sit out this one. Watch for either (a) price reclaiming $332.94 (15m VWAP) on volume expansion \u2014 then reassess CALL entry; or (b) 1H VWAP ($330.37) breaking down with volume pickup above 1.0x avg \u2014 then reassess PUT viability (still subject to regime gate volume rule). No trigger = no trade.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime Gate explicitly blocks the PUT (volume at 0.36x avg fails the required 0.8x minimum for individual-ticker puts in a bull regime); the CALL has no valid entry trigger with price currently below both 5m and 15m VWAP and intraday momentum declining \u2014 signals genuinely conflict across the 15m/1H timeframe split."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6132
+      },
+      "was_flagged": true,
+      "cached_at": 1786465308.6980817,
+      "score": 42
     }
   },
-  "saved_at": "2026-08-11T12:11:48-04:00"
+  "saved_at": "2026-08-11T12:21:50-04:00"
 }
