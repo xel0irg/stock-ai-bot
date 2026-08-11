@@ -228,13 +228,27 @@ def render_signal_card(
         def fmt_money(v):  return f"${v:g}" if v not in (None, "") else "—"
         def fmt_pct(v):    return f"{v}%" if v not in (None, "") else "—"
 
+        def _pct_signed(v, fallback=None):
+            # Premium-move exits: always signed so +55% / -30% read as
+            # "premium up 55%" / "premium down 30%", not price levels.
+            if v in (None, ""):
+                v = fallback
+            if v in (None, ""):
+                return "—"
+            try:
+                n = float(v)
+            except (TypeError, ValueError):
+                return str(v)
+            return f"{'+' if n > 0 else ''}{n:g}%"
+
         stats = [
             ("STRIKE",        fmt_money(ts.get("strike")),        con_color),
             ("MONEYNESS",     (ts.get("moneyness") or "—").replace("SLIGHTLY_OTM", "SL.OTM"), TEXT),
             ("STOCK TARGET",  fmt_money(ts.get("stock_target")),  con_color),
             ("PREMIUM",       fmt_money(ts.get("est_premium")),   TEXT),
-            ("PROFIT TARGET", fmt_pct(ts.get("profit_target")),   GREEN),
-            ("MAX LOSS",      "100%",                             RED),
+            ("TAKE PROFIT",   _pct_signed(ts.get("premium_target_pct"),
+                                            ts.get("profit_target")), GREEN),
+            ("STOP",          _pct_signed(ts.get("premium_stop_pct")), RED),
         ]
         n = len(stats)
         gap = 10

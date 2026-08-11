@@ -153,6 +153,15 @@ def _build_embed(
             setup_value += f"✅ **Enter:** {ts_data['entry_condition']}\n"
         if ts_data.get("stop_rule"):
             setup_value += f"🛑 **Stop:** {ts_data['stop_rule']}\n"
+
+        # Premium-based exit alongside the price-level stop. Backtested on
+        # real intraday premium paths — whichever triggers first is the exit.
+        _pstop = ts_data.get("premium_stop_pct")
+        _ptgt  = ts_data.get("premium_target_pct")
+        if _pstop is not None and _ptgt is not None:
+            setup_value += (f"📉 **Premium exit:** cut at **{_pstop}%** · "
+                            f"take profit at **+{_ptgt}%** (whichever hits first "
+                            f"with the stop above)\n")
         if ts_data.get("avoid_if"):
             setup_value += f"⛔ **Avoid if:** {ts_data['avoid_if']}"
         setup_value = setup_value.strip() or "See card below for full setup."

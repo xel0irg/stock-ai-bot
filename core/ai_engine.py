@@ -553,6 +553,18 @@ def run_ai_synthesis(
             trade_setup["verdict"]      = verdict
             trade_setup["verdict_note"] = verdict_note
 
+            # ── Premium-based exit rule (backtested) ──────────────
+            # Derived from replaying real intraday premium paths across
+            # tracked trades: a stop near -30% paired with a take-profit
+            # near +55% produced the best expectancy of the levels tested.
+            # Cutting losers early mattered more than capping winners —
+            # a tight +15% take-profit RAISED win rate but LOWERED
+            # returns, because it clips the large winners that carry the
+            # system. These sit alongside (not instead of) the AI's
+            # price-level stop: whichever triggers first is the exit.
+            trade_setup["premium_stop_pct"]   = -30
+            trade_setup["premium_target_pct"] = 55
+
         log.info(
             f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias} | "
             f"{contract_type} {expiry} ${strike} | Quality={setup_quality}"

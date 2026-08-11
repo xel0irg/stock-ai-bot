@@ -79,6 +79,8 @@ FIELDS = [
     "pnl_signal_exit",      # entry@signal  -> target/stop exit
     "pnl_trigger_hold",     # entry@trigger -> close
     "pnl_trigger_exit",     # entry@trigger -> target/stop exit
+    "pnl_premium_rule",     # entry@signal -> -30%/+55% premium exit rule
+    "premium_rule_outcome", # STOP / TARGET / CLOSE — which one ended it
     # ── bookkeeping ──
     "status",               # OPEN / DONE
     "last_update",
@@ -450,6 +452,36 @@ def close_out_trades() -> None:
         r["pnl_signal_exit"]  = pnl(p_signal,  p_exit) if p_exit else ""
         r["pnl_trigger_hold"] = pnl(p_trigger, close_prem) if p_trigger else ""
         r["pnl_trigger_exit"] = pnl(p_trigger, p_exit) if (p_trigger and p_exit) else ""
+
+        # ── Premium exit rule (-30% stop / +55% take-profit) ─────
+        # Replay the recorded intraday premium path and take whichever
+        # level is touched first. This measures the rule we actually
+        # recommend on the card, so it can be compared directly against
+        # hold-to-close on the SAME trades.
+        try:
+            import json as _json
+            _entry = p_signal
+            _path = _json.loads(r.get("premium_path") or "[]")
+            if _entry and _entry > 0 and _path:
+                STOP_PCT, TGT_PCT = -30.0, 55.0
+                _outcome, _result = "CLOSE", None
+                for _t, _prem in _path:
+                    try:
+                        _pct = (float(_prem) - _entry) / _entry * 100
+                    except (TypeError, ValueError, ZeroDivisionError):
+                        continue
+                    if _pct <= STOP_PCT:
+                        _outcome, _result = "STOP", STOP_PCT
+                        break
+                    if _pct >= TGT_PCT:
+                        _outcome, _result = "TARGET", TGT_PCT
+                        break
+                if _result is None and close_prem:
+                    _result = round((close_prem - _entry) / _entry * 100, 1)
+                r["pnl_premium_rule"] = _result if _result is not None else ""
+                r["premium_rule_outcome"] = _outcome
+        except Exception as _e:
+            log.debug(f"{tk}: premium rule calc skipped — {_e}")
 
         r["status"] = "DONE"
         r["last_update"] = now
