@@ -200,15 +200,23 @@ What unexpected events or data points could significantly change the direction? 
 Specific price levels based on the data: support(s), resistance(s), and the critical level that changes your thesis.
 
 **6. CONFLUENCE SCORE: X/100**
-Rate the overall TRADE CONVICTION on a scale of 0-100 where conviction means "how clearly do the signals align to support a high-probability directional move in the next 1-2 days":
-- 0-30:   No trade — signals are contradictory or data is too thin
-- 31-54:  Low conviction — some signals align but too much noise for 0-2 DTE
-- 55-69:  Moderate conviction — majority of signals agree, watchable setup
-- 70-84:  High conviction — strong signal alignment with volume/momentum confirmation
-- 85-100: Exceptional — near-perfect setup with catalyst, volume, trend, and momentum all aligned
+Rate the overall TRADE QUALITY on a scale of 0-100. This score answers ONE question: "how good is the actual 0-2 DTE OPTIONS TRADE here?" — NOT merely how clear the chart is. A crystal-clear directional read with no viable option trade is a LOW score, not a high one.
 
-IMPORTANT: This score is NOT a bullish/bearish meter. A clean bearish setup with all signals aligned should score just as high as a clean bullish one. Score based on CLARITY and ALIGNMENT of signals, not direction.
-Explain the score in 1 sentence.
+BOTH components must be high to score high:
+  (a) SIGNAL CLARITY — how cleanly signals align for a directional move.
+  (b) TRADEABILITY — can a 0-2 DTE option PROFIT on the realistic move? Tradeable only if the realistic target sits WITHIN the expected move (aim 0.5-0.8x) so premium pays before theta.
+
+BANDS (apply BOTH):
+- 0-30:   No trade — contradictory or thin data.
+- 31-54:  Low — mixed for 0-2 DTE, OR clear signals but NO viable option (target beyond expected move). CORRECT for "clear chart, untradeable option."
+- 55-69:  Moderate — signals agree AND a viable target fits the expected move.
+- 70-84:  High — strong alignment WITH confirmation AND a viable target.
+- 85-100: Exceptional — all aligned, clean tradeable target.
+
+CRITICAL: If you output CONTRACT TYPE: NONE, the score MUST be <=54. A NONE result can NEVER score 55+. Never output 70 with NO TRADE — forbidden.
+
+Not a bullish/bearish meter. Score TRADE QUALITY (clarity AND tradeability), not chart clarity alone.
+Explain the score in 1 sentence, noting if tradeability capped it.
 
 **7. SUGGESTED BIAS**
 State the direction AND the options contract it implies:
@@ -422,6 +430,12 @@ def run_ai_synthesis(
             r"\|\s*\*{0,2}ENTRY TRIGGER PRICE\*{0,2}\s*\|\s*\*{0,2}\$?([\d.]+)",
         ], analysis_text, float)
 
+        # HARD ENFORCEMENT: NONE can never score 55+ (untradeable = low quality).
+        # Makes the "72/100 but NO TRADE" contradiction structurally impossible.
+        if contract_type == "NONE" and confluence_score >= 55:
+            log.info(f"{ticker}: NO TRADE with score {confluence_score} — clamping to 45")
+            confluence_score = 45
+
         # Rough quality flag based on contract type + confluence
         if contract_type == "NONE":
             setup_quality = "NO TRADE"
@@ -521,6 +535,23 @@ def run_ai_synthesis(
                 trade_setup["em_pct"]          = vt.get("em_pct")
             except Exception as e:
                 log.debug(f"{ticker}: validate_target failed — {e}")
+
+        # ── Verdict tier (TRADE / WATCH / RISKY) ──────────────────
+        # Concise honest read driving the card banner and feed. Based on
+        # tradeability: how the target fits the expected move.
+        if contract_type in ("CALL", "PUT"):
+            _ratio = trade_setup.get("target_em_ratio")
+            _clamped = bool(trade_setup.get("target_original"))
+            if _clamped or (_ratio is not None and _ratio > 1.0):
+                verdict, verdict_note = "RISKY", ("Target near/beyond the expected "
+                    "move — premium may not pay before theta. Aggressive only.")
+            elif _ratio is not None and _ratio > 0.8:
+                verdict, verdict_note = "WATCH", ("Direction clear but the move is "
+                    "tight — only enter on strong confirmation.")
+            else:
+                verdict, verdict_note = "TRADE", "Setup and target both fit — tradeable as written."
+            trade_setup["verdict"]      = verdict
+            trade_setup["verdict_note"] = verdict_note
 
         log.info(
             f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias} | "

@@ -157,6 +157,12 @@ def _build_embed(
             setup_value += f"⛔ **Avoid if:** {ts_data['avoid_if']}"
         setup_value = setup_value.strip() or "See card below for full setup."
 
+        # ── Verdict banner (TRADE / WATCH / RISKY) ────────────
+        _verdict = ts_data.get("verdict")
+        if _verdict:
+            _vemoji = {"TRADE": "✅", "WATCH": "⚠️", "RISKY": "🔶"}.get(_verdict, "")
+            setup_value = f"{_vemoji} **{_verdict}** — {ts_data.get('verdict_note','')}\n\n" + setup_value
+
         # ── Freshness banner ──────────────────────────────────
         # Injected by core/freshness.py at alert time. A STALE flag
         # means the trigger→target move already mostly happened
@@ -251,10 +257,19 @@ def send_discord_alert(
         return False
 
     score = ai.get("confluence_score", 50)
+    _direction = (ai.get("trade_setup") or {}).get("contract_type", "NONE")
 
-    if not force and score < CONFLUENCE_THRESHOLD:
-        log.info(f"Discord: {ticker} score {score} below threshold — no alert")
-        return False
+    # ── Feed cutoff: 65+ and actionable only ──────────────────────
+    # Members see only stronger, real trades. NO TRADE never broadcasts
+    # (still logged + paper-tracked internally). force=True (/scan) bypasses.
+    FEED_MIN_SCORE = 65
+    if not force:
+        if _direction not in ("CALL", "PUT"):
+            log.info(f"Discord: {ticker} NO TRADE — not broadcasting")
+            return False
+        if score < FEED_MIN_SCORE:
+            log.info(f"Discord: {ticker} score {score} < {FEED_MIN_SCORE} feed cutoff — no alert")
+            return False
 
     # ── Duplicate suppression ─────────────────────────────────
     # The same setup re-alerting every scan interval is noise, not
