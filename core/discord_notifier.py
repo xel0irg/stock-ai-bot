@@ -335,6 +335,13 @@ def send_discord_alert(
                 if resp.status_code == 200:
                     msg_id = (resp.json() or {}).get("id", "")
                 _maybe_create_thread(msg_id, ticker, direction, str(strike_str))
+                # Watch this signal for its 15m entry-trigger close so we
+                # can confirm to members the moment the entry rule is met.
+                try:
+                    from core.trigger_watch import register as _tw_register
+                    _tw_register(ticker, ai, msg_id)
+                except Exception:
+                    pass
             except Exception:
                 pass
             return True

@@ -296,6 +296,15 @@ def run_scan(watchlist: list[str], tech_cache: dict | None = None) -> list[dict]
     except Exception as e:
         log.warning(f"Paper tracker update failed: {e}")
 
+    # Entry-trigger confirmation: alert members the moment a completed
+    # 15m candle closes through a posted signal's trigger level.
+    try:
+        from core.trigger_watch import check_and_alert
+        from config.settings import DISCORD_WEBHOOK_URL as _WH
+        check_and_alert(_WH)
+    except Exception as e:
+        log.warning(f"Trigger watch failed: {e}")
+
     log.info("\n" + "="*55)
     log.info("  SCAN COMPLETE — SUMMARY")
     log.info("="*55)
