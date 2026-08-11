@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 306.5799865722656,
+      "price": 306.3005065917969,
       "volume_ratio": 0.0,
-      "ts": 1786460452.3661537,
+      "ts": 1786461038.2407315,
       "last_full_scan_ts": 1786459250.400328
     },
     "AMZN": {
-      "price": 274.4700012207031,
+      "price": 272.8450012207031,
       "volume_ratio": 0.0,
-      "ts": 1786460452.5407155,
-      "last_full_scan_ts": 1786458747.7611449
+      "ts": 1786461038.4132771,
+      "last_full_scan_ts": 1786461109.8816867
     },
     "META": {
-      "price": 610.239990234375,
+      "price": 607.0604858398438,
       "volume_ratio": 0.0,
-      "ts": 1786460452.7248006,
-      "last_full_scan_ts": 1786458845.1936836
+      "ts": 1786461038.6137064,
+      "last_full_scan_ts": 1786461192.1188264
     },
     "MSFT": {
-      "price": 503.6499938964844,
+      "price": 503.1499938964844,
       "volume_ratio": 0.0,
-      "ts": 1786460452.9647317,
+      "ts": 1786461038.8743067,
       "last_full_scan_ts": 1786460202.9876409
     },
     "NVDA": {
-      "price": 219.74000549316406,
+      "price": 219.25320434570312,
       "volume_ratio": 0.0,
-      "ts": 1786460453.2086854,
+      "ts": 1786461039.0722537,
       "last_full_scan_ts": 1786459046.405173
     },
     "QQQ": {
-      "price": 721.9500122070312,
+      "price": 720.25,
       "volume_ratio": 0.0,
-      "ts": 1786460453.4450514,
+      "ts": 1786461039.291708,
       "last_full_scan_ts": 1786459316.9317236
     },
     "SPY": {
-      "price": 773.7650146484375,
+      "price": 772.8099975585938,
       "volume_ratio": 0.0,
-      "ts": 1786460453.7814324,
+      "ts": 1786461039.5252624,
       "last_full_scan_ts": 1786459402.3052058
     },
     "TSLA": {
-      "price": 334.125,
+      "price": 333.84259033203125,
       "volume_ratio": 0.0,
-      "ts": 1786460454.4278493,
+      "ts": 1786461039.7184224,
       "last_full_scan_ts": 1786460543.5835447
     }
   },
@@ -113,38 +113,6 @@
       "was_flagged": false,
       "cached_at": 1786376670.5221043,
       "score": 38
-    },
-    "AMZN": {
-      "result": {
-        "ticker": "AMZN",
-        "timestamp": "2026-08-11T14:32:27.752864",
-        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 10:31 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is experiencing intraday bearish pressure (-1.21% today), trading below VWAP on all three timeframes (5m/15m/1H), while the broader tape (SPY/QQQ) grinds marginally higher. The most plausible near-term scenario is continued consolidation or modest drift lower toward $271\u2013$273 today, with the stock digesting its 20-day +7.75% run. A sustained breakdown is unlikely given the bull regime and strong analyst consensus ($325 target), but the intraday structure favors sellers until price reclaims the 15m VWAP at $276.44.\n\n---\n\n## 2. BULL CASE\n\n- **Strong 20D momentum (+7.75%) + MACD Histogram bullish (3.38):** Intermediate trend is unambiguously up; pullbacks have been shallow and bought.\n- **SPY/QQQ both above EMA9 and EMA21 in confirmed bull regime:** Broad tailwind strongly disfavors sustained bearish moves in individual large-caps.\n- **Analyst consensus STRONG_BUY, $325 target (18% upside):** Institutional conviction provides a floor and potential call-buying pressure on dips.\n- **OBV rising + Bollinger position at 0.769:** Price is in the upper half of the band with accumulation \u2014 not distribution.\n\n---\n\n## 3. BEAR CASE\n\n- **Price below VWAP on all three intraday timeframes (5m/15m/1H):** Sellers are in control intraday; 1H bias is 0 bull / 3 bear signals \u2014 the cleanest bearish read in the dataset.\n- **RSI near overbought (62.92) after +7.75% 20-day run:** Mean-reversion pressure building; short-term exhaustion risk is real.\n- **Consumer Discretionary sector (XLY) down -0.32% while SPY/QQQ are green:** AMZN is underperforming its sector on a day the market is rising \u2014 relative weakness is a bearish intraday flag.\n- **Volume is critically low (0.11x 20D average):** Thin conditions amplify moves but also suggest no conviction behind any intraday rally attempt \u2014 sellers face little resistance.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news detected (0 articles):** Could flip fast on any macro headline, AWS-related announcement, or broader tech sentiment shift.\n- **10 SEC filings in 90 days:** Worth monitoring \u2014 could include shelf registrations or material disclosures that the news feed hasn't priced.\n- **Options expiry dynamics:** Balanced unusual flow (5 calls / 5 puts flagged) near a 52W high of $287.20 \u2014 gamma exposure at round levels ($275/$280) could create pinning or explosive moves.\n- **Low volume regime:** Any volume surge (catalyst-driven) would dramatically expand realized move vs. the implied \u00b1$3.02 (0DTE) expected range \u2014 a vol spike would hurt premium buyers.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Resistance | $276.44 | 15m VWAP \u2014 must reclaim for bulls |\n| Secondary Resistance | $276.57 | 1H VWAP \u2014 full intraday recovery target |\n| Current Price | $274.73 | \u2014 |\n| Bear Target / Support | $272.50 | ~0.75x of 1DTE expected move ($4.29 \u00d7 0.75 \u2248 $3.22 below entry) |\n| Key Support | $270.44 | 20D resistance-turned-support zone / full 1DTE expected move floor |\n| Critical Bull Thesis Break | $284.02 | 20D resistance \u2014 breach signals new leg higher |\n| Thesis-Change Level | $276.57 | Reclaim of 1H VWAP invalidates bearish intraday setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 72/100\n\n**Signal clarity is high** (1H 0B/3Br, 15m 1B/3Br, price below all VWAPs, sector lagging) and **tradeability is viable** \u2014 a target of ~$272.50 is within 0.75x the 1DTE expected move of \u00b1$4.29, meaning premium can pay. Score capped at 72 (not higher) because: (a) bull regime gate requires score \u226575 AND volume \u22650.8x for PUTs \u2014 volume at 0.11x is a hard concern; (b) 5m is mixed, not confirmed bearish; (c) broad tape is green. The bearish intraday case is real but fighting the regime.\n\n**\u26a0\ufe0f REGIME GATE CONFLICT \u2014 CRITICAL READ:**\nThe Hard Regime Gate requires PUT signals to meet ALL THREE: score \u226575, price below both 15m and 1H VWAP \u2705, AND volume \u22650.8x average. **Volume is 0.11x \u2014 this condition FAILS.** Per the gate rules, without all three, output NONE.\n\nScore is adjusted to **54/100** \u2014 the setup is directionally clear but the regime gate blocks execution. Tradeability is conditionally viable on direction but the gate override is non-negotiable.\n\n**Revised Score: 54/100** \u2014 directionally legible bearish setup, but regime gate (volume < 0.8x) blocks the PUT signal per hard rules.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS \u2014 but BLOCKED by Regime Gate (volume < 0.8x)**\nOutput: **NEUTRAL \u2192 NO TRADE**\nConfidence: N/A \u2014 gate override, not a directional uncertainty\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks PUT signal \u2014 all three conditions required (score \u226575, price below both 15m/1H VWAP \u2705, volume \u22650.8x) and volume is critically failing at 0.11x the 20D average, making intraday directional premium trading unreliable regardless of VWAP structure; revisit if volume accelerates above 0.8x on a retest of $274\u2013$275 with a 15m candle close below VWAP.",
-        "confluence_score": 45,
-        "suggested_bias": "BEARISH",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate blocks PUT signal \u2014 all three conditions required (score \u226575, price below both 15m/1H VWAP \u2705, volume \u22650.8x) and volume is critically failing at 0.11x the 20D average, making intraday directional premium trading unreliable regardless of VWAP structure; revisit if volume accelerates above 0.8x on a retest of $274\u2013$275 with a 15m candle close below VWAP."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6176
-      },
-      "was_flagged": true,
-      "cached_at": 1786378964.2645385,
-      "score": 45
     },
     "MSFT": {
       "result": {
@@ -275,5 +243,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-08-11T11:02:25-04:00"
+  "saved_at": "2026-08-11T11:13:14-04:00"
 }
