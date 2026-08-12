@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 301.3699951171875,
+      "price": 301.60888671875,
       "volume_ratio": 0.0,
-      "ts": 1786551640.8940735,
+      "ts": 1786552248.0848267,
       "last_full_scan_ts": 1786549381.0139797
     },
     "AMZN": {
-      "price": 267.83990478515625,
+      "price": 268.8999938964844,
       "volume_ratio": 0.0,
-      "ts": 1786551641.137231,
-      "last_full_scan_ts": 1786549450.138033
+      "ts": 1786552248.2868624,
+      "last_full_scan_ts": 1786552297.1880555
     },
     "META": {
-      "price": 581.9400024414062,
+      "price": 582.280029296875,
       "volume_ratio": 0.0,
-      "ts": 1786551641.3149784,
+      "ts": 1786552248.4741206,
       "last_full_scan_ts": 1786549305.8715384
     },
     "MSFT": {
-      "price": 493.3500061035156,
+      "price": 493.94549560546875,
       "volume_ratio": 0.0,
-      "ts": 1786551641.5731494,
+      "ts": 1786552248.699321,
       "last_full_scan_ts": 1786550592.2527502
     },
     "NVDA": {
-      "price": 223.28500366210938,
+      "price": 223.25,
       "volume_ratio": 0.0,
-      "ts": 1786551641.779353,
+      "ts": 1786552248.919639,
       "last_full_scan_ts": 1786549517.6827273
     },
     "QQQ": {
-      "price": 723.969970703125,
+      "price": 724.3099975585938,
       "volume_ratio": 0.0,
-      "ts": 1786551642.018513,
+      "ts": 1786552249.1642354,
       "last_full_scan_ts": 1786549584.9072852
     },
     "SPY": {
-      "price": 772.4249877929688,
+      "price": 772.4949951171875,
       "volume_ratio": 0.0,
-      "ts": 1786551642.2729843,
+      "ts": 1786552249.3928988,
       "last_full_scan_ts": 1786549958.5381823
     },
     "TSLA": {
-      "price": 326.5799865722656,
+      "price": 327.04730224609375,
       "volume_ratio": 0.0,
-      "ts": 1786551642.442554,
+      "ts": 1786552249.5974011,
       "last_full_scan_ts": 1786550515.1511242
     }
   },
@@ -177,7 +177,39 @@
       "was_flagged": true,
       "cached_at": 1786550515.151128,
       "score": 42
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-08-12T16:31:37.177386",
+        "analysis": "# AMZN 0-2 DTE OPTIONS ANALYSIS \u2014 12:30 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in an intraday pullback within a broader 20-day uptrend, trading below both its 15m and 1H VWAPs while the broad market (SPY +0.19%, QQQ +0.75%) grinds higher. The most plausible scenario is continued near-term softness toward $266\u2013267 as Consumer Discretionary (XLY -1.11%) underperforms the tape, but the macro bull regime and AMZN's own 20D uptrend (+7.59%) cap the downside. A reversion toward the 1H VWAP ($273) over 1-2 sessions is equally plausible if tech momentum drags it higher.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **SPY/QQQ both in confirmed bull regime** | Macro tailwind suppresses sustained single-name selling; dips tend to get bought |\n| **Daily MACD Histogram +2.32 (bullish)** | Daily momentum is still positive; today's -1.25% is a pullback, not a reversal |\n| **5m structure: 3/0 bull signals, price above 5m VWAP $268.29** | Very near-term price action is trying to stabilize and bounce |\n| **Analyst consensus STRONG BUY, target $325 (+20.9%)** | Fundamental support; any macro risk-on push could rapidly re-rate intraday |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **1H: 0/4 bull signals, price -1.56% below 1H VWAP $273.10, RSI 27.62 (oversold)** | Dominant intraday trend is clearly down; sellers in control on the trading timeframe |\n| **15m: 1/3 bull signals, price -0.57% below 15m VWAP $270.39** | Setup confirmation timeframe confirms bearish structure |\n| **XLY sector -1.11% vs SPY +0.19%** | AMZN's sector acting as a drag; relative weakness amplifies downside |\n| **Volume only 0.3x 20D average** | Thin volume is a double-edged sword \u2014 but in a downtrend it means no buyers stepping in, not just noise |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume spike risk:** Current volume at 0.3x average. Any institutional order flow in the afternoon could exaggerate moves in either direction beyond the expected move range.\n- **Macro spillover:** QQQ +0.75% today \u2014 if tech momentum accelerates, AMZN's 1.454 beta means it could whipsaw back through all VWAPs quickly, stopping out put positions.\n- **1H RSI at 27.62 (oversold):** This is a mean-reversion warning. Oversold on a 1H chart during a bull regime is a bounce trigger, not a continuation signal. This is the most significant contradiction in the bear case.\n- **No news catalyst:** Zero news articles found. This is a technically-driven move, which makes it more susceptible to snap reversals when the signal clears.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance 1** | $270.39 | 15m VWAP \u2014 must reclaim for bullish intraday shift |\n| **Resistance 2** | $273.10 | 1H VWAP \u2014 full bearish thesis negated above here |\n| **Resistance 3** | $284.02 | 20D resistance / near 52W high zone |\n| **Current price** | $268.86 | Sandwiched between 5m VWAP support and 15m VWAP resistance |\n| **Support 1** | $266.49\u2013$267.00 | 0.5x expected move on 1DTE (\u00b1$3.33) = $265.53 floor |\n| **Critical line** | $273.10 | 1H VWAP reclaim = PUT thesis dead; hold below = bear continuation |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal Clarity: 6/10** \u2014 1H and 15m are cleanly bearish, but the 5m is bullish, the daily MACD is bullish, and the 1H RSI at 27.62 screams oversold in a bull-regime tape \u2014 this is a contradiction that materially degrades clarity. The regime gate requires score \u226575 AND price below BOTH 15m and 1H VWAPs AND volume \u22650.8x avg for a PUT. Price IS below both VWAPs, but **volume is 0.3x average \u2014 hard gate blocked.** The bull case (CALL) needs only score \u226555, but the 5m is the only bullish intraday timeframe and the stock is underperforming a green market, so there's no clean CALL setup either. Tradeability is capped by the regime gate volume requirement blocking the PUT, and insufficient 0-2 DTE CALL momentum confirmation to justify a CALL. Score capped at 52.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the no-trade call)**\n\n**Honest contradiction:** The bearish intraday structure (1H, 15m) is real, but the regime gate's volume requirement (\u22650.8x avg; actual: 0.3x) is an objective hard block on the PUT. The CALL case requires the bullish thesis to overcome a sector -1.11% headwind and only one of three intraday timeframes confirming. Neither direction clears all required gates simultaneously.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate hard-blocks the PUT (volume 0.3x average, fails the \u22650.8x requirement mandatory in a bull regime); the CALL is blocked by sector underperformance (-1.11% XLY) and only one of three intraday timeframes confirming bullish structure \u2014 neither direction clears all required gates simultaneously.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate hard-blocks the PUT (volume 0.3x average, fails the \u22650.8x requirement mandatory in a bull regime); the CALL is blocked by sector underperformance (-1.11% XLY) and only one of three intraday timeframes confirming bullish structure \u2014 neither direction clears all required gates simultaneously."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6183
+      },
+      "was_flagged": true,
+      "cached_at": 1786552297.188059,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-12T12:20:42-04:00"
+  "saved_at": "2026-08-12T12:31:39-04:00"
 }
