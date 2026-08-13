@@ -1,61 +1,61 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 304.19000244140625,
+      "price": 304.3299865722656,
       "volume_ratio": 0.0,
-      "ts": 1786633842.674505,
+      "ts": 1786634438.8938413,
       "last_full_scan_ts": 1786632197.9973037
     },
     "AMZN": {
-      "price": 267.4800109863281,
+      "price": 266.5899963378906,
       "volume_ratio": 0.0,
-      "ts": 1786633842.8747435,
-      "last_full_scan_ts": 1786632652.2173588
+      "ts": 1786634439.0926976,
+      "last_full_scan_ts": 1786634506.6731358
     },
     "META": {
-      "price": 588.6701049804688,
+      "price": 588.030029296875,
       "volume_ratio": 0.0,
-      "ts": 1786633843.074107,
+      "ts": 1786634439.2763958,
       "last_full_scan_ts": 1786632265.5895045
     },
     "MSFT": {
-      "price": 495.7601013183594,
+      "price": 495.8550109863281,
       "volume_ratio": 0.0,
-      "ts": 1786633843.425637,
+      "ts": 1786634439.541245,
       "last_full_scan_ts": 1786632322.923495
     },
     "NVDA": {
-      "price": 224.7899932861328,
+      "price": 224.90499877929688,
       "volume_ratio": 0.0,
-      "ts": 1786633843.7244782,
+      "ts": 1786634439.7912626,
       "last_full_scan_ts": 1786633472.238037
     },
     "QQQ": {
-      "price": 732.6500244140625,
+      "price": 732.72998046875,
       "volume_ratio": 0.0,
-      "ts": 1786633843.94294,
+      "ts": 1786634440.0764055,
       "last_full_scan_ts": 1786632457.0831492
     },
     "SPY": {
-      "price": 777.3400268554688,
+      "price": 777.14501953125,
       "volume_ratio": 0.0,
-      "ts": 1786633844.2529588,
+      "ts": 1786634440.3437686,
       "last_full_scan_ts": 1786632513.8795664
     },
     "TSLA": {
-      "price": 333.5069885253906,
+      "price": 335.25,
       "volume_ratio": 0.0,
-      "ts": 1786633844.4653857,
-      "last_full_scan_ts": 1786632583.8048754
+      "ts": 1786634440.5509684,
+      "last_full_scan_ts": 1786634575.334707
     }
   },
   "ai_cache": {
     "AMZN": {
       "result": {
         "ticker": "AMZN",
-        "timestamp": "2026-08-13T14:50:52.213912",
-        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 10:50 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is trading at $268.21, caught in a tug-of-war between a broadly bullish macro tape (SPY +0.83%, QQQ +1.47%, VIX 14.78) and consistently bearish intraday structure across all three monitored timeframes. The most plausible scenario over the next 5-15 days is continued consolidation between $260-$278, with upside bias driven by the analyst consensus ($325 PT), sector tailwinds, and the 20D uptrend (+8.49%). For today specifically, the lack of volume (0.18x 20D average) and bearish intraday signals suggest AMZN is lagging the market rally rather than leading it \u2014 a drift lower toward VWAP equilibrium (~$268-$269) is more likely than a breakout in either direction.\n\n---\n\n## 2. BULL CASE\n\n1. **Macro Regime Dominance** \u2014 SPY and QQQ both above EMA9/EMA21 with VIX at 14.78. In confirmed bull tape, individual stock weakness tends to be mean-reverting, not trending.\n2. **Daily MACD Histogram +1.50 (Bullish)** \u2014 The daily trend remains in bullish momentum territory; intraday weakness does not override this.\n3. **Strong Analyst Consensus + Fundamental Tailwinds** \u2014 59 analysts with STRONG_BUY consensus, $325.19 PT (~21% upside), earnings growth +242%, revenue growth +19.6%. Smart money is not positioned bearishly.\n4. **Bollinger Position 0.661 / 20D Return +8.49%** \u2014 Price is in the upper half of the Bollinger Band on the 20D chart with significant recent momentum; the trend structure is intact.\n\n---\n\n## 3. BEAR CASE\n\n1. **Intraday VWAP Structure \u2014 Bearish Across All Timeframes** \u2014 Price is below VWAP on 5m ($268.59) and 1H ($269.90), and essentially flat on 15m ($268.25). The 1H shows 0 bullish / 4 bearish signals \u2014 the strongest intraday bear signal in this dataset.\n2. **All Short-Term EMAs Rolling Over** \u2014 5m EMA9 $268.43, 15m EMA9 $268.49 < EMA21 $268.76, 1H EMA9 $268.97 < EMA21 $271.08. Every intraday EMA is in bearish cross configuration.\n3. **AMZN Underperforming Its Own Sector** \u2014 QQQ +1.47%, Tech +1.6%, Cons. Discretionary +0.6%, yet AMZN is only +0.35%. Relative weakness in a ripping tape is a clear bearish signal for the stock specifically.\n4. **OBV Falling + Volume at 0.18x Average** \u2014 No institutional buying behind today's slight uptick. The absence of volume confirms lack of conviction from bulls; any intraday break lower faces minimal support.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news catalyst identified** \u2014 0 articles found. This is both a risk and a neutralizer; a surprise headline (AWS deal, regulatory news, macro data release) could move AMZN \u00b12-3% without warning.\n- **VIX Compression Risk** \u2014 VIX at 14.78 is historically low. Any macro shock (Fed speak, geopolitical event) could spike vol and cause rapid repricing across all names.\n- **Options Expiry Dynamics** \u2014 P/C ratio 0.4 (call-heavy). With 5 unusual calls AND 5 unusual puts flagged, the options market is equally split \u2014 no clear smart money lean. This is an honest neutral signal.\n- **Volume Recovery** \u2014 If volume normalizes toward the 47M 20D average in the afternoon session, the direction of that volume surge is the key tell. A low-volume day can flip violently.\n- **52W High Proximity** \u2014 At $268.21 vs. 52W high $287.20, AMZN has room to run but faces psychological resistance before the 52W high.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| \ud83d\udd34 Immediate Resistance | $268.59 | 5m VWAP \u2014 reclaim needed for any bull move |\n| \ud83d\udd34 Key Resistance | $269.90 | 1H VWAP \u2014 bull thesis requires close above this |\n| \ud83d\udd34 Strong Resistance | $271.08 | 1H EMA21 \u2014 ceiling for intraday sellers |\n| \ud83d\udd34 Major Resistance | $284.02 | 20D Resistance \u2014 full range top |\n| \ud83d\udfe2 Immediate Support | $265.26 | 0.5x expected 1DTE move below ($268.21 - $2.95) |\n| \ud83d\udfe2 Key Support | $263.00\u2013$264.00 | Estimated intraday structure floor |\n| \ud83d\udfe2 Macro Support | $255.28 | EMA50 daily |\n| \u26a0\ufe0f Thesis Flip Level | $269.90 | If AMZN reclaims 1H VWAP with volume, bearish intraday thesis is invalid |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal Clarity is HIGH (intraday bearish signals strongly aligned), but the REGIME GATE hard-blocks a PUT trade** \u2014 the bullish tape rule requires score \u226575 AND price below BOTH 15m and 1H VWAP AND volume \u22650.8x average. Price is NOT below 15m VWAP (it's essentially flat/slightly above at $268.25), and volume is critically low at 0.18x average. A CALL setup scores low because AMZN is below 1H VWAP and the intraday structure is bearish. Neither direction clears the tradeability threshold for a 0-2 DTE options position. Score is capped at 48 \u2014 clear directional read on intraday, but regime gate and volume failure make this untradeable.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in no-trade assessment)**\n\nContradiction acknowledged directly: The intraday structure is convincingly bearish (all three timeframes, all EMAs, 3-candle momentum negative). However, the HARD REGIME GATE prohibits a PUT signal here because: (1) price is NOT below both VWAP levels (15m VWAP shows price essentially at/above), (2) volume is 0.18x average \u2014 far below the required 0.8x threshold, and (3) fading a stock in a confirmed bull regime with QQQ +1.47% is historically low-probability. The CALL case fails because AMZN is structurally below VWAP on the dominant timeframes and showing relative weakness. This is a genuinely mixed setup that meets the honest definition of NO TRADE.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks PUT (price not below both VWAP levels, volume 0.18x vs required 0.8x minimum); CALL is blocked because AMZN is below 1H VWAP with bearish intraday EMA structure and is materially underperforming QQQ (+1.47%) \u2014 signals genuinely conflict between macro (bullish) and intraday structure (bearish) with no volume conviction on either side.",
-        "confluence_score": 48,
+        "timestamp": "2026-08-13T15:21:46.660340",
+        "analysis": "# AMZN \u2014 0-2 DTE OPTIONS ANALYSIS | 11:21 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is underperforming a strong bull tape (SPY +0.63%, QQQ +1.41%) with price sitting ~$1.40 below all three VWAP levels while the broader market rallies. The most plausible scenario over 5-15 days is a mean-reversion back toward the 52W high zone ($280-$287), as the daily MACD remains bullish, the 20-day trend is +7.84%, and analyst consensus targets $325. However, today's intraday picture is a clean bearish flush \u2014 the near-term risk is continued softness toward $263-$264 before bulls reassert.\n\n---\n\n## 2. BULL CASE\n\n- **Daily MACD Histogram (+1.3976 / BULLISH):** The daily momentum structure remains constructive. Intraday weakness has not broken the multi-day uptrend.\n- **Analyst Consensus: STRONG BUY ($325.19 target, 59 analysts):** Significant fundamental tailwind \u2014 22% upside from current price signals institutional accumulation bias.\n- **20D Return +7.84% / Bollinger Position 0.642:** Price is in the upper half of a 20-day range, structurally trending higher. Pullbacks within uptrends are buying opportunities.\n- **VIX 14.57 + SPY/QQQ both above EMA9/EMA21:** Bull market regime is confirmed. Risk-on environment historically favors mean-reversion snaps in high-beta names like AMZN (Beta 1.454).\n\n---\n\n## 3. BEAR CASE\n\n- **All three intraday timeframes (5m/15m/1H) 0 bull / 4 bear signals each:** AMZN is below VWAP on every intraday frame. This is a technically clean bearish intraday structure \u2014 the stock is actively underperforming right now.\n- **OBV Falling + Volume at 0.22x 20D average:** Falling on-balance volume on extremely thin volume suggests distribution or institutional absence \u2014 neither is constructive short-term.\n- **Price below EMA9 ($267.81) on both 15m and 1H:** EMA9 is acting as dynamic resistance. Failed to hold the short-term trend line.\n- **Sector Cons. Discretionary underperforming vs. Tech (+0.2% vs. +1.6%):** AMZN is in the weaker sector even within a broad rally, suggesting rotation away from discretionary today.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the biggest binary risk in either direction.\n- **Macro re-acceleration:** A surprise intraday SPY/QQQ surge could drag AMZN back through VWAP rapidly \u2014 this is the primary risk to a PUT thesis given the bull tape.\n- **Volume normalization:** At 0.22x average volume, any institutional order flow entering (buying OR selling) would amplify the move disproportionately \u2014 direction unknown.\n- **Options flow is symmetric (5 unusual calls / 5 unusual puts, P/C 0.38):** The low P/C ratio leans bullish but with equal unusual activity on both sides, smart money appears hedged rather than directional \u2014 no conviction signal.\n- **1H RSI at 24 (oversold):** Short-term oversold readings in bull regimes frequently snap violently upward \u2014 intraday reversal risk is non-trivial.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate resistance | $267.81 | EMA9 (5m/15m) / intraday dynamic ceiling |\n| VWAP cluster | $267.97\u2013$268.14 | 5m and 15m VWAP \u2014 reclaiming this flips intraday bias |\n| 1H VWAP | $269.77 | Full intraday recovery level |\n| Bear target | $263.80 | 0.5x 1DTE expected move below current price |\n| Critical support | $258.33 | Midpoint of 20D range ($226.65\u2013$284.02) |\n| 20D Resistance | $284.02 | Bull target over 5-15 days |\n\n**Thesis-changing level:** A close above $268.14 (15m VWAP) on above-average volume invalidates the intraday bearish case entirely and opens a CALL setup.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**REGIME GATE BLOCKS THIS TRADE.** Signal clarity for the bearish intraday case is genuinely high (all three timeframes unanimous, 12/12 bear signals), but the Hard Regime Gate requires PUTs on individual tickers to meet ALL THREE: score \u226575 AND price below both 15m and 1H VWAP AND volume \u22650.8x average. AMZN fails the volume gate at 0.22x average (5m) and 0.42x average (15m). Price-below-VWAP criteria are met, but volume is critically insufficient \u2014 without volume confirmation, the bearish intraday move has no institutional conviction and risks snapping back in a bull tape. Score capped at 52; tradeability is blocked by regime gate volume requirement.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday bearish signals are clean, but the regime gate blocks the PUT due to sub-0.8x volume. A CALL is not supported by intraday structure (price below all VWAPs, 1H RSI at 24 but no reversal confirmation yet). Neither direction is tradeable under the rules.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks the PUT \u2014 volume at 0.22x\u20130.42x average fails the mandatory \u22650.8x volume threshold required for individual-ticker PUT signals in a confirmed bull tape (SPY and QQQ both above EMA9/EMA21, VIX 14.57); a CALL is not viable while price is below all three VWAP levels with no intraday reversal confirmation \u2014 monitor for a volume-backed reclaim of 15m VWAP ($268.14) to re-evaluate a CALL setup.",
+        "confluence_score": 52,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -73,15 +73,15 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate blocks PUT (price not below both VWAP levels, volume 0.18x vs required 0.8x minimum); CALL is blocked because AMZN is below 1H VWAP with bearish intraday EMA structure and is materially underperforming QQQ (+1.47%) \u2014 signals genuinely conflict between macro (bullish) and intraday structure (bearish) with no volume conviction on either side."
+          "no_trade_reason": "Regime gate blocks the PUT \u2014 volume at 0.22x\u20130.42x average fails the mandatory \u22650.8x volume threshold required for individual-ticker PUT signals in a confirmed bull tape (SPY and QQQ both above EMA9/EMA21, VIX 14.57); a CALL is not viable while price is below all three VWAP levels with no intraday reversal confirmation \u2014 monitor for a volume-backed reclaim of 15m VWAP ($268.14) to re-evaluate a CALL setup."
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6503
+        "tokens_used": 6201
       },
-      "was_flagged": false,
+      "was_flagged": true,
       "cached_at": 1786552297.188059,
-      "score": 48
+      "score": 52
     }
   },
-  "saved_at": "2026-08-13T11:10:44-04:00"
+  "saved_at": "2026-08-13T11:22:57-04:00"
 }
