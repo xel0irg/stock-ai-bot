@@ -116,7 +116,15 @@ jobs:
         run: |
           git config user.name "Stock AI Bot"
           git config user.email "bot@stockaibot.dev"
-          git add backtest/signals_log.csv backtest/prescreener_state.json backtest/alert_cooldown.json backtest/paper_trades.csv backtest/trigger_watch.json 2>/dev/null || true
+          # Stage each file INDEPENDENTLY. `git add a b c` aborts and stages
+          # NOTHING if any single pathspec is missing — trigger_watch.json
+          # only exists once a signal registers, so on quiet days its absence
+          # silently killed the whole commit and every scan's data was lost.
+          for f in backtest/signals_log.csv backtest/prescreener_state.json \
+                   backtest/alert_cooldown.json backtest/paper_trades.csv \
+                   backtest/trigger_watch.json; do
+            [ -f "$f" ] && git add "$f"
+          done
           git diff --staged --quiet || git commit -m "chore: update backtest log + prescreener state [skip ci]"
           git pull --rebase --autostash || true
           git push || true
