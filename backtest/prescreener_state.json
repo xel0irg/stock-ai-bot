@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 304.2950134277344,
+      "price": 303.7200012207031,
       "volume_ratio": 0.0,
-      "ts": 1786977041.4335523,
+      "ts": 1786978432.820726,
       "last_full_scan_ts": 1786977154.3577754
     },
     "AMZN": {
-      "price": 261.04998779296875,
+      "price": 260.75,
       "volume_ratio": 0.0,
-      "ts": 1786977041.881096,
+      "ts": 1786978433.008803,
       "last_full_scan_ts": 1786977233.7960196
     },
     "META": {
-      "price": 577.989990234375,
+      "price": 573.9556884765625,
       "volume_ratio": 0.0,
-      "ts": 1786977042.35565,
-      "last_full_scan_ts": 1786977324.1996417
+      "ts": 1786978433.2103646,
+      "last_full_scan_ts": 1786978530.7002041
     },
     "MSFT": {
-      "price": 482.5799865722656,
+      "price": 483.1300964355469,
       "volume_ratio": 0.0,
-      "ts": 1786977042.9960248,
+      "ts": 1786978433.4987314,
       "last_full_scan_ts": 1786977425.5125854
     },
     "NVDA": {
-      "price": 226.6719970703125,
+      "price": 225.72000122070312,
       "volume_ratio": 0.0,
-      "ts": 1786977043.4286938,
-      "last_full_scan_ts": 1786977527.9900024
+      "ts": 1786978433.7184997,
+      "last_full_scan_ts": 1786978617.6931257
     },
     "QQQ": {
-      "price": 732.4299926757812,
+      "price": 732.7849731445312,
       "volume_ratio": 0.0,
-      "ts": 1786977043.8825574,
+      "ts": 1786978433.9585817,
       "last_full_scan_ts": 1786977716.7015064
     },
     "SPY": {
-      "price": 775.5098876953125,
+      "price": 775.0399780273438,
       "volume_ratio": 0.0,
-      "ts": 1786977044.4300764,
+      "ts": 1786978434.2276828,
       "last_full_scan_ts": 1786977786.9417663
     },
     "TSLA": {
-      "price": 339.6000061035156,
+      "price": 341.12109375,
       "volume_ratio": 0.0,
-      "ts": 1786977044.8396456,
-      "last_full_scan_ts": 1786977629.6475997
+      "ts": 1786978434.4092424,
+      "last_full_scan_ts": 1786978707.4543538
     }
   },
   "ai_cache": {
@@ -85,9 +85,9 @@
     "TSLA": {
       "result": {
         "ticker": "TSLA",
-        "timestamp": "2026-08-17T14:40:29.645633",
-        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:39 AM ET | Price: $339.99**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a consolidation grind below its 15m and 1H VWAPs (~$341), within a broader downtrend on the daily (EMA50 at $361, EMA21 at $339). The most plausible scenario over the next 5-15 days is continued range-bound chop between $320\u2013$360, with a mild bearish lean as the 20D return of -10.27% reflects sustained distribution. For today specifically, price is pinned just below multi-timeframe VWAP resistance with low volume, suggesting a slow drift lower is more likely than a breakout in either direction.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram +5.15 (Daily \u2014 Bullish):** Positive histogram on the daily suggests momentum has been recovering from recent lows; not confirmed by intraday structure but provides a floor against aggressive selling.\n- **OBV Rising:** On-balance volume trend is upward, implying accumulation is occurring despite price weakness \u2014 a divergence that historically precedes bounces.\n- **Bollinger Band Position 0.654 (Upper Half):** Price sits in the upper half of the BB range, not showing classic exhaustion or breakdown structure; buyers are defending mid-range.\n- **Analyst Consensus BUY / $395 Price Target:** 40 analysts with a mean target ~16% above current price provides a fundamental anchor; any positive catalyst could trigger rapid mean reversion toward $360\u2013$378 resistance.\n\n---\n\n## 3. BEAR CASE\n\n- **1H and 15m Timeframes Both Bearish (0/3 and 1/3 bull signals):** Price is below VWAP on both higher intraday timeframes with bearish EMA and MACD structure \u2014 this is the most actionable near-term signal.\n- **20D Return -10.27% / BEAR_BELOW_200 EMA Context:** TSLA has been in a sustained downtrend; the 5D bounce (+2.16%) appears corrective within a larger distribution phase.\n- **Volume Critically Low (0.18x 20D avg):** Only 7M shares vs. 38M average \u2014 this is anemic. Low-volume rallies fail; current price recovery lacks institutional participation and is vulnerable to reversal on any increase in sell pressure.\n- **Consumer Discretionary Sector Down -0.68% / -0.7% Today:** TSLA's sector is the second-worst performer today, providing no tailwind and confirming relative weakness vs. SPY/QQQ which are both green.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **News Contradiction Alert:** The sole headline reads \"Tesla Advances After Beating Key Metrics in Q1\" \u2014 yet the sentiment engine scored this STRONGLY_BEARISH (-0.459). This is a likely NLP error on a bullish headline. A re-read of actual Q1 results could drive a positive re-rating squeeze toward $360+.\n- **Q1 Earnings Beat Implications:** If the Q1 beat is genuine and not yet fully priced in (price is still -10.27% over 20D), institutional re-entry could accelerate toward the $360\u2013$378 resistance zone.\n- **VIX at 14.94:** Very low fear. In this environment, mean-reverting whipsaw moves are common \u2014 both a risk and an opportunity for sharp intraday reversals.\n- **5 Unusual Calls + 5 Unusual Puts Flagged:** Perfectly balanced unusual flow is unhelpful directionally but suggests smart money is positioning for a move \u2014 straddle/strangle activity possible around a known but not yet absorbed catalyst.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Resistance** | $340.96\u2013$340.98 | 15m and 1H VWAP convergence \u2014 must reclaim to flip intraday bias |\n| **Key Resistance** | $339.16 \u2192 $341 zone | EMA21 daily / VWAP cluster |\n| **Bull Trigger** | $342.00+ | Clean break and hold above all VWAPs confirms buyers; targets $350\u2013$355 |\n| **Bear Trigger** | $337.00 | Below 5m EMA9 ($339.60) and daily EMA9 ($333.77) corridor; opens $333 |\n| **Key Support** | $333.77 | Daily EMA9 \u2014 loss of this flips daily momentum bearish |\n| **Major Support** | $320\u2013$298 | 20D support zone; loss signals trend continuation |\n| **Thesis Changer** | $342 reclaim on volume | Changes everything \u2014 flips to CALL setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal clarity is moderate-bearish on intraday timeframes (15m/1H aligned bearish), but the HARD REGIME GATE requires PUT signals to score \u226575 AND volume \u22650.8x average \u2014 current volume at 0.18x catastrophically fails the volume gate, capping tradeability and forcing score below threshold.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe intraday bearish signals are real and directionally coherent, but the HARD REGIME GATE PUT requirements (score \u226575, price below both VWAPs \u2713, volume \u22650.8x \u2717) are not met \u2014 volume at 0.18x average is a hard disqualifier. A CALL is not supported because price is below the 15m and 1H VWAPs in a sector that is red. Neither direction clears all gates simultaneously.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks the PUT (volume at 0.18x fails the mandatory \u22650.8x volume requirement for PUT signals in a confirmed bull tape); CALL is blocked by price sitting below both 15m and 1H VWAP in a red sector \u2014 neither direction clears all three regime gate conditions simultaneously, making this a wait-for-volume setup rather than an actionable 0-2 DTE trade.\n\n---\n\n**MONITOR FOR RE-ENTRY:** If volume surges above 0.8x average (\u224830M shares for the day, roughly 5-6M/hour pace) AND price either (a) reclaims $341 on the 15m with a bullish candle close \u2192 CALL setup activates, or (b) breaks and closes below $337 on the 15m with volume confirmation \u2192 reassess PUT with updated score. Do not trade this on thin tape.",
-        "confluence_score": 48,
+        "timestamp": "2026-08-17T14:58:27.450840",
+        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:57 AM ET | Last: $341.52**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is consolidating near the upper half of its daily Bollinger Band after a strong 5D recovery (+2.62%) from deeply oversold 20D lows. Price is holding above all intraday VWAPs (5m/15m/1H) with the daily MACD histogram firmly positive (+5.25), suggesting the short-term momentum is still pointed up \u2014 but stochastics are overbought (81.92/87.15), intraday MACD is bearish across all timeframes, and volume is running at only 21% of the 20D average. Most plausible scenario: slow drift/grind slightly higher or flat today, with meaningful upside capped near $345-$348, as the low-volume overbought condition and Consumer Discretionary sector weakness (-0.69%) argue against a breakout. Downside to VWAP ($340) is the more likely intraday scenario if any volume materializes.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Daily MACD Histogram +5.25 (BULLISH)** | Multi-day momentum still positive; pullbacks are buying opportunities, not reversals. |\n| **Price above ALL intraday VWAPs (5m/15m/1H)** | Bulls control the intraday tape; sellers have not stepped in with conviction. |\n| **Bollinger Band position 0.672 (upper half)** | Price has room to the upper band at $367.78 before mean-reversion becomes a headwind. |\n| **Analyst consensus BUY, PT $395.34** | Structural tailwind; dip buyers have a fundamental anchor well above current price. |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Stochastics 81.92/87.15 (OVERBOUGHT)** | Short-term momentum exhaustion; historically precedes 1-3 day pauses or pullbacks. |\n| **Volume 0.21x 20D average (CRITICALLY LOW)** | This rally has no participation. Low-volume moves are unreliable and vulnerable to reversal when real volume returns. |\n| **Intraday MACD BEARISH across 5m/15m/1H** | Intraday sellers gaining micro-edge; short-term momentum is fading even as price holds. |\n| **Consumer Discretionary sector -0.69%** | TSLA's sector is the worst performer today; sector headwind creates drag and limits breakout potential. |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **News contradiction:** The single headline is labeled \"STRONGLY_BEARISH\" (compound: -0.459) yet the actual headline reads *\"Tesla Advances After Beating Key Metrics in Q1\"* \u2014 this is a **data labeling error or sentiment model failure**. Treat news as **mildly positive or neutral**, not bearish. This distortion could mislead any model weighting that signal.\n- **Volume ignition:** If volume spikes toward 1x average (currently 0.21x), it will determine direction decisively. A volume surge up = breakout toward $348-$350; a volume surge down = flush to $335.\n- **SEC Filings (5 recent, 90 days):** No specifics provided, but undisclosed filing content could move the stock if market becomes aware of material disclosures.\n- **Musk headline risk:** Always present for TSLA; any political/social media event involving Musk can generate a 2-4% intraday move independent of technicals.\n- **Options expiry (0DTE):** With 10 unusual contracts flagged (5 calls, 5 puts, balanced), there is no gamma squeeze signal \u2014 but any imbalance shift intraday near key strikes could trigger a pin or directional push.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Support** | $340.06 | 5m VWAP \u2014 loss here would flip intraday bearish |\n| **Support Cluster** | $337.84\u2013$339.30 | 1H EMA21 / daily EMA21 zone |\n| **Strong Support** | $334.08 | Daily EMA9 \u2014 a break here changes the multi-day thesis |\n| **Bull Trigger** | $345.00\u2013$348.00 | 0.5\u20130.8x of 1DTE expected move above current; breakout zone |\n| **Resistance** | $367.78 | Bollinger upper band |\n| **Critical Line** | $334.08 (EMA9) | Break here = short-term bullish momentum dead; retest of $320s plausible |\n| **Thesis-Changer** | $350+ on volume** | Confirms breakout, not just low-volume grind |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate (MACD positive daily, but intraday MACD bearish, overbought, extremely low volume) and while a mild bullish lean exists above VWAP, the realistic intraday move ($2-3) barely covers premium costs on a stock with ATR of $13.26 and a 1DTE expected move of \u00b1$5.57 \u2014 tradeability is marginal and caps the score below actionable threshold.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe regime gate favors CALLs (bull tape, price above VWAP), but the combination of critically low volume (0.21x), overbought stochastics, intraday MACD bearish across all timeframes, and sector underperformance (-0.69%) creates a setup where the bullish edge is real but too thin to overcome theta on a 0-2 DTE option. This is not a PUT situation (regime gate requires score \u226575 + below both VWAPs + volume \u22650.8x \u2014 none of those are met). It is also not a clean enough CALL to recommend with confidence at score 52.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate favors CALLs but score (52) is below the 55 minimum threshold \u2014 volume running at 0.21x average means the realistic intraday move is too small and unreliable to overcome 0-2 DTE theta, making the trade unviable despite mild bullish VWAP positioning; PUTs are blocked by hard regime gate (price above both VWAPs, score below 75, volume below 0.8x).\n\n---\n\n**\u26a0\ufe0f DATA FLAG:** The news sentiment label \"STRONGLY_BEARISH (-0.459)\" directly contradicts the actual headline content (\"Tesla Advances After Beating Key Metrics\"). Do not use the compound sentiment score for this ticker \u2014 the underlying model misclassified a positive article. Real news signal is **neutral-to-mildly positive**.",
+        "confluence_score": 52,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -105,14 +105,14 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate blocks the PUT (volume at 0.18x fails the mandatory \u22650.8x volume requirement for PUT signals in a confirmed bull tape); CALL is blocked by price sitting below both 15m and 1H VWAP in a red sector \u2014 neither direction clears all three regime gate conditions simultaneously, making this a wait-for-volume setup rather than an actionable 0-2 DTE trade."
+          "no_trade_reason": "Regime gate favors CALLs but score (52) is below the 55 minimum threshold \u2014 volume running at 0.21x average means the realistic intraday move is too small and unreliable to overcome 0-2 DTE theta, making the trade unviable despite mild bullish VWAP positioning; PUTs are blocked by hard regime gate (price above both VWAPs, score below 75, volume below 0.8x)."
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6256
+        "tokens_used": 6350
       },
       "was_flagged": true,
       "cached_at": 1786977629.6476028,
-      "score": 48
+      "score": 52
     },
     "SPY": {
       "result": {
@@ -147,5 +147,5 @@
       "score": 32
     }
   },
-  "saved_at": "2026-08-17T10:43:08-04:00"
+  "saved_at": "2026-08-17T10:58:29-04:00"
 }
