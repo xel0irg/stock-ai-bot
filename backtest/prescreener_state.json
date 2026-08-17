@@ -1,87 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 303.7200012207031,
+      "price": 304.2799987792969,
       "volume_ratio": 0.0,
-      "ts": 1786986640.867465,
+      "ts": 1786987237.7387216,
       "last_full_scan_ts": 1786985726.3988574
     },
     "AMZN": {
-      "price": 259.56500244140625,
+      "price": 258.70001220703125,
       "volume_ratio": 0.0,
-      "ts": 1786986641.1079395,
-      "last_full_scan_ts": 1786985511.6976957
+      "ts": 1786987238.0655303,
+      "last_full_scan_ts": 1786987322.8662798
     },
     "META": {
-      "price": 567.0349731445312,
+      "price": 567.1798706054688,
       "volume_ratio": 0.0,
-      "ts": 1786986641.3142893,
+      "ts": 1786987238.4392402,
       "last_full_scan_ts": 1786985580.2245677
     },
     "MSFT": {
-      "price": 479.5150146484375,
+      "price": 479.57000732421875,
       "volume_ratio": 0.0,
-      "ts": 1786986641.5632927,
+      "ts": 1786987238.672768,
       "last_full_scan_ts": 1786985655.229513
     },
     "NVDA": {
-      "price": 226.55499267578125,
+      "price": 225.8966064453125,
       "volume_ratio": 0.0,
-      "ts": 1786986641.806038,
+      "ts": 1786987239.1358764,
       "last_full_scan_ts": 1786986141.3979647
     },
     "QQQ": {
-      "price": 731.469970703125,
+      "price": 730.635009765625,
       "volume_ratio": 0.0,
-      "ts": 1786986642.040583,
+      "ts": 1786987239.6502314,
       "last_full_scan_ts": 1786986225.719777
     },
     "SPY": {
-      "price": 774.5150146484375,
+      "price": 774.2000122070312,
       "volume_ratio": 0.0,
-      "ts": 1786986642.3735507,
+      "ts": 1786987240.1526413,
       "last_full_scan_ts": 1786986314.8759983
     },
     "TSLA": {
-      "price": 339.4800109863281,
+      "price": 339.55499267578125,
       "volume_ratio": 0.0,
-      "ts": 1786986642.606433,
+      "ts": 1786987240.3695946,
       "last_full_scan_ts": 1786986401.3744168
     }
   },
   "ai_cache": {
-    "AMZN": {
-      "result": {
-        "ticker": "AMZN",
-        "timestamp": "2026-08-17T16:51:51.688999",
-        "analysis": "# AMZN \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:51 PM ET | Price: $259.63**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in an intraday bearish trending move, trading below VWAP on all three timeframes with full confluence of bearish intraday signals. However, this is occurring against a bull-regime backdrop (SPY/QQQ above EMA9/EMA21) with VIX at 15, and volume is running at an extremely low 0.48x average \u2014 suggesting this is a low-conviction drift rather than institutional distribution. The most plausible 5-15 day scenario is a bounce back toward $265\u2013$270 once the intraday oversold condition unwinds, with Consumer Discretionary weakness providing near-term headwind before the broader bull tape reasserts.\n\n---\n\n## 2. BULL CASE\n\n- **RSI deeply oversold on all intraday timeframes** (5m: 20.58 / 15m: 22.04 / 1H: 17.63) \u2014 extreme readings at this level historically precede short-covering bounces; mean reversion toward VWAP ($260.48\u2013$263.18) is the path of least resistance.\n- **Broad market bull regime intact** (SPY/QQQ both above EMA9 and EMA21) \u2014 AMZN's weakness is idiosyncratic and sector-specific today, not systemic; the tailwind is real.\n- **Analyst consensus STRONG_BUY with $327 target** \u2014 60-analyst consensus 25% above current price implies institutional accumulation on dips is likely.\n- **Bollinger Band position 0.535** \u2014 mid-band; not extended to the downside, no mean-reversion exhaustion signal yet, but also no compression suggesting a breakdown is imminent.\n\n---\n\n## 3. BEAR CASE\n\n- **Full intraday bearish confluence (4/4 signals across 5m, 15m, 1H)** \u2014 all timeframes below VWAP with bearish EMA9/21 cross and negative MACD histogram; this is the strongest intraday signal stack.\n- **OBV falling + volume at 0.48x average** \u2014 falling On-Balance Volume on low volume is consistent with quiet distribution or a lack of buyers willing to step in; no supportive bid is visible.\n- **MACD histogram bearish cross on daily (-0.3902)** \u2014 daily momentum has turned negative, confirming this isn't just intraday noise.\n- **Consumer Discretionary sector (XLY) down -0.93% today** \u2014 sector headwind is compounding AMZN-specific weakness; no rotation support today.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume vacuum**: At 0.48x average volume, any institutional order flow \u2014 buy or sell \u2014 could move price sharply in either direction with no cushion. This is the #1 wildcard.\n- **Broad market reversal**: SPY/QQQ are green today. If tech accelerates higher into the close, AMZN could snap back rapidly from oversold intraday readings regardless of its own setup.\n- **Oversold RSI bounce trigger**: 1H RSI at 17.63 is extreme. A single bullish candle recapturing 5m VWAP ($260.48) could trigger algorithmic mean-reversion buying that cascades across timeframes.\n- **No news catalyst**: Zero articles found means no known binary event, but it also means price action is purely technical/flow-driven \u2014 susceptible to random momentum shifts.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| \ud83d\udd34 Resistance | $260.48 | 5m VWAP \u2014 immediate reclaim would shift short-term bias |\n| \ud83d\udd34 Resistance | $261.48\u2013$261.65 | 15m EMA21 / 15m VWAP cluster |\n| \ud83d\udd34 Resistance | $263.18\u2013$264.34 | 1H VWAP / 1H EMA21 \u2014 bull/bear line for the day |\n| \ud83d\udfe1 Pivot | $260.17 | EMA21 daily \u2014 current price is near/below this |\n| \ud83d\udfe2 Support | $255.22 | EMA50 (20D) \u2014 major structural support |\n| \ud83d\udfe2 Support | $257\u2013$258 | Psychological + intraday swing low zone |\n| \u26a0\ufe0f Thesis Change | $263.18 | If AMZN reclaims 1H VWAP, bear thesis is invalidated |\n\n**Critical level**: $260.48 (5m VWAP). A sustained close above it flips bias to neutral/bullish. Failure to reclaim and a breakdown below $257.50 opens a move toward $255.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is HIGH (bears are aligned 4/4 intraday), but the REGIME GATE blocks a PUT trade** \u2014 the bull regime requires PUT signals to meet all three conditions (score \u226575, price below both 15m and 1H VWAP \u2705, volume \u22650.8x \u274c \u2014 volume at 0.48x fails hard). A CALL setup is not supported by intraday structure (price below all VWAPs). The trade is clear on direction but gated by regime rules and volume, making it untradeable for 0-2 DTE.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the no-trade decision)**\n\nThe intraday signal is genuinely bearish, but the regime gate hard-blocks the PUT due to volume failure (0.48x vs required 0.8x minimum). A CALL is not supported by intraday price structure (below all three VWAPs). This is not a contradiction \u2014 it is the correct answer when the regime gate and intraday structure point in opposite directions.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate hard-blocks the PUT \u2014 volume is 0.48x average, failing the mandatory 0.8x minimum for PUT signals in a confirmed bull regime (SPY/QQQ above EMA9/EMA21); a CALL is not viable because price is below all three VWAP levels (5m, 15m, 1H), providing no bullish intraday structure to trade from.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate hard-blocks the PUT \u2014 volume is 0.48x average, failing the mandatory 0.8x minimum for PUT signals in a confirmed bull regime (SPY/QQQ above EMA9/EMA21); a CALL is not viable because price is below all three VWAP levels (5m, 15m, 1H), providing no bullish intraday structure to trade from."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6201
-      },
-      "was_flagged": true,
-      "cached_at": 1786552297.188059,
-      "score": 42
-    },
     "SPY": {
       "result": {
         "ticker": "SPY",
@@ -243,5 +211,5 @@
       "score": 45
     }
   },
-  "saved_at": "2026-08-17T13:10:42-04:00"
+  "saved_at": "2026-08-17T13:22:04-04:00"
 }
