@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 315.0,
+      "price": 315.57000732421875,
       "volume_ratio": 0.0,
-      "ts": 1787160639.3801548,
+      "ts": 1787161239.7349896,
       "last_full_scan_ts": 1787157695.5922678
     },
     "AMZN": {
-      "price": 264.69500732421875,
+      "price": 264.2300109863281,
       "volume_ratio": 0.0,
-      "ts": 1787160639.5800903,
+      "ts": 1787161239.8721936,
       "last_full_scan_ts": 1787159489.0910008
     },
     "META": {
-      "price": 553.2100219726562,
+      "price": 551.9425048828125,
       "volume_ratio": 0.0,
-      "ts": 1787160639.7763453,
+      "ts": 1787161240.0173624,
       "last_full_scan_ts": 1787158304.7880166
     },
     "MSFT": {
-      "price": 483.5924987792969,
+      "price": 483.3699951171875,
       "volume_ratio": 0.0,
-      "ts": 1787160640.0856826,
+      "ts": 1787161240.2055838,
       "last_full_scan_ts": 1787158896.8035786
     },
     "NVDA": {
-      "price": 219.02999877929688,
+      "price": 219.0500030517578,
       "volume_ratio": 0.0,
-      "ts": 1787160640.3059785,
-      "last_full_scan_ts": 1787157100.7799885
+      "ts": 1787161240.367236,
+      "last_full_scan_ts": 1787161285.7552888
     },
     "QQQ": {
-      "price": 716.5399780273438,
+      "price": 716.22998046875,
       "volume_ratio": 0.0,
-      "ts": 1787160641.0308733,
+      "ts": 1787161240.5384247,
       "last_full_scan_ts": 1787158357.5130324
     },
     "SPY": {
-      "price": 769.5800170898438,
+      "price": 769.3201293945312,
       "volume_ratio": 0.0,
-      "ts": 1787160641.3033676,
+      "ts": 1787161240.7384136,
       "last_full_scan_ts": 1787158413.467352
     },
     "TSLA": {
-      "price": 346.7900085449219,
+      "price": 346.6969909667969,
       "volume_ratio": 0.0,
-      "ts": 1787160641.49732,
-      "last_full_scan_ts": 1787157160.7609353
+      "ts": 1787161240.8945339,
+      "last_full_scan_ts": 1787161327.262191
     }
   },
   "ai_cache": {
@@ -177,7 +177,39 @@
       "was_flagged": false,
       "cached_at": 1787158896.8035827,
       "score": 42
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-19T17:42:07.259247",
+        "analysis": "# TSLA 0-2 DTE OPTIONS ANALYSIS\n**Time: 01:41 PM ET | Price: $346.78**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA has rallied ~2.94% today and is pressing against its 20-day resistance at $346.78 \u2014 which is literally the current price. The stock is AT the upper Bollinger Band (0.934) with stochastics overbought (90.91/79.96) and all three intraday timeframes showing bearish MACD momentum and negative 3-candle price action despite holding above VWAP. The most plausible near-term scenario is a shallow consolidation or mild pullback from this resistance confluence, followed by a decision point: either a clean breakout above $350 (upper BB) or a fade back toward $340-$342.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (Daily) +5.25 \u2192 BULLISH**: Daily momentum is firmly positive, suggesting the underlying trend thrust favors buyers.\n- **Above VWAP on all three intraday timeframes (5m/15m/1H)**: Price is holding structural bullish positioning \u2014 sellers have not reclaimed intraday control.\n- **Sector tailwind \u2014 XLY +1.60%**: Consumer Discretionary is green and TSLA is moving with the sector, not against it.\n- **OBV Rising + Analyst target $395**: Accumulation is occurring on balance, and the $395 analyst consensus gives ~14% upside, sustaining institutional interest near current levels.\n\n---\n\n## 3. BEAR CASE\n\n- **AT Upper Bollinger Band (0.934) + 20D Resistance = $346.78 (exact current price)**: Price is stalling at a double-resistance zone. This is the most meaningful bearish signal.\n- **Stochastic 90.91 / RSI 70.79 on 1H \u2014 Overbought**: Short-term momentum exhaustion across multiple timeframes; 1H RSI crossing 70 after a fast move is a classic fade signal.\n- **All three intraday MACD readings BEARISH**: 5m (-0.20), 15m (-0.02 bearish cross), 1H (bearish) \u2014 intraday momentum is deteriorating even as price holds VWAP.\n- **Volume 0.59x 20D average \u2014 LOW conviction**: The rally today lacks volume participation. A move to new highs on 59% of average volume is a weak breakout signal and historically prone to failure.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news/catalyst found**: The +2.94% move is occurring without identifiable news. This increases the probability it is options-driven or sector-rotation. An unidentified catalyst could accelerate either direction.\n- **Upper BB + Resistance = potential breakout catalyst**: If SPY/QQQ catch a bid, TSLA could squeeze through $350 toward $354+ on low short interest (1.9% float \u2014 no squeeze potential as a brake either).\n- **SEC Filings (5 recent in 90 days)**: Worth monitoring \u2014 a material filing mid-session could reprice the stock sharply.\n- **0DTE options pinning risk**: With P/C at 0.72 and 10 unusual contracts flagged (5 calls / 5 puts balanced), market makers may be actively pinning price near the $347.50-$350 strike zone through end of day.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $350.20 | Upper Bollinger Band \u2014 breakout trigger |\n| **Current Resistance** | $346.78 | 20D high / current price \u2014 must hold or break |\n| **VWAP (1H)** | $340.34 | Loss of this = trend change intraday |\n| **VWAP (15m)** | $346.15 | Immediate micro-support; below = bears in control |\n| **Key Support** | $336-$339 | EMA9/EMA21 daily cluster \u2014 bounce zone on deeper fade |\n| **Thesis Change Level** | $350.20 | Clean close above = bullish breakout, invalidates fade thesis |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSignals are genuinely split: daily MACD is bullish, sector is green, price is above all VWAP levels \u2014 but the stock is at precise double-resistance (20D high = current price = upper BB) with overbought stochastics, bearish intraday MACD across all three timeframes, and critically low volume (0.59x). Intraday timeframes all score MIXED (2B/2Br each), which per the system's own confluence rules means \"wait for alignment.\" There is no directional confirmation strong enough to deploy theta-heavy 0-2 DTE premium into this setup \u2014 the risk of pinning/chop at resistance is high, and neither a clean breakout nor a clean fade has been confirmed.\n\n*Score capped at 48: signals genuinely conflict across timeframes (intraday all MIXED), volume is too low to confirm either direction, and the stock is sitting exactly at resistance with no momentum confirmation.*\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe setup is not bearish enough to justify PUTs (above VWAP, sector green, daily MACD bullish) and not bullish enough to justify CALLs (exact resistance, overbought, all intraday MACDs bearish, low volume). The MIXED intraday score is the decisive factor.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: All three intraday timeframes score MIXED (2 bull / 2 bear signals each), price is sitting exactly at double-resistance (20D high and upper Bollinger Band at $346.78/$350.20) with low volume (0.59x avg) providing no directional confirmation \u2014 neither a breakout nor a fade has been established, making this a theta trap in either direction.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "All three intraday timeframes score MIXED (2 bull / 2 bear signals each), price is sitting exactly at double-resistance (20D high and upper Bollinger Band at $346.78/$350.20) with low volume (0.59x avg) providing no directional confirmation \u2014 neither a breakout nor a fade has been established, making this a theta trap in either direction."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6086
+      },
+      "was_flagged": false,
+      "cached_at": 1787161327.2621944,
+      "score": 48
     }
   },
-  "saved_at": "2026-08-19T13:30:41-04:00"
+  "saved_at": "2026-08-19T13:42:09-04:00"
 }
