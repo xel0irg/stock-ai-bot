@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 315.1099853515625,
+      "price": 315.0751953125,
       "volume_ratio": 0.0,
-      "ts": 1787158242.3869586,
+      "ts": 1787158846.948881,
       "last_full_scan_ts": 1787157695.5922678
     },
     "AMZN": {
-      "price": 263.94500732421875,
+      "price": 264.19500732421875,
       "volume_ratio": 0.0,
-      "ts": 1787158242.6804628,
+      "ts": 1787158847.7234452,
       "last_full_scan_ts": 1787155362.6346493
     },
     "META": {
-      "price": 552.1799926757812,
+      "price": 553.405029296875,
       "volume_ratio": 0.0,
-      "ts": 1787158242.970403,
+      "ts": 1787158848.4162242,
       "last_full_scan_ts": 1787158304.7880166
     },
     "MSFT": {
-      "price": 484.7300109863281,
+      "price": 484.20001220703125,
       "volume_ratio": 0.0,
-      "ts": 1787158243.304681,
-      "last_full_scan_ts": 1787154704.3798378
+      "ts": 1787158849.067821,
+      "last_full_scan_ts": 1787158896.8035786
     },
     "NVDA": {
-      "price": 219.08999633789062,
+      "price": 219.17129516601562,
       "volume_ratio": 0.0,
-      "ts": 1787158243.6107981,
+      "ts": 1787158849.880164,
       "last_full_scan_ts": 1787157100.7799885
     },
     "QQQ": {
-      "price": 717.5499877929688,
+      "price": 717.1799926757812,
       "volume_ratio": 0.0,
-      "ts": 1787158244.0684893,
+      "ts": 1787158850.6445324,
       "last_full_scan_ts": 1787158357.5130324
     },
     "SPY": {
-      "price": 769.989990234375,
+      "price": 769.9000244140625,
       "volume_ratio": 0.0,
-      "ts": 1787158244.53477,
+      "ts": 1787158851.7880132,
       "last_full_scan_ts": 1787158413.467352
     },
     "TSLA": {
-      "price": 346.6700134277344,
+      "price": 347.5,
       "volume_ratio": 0.0,
-      "ts": 1787158244.8697822,
+      "ts": 1787158852.823168,
       "last_full_scan_ts": 1787157160.7609353
     }
   },
@@ -145,7 +145,39 @@
       "was_flagged": true,
       "cached_at": 1787157695.5922706,
       "score": 48
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-08-19T17:01:36.794836",
+        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $484.14 | Time: 1:00 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has rallied ~27% over 20 days and is now consolidating near $484, stuck between intraday bearish pressure (5m fully bearish, below 5m VWAP) and broader support (above 15m and 1H VWAP). The most plausible near-term scenario is continued choppy sideways-to-slightly-lower price action within the $480\u2013$490 range, as the 20-day rally digests on extremely low volume (0.25x normal). A sustained directional move is unlikely without a volume catalyst, and the options-implied expected move is tight (\u00b1$2.47 on 0DTE, \u00b1$4.94 on 2DTE).\n\n---\n\n## 2. BULL CASE\n\n- **20D Return +26.88% with price in upper Bollinger Band half (0.616):** Momentum structure remains intact; dips have been bought aggressively in this regime.\n- **15m and 1H VWAP both holding above price:** Price is above $484.18 (15m VWAP) and $482.20 (1H VWAP) \u2014 the higher timeframe structure is still net-supportive.\n- **RSI 5m at 27.31 (oversold):** Short-term oversold condition on the 5m is a mean-reversion signal; the intraday selloff may be exhausted.\n- **Analyst consensus STRONG_BUY with $569.55 price target:** Fundamental tailwind and institutional support provide a floor against aggressive breakdown.\n\n---\n\n## 3. BEAR CASE\n\n- **5m timeframe fully bearish (4/4 signals):** Price below 5m VWAP ($487.15), EMA9 < EMA21, MACD negative, 3-candle momentum -0.124% \u2014 cleanest signal in the dataset.\n- **Daily MACD histogram negative (-1.6987):** The daily trend is rolling over despite the recent rally; momentum is fading at the macro level.\n- **Tech sector (XLK) -0.59% today vs. SPY +0.37%:** MSFT is trading against the broad market; sector headwind is a real near-term drag.\n- **Volume only 0.25x 20D average:** Extremely low volume means the rally has no institutional conviction behind it; thin tape amplifies downside moves and makes recoveries fragile.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found:** Absence of news cuts both ways \u2014 no catalyst to push price out of the current range, but also means any sudden headline (macro, AI/cloud spending, regulatory) could cause outsized moves on a thin-volume tape.\n- **Options expiry dynamics:** P/C ratio of 0.53 with perfectly balanced unusual activity (5 calls / 5 puts flagged) suggests dealers are not leaning \u2014 pin risk near current levels is real.\n- **Macro inflection:** SPY +0.37% with Tech lagging could reverse intraday; if risk appetite suddenly rotates INTO tech, MSFT could spike quickly on a low-volume tape.\n- **52W high at $553.72 / 20D resistance at $506.06:** Any break above $490 on volume would be a short-term squeeze signal given the low short interest.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 5m VWAP (resistance) | $487.15 | Reclaiming this flips 5m bias bullish |\n| 15m VWAP (near-pivot) | $484.18 | Current battle line \u2014 price barely above |\n| 1H VWAP (support) | $482.20 | Holding above = higher-TF structure intact |\n| 20D Resistance | $506.06 | Ceiling on any near-term rally |\n| Critical thesis-changer | $480.00 | Break below 1H VWAP + $482 = confirms breakdown; hold above $487 = bullish reclaim |\n\n**Thesis-changer:** A 5m candle close below $482.20 (1H VWAP) on volume >1x avg would confirm bearish alignment across all three intraday timeframes. Reclaiming $487.15 on volume would flip the bias.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is genuinely mixed (not weak-bearish, but conflicted):** the 5m is fully bearish but the 15m and 1H remain in mixed-to-supportive territory, volume is so thin that no signal is reliable, and the 5m RSI oversold condition directly contradicts a momentum PUT entry. Even if direction were clearer, the 0DTE expected move of \u00b1$2.47 and 2DTE of \u00b1$4.94 create an extremely tight tradeable window on a stock with a $13.28 ATR \u2014 the premium required to profit demands a move the setup cannot confidently predict within this timeframe. Tradeability and signal clarity both cap this below threshold.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in NONE)**\n\nTimeframes are split: 5m bearish, 15m mixed, 1H mixed. The 5m oversold RSI (27.31) works directly against a PUT entry \u2014 entering a PUT into an oversold 5m condition on thin volume is chasing a move that may already be ending. Signals genuinely conflict rather than merely being weakly bearish.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is fully bearish but 5m RSI is oversold at 27.31 (contradicting PUT momentum entry), 15m and 1H remain mixed-to-supportive above their VWAPs, volume is at 0.25x average rendering all signals unreliable, and balanced unusual options activity (5 calls / 5 puts) confirms no institutional directional lean; confluence score of 42 is below the 55 threshold required for a viable 0-2 DTE trade.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is fully bearish but 5m RSI is oversold at 27.31 (contradicting PUT momentum entry), 15m and 1H remain mixed-to-supportive above their VWAPs, volume is at 0.25x average rendering all signals unreliable, and balanced unusual options activity (5 calls / 5 puts) confirms no institutional directional lean; confluence score of 42 is below the 55 threshold required for a viable 0-2 DTE trade."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6126
+      },
+      "was_flagged": false,
+      "cached_at": 1787158896.8035827,
+      "score": 42
     }
   },
-  "saved_at": "2026-08-19T12:53:35-04:00"
+  "saved_at": "2026-08-19T13:01:38-04:00"
 }
