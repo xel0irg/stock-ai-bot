@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 316.32501220703125,
+      "price": 316.3349914550781,
       "volume_ratio": 0.0,
-      "ts": 1787149862.4060206,
+      "ts": 1787150437.0983634,
       "last_full_scan_ts": 1787149926.4505188
     },
     "AMZN": {
-      "price": 261.55999755859375,
+      "price": 261.9049987792969,
       "volume_ratio": 0.0,
-      "ts": 1787149862.7786398,
+      "ts": 1787150437.3753934,
       "last_full_scan_ts": 1787149987.313751
     },
     "META": {
-      "price": 547.8400268554688,
+      "price": 547.8049926757812,
       "volume_ratio": 0.0,
-      "ts": 1787149863.256833,
+      "ts": 1787150437.6033607,
       "last_full_scan_ts": 1787150232.8314672
     },
     "MSFT": {
-      "price": 482.3699951171875,
+      "price": 482.0350036621094,
       "volume_ratio": 0.0,
-      "ts": 1787149863.704287,
+      "ts": 1787150437.883029,
       "last_full_scan_ts": 1787150292.5387259
     },
     "NVDA": {
-      "price": 218.25,
+      "price": 219.414306640625,
       "volume_ratio": 0.0,
-      "ts": 1787149864.1414902,
-      "last_full_scan_ts": 1787150045.8147633
+      "ts": 1787150438.1699471,
+      "last_full_scan_ts": 1787150493.0479383
     },
     "QQQ": {
-      "price": 715.469970703125,
+      "price": 717.0700073242188,
       "volume_ratio": 0.0,
-      "ts": 1787149864.5477452,
+      "ts": 1787150438.5440874,
       "last_full_scan_ts": 1787150107.4344413
     },
     "SPY": {
-      "price": 770.010009765625,
+      "price": 771.1500854492188,
       "volume_ratio": 0.0,
-      "ts": 1787149865.0047464,
+      "ts": 1787150438.8843744,
       "last_full_scan_ts": 1787150353.4577477
     },
     "TSLA": {
-      "price": 343.3800048828125,
+      "price": 345.5150146484375,
       "volume_ratio": 0.0,
-      "ts": 1787149865.4823503,
-      "last_full_scan_ts": 1787150162.224861
+      "ts": 1787150439.1430206,
+      "last_full_scan_ts": 1787150554.564282
     }
   },
   "ai_cache": {
@@ -113,7 +113,39 @@
       "was_flagged": true,
       "cached_at": 1787149926.450522,
       "score": 52
+    },
+    "NVDA": {
+      "result": {
+        "ticker": "NVDA",
+        "timestamp": "2026-08-19T14:41:33.034230",
+        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:40 AM ET | Price: $219.41**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is drifting lower within a consolidation range, sitting below its 1H and 15m VWAPs while Tech (XLK) is the only sector in the red today. The most plausible scenario over the next 5-15 days is continued chop between $211-$225, with a modest bearish lean intraday as the stock underperforms the broad market. No catalyst exists to break cleanly either direction \u2014 the stock is grinding lower on thin volume (0.25x average), which limits conviction in any directional move today.\n\n---\n\n## 2. BULL CASE\n\n- **Daily MACD Histogram (0.75, positive):** Momentum on the daily timeframe is still technically bullish, suggesting the broader trend favors buyers on pullbacks.\n- **Price in upper Bollinger Band half (0.655):** NVDA has been holding above the midline, consistent with a stock in a mild uptrend \u2014 not breaking down.\n- **5m price ABOVE VWAP ($218.53) + 3-candle momentum +0.587%:** Immediate-term buying pressure exists; the most recent micro-move is upward.\n- **Strong analyst consensus (STRONG BUY, PT $302):** Any positive macro catalyst could trigger institutional accumulation at current levels, providing a floor.\n\n---\n\n## 3. BEAR CASE\n\n- **1H bias BEARISH (1 bull / 3 bear signals):** Price is 0.81% below the 1H VWAP ($221.23), 1H EMA9 ($220.23) is below EMA21 ($222.13), MACD is bearish \u2014 the dominant intraday trend structure is down.\n- **Tech sector (XLK) -0.60% \u2014 only red sector today:** NVDA is in the one sector acting against the broad market rally. Sector headwind is real and immediate.\n- **OBV Trend FALLING + volume 0.25x average:** No buying pressure behind the price; distribution signature. Low volume limits upside follow-through.\n- **15m price BELOW VWAP ($219.51) + MACD bearish:** The 15m confirmation timeframe leans bearish, and price has failed to hold VWAP at the 15m level.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Abnormal volume (0.25x avg):** Any sudden volume spike \u2014 either direction \u2014 could trigger a sharp move beyond the expected range. Thin tape = exaggerated reactions.\n- **Broad market SPY +0.55%:** If tech rotates to catch up with the broader market, NVDA could snap back sharply and invalidate the bear setup quickly.\n- **No news found:** A surprise headline (AI regulation, export controls, competitor announcement) on a low-volume day would hit hard and fast.\n- **Options flow balanced (5 unusual calls / 5 unusual puts):** No clear institutional directional bet \u2014 neither side has a smart-money edge showing today.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Resistance | $220.23 | 1H EMA9 \u2014 reclaim = bearish thesis invalidated |\n| VWAP Resistance (1H) | $221.23 | Key intraday ceiling; rejection here confirms puts |\n| 20D Resistance | $225.30 | Swing-level ceiling; breach = new bull leg |\n| Current Price | $219.41 | In no-man's land between 5m VWAP support and 15m resistance |\n| 5m VWAP Support | $218.53 | Break below = bearish alignment across 5m/15m/1H |\n| Key Support / Target | $216.25 | ~0.7x the 1DTE expected move ($4.48 \u00d7 0.7 = $3.14 drop from entry) |\n| 20D Support | $190.01 | Far-term floor; irrelevant for 0-2 DTE |\n\n**Thesis-changing level:** Reclaim of $220.23 (1H EMA9) on a 15m close with volume = bearish thesis is dead.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate-bearish but tradeability is capped by contradictions:** the 5m timeframe is MIXED (not bearish), volume is dangerously low (0.25x), daily MACD remains positive, and options flow is perfectly balanced \u2014 the bearish signals live primarily in the 1H and 15m VWAP structure but lack the full-timeframe alignment required for a high-conviction 0-2 DTE trade. The entry trigger has not yet been hit, and the thin tape increases the risk of a false break. Score capped at 52 \u2014 signals lean bearish but are not cleanly aligned enough to justify 0-2 DTE premium spend at this moment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**LEANING BEARISH \u2192 PUTS (Low confidence)**\n\nThe 1H structure is the clearest signal in the data, but the 5m mixed read and ultra-low volume prevent a clean PUTS call. This is a **conditional bearish setup** \u2014 it becomes actionable only on a specific trigger (see below). Without that trigger, it is NONE.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: 1DTE\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 1H is bearish but 5m is mixed with upward 3-candle momentum, daily MACD remains positive, volume is 0.25x average (no conviction behind any move), and options flow is perfectly balanced 5/5 calls/puts; the setup lacks the timeframe confluence required to pay 0-2 DTE theta \u2014 monitor for 15m close below $218.53 (5m VWAP) on volume \u22651.2x avg before entering 1DTE puts.",
+        "confluence_score": 52,
+        "suggested_bias": "LEANING",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": "1DTE",
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 1H is bearish but 5m is mixed with upward 3-candle momentum, daily MACD remains positive, volume is 0.25x average (no conviction behind any move), and options flow is perfectly balanced 5/5 calls/puts; the setup lacks the timeframe confluence required to pay 0-2 DTE theta \u2014 monitor for 15m close below $218.53 (5m VWAP) on volume \u22651.2x avg before entering 1DTE puts."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6031
+      },
+      "was_flagged": true,
+      "cached_at": 1787150493.0479426,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-19T10:39:15-04:00"
+  "saved_at": "2026-08-19T10:42:36-04:00"
 }
