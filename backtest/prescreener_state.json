@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 317.3299865722656,
+      "price": 317.1300048828125,
       "volume_ratio": 0.0,
-      "ts": 1787245837.6667035,
+      "ts": 1787246436.857168,
       "last_full_scan_ts": 1787244687.026046
     },
     "AMZN": {
-      "price": 262.0,
+      "price": 261.6000061035156,
       "volume_ratio": 0.0,
-      "ts": 1787245837.89029,
+      "ts": 1787246437.106254,
       "last_full_scan_ts": 1787245292.9931355
     },
     "META": {
-      "price": 543.5900268554688,
+      "price": 541.4251098632812,
       "volume_ratio": 0.0,
-      "ts": 1787245838.1707077,
-      "last_full_scan_ts": 1787244154.067178
+      "ts": 1787246437.3836517,
+      "last_full_scan_ts": 1787246490.6442118
     },
     "MSFT": {
-      "price": 482.2699890136719,
+      "price": 481.93499755859375,
       "volume_ratio": 0.0,
-      "ts": 1787245838.4436526,
+      "ts": 1787246437.742005,
       "last_full_scan_ts": 1787244199.6555374
     },
     "NVDA": {
-      "price": 216.8699951171875,
+      "price": 216.24000549316406,
       "volume_ratio": 0.0,
-      "ts": 1787245838.682342,
+      "ts": 1787246438.0196934,
       "last_full_scan_ts": 1787245885.2741125
     },
     "QQQ": {
-      "price": 711.924072265625,
+      "price": 711.0650024414062,
       "volume_ratio": 0.0,
-      "ts": 1787245838.9803474,
+      "ts": 1787246438.2875657,
       "last_full_scan_ts": 1787244775.1391647
     },
     "SPY": {
-      "price": 765.6799926757812,
+      "price": 764.9349975585938,
       "volume_ratio": 0.0,
-      "ts": 1787245839.2828062,
+      "ts": 1787246438.5762537,
       "last_full_scan_ts": 1787244823.8722916
     },
     "TSLA": {
-      "price": 343.614990234375,
+      "price": 342.8504943847656,
       "volume_ratio": 0.0,
-      "ts": 1787245839.4860651,
+      "ts": 1787246438.791021,
       "last_full_scan_ts": 1787245935.851458
     }
   },
@@ -80,38 +80,6 @@
       },
       "was_flagged": true,
       "cached_at": 1787244094.3340142,
-      "score": 42
-    },
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-08-20T16:42:34.065019",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:41 PM ET | Price: $545.53**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has been in a sustained multi-week decline (-8.34% over 20 days) and is now pressing against its lower Bollinger Band near critical support at $539. The most plausible near-term scenario is a **continued grind lower with brief intraday bounces** \u2014 the 5m/15m short-term structure is flashing a weak relief bounce off oversold conditions, but the 1H trend remains bearish and volume is anemic (0.34x 20D avg), suggesting no institutional conviction behind today's lift. Price likely oscillates between $539 support and $552 resistance over the next 2-5 sessions before resolving directionally.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI 36.91 / Stochastic 11.0 \u2014 deeply oversold** | Mean-reversion bounce is statistically due; shorts may cover near $520-539 support zone |\n| **5m fully bullish (4/0 signals), above VWAP $543.23)** | Intraday structure is recovering; short-term momentum favors upside toward $548-550 |\n| **Bollinger Band position 0.085 (AT lower band)** | Price tends to revert toward midband (~$578) when BB-compressed; any positive catalyst accelerates this |\n| **Analyst consensus STRONG BUY, PT $754** | Fundamental floor supports aggressive dip-buyers near 52W low territory |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **1H VWAP/EMA bearish (EMA9=$546.65, EMA21=$553.47, price below both)** | Higher timeframe trend firmly down; any bounce is selling opportunity |\n| **Daily MACD histogram -4.65, EMA9=566 / EMA21=580 \u2014 all bear crossovers** | Macro trend momentum is not decelerating; no daily reversal signal yet |\n| **Volume at 0.34x 20D average \u2014 LOW throughout bounce** | Today's intraday lift is unconvincing; no institutional buyers stepping in |\n| **5D return -7.51%, 20D return -8.34% \u2014 price ~31% off 52W high** | Distribution phase; overhead supply dense from $560-600; weak bounces will attract sellers |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Low-volume bounce reversals:** Today's 5m bullish signal on 0.07x average volume is fragile \u2014 any spike in sell volume snaps it instantly\n- **Macro tape risk:** QQQ -0.88% and broad tech weakness (-0.53%) could accelerate if afternoon selling hits; META is a high-beta ($Beta 1.24) liquid name that amplifies moves\n- **No news environment:** Zero articles flagged means a sudden negative headline (FTC, EU regulatory, advertising slowdown data) hits with no buffer\n- **52W low proximity ($520.26):** Only $25 below current price \u2014 a breach would trigger technical stop-loss cascades and momentum selling\n- **Options expiry / unusual activity:** 10 contracts flagged (5 calls, 5 puts \u2014 balanced) suggests no smart money directional conviction; this is NOT a gamma squeeze setup\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$546.65** | 1H VWAP | Critical intraday pivot \u2014 sustained hold above = bounce continuation; rejection = put trigger |\n| **$545.72** | 15m EMA21 | Current price is near this; losing it confirms 15m structure turning bearish |\n| **$543.23** | 5m VWAP | Near-term bull/bear line; a close below this flips 5m bias |\n| **$539.03** | 20D Support | Last major support before 52W low territory; breach = high conviction put |\n| **$538.72** | Lower Bollinger Band | Coincides with 20D support \u2014 double support zone; breach highly significant |\n| **$552-553** | 1H EMA21 / prior rejection | First meaningful resistance; failed rally here confirms bear thesis |\n| **$566-568** | Daily EMA9 zone | Thesis-changing level \u2014 a daily close here means trend is reversing |\n\n**Thesis-changing level:** $553 on the upside (1H EMA21 reclaim), $539 on the downside (support breach)\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Scoring breakdown:**\n- Signal clarity: ~50 \u2014 the 1H is bearish, daily is bearish, BUT 5m is fully bullish and 15m is mixed, creating genuine timeframe conflict right at this moment\n- Tradeability: Capped further \u2014 the intraday bounce is in progress with no clear momentum confirmation in the direction of the primary trend; a PUT entry now risks entering mid-bounce, and a CALL entry fights the 1H/daily structure\n\n**Score rationale:** Timeframe conflict (5m fully bullish vs. 1H clearly bearish) with low confirming volume on both sides prevents a high-conviction read; neither direction can score above 54 until timeframes realign, making this an untradeable setup right now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in staying out)**\n\nThe 5m is genuinely bullish (4/0), the 1H is genuinely bearish (1/3) \u2014 this is the exact conflict scenario the system flags as \"wait for alignment.\" The bounce may be real but has no volume behind it. The bear trend may reassert but hasn't confirmed on any intraday entry trigger. Neither side has enough alignment to justify 0-2 DTE premium at current theta burn rates.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\n\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is fully bullish (4/0 signals, above VWAP) while 1H is firmly bearish (1/3 signals, below VWAP), with low volume (0.07-0.27x avg) providing no confirmation for either direction; wait for 1H and 5m/15m to align before entering.\n```\n\n---\n\n### \u23f1 RECHECK TRIGGERS\n- **PUT entry valid if:** Price rejects $546-547 (1H VWAP) on 15m close, volume spikes above 0.5x avg, and 5m flips bearish \u2192 target $539, 1DTE put ~$545 strike\n- **CALL entry valid if:** Price holds above $545 on 15m pullback, 1H VWAP flips to above, volume confirms \u2192 target $552, 1DTE call ~$546 strike\n- **Next check:** 1:15-1:30 PM \u2014 see if 5m momentum extends or stalls at 1H VWAP",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is fully bullish (4/0 signals, above VWAP) while 1H is firmly bearish (1/3 signals, below VWAP), with low volume (0.07-0.27x avg) providing no confirmation for either direction; wait for 1H and 5m/15m to align before entering."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6318
-      },
-      "was_flagged": true,
-      "cached_at": 1787244154.0671809,
       "score": 42
     },
     "NVDA": {
@@ -179,5 +147,5 @@
       "score": 48
     }
   },
-  "saved_at": "2026-08-20T13:12:17-04:00"
+  "saved_at": "2026-08-20T13:21:32-04:00"
 }
