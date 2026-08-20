@@ -1,54 +1,87 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 316.19000244140625,
+      "price": 316.79998779296875,
       "volume_ratio": 0.0,
-      "ts": 1787241040.8230581,
+      "ts": 1787241643.1825178,
       "last_full_scan_ts": 1787240488.5124164
     },
     "AMZN": {
-      "price": 260.9898986816406,
+      "price": 260.96868896484375,
       "volume_ratio": 0.0,
-      "ts": 1787241041.0090284,
+      "ts": 1787241643.3874483,
       "last_full_scan_ts": 1787238702.8921378
     },
     "META": {
-      "price": 543.8350219726562,
+      "price": 542.52001953125,
       "volume_ratio": 0.0,
-      "ts": 1787241041.2017817,
+      "ts": 1787241643.6866512,
       "last_full_scan_ts": 1787238746.2879457
     },
     "MSFT": {
-      "price": 481.25909423828125,
+      "price": 480.6600036621094,
       "volume_ratio": 0.0,
-      "ts": 1787241041.4440494,
+      "ts": 1787241643.94509,
       "last_full_scan_ts": 1787240533.3337963
     },
     "NVDA": {
-      "price": 215.97500610351562,
+      "price": 216.31500244140625,
       "volume_ratio": 0.0,
-      "ts": 1787241041.7368374,
+      "ts": 1787241644.265927,
       "last_full_scan_ts": 1787240588.7032645
     },
     "QQQ": {
-      "price": 710.9600219726562,
+      "price": 711.4099731445312,
       "volume_ratio": 0.0,
-      "ts": 1787241041.969353,
+      "ts": 1787241644.5177112,
       "last_full_scan_ts": 1787240641.5593147
     },
     "SPY": {
-      "price": 765.6359252929688,
+      "price": 765.6099853515625,
       "volume_ratio": 0.0,
-      "ts": 1787241042.2330263,
+      "ts": 1787241644.8111277,
       "last_full_scan_ts": 1787240696.6453755
     },
     "TSLA": {
-      "price": 344.5899963378906,
+      "price": 345.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1787241042.474278,
-      "last_full_scan_ts": 1787239293.848059
+      "ts": 1787241645.051076,
+      "last_full_scan_ts": 1787241689.8806932
     }
   },
-  "ai_cache": {},
-  "saved_at": "2026-08-20T11:50:42-04:00"
+  "ai_cache": {
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-20T16:01:29.871379",
+        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:00 PM ET | Price: $345.85**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is grinding higher intraday above all VWAP references (~$343) despite a -1.5% daily return and broad tech/consumer discretionary weakness. The most plausible scenario over the next 5-15 sessions is continued chop in the $336\u2013$351 range, with $351.12 acting as a hard ceiling (20D resistance) and the 20D EMA cluster near $340 as soft support. A sustained break above $351 would need a catalyst that isn't visible in current data; a fade toward $336\u2013$340 is the higher-probability near-term path given overbought stochastics, falling OBV, and sector drag.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram +5.46 (Daily)** | Positive momentum on the daily \u2014 sellers haven't won the day yet |\n| **Above all intraday VWAPs (5m/15m/1H)** | Buyers in control intraday; dip buyers are active |\n| **5m EMA9 > EMA21, 3-candle momentum +0.41%** | Short-term trend still pointing up; micro-structure supports longs |\n| **Analyst consensus BUY, PT $395** | Fundamental floor with ~14% upside to PT; keeps aggressive selling contained |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Stochastics 85.99/85.39 \u2014 OVERBOUGHT** | Historically reliable near-term mean-reversion signal at this level |\n| **OBV Falling + Volume 0.49x avg** | Price rise is unconfirmed by volume \u2014 distribution pattern, not accumulation |\n| **Sector XLY -1.47%, QQQ -1.01%** | Macro headwind; TSLA will struggle to diverge sustainably from its sector |\n| **1H 3-candle momentum -1.49% (BEARISH)** | The most recent hourly price action is rolling over \u2014 intraday trend weakening |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news in feed** \u2014 absence of catalyst means the move is purely technical/flow-driven, which makes it fragile and susceptible to a sudden reversal on any headline.\n- **Options flow balanced (5 unusual calls / 5 unusual puts, P/C 1.18)** \u2014 slight put lean but not conviction-heavy; a sweep in either direction would signal informed positioning.\n- **ATR 13.25 / 3.83%** \u2014 TSLA's raw volatility is large enough that a single macro print (FOMC minutes, CPI revision, tariff headline) during the 0-2 DTE window could easily double the expected move.\n- **SEC filings (5 in 90D)** \u2014 worth monitoring if any 8-K or material disclosure surfaces; currently no insider buying to suggest an imminent catalyst.\n- **Short squeeze irrelevant** \u2014 1.9% short float / 1.61 days to cover eliminates squeeze as a driver.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $351.12 | 20D resistance \u2014 options-implied 1DTE move barely reaches here |\n| **VWAP cluster** | $342.71\u2013$343.48 | Loss of all three VWAPs = bearish structural shift |\n| **EMA9/21 Daily** | $339.29\u2013$340.56 | First real support zone; break here flips intraday narrative |\n| **Bollinger Upper** | $354.00 | Extended target if bulls squeeze; premium target OTM |\n| **20D Support** | $298.32 | Macro floor \u2014 irrelevant for 0-2 DTE |\n| **Thesis Pivot** | **$342.71** | 15m VWAP \u2014 close below this with volume flips the intraday bias from bullish to bearish |\n\n---\n\n## 6. CONFLUENCE SCORE: 44/100\n\n**Signal Clarity: LOW-MODERATE.** Daily MACD bullish but stochastics overbought, OBV falling, volume anemic (0.49x), and the 1H and 15m are both mixed with bearish MACD. No clean directional alignment across timeframes \u2014 the rules explicitly require daily + 1H + 15m + 5m alignment for a scoreable setup, and that condition is not met. **Tradeability: CAPPED.** Even if a direction were chosen, volume is too thin to provide conviction on timing, and theta would erode a 0DTE position before the setup resolves. Score 44 \u2014 mixed signals across key timeframes prevent a tradeable setup; tradeability is secondary to signal conflict here.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday structure is mildly bullish (above all VWAPs, 5m EMA aligned), but the bearish OBV, overbought stochastics, sector drag, and mixed 1H/15m MACD create genuine conflict \u2014 not a case where one side clearly wins. This is a legitimate NONE, not a default.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is bullish (above VWAP, EMA aligned), while 1H 3-candle momentum is -1.49% bearish, 15m MACD is negative, OBV is falling on 0.49x volume, and stochastics are overbought; no single direction commands sufficient confluence to justify theta exposure on a 0-2 DTE position.",
+        "confluence_score": 44,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is bullish (above VWAP, EMA aligned), while 1H 3-candle momentum is -1.49% bearish, 15m MACD is negative, OBV is falling on 0.49x volume, and stochastics are overbought; no single direction commands sufficient confluence to justify theta exposure on a 0-2 DTE position."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6046
+      },
+      "was_flagged": true,
+      "cached_at": 1787241689.8806958,
+      "score": 44
+    }
+  },
+  "saved_at": "2026-08-20T12:01:31-04:00"
 }
