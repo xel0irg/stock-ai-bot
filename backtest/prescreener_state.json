@@ -1,87 +1,54 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 317.19500732421875,
+      "price": 316.239990234375,
       "volume_ratio": 0.0,
-      "ts": 1787239843.284974,
-      "last_full_scan_ts": 1787236298.8956907
+      "ts": 1787240441.502143,
+      "last_full_scan_ts": 1787240488.5124164
     },
     "AMZN": {
-      "price": 260.70001220703125,
+      "price": 260.86199951171875,
       "volume_ratio": 0.0,
-      "ts": 1787239843.6343923,
+      "ts": 1787240441.6362464,
       "last_full_scan_ts": 1787238702.8921378
     },
     "META": {
-      "price": 543.6851196289062,
+      "price": 542.8400268554688,
       "volume_ratio": 0.0,
-      "ts": 1787239843.9480853,
+      "ts": 1787240441.7885966,
       "last_full_scan_ts": 1787238746.2879457
     },
     "MSFT": {
-      "price": 480.010009765625,
+      "price": 481.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1787239844.3000703,
-      "last_full_scan_ts": 1787236723.8031132
+      "ts": 1787240442.023997,
+      "last_full_scan_ts": 1787240533.3337963
     },
     "NVDA": {
-      "price": 216.75999450683594,
+      "price": 216.11000061035156,
       "volume_ratio": 0.0,
-      "ts": 1787239844.6768694,
-      "last_full_scan_ts": 1787236468.4540918
+      "ts": 1787240442.1927621,
+      "last_full_scan_ts": 1787240588.7032645
     },
     "QQQ": {
-      "price": 711.6400146484375,
+      "price": 710.4199829101562,
       "volume_ratio": 0.0,
-      "ts": 1787239844.9951062,
-      "last_full_scan_ts": 1787236532.345723
+      "ts": 1787240442.3714142,
+      "last_full_scan_ts": 1787240641.5593147
     },
     "SPY": {
-      "price": 766.6099853515625,
+      "price": 765.52001953125,
       "volume_ratio": 0.0,
-      "ts": 1787239845.3506358,
-      "last_full_scan_ts": 1787236598.9305444
+      "ts": 1787240442.615827,
+      "last_full_scan_ts": 1787240696.6453755
     },
     "TSLA": {
-      "price": 343.9898986816406,
+      "price": 343.7950134277344,
       "volume_ratio": 0.0,
-      "ts": 1787239845.7993355,
+      "ts": 1787240442.7443068,
       "last_full_scan_ts": 1787239293.848059
     }
   },
-  "ai_cache": {
-    "AAPL": {
-      "result": {
-        "ticker": "AAPL",
-        "timestamp": "2026-08-20T14:31:38.886978",
-        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 10:30 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is drifting lower intraday beneath the 5m and 15m VWAP on a low-volume session, with bearish momentum on short timeframes but no clean trend acceleration. The most plausible scenario over the next 5-15 days is continued range chop between $302 support and $320-325 resistance, with modest downside bias given the -4.9% 20-day return and the stock sitting well below its 52W high. No earnings catalyst is imminent, and the broad market is mixed, so a sustained directional move is unlikely without external news.\n\n---\n\n## 2. BULL CASE\n\n- **OBV Trend Rising**: On-balance volume is climbing despite price softness \u2014 suggests accumulation under the surface, which can precede a relief bounce.\n- **1H VWAP Hold**: Price is above the 1-hour VWAP ($314.59), and the 1H EMA structure is bullish (EMA9 > EMA21), indicating the dominant intraday trend on the higher timeframe remains constructive.\n- **Analyst Consensus / Price Target Gap**: Consensus BUY with a $326.34 target implies ~3.1% upside from current price \u2014 meaningful over 5-15 days if market cooperates.\n- **5m RSI Oversold (29.68)**: Deeply oversold on the 5-minute chart at 10:30 AM, raising the probability of a short-term mean-reversion bounce into VWAP.\n\n---\n\n## 3. BEAR CASE\n\n- **5m and 15m VWAP Rejection**: Price is below both the 5m and 15m VWAP with 3/3 bearish signals on each \u2014 the most immediately relevant intraday structure is bearish.\n- **MACD Histogram Negative (Daily)**: Daily MACD histogram at -0.0513, confirming the short-term momentum trend is decelerating to the downside.\n- **Stochastic Overbought (80.42/65.84)**: Despite recent softness, stochastics remain elevated on the daily \u2014 this often precedes rollover. Combined with a -4.9% 20-day return, the setup looks like a failed bounce.\n- **Tech Sector Weakness**: XLK -0.46%, QQQ -0.89% today \u2014 AAPL is dragged by sector and index headwinds with no independent catalyst to decouple upward.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume Anomaly**: Today's volume is only 0.15x the 20-day average \u2014 extremely thin. A volume surge in either direction could produce an outsized move well beyond the expected range. The 15m timeframe already showed a 4.97x volume surge, suggesting possible institutional activity in one window.\n- **No News Catalyst**: Zero articles found. Any surprise macro release (Fed speaker, macro data) or AAPL-specific headline (supply chain, regulatory) could instantly invalidate the technical setup.\n- **Options Expiry Pinning**: With balanced unusual call/put activity (5 each), market makers may pin price near a round number strike through end of day, compressing intraday range.\n- **Short Interest Non-Factor**: At 1.0% short float, no squeeze dynamic exists \u2014 price moves will be driven by directional buyers/sellers, not forced covering.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Resistance | $316.52 | 15m VWAP \u2014 reclaiming this flips intraday bias |\n| Secondary Resistance | $318.00\u2013$319.00 | 1H EMA9 zone + psychological round number |\n| Key Resistance | $320.00 | Options clustering / psychological |\n| Current Price | $316.42 | \u2014 |\n| Intraday Support | $313.22 | $316.42 minus 1x 0DTE expected move ($3.20) |\n| Critical Support | $311.90 | EMA9 daily / EMA50 cluster \u2014 losing this changes 5-15D thesis |\n| Major Support | $302.25 | 20-day support floor \u2014 thesis-invalidating break |\n\n**Thesis-changing level**: A 15m candle close back above $316.52 (15m VWAP) on volume >2x average negates the bearish intraday setup entirely and shifts bias to neutral/bullish.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate-bearish but tradeability is constrained.** The 5m RSI is deeply oversold (29.68) directly contradicting the bearish VWAP signals \u2014 this is a genuine internal conflict that creates mean-reversion risk on any immediate PUT entry. The 1H structure remains bullish (above 1H VWAP, EMA9 > EMA21), preventing full-timeframe confluence. Score capped in the low-moderate range because the 1H bullish offset and oversold 5m RSI reduce signal clarity below the 70-threshold, and the realistic bearish target ($313\u2013$314) sits at roughly 0.7x the 0DTE expected move \u2014 technically tradeable in isolation, but not when signal alignment is incomplete.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in NONE)**\n\nThe bearish case is real but the 1H timeframe mixed signal, oversold 5m RSI, and rising OBV create enough contradiction to disqualify a clean directional setup at this moment. Waiting for either: (a) price to reclaim 15m VWAP for a CALL, or (b) price to break below $313.22 with volume confirmation for a PUT.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m and 15m are bearish (below VWAP, 3/3 bear signals) but the 1H is mixed-bullish (above 1H VWAP, EMA9 > EMA21) and the 5m RSI at 29.68 flags an imminent mean-reversion risk that directly undermines a PUT entry; wait for timeframe alignment before committing premium to either direction.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m and 15m are bearish (below VWAP, 3/3 bear signals) but the 1H is mixed-bullish (above 1H VWAP, EMA9 > EMA21) and the 5m RSI at 29.68 flags an imminent mean-reversion risk that directly undermines a PUT entry; wait for timeframe alignment before committing premium to either direction."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6123
-      },
-      "was_flagged": true,
-      "cached_at": 1787157695.5922706,
-      "score": 52
-    }
-  },
-  "saved_at": "2026-08-20T11:30:45-04:00"
+  "ai_cache": {},
+  "saved_at": "2026-08-20T11:44:58-04:00"
 }
