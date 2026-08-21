@@ -1,87 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 311.5375061035156,
+      "price": 311.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1787328641.608855,
+      "ts": 1787329235.0169318,
       "last_full_scan_ts": 1787327049.0678928
     },
     "AMZN": {
-      "price": 259.2099914550781,
+      "price": 258.8900146484375,
       "volume_ratio": 0.0,
-      "ts": 1787328641.7888553,
+      "ts": 1787329235.2204776,
       "last_full_scan_ts": 1787326887.5094516
     },
     "META": {
-      "price": 549.63427734375,
+      "price": 549.8599853515625,
       "volume_ratio": 0.0,
-      "ts": 1787328641.985432,
-      "last_full_scan_ts": 1787325084.003696
+      "ts": 1787329235.48775,
+      "last_full_scan_ts": 1787329340.1754143
     },
     "MSFT": {
-      "price": 484.4700012207031,
+      "price": 483.9800109863281,
       "volume_ratio": 0.0,
-      "ts": 1787328642.2188656,
+      "ts": 1787329235.7263901,
       "last_full_scan_ts": 1787328749.2065063
     },
     "NVDA": {
-      "price": 215.89999389648438,
+      "price": 215.45050048828125,
       "volume_ratio": 0.0,
-      "ts": 1787328642.4544067,
+      "ts": 1787329235.94473,
       "last_full_scan_ts": 1787326943.534891
     },
     "QQQ": {
-      "price": 713.47998046875,
+      "price": 713.3200073242188,
       "volume_ratio": 0.0,
-      "ts": 1787328642.7310863,
+      "ts": 1787329236.2693965,
       "last_full_scan_ts": 1787327104.5189633
     },
     "SPY": {
-      "price": 766.3900146484375,
+      "price": 765.89501953125,
       "volume_ratio": 0.0,
-      "ts": 1787328643.0869515,
+      "ts": 1787329236.6401255,
       "last_full_scan_ts": 1787327162.3262196
     },
     "TSLA": {
-      "price": 361.19500732421875,
+      "price": 362.5498046875,
       "volume_ratio": 0.0,
-      "ts": 1787328643.316896,
-      "last_full_scan_ts": 1787328703.5433486
+      "ts": 1787329236.848735,
+      "last_full_scan_ts": 1787329295.145804
     }
   },
   "ai_cache": {
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-08-21T15:11:23.993796",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:10 AM ET | Last: $551.22**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is in a technically damaged intermediate structure (\u20137.18% over 20 days, all short-term EMAs pointing down) but is showing a tentative intraday bounce off near-term oversold levels. The most plausible scenario over the next 5\u201315 days is continued chop between $539 support and $565\u2013570 resistance, with modest downside pressure as the dominant trend. For today's session, the conflicting intraday timeframes (5m bearish, 15m/1H bullish) indicate a directionless grind near VWAP rather than a clean trending move.\n\n---\n\n## 2. BULL CASE\n\n1. **Stochastic/RSI Oversold**: Daily Stoch K/D at 18.56/13.87 and RSI at 39.15 signal exhaustion of selling pressure \u2014 mean-reversion bounce toward $565\u2013570 is plausible within 1\u20132 sessions.\n2. **15m and 1H Above VWAP with Volume Surge**: 15m at 6.84x avg volume and 1H at 2.52x avg volume above VWAP suggests institutional accumulation intraday \u2014 legitimate bullish short-term momentum.\n3. **Strong Fundamental Anchor**: Forward P/E 15.9, PEG 0.82, analyst consensus Strong Buy with $754 target \u2014 floor-buying interest from value-oriented institutions limits downside.\n4. **3-Candle Momentum Positive on 15m/1H**: 15m +0.35% and 1H +1.572% 3-candle momentum confirms buyers are active at current levels.\n\n---\n\n## 3. BEAR CASE\n\n1. **Daily MACD Histogram Deeply Negative (\u20134.19)**: Strong intermediate-term bearish momentum with no sign of cross \u2014 directional trend favors sellers on any failed bounce.\n2. **Price Below All Key EMAs**: EMA9=$563, EMA21=$578, EMA50=$591 \u2014 META is trading $12\u2013$40 below every major short-term EMA, a structural headwind for any rally attempt.\n3. **5m Timeframe Fully Bearish**: Price below 5m VWAP, 3-candle momentum \u20130.282%, 0 bull / 3 bear signals \u2014 immediate near-term pressure is downward.\n4. **Volume Collapse on Daily**: Current volume 0.29x 20-day average. Low volume on a +0.99% day means the bounce lacks conviction \u2014 easily reversed.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Sector Rotation Risk**: Tech/XLK at \u20130.05% while Healthcare and Discretionary lead \u2014 if rotation accelerates out of tech, META's weak tape gets amplified.\n- **Macro Headlines**: Zero news articles found \u2014 any macro surprise (Fed commentary, tariff news, macro data) could spike VIX and hit META disproportionately given its 1.243 beta.\n- **Options Expiry Mechanics**: P/C ratio 0.52 (call-heavy) with balanced unusual activity (5 calls / 5 puts) \u2014 dealer hedging flows are ambiguous and could create short-term pinning behavior near round numbers ($550, $555).\n- **No Earnings Catalyst**: Earnings not imminent \u2014 no binary event to trade around, which removes a key premium-expansion trigger for 0-2 DTE buyers.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$535.62** | Bollinger Lower Band / Hard Support Zone | Break here = acceleration to 52W low |\n| **$539.03** | 20D Support | Critical floor; failure = new leg down |\n| **$551.81** | 5m VWAP | Immediate overhead resistance |\n| **$554\u2013$556** | Intraday resistance cluster | First real test for bulls |\n| **$563.21** | EMA9 (daily) | Thesis-changing level \u2014 reclaim = bear case weakens materially |\n| **$599.12** | 20D Resistance | Upper bound; irrelevant for 0-2 DTE |\n\n**Thesis-change level**: $563 reclaim on volume flips the immediate bias bullish. Failure at $551.81 (5m VWAP) with volume resumption is the PUT trigger.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSignals are genuinely split across timeframes (5m bearish vs. 15m/1H bullish) with no clean intraday alignment. Even the most directionally honest read of the data yields a mixed picture. Signal clarity caps at ~45; tradeability is further constrained by the ATR-implied expected move being tight (\u00b1$4.63 for 0DTE, \u00b1$9.26 for 2DTE) against a backdrop where the stock has not committed to a direction today. No single timeframe cascade provides the minimum conviction needed for a 0-2 DTE options trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe daily/intermediate structure is bearish, but intraday 15m and 1H are bullish \u2014 this is a textbook timeframe conflict. Forcing a PUT here ignores real bullish intraday signals; forcing a CALL ignores the structural damage. Neither case has sufficient dominance.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is fully bearish (0B/3Br, below 5m VWAP) while 15m and 1H are bullish (above VWAP, volume surging), producing no clean directional cascade; neither a CALL nor a PUT has sufficient confluence to justify theta exposure on a 0-2 DTE structure.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is fully bearish (0B/3Br, below 5m VWAP) while 15m and 1H are bullish (above VWAP, volume surging), producing no clean directional cascade; neither a CALL nor a PUT has sufficient confluence to justify theta exposure on a 0-2 DTE structure."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6046
-      },
-      "was_flagged": true,
-      "cached_at": 1787322826.068413,
-      "score": 42
-    },
     "AMZN": {
       "result": {
         "ticker": "AMZN",
@@ -179,5 +147,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-08-21T12:12:31-04:00"
+  "saved_at": "2026-08-21T12:22:22-04:00"
 }
