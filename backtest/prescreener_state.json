@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 308.07501220703125,
+      "price": 308.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1787323234.2919617,
+      "ts": 1787323836.8189197,
       "last_full_scan_ts": 1787322705.6940386
     },
     "AMZN": {
-      "price": 259.45001220703125,
+      "price": 259.54998779296875,
       "volume_ratio": 0.0,
-      "ts": 1787323234.5121062,
+      "ts": 1787323837.239994,
       "last_full_scan_ts": 1787322769.951935
     },
     "META": {
-      "price": 550.414794921875,
+      "price": 550.469970703125,
       "volume_ratio": 0.0,
-      "ts": 1787323234.7968764,
+      "ts": 1787323837.779159,
       "last_full_scan_ts": 1787322826.0684106
     },
     "MSFT": {
-      "price": 482.5299987792969,
+      "price": 483.8699951171875,
       "volume_ratio": 0.0,
-      "ts": 1787323235.093155,
+      "ts": 1787323838.3001733,
       "last_full_scan_ts": 1787322994.960079
     },
     "NVDA": {
-      "price": 215.00999450683594,
+      "price": 215.11500549316406,
       "volume_ratio": 0.0,
-      "ts": 1787323235.3815143,
+      "ts": 1787323838.9004414,
       "last_full_scan_ts": 1787322887.034913
     },
     "QQQ": {
-      "price": 710.8800048828125,
+      "price": 711.3012084960938,
       "volume_ratio": 0.0,
-      "ts": 1787323235.696705,
+      "ts": 1787323839.5398552,
       "last_full_scan_ts": 1787323054.9943883
     },
     "SPY": {
-      "price": 764.5499877929688,
+      "price": 764.97998046875,
       "volume_ratio": 0.0,
-      "ts": 1787323236.0145152,
+      "ts": 1787323839.9166067,
       "last_full_scan_ts": 1787323117.661462
     },
     "TSLA": {
-      "price": 355.8389892578125,
+      "price": 357.7950134277344,
       "volume_ratio": 0.0,
-      "ts": 1787323236.2700582,
-      "last_full_scan_ts": 1787323292.6840737
+      "ts": 1787323840.2352464,
+      "last_full_scan_ts": 1787323904.0657449
     }
   },
   "ai_cache": {
@@ -113,7 +113,39 @@
       "was_flagged": true,
       "cached_at": 1787322826.068413,
       "score": 42
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-21T14:51:44.058282",
+        "analysis": "# TSLA Analysis \u2014 10:50 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA has surged ~3.7% on the day and is pressing directly against its 20D resistance at $357.79 \u2014 which is also the current price, meaning it is AT resistance with Bollinger Band position at 0.985 (essentially at the upper band). The most plausible scenario over the next 5-15 days is a short-term consolidation or modest pullback from this resistance zone before any continuation, as stochastics are deeply overbought (91.6), OBV is falling (distribution into the rally), and volume today is only 0.59x the 20D average (weak volume on a resistance test). A clean break and hold above $358-360 could trigger a run toward $370-380; failure here likely means a drift back toward $342-350.\n\n---\n\n## 2. BULL CASE\n\n- **1H Bias is BULLISH (3B/1Br) + Price above VWAP on all timeframes**: TSLA is holding above VWAP on the 5m ($356.94), 15m ($354.60), and 1H ($350.91) simultaneously \u2014 this is the strongest short-term structural signal available and confirms intraday buyers remain in control.\n- **MACD Histogram +5.95 on the daily (BULLISH)**: Daily momentum is firmly positive; the histogram has been building, suggesting the trend continuation thesis has underlying support.\n- **XLY sector green (+0.70%) + 20D return of +15.71%**: TSLA is in a confirmed intermediate uptrend with sector tailwind \u2014 the tape favors the long side broadly.\n- **Analyst consensus BUY with price target $395.34**: ~10.5% upside to analyst consensus provides a longer-horizon anchor; not a 0-2 DTE driver, but it removes the \"fighting the tape\" risk on calls.\n\n---\n\n## 3. BEAR CASE\n\n- **AT THE UPPER BOLLINGER BAND (0.985) AND 20D RESISTANCE ($357.79)**: Price is literally at its ceiling on two simultaneous measures \u2014 this is a mean-reversion setup trigger, not a momentum continuation setup.\n- **Stochastic K/D: 91.63/91.62 \u2014 DEEPLY OVERBOUGHT**: Both lines are at extreme levels with virtually no separation (no hook yet), implying the momentum has been exhausted with very little buffer before a rollover.\n- **OBV Trend: FALLING** \u2014 Distribution is happening into this price surge. Smart money is selling the rip, not chasing it. This is a significant red flag for continuation.\n- **Volume 0.59x 20D average** \u2014 A resistance test on below-average volume is a classic failed breakout warning. If bulls wanted to break $358, today was the day \u2014 the volume isn't there.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **EMA50 at $359.99**: The 50-day EMA sits just ~$2.20 above current price and could act as an additional magnetic resistance or, if reclaimed, a momentum-acceleration trigger. A close above $360 flips the intermediate narrative.\n- **No news catalyst found**: The move is technically/sentiment-driven, not fundamental. This makes it more susceptible to a sudden reversal without any obvious support catalyst.\n- **MACD on all intraday timeframes shows NaN histogram**: The intraday MACD data is missing/corrupted. This is a data gap \u2014 removes a key momentum confirmation tool and adds uncertainty.\n- **5 unusual call contracts + 5 unusual put contracts flagged**: Perfectly balanced unusual flow (P/C of 0.49) means options market is NOT leaning hard in either direction \u2014 no strong smart-money options signal here.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $357.79\u2013$360.00 | Current price = 20D resistance + upper Bollinger Band + EMA50; break above is bullish acceleration |\n| **Near Support** | $354.60\u2013$356.94 | 15m and 5m VWAP cluster; losing these flips intraday structure bearish |\n| **Key Support** | $349.46\u2013$350.91 | 1H EMA9 and 1H VWAP; breakdown here confirms a reversal, not just consolidation |\n| **Major Support** | $342\u2013$348 | Daily EMA9/EMA21 zone; a move here would represent a ~2.7-4.5% decline |\n| **Thesis Changer (Bull)** | $360.50+ on volume surge | Confirms breakout; calls become high-conviction momentum trades |\n| **Thesis Changer (Bear)** | Below $354.60 on 15m close | Intraday structure turns bearish; consolidation becomes reversal |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal clarity is moderate-to-low (mixed timeframes, NaN MACD intraday) and the setup is at a critical inflection point \u2014 neither a clean breakout nor a confirmed reversal yet \u2014 making this genuinely untradeable for 0-2 DTE until the resistance either holds or breaks with volume confirmation.**\n\n- **Signal Clarity:** ~55/100 \u2014 Bullish on 1H, mixed on 5m/15m, overbought + at resistance = no clean directional lean NOW\n- **Tradeability:** Caps the score hard. Price is AT resistance. A call target of $360-363 (0.6-0.8x of 1DTE \u00b1$7.44 = +$4.50) is viable IF breakout occurs, but there is no confirmation yet. A put target of $352-354 (also within expected move) is viable IF rejection confirms, but stochastics haven't hooked. Entering before the trigger is speculation, not a setup.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nTSLA is at a genuine pivot: bullish structure above VWAP, but AT hard resistance with overbought stochastics, falling OBV, and weak volume. The data does not clearly favor one direction enough for a 0-2 DTE options trade RIGHT NOW. A breakout OR a rejection with volume confirmation would flip this immediately.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict \u2014 TSLA is AT hard 20D resistance/upper Bollinger Band on below-average volume with overbought stochastics and falling OBV, but simultaneously holding above all intraday VWAPs with a bullish 1H structure; no directional edge is confirmed, and entering before a breakout or rejection resolves would be speculation against extreme theta decay.\n\n---\n\n**\u26a1 WATCH LEVEL:** If TSLA prints a 15m candle close above **$360** on volume \u22651.5x average \u2192 initiate **1DTE CALL, $360\u2013$362 strike**. If price breaks back below 15m VWAP **$354.60** on elevated volume \u2192 consider **1DTE PUT, $355 strike, target $350**. Let the market decide \u2014 don't front-run the resolution.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict \u2014 TSLA is AT hard 20D resistance/upper Bollinger Band on below-average volume with overbought stochastics and falling OBV, but simultaneously holding above all intraday VWAPs with a bullish 1H structure; no directional edge is confirmed, and entering before a breakout or rejection resolves would be speculation against extreme theta decay."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6334
+      },
+      "was_flagged": true,
+      "cached_at": 1787323904.0657473,
+      "score": 48
     }
   },
-  "saved_at": "2026-08-21T10:41:34-04:00"
+  "saved_at": "2026-08-21T10:51:46-04:00"
 }
