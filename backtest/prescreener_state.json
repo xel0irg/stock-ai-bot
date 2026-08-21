@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 307.80499267578125,
+      "price": 308.07501220703125,
       "volume_ratio": 0.0,
-      "ts": 1787322642.8255792,
+      "ts": 1787323234.2919617,
       "last_full_scan_ts": 1787322705.6940386
     },
     "AMZN": {
-      "price": 259.75,
+      "price": 259.45001220703125,
       "volume_ratio": 0.0,
-      "ts": 1787322643.1355236,
+      "ts": 1787323234.5121062,
       "last_full_scan_ts": 1787322769.951935
     },
     "META": {
-      "price": 549.5150146484375,
+      "price": 550.414794921875,
       "volume_ratio": 0.0,
-      "ts": 1787322643.399925,
+      "ts": 1787323234.7968764,
       "last_full_scan_ts": 1787322826.0684106
     },
     "MSFT": {
-      "price": 483.5249938964844,
+      "price": 482.5299987792969,
       "volume_ratio": 0.0,
-      "ts": 1787322643.7018516,
+      "ts": 1787323235.093155,
       "last_full_scan_ts": 1787322994.960079
     },
     "NVDA": {
-      "price": 214.77000427246094,
+      "price": 215.00999450683594,
       "volume_ratio": 0.0,
-      "ts": 1787322644.0433958,
+      "ts": 1787323235.3815143,
       "last_full_scan_ts": 1787322887.034913
     },
     "QQQ": {
-      "price": 711.010009765625,
+      "price": 710.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1787322644.3446448,
+      "ts": 1787323235.696705,
       "last_full_scan_ts": 1787323054.9943883
     },
     "SPY": {
-      "price": 764.8499755859375,
+      "price": 764.5499877929688,
       "volume_ratio": 0.0,
-      "ts": 1787322644.7452283,
+      "ts": 1787323236.0145152,
       "last_full_scan_ts": 1787323117.661462
     },
     "TSLA": {
-      "price": 361.0299987792969,
+      "price": 355.8389892578125,
       "volume_ratio": 0.0,
-      "ts": 1787322644.9957743,
-      "last_full_scan_ts": 1787322941.4131403
+      "ts": 1787323236.2700582,
+      "last_full_scan_ts": 1787323292.6840737
     }
   },
   "ai_cache": {
@@ -113,39 +113,7 @@
       "was_flagged": true,
       "cached_at": 1787322826.068413,
       "score": 42
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-08-21T14:35:41.410759",
-        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 10:35 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA has surged ~16% over 20 days and is now pinned exactly at its 20-day resistance ($358.24) and the upper Bollinger Band ($358.83), with price stretched 2.9% above the 1H VWAP and RSI overbought on every intraday timeframe. The most plausible near-term scenario is a **pause or shallow pullback to VWAP/EMA consolidation** (~$348\u2013352) rather than a clean continuation, as momentum runs into a technical wall with declining volume (0.53x average). A catalyst-driven breakout above $360 is possible but lacks volume confirmation today.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram strongly positive (+5.98):** Daily momentum is firmly bullish and trending upward \u2014 the underlying thrust is intact, not exhausted.\n- **15m and 1H intraday structure bullish:** Price above both VWAPs, EMA9 > EMA21 on both timeframes, 3-candle momentum positive \u2014 the trend is still directionally up intraday.\n- **Sector tailwind:** XLY +0.68% today; Consumer Discretionary is cooperating, providing no headwind.\n- **Analyst target gap:** Consensus price target $395.34 vs current $358.24 \u2014 meaningful upside in medium-term thesis, which keeps dip buyers active.\n\n---\n\n## 3. BEAR CASE\n\n- **Price at exact resistance + upper Bollinger Band:** $358.24 is simultaneously the 20-day resistance ceiling AND the upper BB ($358.83). This is a textbook exhaustion zone.\n- **Stochastic 92.62/91.95 \u2014 deeply overbought:** Both K and D are at extreme readings. Mean reversion risk is high after a 15.85% 20-day run.\n- **Volume collapse:** Today's volume is 0.53x the 20-day average. A breakout at resistance without volume is a red flag \u2014 this looks like a grind to resistance, not a powered breakout.\n- **OBV falling:** On-balance volume is declining even as price rises \u2014 distribution signal, not accumulation. Smart money is not chasing this move.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news in the feed:** Thin news environment means price action is purely technical/sentiment-driven \u2014 vol could spike if any macro headline drops (tariff news, EV policy, Musk headlines).\n- **5 unusual call + 5 unusual put flags:** The balanced unusual options activity (10 total, split evenly) suggests neither large-money camp has committed directionally \u2014 watch for an imbalance developing.\n- **VIX at 15.42:** Low vol means option premiums are compressed. A vol spike (e.g., surprise macro event) could temporarily inflate premium in either direction.\n- **ATR $13.49:** TSLA is inherently high-beta (1.83). A single tweet or macro catalyst could dwarf the expected move, creating both opportunity and tail risk.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $358.83 | Upper Bollinger Band = current ceiling |\n| **20D Resistance** | $358.24 | Current price \u2014 must close above to confirm breakout |\n| **5m EMA9** | $356.63 | Immediate short-term support |\n| **15m VWAP** | $351.86 | Key intraday support; loss = bearish intraday shift |\n| **1H VWAP** | $348.35 | Major intraday support; holding = bulls in control |\n| **15m EMA21** | $348.30 | Trend support confluent with 1H VWAP |\n| **EMA50 (daily)** | $360.01 | Overhead resistance on daily \u2014 acts as second wall |\n| **Thesis-flip level** | $351.00 | Break below 15m VWAP with volume = confirms stall; hold above = call setup valid |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate-bearish at current levels** (overbought stochastic, resistance confluence, falling OBV, low volume breakout attempt), but the intraday trend structure remains bullish (above 15m/1H VWAP, EMA9>EMA21), creating a genuine directional conflict that reduces conviction. **Tradeability caps the score**: the most realistic move is a mean-reversion to $351\u2013353 (about $5\u20137 pullback), which fits within the 1DTE expected move of \u00b1$7.38 \u2014 but entry requires a confirmed break below 15m VWAP that has **not yet occurred**, making this a \"wait-for-trigger\" setup rather than an actionable trade right now. Score floored at 52 due to mixed intraday signals preventing high-confidence entry.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (currently)** | Watch for setup to resolve at $358.83 resistance or $351.86 VWAP support\n\nConfidence: **Low** \u2014 directional read is unclear until price either breaks through resistance with volume (CALL trigger) or fails and loses 15m VWAP (PUT trigger). Neither condition is met at 10:35 AM.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: 1DTE\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict \u2014 intraday structure (15m/1H above VWAP, bullish EMA) is bullish while technical exhaustion signals (upper BB resistance, stochastic 92+, falling OBV, 0.53x volume) are bearish, and neither a confirmed breakout above $358.83 nor a confirmed VWAP breakdown at $351.86 has occurred, leaving no valid entry trigger in either direction at this time.\n\n---\n\n**\u26a1 MONITOR ALERT:** Set alerts at $360.50 (breakout trigger \u2192 CALL setup if volume confirms) and $351.00 (VWAP breakdown trigger \u2192 PUT setup, 1DTE ~$348 strike). Do not chase \u2014 let the level come to you. Time is on your side before 11:30 AM.",
-        "confluence_score": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": "1DTE",
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict \u2014 intraday structure (15m/1H above VWAP, bullish EMA) is bullish while technical exhaustion signals (upper BB resistance, stochastic 92+, falling OBV, 0.53x volume) are bearish, and neither a confirmed breakout above $358.83 nor a confirmed VWAP breakdown at $351.86 has occurred, leaving no valid entry trigger in either direction at this time."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6129
-      },
-      "was_flagged": true,
-      "cached_at": 1787322941.4131427,
-      "score": 52
     }
   },
-  "saved_at": "2026-08-21T10:38:39-04:00"
+  "saved_at": "2026-08-21T10:41:34-04:00"
 }
