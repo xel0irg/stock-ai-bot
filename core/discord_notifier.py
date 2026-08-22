@@ -337,22 +337,32 @@ def send_discord_alert(
                 record_alert(ticker, direction, score)
             except Exception:
                 pass
-            # Optional auto-threading — strictly after successful delivery.
-            # Wrapped so nothing here can affect the return value.
+            # Message id (used by threading and trigger-watch back-reference)
+            msg_id = ""
             try:
-                msg_id = ""
                 if resp.status_code == 200:
                     msg_id = (resp.json() or {}).get("id", "")
-                _maybe_create_thread(msg_id, ticker, direction, str(strike_str))
-                # Watch this signal for its 15m entry-trigger close so we
-                # can confirm to members the moment the entry rule is met.
-                try:
-                    from core.trigger_watch import register as _tw_register
-                    _tw_register(ticker, ai, msg_id)
-                except Exception:
-                    pass
             except Exception:
-                pass
+                msg_id = ""
+            # Watch this signal for its 15m entry-trigger close so we can
+            # confirm to members the moment the entry rule is met. This runs
+            # BEFORE optional extras so nothing upstream can starve it.
+            # (Bug fixed here: str(strike_str) below raised NameError on every
+            # post — strike_str only exists in _build_embed — and the outer
+            # except swallowed it, so register() never ran and no trigger
+            # alert ever fired.)
+            try:
+                from core.trigger_watch import register as _tw_register
+                _tw_register(ticker, ai, msg_id)
+            except Exception as e:
+                log.warning(f"Trigger-watch registration failed for {ticker}: {e}")
+            # Optional auto-threading — strictly after successful delivery.
+            try:
+                _strike = (ai.get("trade_setup") or {}).get("strike")
+                _maybe_create_thread(msg_id, ticker, direction,
+                                     str(_strike) if _strike is not None else "N/A")
+            except Exception as e:
+                log.warning(f"Thread creation skipped for {ticker}: {e}")
             return True
         else:
             log.error(f"Discord webhook error: {resp.status_code} — {resp.text[:200]}")
