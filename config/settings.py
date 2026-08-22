@@ -109,3 +109,12 @@ TA_SETTINGS = {
     "ema_long":           50,
     "ema_very_long":      200,
 }
+
+# ── Strategy versioning ──────────────────────────────────
+# Stamped onto every signals_log.csv row so directional accuracy and
+# P&L can be attributed to a pipeline version. BUMP THIS whenever the
+# scoring rubric, AI prompt, data source, or feed gating changes —
+# otherwise old-code and new-code signals are indistinguishable forever
+# (we could not tell whether June-July's 36% directional accuracy was
+# old code or old regime; this ends that).
+STRATEGY_VERSION = "2026.08.22-daily-dedup"

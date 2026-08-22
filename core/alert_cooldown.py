@@ -7,13 +7,19 @@ Problem this solves (Jul 20):
     expired. That is one opportunity, not seven. It floods Discord,
     inflates the backtest log, and would be unusable for a subscriber.
 
-Rule:
-    Suppress an alert if the SAME ticker in the SAME direction already
-    alerted within COOLDOWN_MINUTES — UNLESS the score improved by at
-    least SCORE_ESCALATION points, which indicates the setup genuinely
-    strengthened and is worth re-reporting.
+Rule (since 2026-08-22):
+    ONE alert per ticker per direction per ET trading day. Same-day
+    repeats are suppressed no matter how much the score moves.
 
-    A direction FLIP (PUT -> CALL) always alerts: that is new
+    Why the change: measured on 951 logged signals, afternoon re-alerts
+    of an already-posted setup ran ~6 pts worse directionally than the
+    day's original alert (~45% vs ~52%) — they chase moves that are
+    already extended. Suppressing them also makes the Discord feed
+    match the paper tracker one-to-one (the tracker always held one
+    position per ticker+direction per day), which ends the
+    posted-but-never-measured gap in weekly recaps.
+
+    A direction FLIP (PUT -> CALL) still always alerts: that is new
     information, not a repeat.
 
 State is persisted alongside the prescreener state so it survives
@@ -34,8 +40,8 @@ log = get_logger("AlertCooldown")
 
 ET = ZoneInfo("America/New_York")
 
-COOLDOWN_MINUTES  = 45   # same ticker + direction suppressed within this window
-SCORE_ESCALATION  = 6    # ...unless score improved by at least this much
+# (COOLDOWN_MINUTES / SCORE_ESCALATION removed 2026-08-22 — the window is
+# now the ET calendar day and there is no score-escalation re-alert.)
 
 STATE_FILE = Path("backtest/alert_cooldown.json")
 
@@ -87,18 +93,18 @@ def should_alert(ticker: str, direction: str, score: int) -> Tuple[bool, str]:
     if prev.get("direction") != direction:
         return True, f"direction flipped {prev.get('direction')} -> {direction}"
 
-    age_min = (time.time() - prev.get("ts", 0)) / 60
-    if age_min >= COOLDOWN_MINUTES:
-        return True, f"cooldown expired ({age_min:.0f}m)"
+    # Same ticker + direction: suppress for the rest of the ET day.
+    try:
+        prev_day = datetime.fromisoformat(prev.get("at", "")).date()
+    except (ValueError, TypeError):
+        prev_day = datetime.fromtimestamp(prev.get("ts", 0), ET).date()
+    today = datetime.now(ET).date()
+    if prev_day != today:
+        return True, f"new trading day (last {direction} alert {prev_day})"
 
-    prev_score = prev.get("score", 0)
-    if score >= prev_score + SCORE_ESCALATION:
-        return True, (f"score escalated {prev_score} -> {score} "
-                      f"(+{score - prev_score})")
-
-    return False, (f"duplicate {direction} within {COOLDOWN_MINUTES}m "
-                   f"(last {age_min:.0f}m ago at score {prev_score}, "
-                   f"now {score} — needs +{SCORE_ESCALATION} to re-alert)")
+    return False, (f"duplicate {direction} — already alerted today at "
+                   f"{prev.get('at', '?')} (score {prev.get('score', '?')}, "
+                   f"now {score}); one alert per setup per day")
 
 
 def record_alert(ticker: str, direction: str, score: int) -> None:

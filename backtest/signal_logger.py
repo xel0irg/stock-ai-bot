@@ -42,6 +42,7 @@ FIELDNAMES = [
     "em_pct",            # expected move % for the chosen expiry
     "target_em_ratio",   # target distance / expected move (>1.0 = beyond EM)
     "target_adjusted",   # yes if target was clamped by validate_target()
+    "strategy_version",  # pipeline version that produced this signal
     # Filled in later by outcome_checker.py:
     "checked",           # "yes" once outcome has been evaluated
     "checked_at",
@@ -118,8 +119,14 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
         trade_setup  = ai.get("trade_setup", {}) or {}
         price        = tech.get("technicals", {}).get("last_price")
 
+        try:
+            from config.settings import STRATEGY_VERSION as _SV
+        except Exception:
+            _SV = ""
+
         row = {
             "log_id":            f"{ticker}_{ts.replace(':', '').replace('-', '')}",
+            "strategy_version":  _SV,
             "timestamp":         ts,
             "ticker":            ticker,
             "contract_type":     trade_setup.get("contract_type", "NONE"),
