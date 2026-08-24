@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 312.80999755859375,
+      "price": 312.56500244140625,
       "volume_ratio": 0.0,
-      "ts": 1787590840.3751407,
+      "ts": 1787591438.3293245,
       "last_full_scan_ts": 1787590287.8605745
     },
     "AMZN": {
-      "price": 263.1409912109375,
+      "price": 262.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1787590840.623886,
+      "ts": 1787591438.5088875,
       "last_full_scan_ts": 1787589735.2622578
     },
     "META": {
-      "price": 557.7849731445312,
+      "price": 558.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1787590840.8413599,
+      "ts": 1787591438.7629962,
       "last_full_scan_ts": 1787590340.473218
     },
     "MSFT": {
-      "price": 488.864990234375,
+      "price": 488.8949890136719,
       "volume_ratio": 0.0,
-      "ts": 1787590841.1112616,
-      "last_full_scan_ts": 1787587301.6485698
+      "ts": 1787591439.0097313,
+      "last_full_scan_ts": 1787591481.9212983
     },
     "NVDA": {
-      "price": 209.6999969482422,
+      "price": 210.07000732421875,
       "volume_ratio": 0.0,
-      "ts": 1787590841.3603778,
+      "ts": 1787591439.276659,
       "last_full_scan_ts": 1787589821.9615736
     },
     "QQQ": {
-      "price": 708.0001220703125,
+      "price": 708.5800170898438,
       "volume_ratio": 0.0,
-      "ts": 1787590841.7610009,
+      "ts": 1787591439.508945,
       "last_full_scan_ts": 1787590384.9380774
     },
     "SPY": {
-      "price": 764.125,
+      "price": 764.530029296875,
       "volume_ratio": 0.0,
-      "ts": 1787590842.237418,
+      "ts": 1787591439.7642875,
       "last_full_scan_ts": 1787590433.9231699
     },
     "TSLA": {
-      "price": 355.0820007324219,
+      "price": 355.94989013671875,
       "volume_ratio": 0.0,
-      "ts": 1787590842.509622,
+      "ts": 1787591439.9547307,
       "last_full_scan_ts": 1787589692.282422
     }
   },
@@ -113,7 +113,39 @@
       "was_flagged": false,
       "cached_at": 1787590384.9380813,
       "score": 52
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-08-24T17:11:21.910249",
+        "analysis": "# MSFT 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $488.89 | Time: 1:10 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has staged a remarkable 24.5% rally over 20 days and is now consolidating near $489 in a low-volume, choppy session. The most plausible scenario over the next 5-15 days is continued range-bound behavior between $470-$505, with the stock digesting its recent gains before a catalyst resolves direction. Today's intraday picture shows the bulls holding the 15m/1H structure above VWAP while the 5m is softening \u2014 consistent with a short-term pause rather than a breakdown.\n\n---\n\n## 2. BULL CASE\n\n- **Strong 20D momentum (+24.5%) with OBV rising**: Institutional accumulation is intact; money flow has not reversed despite the RSI approaching overbought. Implies dip buyers remain active.\n- **Price above 15m and 1H VWAP ($487.86 / $483.86)**: Intraday trend control remains with bulls on the two most actionable timeframes. This is the single most important 0-2 DTE signal.\n- **Analyst consensus: STRONG BUY, PT $569**: Fundamental tailwind provides a ceiling far above current price ($488) \u2014 no valuation pressure to cap the move.\n- **1H 3-candle momentum +0.684% with BULLISH 1H/15m bias**: The dominant intraday trend is up; hourly structure confirms buyers are absorbing supply.\n\n---\n\n## 3. BEAR CASE\n\n- **Tech sector down -1.65% today; QQQ -0.81%**: MSFT is outperforming but swimming against the sector tide. If sector selling accelerates, MSFT gets dragged.\n- **Daily MACD Histogram: -3.25 (Bearish)**: The daily momentum cross has already turned; suggests the 20D rally is losing steam at the macro level.\n- **1H RSI at 70.62 (Overbought) + price 1H VWAP distance 1.04%**: Short-term stretched; prone to mean-reversion back toward $484-$486.\n- **Volume: 0.21x 20D average**: Extremely thin volume on a positive day. Rallies on no volume do not confirm \u2014 easy to reverse without buying depth.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the single biggest binary risk. Clean for options.\n- **VIX at 15.67**: Low implied volatility environment compresses option premiums on both sides \u2014 premium is cheap but moves may be muted.\n- **Sector flush risk**: If QQQ accelerates its -0.81% decline into close, MSFT could get swept below 15m VWAP ($487.86) and trigger a sharper 5m breakdown.\n- **Volume pickup into close**: Current 0.21x volume ratio is unusually low. Any volume surge (institutional block trade, macro headline) could amplify a directional move significantly beyond the expected range.\n- **10 recent SEC filings**: Not flagged as unusual, but worth monitoring for any material disclosure that dropped unnoticed.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance** | $505.11 | 20D resistance ceiling |\n| **Resistance** | $495-$497 | Round number + gap fill zone |\n| **Current price** | $488.89 | \u2014 |\n| **5m VWAP** | $488.91 | Immediate bull/bear line |\n| **15m VWAP** | $487.86 | Thesis pivot: hold = bullish |\n| **1H VWAP** | $483.86 | Key intraday support |\n| **Support** | $484.73 | EMA9 daily |\n| **Bull thesis breaks** | <$483.86 | Loss of 1H VWAP = bearish |\n| **Bear thesis breaks** | >$492.50 | Clear extension above 5m supply |\n\n**Critical level**: $487.86 (15m VWAP). Price holding above = bulls in control. Break below with volume = puts the 1H structure at risk.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal clarity is moderate (mixed timeframes \u2014 5m bearish, 15m/1H bullish, daily MACD negative) and tradeability is low because the realistic intraday move ($1-2) is barely at the boundary of 0DTE expected move (\u00b1$2.30), leaving almost no room for premium recovery before theta destroys value; volume at 0.21x average further undermines the probability of a clean directional thrust.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe timeframe conflict (5m bearish vs. 15m/1H bullish) combined with extremely low volume and a mixed sector/index backdrop does not produce the clean alignment required for a 0-2 DTE position. Neither direction clears the 55-point threshold.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes (5m bearish vs. 15m/1H bullish) and volume is at 0.21x average \u2014 without directional conviction AND volume to drive a move, the realistic intraday target does not clear the premium threshold before theta decay on a 0-2 DTE option; score 48 is below the 55 tradeable floor.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes (5m bearish vs. 15m/1H bullish) and volume is at 0.21x average \u2014 without directional conviction AND volume to drive a move, the realistic intraday target does not clear the premium threshold before theta decay on a 0-2 DTE option; score 48 is below the 55 tradeable floor."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5989
+      },
+      "was_flagged": false,
+      "cached_at": 1787591481.921302,
+      "score": 48
     }
   },
-  "saved_at": "2026-08-24T13:00:42-04:00"
+  "saved_at": "2026-08-24T13:11:23-04:00"
 }
