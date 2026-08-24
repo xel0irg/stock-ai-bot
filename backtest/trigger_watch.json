@@ -1,0 +1,30 @@
+[
+ {
+  "ticker": "NVDA",
+  "direction": "PUT",
+  "trigger": 210.63,
+  "strike": 210.0,
+  "expiry_date": "",
+  "vol_multiple": 1.5,
+  "entry_condition": "Enter on a 15m candle close that holds below the 15m VWAP ($210.63) with no volume expansion above 1.5x avg confirming the bounce is weak \u2014 current price already qualifies; wait for the 10:45 AM ET candle close to confirm no reversal is underway.",
+  "score": 71,
+  "verdict": "TRADE",
+  "message_id": "1541456444338081812",
+  "signal_time": "2026-08-24T10:37:35-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 704.08,
+  "strike": 705.0,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on a 5m candle close below $704.08 (5m VWAP) with volume at or above 1.0x average on that candle, confirming the intraday support is failing and higher-timeframe bearish alignment is taking over.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1541456652212109422",
+  "signal_time": "2026-08-24T10:38:25-04:00",
+  "status": "PENDING"
+ }
+]
