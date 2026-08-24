@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 312.19000244140625,
+      "price": 311.93499755859375,
       "volume_ratio": 0.0,
-      "ts": 1787585442.3599575,
+      "ts": 1787586042.550178,
       "last_full_scan_ts": 1787584281.240348
     },
     "AMZN": {
-      "price": 262.69000244140625,
+      "price": 262.6081848144531,
       "volume_ratio": 0.0,
-      "ts": 1787585442.680283,
+      "ts": 1787586042.7543795,
       "last_full_scan_ts": 1787585496.195167
     },
     "META": {
-      "price": 555.969970703125,
+      "price": 556.97998046875,
       "volume_ratio": 0.0,
-      "ts": 1787585442.991677,
+      "ts": 1787586042.9982948,
       "last_full_scan_ts": 1787585547.3256261
     },
     "MSFT": {
-      "price": 489.05999755859375,
+      "price": 488.85009765625,
       "volume_ratio": 0.0,
-      "ts": 1787585443.4055731,
+      "ts": 1787586043.309252,
       "last_full_scan_ts": 1787583180.1585453
     },
     "NVDA": {
-      "price": 209.77499389648438,
+      "price": 210.3000030517578,
       "volume_ratio": 0.0,
-      "ts": 1787585443.8257515,
+      "ts": 1787586043.5224383,
       "last_full_scan_ts": 1787585601.3422074
     },
     "QQQ": {
-      "price": 706.9299926757812,
+      "price": 707.9688720703125,
       "volume_ratio": 0.0,
-      "ts": 1787585444.1473505,
-      "last_full_scan_ts": 1787582305.1866693
+      "ts": 1787586043.7993133,
+      "last_full_scan_ts": 1787586092.2949164
     },
     "SPY": {
-      "price": 763.8099975585938,
+      "price": 764.2000122070312,
       "volume_ratio": 0.0,
-      "ts": 1787585444.4955895,
-      "last_full_scan_ts": 1787582350.3610897
+      "ts": 1787586044.121099,
+      "last_full_scan_ts": 1787586134.0885792
     },
     "TSLA": {
-      "price": 357.2106018066406,
+      "price": 356.8680114746094,
       "volume_ratio": 0.0,
-      "ts": 1787585444.7935941,
+      "ts": 1787586044.3151743,
       "last_full_scan_ts": 1787583221.4553068
     }
   },
@@ -145,7 +145,39 @@
       "was_flagged": true,
       "cached_at": 1787582402.31603,
       "score": 48
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-08-24T15:42:14.085427",
+        "analysis": "# SPY \u2014 0-2 DTE Options Analysis | 11:41 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is trading in a tight, low-conviction range near $764, caught between short-term bullish intraday momentum (5m/15m above VWAP) and a structurally deteriorating 1H trend. The most plausible scenario over the next 5-15 days is continued chop in the $750\u2013$778 range, with modest downside bias as MACD remains negative on the daily and tech/energy drag the index. A clean directional break is unlikely without a macro catalyst given the extremely low volume (0.31x 20D MA) and balanced options flow.\n\n---\n\n## 2. BULL CASE\n\n- **Stochastic Oversold (K=12.52/D=28.42):** Deeply oversold on daily stochastic, implying a near-term mean-reversion bounce is statistically likely \u2014 historically a 2-3 day upside setup.\n- **5m & 15m VWAP Hold:** Price is holding above VWAP on both short timeframes, indicating intraday buyers are in control at current levels and defending the session low.\n- **OBV Rising:** On-Balance Volume is trending up despite the slight price decline, suggesting accumulation and that sellers are not dominating order flow.\n- **20D Return +3.15%:** The medium-term trend remains constructive; a -0.2% 1D dip in an uptrend is noise, not reversal.\n\n---\n\n## 3. BEAR CASE\n\n- **1H Timeframe: 0 Bull / 4 Bear Signals:** Price is below 1H VWAP, EMA9 and EMA21 are declining, and 3-candle momentum is -0.195% \u2014 the dominant trend frame for 0-2 DTE trading is bearish.\n- **Daily MACD Histogram: -1.179:** Negative and expanding histogram on the daily chart signals momentum deterioration that typically precedes further weakness.\n- **Tech (-1.8%) and Energy (-1.6%) Leading Down:** Two of the heaviest SPY components are red; sector rotation into defensives (Staples +1.4%) signals risk-off positioning, not bullish breadth.\n- **Price Below 1H EMA9 ($764.70) and EMA21 ($765.65):** Intraday structure on the most reliable trend timeframe shows sellers pressing price lower relative to key moving averages.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Fed Speakers / Macro Data:** Any surprise Fed commentary or economic print (CPI, jobs) could produce a move 2-3x the current implied move and invalidate any 0DTE position instantly.\n- **Volume Surge:** Current volume is only 0.31x the 20D average. A sudden volume expansion (either direction) would be the cleanest signal to trade \u2014 absence of volume means the current structure may simply dissolve.\n- **Options Expiry Pinning:** With 10 unusual contracts flagged (balanced 5 calls / 5 puts), market makers may be defending a pin near current levels into expiry, suppressing movement and crushing 0DTE premium.\n- **VIX Drift:** VIX at 15.83 is calm but not compressed; any news-driven spike above 18 would instantly reprice short-dated puts and could catalyze the bearish scenario.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **1H VWAP (Resistance)** | $764.30 | Reclaiming this flips 1H bias bullish |\n| **EMA9 1H (Resistance)** | $764.70 | Bears defend here; break above = momentum shift |\n| **5m/15m VWAP (Support)** | $763.67\u2013$763.88 | Losing these flips all TFs bearish |\n| **20D Support** | $729.46 | Long-term floor, irrelevant for 0-2 DTE |\n| **52W High / 20D Resistance** | $777.88\u2013$779.37 | Cap on any 5-15 day rally |\n| **Thesis Pivot** | $763.50 | Break below this on volume = PUT trigger; hold above = CALL setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is low** \u2014 the 5m/15m are bullish, the 1H is bearish, and the daily MACD conflicts with a rising OBV, producing genuine timeframe contradiction with no clean confluence. Even setting aside signal clarity, **tradeability is further capped**: the 0DTE expected move is only \u00b1$1.76 and the 1DTE is \u00b1$2.52; with price sitting between competing VWAPs and no volume confirmation, there is no reliable trigger that would get the stock moving to a tradeable target within premium break-even time. Both components fail \u2014 score cannot exceed the low band.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe 1H is bearish but the 5m/15m are holding bullish structure above VWAP. Mixed timeframes with no volume confirmation and a balanced P/C ratio (1.31 \u2014 slightly elevated but matched by equal unusual call/put activity) produce no actionable edge for 0-2 DTE.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m/15m are bullish above VWAP while 1H is fully bearish (0 bull/4 bear), volume is 0.31x average providing no confirmation of a directional break, and the balanced unusual options activity (5 calls/5 puts) offers no edge in either direction within the narrow \u00b1$1.76 to \u00b1$2.52 expected move.\n```",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m/15m are bullish above VWAP while 1H is fully bearish (0 bull/4 bear), volume is 0.31x average providing no confirmation of a directional break, and the balanced unusual options activity (5 calls/5 puts) offers no edge in either direction within the narrow \u00b1$1.76 to \u00b1$2.52 expected move."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5952
+      },
+      "was_flagged": false,
+      "cached_at": 1787586134.088583,
+      "score": 42
     }
   },
-  "saved_at": "2026-08-24T11:33:23-04:00"
+  "saved_at": "2026-08-24T11:42:16-04:00"
 }
