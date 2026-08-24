@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 311.9779968261719,
+      "price": 312.2449951171875,
       "volume_ratio": 0.0,
-      "ts": 1787589035.2700799,
+      "ts": 1787589638.9054692,
       "last_full_scan_ts": 1787588491.9713516
     },
     "AMZN": {
-      "price": 262.69000244140625,
+      "price": 262.9949951171875,
       "volume_ratio": 0.0,
-      "ts": 1787589035.384237,
-      "last_full_scan_ts": 1787585496.195167
+      "ts": 1787589639.1013033,
+      "last_full_scan_ts": 1787589735.2622578
     },
     "META": {
-      "price": 555.4099731445312,
+      "price": 555.0599975585938,
       "volume_ratio": 0.0,
-      "ts": 1787589035.5040488,
-      "last_full_scan_ts": 1787585547.3256261
+      "ts": 1787589639.2971148,
+      "last_full_scan_ts": 1787589776.1435573
     },
     "MSFT": {
-      "price": 489.010009765625,
+      "price": 488.7715148925781,
       "volume_ratio": 0.0,
-      "ts": 1787589035.6613622,
+      "ts": 1787589639.5298243,
       "last_full_scan_ts": 1787587301.6485698
     },
     "NVDA": {
-      "price": 210.6999969482422,
+      "price": 210.33999633789062,
       "volume_ratio": 0.0,
-      "ts": 1787589035.80204,
-      "last_full_scan_ts": 1787585601.3422074
+      "ts": 1787589639.7437649,
+      "last_full_scan_ts": 1787589821.9615736
     },
     "QQQ": {
-      "price": 708.9199829101562,
+      "price": 708.3150024414062,
       "volume_ratio": 0.0,
-      "ts": 1787589035.9752831,
+      "ts": 1787589640.037414,
       "last_full_scan_ts": 1787586092.2949164
     },
     "SPY": {
-      "price": 764.8699951171875,
+      "price": 764.2999877929688,
       "volume_ratio": 0.0,
-      "ts": 1787589036.1561344,
+      "ts": 1787589640.3673728,
       "last_full_scan_ts": 1787586134.0885792
     },
     "TSLA": {
-      "price": 356.85089111328125,
+      "price": 355.10198974609375,
       "volume_ratio": 0.0,
-      "ts": 1787589036.2749677,
-      "last_full_scan_ts": 1787587350.7813478
+      "ts": 1787589640.59142,
+      "last_full_scan_ts": 1787589692.282422
     }
   },
   "ai_cache": {
@@ -113,7 +113,39 @@
       "was_flagged": false,
       "cached_at": 1787586134.088583,
       "score": 42
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-08-24T16:42:56.139523",
+        "analysis": "# META \u2014 0\u20132 DTE OPTIONS ANALYSIS\n**12:42 PM ET | Last: $555.48**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is trading in a corrective bounce off its 20D support ($539.03), up ~1% today but still deeply below all major EMAs on the daily chart (EMA9=561.46, EMA21=576.14). The most plausible 5\u201315 day scenario is continued range-bound chop between $539\u2013$576, with the path of least resistance slightly higher intraday given the bullish 15m/1H intraday structure, but capped by heavy overhead EMA resistance. The sector (Tech/XLK -1.68%) and negative daily MACD histogram create a headwind that limits upside conviction.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Intraday structure bullish (15m + 1H above VWAP, EMA9 > EMA21)** | Short-term momentum favors upside continuation toward $558\u2013$560 |\n| **OBV Trend: RISING** | Accumulation occurring despite low volume \u2014 institutional buying on dips |\n| **Bollinger Lower Half (0.269) near support** | Price bouncing from lower band area; mean-reversion toward midband (~$574) possible |\n| **+1.02% on the day, strong analyst consensus ($754 target)** | Relative strength vs. sector on down tech day shows underlying demand |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Daily MACD Histogram: -3.364 (bearish, worsening)** | Daily momentum firmly negative; rallies are likely to be sold |\n| **Price below all daily EMAs (EMA9=561, EMA21=576, EMA50=590)** | Each EMA layer is overhead resistance; recovery requires 1\u20136% more upside |\n| **Tech sector -1.68% today; SPY/QQQ both negative** | Macro headwind compresses upside for high-beta tech names |\n| **Volume: 0.32x 20D average** | Today's bounce is thin and unconvincing \u2014 not institutionally supported |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Meta antitrust trial ongoing** (headline: \"Meta trial resumes\") \u2014 any adverse ruling headline could drop price sharply and rapidly\n- **Nvidia focus today** (same headline) \u2014 if NVDA disappoints, tech selloff could drag META down regardless of intraday structure\n- **Options flow: 5 unusual calls + 5 unusual puts flagged** \u2014 dead balanced, no smart money lean detectable; a break either way could trigger a cascade\n- **Low volume environment** \u2014 thin tape means a single institutional order or news item can produce outsized intraday move, amplifying or destroying a 0DTE position quickly\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$555.80** | Intraday pivot (5m VWAP) | Price currently just below \u2014 reclaiming this confirms short-term bullish momentum |\n| **$552.30** | 15m VWAP | First intraday support; loss here weakens bullish thesis |\n| **$549.32** | 1H VWAP | Critical intraday support \u2014 break below here flips intraday bias bearish |\n| **$561.46** | Daily EMA9 | First meaningful overhead resistance; rejection here = bull failure |\n| **$539.03** | 20D Support | Macro floor \u2014 break below invalidates bounce thesis entirely |\n| **$558\u2013$560** | Realistic near-term target | ~0.5x the 1DTE expected move (\u00b1$4.89) from current price |\n\n**Thesis-changer:** Clean break above $561 (daily EMA9) on volume would confirm momentum shift bullish. Rejection at $561 with bearish 15m candle restores the bear case.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal Clarity: MODERATE-LOW.** The core contradiction is significant: intraday structure (15m + 1H) is cleanly bullish, but daily MACD is firmly bearish, volume is anemic at 0.32x average, and META is still below all daily EMAs. The 5m timeframe itself is MIXED (2 bull/2 bear). No clean timeframe cascade in either direction \u2014 daily+1H+15m are not all aligned the same way (daily MACD bearish, intraday bullish). **Tradeability:** The expected intraday move is small (0DTE \u00b1$3.44, 1DTE \u00b1$4.89), and the stock is already $0.32 below 5m VWAP with low volume, limiting precision entry. The setup could work as a CALL toward $558\u2013$560, but the lack of volume confirmation and mixed daily signal cap conviction. Score capped at 52 due to genuinely conflicting timeframe signals (daily MACD vs. intraday structure) and insufficient volume to confirm a tradeable momentum continuation.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe bullish intraday case is real but undercut by: (1) thin volume making the bounce untrustworthy, (2) 5m timeframe genuinely mixed, (3) daily MACD negative with overhead EMA resistance at $561 limiting the 0\u20132 DTE target range, and (4) an ongoing trial that could produce adverse headlines. Neither bull nor bear has clean enough alignment to justify theta exposure today.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 intraday 15m/1H bullish structure is undercut by anemic 0.32x volume, a mixed 5m reading, and a deeply negative daily MACD, preventing high-conviction directional alignment in either direction sufficient to justify theta exposure on a 0\u20132 DTE option.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 intraday 15m/1H bullish structure is undercut by anemic 0.32x volume, a mixed 5m reading, and a deeply negative daily MACD, preventing high-conviction directional alignment in either direction sufficient to justify theta exposure on a 0\u20132 DTE option."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6099
+      },
+      "was_flagged": false,
+      "cached_at": 1787589776.1435604,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-24T12:30:36-04:00"
+  "saved_at": "2026-08-24T12:43:43-04:00"
 }
