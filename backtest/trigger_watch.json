@@ -58,5 +58,19 @@
   "message_id": "1541817339295563848",
   "signal_time": "2026-08-25T10:31:39-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 350.93,
+  "strike": 350.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on confirmed 15m candle close below current price with price rejecting the 5m VWAP ($351.81) and EMA9 ($351.25) on a retest, with 15m volume at or above 0.5x average (any improvement from current 0.26x adds conviction).",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1541822322778841158",
+  "signal_time": "2026-08-25T10:51:27-04:00",
+  "status": "PENDING"
  }
 ]

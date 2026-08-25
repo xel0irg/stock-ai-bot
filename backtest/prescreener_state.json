@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 310.2900085449219,
+      "price": 309.510009765625,
       "volume_ratio": 0.0,
-      "ts": 1787668844.8333538,
+      "ts": 1787669436.0353444,
       "last_full_scan_ts": 1787668299.7254994
     },
     "AMZN": {
-      "price": 261.3699951171875,
+      "price": 260.5899963378906,
       "volume_ratio": 0.0,
-      "ts": 1787668845.2543075,
+      "ts": 1787669436.289203,
       "last_full_scan_ts": 1787668356.583742
     },
     "META": {
-      "price": 565.0084838867188,
+      "price": 564.7200927734375,
       "volume_ratio": 0.0,
-      "ts": 1787668845.6431386,
+      "ts": 1787669436.5854323,
       "last_full_scan_ts": 1787668896.6200979
     },
     "MSFT": {
-      "price": 487.3800048828125,
+      "price": 488.0492858886719,
       "volume_ratio": 0.0,
-      "ts": 1787668846.075416,
+      "ts": 1787669436.8692222,
       "last_full_scan_ts": 1787668585.5973017
     },
     "NVDA": {
-      "price": 211.3699951171875,
+      "price": 211.5,
       "volume_ratio": 0.0,
-      "ts": 1787668846.4868898,
+      "ts": 1787669437.1559556,
       "last_full_scan_ts": 1787668468.9664063
     },
     "QQQ": {
-      "price": 710.0,
+      "price": 709.2999877929688,
       "volume_ratio": 0.0,
-      "ts": 1787668846.9174955,
+      "ts": 1787669437.5176725,
       "last_full_scan_ts": 1787668639.4157608
     },
     "SPY": {
-      "price": 764.780029296875,
+      "price": 764.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1787668847.3680458,
+      "ts": 1787669437.8057654,
       "last_full_scan_ts": 1787668704.9789166
     },
     "TSLA": {
-      "price": 352.2300109863281,
+      "price": 350.32000732421875,
       "volume_ratio": 0.0,
-      "ts": 1787668847.7528486,
-      "last_full_scan_ts": 1787668937.481208
+      "ts": 1787669438.0486805,
+      "last_full_scan_ts": 1787669487.8243814
     }
   },
   "ai_cache": {
@@ -145,39 +145,7 @@
       "was_flagged": true,
       "cached_at": 1787668468.9664094,
       "score": 52
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-08-25T14:42:17.475754",
-        "analysis": "# TSLA 0-2 DTE OPTIONS ANALYSIS \u2014 10:41 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is consolidating in the upper half of its 20-day Bollinger Band after an 18% rally over 20 days, with price sitting ~3% below the 20D resistance at $362.86. The most plausible scenario over the next 5-15 sessions is continued chop between $343\u2013$363, with a mild bullish lean given MACD histogram momentum and analyst price target headroom to $390. The absence of a clean catalyst and low volume (0.28x 20D average) suggests this is a digestion/drift phase, not a breakout or breakdown setup.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (+5.34, daily):** Positive and expanding \u2014 the strongest single directional signal in the data. Implies underlying buying pressure on the daily timeframe.\n- **Price above 5m and 15m VWAP ($351.72 / $351.06):** Intraday structure favors bulls at the short-dated timeframe. Price is holding above both anchors, which matters most for 0-2 DTE.\n- **Bollinger Band position (0.814):** Price is in the upper band, confirming recent trend momentum is still bullish; no band compression suggesting a volatility squeeze breakout is possible to the upside.\n- **Analyst consensus BUY, target $390 (+10.8%):** Institutional floor under the name; significant upside before the thesis breaks fundamentally.\n\n---\n\n## 3. BEAR CASE\n\n- **OBV Trend: FALLING:** Volume is not confirming price strength \u2014 buyers are not stepping in with conviction. This is a meaningful divergence against the 18% 20-day rally.\n- **Price below 1H VWAP ($357.53) by -1.51%:** The higher-timeframe intraday anchor is bearish. This means the dominant intraday \"fair value\" sits above current price \u2014 sellers have controlled the session at the macro intraday level.\n- **Low volume (0.28x 20D average):** Moves on thin volume are unreliable and prone to reversal; a rally attempt without volume is weak confirmation.\n- **Consumer Discretionary (XLY) sector -0.61%:** TSLA's own sector is acting against the broad market today, providing a headwind and removing one potential tailwind.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news / no headlines:** The information vacuum cuts both ways \u2014 a sudden Elon Musk tweet, regulatory headline, or macro shock (tariff news, Fed speaker) could spike or crater the stock with no warning.\n- **Options expiry dynamics:** With 5 unusual calls and 5 unusual puts flagged (perfectly balanced), the options market itself is not telegraphing direction \u2014 suggests potential for a pinning effect near current price into expiry.\n- **5 recent SEC filings (90 days):** Content unknown but worth monitoring; any material disclosure could break the consolidation.\n- **ATR of $13.26 (3.77%):** TSLA's natural daily range is wide enough that a catalyst could easily push price to resistance ($362.86) or back toward $340 support even without major news.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 20D Resistance | $362.86 | Breakout level \u2014 reclaim opens run toward $375+ |\n| Upper Bollinger Band | $363.82 | Confluent with resistance; rejection here = bearish signal |\n| 1H VWAP | $357.53 | Critical intraday bull/bear line; reclaim = bullish flip |\n| Current Price | $352.12 | Pivot zone |\n| 5m/15m VWAP | $351.72 / $351.06 | Support floor for near-term bulls |\n| EMA9 (daily) | $346.34 | First meaningful daily support |\n| 20D Support | $298.32 | Far support; only relevant on large breakdown |\n\n**Thesis-changing level:** $357.53 (1H VWAP). A clean reclaim with volume confirms bull control. A rejection and breakdown below $351 confirms bear control for the session.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is low** \u2014 all three intraday timeframes are explicitly MIXED (no single timeframe shows clean alignment), the 1H VWAP is bearish while the 5m/15m are bullish, MACD histograms on intraday charts are NaN (unreliable), and options flow is perfectly balanced (5 unusual calls, 5 unusual puts). There is no directional edge to confidently deploy premium against severe theta decay. Tradeability is further capped by the mixed structure \u2014 no clean entry trigger exists in either direction at this moment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NONE)**\n\nThe signal conflict is genuine and symmetric \u2014 this is not a case of defaulting to NONE out of caution. Both directions have credible support and credible negatives, and the intraday timeframe alignment required for a 0-2 DTE trade is explicitly absent.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across all three intraday timeframes \u2014 all show MIXED bias with no clean VWAP/EMA/MACD alignment in either direction, and perfectly balanced unusual options flow (5 calls / 5 puts) provides zero directional confirmation; theta on a 0-2 DTE position cannot be overcome without a clear edge.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across all three intraday timeframes \u2014 all show MIXED bias with no clean VWAP/EMA/MACD alignment in either direction, and perfectly balanced unusual options flow (5 calls / 5 puts) provides zero directional confirmation; theta on a 0-2 DTE position cannot be overcome without a clear edge."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5967
-      },
-      "was_flagged": true,
-      "cached_at": 1787668525.296803,
-      "score": 42
     }
   },
-  "saved_at": "2026-08-25T10:42:19-04:00"
+  "saved_at": "2026-08-25T10:51:29-04:00"
 }
