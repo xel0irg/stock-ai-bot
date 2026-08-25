@@ -27,7 +27,7 @@
   "verdict": "TRADE",
   "message_id": "1541456652212109422",
   "signal_time": "2026-08-24T10:38:25-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "TSLA",
@@ -44,5 +44,19 @@
   "status": "TRIGGERED",
   "trigger_time": "2026-08-24T12:30:00-04:00",
   "trigger_close": 354.82
+ },
+ {
+  "ticker": "AAPL",
+  "direction": "PUT",
+  "trigger": 310.0,
+  "strike": 310.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a confirmed 15-minute candle close below $310.00 with price sustaining below the 15m VWAP at $310.66 and volume at or above 0.5x average on that candle.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1541817339295563848",
+  "signal_time": "2026-08-25T10:31:39-04:00",
+  "status": "PENDING"
  }
 ]
