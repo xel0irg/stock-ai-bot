@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 309.8999938964844,
+      "price": 309.7398986816406,
       "volume_ratio": 0.0,
-      "ts": 1787677239.4585574,
+      "ts": 1787677836.0604777,
       "last_full_scan_ts": 1787676690.458735
     },
     "AMZN": {
-      "price": 260.94000244140625,
+      "price": 260.69000244140625,
       "volume_ratio": 0.0,
-      "ts": 1787677239.7711458,
+      "ts": 1787677836.278363,
       "last_full_scan_ts": 1787676739.9558187
     },
     "META": {
-      "price": 567.2249755859375,
+      "price": 566.1099853515625,
       "volume_ratio": 0.0,
-      "ts": 1787677239.998323,
+      "ts": 1787677836.5509014,
       "last_full_scan_ts": 1787676789.1005394
     },
     "MSFT": {
-      "price": 489.4800109863281,
+      "price": 489.7900085449219,
       "volume_ratio": 0.0,
-      "ts": 1787677240.2558167,
+      "ts": 1787677836.916459,
       "last_full_scan_ts": 1787676836.0794363
     },
     "NVDA": {
-      "price": 212.13999938964844,
+      "price": 211.81500244140625,
       "volume_ratio": 0.0,
-      "ts": 1787677240.56884,
+      "ts": 1787677837.1795275,
       "last_full_scan_ts": 1787676880.8967724
     },
     "QQQ": {
-      "price": 710.5662231445312,
+      "price": 709.6699829101562,
       "volume_ratio": 0.0,
-      "ts": 1787677240.9220018,
+      "ts": 1787677837.5116704,
       "last_full_scan_ts": 1787676922.770342
     },
     "SPY": {
-      "price": 765.6799926757812,
+      "price": 765.0750122070312,
       "volume_ratio": 0.0,
-      "ts": 1787677241.289807,
+      "ts": 1787677837.8306844,
       "last_full_scan_ts": 1787676964.9504888
     },
     "TSLA": {
-      "price": 355.8699951171875,
+      "price": 352.67999267578125,
       "volume_ratio": 0.0,
-      "ts": 1787677241.5490358,
-      "last_full_scan_ts": 1787673689.8317292
+      "ts": 1787677838.0394256,
+      "last_full_scan_ts": 1787677884.8172886
     }
   },
   "ai_cache": {
@@ -177,7 +177,39 @@
       "was_flagged": false,
       "cached_at": 1787676922.7703495,
       "score": 42
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-25T17:11:24.807170",
+        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 01:10 PM ET | Price: $352.73**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a short-term consolidation/pullback phase after a strong 20-day run (+18.24%), now grinding below VWAP across all intraday timeframes with low volume (0.58x 20D average). The most plausible scenario over the next 5-15 days is continued chop between $340-$363 as the stock digests its recent rally \u2014 with a modest bearish lean intraday given the VWAP structure, but no strong directional impulse. The low volume environment makes a decisive breakout unlikely without a catalyst.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **MACD Histogram Daily: +5.38 (Bullish)** | Daily momentum still positive \u2014 sellers haven't taken control on the higher timeframe |\n| **OBV Trend: Rising** | Accumulation under the surface despite price consolidation; smart money not exiting |\n| **Analyst Target: $390.09 (BUY consensus, 39 analysts)** | ~10.6% upside to mean target provides fundamental floor support |\n| **BB Position 0.822 (Upper Half)** | Price holding in upper Bollinger band range post-breakout \u2014 structure not broken |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|--------|-------------|\n| **Price below VWAP on ALL 3 intraday timeframes (5m/15m/1H)** | Sellers controlling intraday flow; no conviction from buyers to reclaim VWAP |\n| **5m: 0 bull / 3 bear signals; 3-candle momentum -1.02%** | Short-term momentum decisively bearish \u2014 sellers active in the current session |\n| **Consumer Discretionary sector (XLY) -0.56%** | TSLA's sector is the second-worst performing today, providing a headwind |\n| **Volume only 0.58x 20D average + resistance at $362.86** | Thin volume near 20D resistance ($362.86) makes a breakout unlikely; resistance holds |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **SEC Filings (5 in 90 days):** Worth monitoring \u2014 any material disclosure could move price sharply in either direction\n- **Low volume environment:** A sudden volume surge (institutional order) could trigger a sharp 1-2% move in minutes \u2014 expected ATR is $13.51 (3.83%), meaning room exists for a sharp swing\n- **VIX at 15.48 (low):** Complacency environment \u2014 any macro shock (Fed speak, geopolitical) could spike vol and punish short-dated options buyers\n- **VWAP reclaim:** If TSLA reclaims $354.92 (5m VWAP) on volume, the thesis flips sharply to CALL territory \u2014 watch this level as the directional pivot\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|-------|------|--------------|\n| **$362.86** | 20D Resistance | Breakout trigger \u2014 close above invalidates bear setup |\n| **$354.92** | 5m VWAP | Near-term control line \u2014 reclaim = bullish flip |\n| **$352.75** | 15m VWAP | Current price pinned just below; key intraday fulcrum |\n| **$346.47** | EMA9 (Daily) | First meaningful support below; PUT target zone |\n| **$340-$341** | Structural | ~0.8x of 1DTE expected move ($352.73 - $7.94 \u2248 $344.79); deep support |\n| **$298.32** | 20D Support | Macro floor \u2014 not relevant for 0-2 DTE |\n\n**Thesis-changing level:** A 5-minute candle close **above $354.92 on volume \u2265 1.5x average** invalidates the PUT thesis entirely.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal Clarity (Bearish lean, not conviction):** Intraday structure is bearish (all 3 timeframes below VWAP, 5m 0/3 bear), but the daily MACD is bullish, OBV is rising, and the 1H 3-candle momentum just printed +0.41% \u2014 this is a mixed picture with a modest bearish tilt, not a clean aligned setup. The 15m bias is only \"mixed (1/2)\" and the 1H MACD is NaN (missing data), reducing confidence.\n\n**Tradeability:** The realistic 0-2 DTE target on a PUT (toward $346-$347, ~$6-7 drop) sits at approximately 0.75-0.88x the 1DTE expected move of \u00b1$7.94 \u2014 borderline tradeable but the signal clarity is insufficient to justify it. Score capped at 52 \u2014 signals genuinely conflict between daily (bullish) and intraday (bearish lean) with low volume reducing follow-through probability.\n\n*Score reflects: modest bearish intraday lean conflicting with positive daily momentum and rising OBV; tradeability is marginal but signal quality is the binding constraint.*\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in staying out)**\n\nThe intraday structure leans bearish but the daily MACD, rising OBV, and 1H 3-candle bounce create genuine contradiction. The low volume environment (0.58x) means the current bearish intraday read could reverse sharply with minimal buying. This does not meet the bar for a 0-2 DTE options trade.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 intraday (5m/15m/1H) shows bearish VWAP structure but daily MACD is bullish (+5.38), OBV is rising, and 1H 3-candle momentum just printed positive (+0.41%), creating authentic contradiction that cannot support a high-conviction 0-2 DTE position in either direction; confluence score 52 is below the 55 threshold required for a directional trade.\n```\n\n---\n\n**\u26a0\ufe0f WATCH FOR ENTRY:** If TSLA *fails* to reclaim $354.92 (5m VWAP) by 1:45 PM ET on a volume spike, and the 15m solidifies to 0/3 bearish with a close below $351.50, re-evaluate for a 1DTE PUT toward $346 with a tighter conviction case. Conversely, a clean reclaim of $354.92 on volume opens a 1DTE CALL toward $358-$359 (within 1DTE expected move). **Neither trigger has fired yet.**",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 intraday (5m/15m/1H) shows bearish VWAP structure but daily MACD is bullish (+5.38), OBV is rising, and 1H 3-candle momentum just printed positive (+0.41%), creating authentic contradiction that cannot support a high-conviction 0-2 DTE position in either direction; confluence score 52 is below the 55 threshold required for a directional trade."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6305
+      },
+      "was_flagged": true,
+      "cached_at": 1787677884.817292,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-25T13:00:41-04:00"
+  "saved_at": "2026-08-25T13:11:26-04:00"
 }
