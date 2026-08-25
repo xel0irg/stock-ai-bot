@@ -74,5 +74,19 @@
   "message_id": "1541822322778841158",
   "signal_time": "2026-08-25T10:51:27-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 260.75,
+  "strike": 260.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15m candle close that confirms continued rejection below the 15m VWAP of $261.72 with volume at or above 0.8x average \u2014 do not chase; wait for a failed bounce attempt at $260.78\u2013$261.01 VWAP cluster that rolls back lower.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1541835551475236974",
+  "signal_time": "2026-08-25T11:44:01-04:00",
+  "status": "PENDING"
  }
 ]
