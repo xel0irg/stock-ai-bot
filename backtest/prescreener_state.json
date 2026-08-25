@@ -1,87 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 309.5498962402344,
+      "price": 309.32501220703125,
       "volume_ratio": 0.0,
-      "ts": 1787672438.6427922,
+      "ts": 1787673046.402383,
       "last_full_scan_ts": 1787672590.0252347
     },
     "AMZN": {
-      "price": 260.7900085449219,
+      "price": 260.5,
       "volume_ratio": 0.0,
-      "ts": 1787672438.9627397,
+      "ts": 1787673046.7374532,
       "last_full_scan_ts": 1787672641.801561
     },
     "META": {
-      "price": 565.8250122070312,
+      "price": 565.4190063476562,
       "volume_ratio": 0.0,
-      "ts": 1787672439.2863376,
+      "ts": 1787673047.0800273,
       "last_full_scan_ts": 1787672490.4358182
     },
     "MSFT": {
-      "price": 488.9674987792969,
+      "price": 489.2799987792969,
       "volume_ratio": 0.0,
-      "ts": 1787672439.6499615,
+      "ts": 1787673047.4460828,
       "last_full_scan_ts": 1787672689.922865
     },
     "NVDA": {
-      "price": 211.12399291992188,
+      "price": 211.02000427246094,
       "volume_ratio": 0.0,
-      "ts": 1787672439.991342,
+      "ts": 1787673047.7917156,
       "last_full_scan_ts": 1787672734.6444597
     },
     "QQQ": {
-      "price": 710.5999755859375,
+      "price": 709.7349853515625,
       "volume_ratio": 0.0,
-      "ts": 1787672440.3559685,
+      "ts": 1787673048.1797001,
       "last_full_scan_ts": 1787672784.8147216
     },
     "SPY": {
-      "price": 765.0900268554688,
+      "price": 764.7999877929688,
       "volume_ratio": 0.0,
-      "ts": 1787672440.7373972,
+      "ts": 1787673048.5881007,
       "last_full_scan_ts": 1787672830.787931
     },
     "TSLA": {
-      "price": 353.0050048828125,
+      "price": 351.45001220703125,
       "volume_ratio": 0.0,
-      "ts": 1787672441.0585923,
-      "last_full_scan_ts": 1787672538.5817204
+      "ts": 1787673048.91313,
+      "last_full_scan_ts": 1787673097.6977708
     }
   },
   "ai_cache": {
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-08-25T15:42:18.576083",
-        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 11:41 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is consolidating near $352 after an 18% 20-day surge, holding above its short-term EMAs but sitting below the 1H VWAP ($355.08) and significantly below the EMA50 ($360.66). The most plausible scenario over the next 5-15 days is a choppy, range-bound grind between the 20D support zone (~$340) and the 20D resistance (~$362.86), with modest upside bias from analyst targets (~$390) but limited near-term momentum given low volume (0.41x average). A clean directional breakout in either direction requires a volume catalyst that is currently absent.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram +5.362 (Daily, Bullish):** Daily momentum is positively sloped, suggesting the recent 18% rally has not yet exhausted its thrust on the daily timeframe.\n- **15m Bias: 3 Bull / 0 Bear signals:** All three 15m indicators (VWAP, EMA, 3-candle momentum +0.42%) are aligned bullish \u2014 this is the cleanest single-timeframe read in the data.\n- **Price Above 5m and 15m VWAP:** At $352.49 vs VWAP $351.91 (5m) and $352.15 (15m), price is holding intraday structure on the dominant entry timeframes.\n- **OBV Rising + Analyst Consensus BUY ($390 target):** Underlying accumulation is intact and fundamental consensus provides a directional tailwind 10%+ above current price.\n\n---\n\n## 3. BEAR CASE\n\n- **Price Below 1H VWAP ($355.08, -0.73%):** The dominant trend timeframe shows price failing to hold the session's volume-weighted anchor \u2014 a structural short-term negative.\n- **Sector Headwind (XLY -0.55%):** Consumer Discretionary is the weakest major sector today, creating index-level drag against TSLA longs.\n- **Volume Collapse (0.41x 20D average):** Conviction behind the 18% rally is not being confirmed. Low volume breakouts/continuations historically fail at resistance; TSLA is approaching 20D resistance at $362.86 with almost no participation.\n- **Stochastic K/D 72.52/76.98 with K < D:** Stochastic is in overbought territory with K beginning to roll under D \u2014 a mild deceleration signal after the 18% run.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News / Zero Articles:** Absence of a catalyst makes a sustained directional move in either direction less likely today \u2014 choppy is the default mode.\n- **5 Unusual Calls + 5 Unusual Puts (balanced):** The flagged options flow is perfectly balanced, suggesting institutional players are hedging or positioning for a move without directional conviction.\n- **EMA50 at $360.66 = Magnet + Cap:** If price pushes toward $360, the EMA50 becomes a natural gravitational target AND overhead resistance simultaneously \u2014 a potential intraday whipsaw zone.\n- **Elon Musk-related news risk:** TSLA carries idiosyncratic event risk unrelated to financials (political statements, social media, regulatory announcements) that can move the stock \u00b15% intraday with no warning.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Strong Support** | $346.42 | EMA9 (daily) \u2014 loss here weakens bull structure |\n| **Intraday Support** | $351.91 | 5m VWAP \u2014 current intraday floor |\n| **Current Price** | $352.49 | \u2014 |\n| **1H VWAP (reclaim target)** | $355.08 | Reclaim = bull confirmation; rejection = bear signal |\n| **Key Resistance** | $360.66 | EMA50 (daily) \u2014 the critical cap |\n| **20D Resistance** | $362.86 | Thesis-changing level \u2014 breakout with volume = material bullish signal |\n| **Thesis Flip Level** | $346 | Break below EMA9 + 5m VWAP on volume = bearish shift |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal Clarity: MODERATE (5/10)** \u2014 The 15m is cleanly bullish (3/0), but 5m and 1H are both MIXED (1B/2Br), creating genuine cross-timeframe conflict that cannot be resolved into a high-conviction direction. The daily MACD is bullish but daily volume is 0.41x average \u2014 weak confirmation.\n\n**Tradeability: LOW-MODERATE (4/10)** \u2014 A 0DTE expected move of \u00b1$5.32 means targets must sit within ~$2.66\u2013$4.26 of current price. The nearest logical resistance (1H VWAP reclaim to $355) is only $2.59 away \u2014 barely inside 0.5x expected move, and that's for a CALL. For a PUT, the 5m VWAP support at $351.91 is only $0.58 away \u2014 far too tight for meaningful premium capture. Neither direction offers a clean risk/reward within the expected move given current positioning.\n\n**Score capped at 48: signals genuinely conflict across timeframes (5m and 1H both MIXED against a bullish 15m), volume is absent to confirm any move, and the realistic intraday targets do not provide sufficient premium payoff for 0-2 DTE options.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe 15m is cleanly bullish, but the 1H is below VWAP and mixed, the 5m is mixed/slightly bearish on momentum, sector is red, and volume is critically low. This is not a case where signals are aligned \u2014 they are genuinely divided across the three timeframes. The bullish case is real but unconfirmed. The bearish case has sector support but no momentum. Neither direction clears the 65-point threshold.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 15m is cleanly bullish (3/0) but 5m and 1H are both MIXED (1B/2Br), volume is critically absent at 0.41x average providing no momentum confirmation, and neither the CALL target ($355 1H VWAP reclaim) nor a PUT target offers sufficient distance to generate viable premium payoff within the 0DTE \u00b1$5.32 expected move; score of 48 is below the 55 tradeable threshold.\n\n---\n\n**MONITOR FOR RE-ENTRY:** If TSLA reclaims the 1H VWAP ($355.08) on a 15m close with volume > 1.5x current average, re-score as a potential CALL setup targeting $358\u2013$360 (EMA50). That scenario would re-rate signal clarity and tradeability meaningfully higher.",
-        "confluence_score": 48,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 15m is cleanly bullish (3/0) but 5m and 1H are both MIXED (1B/2Br), volume is critically absent at 0.41x average providing no momentum confirmation, and neither the CALL target ($355 1H VWAP reclaim) nor a PUT target offers sufficient distance to generate viable premium payoff within the 0DTE \u00b1$5.32 expected move; score of 48 is below the 55 tradeable threshold."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6351
-      },
-      "was_flagged": true,
-      "cached_at": 1787672538.5817242,
-      "score": 48
-    },
     "SPY": {
       "result": {
         "ticker": "SPY",
@@ -115,5 +83,5 @@
       "score": 38
     }
   },
-  "saved_at": "2026-08-25T11:47:12-04:00"
+  "saved_at": "2026-08-25T11:51:39-04:00"
 }
