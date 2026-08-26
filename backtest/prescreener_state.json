@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 312.79998779296875,
+      "price": 312.8351135253906,
       "volume_ratio": 0.0,
-      "ts": 1787766068.3527837,
+      "ts": 1787766637.0446916,
       "last_full_scan_ts": 1787764713.6892521
     },
     "AMZN": {
-      "price": 258.57000732421875,
+      "price": 258.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1787766068.6065745,
+      "ts": 1787766637.5981448,
       "last_full_scan_ts": 1787764771.27532
     },
     "META": {
-      "price": 578.2047119140625,
+      "price": 578.5900268554688,
       "volume_ratio": 0.0,
-      "ts": 1787766068.8363266,
-      "last_full_scan_ts": 1787762637.113781
+      "ts": 1787766638.0900652,
+      "last_full_scan_ts": 1787766689.1580565
     },
     "MSFT": {
-      "price": 494.7799987792969,
+      "price": 493.82000732421875,
       "volume_ratio": 0.0,
-      "ts": 1787766069.1184099,
+      "ts": 1787766638.5556176,
       "last_full_scan_ts": 1787764826.2233582
     },
     "NVDA": {
-      "price": 210.0363006591797,
+      "price": 210.4700927734375,
       "volume_ratio": 0.0,
-      "ts": 1787766069.4206214,
+      "ts": 1787766639.0219183,
       "last_full_scan_ts": 1787764887.0862834
     },
     "QQQ": {
-      "price": 711.02001953125,
+      "price": 710.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1787766069.7049396,
+      "ts": 1787766639.5055494,
       "last_full_scan_ts": 1787764930.2987182
     },
     "SPY": {
-      "price": 765.64501953125,
+      "price": 765.5499877929688,
       "volume_ratio": 0.0,
-      "ts": 1787766069.9745083,
+      "ts": 1787766640.075391,
       "last_full_scan_ts": 1787764970.2014544
     },
     "TSLA": {
-      "price": 346.669189453125,
+      "price": 346.5697937011719,
       "volume_ratio": 0.0,
-      "ts": 1787766070.2151668,
+      "ts": 1787766640.5524106,
       "last_full_scan_ts": 1787765014.5918112
     }
   },
@@ -145,7 +145,39 @@
       "was_flagged": false,
       "cached_at": 1787765014.5918157,
       "score": 48
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-08-26T17:51:29.152250",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis\n**Current Price: $578.40 | Time: 1:50 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is consolidating near the midpoint of its Bollinger Band after a strong 5-day rally (+5.97%). The most plausible near-term scenario is a continuation grind higher toward $585\u2013$590, with the settlement news acting as a mild positive catalyst removing a legal overhang. The mixed intraday structure (5m bullish, 15m/1H mixed) suggests choppy digestion of recent gains rather than a clean directional impulse \u2014 meaning any move is likely to be measured, not explosive.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Bullish Cross (Daily):** Histogram at +0.2791 with a confirmed bullish cross \u2014 historically a reliable medium-term momentum signal suggesting upside continuation toward $585\u2013$595.\n- **5-Minute Structure Fully Bullish:** All 4 signals aligned (above VWAP $576.90, EMA9 > EMA21, MACD positive, bullish 3-candle momentum) \u2014 cleanest timeframe for a long entry right now.\n- **Settlement News Removes Overhang:** The $18B child-safety settlement eliminates a major litigation tail-risk. Markets tend to re-rate stocks higher when \"Big Tobacco\"-style existential legal risk is resolved.\n- **Volume Elevated + OBV Rising:** 1.45x average daily volume with rising OBV confirms institutional accumulation, not distribution. Analyst consensus is STRONG_BUY with a $754 target \u2014 30%+ upside.\n\n---\n\n## 3. BEAR CASE\n\n- **1H RSI at 75 (Overbought):** The 1-hour RSI is firmly overbought. Combined with negative 1H 3-candle momentum (-0.712%), this signals short-term exhaustion and potential mean reversion.\n- **Price Below 15-Minute VWAP ($580.39):** Despite the 5m bullishness, price is lagging on the 15m timeframe \u2014 the confirmation timeframe for setup quality. This is the clearest short-term bearish structural tell.\n- **15m MACD Bearish (hist: -0.2584):** Bearish MACD on the 15m directly contradicts the 5m signal. This divergence is a red flag for entries on the long side without fresh confirmation.\n- **Significant Distance from 52W High:** At $578 vs. $790 high, META has recovered only partially. The EMA50 ($588.76) sits just above as overhead resistance, which could cap near-term upside within the 0-2 DTE window.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Settlement Finalization Details:** If mid-trial settlement terms are disclosed or disputed, sentiment could swing sharply. A better-than-expected deal is already partially priced in; a collapse of talks would be a negative shock.\n- **Broader Market Regime Flip:** SPY/QQQ are flat and directionless. A sudden macro catalyst (Fed speaker, economic data after 2 PM) could break the index either direction and drag META with its 1.24 Beta.\n- **Options Expiry Pinning:** With balanced unusual activity (5 calls / 5 puts flagged), near-term options may pin price close to a round strike ($575\u2013$580) into today's close, limiting 0DTE profitability.\n- **Low Volume Warning:** All three intraday timeframes show well-below-average volume (0.0x, 0.08x, 0.24x). Thin volume means price can be pushed around unpredictably \u2014 a double-edged wildcard.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Support 1** | $576.90 | 5m VWAP \u2014 loss of this flips 5m bias bearish |\n| **Support 2** | $573.61 | 1H VWAP \u2014 critical structural floor |\n| **Support 3** | $566.67 | Daily EMA9 \u2014 major support on any pullback |\n| **Resistance 1** | $580.39 | 15m VWAP \u2014 must reclaim for bullish confirmation |\n| **Resistance 2** | $583.26 | 0DTE upper expected move ($578.40 + $4.86) |\n| **Resistance 3** | $588.76 | EMA50 \u2014 significant overhead resistance |\n| **Thesis Changer** | $580.39 | Sustained 15m close above 15m VWAP flips bias decisively bullish |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate (5m bullish vs. 15m/1H mixed creates genuine conflict), and tradeability is capped because the 0DTE expected move of only \u00b1$4.86 leaves almost no room between a viable target and the entry price \u2014 thin volume further reduces confidence in follow-through within the 0-2 DTE window.**\n\n- Signal Clarity: ~55/100 \u2014 5m fully bullish, but 15m MACD bearish and 1H overbought with negative momentum create real contradiction.\n- Tradeability: capped \u2014 at 1:50 PM ET, a 0DTE call is prohibited (after 2 PM rule), and the 1DTE expected move of \u00b1$6.88 gives a workable but tight range. The low intraday volume is the tradeability killer.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe ticker is up on the day, in a green sector, and the 5m is bullish \u2014 all CALL-favorable. However, the 15m MACD is actively bearish, the 1H is overbought with negative momentum, and volume is dangerously thin across all timeframes. This is a genuine conflict, not a bias toward bears \u2014 the system correctly calls this a wait-for-alignment situation.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is fully bullish but 15m MACD is bearish and 1H is overbought with negative momentum, and critically thin intraday volume (0.0x\u20130.24x avg) across all timeframes makes 0-2 DTE premium recovery unreliable even if direction resolves correctly; wait for 15m VWAP reclaim ($580.39) on above-average volume before committing.\n```\n\n---\n\n**WATCH LEVEL:** If META closes a 15-minute candle above $580.39 (15m VWAP) on volume \u2265 1.0x average before 2:00 PM ET, reassess for a 1DTE call targeting $585\u2013$586. If price breaks below $573.61 (1H VWAP) on expanding volume, reassess for a 1DTE put targeting $571.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is fully bullish but 15m MACD is bearish and 1H is overbought with negative momentum, and critically thin intraday volume (0.0x\u20130.24x avg) across all timeframes makes 0-2 DTE premium recovery unreliable even if direction resolves correctly; wait for 15m VWAP reclaim ($580.39) on above-average volume before committing."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6363
+      },
+      "was_flagged": false,
+      "cached_at": 1787766689.1580596,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-26T13:41:10-04:00"
+  "saved_at": "2026-08-26T13:51:31-04:00"
 }
