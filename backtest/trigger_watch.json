@@ -103,7 +103,9 @@
   "verdict": "TRADE",
   "message_id": "1542180009383301363",
   "signal_time": "2026-08-26T10:32:46-04:00",
-  "status": "PENDING"
+  "status": "TRIGGERED",
+  "trigger_time": "2026-08-26T11:45:00-04:00",
+  "trigger_close": 258.62
  },
  {
   "ticker": "NVDA",
@@ -117,6 +119,20 @@
   "verdict": "TRADE",
   "message_id": "1542180763116769312",
   "signal_time": "2026-08-26T10:35:46-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 709.5,
+  "strike": 709.0,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on 15-minute candle close that holds below $709.50 with volume at or above 1.0x average on that candle, confirming continued VWAP rejection and no reversal from the 1H volume surge",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1542205913081978995",
+  "signal_time": "2026-08-26T12:15:42-04:00",
   "status": "PENDING"
  }
 ]
