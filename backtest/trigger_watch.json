@@ -150,5 +150,19 @@
   "message_id": "1542544803378765844",
   "signal_time": "2026-08-27T10:42:20-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "NVDA",
+  "direction": "CALL",
+  "trigger": 227.25,
+  "strike": 227.5,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on a 5-minute candle close above $227.25 with volume at or above 1.0x average, confirming resistance at $226.99 is being absorbed rather than rejected.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1542549883662106788",
+  "signal_time": "2026-08-27T11:02:32-04:00",
+  "status": "PENDING"
  }
 ]
