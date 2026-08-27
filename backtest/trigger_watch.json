@@ -166,5 +166,19 @@
   "message_id": "1542549883662106788",
   "signal_time": "2026-08-27T11:02:32-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "AAPL",
+  "direction": "CALL",
+  "trigger": 315.0,
+  "strike": 315.0,
+  "expiry_date": "",
+  "vol_multiple": 1.5,
+  "entry_condition": "Enter on a 5-minute candle close above $315.00 with volume at least 1.5x the current 5m average, confirming the breakout from the current consolidation range is not a low-volume fake.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1542562423972696154",
+  "signal_time": "2026-08-27T11:52:21-04:00",
+  "status": "PENDING"
  }
 ]
