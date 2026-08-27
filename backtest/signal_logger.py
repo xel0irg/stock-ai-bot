@@ -43,6 +43,9 @@ FIELDNAMES = [
     "target_em_ratio",   # target distance / expected move (>1.0 = beyond EM)
     "target_adjusted",   # yes if target was clamped by validate_target()
     "strategy_version",  # pipeline version that produced this signal
+    "volume_ratio_daily",# partial-day volume vs 20-day avg (feeds scoring)
+    "volume_ratio_15m",  # last 15m bar vs rolling 20-bar avg
+    "rvol_tod",          # 15m bar vs same-time-of-day avg, prior sessions
     # Filled in later by outcome_checker.py:
     "checked",           # "yes" once outcome has been evaluated
     "checked_at",
@@ -127,6 +130,9 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
         row = {
             "log_id":            f"{ticker}_{ts.replace(':', '').replace('-', '')}",
             "strategy_version":  _SV,
+            "volume_ratio_daily": tech.get("technicals", {}).get("volume_ratio", ""),
+            "volume_ratio_15m":  (tech.get("intraday", {}) or {}).get("tf_15m", {}).get("volume_ratio", ""),
+            "rvol_tod":          tech.get("rvol_tod", ""),
             "timestamp":         ts,
             "ticker":            ticker,
             "contract_type":     trade_setup.get("contract_type", "NONE"),

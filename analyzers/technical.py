@@ -13,7 +13,7 @@ from ta.trend import MACD, EMAIndicator
 from ta.volatility import BollingerBands, AverageTrueRange
 from ta.volume import OnBalanceVolumeIndicator, VolumeWeightedAveragePrice
 from datetime import datetime, timedelta
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 import requests
 from bs4 import BeautifulSoup
 
@@ -619,6 +619,56 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
     return result
 
 
+# ── Time-of-day relative volume (RVOL) ───────────────────
+# Logged for measurement only (2026-08-24) — NOT used in scoring and NOT
+# shown to the AI. The existing volume ratios compare against averages
+# that ignore the intraday U-shape (and the daily one compares a partial
+# day against full-day averages), so their readings depend on scan time
+# as much as on participation. True RVOL compares the current 15m bar
+# against the average volume of the SAME clock-time bar over prior
+# sessions. Once a few weeks of rows exist, we test which variant (if
+# any) separates outcomes before touching scoring.
+
+def rvol_time_of_day_from_df(df: pd.DataFrame) -> Optional[float]:
+    """
+    Current 15m bar volume vs mean volume of same-time bars on prior
+    sessions. Pure function so it can be unit-tested without a fetch.
+    Returns None unless >= 3 prior-session samples exist for the slot.
+    """
+    try:
+        if df is None or df.empty or "Volume" not in df:
+            return None
+        vol = df["Volume"]
+        if hasattr(vol, "columns"):          # yfinance MultiIndex frame
+            vol = vol.iloc[:, 0]
+        vol = vol.dropna()
+        if len(vol) < 10:
+            return None
+        idx = vol.index
+        cur_ts   = idx[-1]
+        cur_day  = cur_ts.date()
+        cur_slot = cur_ts.time()
+        prior = vol[[i.date() != cur_day and i.time() == cur_slot for i in idx]]
+        if len(prior) < 3:
+            return None
+        base = float(prior.mean())
+        if base <= 0:
+            return None
+        return round(float(vol.iloc[-1]) / base, 2)
+    except Exception:
+        return None
+
+
+def fetch_rvol_time_of_day(ticker: str) -> Optional[float]:
+    """6 sessions of 15m bars -> time-of-day RVOL for the latest bar."""
+    try:
+        df = yf.download(ticker, period="6d", interval="15m",
+                         progress=False, auto_adjust=True)
+        return rvol_time_of_day_from_df(df)
+    except Exception:
+        return None
+
+
 def fetch_options_flow(ticker: str) -> Dict[str, Any]:
     """
     Fetch unusual options activity.
@@ -747,4 +797,6 @@ def run_technical_analysis(ticker: str) -> Dict[str, Any]:
         "options_flow":   options,
         "short_interest": short,
         "intraday":       intraday,
+        # Measurement-only RVOL (not scored, not in the AI prompt)
+        "rvol_tod":       fetch_rvol_time_of_day(ticker),
     }
