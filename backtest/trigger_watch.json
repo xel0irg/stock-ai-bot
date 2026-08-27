@@ -136,5 +136,19 @@
   "status": "TRIGGERED",
   "trigger_time": "2026-08-26T12:30:00-04:00",
   "trigger_close": 708.36
+ },
+ {
+  "ticker": "META",
+  "direction": "PUT",
+  "trigger": 572.0,
+  "strike": 572.5,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on confirmed 15m candle close below current price ($572.61) with no reclaim of the 15m VWAP ($578.74), ideally on a failed bounce attempt into the $574\u2013$576 zone on volume \u2264 1.0x avg (confirming weak buyers).",
+  "score": 76,
+  "verdict": "TRADE",
+  "message_id": "1542544803378765844",
+  "signal_time": "2026-08-27T10:42:20-04:00",
+  "status": "PENDING"
  }
 ]
