@@ -182,5 +182,19 @@
   "message_id": "1542562423972696154",
   "signal_time": "2026-08-27T11:52:21-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "CALL",
+  "trigger": 720.0,
+  "strike": 721.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a confirmed hold above $720.00 on the 5-minute timeframe with a bullish candle close and MACD histogram remaining positive on the 15m chart.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1542577528055537697",
+  "signal_time": "2026-08-27T12:52:25-04:00",
+  "status": "PENDING"
  }
 ]
