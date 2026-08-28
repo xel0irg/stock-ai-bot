@@ -1,54 +1,87 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 320.92999267578125,
+      "price": 320.29998779296875,
       "volume_ratio": 0.0,
-      "ts": 1787929242.882884,
+      "ts": 1787929838.7916799,
       "last_full_scan_ts": 1787929309.0858645
     },
     "AMZN": {
-      "price": 265.3900146484375,
+      "price": 265.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1787929243.0945756,
+      "ts": 1787929839.011763,
       "last_full_scan_ts": 1787928756.8684475
     },
     "META": {
-      "price": 584.369873046875,
+      "price": 586.27001953125,
       "volume_ratio": 0.0,
-      "ts": 1787929243.298202,
-      "last_full_scan_ts": 1787928807.7779515
+      "ts": 1787929839.258419,
+      "last_full_scan_ts": 1787929896.979773
     },
     "MSFT": {
-      "price": 514.7750244140625,
+      "price": 514.8599853515625,
       "volume_ratio": 0.0,
-      "ts": 1787929243.6009073,
+      "ts": 1787929839.5223138,
       "last_full_scan_ts": 1787928854.7933156
     },
     "NVDA": {
-      "price": 226.72500610351562,
+      "price": 224.97999572753906,
       "volume_ratio": 0.0,
-      "ts": 1787929243.8451977,
-      "last_full_scan_ts": 1787929357.0161037
+      "ts": 1787929839.7883594,
+      "last_full_scan_ts": 1787929941.7823877
     },
     "QQQ": {
-      "price": 723.9099731445312,
+      "price": 723.0599975585938,
       "volume_ratio": 0.0,
-      "ts": 1787929244.1096764,
+      "ts": 1787929840.0930402,
       "last_full_scan_ts": 1787927851.0758505
     },
     "SPY": {
-      "price": 775.0999755859375,
+      "price": 774.3400268554688,
       "volume_ratio": 0.0,
-      "ts": 1787929244.3610857,
+      "ts": 1787929840.4268546,
       "last_full_scan_ts": 1787927907.6902711
     },
     "TSLA": {
-      "price": 354.55499267578125,
+      "price": 354.0987854003906,
       "volume_ratio": 0.0,
-      "ts": 1787929244.5856206,
+      "ts": 1787929840.7129314,
       "last_full_scan_ts": 1787929404.1570942
     }
   },
-  "ai_cache": {},
-  "saved_at": "2026-08-28T11:03:26-04:00"
+  "ai_cache": {
+    "NVDA": {
+      "result": {
+        "ticker": "NVDA",
+        "timestamp": "2026-08-28T15:12:21.779147",
+        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 11:11 AM ET | Price: $224.73**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is pulling back intraday within a strong 5-day and 20-day uptrend, now trading below both the 5m and 15m VWAPs while still holding above the 1H VWAP. The most plausible scenario over the next 5-15 days is a consolidation between $218\u2013$228 before the broader bull trend reasserts, with analyst targets ($305) providing a strong fundamental ceiling-chase bid. The intraday structure is bearish, but the macro tape (SPY/QQQ both green, VIX 14.25) creates a regime headwind against any sustained PUT thesis.\n\n---\n\n## 2. BULL CASE\n\n- **5D/20D momentum (+7.79% / +8.75%):** NVDA has been in a clear recovery trend; today's -1.43% is a pause, not a reversal. Mean reversion to the trend favors longs.\n- **1H VWAP hold ($224.15):** Price remains above the 1-hour VWAP, which is the most structurally significant intraday level. Bulls are defending this zone.\n- **Broad market regime (SPY +0.60%, QQQ +0.60%, VIX 14.25):** Hard regime gate is confirmed bullish. Individual stock puts have an extremely low base rate in this environment per the system's own backtest (3/379 wins).\n- **Analyst consensus STRONG BUY / PT $305.79 / Forward P/E 14.7:** Institutional dip-buyers are structurally present. OBV rising confirms accumulation on pullbacks.\n\n---\n\n## 3. BEAR CASE\n\n- **5m and 15m full bearish sweep (0 bull / 4 bear each):** Both short-term timeframes show complete signal alignment \u2014 below VWAP, bearish EMA stack, bearish MACD, negative momentum. This is real intraday selling pressure.\n- **15m volume surge (4.41x avg):** The selling on the 15m is not thin \u2014 it has conviction behind it. This is the single most compelling bearish data point.\n- **Daily MACD histogram turning negative (-0.0209):** The daily momentum is beginning to fade after the recent run. Bearish histogram crossover in progress.\n- **BB position 0.76, resistance at $227.98:** Price is extended in the upper half of the Bollinger Band approaching key 20-day resistance. Fade risk is real from current levels.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **AI/Semiconductor sector headlines:** Any macro headline about chip export restrictions, China policy, or competing AI infrastructure could gap NVDA \u00b13-5% in minutes \u2014 well beyond 0DTE expected move.\n- **Volume anomaly:** Today's volume is only 0.5x the 20-day average at 11:11 AM. A volume surge into the afternoon could accelerate the move in either direction; currently the low volume undermines PUT conviction.\n- **10 recent SEC filings:** Worth monitoring \u2014 if any relate to share registration or material disclosures, it could shift sentiment.\n- **SPY/QQQ direction shift:** If the broad market reverses afternoon, NVDA's beta of 2.2 means a 0.5% SPY drop = ~1.1% NVDA drop, potentially triggering the bearish intraday setup into a tradeable move.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Value | Significance |\n|---|---|---|\n| **Critical Support** | $222.21 (1H VWAP approx) | Break below invalidates bull case today |\n| **Intraday Support** | $224.15 | 1H VWAP \u2014 currently holding |\n| **Bear Trigger** | $224.50 | 5m/15m VWAP cluster resistance from below |\n| **Near Resistance** | $225.28\u2013$225.86 | 5m and 15m VWAP ceiling |\n| **Key Resistance** | $227.98 | 20-day resistance; Bollinger upper area |\n| **Bull Breakout** | $228.00+ | Above here, momentum resumes toward $230.54 |\n| **Downside Target** | $222.21 | ~0.7x the 1DTE expected move ($3.55) |\n| **52W High** | $236.54 | Ultimate ceiling; ~5.3% away |\n\n**Thesis change level:** A reclaim of the 15m VWAP ($225.62) on volume cancels the bearish intraday read entirely. A break below $222.50 confirms bearish follow-through.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal Clarity: 6/10 \u2014 Tradeability: 5/10.**\nThe intraday bearish signals are real and the 15m surge volume adds credibility, BUT the hard regime gate requires a PUT score \u226575 AND price below BOTH 15m AND 1H VWAP AND volume \u22650.8x average \u2014 price is currently ABOVE the 1H VWAP and daily volume is only 0.5x average, failing two of three mandatory regime gate conditions; tradeability is further capped because the low overall volume undermines momentum follow-through within a 0-2 DTE window.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\n*Rationale:* The intraday bearish setup is genuine and would ordinarily score higher, but the regime gate hard-blocks this PUT: price is above the 1H VWAP (gate condition #2 unmet) and daily volume is 0.5x average (gate condition #3 unmet). Switching to CALLS is not justified either \u2014 the 5m/15m structure is fully bearish with no bullish confirmation. Waiting is the high-EV choice.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks the PUT (price is above 1H VWAP at $224.15 and daily volume is 0.5x average, failing two of three mandatory gate conditions for individual-stock PUT signals in a confirmed bull tape); CALL is blocked by full 5m/15m bearish sweep with no bullish confirmation \u2014 signals genuinely conflict between timeframes, making 0-2 DTE premium deployment negative EV in either direction until price resolves either above $225.62 (15m VWAP, CALL trigger) or below $222.50 with daily volume recovering above 0.8x (PUT trigger).",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks the PUT (price is above 1H VWAP at $224.15 and daily volume is 0.5x average, failing two of three mandatory gate conditions for individual-stock PUT signals in a confirmed bull tape); CALL is blocked by full 5m/15m bearish sweep with no bullish confirmation \u2014 signals genuinely conflict between timeframes, making 0-2 DTE premium deployment negative EV in either direction until price resolves either above $225.62 (15m VWAP, CALL trigger) or below $222.50 with daily volume recovering above 0.8x (PUT trigger)."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6283
+      },
+      "was_flagged": true,
+      "cached_at": 1787929941.7823908,
+      "score": 52
+    }
+  },
+  "saved_at": "2026-08-28T11:12:23-04:00"
 }

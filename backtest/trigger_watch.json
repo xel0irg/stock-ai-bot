@@ -200,5 +200,19 @@
   "status": "TRIGGERED",
   "trigger_time": "2026-08-27T13:00:00-04:00",
   "trigger_close": 720.46
+ },
+ {
+  "ticker": "META",
+  "direction": "CALL",
+  "trigger": 589.55,
+  "strike": 590.0,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on a confirmed 5m candle close above $589.55 (daily EMA50) with volume on that candle at least 1.0x the 5m average, confirming the overhead resistance is being absorbed \u2014 do not chase into the EMA50 blind.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1542914558195404870",
+  "signal_time": "2026-08-28T11:11:36-04:00",
+  "status": "PENDING"
  }
 ]
