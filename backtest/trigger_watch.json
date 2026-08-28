@@ -214,5 +214,19 @@
   "message_id": "1542914558195404870",
   "signal_time": "2026-08-28T11:11:36-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 349.5,
+  "strike": 350.0,
+  "expiry_date": "",
+  "vol_multiple": 2.0,
+  "entry_condition": "Enter on a 5-minute candle close below $349.50 with volume at or above 2x the 5m average, confirming continuation of the breakdown rather than chasing the current oversold spike",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1542922544636755989",
+  "signal_time": "2026-08-28T11:43:21-04:00",
+  "status": "PENDING"
  }
 ]
