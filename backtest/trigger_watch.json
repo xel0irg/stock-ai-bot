@@ -227,6 +227,22 @@
   "verdict": "TRADE",
   "message_id": "1542922544636755989",
   "signal_time": "2026-08-28T11:43:21-04:00",
+  "status": "TRIGGERED",
+  "trigger_time": "2026-08-28T11:45:00-04:00",
+  "trigger_close": 348.47
+ },
+ {
+  "ticker": "NVDA",
+  "direction": "PUT",
+  "trigger": 220.0,
+  "strike": 220.0,
+  "expiry_date": "",
+  "vol_multiple": 0.3,
+  "entry_condition": "Enter only on a confirmed 15-minute candle close below $220.00 with 15m volume recovering to at least 0.3x average \u2014 do not chase the current print while volume is at 0.03x.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1542927375061352550",
+  "signal_time": "2026-08-28T12:02:32-04:00",
   "status": "PENDING"
  }
 ]
