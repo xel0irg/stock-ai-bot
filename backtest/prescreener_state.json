@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 320.82000732421875,
+      "price": 320.4949951171875,
       "volume_ratio": 0.0,
-      "ts": 1787935837.4563792,
+      "ts": 1787936446.7796717,
       "last_full_scan_ts": 1787933486.5821507
     },
     "AMZN": {
-      "price": 265.7449951171875,
+      "price": 264.9150085449219,
       "volume_ratio": 0.0,
-      "ts": 1787935837.778119,
-      "last_full_scan_ts": 1787932295.3501678
+      "ts": 1787936447.0336773,
+      "last_full_scan_ts": 1787936499.736661
     },
     "META": {
-      "price": 575.8200073242188,
+      "price": 574.5546875,
       "volume_ratio": 0.0,
-      "ts": 1787935838.1145308,
+      "ts": 1787936447.305842,
       "last_full_scan_ts": 1787932898.3045278
     },
     "MSFT": {
-      "price": 516.6799926757812,
+      "price": 516.1400146484375,
       "volume_ratio": 0.0,
-      "ts": 1787935838.4042253,
+      "ts": 1787936447.5921826,
       "last_full_scan_ts": 1787933001.9771807
     },
     "NVDA": {
-      "price": 220.4700927734375,
+      "price": 219.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1787935838.670463,
-      "last_full_scan_ts": 1787932952.880515
+      "ts": 1787936447.8479376,
+      "last_full_scan_ts": 1787936556.1248415
     },
     "QQQ": {
-      "price": 717.219970703125,
+      "price": 715.7319946289062,
       "volume_ratio": 0.0,
-      "ts": 1787935839.0263507,
+      "ts": 1787936448.151875,
       "last_full_scan_ts": 1787935883.1306307
     },
     "SPY": {
-      "price": 770.2050170898438,
+      "price": 768.9498901367188,
       "volume_ratio": 0.0,
-      "ts": 1787935839.3495154,
+      "ts": 1787936448.4601119,
       "last_full_scan_ts": 1787935926.6245084
     },
     "TSLA": {
-      "price": 347.6000061035156,
+      "price": 346.30999755859375,
       "volume_ratio": 0.0,
-      "ts": 1787935839.6368482,
-      "last_full_scan_ts": 1787932441.6135163
+      "ts": 1787936448.6764736,
+      "last_full_scan_ts": 1787936613.0081367
     }
   },
   "ai_cache": {
@@ -177,7 +177,39 @@
       "was_flagged": false,
       "cached_at": 1787935926.6245117,
       "score": 48
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-08-28T17:01:39.727767",
+        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 1:00 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in a short-term recovery bounce within a broader 20-day downtrend (-6.73%), up 3.37% today and sitting just below its 5m/15m VWAP while above its 1H VWAP. The most plausible scenario over the next 5-15 days is continued consolidation between $256-$270, with the 3.37% intraday gap creating potential for a modest fade toward the $262-$263 zone before any continuation. Intraday structure is the key battleground: the 1H trend is bullish but the 5m/15m are rolling over, suggesting the early momentum is stalling rather than accelerating.\n\n---\n\n## 2. BULL CASE\n\n- **1H Timeframe Bullish (3B/1Br):** Price is 1.44% above 1H VWAP with bullish EMA9/21 structure, confirming the intraday trend is still intact at the dominant intraday timeframe.\n- **Sector Strength:** Consumer Discretionary (XLY) +0.58% today, outperforming the broad market \u2014 AMZN's sector is acting as a tailwind while Tech is down -1.0%.\n- **Strong Analyst Consensus + Price Target:** 60 analysts at STRONG_BUY with a $327 target implies ~23% upside; fundamentals support dip-buying at current levels.\n- **Bull Regime Confirmed:** SPY and QQQ both above EMA9/EMA21, VIX at 14.56 \u2014 the macro environment structurally favors longs in individual names.\n\n---\n\n## 3. BEAR CASE\n\n- **5m Fully Bearish (0B/3Br):** Price below 5m VWAP ($265.80), bearish MACD, negative 3-candle momentum (-0.37%) \u2014 short-term sellers are in control right now.\n- **Daily MACD Histogram Negative (-1.1724):** Daily momentum is still trending bearish; today's 3.37% gap-up has not yet reversed the daily MACD signal, suggesting the bounce may be corrective rather than a trend change.\n- **20D Return -6.73% + OBV Falling:** Intermediate-term distribution is ongoing; OBV falling means volume is not confirming the price recovery.\n- **Price Below 5m and 15m VWAP:** Despite the 1H bullish read, the near-term price action cannot hold above its shorter-term VWAPs \u2014 a sign of intraday fading momentum.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Found (0 articles):** The 3.37% move today has no confirmed fundamental driver visible in this data pull \u2014 this is a risk. An unexplained gap can reverse sharply if the catalyst was rumor/algo-driven.\n- **10 Unusual Options Contracts Flagged (5 calls / 5 puts):** Perfect balance of unusual activity gives no directional edge, but does signal elevated speculative interest \u2014 a flow reversal could accelerate a move in either direction.\n- **Volume Below Average (0.75x):** Low volume on a large up-day is a classic warning sign. A volume surge in either direction could validate or invalidate the move decisively.\n- **Macro Reversal Risk:** QQQ -0.44% despite the bull regime \u2014 if tech continues to underperform, AMZN (Beta 1.45) could give back today's gains rapidly.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Strong Support** | $256.26 | 20D technical support \u2014 breakdown = trend deterioration |\n| **Intraday Support** | $261.17 | 1H VWAP \u2014 loss of this invalidates the intraday bull structure |\n| **Critical Bull/Bear Line** | $265.31\u2013$265.80 | 15m/5m VWAP cluster \u2014 reclaim = calls back on; failure = fade continues |\n| **Near-Term Resistance** | $268.00\u2013$270.00 | Psychological zone; options-implied 1DTE max move ~$267.55 |\n| **Major Resistance** | $281.77 | Upper Bollinger Band; $284 = 20D resistance |\n| **Thesis-Change Level** | $265.80 | Sustained break above 5m VWAP re-opens the call setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate but timeframes are structurally split (1H bullish vs. 5m/15m bearish), and the regime gate blocks a PUT trade while the current intraday fade and VWAP position make an immediate CALL entry premature \u2014 tradeability caps this score below the threshold.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nRationale: The bull regime gate requires price above both 15m AND 1H VWAP for a PUT (not met \u2014 15m VWAP is a gate requirement but PUT score threshold of 75 is also not met). For a CALL, price is currently below both 5m VWAP ($265.80) and 15m VWAP ($265.31) \u2014 the regime gate favors calls but the entry condition (above at least one VWAP with momentum confirmation) is not yet triggered. The setup is in transition, not confirmed.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Timeframes are genuinely split \u2014 1H is bullish and favors calls under the bull regime gate, but price is currently below both 5m and 15m VWAP with bearish short-term momentum, meaning the call entry trigger has not been reached; enter a 1DTE CALL only if price reclaims and closes a 15m candle above $265.80 (5m VWAP) with volume recovering toward 1.0x average, confirming the intraday fade has reversed.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Timeframes are genuinely split \u2014 1H is bullish and favors calls under the bull regime gate, but price is currently below both 5m and 15m VWAP with bearish short-term momentum, meaning the call entry trigger has not been reached; enter a 1DTE CALL only if price reclaims and closes a 15m candle above $265.80 (5m VWAP) with volume recovering toward 1.0x average, confirming the intraday fade has reversed."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6127
+      },
+      "was_flagged": true,
+      "cached_at": 1787936499.7366648,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-28T12:52:08-04:00"
+  "saved_at": "2026-08-28T13:03:35-04:00"
 }
