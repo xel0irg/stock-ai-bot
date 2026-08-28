@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 321.2099914550781,
+      "price": 320.82000732421875,
       "volume_ratio": 0.0,
-      "ts": 1787935238.2152042,
+      "ts": 1787935837.4563792,
       "last_full_scan_ts": 1787933486.5821507
     },
     "AMZN": {
-      "price": 265.875,
+      "price": 265.7449951171875,
       "volume_ratio": 0.0,
-      "ts": 1787935238.4471967,
+      "ts": 1787935837.778119,
       "last_full_scan_ts": 1787932295.3501678
     },
     "META": {
-      "price": 575.7150268554688,
+      "price": 575.8200073242188,
       "volume_ratio": 0.0,
-      "ts": 1787935238.6893566,
+      "ts": 1787935838.1145308,
       "last_full_scan_ts": 1787932898.3045278
     },
     "MSFT": {
-      "price": 516.6699829101562,
+      "price": 516.6799926757812,
       "volume_ratio": 0.0,
-      "ts": 1787935238.9283698,
+      "ts": 1787935838.4042253,
       "last_full_scan_ts": 1787933001.9771807
     },
     "NVDA": {
-      "price": 220.25999450683594,
+      "price": 220.4700927734375,
       "volume_ratio": 0.0,
-      "ts": 1787935239.1599226,
+      "ts": 1787935838.670463,
       "last_full_scan_ts": 1787932952.880515
     },
     "QQQ": {
-      "price": 716.510009765625,
+      "price": 717.219970703125,
       "volume_ratio": 0.0,
-      "ts": 1787935239.5149024,
-      "last_full_scan_ts": 1787931851.0377536
+      "ts": 1787935839.0263507,
+      "last_full_scan_ts": 1787935883.1306307
     },
     "SPY": {
-      "price": 770.0330200195312,
+      "price": 770.2050170898438,
       "volume_ratio": 0.0,
-      "ts": 1787935240.0711408,
-      "last_full_scan_ts": 1787931899.1359537
+      "ts": 1787935839.3495154,
+      "last_full_scan_ts": 1787935926.6245084
     },
     "TSLA": {
-      "price": 347.95001220703125,
+      "price": 347.6000061035156,
       "volume_ratio": 0.0,
-      "ts": 1787935240.3343873,
+      "ts": 1787935839.6368482,
       "last_full_scan_ts": 1787932441.6135163
     }
   },
@@ -113,7 +113,71 @@
       "was_flagged": false,
       "cached_at": 1787933001.9771845,
       "score": 52
+    },
+    "QQQ": {
+      "result": {
+        "ticker": "QQQ",
+        "timestamp": "2026-08-28T16:51:23.123175",
+        "analysis": "# QQQ 0-2 DTE OPTIONS ANALYSIS \u2014 12:50 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is in a mild intraday drift lower, trading below all three VWAP levels (5m, 15m, 1H) with bearish MACD across timeframes \u2014 but the magnitude of the move is tiny (-0.22% on the day, price at $717.22). The most plausible scenario over the next 5-15 days is continued consolidation between $700 support and $732 resistance, with the broader bull regime intact. The intraday weakness looks like low-conviction profit-taking, not a directional breakdown.\n\n---\n\n## 2. BULL CASE\n\n- **SPY/QQQ regime gate is BULLISH**: Both ETFs confirmed above EMA9/EMA21 on the daily. Market regime rules explicitly prohibit fading the index in this environment.\n- **OBV Trend RISING**: On-balance volume is rising despite today's dip \u2014 accumulation is occurring under the surface, not distribution.\n- **Strong 20D return (+2.45%)**: The intermediate trend is up; today's -0.54% is noise within an established uptrend.\n- **Bollinger position at 0.476 (midband)**: Price is NOT extended to the downside \u2014 no meaningful compression or breakdown signal. Support at $702 is ~2.1% away, well outside the 0DTE expected move.\n\n---\n\n## 3. BEAR CASE\n\n- **All intraday timeframes bearish**: 5m, 15m, and 1H all show price below VWAP with bearish MACD \u2014 intraday structure is clearly negative.\n- **MACD histogram negative (daily -0.3045)**: Daily momentum is decelerating, suggesting the 5-day rally is losing steam.\n- **Price in lower half of Bollinger Band (0.476)**: Not breaking down, but not exhibiting strength either \u2014 muted tape.\n- **Volume severely depressed (0.59x 20D avg, 0.16x intraday avg on 15m)**: Every bearish signal is occurring on minimal participation \u2014 bears are not pressing.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data**: Any surprise Fed commentary, inflation prints, or jobs data this afternoon could move tech sharply.\n- **Tech sector weakness today (-0.7%)**: If sector selling accelerates into the close, QQQ could test the 15m VWAP at $720 from below \u2014 but this would need a volume catalyst.\n- **Options expiry dynamics**: Unusual activity (5 unusual calls + 5 unusual puts) is balanced \u2014 no clear directional gamma pressure. Max pain pinning is possible.\n- **VIX at 14.61**: Extremely low. A sudden spike (geopolitical event, surprise data) could gap QQQ well beyond expected move ranges, destroying premium on either side.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 1H VWAP | $718.19 | Reclaim = bearish thesis fails intraday |\n| 15m VWAP | $720.03 | Key resistance for any recovery |\n| 5m VWAP | $717.78 | Immediate overhead |\n| 20D Resistance | $732.07 | Bull target if regime accelerates |\n| 20D Support | $700.07 | Bear target \u2014 ~2.4% away |\n| EMA9 (daily) | $715.59 | Critical bull/bear intraday pivot |\n\n**Thesis-changing level**: A close above $720.03 (15m VWAP) on volume >1x avg invalidates the intraday bear setup entirely. A break below $715 on volume would give the bear case its first real leg.\n\n---\n\n## 6. CONFLUENCE SCORE: 28/100\n\nThe intraday signals align cleanly bearish \u2014 but the **HARD REGIME GATE explicitly prohibits PUT signals on QQQ in a confirmed bull regime**. That gate overrides all intraday signals. On the CALL side, price is below all VWAPs, volume is severely depressed (0.59x), and there is no bullish trigger to enter. The trade is ungradeable: bearish setup that is regime-blocked, bullish case with no entry trigger and negative intraday structure. **Score capped at 28 \u2014 regime gate kills the PUT; lack of VWAP reclaim and near-zero volume kills the CALL. No viable 0-2 DTE trade exists.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in NONE)**\n\nThe bearish intraday signals are real but regime-blocked for index PUTs per hard rules. The bullish macro setup lacks an intraday trigger \u2014 price is below all VWAPs with no reclaim attempt on volume. Neither direction offers a viable 0-2 DTE entry right now.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate explicitly prohibits QQQ PUTs in a confirmed bull regime (SPY/QQQ above EMA9/EMA21, VIX 14.61); CALL is blocked because price is below all three VWAP levels (5m/15m/1H) with no reclaim on volume \u2014 required volume threshold (0.8x avg) is not met and there is no bullish trigger present at this time.\n```\n\n---\n\n**WATCH FOR**: If QQQ reclaims $718.19 (1H VWAP) on a volume surge above 1x average before 2 PM ET, that would reopen a CALL setup targeting $720\u2013$721 within the 1DTE expected move. Set an alert there and reassess.",
+        "confluence_score": 28,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate explicitly prohibits QQQ PUTs in a confirmed bull regime (SPY/QQQ above EMA9/EMA21, VIX 14.61); CALL is blocked because price is below all three VWAP levels (5m/15m/1H) with no reclaim on volume \u2014 required volume threshold (0.8x avg) is not met and there is no bullish trigger present at this time."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 5925
+      },
+      "was_flagged": false,
+      "cached_at": 1787935883.1306338,
+      "score": 28
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-08-28T16:52:06.621003",
+        "analysis": "# SPY Analysis \u2014 12:51 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is drifting slightly lower intraday (-0.1% on day) within a confirmed bull regime, sitting near $770 with the 52W high at $779.37 just ~1.2% above. The most plausible scenario over the next 5-15 sessions is a continued grind toward resistance at $777-$779, with shallow pullbacks finding support near $757-$760. Intraday weakness is real but shallow \u2014 this looks like consolidation after a recent 5-day +0.9% run, not a trend reversal.\n\n---\n\n## 2. BULL CASE\n\n1. **Hard Regime Gate \u2014 Confirmed Bull Tape**: SPY and QQQ both above EMA9 and EMA21, VIX at 14.61. This is the strongest structural signal and overrides intraday noise.\n2. **OBV Rising**: On-balance volume is trending up despite today's low volume, indicating institutional accumulation is intact beneath the surface chop.\n3. **Price Above 20D Support ($757.67) with Positive 5/20D Returns**: +0.9% 5D, +1.67% 20D \u2014 the trend is up. Today's softness is noise against a clean uptrend.\n4. **Cyclical Sector Leadership**: Consumer Discretionary (+0.8%), Financials (+0.5%), Energy (+0.4%) are all green \u2014 this is risk-on rotation, not defensive flight. Implies SPY has underlying bid.\n\n---\n\n## 3. BEAR CASE\n\n1. **Intraday Structure Bearish (5m + 15m)**: Price below VWAP on both 5m ($770.79) and 15m ($772.14), with bearish EMA9/21 crossovers and negative MACD histograms on both \u2014 short-term sellers control the tape.\n2. **MACD Histogram Negative on Daily (-0.82)**: Daily momentum is rolling over, suggesting the recent push is losing energy near resistance.\n3. **Volume Collapse (0.48x 20D avg)**: Today's move lacks conviction in either direction. Low volume rallies and declines are unreliable \u2014 but absence of buying near 52W highs is mildly concerning.\n4. **Proximity to 52W Resistance ($779.37)**: Only 1.17% from the all-time/52W high. Upside is structurally capped in the near term; risk/reward for calls diminishes near that ceiling.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data releases**: With no news flagged, any Fed speaker, surprise economic print (jobs, CPI revision, PMI), or geopolitical headline could inject volatility into an otherwise quiet tape.\n- **VIX compression unwind**: VIX at 14.61 is historically suppressed. A sudden spike (even to 17-18) could compress SPY 1-2% intraday \u2014 well beyond the expected move for 0DTE.\n- **Options expiry dynamics**: P/C ratio of 1.07 is slightly elevated \u2014 if puts expire worthless into close, dealer delta unwind could provide a late-day lift (the classic \"gamma rally into close\").\n- **Tech sector drag**: Tech -0.7% is the weakest sector and QQQ -0.22%. A continued Tech selloff could weigh more heavily on SPY into tomorrow.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Resistance | $772.14 | 15m VWAP \u2014 reclaiming this flips intraday bias bullish |\n| Key Resistance | $777.88 | 20D resistance \u2014 breakout target for bulls |\n| 52W High / Hard Ceiling | $779.37 | All-time range cap |\n| Immediate Support | $770.79 | 5m VWAP \u2014 losing this accelerates intraday selling |\n| Key Support | $759.91 | Lower Bollinger Band |\n| Thesis-Changing Level | $757.67 | 20D support \u2014 breach here invalidates bull structure |\n\n**Critical level**: $772.14 (15m VWAP). Reclaim = call entry triggers. Sustained rejection = intraday drift continues but unlikely to move beyond expected move.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal clarity is moderate-bearish intraday but structurally bullish \u2014 the regime gate explicitly blocks PUT signals on SPY itself, and the realistic intraday bearish target (~$767-$768) would require a move of ~0.3-0.4% which is within expected move but lacks a clean CALL trigger since price hasn't reclaimed key VWAPs.** Tradeability caps this: no clean directional entry exists right now that satisfies both the regime gate and a viable strike/target combination with current momentum.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe regime gate explicitly prohibits PUT signals on SPY in a confirmed bull tape. CALL signals require price above at least one meaningful VWAP with momentum confirmation \u2014 price is currently below both 5m and 15m VWAPs with bearish MACD. The 1H is mixed. There is no clean CALL entry until SPY reclaims $772.14. Waiting is the correct position.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks PUTs on SPY in confirmed bull tape; CALL is the correct directional lean but price is currently below both 5m and 15m VWAPs with bearish MACD \u2014 no valid CALL trigger exists until SPY reclaims $772.14, at which point this setup should be re-evaluated immediately.\n```\n\n---\n\n**\u26a1 WATCH LIST TRIGGER**: Set alert at **$772.14**. If SPY reclaims the 15m VWAP on a volume-confirmed candle close (>0.8x avg) before 2:00 PM ET, this becomes a **1DTE CALL** setup targeting $774-$775 (0.5x expected move). Re-run analysis at that point.",
+        "confluence_score": 48,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks PUTs on SPY in confirmed bull tape; CALL is the correct directional lean but price is currently below both 5m and 15m VWAPs with bearish MACD \u2014 no valid CALL trigger exists until SPY reclaims $772.14, at which point this setup should be re-evaluated immediately."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6045
+      },
+      "was_flagged": false,
+      "cached_at": 1787935926.6245117,
+      "score": 48
     }
   },
-  "saved_at": "2026-08-28T12:40:40-04:00"
+  "saved_at": "2026-08-28T12:52:08-04:00"
 }
