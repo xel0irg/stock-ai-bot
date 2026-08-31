@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 314.2699890136719,
+      "price": 314.44500732421875,
       "volume_ratio": 0.0,
-      "ts": 1788193238.651841,
+      "ts": 1788193841.1991754,
       "last_full_scan_ts": 1788190888.6220767
     },
     "AMZN": {
-      "price": 261.04998779296875,
+      "price": 260.8550109863281,
       "volume_ratio": 0.0,
-      "ts": 1788193238.8923116,
+      "ts": 1788193841.436869,
       "last_full_scan_ts": 1788192700.9241238
     },
     "META": {
-      "price": 571.2999877929688,
+      "price": 570.6799926757812,
       "volume_ratio": 0.0,
-      "ts": 1788193239.1028523,
+      "ts": 1788193841.6629274,
       "last_full_scan_ts": 1788190934.1311784
     },
     "MSFT": {
-      "price": 510.5899963378906,
+      "price": 510.55999755859375,
       "volume_ratio": 0.0,
-      "ts": 1788193239.332413,
+      "ts": 1788193841.8939116,
       "last_full_scan_ts": 1788192758.9912565
     },
     "NVDA": {
-      "price": 219.83999633789062,
+      "price": 220.17999267578125,
       "volume_ratio": 0.0,
-      "ts": 1788193239.6059265,
+      "ts": 1788193842.1747937,
       "last_full_scan_ts": 1788192110.6192336
     },
     "QQQ": {
-      "price": 714.2899780273438,
+      "price": 714.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1788193239.873247,
+      "ts": 1788193842.4202373,
       "last_full_scan_ts": 1788191036.1440363
     },
     "SPY": {
-      "price": 765.6199951171875,
+      "price": 765.7700805664062,
       "volume_ratio": 0.0,
-      "ts": 1788193240.1556642,
+      "ts": 1788193842.8390958,
       "last_full_scan_ts": 1788191081.634867
     },
     "TSLA": {
-      "price": 366.125,
+      "price": 364.87200927734375,
       "volume_ratio": 0.0,
-      "ts": 1788193240.3919983,
-      "last_full_scan_ts": 1788191497.5885167
+      "ts": 1788193843.05048,
+      "last_full_scan_ts": 1788193885.607402
     }
   },
   "ai_cache": {
@@ -81,7 +81,39 @@
       "was_flagged": true,
       "cached_at": 1788187118.541824,
       "score": 48
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-08-31T16:31:25.597948",
+        "analysis": "# TSLA 0-2 DTE ANALYSIS \u2014 12:30 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a short-term momentum run (+4.62% today, +11.46% over 20 days) pressing directly into its 20-day resistance level at $364.87 \u2014 which is exactly the current price. The most plausible scenario over the next 5-15 days is a consolidation or shallow pullback from this resistance zone before any continuation attempt, as the stock is pinned at the upper Bollinger Band (0.977) with Stochastic deeply overbought at 94.76. A bullish continuation is possible but requires fresh catalyst; the base case is mean reversion toward the $355-358 zone.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **MACD Histogram +4.07 (Daily)** | Daily momentum remains firmly positive; trend buyers still in control |\n| **15m Timeframe: 4/4 bullish signals, 10.3x volume surge** | Strong intraday institutional participation confirming the up move this session |\n| **1H VWAP position: +1.13% above VWAP** | Intraday trend structure is bullish; dip buyers have been active |\n| **Analyst consensus BUY, PT $390** | ~7% upside to consensus target provides fundamental tailwind narrative |\n\n**Implication:** If TSLA holds above $364.87 and converts it to support, next target is $370-372 (next resistance cluster).\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Price at 20D Resistance + Upper Bollinger Band (0.977)** | TSLA is kissing a hard technical ceiling simultaneously on two indicators |\n| **Stochastic 94.76 / RSI(9) 1H at 78.45 \u2014 both deeply overbought** | Exhaustion readings at multi-timeframe level; reversion probability elevated |\n| **5m timeframe: 0 bull / 3 bear signals, price BELOW 5m VWAP** | Intraday momentum has stalled and reversed on the shortest timeframe |\n| **Sector (XLY) -0.29%, SPY -0.46%** | Broad market headwind; TSLA's relative outperformance may compress |\n\n**Implication:** Failure to break $364.87 cleanly risks a pullback toward $358-360 (EMA50/EMA9 1H confluence).\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found (0 articles):** Absence of news means the move today is technically/flow-driven \u2014 these can reverse quickly without a narrative anchor.\n- **Options flow neutral (P/C 0.7, 5 unusual calls / 5 unusual puts):** Perfectly balanced unusual activity suggests sophisticated players are hedging both directions \u2014 no edge from flow.\n- **Sector rotation risk:** XLY weakness and broad market softness (-0.46% SPY) could accelerate if afternoon selling intensifies.\n- **15m volume surge (10.3x avg):** This is the wildcard \u2014 it could be an institutional buyer establishing a position OR a distribution event. At resistance, distribution is the higher-risk interpretation.\n- **No earnings imminent:** Removes the binary event risk, which cuts both ways \u2014 no forced volatility catalyst for calls either.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$366.03** | Resistance | Upper Bollinger Band \u2014 hard ceiling; rejection here is high-probability |\n| **$364.87** | Resistance/Pivot | 20D Resistance = current price; must close above convincingly to be bullish |\n| **$360.84** | Support | 1H VWAP \u2014 loss of this flips 1H structure bearish |\n| **$358.15** | Support | EMA50 daily \u2014 meaningful mean-reversion target |\n| **$354.49** | Support | 1H EMA21 \u2014 deeper pullback target if $360 fails |\n| **$351.31** | Support | Daily EMA9 \u2014 would represent ~4% pullback, full mean reversion |\n\n**Thesis-changing level:** $366.03 break with volume = bull continuation. $360.84 break to the downside = bearish confirmation.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate (mixed timeframe conflict), and tradeability is constrained by price sitting exactly at resistance with the 5m already rolling over \u2014 the CALL entry trigger has not fired, and the expected move (\u00b1$4.34 for 0DTE) leaves a thin margin given resistance overhead; score capped at 52 because neither a CALL nor a PUT has clean, confirmed alignment sufficient for a 0-2 DTE entry right now.**\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the NO TRADE call)**\n\nReasoning: The 15m and 1H are bullish, but the 5m has turned bearish and price is sitting exactly at hard resistance ($364.87 = 20D resistance, $366.03 = upper BB). The CALL case requires a breakout above resistance that has not happened. The PUT case requires the 15m/1H structure to break down, which hasn't happened either. This is a textbook \"wait for resolution\" moment, not a forced entry in either direction.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 15m/1H remain bullish but 5m has rolled over bearish with price pinned exactly at 20D resistance and upper Bollinger Band simultaneously, giving neither a CALL breakout trigger nor a confirmed PUT breakdown; waiting for resolution above $366.03 (CALL) or below $360.84 (PUT) before entering.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 15m/1H remain bullish but 5m has rolled over bearish with price pinned exactly at 20D resistance and upper Bollinger Band simultaneously, giving neither a CALL breakout trigger nor a confirmed PUT breakdown; waiting for resolution above $366.03 (CALL) or below $360.84 (PUT) before entering."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6071
+      },
+      "was_flagged": true,
+      "cached_at": 1788193885.6074047,
+      "score": 52
     }
   },
-  "saved_at": "2026-08-31T12:20:40-04:00"
+  "saved_at": "2026-08-31T12:31:27-04:00"
 }
