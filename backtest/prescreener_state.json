@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 313.7088928222656,
+      "price": 313.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1788195660.3879178,
+      "ts": 1788196237.085867,
       "last_full_scan_ts": 1788194492.2375472
     },
     "AMZN": {
-      "price": 261.5400085449219,
+      "price": 261.07000732421875,
       "volume_ratio": 0.0,
-      "ts": 1788195660.8622246,
+      "ts": 1788196237.270184,
       "last_full_scan_ts": 1788192700.9241238
     },
     "META": {
-      "price": 571.3400268554688,
+      "price": 570.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1788195661.3397796,
+      "ts": 1788196237.4872353,
       "last_full_scan_ts": 1788195139.3423746
     },
     "MSFT": {
-      "price": 511.2099914550781,
+      "price": 511.06500244140625,
       "volume_ratio": 0.0,
-      "ts": 1788195661.700861,
+      "ts": 1788196237.7237082,
       "last_full_scan_ts": 1788192758.9912565
     },
     "NVDA": {
-      "price": 220.10499572753906,
+      "price": 219.87989807128906,
       "volume_ratio": 0.0,
-      "ts": 1788195662.0648313,
-      "last_full_scan_ts": 1788192110.6192336
+      "ts": 1788196237.980539,
+      "last_full_scan_ts": 1788196282.537759
     },
     "QQQ": {
-      "price": 714.9849853515625,
+      "price": 714.7061157226562,
       "volume_ratio": 0.0,
-      "ts": 1788195662.5514598,
+      "ts": 1788196238.3155687,
       "last_full_scan_ts": 1788195182.4842525
     },
     "SPY": {
-      "price": 765.739990234375,
+      "price": 765.6599731445312,
       "volume_ratio": 0.0,
-      "ts": 1788195662.9695737,
+      "ts": 1788196238.5892215,
       "last_full_scan_ts": 1788195228.096054
     },
     "TSLA": {
-      "price": 366.135009765625,
+      "price": 365.8299865722656,
       "volume_ratio": 0.0,
-      "ts": 1788195663.3231196,
+      "ts": 1788196238.780062,
       "last_full_scan_ts": 1788195092.4622476
     }
   },
@@ -53,9 +53,9 @@
     "NVDA": {
       "result": {
         "ticker": "NVDA",
-        "timestamp": "2026-08-31T16:01:50.606878",
-        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:01 PM ET | Price: $219.41**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is drifting lower intraday within a broader sideways range, trading below the 1H VWAP ($221.58) and 5m VWAP ($219.93) with weak volume (0.39x 20D average). The most plausible scenario over the next 5-15 days is continued consolidation between the 20D support ($208.48) and resistance ($227.98), with no strong catalyst to break either direction. Near-term, the mild bearish intraday drift likely continues toward the $217-218 zone before any meaningful bounce.\n\n---\n\n## 2. BULL CASE\n\n- **EMA Stack Upward**: EMA9 (217.68) > EMA21 (215.86) > EMA50 (213.27) \u2014 all rising and positively ordered on the daily; price sits above all three, indicating the medium-term trend is intact bullish.\n- **Strong Fundamentals + Analyst Consensus**: 58 analysts with STRONG_BUY consensus, $323 price target, PEG 0.63, and 127% earnings growth imply structural demand for dips.\n- **1D Return +0.85% / 5D +2.99%**: NVDA is outperforming the market regime modestly; it is up on the day even with SPY/QQQ both in the red.\n- **15m MACD Bullish (hist: +0.387)**: The 15m timeframe shows the most recent MACD signal turning positive, suggesting short-term momentum could re-assert upward from current levels.\n\n---\n\n## 3. BEAR CASE\n\n- **Below Both 1H and 5m VWAP**: Price is -0.98% below the 1H VWAP ($221.58) and below the 5m VWAP ($219.93) \u2014 intraday sellers are in control on the dominant timeframes.\n- **Daily MACD Histogram Negative (-0.331) + OBV Falling**: Daily momentum is decelerating and distribution is occurring on balance volume \u2014 institutional selling pressure is present.\n- **5m Bias: 3/3 Bearish Signals**: All three 5m signals (VWAP, EMA, 3-candle momentum -0.26%) are bearish \u2014 the cleanest directional read in the dataset.\n- **Extremely Low Volume (0.39x avg)**: Without volume conviction, any upward move lacks fuel. Low volume moves in a downward drift tend to continue rather than reverse.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Chip Policy / Export Controls**: NVDA is perpetually exposed to U.S.-China chip export headlines. Any surprise announcement (positive or negative) could move NVDA well beyond the expected move range instantly \u2014 a key risk for short-dated options sellers and buyers alike.\n- **Broad Market Reversal**: SPY/QQQ are mixed but leaning negative. A sharp afternoon SPY selloff (macro data, Fed speaker) would amplify NVDA's downside given its beta of 2.22.\n- **Options Expiry Dynamics**: Balanced unusual flow (5 calls / 5 puts flagged) suggests no dominant institutional directional bet \u2014 gamma exposure is likely neutral, reducing the chance of a pin or forced move.\n- **Volume Surge on 1H (3.57x avg)**: The 1H timeframe showed a volume surge \u2014 this could mark a capitulation or a distribution event. If it was selling volume, the move lower could accelerate; if buying, a base is forming. This is the key unresolved ambiguity.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $221.58 | 1H VWAP \u2014 reclaiming this flips intraday bias bullish |\n| **Near Resistance** | $219.93 | 5m VWAP \u2014 immediate overhead supply |\n| **Current Price** | $219.41 | \u2014 |\n| **Near Support** | $217.68 | Daily EMA9 \u2014 first meaningful daily support |\n| **Key Support** | $215.86 | Daily EMA21 \u2014 thesis-changing level; break here is materially bearish |\n| **20D Support** | $208.48 | Major floor; break = trend breakdown |\n| **Thesis Change (Bear)** | Close above $221.58 | Reclaim of 1H VWAP invalidates the intraday short setup |\n| **Thesis Change (Bull)** | Break below $217.68 | EMA9 break accelerates selling toward $215.86 |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\n**Signal clarity is moderate-bearish but tradeability caps this score.** The 5m is cleanly bearish (3/3), but 15m and 1H are mixed, the daily is up +0.85%, and the expected 0DTE move is only \u00b1$1.51 \u2014 leaving a PUT target at ~$217.90 barely outside a realistic 0.5x expected move entry, with confirmation requiring a trigger that hasn't been reached. Signals are not sufficiently aligned across timeframes to warrant a directional 0-2 DTE trade with high confidence, and the mixed intraday structure (15m ABOVE VWAP, 1H 3-candle momentum bullish) creates meaningful contradiction that elevates whipsaw risk on short-dated premium.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low-Medium confidence)**\n\nThe 5m is bearish but the 15m is mixed and the daily shows +0.85% gain with NVDA outperforming a weak market. Contradiction across timeframes is genuine \u2014 not manufactured. The bear signals do not have sufficient alignment to overcome the directional fairness requirement.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is 3/3 bearish but 15m is mixed (2B/2Br, MACD bullish, price above 15m VWAP), 1H 3-candle momentum is bullish, and NVDA is up +0.85% on the day outperforming a red SPY/QQQ, preventing sufficient directional confluence to justify 0-2 DTE premium risk.",
-        "confluence_score": 48,
+        "timestamp": "2026-08-31T17:11:22.524336",
+        "analysis": "# NVDA \u2014 0\u20132 DTE Options Analysis | 1:10 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is grinding sideways near $219.87 with modest positive 1D momentum (+1.07%) but deteriorating intraday structure \u2014 price is below the 1H VWAP, 5m MACD is negative, and OBV is falling. The most plausible scenario over the next 5\u201315 sessions is continued consolidation between $213\u2013$228, with a mild bearish lean near-term as the stock digests recent gains in a low-volume environment. No catalyst exists to break the stock decisively in either direction within 0\u20132 DTE.\n\n---\n\n## 2. BULL CASE\n\n- **+1.07% on the day with positive 5D/20D returns** \u2014 price has been trending higher; momentum is still mildly constructive on the daily timeframe.\n- **15m bias is BULLISH (3B/1Br)** \u2014 the setup confirmation timeframe shows short-term buyers in control above 15m VWAP ($219.78); this is the most important counter-signal to the bearish case.\n- **XLK +0.04% vs. broad market weakness** \u2014 Tech is marginally outperforming, providing slight sector tailwind.\n- **Analyst consensus STRONG BUY, PT $323** \u2014 47% upside from current price; institutional positioning skewed long structurally, making sharp downside harder to sustain.\n\n---\n\n## 3. BEAR CASE\n\n- **5m and 1H both BEARISH (0B/3Br each)** \u2014 the precision entry frame and trend frame both confirm sellers in control; price is below both 5m VWAP ($219.90) and 1H VWAP ($220.83).\n- **MACD histogram negative on daily (-0.3016) AND 5m (-0.035)** \u2014 momentum is fading at multiple timeframes simultaneously.\n- **OBV falling on LOW volume (0.46x 20D MA)** \u2014 distribution signal; buyers are not stepping in despite positive price. Low volume makes moves unreliable for premium extraction.\n- **Price below 1H EMA9 ($220.09)** \u2014 intraday downtrend intact on the trend timeframe; each bounce is failing before reclaiming the 1H anchor.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news detected** \u2014 absence of catalyst means any move is likely mechanical/flows-driven and potentially reversible; increases noise risk for 0-2 DTE.\n- **10 unusual options contracts flagged (5 calls / 5 puts)** \u2014 perfect split; no directional edge from unusual activity. Could indicate hedging or strangle positioning rather than directional conviction.\n- **Volume collapse (0.46x average)** \u2014 could precede a volume expansion move in either direction; a sudden volume surge would confirm whichever direction breaks.\n- **VIX at 15.15** \u2014 low and stable; no vol-expansion event expected. This compresses premiums and expected moves, making 0DTE trades harder to profit from unless price moves decisively.\n- **SPY/QQQ choppy** \u2014 a sudden macro event (Fed speaker, geopolitical) could whipsaw NVDA given its Beta of 2.215.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Strong Support | $213.29 | 50-day EMA; 20D support at $208.48 below |\n| Intraday Support | $217.77 | EMA9 (daily); near-term floor |\n| Current VWAP Cluster | $219.78\u2013$219.90 | 5m and 15m VWAP; battle line |\n| Resistance | $220.83 | 1H VWAP; reclaiming this flips intraday bias |\n| Key Resistance | $227.98 | 20D resistance; ceiling for any rally |\n| Thesis-Changer | $220.83 | Break and hold ABOVE = bearish thesis invalidated |\n\n**Critical level:** $220.83 (1H VWAP). A clean close above this on the 15m flips combined bias to bullish. A continued rejection here confirms bearish momentum.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate-bearish (5m + 1H bearish, 15m bullish = genuine conflict) and tradeability is severely capped by ultra-low volume (0.46x), narrow expected moves (0DTE \u00b1$1.25, 1DTE \u00b1$1.78), and the 15m bullish counter-signal that prevents high-conviction directional entry.** The contradicting 15m frame is not a minor outlier \u2014 it is the setup-confirmation timeframe, and it reads bullish. This prevents the score from reaching the 55+ tradeable threshold.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nContradiction between 15m BULLISH and 5m/1H BEARISH is structurally disqualifying. The 15m is the setup-confirmation timeframe per the scoring rubric \u2014 a bullish read there, combined with the stock being up on the day, prevents a PUT from clearing the threshold. A CALL cannot be supported while 5m and 1H are both 0B/3Br. Neither direction achieves clean alignment.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0\u20132 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m and 1H are both fully bearish (0B/3Br) while the setup-confirmation 15m is bullish (3B/1Br), and the stock is up +1.07% on the day; neither direction achieves the cross-timeframe alignment required for a viable 0\u20132 DTE premium trade, and the 0.46x volume collapse further reduces reliability of any directional breakout within the narrow expected move.",
+        "confluence_score": 52,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -73,14 +73,14 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is 3/3 bearish but 15m is mixed (2B/2Br, MACD bullish, price above 15m VWAP), 1H 3-candle momentum is bullish, and NVDA is up +0.85% on the day outperforming a red SPY/QQQ, preventing sufficient directional confluence to justify 0-2 DTE premium risk."
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m and 1H are both fully bearish (0B/3Br) while the setup-confirmation 15m is bullish (3B/1Br), and the stock is up +1.07% on the day; neither direction achieves the cross-timeframe alignment required for a viable 0\u20132 DTE premium trade, and the 0.46x volume collapse further reduces reliability of any directional breakout within the narrow expected move."
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6167
+        "tokens_used": 6072
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1788187118.541824,
-      "score": 48
+      "score": 52
     },
     "TSLA": {
       "result": {
@@ -179,5 +179,5 @@
       "score": 42
     }
   },
-  "saved_at": "2026-08-31T13:01:03-04:00"
+  "saved_at": "2026-08-31T13:11:24-04:00"
 }
