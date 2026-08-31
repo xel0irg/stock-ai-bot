@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 314.1499938964844,
+      "price": 314.5,
       "volume_ratio": 0.0,
-      "ts": 1788198035.3024147,
-      "last_full_scan_ts": 1788194492.2375472
+      "ts": 1788198639.1107836,
+      "last_full_scan_ts": 1788198684.9886453
     },
     "AMZN": {
-      "price": 260.8700866699219,
+      "price": 261.2669982910156,
       "volume_ratio": 0.0,
-      "ts": 1788198035.5239787,
+      "ts": 1788198639.3375075,
       "last_full_scan_ts": 1788196884.1348393
     },
     "META": {
-      "price": 571.8145751953125,
+      "price": 572.0250244140625,
       "volume_ratio": 0.0,
-      "ts": 1788198035.7867925,
+      "ts": 1788198639.6285946,
       "last_full_scan_ts": 1788195139.3423746
     },
     "MSFT": {
-      "price": 510.7250061035156,
+      "price": 511.1449890136719,
       "volume_ratio": 0.0,
-      "ts": 1788198036.070224,
+      "ts": 1788198639.902431,
       "last_full_scan_ts": 1788196927.5218916
     },
     "NVDA": {
-      "price": 219.3249969482422,
+      "price": 219.9499969482422,
       "volume_ratio": 0.0,
-      "ts": 1788198036.36483,
+      "ts": 1788198640.1393204,
       "last_full_scan_ts": 1788196282.537759
     },
     "QQQ": {
-      "price": 714.7050170898438,
+      "price": 715.4749755859375,
       "volume_ratio": 0.0,
-      "ts": 1788198036.6229084,
+      "ts": 1788198640.4472024,
       "last_full_scan_ts": 1788195182.4842525
     },
     "SPY": {
-      "price": 765.85498046875,
+      "price": 766.6099853515625,
       "volume_ratio": 0.0,
-      "ts": 1788198036.9344559,
+      "ts": 1788198640.7467093,
       "last_full_scan_ts": 1788195228.096054
     },
     "TSLA": {
-      "price": 366.875,
+      "price": 367.67999267578125,
       "volume_ratio": 0.0,
-      "ts": 1788198037.262123,
+      "ts": 1788198640.9759648,
       "last_full_scan_ts": 1788198097.5874126
     }
   },
@@ -209,7 +209,39 @@
       "was_flagged": false,
       "cached_at": 1788196927.5218945,
       "score": 48
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-08-31T17:51:24.978898",
+        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 1:50 PM ET | Price: $314.51**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is in a tug-of-war between short-term bullish intraday structure (5m/15m both cleanly bullish, above VWAP) and a bearish hourly tape (below 1H VWAP at $315.90, bearish 3-candle momentum). The most plausible scenario over the next 5-15 days is a continued grind toward analyst target of ~$324 with resistance first at $319.70, but **intraday today** the picture is messy: buyers are absorbing the 1D loss (-1.62%) on thin volume, suggesting a slow recovery attempt rather than a clean trending session. Price is likely to chop between $312.50-$317 today before resolving directionally.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **5m & 15m fully bullish (3/0 signals each)** | Short-term momentum is with buyers; price recovering intraday from the day's lows |\n| **MACD histogram +0.8658 (daily), bullish cross on 15m** | Multi-timeframe MACD alignment suggests intermediate momentum hasn't rolled over |\n| **Above 5m & 15m VWAP** | Intraday structure favors continuation higher; buyers in control on short timeframes |\n| **XLK +0.15% / OBV rising** | Sector supporting AAPL; accumulation pressure ongoing despite low volume |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **1H fully bearish (0/3 signals), below 1H VWAP $315.90** | The dominant hourly trend is down; 5m/15m recovery may be a dead-cat bounce |\n| **1D return -1.62% with volume 0.42x average** | Down day on thin volume \u2014 conviction behind selling is low, but buyers aren't showing up in size either |\n| **BB position 0.746 (upper half), price at $314.51** | Room to mean-revert toward midline ~$310; no imminent breakout setup |\n| **Stochastic K/D: 63.95/74.26 (K crossing below D)** | Stochastic near rollover; momentum fading near overbought zone |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news** (0 articles): Any macro headline (tariff news, Fed speaker) could move AAPL disproportionately given its $4.59T weight and Beta 1.086\n- **Options expiry imbalance**: 10 flagged unusual contracts split evenly 5C/5P \u2014 no directional edge but elevated event risk at key strikes\n- **Volume surge on 1H** (4.12x average): Someone is trading AAPL aggressively on the hourly \u2014 this is a red flag. A large player may be positioning for a move that the 5m/15m structure is not yet showing\n- **Analyst target gap**: $324.45 vs $314.51 = ~3.2% upside \u2014 could attract dip buyers but not a 0-2 DTE catalyst\n- **Time risk**: At 1:50 PM ET, we are entering the final decay window for 0DTE options \u2014 theta accelerates sharply here\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$319.70** | 20D Resistance | Hard ceiling; break above = momentum shift, failure = confirmed rejection |\n| **$315.90** | 1H VWAP | Reclaim this = hourly bias flips bullish and thesis strengthens materially |\n| **$314.32** | 15m VWAP | Current support; loss of this = 5m/15m structure breaks down |\n| **$313.46** | EMA9 (daily) | Near-term trend line; close below invalidates the intraday recovery |\n| **$311.99** | EMA50 | Meaningful intermediate support; a test here would be -0.8% from current |\n| **$302.25** | 20D Support | Structural floor; only relevant on a macro-driven breakdown |\n\n**Thesis-changing level**: $315.90 (1H VWAP). Reclaim it = CALL setup activates. Rejection here = PUT case strengthens.\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\n**Signal clarity is genuinely split**: 5m/15m are cleanly bullish but 1H is cleanly bearish \u2014 this is textbook timeframe conflict, not a directional trade. The 1H volume surge (4.12x) at a bearish bias is a meaningful warning signal that the intraday recovery may be fragile. Even if we leaned bullish (5m/15m), the realistic target for a CALL would be $315.90 (1H VWAP reclaim, ~+0.4%) \u2014 technically within 0.5x of the 1DTE expected move (\u00b1$2.39), so tradeability is borderline. However, with genuine timeframe conflict and the 1H structure actively bearish, signal clarity fails to support a trade. Score capped by mixed timeframe confluence \u2014 tradeability is marginal but signal conflict is the primary drag.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe 5m/15m vs 1H conflict is a genuine, irreconcilable split at 1:50 PM ET. Neither a CALL nor a PUT is supported with sufficient clarity. The 1H VWAP at $315.90 is the pivot \u2014 price must resolve through it before a direction is tradeable.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m and 15m are cleanly bullish (3/0) while 1H is cleanly bearish (0/3) with a 4.12x volume surge, making directional conviction insufficient for a 0-2 DTE options position at 1:50 PM ET with accelerating theta decay; wait for price to resolve above $315.90 (CALL trigger) or below $314.32 (PUT trigger) before entering.",
+        "confluence_score": 47,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m and 15m are cleanly bullish (3/0) while 1H is cleanly bearish (0/3) with a 4.12x volume surge, making directional conviction insufficient for a 0-2 DTE options position at 1:50 PM ET with accelerating theta decay; wait for price to resolve above $315.90 (CALL trigger) or below $314.32 (PUT trigger) before entering."
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6173
+      },
+      "was_flagged": false,
+      "cached_at": 1788198684.9886494,
+      "score": 47
     }
   },
-  "saved_at": "2026-08-31T13:41:39-04:00"
+  "saved_at": "2026-08-31T13:51:26-04:00"
 }
