@@ -213,7 +213,7 @@
   "verdict": "TRADE",
   "message_id": "1542914558195404870",
   "signal_time": "2026-08-28T11:11:36-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "TSLA",
@@ -246,5 +246,89 @@
   "status": "TRIGGERED",
   "trigger_time": "2026-08-28T12:45:00-04:00",
   "trigger_close": 219.77
+ },
+ {
+  "ticker": "AAPL",
+  "direction": "PUT",
+  "trigger": 314.9,
+  "strike": 315.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on continuation below $315.00 with price holding below 15m VWAP ($317.58) and NO 5m candle closing above EMA9 ($316.27) \u2014 do NOT chase into the oversold print, wait for a modest stabilization (RSI 25\u201335 range) then re-break lower.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1543991756293677189",
+  "signal_time": "2026-08-31T10:32:01-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 260.0,
+  "strike": 260.0,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on a 15-minute candle close that holds below $260.05 with a rejection from 5m EMA9 ($260.51) and volume at or above 1.0x average confirming continued selling pressure rather than a dead-cat bounce.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1543992005976268831",
+  "signal_time": "2026-08-31T10:33:00-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "META",
+  "direction": "PUT",
+  "trigger": 570.0,
+  "strike": 567.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on 15m candle close that holds below $570.00 with price continuing to reject the $572.72 EMA9 level, confirming no bounce absorption \u2014 do not chase; wait for price to stay below $570 rather than spike to it.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1543992256820674593",
+  "signal_time": "2026-08-31T10:34:00-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "PUT",
+  "trigger": 509.17,
+  "strike": 510.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15-minute candle close that holds below $509.17 with no VWAP reclaim attempt and volume at or above 0.5x the 15m average \u2014 do not chase; wait for a failed bounce into the $510.50\u2013$511.98 VWAP zone that gets rejected",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1543992501071777936",
+  "signal_time": "2026-08-31T10:34:58-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 713.63,
+  "strike": 713.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a 15-minute candle close below $713.63 with price remaining below the 15m VWAP ($714.97) and volume at or above 0.5x average \u2014 do not chase; wait for the candle close to confirm no recovery.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1543992697088639066",
+  "signal_time": "2026-08-31T10:35:45-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "SPY",
+  "direction": "PUT",
+  "trigger": 764.95,
+  "strike": 765.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a 15m candle close below $764.95 (EMA21 on 15m) with volume recovering above 0.5x average, confirming the breakdown is not a low-volume fake \u2014 do NOT chase on current paper-thin volume alone.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1543992953456824372",
+  "signal_time": "2026-08-31T10:36:46-04:00",
+  "status": "PENDING"
  }
 ]
