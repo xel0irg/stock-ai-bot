@@ -53,6 +53,8 @@ FIELDS = [
     "expiry_date",          # actual calendar date of the contract (YYYY-MM-DD)
     "dte_label",            # 0DTE / 1DTE / 2DTE as the AI chose
     "confluence_score",
+    "posted",               # yes/no — did this signal clear the Discord
+                            # feed cutoff and actually reach members
     # ── entry snapshots ──
     "stock_at_signal",
     "premium_at_signal",    # mid price when the signal fired
@@ -93,6 +95,27 @@ def _now_et() -> datetime:
 
 def _signal_id(ticker: str, signal_time: str) -> str:
     return f"{ticker}_{signal_time}"
+
+
+def _stock_last(ticker: str) -> Optional[float]:
+    """Latest stock price. Alpaca is not used here (options-only helper
+    surface), so this falls back to yfinance. Returns None on any failure —
+    a blank cell is preferable to a wrong close."""
+    try:
+        import yfinance as yf
+        df = yf.download(ticker, period="1d", interval="5m",
+                         progress=False, auto_adjust=True)
+        if df is None or df.empty or "Close" not in df:
+            return None
+        close = df["Close"]
+        if hasattr(close, "columns"):
+            close = close.iloc[:, 0]
+        close = close.dropna()
+        if close.empty:
+            return None
+        return round(float(close.iloc[-1]), 2)
+    except Exception:
+        return None
 
 
 def _option_mid(ticker: str, contract_type: str, strike: float,
@@ -274,12 +297,34 @@ def open_paper_trade(ticker: str, ai: Dict[str, Any]) -> None:
     signal_time = _now_et().isoformat(timespec="seconds")
     sid = _signal_id(ticker, signal_time)
 
+    # Did this signal actually reach Discord? Mirrors the notifier's cutoff.
+    try:
+        from core.discord_notifier import FEED_MIN_SCORE as _CUTOFF
+    except Exception:
+        _CUTOFF = 65
+    try:
+        _score = float(ai.get("confluence_score") or 0)
+    except (TypeError, ValueError):
+        _score = 0.0
+    posted = "yes" if _score >= _CUTOFF else "no"
+
     rows = _load()
-    # De-dup: one open paper trade per ticker+direction at a time
+    # De-dup: one open paper trade per ticker+direction PER TIER.
+    #
+    # Fixed 2026-08-30. Previously any open trade for the ticker+direction
+    # blocked a new one, so a sub-cutoff morning signal claimed the slot and
+    # the posted signal that members actually saw was never tracked — 6 of
+    # 17 posted signals in the Aug 24-28 week had no P&L for this reason.
+    # Keying on tier keeps the sub-cutoff shadow data (useful for testing
+    # whether the cutoff earns its keep) while guaranteeing every posted
+    # signal gets its own measured row.
     for r in rows:
         if (r["ticker"] == ticker and r["contract_type"] == ct
-                and r["status"] == "OPEN"):
-            log.info(f"{ticker} {ct}: paper trade already open — not duplicating")
+                and r["status"] == "OPEN"
+                and (r.get("posted") or "no") == posted):
+            log.info(f"{ticker} {ct}: paper trade already open in the "
+                     f"{'posted' if posted == 'yes' else 'shadow'} tier "
+                     f"— not duplicating")
             return
 
     # Snap to a strike that actually exists on the chain before pricing
@@ -303,6 +348,7 @@ def open_paper_trade(ticker: str, ai: Dict[str, Any]) -> None:
         "expiry_date":       expiry_date,
         "dte_label":         dte_label,
         "confluence_score":  ai.get("confluence_score", ""),
+        "posted":            posted,
         "stock_at_signal":   stock or "",
         "premium_at_signal": premium,
         "entry_trigger":     ts.get("entry_trigger", ""),
@@ -437,6 +483,15 @@ def close_out_trades() -> None:
         strike = _f("strike")
         close_prem = _option_mid(tk, ct, strike, r["expiry_date"])
         r["premium_at_close"] = close_prem if close_prem is not None else ""
+
+        # Closing STOCK price. The column has existed since the tracker was
+        # written but was never populated (0 of 123 rows as of 2026-08-22),
+        # which made it impossible to measure whether the bot's directional
+        # call was right — only what the option did. Without this, the null
+        # test can only run off signals_log outcomes.
+        stock_close = _stock_last(tk)
+        if stock_close is not None:
+            r["stock_at_close"] = stock_close
 
         p_signal  = _f("premium_at_signal")
         p_trigger = _f("premium_at_trigger")

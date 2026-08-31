@@ -52,6 +52,37 @@ def _now_et() -> datetime:
     return datetime.now(ET)
 
 
+def _expire_stale(rows: List[dict], now: Optional[datetime] = None) -> bool:
+    """
+    Mark PENDING watches EXPIRED once they are older than WATCH_HOURS *or*
+    were registered on an earlier ET day. Returns True if anything changed.
+
+    Fixed 2026-08-30. Expiry used to live only inside check_triggers(), and
+    WATCH_HOURS is 4 while the scan window ends early afternoon — so a
+    late-morning signal was never swept and survived the night as PENDING.
+    register() skips a ticker+direction that already has a PENDING row, so
+    the stale entry silently blocked the next day's signal from ever being
+    watched (TSLA PUT, 2026-08-26: posted to members, never monitored).
+    """
+    now = now or _now_et()
+    changed = False
+    for r in rows:
+        if r.get("status") != "PENDING":
+            continue
+        try:
+            sig_t = datetime.fromisoformat(r["signal_time"])
+        except Exception:
+            sig_t = now
+        stale_age = (now - sig_t) > timedelta(hours=WATCH_HOURS)
+        stale_day = sig_t.date() != now.date()
+        if stale_age or stale_day:
+            r["status"] = "EXPIRED"
+            changed = True
+            log.info(f"Expired stale watch: {r.get('ticker')} "
+                     f"{r.get('direction')} from {r.get('signal_time')}")
+    return changed
+
+
 def _load() -> List[dict]:
     if not STATE_FILE.exists():
         return []
@@ -73,14 +104,43 @@ def _save(rows: List[dict]) -> None:
 
 def _parse_volume_multiple(entry_condition: str) -> Optional[float]:
     """
-    Pull the required volume multiple out of the entry condition text,
+    Pull the required MINIMUM volume multiple out of the entry condition,
     e.g. "...with volume at or above 0.8x the 15m average" -> 0.8.
-    Returns None if the condition doesn't state one.
+
+    Fixed 2026-08-30. The old version grabbed the first "<number>x" in the
+    string regardless of meaning, so a condition phrased as a CEILING —
+    "no volume expansion above 1.5x avg", "no volume reversal above 0.5x"
+    — was stored as a FLOOR. The watcher then told members "volume short,
+    entry not met" when the card actually wanted volume to stay low, and
+    vice versa. Roughly a third of the Aug 24-28 week's parsed multiples
+    had inverted meaning.
+
+    Now: the match must be volume-related, and any negated phrasing
+    ("no ... above Nx", "without ... above Nx", "unless") returns None so
+    the alert reports the observed ratio as information instead of
+    rendering a verdict it cannot justify. None is the honest answer for
+    a condition this parser does not model.
     """
     if not entry_condition:
         return None
-    m = re.search(r"([\d.]+)\s*x\b", entry_condition, re.IGNORECASE)
-    if m:
+
+    text = entry_condition.lower()
+    for m in re.finditer(r"([\d.]+)\s*x\b", text):
+        # Window before the number decides whether it is a floor at all.
+        start = max(0, m.start() - 90)
+        before = text[start:m.start()]
+        after = text[m.end():m.end() + 40]
+        context = before + " " + after
+
+        if "volume" not in context and "vol " not in context:
+            continue  # "1.5x ATR", "2x the range" — not a volume gate
+        if re.search(r"\b(no|not|without|unless|avoid|fails? to|"
+                     r"does ?n[o']t)\b", before):
+            return None  # ceiling or negated condition — not a minimum
+        if not re.search(r"\b(above|over|at least|minimum|exceed|"
+                         r"greater|>=?|at or above)\b", before):
+            return None  # cannot confirm it is a floor; do not guess
+
         try:
             return float(m.group(1))
         except ValueError:
@@ -104,6 +164,10 @@ def register(ticker: str, ai: Dict[str, Any], message_id: str = "") -> None:
         return
 
     rows = _load()
+    # Sweep stale watches BEFORE the pending check, or yesterday's row
+    # blocks today's signal from ever being registered.
+    if _expire_stale(rows):
+        _save(rows)
     # Don't double-register the same ticker+direction while one is pending
     for r in rows:
         if (r.get("ticker") == ticker and r.get("direction") == direction
@@ -183,19 +247,13 @@ def check_and_alert(webhook_url: str = "") -> None:
     now = _now_et()
     changed = False
 
+    if _expire_stale(rows, now):
+        changed = True
+
     for r in rows:
         if r.get("status") != "PENDING":
             continue
 
-        # Expire stale watches
-        try:
-            sig_t = datetime.fromisoformat(r["signal_time"])
-        except Exception:
-            sig_t = now
-        if now - sig_t > timedelta(hours=WATCH_HOURS):
-            r["status"] = "EXPIRED"
-            changed = True
-            continue
 
         ticker    = r["ticker"]
         direction = r["direction"]
@@ -284,10 +342,16 @@ def _post_trigger_alert(webhook_url: str, r: dict, close: float,
         headline = "⚠️ **PRICE TRIGGER HIT — VOLUME FAILED**"
         colour   = 0xE0B53C
     else:
+        # No volume floor could be read from the card, so nothing was
+        # verified. This used to render with the same green headline as a
+        # confirmed entry, which made "checked and passed" and "never
+        # checked" indistinguishable to a member skimming the channel.
         vr = f"{vol_ratio:.2f}x" if vol_ratio is not None else "n/a"
-        vol_line = f"ℹ️ Volume on that candle: {vr} (no multiple stated on the card)"
-        headline = "🎯 **ENTRY TRIGGER HIT**"
-        colour   = 0x3FB950
+        vol_line = (f"ℹ️ Volume on that candle: {vr} — the card states no "
+                    f"volume floor, so nothing was verified here. Check the "
+                    f"card's avoid-if conditions yourself.")
+        headline = "🔎 **PRICE TRIGGER HIT — VOLUME NOT CHECKED**"
+        colour   = 0x4A90E2
 
     prem_line = f"\n💵 Premium now: **${premium}**" if premium is not None else ""
     strike_line = f" ${strike}" if strike else ""

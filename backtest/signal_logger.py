@@ -89,23 +89,54 @@ def _ensure_log_exists():
             writer.writerow({k: row.get(k, "") for k in FIELDNAMES})
 
 
-def _extract_stop_level(stop_rule_text: str, contract_type: str) -> float | None:
+def _extract_stop_level(stop_rule_text: str, contract_type: str,
+                        ref_price: float | None = None) -> float | None:
     """
-    Best-effort extraction of a numeric stop level from the AI's
-    free-text stop_rule field, e.g. "Exit if SPY closes 15m candle
-    above $734.00" -> 734.00
+    Extract a numeric STOCK stop level from the AI's free-text stop_rule,
+    e.g. "Exit if SPY closes a 15m candle above $734.00" -> 734.00
+
+    Fixed 2026-08-30. The previous version took the first number of any
+    kind, so "exit if premium drops 15%" logged a stop level of 15.0 —
+    797 of 1779 historical rows carry that value, and because
+    paper_tracker compares the stock price against it, hit_stop could
+    never fire (no stock is ever <= $15). Now:
+      * only $-prefixed figures count, so percentages are ignored
+      * a match immediately followed by '%' is rejected outright
+      * when a reference price is known, the level must sit within
+        +/-25% of it, which rules out strike counts, RSI values and
+        candle counts that happen to carry a dollar sign
+    Returns None rather than a wrong number — a blank is honest, a
+    plausible-looking wrong value silently corrupts every downstream
+    stop statistic.
     """
     import re
     if not stop_rule_text:
         return None
-    matches = re.findall(r"\$?(\d{1,6}(?:\.\d{1,2})?)", stop_rule_text)
-    if not matches:
+
+    candidates = []
+    for m in re.finditer(r"\$\s?(\d{1,6}(?:\.\d{1,2})?)", stop_rule_text):
+        tail = stop_rule_text[m.end():m.end() + 1]
+        if tail == "%":
+            continue
+        try:
+            candidates.append(float(m.group(1)))
+        except ValueError:
+            continue
+    if not candidates:
         return None
-    # Heuristic: the stop level is usually the first dollar figure mentioned
-    try:
-        return float(matches[0])
-    except (ValueError, IndexError):
-        return None
+
+    if ref_price:
+        try:
+            ref = float(ref_price)
+            plausible = [c for c in candidates
+                         if ref * 0.75 <= c <= ref * 1.25]
+            if not plausible:
+                return None
+            candidates = plausible
+        except (TypeError, ValueError):
+            pass
+
+    return candidates[0]
 
 
 def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
@@ -144,7 +175,8 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
             "stock_target":      trade_setup.get("stock_target"),
             "stop_level":        _extract_stop_level(
                                      trade_setup.get("stop_rule", ""),
-                                     trade_setup.get("contract_type", "")
+                                     trade_setup.get("contract_type", ""),
+                                     price
                                  ),
             "expiry":            trade_setup.get("expiry"),
             "entry_trigger":     trade_setup.get("entry_trigger"),
