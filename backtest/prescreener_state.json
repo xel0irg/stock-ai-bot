@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 314.67999267578125,
+      "price": 314.07501220703125,
       "volume_ratio": 0.0,
-      "ts": 1788192047.371666,
+      "ts": 1788192642.6577146,
       "last_full_scan_ts": 1788190888.6220767
     },
     "AMZN": {
-      "price": 260.8699951171875,
+      "price": 261.1600036621094,
       "volume_ratio": 0.0,
-      "ts": 1788192047.6467752,
-      "last_full_scan_ts": 1788188492.286147
+      "ts": 1788192643.063185,
+      "last_full_scan_ts": 1788192700.9241238
     },
     "META": {
-      "price": 570.7899780273438,
+      "price": 570.9199829101562,
       "volume_ratio": 0.0,
-      "ts": 1788192047.943219,
+      "ts": 1788192643.354883,
       "last_full_scan_ts": 1788190934.1311784
     },
     "MSFT": {
-      "price": 509.9372863769531,
+      "price": 510.0400085449219,
       "volume_ratio": 0.0,
-      "ts": 1788192048.2598944,
-      "last_full_scan_ts": 1788188536.4069068
+      "ts": 1788192643.6922593,
+      "last_full_scan_ts": 1788192758.9912565
     },
     "NVDA": {
-      "price": 219.41000366210938,
+      "price": 219.41990661621094,
       "volume_ratio": 0.0,
-      "ts": 1788192048.597183,
+      "ts": 1788192644.0435135,
       "last_full_scan_ts": 1788192110.6192336
     },
     "QQQ": {
-      "price": 713.7750244140625,
+      "price": 713.969970703125,
       "volume_ratio": 0.0,
-      "ts": 1788192048.8756697,
+      "ts": 1788192644.5359912,
       "last_full_scan_ts": 1788191036.1440363
     },
     "SPY": {
-      "price": 765.3400268554688,
+      "price": 765.280029296875,
       "volume_ratio": 0.0,
-      "ts": 1788192049.2720726,
+      "ts": 1788192645.0103967,
       "last_full_scan_ts": 1788191081.634867
     },
     "TSLA": {
-      "price": 365.37811279296875,
+      "price": 365.3999938964844,
       "volume_ratio": 0.0,
-      "ts": 1788192049.5264804,
+      "ts": 1788192645.2511797,
       "last_full_scan_ts": 1788191497.5885167
     }
   },
@@ -81,39 +81,7 @@
       "was_flagged": true,
       "cached_at": 1788187118.541824,
       "score": 48
-    },
-    "MSFT": {
-      "result": {
-        "ticker": "MSFT",
-        "timestamp": "2026-08-31T15:02:16.402926",
-        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:01 AM ET | Price: $512.14**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has ripped ~4% in the past 5 days and is now pinned against upper Bollinger Band resistance at $513.98 with RSI at 72 and Stochastic at 86 \u2014 both overbought on the daily. The most plausible scenario over the next 5-15 days is a mean-reversion pullback toward the $495-500 zone, but the **intraday** picture (price above 5m and 1H VWAP, 5m momentum positive) shows buyers still control the tape this morning. For 0-2 DTE specifically, the stock is coiling at resistance with mixed signals \u2014 a decisive break above $513.98 or rejection below $509 defines the near-term path.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **5D/20D return +4%** | Strong momentum; buyers absorbing supply at highs |\n| **Price above 5m and 1H VWAP** | Intraday structure favors longs; sellers not in control at 11 AM |\n| **Tech sector (XLK) +0.09% vs negative broad market** | Relative strength; MSFT getting institutional rotation |\n| **Analyst PT $569 / Strong Buy from 52 analysts** | Fundamental backstop; dip-buyers likely at key levels |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **RSI 72.38 + Stochastic 86/85 (daily overbought)** | Extended \u2014 historically mean-reverts within 1-5 sessions |\n| **MACD Histogram -0.62 (daily bearish divergence)** | Momentum fading even as price holds highs \u2014 distribution signal |\n| **Bollinger Band position 0.954 / Upper Band $513.98** | Price at statistical extreme; upper band is dynamic resistance |\n| **Volume 0.21x 20D average** | This 4-day rally has zero volume conviction \u2014 weak hands at highs |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **10 SEC filings in 90 days** \u2014 worth monitoring; any material disclosure not yet priced in\n- **No earnings imminent** \u2014 removes the most obvious binary catalyst, keeping vol suppressed\n- **VIX at 15.24** \u2014 low IV means options are cheap but expected moves are narrow ($3.99 for 0DTE); a macro shock (FOMC speaker, geopolitical) could spike vol and wipe short-dated positions\n- **Options flow is perfectly balanced (5 unusual calls / 5 unusual puts, P/C 0.87)** \u2014 market makers are hedged; a sudden flow imbalance would be a strong tell\n- **Low volume (0.21x)** \u2014 if institutional volume surges, direction of that volume determines next move; currently a vacuum\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$513.98** | Resistance | Bollinger Upper Band; 20D Resistance at $513.53 \u2014 twin ceiling |\n| **$512.05** | Pivot | 15m VWAP; price currently just below this \u2014 critical for bias |\n| **$509.05** | Support | 5m VWAP; holding above this is bullish for intraday |\n| **$506.61** | Support | 1H EMA21 \u2014 major intraday support; break changes thesis bearish |\n| **$499.08** | Support | EMA9 daily; not relevant for 0-2 DTE |\n| **$479.45** | Deep support | 20D support \u2014 only relevant on sustained breakdown |\n\n**Thesis-changing level:** $512.05 (15m VWAP). Price holding above = call bias. Decisive close below with volume = put bias.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Score rationale:** Signal clarity is poor \u2014 MACD and RSI are bearish/overbought on the daily but intraday structure is mixed-to-bullish (price above 5m and 1H VWAP, positive 5m momentum, green sector). The timeframes do NOT align in any one direction per the confluence rules. Tradeability is further capped by the fact that the low-volume, chop environment at resistance with a $3.99 0DTE expected move and a tight $513.98 ceiling provides no clean directional edge \u2014 any move is as likely to oscillate within the band as to trend. Score is capped in the 31-54 range: contradictory intraday signals prevent a clean directional read, and the realistic reward does not justify theta risk on either side.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in no-trade call)**\n\nThe data genuinely conflicts: daily technicals are overbought/bearish, intraday structure is mixed-to-bullish, volume is absent, and options flow is balanced. This is not a NONE from risk-aversion \u2014 it is a NONE because the timeframe signals are internally contradictory and no edge exists to overcome severe 0-2 DTE theta.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 daily overbought/MACD bearish but intraday 5m and 1H price is above VWAP with positive momentum, low volume prevents conviction in either direction, and balanced options flow (5 unusual calls / 5 unusual puts) offers no edge to overcome extreme theta decay on 0-2 DTE paper.",
-        "confluence_score": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 daily overbought/MACD bearish but intraday 5m and 1H price is above VWAP with positive momentum, low volume prevents conviction in either direction, and balanced options flow (5 unusual calls / 5 unusual puts) offers no edge to overcome extreme theta decay on 0-2 DTE paper."
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 5997
-      },
-      "was_flagged": true,
-      "cached_at": 1788188536.4069102,
-      "score": 42
     }
   },
-  "saved_at": "2026-08-31T12:01:52-04:00"
+  "saved_at": "2026-08-31T12:12:40-04:00"
 }
