@@ -1,61 +1,61 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 326.69000244140625,
+      "price": 326.2099914550781,
       "volume_ratio": 0.0,
-      "ts": 1788280246.2490282,
+      "ts": 1788280838.1577468,
       "last_full_scan_ts": 1788280298.2984812
     },
     "AMZN": {
-      "price": 254.36000061035156,
+      "price": 254.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1788280246.4727833,
+      "ts": 1788280838.3818445,
       "last_full_scan_ts": 1788278543.7543786
     },
     "META": {
-      "price": 580.2899780273438,
+      "price": 580.593994140625,
       "volume_ratio": 0.0,
-      "ts": 1788280246.6841874,
+      "ts": 1788280838.5831568,
       "last_full_scan_ts": 1788279101.3603413
     },
     "MSFT": {
-      "price": 500.4200134277344,
+      "price": 499.7101135253906,
       "volume_ratio": 0.0,
-      "ts": 1788280246.959453,
+      "ts": 1788280838.9953897,
       "last_full_scan_ts": 1788278589.7825587
     },
     "NVDA": {
-      "price": 219.49000549316406,
+      "price": 219.35989379882812,
       "volume_ratio": 0.0,
-      "ts": 1788280247.1676538,
-      "last_full_scan_ts": 1788276684.727457
+      "ts": 1788280839.2909088,
+      "last_full_scan_ts": 1788280945.4986465
     },
     "QQQ": {
-      "price": 708.6099853515625,
+      "price": 708.489990234375,
       "volume_ratio": 0.0,
-      "ts": 1788280247.4122024,
+      "ts": 1788280839.546782,
       "last_full_scan_ts": 1788277342.9777637
     },
     "SPY": {
-      "price": 762.135009765625,
+      "price": 762.1699829101562,
       "volume_ratio": 0.0,
-      "ts": 1788280247.6461856,
+      "ts": 1788280839.779695,
       "last_full_scan_ts": 1788277384.104245
     },
     "TSLA": {
-      "price": 356.4200134277344,
+      "price": 357.6050109863281,
       "volume_ratio": 0.0,
-      "ts": 1788280247.8415968,
-      "last_full_scan_ts": 1788280340.799948
+      "ts": 1788280839.9400918,
+      "last_full_scan_ts": 1788280892.1833005
     }
   },
   "ai_cache": {
     "NVDA": {
       "result": {
         "ticker": "NVDA",
-        "timestamp": "2026-09-01T15:31:24.716514",
-        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:30 AM ET | Price: $218.95**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is holding above VWAP across all three intraday timeframes with clean short-term bullish momentum on the 5m and 15m, but the 1H is mixed-to-bearish and the daily MACD is printing negative histogram. The most plausible scenario over 5-15 sessions is continued range consolidation between $213\u2013$227, with near-term intraday bias slightly upward as price holds above the $218 VWAP cluster. A decisive move in either direction requires a volume catalyst that is currently absent \u2014 volume is running at only 32% of its 20-day average.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Price above VWAP on all 3 intraday TFs** (5m/15m/1H) | Market participants are consistently buying dips to VWAP \u2014 structural intraday demand |\n| **15m MACD Bullish Cross** (hist: +0.0074) | Momentum is inflecting upward on the confirmation timeframe |\n| **5m & 15m 3-candle momentum** (+0.36% / +0.41%) | Fresh price action is directionally bullish |\n| **OBV Rising + Strong Fundamentals** (Forward P/E 14.2, PEG 0.56, analyst PT $323) | Institutional accumulation underpinning; no distribution signal |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Daily MACD Histogram: -0.2474** | Intermediate-term momentum is pointed down; bears control the daily chart |\n| **Tech sector -1.21% today; QQQ -0.88%** | NVDA is swimming against a red sector \u2014 headwind for a sustained intraday rally |\n| **5m RSI 73.55 (Overbought)** | Short-term move may be exhausted; overhead resistance likely near current price |\n| **Volume 0.32x 20D avg** | Anemic volume means bullish intraday price action lacks conviction \u2014 any rally can fail quickly |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume spike**: Any institutional order flow entering the tape could directionally resolve the low-volume drift \u2014 watch for a volume surge above 1.5x avg as a confirmation trigger\n- **Macro tape**: QQQ -0.88% and tech sector -1.21%; if SPY accelerates downward, NVDA beta of 2.2 creates outsized downside risk intraday\n- **No news / no earnings**: Absence of catalyst cuts both ways \u2014 supports range-bound behavior but also means there's no fuel for an explosive directional move\n- **Options expiry dynamics**: Balanced P/C ratio (0.83) with 5 unusual calls + 5 unusual puts flagged suggests market makers are hedged \u2014 no strong pinning force either direction, but near-$220 strike is worth watching as a potential magnet\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$219.50\u2013$220.00** | Near-term resistance | Round number + area where 5m RSI overbought may stall price |\n| **$218.05\u2013$218.15** | Critical intraday support | VWAP cluster (5m VWAP $218.06 + EMA9 $218.15) \u2014 bulls must hold this |\n| **$216.26** | Secondary support | EMA21 (daily) \u2014 loss of this signals intraday trend breakdown |\n| **$213.55** | Key technical support | EMA50 (daily) \u2014 defines the higher-low structure |\n| **$227.98** | 20D resistance | Upper range ceiling; target on any sustained breakout |\n| **$208.48** | 20D support / thesis invalidation | Loss of this flips the 20D range bearish structurally |\n\n**Thesis-changing level**: A close below $218.05 VWAP flips intraday bias bearish; a push above $220 with volume confirms bulls regained control.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate but contradictory across timeframes (5m/15m bullish vs. 1H mixed, daily MACD bearish), and tradeability is the binding constraint \u2014 the 5m RSI is already overbought at 73.55 with no volume to sustain a breakout, making a CALL entry late, while the bearish case lacks the alignment and sector-specific downside catalyst needed to confidently sell a PUT at this price.** The setup resolves to a low-conviction trade where theta decay on 0-2 DTE options would likely erode premium before directional resolution occurs.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the NO TRADE call)**\n\nThe intraday structure is leaning bullish but the entry point for CALLs is compromised by an overbought 5m RSI and anemic volume. The bearish case exists but lacks the timeframe alignment (only daily MACD + sector context) required to justify a PUT at this price level. This is a genuine conflict, not a default.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict \u2014 5m/15m intraday structure is bullish but CALL entry is compromised by overbought 5m RSI (73.55) with volume at 0.32x average providing no momentum fuel, while the bearish case (daily MACD negative, tech sector -1.21%) lacks the intraday timeframe alignment needed for a PUT; theta decay would likely win before directional resolution occurs.",
-        "confluence_score": 52,
+        "timestamp": "2026-09-01T16:42:25.493665",
+        "analysis": "# NVDA \u2014 0-2 DTE Options Analysis\n**Time: 12:41 PM ET | Price: $219.36**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is drifting slightly lower in a low-volume, choppy session alongside a weak Tech sector (-1.47%) and soft broad market (QQQ -1.13%). The most plausible scenario over the next 5-15 days is sideways-to-mild-upside consolidation between ~$213-$228, with the stock digesting recent 5-day gains (+4.63%) in the absence of a near-term catalyst. Today's intraday structure is genuinely mixed \u2014 the 5m is bearish but the 15m and 1H lean bullish \u2014 creating a low-conviction, range-bound session rather than a clean trending day.\n\n---\n\n## 2. BULL CASE\n\n- **OBV Rising:** On-balance volume trend is positive, indicating accumulation beneath the surface despite today's light volume \u2014 institutional buying not fully visible in price yet.\n- **15m and 1H Above VWAP:** Price sits above both the 15m ($218.21) and 1H ($218.67) VWAPs, the more reliable intraday trend anchors. This structural position favors continuation, not breakdown.\n- **Strong Analyst Consensus + Forward Valuation:** 58 analysts at STRONG_BUY, $323 price target, Forward P/E of 14.24 with PEG of 0.56 \u2014 deeply undervalued on a growth-adjusted basis. Long-term institutional support provides a floor.\n- **No Reversal/Exhaustion Signal:** Reversal risk scores 0/100. The mild intraday bearish drift has no volume confirmation, no MACD divergence, no VWAP extension \u2014 this is drift, not distribution.\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD Histogram Negative (-0.2213):** The daily-level momentum indicator is in bearish territory, suggesting the 5-day rally is losing steam at the intermediate timeframe.\n- **5m Structure Full Bear (0 Bull / 3 Bear signals):** All three 5-minute signals (VWAP, MACD, 3-candle momentum) are bearish, indicating short-term selling pressure into the early afternoon.\n- **Volume Critically Low (0.43x 20D MA):** Today's volume is less than half the 20-day average. Low volume moves are unreliable and reduce the probability of a sustained directional move \u2014 this cuts against both directions but particularly hurts call setups that need momentum.\n- **Tech Sector Weak (-1.47%) + QQQ -1.13%:** NVDA's sector is one of today's worst performers. Macro headwinds are a real drag, and NVDA is not showing relative strength (it's down -0.64% in line with the tape).\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Today:** Zero articles found \u2014 means no known catalyst is driving today's move. This makes the current drift noise, not signal, and raises the probability of mean-reversion.\n- **Options Flow Perfectly Balanced:** 5 unusual calls, 5 unusual puts, P/C at 0.75. Smart money is not revealing direction \u2014 this is a hedge scenario, not a directional bet.\n- **Volume Inflection:** If volume picks up materially in the next 90 minutes (approaching 1x average), that would be the most significant signal of the day \u2014 direction of the surge would determine the trade.\n- **Macro Afternoon Risk:** Any surprise Fed speaker, macro data release, or geopolitical headline in the PM session could create outsized moves given the low-volume, thin-participation environment.\n- **Beta 2.215:** NVDA amplifies any SPY/QQQ move. A sharp afternoon index move in either direction could push NVDA \u00b12-3% rapidly.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Support | $218.21 | 15m VWAP \u2014 loss here = intraday structure turns bearish |\n| Key Support | $216.30 | EMA21 daily \u2014 meaningful technical floor |\n| Critical Support | $213.56 | EMA50 daily + near 20D support zone |\n| Hard Support | $208.99 | Lower Bollinger Band / 20D support $208.48 |\n| Immediate Resistance | $219.72 | 5m VWAP \u2014 reclaim needed to flip 5m bullish |\n| Key Resistance | $227.98 | 20D resistance level |\n| Thesis-Changing Level | $218.21 break with volume | Converts 15m/1H bull structure to bear \u2014 only then does a PUT setup activate |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is low (genuinely mixed across timeframes \u2014 5m bearish, 15m bullish, 1H mixed) and tradeability is further capped by critically low volume (0.43x avg) that undermines any momentum confirmation required for a 0-2 DTE trade to perform.** Neither bull nor bear signals are cleanly aligned enough to justify premium in a severe theta environment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the no-trade call)**\n\nThe timeframe conflict is real and symmetric \u2014 this is not a case of defaulting to NONE out of caution, it is a genuine three-timeframe split (5m bearish / 15m bullish / 1H mixed) with volume so low that any signal is unconfirmed. Waiting is the edge.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes (5m full-bear vs 15m full-bull vs 1H mixed) with volume at 0.43x average providing zero confirmation for either direction \u2014 no edge exists in 0-2 DTE premium under these conditions; wait for 15m VWAP ($218.21) break with volume surge OR 5m reclaim of $219.72 VWAP with expanding volume before re-evaluating.",
+        "confluence_score": 42,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -73,18 +73,18 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict \u2014 5m/15m intraday structure is bullish but CALL entry is compromised by overbought 5m RSI (73.55) with volume at 0.32x average providing no momentum fuel, while the bearish case (daily MACD negative, tech sector -1.21%) lacks the intraday timeframe alignment needed for a PUT; theta decay would likely win before directional resolution occurs.",
+          "no_trade_reason": "Signals genuinely conflict across timeframes (5m full-bear vs 15m full-bull vs 1H mixed) with volume at 0.43x average providing zero confirmation for either direction \u2014 no edge exists in 0-2 DTE premium under these conditions; wait for 15m VWAP ($218.21) break with volume surge OR 5m reclaim of $219.72 VWAP with expanding volume before re-evaluating.",
           "reversal_risk": 0,
           "exhaustion_side": null,
           "reversal_notes": "",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6376
+        "tokens_used": 6409
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1788276684.7274601,
-      "score": 52
+      "score": 42
     },
     "SPY": {
       "result": {
@@ -159,5 +159,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-09-01T12:32:22-04:00"
+  "saved_at": "2026-09-01T12:42:27-04:00"
 }
