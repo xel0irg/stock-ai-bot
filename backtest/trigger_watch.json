@@ -259,7 +259,7 @@
   "verdict": "TRADE",
   "message_id": "1543991756293677189",
   "signal_time": "2026-08-31T10:32:01-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "AMZN",
@@ -273,7 +273,7 @@
   "verdict": "TRADE",
   "message_id": "1543992005976268831",
   "signal_time": "2026-08-31T10:33:00-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "META",
@@ -287,7 +287,7 @@
   "verdict": "TRADE",
   "message_id": "1543992256820674593",
   "signal_time": "2026-08-31T10:34:00-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "MSFT",
@@ -301,7 +301,7 @@
   "verdict": "TRADE",
   "message_id": "1543992501071777936",
   "signal_time": "2026-08-31T10:34:58-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "QQQ",
@@ -315,7 +315,7 @@
   "verdict": "TRADE",
   "message_id": "1543992697088639066",
   "signal_time": "2026-08-31T10:35:45-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "SPY",
@@ -329,6 +329,48 @@
   "verdict": "TRADE",
   "message_id": "1543992953456824372",
   "signal_time": "2026-08-31T10:36:46-04:00",
+  "status": "EXPIRED"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 254.44,
+  "strike": 255.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a 15-minute candle close below $254.44 (5m EMA9 / current support cluster) with volume at or above 0.5x the 20D average, confirming the breakdown is not a low-volume fake-out.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1544354316960137267",
+  "signal_time": "2026-09-01T10:32:42-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "PUT",
+  "trigger": 503.0,
+  "strike": 502.5,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter on a 5m or 15m candle close that holds below $503.00 with volume recovering above 1.0x average, confirming continuation and not a thin-volume head-fake.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1544354824437375006",
+  "signal_time": "2026-09-01T10:34:43-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "NVDA",
+  "direction": "PUT",
+  "trigger": 217.5,
+  "strike": 217.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15m candle close below $217.50 with price confirming continued rejection of the $218.17 VWAP level and 5m RSI cooling below 65 (confirming the micro-bounce has exhausted)",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1544355065429491787",
+  "signal_time": "2026-09-01T10:35:41-04:00",
   "status": "PENDING"
  }
 ]
