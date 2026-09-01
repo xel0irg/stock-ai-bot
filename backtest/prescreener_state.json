@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 324.94000244140625,
+      "price": 324.92999267578125,
       "volume_ratio": 0.0,
-      "ts": 1788273040.4369197,
+      "ts": 1788273639.2936287,
       "last_full_scan_ts": 1788273100.7402213
     },
     "AMZN": {
-      "price": 254.50999450683594,
+      "price": 255.0800018310547,
       "volume_ratio": 0.0,
-      "ts": 1788273040.5960095,
+      "ts": 1788273639.4671786,
       "last_full_scan_ts": 1788273162.4520938
     },
     "META": {
-      "price": 570.2000122070312,
+      "price": 574.5941772460938,
       "volume_ratio": 0.0,
-      "ts": 1788273040.799171,
-      "last_full_scan_ts": 1788273221.0716937
+      "ts": 1788273639.6331174,
+      "last_full_scan_ts": 1788273698.0346863
     },
     "MSFT": {
-      "price": 504.2850036621094,
+      "price": 504.0480041503906,
       "volume_ratio": 0.0,
-      "ts": 1788273040.98324,
+      "ts": 1788273639.882573,
       "last_full_scan_ts": 1788273283.2636492
     },
     "NVDA": {
-      "price": 217.74000549316406,
+      "price": 217.77000427246094,
       "volume_ratio": 0.0,
-      "ts": 1788273041.1945813,
+      "ts": 1788273640.0449083,
       "last_full_scan_ts": 1788273341.038073
     },
     "QQQ": {
-      "price": 709.010009765625,
+      "price": 709.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1788273041.3846965,
+      "ts": 1788273640.2790945,
       "last_full_scan_ts": 1788273399.7651606
     },
     "SPY": {
-      "price": 764.0900268554688,
+      "price": 764.2650146484375,
       "volume_ratio": 0.0,
-      "ts": 1788273041.5835464,
+      "ts": 1788273640.5000362,
       "last_full_scan_ts": 1788273459.3509285
     },
     "TSLA": {
-      "price": 358.9549865722656,
+      "price": 358.875,
       "volume_ratio": 0.0,
-      "ts": 1788273041.7294772,
+      "ts": 1788273640.6793582,
       "last_full_scan_ts": 1788273520.3029318
     }
   },
@@ -85,7 +85,43 @@
       "was_flagged": true,
       "cached_at": 1788198684.9886494,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-01T14:41:38.023203",
+        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:41 AM ET | Price: $574.68**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is grinding sideways-to-slightly-up on the day (+0.41%) while tech broadly bleeds (-1.36% XLK, -0.96% QQQ). Price is holding above all intraday VWAPs but faces a wall of resistance at EMA21 ($575.29) and the 20D resistance at $599.12. The most plausible 5-15 day scenario is continued range-bound chop between $543-$599, with modest downside pressure from the broader tech selloff, but no clean directional catalyst to break decisively either way.\n\n---\n\n## 2. BULL CASE\n\n- **Above all intraday VWAPs (5m/15m/1H):** Price is above VWAP on every timeframe, indicating intraday buyers are in control and sellers haven't taken over the session structure.\n- **Daily MACD Histogram +2.37 (bullish):** The daily MACD is in positive territory, implying medium-term momentum has not fully rolled over despite the 20D decline.\n- **5m 3-Candle Momentum +0.864%, 15m +1.373%:** Short-term price is actively moving upward with participation \u2014 not a dead bounce.\n- **Strong Analyst Consensus (STRONG BUY, $754 PT):** Fundamental backdrop provides a floor against panic selling; 57 analysts with a 31% upside target limits sustained bearish conviction.\n\n---\n\n## 3. BEAR CASE\n\n- **OBV Trend Falling:** Volume is not confirming the price bounce \u2014 distribution pattern suggests sellers are active on upticks, undermining the rally's credibility.\n- **Volume 0.25x 20D average:** Critically low volume means this intraday move above VWAP is unconvincing \u2014 thin tape, easy to reverse, no institutional commitment.\n- **All timeframe MACDs bearish (5m/15m/1H hist: nan/bearish):** Intraday momentum oscillators are not confirming the bullish VWAP position \u2014 divergence between price and momentum.\n- **Sector headwind (Tech -1.36%, QQQ -0.96%):** META is holding up relative to peers but is swimming upstream; if index selling accelerates, META's +0.41% cushion evaporates quickly.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro/Index acceleration:** If QQQ breaks intraday lows, META's relative strength disappears instantly \u2014 the correlation (Beta 1.24) means it will catch down hard.\n- **Options expiry dynamics (P/C 0.36):** Extremely call-skewed flow with 5 unusual calls AND 5 unusual puts flagged creates pin risk near current levels; market makers may defend strikes near $575.\n- **Volume surge:** Any session where volume returns to even 0.5x average on a directional move would confirm what side is in control \u2014 currently unreadable at 0.25x.\n- **No news environment:** Zero articles means no fundamental catalyst is currently priced in; this increases sensitivity to any macro headline (Fed speakers, tariff news, AI-adjacent announcements).\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| \ud83d\udd34 Resistance | $575.29 | EMA21 (daily) \u2014 price coiling just below |\n| \ud83d\udd34 Resistance | $585.45 | EMA50 \u2014 next major overhead level |\n| \ud83d\udd34 Resistance | $599.12 | 20D resistance ceiling |\n| \ud83d\udfe2 Support | $567.94 | 5m VWAP \u2014 first intraday defense |\n| \ud83d\udfe2 Support | $569.56 | 15m VWAP \u2014 loss of this = bearish intraday shift |\n| \ud83d\udfe2 Support | $543.67 | 20D support floor |\n| \u26a0\ufe0f Thesis Changer | $569.56 | Break below 15m VWAP with volume flips bias to bearish |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\n**Signal clarity is genuinely mixed** \u2014 VWAP bullish across all timeframes, MACD bearish across all intraday timeframes, volume at 0.25x average rendering both signals unreliable, and sector is red while the ticker is green. Neither bull nor bear signals are clean enough to construct a high-conviction 0-2 DTE position. Tradeability is further capped because the 5m RSI at 92.77 signals near-term exhaustion risk on the call side, and the bear case lacks volume confirmation for puts. Score reflects a genuinely mixed setup, not a scoring penalty on direction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in the NONE call)**\n\nThe bullish VWAP structure and bearish intraday MACD directly contradict each other on a 0.25x volume day \u2014 this is the textbook \"mixed signals, wait for alignment\" scenario.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 all intraday VWAPs bullish but all intraday MACDs bearish, on critically low volume (0.25x average) that makes neither signal trustworthy enough to commit premium to a 0-2 DTE position; wait for volume to confirm one side.",
+        "confluence_score": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 all intraday VWAPs bullish but all intraday MACDs bearish, on critically low volume (0.25x average) that makes neither signal trustworthy enough to commit premium to a 0-2 DTE position; wait for volume to confirm one side.",
+          "reversal_risk": 0,
+          "exhaustion_side": null,
+          "reversal_notes": "",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6249
+      },
+      "was_flagged": true,
+      "cached_at": 1788273698.0346892,
+      "score": 42
     }
   },
-  "saved_at": "2026-09-01T10:38:42-04:00"
+  "saved_at": "2026-09-01T10:41:40-04:00"
 }
