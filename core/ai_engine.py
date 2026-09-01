@@ -224,6 +224,11 @@ What unexpected events or data points could significantly change the direction? 
 Specific price levels based on the data: support(s), resistance(s), and the critical level that changes your thesis.
 
 **6. CONFLUENCE SCORE: X/100**
+Also output both components separately, on their own lines, immediately after the score:
+  SIGNAL CLARITY: X/100
+  TRADEABILITY: X/100
+These are logged separately so each half can be tested against outcomes independently. The composite has never been validated as a ranking — do not treat your own number as meaningful precision. Use the FULL range: if a setup is a 61, say 61, not 68 because it sits near a band edge. Band-edge clustering makes the score useless for ranking.
+
 Rate the overall TRADE QUALITY on a scale of 0-100. This score answers ONE question: "how good is the actual 0-2 DTE OPTIONS TRADE here?" — NOT merely how clear the chart is. A crystal-clear directional read with no viable option trade is a LOW score, not a high one.
 
 BOTH components must be high to score high:
@@ -259,17 +264,18 @@ CRITICAL RULES:
 - Do NOT default to NONE just because the setup is bearish
 - TARGET REALISM (non-negotiable): the STOCK PRICE TARGET must sit WITHIN the expected move for your chosen expiry (shown in the technical data above). Backtest data shows targets beyond the expected move lose ~96% of the time even when direction is correct. Aim for 0.5–0.8x the expected move. If your thesis requires a move beyond ±1x expected move, the trade is not viable in 0-2 DTE — pick a closer target or output NONE.
 - REGIME GATE (non-negotiable, overrides all other signals): Read the HARD REGIME GATE in the market context above and follow it exactly, INCLUDING the rules that FAVOR a direction — the gate is symmetric and is not only a brake on PUTs.
-- DIRECTIONAL FAIRNESS (non-negotiable): Backtest data across 397 resolved trades shows PUT signals won 0.8% of the time (3 of 379) while CALL signals won 94% (17 of 18). This is NOT evidence that CALLs are easy — the CALL sample is small and will regress. It IS strong evidence that this system has been systematically over-producing PUTs and under-producing CALLs. Correct for this:
+- DIRECTIONAL FAIRNESS (non-negotiable): Measured on 225 resolved forward-tracked trades, CALLs and PUTs perform almost identically — CALL 42.1% win rate, PUT 40.5%. Directional accuracy is 51.7% for CALLs and 44.7% for PUTs across 1088 scored signals. Neither side is the profitable side. (An earlier version of this prompt claimed PUTs won 0.8% and CALLs 94%; that figure came from a corrupted stop-tracking column and was wrong by roughly fiftyfold. It is corrected here.) What the data DOES show is that this system over-produces PUTs by VOLUME — 742 PUT signals against 346 CALL signals. Correct the imbalance, not the odds:
     • Evaluate the bullish case and the bearish case with EQUAL rigor before choosing. Write both honestly.
     • A ticker that is UP on the day, holding above its 15m VWAP, in a sector that is green, is a CALL candidate. Do not talk yourself into NONE or a PUT on such a ticker.
     • Do NOT treat "price below the 200 EMA" as meaningfully bearish for a 0-2 DTE trade. It is a long-horizon signal, it is true for nearly every ticker on this watchlist, and weighting it heavily is precisely what caused the historical PUT flood. Intraday structure (5m/15m/1H VWAP, EMA9/21, MACD, volume) outweighs it decisively.
     • NONE is the correct answer when signals genuinely conflict — it is NOT the safe default for a setup that simply is not bearish.
-- EXPIRY SELECTION (non-negotiable): base expiry on confluence score AND setup characteristics:
-    • Score 55–69 (LOW/MODERATE): use 1DTE or 2DTE only. 0DTE requires precision timing this setup cannot support — theta will punish hesitation.
-    • Score 70–84 (HIGH CONVICTION): use 0DTE if the trigger is intraday and imminent (clear level, strong volume, time before 2 PM ET), otherwise 1DTE.
-    • Score 85+ (EXTREME CONVICTION): prefer 0DTE. The setup is strong enough to absorb intraday noise.
-    • Always use 2DTE if: VIX is elevated (>22), the setup requires a multi-session move, or the entry trigger has not yet been reached and may need time.
-    • Never use 0DTE after 2 PM ET — theta decay accelerates sharply in the final two hours.
+- EXPIRY SELECTION (non-negotiable): base expiry on STRUCTURAL facts about the trade, never on the confluence score. The score has been measured against 173 resolved trades and correlates -0.04 with outcome — it carries no information about whether this trade works, so it must not decide theta exposure. Decide from:
+    • TIME OF DAY: never 0DTE after 2 PM ET; theta accelerates sharply in the final two hours. Before 11 AM ET, 0DTE is viable if everything below allows it.
+    • DISTANCE TO TRIGGER: if the trigger has not been reached, the trade needs time to come to you. More than ~0.3% away → 1DTE minimum, 2DTE if further.
+    • TARGET vs EXPECTED MOVE: if the target needs more than ~0.6x the expected move for the chosen expiry, step out one expiry rather than hoping.
+    • REVERSAL RISK: risk >= 45 means the move may need to reset before it resumes. Do not take 0DTE into an exhausted move; 2DTE gives the thesis room to survive a pullback.
+    • VOLATILITY: VIX above 22, or a setup needing a multi-session move → 2DTE.
+    • When these conflict, choose the LONGER expiry. Being early with time left is recoverable; being right with no time left is not.
 
 IMPORTANT: Output this section as plain key-value pairs ONLY. Do NOT use markdown tables, bold, or any formatting. Use exactly this format:
 
@@ -341,6 +347,10 @@ def run_ai_synthesis(
 
         # Extract confluence score from the response
         import re
+        _clarity_m = re.search(r"SIGNAL CLARITY[:\s]+(\d+)\s*/\s*100", analysis_text, re.IGNORECASE)
+        _tradeab_m = re.search(r"TRADEABILITY[:\s]+(\d+)\s*/\s*100", analysis_text, re.IGNORECASE)
+        signal_clarity = int(_clarity_m.group(1)) if _clarity_m else None
+        tradeability   = int(_tradeab_m.group(1)) if _tradeab_m else None
         score_match = re.search(r"CONFLUENCE SCORE[:\s]+(\d+)/100", analysis_text, re.IGNORECASE)
         confluence_score = int(score_match.group(1)) if score_match else 50
 
@@ -677,6 +687,8 @@ def run_ai_synthesis(
             "timestamp":         datetime.now().isoformat(),
             "analysis":          analysis_text,
             "confluence_score":  confluence_score,
+            "signal_clarity":    signal_clarity,
+            "tradeability":      tradeability,
             "suggested_bias":    bias,
             "trade_setup":       trade_setup,
             "model":             message.model,

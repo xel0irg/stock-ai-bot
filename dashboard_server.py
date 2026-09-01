@@ -1,5 +1,5 @@
 """
-dashboard_server.py — Degënic$ dashboard server
+dashboard_server.py — Degėnic dashboard server
 
 Serves the latest scan results as JSON so dashboard.html can display them.
 Runs locally AND on Render.com (FastAPI/uvicorn, port from $PORT env var).
@@ -49,7 +49,7 @@ _load_env()
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 # ── FastAPI app ───────────────────────────────────────────────────────────────
-app = FastAPI(title="Degënic$ Dashboard")
+app = FastAPI(title="Degėnic Dashboard")
 
 app.add_middleware(
     CORSMiddleware,
@@ -308,7 +308,7 @@ if __name__ == "__main__":
     import uvicorn
     print(f"""
 ╔══════════════════════════════════════════════╗
-║        Degënic$ — Dashboard Server           ║
+║        Degėnic — Dashboard Server           ║
 ╚══════════════════════════════════════════════╝
   Repo:   {GITHUB_REPO}
   Port:   {PORT}

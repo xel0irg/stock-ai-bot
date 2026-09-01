@@ -44,7 +44,7 @@ from discord_bot.github_helper import (
 
 log = get_logger("DiscordBot")
 
-app = FastAPI(title="Degënic$ — Discord Commands")
+app = FastAPI(title="Degėnic — Discord Commands")
 
 DISCORD_PUBLIC_KEY     = os.environ.get("DISCORD_PUBLIC_KEY", "")
 DISCORD_APPLICATION_ID = os.environ.get("DISCORD_APPLICATION_ID", "")
@@ -110,7 +110,7 @@ async def interactions(request: Request, background_tasks: BackgroundTasks):
             interaction_token = data.get("token")
 
             # Defer immediately (must respond within 3 seconds) — Discord
-            # shows "Degënic$ is thinking..." while we run the analysis
+            # shows "Degėnic is thinking..." while we run the analysis
             background_tasks.add_task(run_scan_and_respond, ticker, interaction_token)
             return JSONResponse({"type": RESPONSE_DEFERRED_CHANNEL_MESSAGE})
 

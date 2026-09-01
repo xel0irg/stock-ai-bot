@@ -25,7 +25,7 @@ DISCORD_GUILD_ID       = os.environ.get("DISCORD_GUILD_ID", "")
 
 SCAN_COMMAND = {
     "name": "scan",
-    "description": "Run an on-demand Degënic$ analysis for a ticker",
+    "description": "Run an on-demand Degėnic analysis for a ticker",
     "options": [
         {
             "name": "ticker",

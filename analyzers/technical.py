@@ -477,8 +477,16 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
         else:
             df_5m.columns = [c.lower() if isinstance(c, str) else c[0].lower() for c in df_5m.columns]
 
-        # 15-minute: last 2 days of data
-        df_15m = yf.download(ticker, period="2d", interval="15m",
+        # 15-minute: 5 sessions.
+        #
+        # Was 2 days, which suffices for the indicators but NOT for reversal
+        # analysis: that needs 40 bars and a session is only 26, so before
+        # roughly 12:45 ET the series was too short and _reversal_features
+        # returned all zeros. On 2026-09-01 twenty-one of twenty-six signals
+        # fired inside that blind window with reversal_risk=0 — the check was
+        # silently absent for most of the day. Five sessions guarantees the
+        # lookback is satisfied from the opening bar.
+        df_15m = yf.download(ticker, period="5d", interval="15m",
                              progress=False, auto_adjust=True)
         if isinstance(df_15m.columns, pd.MultiIndex):
             df_15m.columns = [col[0].lower() for col in df_15m.columns]

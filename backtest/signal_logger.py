@@ -50,6 +50,8 @@ FIELDNAMES = [
     "exhaustion_side",   # which direction is tiring, if any
     "chasing_exhausted", # yes if the signal took the exhausted side
     "reversal_penalty",  # score points deducted for chasing
+    "signal_clarity",    # component: how cleanly signals align
+    "tradeability",      # component: can a 0-2 DTE option actually pay
     # Filled in later by outcome_checker.py:
     "checked",           # "yes" once outcome has been evaluated
     "checked_at",
@@ -172,6 +174,8 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
             "exhaustion_side":   trade_setup.get("exhaustion_side", "") or "",
             "chasing_exhausted": "yes" if trade_setup.get("chasing_exhausted_move") else "no",
             "reversal_penalty":  trade_setup.get("reversal_penalty", ""),
+            "signal_clarity":    ai.get("signal_clarity") if ai.get("signal_clarity") is not None else "",
+            "tradeability":      ai.get("tradeability") if ai.get("tradeability") is not None else "",
             "timestamp":         ts,
             "ticker":            ticker,
             "contract_type":     trade_setup.get("contract_type", "NONE"),

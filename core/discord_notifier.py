@@ -1,5 +1,5 @@
 """
-core/discord_notifier.py — Discord webhook alert system for Degënic$
+core/discord_notifier.py — Discord webhook alert system for Degėnic · beta
 Sends rich embed alerts directly to your Discord channel.
 """
 from __future__ import annotations
@@ -214,10 +214,10 @@ def _build_embed(
         conviction_str = "❌ NO TRADE"
 
     embed = {
-        "title": f"{emoji}  {ticker} — Degënic$ Signal",
+        "title": f"{emoji}  {ticker} — Degėnic · beta Signal",
         "color": color,
         "timestamp": datetime.utcnow().isoformat(),
-        "footer": {"text": f"Degënic$ v1.0 • {ts}"},
+        "footer": {"text": f"Degėnic · beta • {ts}"},
         "fields": [
             {
                 "name": f"{emoji} ${ta.get('last_price', 'N/A')}  ·  {score}/100  ·  {conviction_str}",
@@ -426,7 +426,7 @@ def send_earnings_alert(webhook_url: str, earnings_data: Dict[str, Any]) -> bool
         "color":       0xF59E0B,
         "timestamp":   datetime.utcnow().isoformat(),
         "fields":      fields,
-        "footer":      {"text": "Degënic$ — Earnings Guard"},
+        "footer":      {"text": "Degėnic · beta — Earnings Guard"},
     }
 
     payload = {"embeds": [embed]}
@@ -448,10 +448,10 @@ def send_discord_test(webhook_url: str) -> bool:
     """Send a test message to verify webhook is working."""
     payload = {
         "embeds": [{
-            "title": "✅ Degënic$ Connected!",
+            "title": "✅ Degėnic · beta Connected!",
             "description": "You'll receive rich signal alerts here when high-conviction trades are detected.",
             "color": 0x00C851,
-            "footer": {"text": "Degënic$ v1.0"},
+            "footer": {"text": "Degėnic · beta"},
             "timestamp": datetime.utcnow().isoformat(),
         }]
     }

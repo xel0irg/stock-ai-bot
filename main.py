@@ -1,5 +1,5 @@
 """
-main.py — Degënic$ Entry Point
+main.py — Degėnic Entry Point
 Orchestrates technical, sentiment, fundamental analysis + AI synthesis.
 
 Usage:
@@ -30,7 +30,7 @@ from analyzers.sentiment    import run_sentiment_analysis
 from analyzers.fundamentals import check_watchlist_earnings
 from core.fundamentals_cache import get_fundamentals
 
-log = get_logger("Degenic$")
+log = get_logger("Degėnic")
 
 
 BANNER = r"""
@@ -333,7 +333,7 @@ def main():
     print(BANNER)
 
     parser = argparse.ArgumentParser(
-        description="Degënic$ — Multi-source market analysis"
+        description="Degėnic — Multi-source market analysis"
     )
     parser.add_argument(
         "--ticker", "-t",

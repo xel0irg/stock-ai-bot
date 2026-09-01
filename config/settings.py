@@ -117,7 +117,7 @@ TA_SETTINGS = {
 # otherwise old-code and new-code signals are indistinguishable forever
 # (we could not tell whether June-July's 36% directional accuracy was
 # old code or old regime; this ends that).
-STRATEGY_VERSION = "2026.08.31-reversal-aware"
+STRATEGY_VERSION = "2026.09.01-score-decomposed"
 
 # ── Entry-trigger geometry ───────────────────────────────
 # A trigger sitting at (or through) spot is not a trigger — the entry
