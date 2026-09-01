@@ -84,6 +84,12 @@ def should_alert(ticker: str, direction: str, score: int) -> Tuple[bool, str]:
     if direction not in ("CALL", "PUT"):
         return True, ""
 
+    # Correlated-cluster cap runs first: it is about portfolio
+    # concentration across tickers, not about repeats of one ticker.
+    blocked, why = _cluster_blocked(direction)
+    if blocked:
+        return False, why
+
     key  = ticker.upper()
     prev = _STATE.get(key)
     if not prev:
@@ -107,11 +113,57 @@ def should_alert(ticker: str, direction: str, score: int) -> Tuple[bool, str]:
                    f"now {score}); one alert per setup per day")
 
 
+RECENT_KEY = "__recent__"
+
+
+def _recent_alerts() -> list:
+    """Timestamped log of recently sent alerts (reserved state key)."""
+    rec = _STATE.get(RECENT_KEY)
+    return rec if isinstance(rec, list) else []
+
+
+def _cluster_blocked(direction: str) -> Tuple[bool, str]:
+    """
+    True once MAX_SAME_DIRECTION_PER_WINDOW alerts in this direction have
+    already gone out inside CLUSTER_WINDOW_MINUTES.
+
+    Added 2026-08-31. The watchlist is eight highly correlated large caps
+    plus two index ETFs; when the tape sweeps, every one of them prints
+    the same setup in the same scan. Six PUTs in five minutes is one
+    macro call, not six confirmations, and members sizing each card
+    independently end up far more concentrated than they realise.
+    """
+    try:
+        from config.settings import (MAX_SAME_DIRECTION_PER_WINDOW,
+                                     CLUSTER_WINDOW_MINUTES)
+    except Exception:
+        MAX_SAME_DIRECTION_PER_WINDOW, CLUSTER_WINDOW_MINUTES = 3, 15
+    cutoff = time.time() - CLUSTER_WINDOW_MINUTES * 60
+    hits = [r for r in _recent_alerts()
+            if r.get("direction") == direction and r.get("ts", 0) >= cutoff]
+    if len(hits) >= MAX_SAME_DIRECTION_PER_WINDOW:
+        names = ", ".join(h.get("ticker", "?") for h in hits)
+        return True, (f"correlated cluster cap — {len(hits)} {direction} "
+                      f"alerts already sent in the last "
+                      f"{CLUSTER_WINDOW_MINUTES}m ({names}); these move "
+                      f"together and count as one position")
+    return False, ""
+
+
 def record_alert(ticker: str, direction: str, score: int) -> None:
     """Record that an alert was actually sent."""
     _load()
     if direction not in ("CALL", "PUT"):
         return
+    try:
+        from config.settings import CLUSTER_WINDOW_MINUTES as _W
+    except Exception:
+        _W = 15
+    cutoff = time.time() - _W * 60 * 4
+    recent = [r for r in _recent_alerts() if r.get("ts", 0) >= cutoff]
+    recent.append({"ticker": ticker.upper(), "direction": direction,
+                   "ts": time.time()})
+    _STATE[RECENT_KEY] = recent
     _STATE[ticker.upper()] = {
         "direction": direction,
         "score":     score,

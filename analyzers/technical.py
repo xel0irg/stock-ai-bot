@@ -644,6 +644,20 @@ def rvol_time_of_day_from_df(df: pd.DataFrame) -> Optional[float]:
         vol = vol.dropna()
         if len(vol) < 10:
             return None
+
+        # Drop the bar currently forming. yfinance returns the in-progress
+        # 15m bar with only the volume accumulated so far, so comparing it
+        # against COMPLETED same-slot bars understates participation by
+        # however much of the bar is left to run. On 2026-08-31 this made
+        # every reading land between 0.00x and 0.19x — the artifact, not
+        # the market. Only a bar whose 15-minute window has fully elapsed
+        # is comparable.
+        now = pd.Timestamp.now(tz=vol.index.tz) if vol.index.tz else pd.Timestamp.now()
+        if (now - vol.index[-1]) < pd.Timedelta(minutes=15):
+            vol = vol.iloc[:-1]
+        if len(vol) < 10:
+            return None
+
         idx = vol.index
         cur_ts   = idx[-1]
         cur_day  = cur_ts.date()

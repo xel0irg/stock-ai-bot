@@ -536,6 +536,43 @@ def run_ai_synthesis(
             except Exception as e:
                 log.debug(f"{ticker}: validate_target failed — {e}")
 
+        # ── Entry-trigger geometry ────────────────────────────
+        # Repair (never discard) triggers that sit at or through spot.
+        if contract_type in ("CALL", "PUT"):
+            try:
+                from config.settings import (MIN_TRIGGER_DIST_PCT,
+                                             TRIGGER_ATR_FRACTION)
+                _spot = float(ta.get("last_price") or 0)
+                _trg  = float(entry_trigger or 0)
+                if _spot > 0 and _trg > 0:
+                    _min_off = _spot * (MIN_TRIGGER_DIST_PCT / 100.0)
+                    try:
+                        _atr_off = float(ta.get("atr") or 0) * TRIGGER_ATR_FRACTION
+                    except (TypeError, ValueError):
+                        _atr_off = 0.0
+                    _off = max(_min_off, _atr_off)
+                    if contract_type == "PUT":
+                        _needed = _spot - _min_off      # must sit below spot
+                        _bad = _trg >= _needed
+                        _repaired = round(_spot - _off, 2)
+                    else:
+                        _needed = _spot + _min_off      # must sit above spot
+                        _bad = _trg <= _needed
+                        _repaired = round(_spot + _off, 2)
+                    if _bad:
+                        trade_setup["trigger_original"] = _trg
+                        trade_setup["entry_trigger"]    = _repaired
+                        trade_setup["trigger_adjusted"] = True
+                        trade_setup["trigger_note"] = (
+                            f"AI trigger ${_trg} was at/through spot ${_spot} "
+                            f"— moved to ${_repaired} so the entry requires "
+                            f"real confirmation")
+                        log.warning(f"⚑ {ticker}: {trade_setup['trigger_note']}")
+                    trade_setup["trigger_dist_pct"] = round(
+                        abs(trade_setup["entry_trigger"] - _spot) / _spot * 100, 3)
+            except Exception as e:
+                log.debug(f"{ticker}: trigger geometry check failed — {e}")
+
         # ── Verdict tier (TRADE / WATCH / RISKY) ──────────────────
         # Concise honest read driving the card banner and feed. Based on
         # tradeability: how the target fits the expected move.

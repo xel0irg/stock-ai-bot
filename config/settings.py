@@ -117,4 +117,22 @@ TA_SETTINGS = {
 # otherwise old-code and new-code signals are indistinguishable forever
 # (we could not tell whether June-July's 36% directional accuracy was
 # old code or old regime; this ends that).
-STRATEGY_VERSION = "2026.08.22-daily-dedup"
+STRATEGY_VERSION = "2026.08.31-trigger-geometry"
+
+# ── Entry-trigger geometry ───────────────────────────────
+# A trigger sitting at (or through) spot is not a trigger — the entry
+# condition is satisfied the instant the card posts, so the "wait for
+# confirmation" discipline that the cards teach does nothing. On
+# 2026-08-31 three of six signals had a trigger exactly equal to spot
+# and the median trigger distance was 0.009% vs 0.107% historically.
+# Rather than reject those signals, we repair the geometry: push the
+# trigger to a real confirmation distance derived from ATR.
+MIN_TRIGGER_DIST_PCT = _safe_float("MIN_TRIGGER_DIST_PCT", 0.10)  # percent
+TRIGGER_ATR_FRACTION = _safe_float("TRIGGER_ATR_FRACTION", 0.15)
+
+# ── Correlated-cluster cap ───────────────────────────────
+# Eight tickers that move together produce one macro observation, not
+# eight independent signals. Aug 31 posted six PUTs in five minutes
+# across six tickers — a single bet, sized six times.
+MAX_SAME_DIRECTION_PER_WINDOW = _safe_int("MAX_SAME_DIRECTION_PER_WINDOW", 3)
+CLUSTER_WINDOW_MINUTES        = _safe_int("CLUSTER_WINDOW_MINUTES", 15)
