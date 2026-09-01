@@ -386,5 +386,19 @@
   "message_id": "1544384425830256820",
   "signal_time": "2026-09-01T12:32:20-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 708.56,
+  "strike": 708.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on continuation below current price with 15m candle confirming hold below VWAP $708.56 \u2014 no bounce, no reclaim \u2014 ideally on a brief pop toward $709.00\u2013$709.42 (EMA9) that gets rejected.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1544389264685531219",
+  "signal_time": "2026-09-01T12:51:34-04:00",
+  "status": "PENDING"
  }
 ]
