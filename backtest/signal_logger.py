@@ -46,6 +46,10 @@ FIELDNAMES = [
     "volume_ratio_daily",# partial-day volume vs 20-day avg (feeds scoring)
     "volume_ratio_15m",  # last 15m bar vs rolling 20-bar avg
     "rvol_tod",          # 15m bar vs same-time-of-day avg, prior sessions
+    "reversal_risk",     # 0-100 exhaustion evidence on the 15m frame
+    "exhaustion_side",   # which direction is tiring, if any
+    "chasing_exhausted", # yes if the signal took the exhausted side
+    "reversal_penalty",  # score points deducted for chasing
     # Filled in later by outcome_checker.py:
     "checked",           # "yes" once outcome has been evaluated
     "checked_at",
@@ -164,6 +168,10 @@ def log_signal(ticker: str, tech: Dict[str, Any], ai: Dict[str, Any]) -> None:
             "volume_ratio_daily": tech.get("technicals", {}).get("volume_ratio", ""),
             "volume_ratio_15m":  (tech.get("intraday", {}) or {}).get("tf_15m", {}).get("volume_ratio", ""),
             "rvol_tod":          tech.get("rvol_tod", ""),
+            "reversal_risk":     trade_setup.get("reversal_risk", ""),
+            "exhaustion_side":   trade_setup.get("exhaustion_side", "") or "",
+            "chasing_exhausted": "yes" if trade_setup.get("chasing_exhausted_move") else "no",
+            "reversal_penalty":  trade_setup.get("reversal_penalty", ""),
             "timestamp":         ts,
             "ticker":            ticker,
             "contract_type":     trade_setup.get("contract_type", "NONE"),

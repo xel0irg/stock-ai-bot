@@ -88,6 +88,30 @@ Combined Intraday Bias: {intraday.get('intraday_bias', 'N/A')}
   3-Candle Mom:  {tf_1h.get('momentum_3c', 'N/A')}% ({str(tf_1h.get('momentum_direction', 'N/A')).upper()})
   Bias:          {tf_1h.get('bias', 'N/A')} ({tf_1h.get('bull_signals', 0)} bull / {tf_1h.get('bear_signals', 0)} bear signals)
 
+REVERSAL / EXHAUSTION CHECK (15m) — read this BEFORE choosing a direction:
+  Reversal risk:    {intraday.get('reversal', {}).get('reversal_risk', 0)}/100
+  Exhausted side:   {intraday.get('reversal', {}).get('exhaustion_side') or 'none detected'}
+  RSI divergence:   {intraday.get('reversal', {}).get('rsi_divergence') or 'none'}
+  MACD fading:      {intraday.get('reversal', {}).get('macd_fading')}
+  VWAP extension:   {intraday.get('reversal', {}).get('vwap_extension_atr')} ATR from VWAP
+  Volume confirms:  {intraday.get('reversal', {}).get('volume_confirms')}
+  Evidence:         {'; '.join(intraday.get('reversal', {}).get('reversal_notes', [])) or 'none'}
+
+  HOW TO USE THIS. Trend alignment alone does not make a trade. A move
+  that has already run is the most expensive thing to buy on 0-2 DTE:
+  theta charges rent while price mean-reverts to VWAP. If the exhausted
+  side matches the direction the trend is pointing, you are being offered
+  a LATE entry, not a good one.
+   - BULLISH_EXHAUSTION means the UP move is tiring. Do NOT issue a CALL
+     just because every timeframe is bullish; that is the definition of
+     chasing. Prefer NO TRADE, or wait for a pullback entry.
+   - BEARISH_EXHAUSTION means the DOWN move is tiring. Same logic for PUTs.
+   - Reversal risk >= 45 with the exhausted side matching your direction
+     should reduce your score materially and be named explicitly in
+     KEY RISK on the card.
+   - Reversal risk near 0 means the move still has participation behind
+     it — trend alignment can be taken at face value.
+
 TIMEFRAME CONFLUENCE:
   Daily + 1H + 15m + 5m all BEARISH = EXCEPTIONAL PUT entry (score 85+)
   Daily + 1H + 15m all BEARISH (5m mixed) = HIGH CONVICTION PUT (score 70-84)
@@ -535,6 +559,39 @@ def run_ai_synthesis(
                 trade_setup["em_pct"]          = vt.get("em_pct")
             except Exception as e:
                 log.debug(f"{ticker}: validate_target failed — {e}")
+
+        # ── Reversal penalty ──────────────────────────────────
+        # The AI is shown the exhaustion evidence above and told how to
+        # use it, but instruction-following is not a guarantee. This is a
+        # deterministic backstop: if it still picks the exhausted side,
+        # the score is reduced by a chosen (not fitted) amount, scaled by
+        # how strong the evidence is, and the reason is recorded so the
+        # effect can be measured against strategy_version later.
+        try:
+            from config.settings import (REVERSAL_RISK_THRESHOLD,
+                                         REVERSAL_MAX_PENALTY)
+            _rev = (tech.get("intraday") or {}).get("reversal") or {}
+            _risk = int(_rev.get("reversal_risk") or 0)
+            _side = _rev.get("exhaustion_side")
+            trade_setup["reversal_risk"]    = _risk
+            trade_setup["exhaustion_side"]  = _side
+            trade_setup["reversal_notes"]   = "; ".join(_rev.get("reversal_notes") or [])
+            _chasing = (
+                (_side == "BULLISH_EXHAUSTION" and contract_type == "CALL") or
+                (_side == "BEARISH_EXHAUSTION" and contract_type == "PUT")
+            )
+            trade_setup["chasing_exhausted_move"] = bool(_chasing)
+            if _chasing and _risk >= REVERSAL_RISK_THRESHOLD:
+                _pen = int(round(REVERSAL_MAX_PENALTY * min(1.0, _risk / 100.0)))
+                if _pen > 0:
+                    _before = confluence_score
+                    confluence_score = max(1, confluence_score - _pen)
+                    trade_setup["reversal_penalty"] = _pen
+                    log.warning(
+                        f"↩ {ticker}: {contract_type} into {_side} "
+                        f"(risk {_risk}) — score {_before} → {confluence_score}")
+        except Exception as e:
+            log.debug(f"{ticker}: reversal penalty failed — {e}")
 
         # ── Entry-trigger geometry ────────────────────────────
         # Repair (never discard) triggers that sit at or through spot.

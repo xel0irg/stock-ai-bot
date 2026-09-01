@@ -366,6 +366,7 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
         signals: Dict[str, Any] = {}
         signals["last_price"] = round(last, 2)
         signals["candles"]    = len(close)
+        signals["_series"]    = (close, high, low, volume)   # popped below
 
         # RSI (shorter window for intraday)
         try:
@@ -495,6 +496,28 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
         tf_5m  = _compute_intraday(df_5m,  "5m")
         tf_15m = _compute_intraday(df_15m, "15m")
         tf_1h  = _compute_intraday(df_1h,  "1h")
+
+        # Reversal / exhaustion analysis on the 15m frame — the timeframe
+        # the entry triggers are written against.
+        rev = {}
+        try:
+            series = tf_15m.pop("_series", None) if tf_15m else None
+            for tf in (tf_5m, tf_1h):
+                if tf:
+                    tf.pop("_series", None)
+            if series:
+                c, h_, l_, v = series
+                _atr = None
+                try:
+                    _atr = float(AverageTrueRange(h_, l_, c, window=14)
+                                 .average_true_range().iloc[-1])
+                except Exception:
+                    _atr = None
+                rev = _reversal_features(c, h_, l_, v, _atr,
+                                         tf_15m.get("vwap"))
+        except Exception:
+            rev = {}
+        result["reversal"] = rev
 
         if not tf_15m and not tf_1h:
             return result
@@ -628,6 +651,148 @@ def fetch_intraday(ticker: str) -> Dict[str, Any]:
 # against the average volume of the SAME clock-time bar over prior
 # sessions. Once a few weeks of rows exist, we test which variant (if
 # any) separates outcomes before touching scoring.
+
+# ── Reversal / exhaustion detection ──────────────────────
+# The pipeline scored trend alignment and nothing else, so a move that
+# had already run looked identical to one just starting: measured over
+# 951 signals, the bot agreed with "whatever direction the ticker has
+# already moved today" 73% of the time. That is momentum-chasing, and on
+# 0-2 DTE contracts a late entry into an exhausted move is the single
+# most expensive mistake available — theta charges rent while price
+# mean-reverts.
+#
+# These four checks are the classic exhaustion tells. None is predictive
+# alone; the point is confluence, and that the AI can no longer be blind
+# to them.
+
+def _reversal_features(close, high, low, volume, atr: Optional[float],
+                       vwap: Optional[float], lookback: int = 20) -> Dict[str, Any]:
+    """
+    Detect that a move is running out of participants rather than
+    continuing. Returns component flags plus a 0-100 risk value and the
+    side being exhausted:
+
+      BULLISH_EXHAUSTION -> the UP move is tiring; chasing CALLs is late
+      BEARISH_EXHAUSTION -> the DOWN move is tiring; chasing PUTs is late
+
+    Deliberately returns evidence, not a verdict. Scoring impact is
+    applied downstream where it can be version-stamped and measured.
+    """
+    out: Dict[str, Any] = {
+        "rsi_divergence":     None,
+        "macd_fading":        None,
+        "vwap_extension_atr": None,
+        "volume_confirms":    None,
+        "reversal_risk":      0,
+        "exhaustion_side":    None,
+        "reversal_notes":     [],
+    }
+    try:
+        # MACD(12,26,9) needs ~35 bars before it emits anything, so a
+        # shorter series silently produced half the checks. 2 days of 15m
+        # bars (~52) clears this comfortably.
+        if close is None or len(close) < max(lookback + 5, 40):
+            return out
+
+        n = min(lookback, len(close) - 1)
+        recent_close = close.iloc[-n:]
+        last = float(close.iloc[-1])
+
+        rsi_series = RSIIndicator(close, window=9).rsi().dropna()
+        macd_hist  = MACD(close, window_fast=12, window_slow=26,
+                          window_sign=9).macd_diff().dropna()
+        if len(rsi_series) < n or len(macd_hist) < 4:
+            return out
+
+        rsi_recent = rsi_series.iloc[-n:]
+        notes = []
+        risk = 0
+
+        # (1) RSI divergence — price makes a new extreme, RSI does not.
+        # The most reliable single tell that a push has fewer buyers or
+        # sellers behind it than the previous push did.
+        hi_i = int(recent_close.values.argmax())
+        lo_i = int(recent_close.values.argmin())
+        if hi_i >= len(recent_close) - 3 and n >= 8:
+            prior_hi = recent_close.iloc[:max(1, hi_i - 2)]
+            prior_rsi = rsi_recent.iloc[:max(1, hi_i - 2)]
+            if len(prior_hi) >= 3 and float(recent_close.iloc[hi_i]) > float(prior_hi.max()) \
+               and float(rsi_recent.iloc[hi_i]) < float(prior_rsi.max()):
+                out["rsi_divergence"] = "bearish"
+                risk += 35
+                notes.append("price made a higher high but RSI did not — "
+                             "fewer buyers behind this push")
+        if lo_i >= len(recent_close) - 3 and n >= 8:
+            prior_lo = recent_close.iloc[:max(1, lo_i - 2)]
+            prior_rsi = rsi_recent.iloc[:max(1, lo_i - 2)]
+            if len(prior_lo) >= 3 and float(recent_close.iloc[lo_i]) < float(prior_lo.min()) \
+               and float(rsi_recent.iloc[lo_i]) > float(prior_rsi.min()):
+                out["rsi_divergence"] = "bullish"
+                risk += 35
+                notes.append("price made a lower low but RSI did not — "
+                             "sellers are thinning out")
+
+        # (2) MACD histogram fading while price still extends: momentum
+        # decelerating underneath a move that still looks intact.
+        h = [float(x) for x in macd_hist.iloc[-4:]]
+        if len(h) == 4 and all(abs(x) > 0 for x in h[1:]):
+            shrinking = abs(h[-1]) < abs(h[-2]) < abs(h[-3])
+            same_side = (h[-1] > 0) == (h[-3] > 0)
+            # Require a MEANINGFUL fade, not the gentle decay any steady
+            # trend produces: a clean constant-slope ramp shrinks the
+            # histogram every bar and would otherwise flag as exhaustion.
+            steep = abs(h[-1]) < 0.6 * abs(h[-3])
+            if shrinking and same_side and steep:
+                out["macd_fading"] = True
+                risk += 25
+                notes.append("MACD histogram shrinking three bars running — "
+                             "momentum decelerating")
+            else:
+                out["macd_fading"] = False
+
+        # (3) Extension from VWAP in ATR units. Price far from the
+        # session's volume-weighted average tends to be pulled back to it.
+        if vwap and atr and atr > 0:
+            ext = (last - float(vwap)) / float(atr)
+            out["vwap_extension_atr"] = round(ext, 2)
+            if abs(ext) >= 2.0:
+                risk += 25
+                notes.append(f"price is {abs(ext):.1f} ATR from VWAP — "
+                             f"stretched and prone to snap back")
+            elif abs(ext) >= 1.25:
+                risk += 12
+                notes.append(f"price is {abs(ext):.1f} ATR from VWAP")
+
+        # (4) Volume confirmation — is the latest push actually being
+        # participated in, or drifting on air?
+        if volume is not None and len(volume) >= n:
+            recent_vol = volume.iloc[-3:].mean()
+            base_vol   = volume.iloc[-n:-3].mean() if n > 6 else None
+            if base_vol and base_vol > 0:
+                ratio = float(recent_vol / base_vol)
+                out["volume_confirms"] = ratio >= 0.9
+                if ratio < 0.6:
+                    risk += 20
+                    notes.append(f"push is on {ratio:.2f}x the recent volume — "
+                                 f"little participation")
+                elif ratio < 0.9:
+                    risk += 8
+
+        # Which side is exhausted? Use the direction of the recent move.
+        # A side is only named once the evidence is more than one weak
+        # component, so a healthy trend is not labelled exhausted.
+        move = last - float(recent_close.iloc[0])
+        if out["rsi_divergence"] == "bearish" or (move > 0 and risk >= 35):
+            out["exhaustion_side"] = "BULLISH_EXHAUSTION"
+        elif out["rsi_divergence"] == "bullish" or (move < 0 and risk >= 35):
+            out["exhaustion_side"] = "BEARISH_EXHAUSTION"
+
+        out["reversal_risk"]  = int(min(100, risk))
+        out["reversal_notes"] = notes
+    except Exception:
+        return out
+    return out
+
 
 def rvol_time_of_day_from_df(df: pd.DataFrame) -> Optional[float]:
     """

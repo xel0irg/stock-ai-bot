@@ -117,7 +117,7 @@ TA_SETTINGS = {
 # otherwise old-code and new-code signals are indistinguishable forever
 # (we could not tell whether June-July's 36% directional accuracy was
 # old code or old regime; this ends that).
-STRATEGY_VERSION = "2026.08.31-trigger-geometry"
+STRATEGY_VERSION = "2026.08.31-reversal-aware"
 
 # ── Entry-trigger geometry ───────────────────────────────
 # A trigger sitting at (or through) spot is not a trigger — the entry
@@ -136,3 +136,12 @@ TRIGGER_ATR_FRACTION = _safe_float("TRIGGER_ATR_FRACTION", 0.15)
 # across six tickers — a single bet, sized six times.
 MAX_SAME_DIRECTION_PER_WINDOW = _safe_int("MAX_SAME_DIRECTION_PER_WINDOW", 3)
 CLUSTER_WINDOW_MINUTES        = _safe_int("CLUSTER_WINDOW_MINUTES", 15)
+
+# ── Reversal / exhaustion handling ───────────────────────
+# Penalty applied when the AI picks the direction that reversal analysis
+# says is already exhausted — i.e. chasing a move that has run. The size
+# is a CHOSEN value, not one fitted to historical P&L; it is deliberately
+# large enough to matter and small enough that strong confluence can
+# still clear the feed cutoff. Version-stamped so its effect is testable.
+REVERSAL_RISK_THRESHOLD = _safe_int("REVERSAL_RISK_THRESHOLD", 45)
+REVERSAL_MAX_PENALTY    = _safe_int("REVERSAL_MAX_PENALTY", 15)
