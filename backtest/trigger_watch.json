@@ -372,5 +372,19 @@
   "message_id": "1544355065429491787",
   "signal_time": "2026-09-01T10:35:41-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 357.8,
+  "strike": 357.5,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Do NOT enter at current oversold levels \u2014 wait for a bounce toward 5m VWAP ($358.53) that is rejected with a bearish 5m candle close below $357.80 and volume above 0.5x average, confirming VWAP resistance holds",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1544384425830256820",
+  "signal_time": "2026-09-01T12:32:20-04:00",
+  "status": "PENDING"
  }
 ]
