@@ -1,54 +1,91 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 325.239990234375,
+      "price": 324.5450134277344,
       "volume_ratio": 0.0,
-      "ts": 1788276039.924213,
+      "ts": 1788276641.4895294,
       "last_full_scan_ts": 1788276093.7823172
     },
     "AMZN": {
-      "price": 255.14999389648438,
+      "price": 254.96600341796875,
       "volume_ratio": 0.0,
-      "ts": 1788276040.3595333,
+      "ts": 1788276641.7637837,
       "last_full_scan_ts": 1788274295.686607
     },
     "META": {
-      "price": 579.4199829101562,
+      "price": 578.885009765625,
       "volume_ratio": 0.0,
-      "ts": 1788276040.692614,
+      "ts": 1788276641.9368582,
       "last_full_scan_ts": 1788276142.2588265
     },
     "MSFT": {
       "price": 501.05999755859375,
       "volume_ratio": 0.0,
-      "ts": 1788276041.14104,
+      "ts": 1788276642.1883905,
       "last_full_scan_ts": 1788274394.4785552
     },
     "NVDA": {
-      "price": 218.22999572753906,
+      "price": 218.94000244140625,
       "volume_ratio": 0.0,
-      "ts": 1788276041.5324671,
-      "last_full_scan_ts": 1788273341.038073
+      "ts": 1788276642.5050023,
+      "last_full_scan_ts": 1788276684.727457
     },
     "QQQ": {
-      "price": 709.4351196289062,
+      "price": 710.3350219726562,
       "volume_ratio": 0.0,
-      "ts": 1788276041.9186964,
+      "ts": 1788276642.7797053,
       "last_full_scan_ts": 1788273399.7651606
     },
     "SPY": {
-      "price": 763.25,
+      "price": 763.5800170898438,
       "volume_ratio": 0.0,
-      "ts": 1788276042.3565295,
+      "ts": 1788276643.169021,
       "last_full_scan_ts": 1788273459.3509285
     },
     "TSLA": {
-      "price": 358.41070556640625,
+      "price": 359.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1788276042.6606262,
-      "last_full_scan_ts": 1788273520.3029318
+      "ts": 1788276643.3244212,
+      "last_full_scan_ts": 1788276744.2177377
     }
   },
-  "ai_cache": {},
-  "saved_at": "2026-09-01T11:22:24-04:00"
+  "ai_cache": {
+    "NVDA": {
+      "result": {
+        "ticker": "NVDA",
+        "timestamp": "2026-09-01T15:31:24.716514",
+        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:30 AM ET | Price: $218.95**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is holding above VWAP across all three intraday timeframes with clean short-term bullish momentum on the 5m and 15m, but the 1H is mixed-to-bearish and the daily MACD is printing negative histogram. The most plausible scenario over 5-15 sessions is continued range consolidation between $213\u2013$227, with near-term intraday bias slightly upward as price holds above the $218 VWAP cluster. A decisive move in either direction requires a volume catalyst that is currently absent \u2014 volume is running at only 32% of its 20-day average.\n\n---\n\n## 2. BULL CASE\n\n| Signal | Implication |\n|---|---|\n| **Price above VWAP on all 3 intraday TFs** (5m/15m/1H) | Market participants are consistently buying dips to VWAP \u2014 structural intraday demand |\n| **15m MACD Bullish Cross** (hist: +0.0074) | Momentum is inflecting upward on the confirmation timeframe |\n| **5m & 15m 3-candle momentum** (+0.36% / +0.41%) | Fresh price action is directionally bullish |\n| **OBV Rising + Strong Fundamentals** (Forward P/E 14.2, PEG 0.56, analyst PT $323) | Institutional accumulation underpinning; no distribution signal |\n\n---\n\n## 3. BEAR CASE\n\n| Signal | Implication |\n|---|---|\n| **Daily MACD Histogram: -0.2474** | Intermediate-term momentum is pointed down; bears control the daily chart |\n| **Tech sector -1.21% today; QQQ -0.88%** | NVDA is swimming against a red sector \u2014 headwind for a sustained intraday rally |\n| **5m RSI 73.55 (Overbought)** | Short-term move may be exhausted; overhead resistance likely near current price |\n| **Volume 0.32x 20D avg** | Anemic volume means bullish intraday price action lacks conviction \u2014 any rally can fail quickly |\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume spike**: Any institutional order flow entering the tape could directionally resolve the low-volume drift \u2014 watch for a volume surge above 1.5x avg as a confirmation trigger\n- **Macro tape**: QQQ -0.88% and tech sector -1.21%; if SPY accelerates downward, NVDA beta of 2.2 creates outsized downside risk intraday\n- **No news / no earnings**: Absence of catalyst cuts both ways \u2014 supports range-bound behavior but also means there's no fuel for an explosive directional move\n- **Options expiry dynamics**: Balanced P/C ratio (0.83) with 5 unusual calls + 5 unusual puts flagged suggests market makers are hedged \u2014 no strong pinning force either direction, but near-$220 strike is worth watching as a potential magnet\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$219.50\u2013$220.00** | Near-term resistance | Round number + area where 5m RSI overbought may stall price |\n| **$218.05\u2013$218.15** | Critical intraday support | VWAP cluster (5m VWAP $218.06 + EMA9 $218.15) \u2014 bulls must hold this |\n| **$216.26** | Secondary support | EMA21 (daily) \u2014 loss of this signals intraday trend breakdown |\n| **$213.55** | Key technical support | EMA50 (daily) \u2014 defines the higher-low structure |\n| **$227.98** | 20D resistance | Upper range ceiling; target on any sustained breakout |\n| **$208.48** | 20D support / thesis invalidation | Loss of this flips the 20D range bearish structurally |\n\n**Thesis-changing level**: A close below $218.05 VWAP flips intraday bias bearish; a push above $220 with volume confirms bulls regained control.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\n**Signal clarity is moderate but contradictory across timeframes (5m/15m bullish vs. 1H mixed, daily MACD bearish), and tradeability is the binding constraint \u2014 the 5m RSI is already overbought at 73.55 with no volume to sustain a breakout, making a CALL entry late, while the bearish case lacks the alignment and sector-specific downside catalyst needed to confidently sell a PUT at this price.** The setup resolves to a low-conviction trade where theta decay on 0-2 DTE options would likely erode premium before directional resolution occurs.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the NO TRADE call)**\n\nThe intraday structure is leaning bullish but the entry point for CALLs is compromised by an overbought 5m RSI and anemic volume. The bearish case exists but lacks the timeframe alignment (only daily MACD + sector context) required to justify a PUT at this price level. This is a genuine conflict, not a default.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict \u2014 5m/15m intraday structure is bullish but CALL entry is compromised by overbought 5m RSI (73.55) with volume at 0.32x average providing no momentum fuel, while the bearish case (daily MACD negative, tech sector -1.21%) lacks the intraday timeframe alignment needed for a PUT; theta decay would likely win before directional resolution occurs.",
+        "confluence_score": 52,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict \u2014 5m/15m intraday structure is bullish but CALL entry is compromised by overbought 5m RSI (73.55) with volume at 0.32x average providing no momentum fuel, while the bearish case (daily MACD negative, tech sector -1.21%) lacks the intraday timeframe alignment needed for a PUT; theta decay would likely win before directional resolution occurs.",
+          "reversal_risk": 0,
+          "exhaustion_side": null,
+          "reversal_notes": "",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6376
+      },
+      "was_flagged": true,
+      "cached_at": 1788276684.7274601,
+      "score": 52
+    }
+  },
+  "saved_at": "2026-09-01T11:32:26-04:00"
 }
