@@ -343,7 +343,7 @@
   "verdict": "TRADE",
   "message_id": "1544354316960137267",
   "signal_time": "2026-09-01T10:32:42-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "MSFT",
@@ -357,7 +357,7 @@
   "verdict": "TRADE",
   "message_id": "1544354824437375006",
   "signal_time": "2026-09-01T10:34:43-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "NVDA",
@@ -371,7 +371,7 @@
   "verdict": "TRADE",
   "message_id": "1544355065429491787",
   "signal_time": "2026-09-01T10:35:41-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "TSLA",
@@ -385,7 +385,7 @@
   "verdict": "TRADE",
   "message_id": "1544384425830256820",
   "signal_time": "2026-09-01T12:32:20-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "QQQ",
@@ -399,6 +399,20 @@
   "verdict": "TRADE",
   "message_id": "1544389264685531219",
   "signal_time": "2026-09-01T12:51:34-04:00",
+  "status": "EXPIRED"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "PUT",
+  "trigger": 499.45,
+  "strike": 497.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15-minute candle close that rejects $499.45 (15m VWAP) with bearish MACD histogram confirming and price returning below $497.48.",
+  "score": 67,
+  "verdict": "TRADE",
+  "message_id": "1544716900469051502",
+  "signal_time": "2026-09-02T10:33:29-04:00",
   "status": "PENDING"
  }
 ]
