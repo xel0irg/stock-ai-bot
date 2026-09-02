@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 324.9501037597656,
+      "price": 325.0150146484375,
       "volume_ratio": 0.0,
-      "ts": 1788366038.1950464,
+      "ts": 1788366641.1277459,
       "last_full_scan_ts": 1788364930.539787
     },
     "AMZN": {
-      "price": 254.86000061035156,
+      "price": 254.77000427246094,
       "volume_ratio": 0.0,
-      "ts": 1788366038.5056207,
+      "ts": 1788366641.4019685,
       "last_full_scan_ts": 1788363746.1993222
     },
     "META": {
-      "price": 593.780029296875,
+      "price": 592.719970703125,
       "volume_ratio": 0.0,
-      "ts": 1788366038.828268,
+      "ts": 1788366641.5741692,
       "last_full_scan_ts": 1788363694.4452267
     },
     "MSFT": {
-      "price": 494.4849853515625,
+      "price": 494.17999267578125,
       "volume_ratio": 0.0,
-      "ts": 1788366039.196207,
+      "ts": 1788366641.7745397,
       "last_full_scan_ts": 1788363793.8027492
     },
     "NVDA": {
-      "price": 227.31500244140625,
+      "price": 227.25999450683594,
       "volume_ratio": 0.0,
-      "ts": 1788366039.516341,
+      "ts": 1788366642.0145006,
       "last_full_scan_ts": 1788364340.341037
     },
     "QQQ": {
-      "price": 708.8499755859375,
+      "price": 708.4110107421875,
       "volume_ratio": 0.0,
-      "ts": 1788366039.8472073,
+      "ts": 1788366642.2862372,
       "last_full_scan_ts": 1788363837.9473054
     },
     "SPY": {
-      "price": 765.5050048828125,
+      "price": 764.8900146484375,
       "volume_ratio": 0.0,
-      "ts": 1788366040.1982305,
+      "ts": 1788366642.621675,
       "last_full_scan_ts": 1788363892.685577
     },
     "TSLA": {
-      "price": 354.5400085449219,
+      "price": 353.2099914550781,
       "volume_ratio": 0.0,
-      "ts": 1788366040.4930983,
-      "last_full_scan_ts": 1788366102.181771
+      "ts": 1788366642.847134,
+      "last_full_scan_ts": 1788366693.1738865
     }
   },
   "ai_cache": {
@@ -277,45 +277,7 @@
       "was_flagged": true,
       "cached_at": 1788364930.5397904,
       "score": 41
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-09-02T16:21:42.172460",
-        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 12:20 PM ET | Price: $354.54**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a consolidation range between $319 support and $368 resistance, trading in the upper half of its Bollinger Band after a strong 20-day run (+10.96%). The most plausible near-term scenario is continued chop with a slight upward lean on the short timeframes, but the 1H structure is clearly bearish and price is 1.3% below the 1H VWAP \u2014 suggesting the intraday move up from lows has been weak and low-participation. Expect mean-reversion pressure toward $350\u2013$352 as the more likely path unless volume materializes to support a breakout toward $358\u2013$362.\n\n---\n\n## 2. BULL CASE\n\n- **5m/15m VWAP hold + EMA alignment:** Price is above both the 5m and 15m VWAP ($353.86), with EMA9/21 flat-to-bullish on short timeframes. This is the classic intraday structure for a continuation bid.\n- **MACD Histogram (daily):** At +3.1464, the daily MACD histogram is positive and the strongest single multi-day directional signal in the dataset \u2014 implies medium-term momentum is still net bullish.\n- **20-day return +10.96%:** Structural trend over the past month is up; pullbacks have been bought. $319 support held.\n- **Analyst consensus BUY, target $390:** 39 analysts with a $390 target implies ~10% upside from current levels, providing a long-side fundamental tailwind.\n\n---\n\n## 3. BEAR CASE\n\n- **1H timeframe fully bearish (0 bull / 4 bear signals):** Price is 1.34% BELOW the 1H VWAP ($359.32) with bearish EMA9/21 and bearish 3-candle momentum. This is the dominant structural timeframe for 0-2 DTE and it's pointing down.\n- **OBV falling + volume at 0.55x 20D average:** On-balance volume is declining and today's volume is less than half the 20-day norm. Rallies on low volume fail. The 5m/15m bullish signals are unconfirmed by volume (0.0x and 0.19x respectively).\n- **EMA50 overhead resistance at $358.63:** Price is below its 50-period EMA on the daily chart, which aligns closely with the 1H VWAP ($359.32). This is a stacked resistance cluster just 1.1% above.\n- **Bollinger Band position 0.713 (upper half) after a 10.96% 20D run:** Price is stretched toward the upper band ($368.46). After a significant run with volume drying up, mean-reversion risk is elevated. Upper band is effectively a 4% move away.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news detected (0 articles):** This is a gap risk \u2014 any breaking Tesla/Musk/EV policy headline could move price well outside expected move ranges instantly. Trade smaller or avoid holding through afternoon.\n- **Options expiry dynamics:** P/C ratio of 0.77 (mildly call-skewed) with 10 flagged unusual contracts (5 calls, 5 puts) is balanced but suggests smart money is not strongly positioned in one direction \u2014 potential for pin action near a round number ($355).\n- **Elon Musk / regulatory news:** TSLA remains one of the most headline-sensitive tickers in the market. Any Musk activity (DOGE, X, SpaceX crossover, regulatory probe) is an asymmetric risk.\n- **Broad market divergence:** SPY +0.47% but QQQ only +0.14% with Tech sector -0.3%. If tech sector selling accelerates, TSLA (high-beta, 1.827) absorbs disproportionate downside.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical resistance** | $358.63\u2013$359.32 | EMA50 (daily) + 1H VWAP cluster \u2014 reclaim = bull thesis |\n| **Near resistance** | $356.22 | 1H EMA9 \u2014 first hurdle |\n| **Current pivot** | $353.86 | 5m/15m VWAP \u2014 loss = short-term structure breaks |\n| **Intraday support** | $350\u2013$351 | Round number / prior consolidation |\n| **Key support** | $319.53 | 20D structural support |\n| **Thesis flip level** | $359.50 | Above this with volume \u2192 bull trade valid; below \u2192 bear bias holds |\n\n**Level that changes the thesis:** A 5m candle close ABOVE $359.50 (reclaiming 1H VWAP + EMA50) on >1.2x average volume flips the setup to a CALL. A break below $353.86 (5m VWAP) on any volume confirmation shifts to PUT territory.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 36/100\n\n**Score rationale:** The timeframe conflict is the core problem \u2014 5m/15m are bullish but on near-zero volume, while the 1H (the most relevant for 0-2 DTE trade structure) is fully bearish. Mixed timeframes per the confluence rules = \"wait for alignment.\" Tradeability is further capped because the low-volume 5m/15m push has reversal risk embedded (participation is 0.19x\u20130.42x average), and the realistic target in either direction sits only marginally inside the expected move without a clear trigger being met. No trade is warranted here.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe 5m/15m signals are bullish but volume-unconfirmed, and the 1H is fully bearish \u2014 a textbook mixed-timeframe non-setup. Per the confluence rules, mixed timeframes = wait for alignment. Neither the bull nor bear case is being driven by participation.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m/15m show bullish structure but on 0.0x\u20130.19x average volume (unconfirmed), while the 1H is fully bearish (0 bull / 4 bear signals) with price 1.34% below 1H VWAP; per confluence rules, mixed timeframes require alignment before entry.\n```\n\n---\n\n**MONITOR FOR RE-ENTRY:**\n- **CALL trigger:** $359.50 reclaim on 15m candle close with volume >1.2x \u2014 target $362\u2013$363 (within 1DTE expected move)\n- **PUT trigger:** $353.86 (5m VWAP) break on any volume confirmation \u2014 target $350\u2013$351 (within 0DTE expected move of \u00b1$3.47)\n- At 12:20 PM ET, 0DTE is still viable on a trigger, but the window closes after 2:00 PM ET \u2014 act on trigger or step to 1DTE.",
-        "confluence_score": 42,
-        "signal_clarity": 48,
-        "tradeability": 36,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m/15m show bullish structure but on 0.0x\u20130.19x average volume (unconfirmed), while the 1H is fully bearish (0 bull / 4 bear signals) with price 1.34% below 1H VWAP; per confluence rules, mixed timeframes require alignment before entry.",
-          "reversal_risk": 20,
-          "exhaustion_side": null,
-          "reversal_notes": "push is on 0.42x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6854
-      },
-      "was_flagged": true,
-      "cached_at": 1788366102.181774,
-      "score": 42
     }
   },
-  "saved_at": "2026-09-02T12:21:44-04:00"
+  "saved_at": "2026-09-02T12:31:35-04:00"
 }
