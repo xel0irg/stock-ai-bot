@@ -414,5 +414,19 @@
   "message_id": "1544716900469051502",
   "signal_time": "2026-09-02T10:33:29-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 353.0,
+  "strike": 350.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a 15m candle close that holds below $353.00 with volume at or above 0.5x average confirming continued selling pressure \u2014 do not chase a candle already extended more than $1.50 below VWAP.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1544724201074860054",
+  "signal_time": "2026-09-02T11:02:29-04:00",
+  "status": "PENDING"
  }
 ]
