@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 329.79998779296875,
+      "price": 329.9400939941406,
       "volume_ratio": 0.0,
-      "ts": 1788449444.0603197,
+      "ts": 1788450038.5548842,
       "last_full_scan_ts": 1788448304.1413808
     },
     "AMZN": {
-      "price": 258.614990234375,
+      "price": 259.19500732421875,
       "volume_ratio": 0.0,
-      "ts": 1788449444.3757174,
+      "ts": 1788450038.7142675,
       "last_full_scan_ts": 1788448351.8325906
     },
     "META": {
-      "price": 617.8250122070312,
+      "price": 617.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1788449444.5937545,
+      "ts": 1788450038.9214923,
       "last_full_scan_ts": 1788448892.7134497
     },
     "MSFT": {
-      "price": 512.6900024414062,
+      "price": 512.469970703125,
       "volume_ratio": 0.0,
-      "ts": 1788449444.8994455,
+      "ts": 1788450039.1174026,
       "last_full_scan_ts": 1788448463.6582205
     },
     "NVDA": {
-      "price": 227.86000061035156,
+      "price": 227.4199981689453,
       "volume_ratio": 0.0,
-      "ts": 1788449445.1485922,
+      "ts": 1788450039.30839,
       "last_full_scan_ts": 1788449494.1652627
     },
     "QQQ": {
-      "price": 717.6400146484375,
+      "price": 717.1500244140625,
       "volume_ratio": 0.0,
-      "ts": 1788449445.343849,
-      "last_full_scan_ts": 1788446193.577621
+      "ts": 1788450039.4928038,
+      "last_full_scan_ts": 1788450084.039301
     },
     "SPY": {
-      "price": 772.97998046875,
+      "price": 772.510009765625,
       "volume_ratio": 0.0,
-      "ts": 1788449445.6185396,
-      "last_full_scan_ts": 1788446248.28228
+      "ts": 1788450039.7685425,
+      "last_full_scan_ts": 1788450137.5706012
     },
     "TSLA": {
-      "price": 380.81500244140625,
+      "price": 381.2296142578125,
       "volume_ratio": 0.0,
-      "ts": 1788449445.8546705,
+      "ts": 1788450039.920646,
       "last_full_scan_ts": 1788449544.3913403
     }
   },
@@ -201,7 +201,45 @@
       "was_flagged": true,
       "cached_at": 1788448892.7134528,
       "score": 52
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-09-03T15:42:17.567798",
+        "analysis": "# SPY Analysis \u2014 11:41 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY has rallied ~0.93% intraday and is pressing toward the 52W high of $779.37 with broad sector participation (Discretionary +1.5%, Financials +1.2%). However, the move is technically exhausted \u2014 RSI bearish divergence, 3.2 ATR above VWAP, and overbought readings on every intraday timeframe signal the up-move is running on fumes. The most plausible 5-15 day scenario is a consolidation or mild pullback toward $761\u2013$766 before any continuation attempt at new highs.\n\n---\n\n## 2. BULL CASE\n\n1. **Regime is unambiguously bullish** \u2014 SPY and QQQ both above EMA9/EMA21, VIX at 14.91. Bull regimes favor continuation.\n2. **15m timeframe fully aligned bullish** \u2014 All four signals green (VWAP, EMA, MACD, momentum). This is the cleanest setup timeframe.\n3. **Broad sector breadth** \u2014 4 of 6 sectors green, led by high-beta Discretionary and Financials. This is not a narrow, fragile rally.\n4. **Price near 52W high of $779.37** \u2014 Breakout above that level would be technically significant and could trigger momentum buying.\n\n---\n\n## 3. BEAR CASE\n\n1. **BULLISH_EXHAUSTION confirmed \u2014 60/100 reversal risk** \u2014 RSI bearish divergence (higher price, lower RSI), price 3.2 ATR from VWAP. This is the single most important signal in this dataset.\n2. **Daily MACD histogram negative (-0.8432)** \u2014 Despite today's bounce, the daily trend structure remains under distribution pressure.\n3. **Volume severely depressed \u2014 0.46x 20-day average** \u2014 The intraday rally has no institutional participation. Low-volume rips near 52W highs frequently fail or get faded.\n4. **OBV falling** \u2014 Cumulative volume pressure is bearish, contradicting price action. Price is being carried on thin air.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W High at $779.37** \u2014 Only $7.08 away (~0.92%). A clean breakout could trigger momentum and stop-run flows; a rejection there is equally potent for reversal.\n- **Macro data / Fed commentary** \u2014 No news flagged currently, but any surprise economic print this afternoon could spike VIX and crater the low-volume rally.\n- **Options expiry dynamics** \u2014 Balanced P/C of 0.82 with 10 unusual contracts flagged (5 calls/5 puts) suggests market makers are hedged symmetrically. Any pin or gamma squeeze near key strikes could exaggerate moves into close.\n- **VIX spike** \u2014 VIX at 14.91 is compressed. A sudden jump above 17-18 on thin volume would punish longs disproportionately.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Resistance | $777.88\u2013$779.37 | 20D resistance + 52W high \u2014 the make-or-break zone |\n| Bollinger Upper | $777.92 | Confluent with resistance; rejection here = textbook fade |\n| Current Price | $772.29 | At-market; 3.2 ATR above VWAP |\n| 5m VWAP | $770.75 | First intraday support; loss here weakens bull case |\n| 15m VWAP | $768.40 | Structural support; close below invalidates bullish intraday thesis |\n| 20D Support | $761.78 | Mean-reversion magnet if exhaustion plays out |\n| **Thesis-change level** | **$768.40** | **Loss of 15m VWAP on volume would flip intraday bias bearish** |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 46/100\n\n**Score rationale:** The directional read is moderately clear (bull regime, intraday bullish structure) but the exhaustion signals are severe and directly contradict entering a CALL right now. The realistic near-term move is a mean-reversion toward VWAP ($768\u2013$770), not a continuation \u2014 and a continuation CALL requires a target near $775\u2013$777 (0.9\u20131.3x the 1DTE expected move), which is beyond what premium can absorb. Tradeability capped the score: the entry is late, the realistic target is at the boundary of the expected move, and the low-volume exhaustion makes premium recovery highly uncertain.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bull regime gate favors CALLs, but the BULLISH_EXHAUSTION (60/100 reversal risk, RSI divergence, 3.2 ATR from VWAP, 0.46x volume) makes this a chase entry. The setup is not bearish enough for a PUT (regime gate blocks it; reversal evidence alone doesn't generate conviction for a short-dated put). The correct answer here is to wait.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Setup is directionally clear (bull regime favors CALLs) but BULLISH_EXHAUSTION is confirmed at 60/100 reversal risk with RSI divergence and price 3.2 ATR above VWAP \u2014 entering a CALL here is chasing a depleted move where the realistic continuation target ($775\u2013$777) sits at or beyond the 1DTE expected move boundary, making premium recovery untenable; wait for a pullback to the 15m VWAP ($768.40) and re-evaluate.",
+        "confluence_score": 52,
+        "signal_clarity": 58,
+        "tradeability": 46,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Setup is directionally clear (bull regime favors CALLs) but BULLISH_EXHAUSTION is confirmed at 60/100 reversal risk with RSI divergence and price 3.2 ATR above VWAP \u2014 entering a CALL here is chasing a depleted move where the realistic continuation target ($775\u2013$777) sits at or beyond the 1DTE expected move boundary, making premium recovery untenable; wait for a pullback to the 15m VWAP ($768.40) and re-evaluate.",
+          "reversal_risk": 60,
+          "exhaustion_side": "BULLISH_EXHAUSTION",
+          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push; price is 3.2 ATR from VWAP \u2014 stretched and prone to snap back",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6661
+      },
+      "was_flagged": false,
+      "cached_at": 1788450137.5706043,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-03T11:32:26-04:00"
+  "saved_at": "2026-09-03T11:42:19-04:00"
 }
