@@ -321,6 +321,17 @@ def run_ai_synthesis(
             "analysis": None,
         }
 
+    # Daily technicals, used by target validation and trigger geometry
+    # below. THIS WAS MISSING: `ta` existed only inside
+    # _build_analysis_prompt, so every reference to it here raised
+    # NameError, was swallowed by a bare `except Exception`, and logged at
+    # debug level where nobody would see it. Consequences, both silent:
+    #   * validate_target() never ran — target_adjusted is "no" on all
+    #     1,475 logged rows, so the "target must sit inside the expected
+    #     move" rule was never actually enforced;
+    #   * the entry-trigger geometry repair never ran either.
+    ta = (tech.get("technicals") or {})
+
     log.info(f"Sending {ticker} data to Claude for AI synthesis...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -568,7 +579,8 @@ def run_ai_synthesis(
                 trade_setup["target_em_ratio"] = vt.get("target_em_ratio")
                 trade_setup["em_pct"]          = vt.get("em_pct")
             except Exception as e:
-                log.debug(f"{ticker}: validate_target failed — {e}")
+                # warning, not debug: this silently did nothing for months
+                log.warning(f"{ticker}: validate_target failed — {e}")
 
         # ── Reversal penalty ──────────────────────────────────
         # The AI is shown the exhaustion evidence above and told how to
@@ -638,7 +650,7 @@ def run_ai_synthesis(
                     trade_setup["trigger_dist_pct"] = round(
                         abs(trade_setup["entry_trigger"] - _spot) / _spot * 100, 3)
             except Exception as e:
-                log.debug(f"{ticker}: trigger geometry check failed — {e}")
+                log.warning(f"{ticker}: trigger geometry check failed — {e}")
 
         # ── Verdict tier (TRADE / WATCH / RISKY) ──────────────────
         # Concise honest read driving the card banner and feed. Based on

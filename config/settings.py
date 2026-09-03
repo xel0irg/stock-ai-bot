@@ -117,7 +117,7 @@ TA_SETTINGS = {
 # otherwise old-code and new-code signals are indistinguishable forever
 # (we could not tell whether June-July's 36% directional accuracy was
 # old code or old regime; this ends that).
-STRATEGY_VERSION = "2026.09.01-score-decomposed"
+STRATEGY_VERSION = "2026.09.02-climax-and-ta-fix"
 
 # ── Entry-trigger geometry ───────────────────────────────
 # A trigger sitting at (or through) spot is not a trigger — the entry
@@ -143,5 +143,9 @@ CLUSTER_WINDOW_MINUTES        = _safe_int("CLUSTER_WINDOW_MINUTES", 15)
 # is a CHOSEN value, not one fitted to historical P&L; it is deliberately
 # large enough to matter and small enough that strong confluence can
 # still clear the feed cutoff. Version-stamped so its effect is testable.
-REVERSAL_RISK_THRESHOLD = _safe_int("REVERSAL_RISK_THRESHOLD", 45)
+# Lowered 45 -> 30 on 2026-09-02. A single climax bar scores 30 on its own,
+# and a climax is exactly the case that motivated this system (TSLA sold at
+# the low of a vertical two-bar collapse). At 45 the side was named but no
+# penalty applied, which is the worst of both worlds.
+REVERSAL_RISK_THRESHOLD = _safe_int("REVERSAL_RISK_THRESHOLD", 30)
 REVERSAL_MAX_PENALTY    = _safe_int("REVERSAL_MAX_PENALTY", 15)

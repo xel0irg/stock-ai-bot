@@ -691,6 +691,7 @@ def _reversal_features(close, high, low, volume, atr: Optional[float],
         "macd_fading":        None,
         "vwap_extension_atr": None,
         "volume_confirms":    None,
+        "climax_ratio":       None,
         "reversal_risk":      0,
         "exhaustion_side":    None,
         "reversal_notes":     [],
@@ -715,6 +716,7 @@ def _reversal_features(close, high, low, volume, atr: Optional[float],
         rsi_recent = rsi_series.iloc[-n:]
         notes = []
         risk = 0
+        _climax_dir = None
 
         # (1) RSI divergence — price makes a new extreme, RSI does not.
         # The most reliable single tell that a push has fewer buyers or
@@ -771,7 +773,38 @@ def _reversal_features(close, high, low, volume, atr: Optional[float],
                 risk += 12
                 notes.append(f"price is {abs(ext):.1f} ATR from VWAP")
 
-        # (4) Volume confirmation — is the latest push actually being
+        # (4) Climax bar — a vertical, outsized move on one or two bars.
+        # The other three checks look for a move FADING; they need several
+        # bars of deteriorating structure and cannot see a spike that
+        # completes inside 15-30 minutes. TSLA on 2026-09-02 dropped
+        # near-vertically and recovered within two bars: no divergence, no
+        # histogram fade, so reversal_risk came back 8/100 while the bot
+        # sold the low. A bar whose range dwarfs its neighbours is
+        # capitulation, and capitulation is where moves end, not start.
+        try:
+            rng = (high - low).dropna()
+            if len(rng) >= n:
+                base_rng = float(rng.iloc[-n:-2].mean())
+                last_rng = float(rng.iloc[-2:].max())
+                if base_rng > 0:
+                    spike = last_rng / base_rng
+                    out["climax_ratio"] = round(spike, 2)
+                    if spike >= 3.0:
+                        risk += 30
+                        _climax_dir = ("down" if float(close.iloc[-1]) <
+                                       float(close.iloc[-3]) else "up")
+                        notes.append(f"latest bar range is {spike:.1f}x the "
+                                     f"recent average — climax/capitulation, "
+                                     f"moves typically end here rather than "
+                                     f"continue")
+                    elif spike >= 2.0:
+                        risk += 15
+                        notes.append(f"latest bar range is {spike:.1f}x the "
+                                     f"recent average — outsized push")
+        except Exception:
+            pass
+
+        # (5) Volume confirmation — is the latest push actually being
         # participated in, or drifting on air?
         if volume is not None and len(volume) >= n:
             recent_vol = volume.iloc[-3:].mean()
@@ -790,9 +823,11 @@ def _reversal_features(close, high, low, volume, atr: Optional[float],
         # A side is only named once the evidence is more than one weak
         # component, so a healthy trend is not labelled exhausted.
         move = last - float(recent_close.iloc[0])
-        if out["rsi_divergence"] == "bearish" or (move > 0 and risk >= 35):
+        if _climax_dir == "up" or out["rsi_divergence"] == "bearish" \
+                or (move > 0 and risk >= 35):
             out["exhaustion_side"] = "BULLISH_EXHAUSTION"
-        elif out["rsi_divergence"] == "bullish" or (move < 0 and risk >= 35):
+        elif _climax_dir == "down" or out["rsi_divergence"] == "bullish" \
+                or (move < 0 and risk >= 35):
             out["exhaustion_side"] = "BEARISH_EXHAUSTION"
 
         out["reversal_risk"]  = int(min(100, risk))
