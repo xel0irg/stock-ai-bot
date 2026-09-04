@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 320.90008544921875,
+      "price": 321.1000061035156,
       "volume_ratio": 0.0,
-      "ts": 1788543636.8335264,
+      "ts": 1788544245.1708856,
       "last_full_scan_ts": 1788542496.3733754
     },
     "AMZN": {
-      "price": 256.80999755859375,
+      "price": 257.0799865722656,
       "volume_ratio": 0.0,
-      "ts": 1788543636.9713163,
+      "ts": 1788544245.4700902,
       "last_full_scan_ts": 1788540679.447171
     },
     "META": {
-      "price": 609.1699829101562,
+      "price": 609.6699829101562,
       "volume_ratio": 0.0,
-      "ts": 1788543637.1603322,
-      "last_full_scan_ts": 1788540089.302088
+      "ts": 1788544245.912811,
+      "last_full_scan_ts": 1788544299.2860415
     },
     "MSFT": {
-      "price": 500.32501220703125,
+      "price": 501.0592041015625,
       "volume_ratio": 0.0,
-      "ts": 1788543637.4126873,
+      "ts": 1788544246.340394,
       "last_full_scan_ts": 1788540721.6632173
     },
     "NVDA": {
-      "price": 230.49000549316406,
+      "price": 230.3300018310547,
       "volume_ratio": 0.0,
-      "ts": 1788543637.6092446,
+      "ts": 1788544246.6801112,
       "last_full_scan_ts": 1788542543.8292782
     },
     "QQQ": {
-      "price": 717.010009765625,
+      "price": 716.9949951171875,
       "volume_ratio": 0.0,
-      "ts": 1788543637.7940018,
+      "ts": 1788544246.956258,
       "last_full_scan_ts": 1788540766.4729826
     },
     "SPY": {
-      "price": 769.5349731445312,
+      "price": 769.4498901367188,
       "volume_ratio": 0.0,
-      "ts": 1788543637.9826527,
+      "ts": 1788544247.2763884,
       "last_full_scan_ts": 1788540811.452841
     },
     "TSLA": {
-      "price": 352.12908935546875,
+      "price": 352.32000732421875,
       "volume_ratio": 0.0,
-      "ts": 1788543638.1368887,
+      "ts": 1788544247.5498712,
       "last_full_scan_ts": 1788543103.2145872
     }
   },
@@ -163,44 +163,6 @@
       "was_flagged": false,
       "cached_at": 1788450137.5706043,
       "score": 48
-    },
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-09-04T16:41:29.292701",
-        "analysis": "# META \u2014 0-2 DTE Options Analysis | 12:40 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has run ~7% over 5 days and is sitting directly at 20-day resistance ($611.97) and near the upper Bollinger Band ($617.09), with overbought oscillators and decelerating momentum on low volume (0.44x average). The most plausible near-term scenario is consolidation or a shallow mean-reversion toward VWAP/EMA9 ($610\u2013612) rather than a continuation breakout, as participation has evaporated on the push up. A sustained move higher would require volume re-acceleration and a clean break above $617; absent that, price drifts or fades.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (daily) +6.59 \u2192 BULLISH:** Positive and elevated, confirming underlying momentum hasn't fully rolled over on the higher timeframe \u2014 bulls still in control structurally.\n- **1H and 15m structure BULLISH:** Price above VWAP on both the 15m ($610.77) and 1H ($609.98), with EMA9 > EMA21 on both \u2014 intraday trend is still net bullish.\n- **Tech sector green (+0.77%) vs. broad market red:** META is outperforming a mixed tape, suggesting relative strength and institutional preference.\n- **Analyst target $754.77, Strong Buy consensus (57 analysts):** Fundamental tailwind supports dip-buying mentality; any pullback likely finds buyers quickly.\n\n---\n\n## 3. BEAR CASE\n\n- **At 20-day resistance ($611.97) + upper Bollinger Band ($617.09):** Price is pressing the ceiling of its range. Resistance here is well-defined and confirmed by two independent measures.\n- **Stochastic 90.89/88.75 + RSI 61.14 \u2192 OVERBOUGHT signals:** Oscillators warn that the 5-day, 7% run is extended; mean-reversion risk elevated.\n- **BEARISH_EXHAUSTION flagged (reversal risk 45/100):** MACD histogram shrinking for three consecutive bars, volume confirmation absent (0.51x recent average) \u2014 the up move is losing fuel precisely as it tests resistance.\n- **5m timeframe full BEAR (0/3):** All three short-term signals (below 5m VWAP $612.50, bearish MACD cross, negative 3-candle momentum) indicate the immediate micro-structure has already turned \u2014 distribution at resistance in real time.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume re-acceleration:** If afternoon volume surges above 1x the 20D average, a breakout above $617 (upper BB) becomes credible \u2014 would invalidate the exhaustion thesis rapidly.\n- **Broad market regime shift:** SPY/QQQ are mixed but if SPY catches a bid in the afternoon, tech could follow and push META through resistance.\n- **No news present:** An unexpected headline (regulatory, AI/product announcement, macro print) could create a directional gap that overwhelms all technical reads \u2014 tail risk in both directions.\n- **0DTE pinning dynamics:** With the 0DTE expected move at only \u00b1$3.55, market makers may actively pin near $611\u2013612 into close today, reducing intraday range further.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate Resistance | $612.50 | 5m VWAP \u2014 price is below this right now |\n| Upper Bollinger / Key Resistance | $617.09 | Major ceiling; breakout above = thesis change |\n| 20D Resistance (confluence) | $611.97 | Current price = resistance exact |\n| 15m VWAP | $610.77 | Loss of this invalidates 15m bullish structure |\n| 1H VWAP | $609.98 | Loss of this confirms intraday breakdown |\n| EMA9 (5m) | $612.43 | Reclaim needed to flip 5m bullish |\n| Support | $589\u2013590 | EMA50/EMA9 daily cluster \u2014 true support far below |\n\n**Thesis-change level:** A close above $617.09 (upper BB + volume) flips to CALL setup. A break below $609.98 (1H VWAP) with volume confirms breakdown.\n\n---\n\n## 6. CONFLUENCE SCORE: 51/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 44/100\n\n**Score rationale:** Signal clarity is moderate \u2014 bearish exhaustion at resistance with 5m breakdown is real, but 15m/1H structure remains net bullish, creating a genuine directional conflict. Tradeability caps the score: the 0DTE expected move is only \u00b1$3.55 and the stock is sitting at a contested zone without a clean trigger, meaning the realistic move before reversal risk kicks in is too small to generate meaningful option premium payoff on a directional bet. Exhaustion at 45/100 with MACD fading materially reduces conviction for a CALL; mixed timeframes prevent a high-conviction PUT.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe setup is not genuinely bullish (exhaustion at resistance, 5m full bear) nor cleanly bearish (15m/1H still above VWAP, tech sector green, daily MACD still positive). The conflict is real, not manufactured.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is full bearish while 15m/1H remain bullish above VWAP, and BEARISH_EXHAUSTION at 45/100 with decelerating volume makes both a CALL (chasing exhausted run at resistance) and a PUT (fading a still-intact 15m/1H bullish structure in a green sector) low-conviction entries that do not clear the 55-point tradeability threshold.",
-        "confluence_score": 51,
-        "signal_clarity": 58,
-        "tradeability": 44,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is full bearish while 15m/1H remain bullish above VWAP, and BEARISH_EXHAUSTION at 45/100 with decelerating volume makes both a CALL (chasing exhausted run at resistance) and a PUT (fading a still-intact 15m/1H bullish structure in a green sector) low-conviction entries that do not clear the 55-point tradeability threshold.",
-          "reversal_risk": 45,
-          "exhaustion_side": "BEARISH_EXHAUSTION",
-          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating; push is on 0.51x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6772
-      },
-      "was_flagged": false,
-      "cached_at": 1788532416.648367,
-      "score": 51
     },
     "AMZN": {
       "result": {
@@ -355,5 +317,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-09-04T13:40:38-04:00"
+  "saved_at": "2026-09-04T13:51:41-04:00"
 }
