@@ -428,5 +428,19 @@
   "message_id": "1544724201074860054",
   "signal_time": "2026-09-02T11:02:29-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 257.0,
+  "strike": 257.5,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a 15m candle close below $257.00 with price confirming rejection of EMA9 ($258.06) and MACD histogram remaining negative, with volume at minimum 0.5x average to confirm participation in the move.",
+  "score": 68,
+  "verdict": "WATCH",
+  "message_id": "1545441449774944319",
+  "signal_time": "2026-09-04T10:32:35-04:00",
+  "status": "PENDING"
  }
 ]
