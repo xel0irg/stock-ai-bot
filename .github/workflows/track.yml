@@ -1,0 +1,58 @@
+name: Track Open Positions
+
+# Premium sampling only — no AI calls, no Discord signals.
+#
+# The scan window closes at 2 PM ET (SCAN_END_TIME) but positions are not
+# closed out until 4:05 PM, so premium_path had a blind two-hour gap at
+# exactly the time 0-2 DTE contracts decay hardest. Every published recap
+# used hold-to-close as its headline, and the -30/+55 exit rule could not
+# fire in that window. This job fills it.
+#
+# Trigger from cron-job.org every 15 min, 2:00 PM - 3:55 PM ET, Mon-Fri:
+#   POST https://api.github.com/repos/<owner>/<repo>/dispatches
+#   {"event_type": "track-trigger"}
+
+on:
+  repository_dispatch:
+    types: [track-trigger]
+  workflow_dispatch:
+
+concurrency:
+  group: track-positions
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sample open positions
+        env:
+          ALPACA_KEY:    ${{ secrets.ALPACA_KEY }}
+          ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
+        run: python main.py --track-only
+
+      - name: Commit sampled premiums
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Ephemeral runners lose anything not committed back.
+          git add backtest/paper_trades.csv
+          if git diff --staged --quiet; then
+            echo "No premium changes to commit."
+          else
+            git commit -m "chore: sample open position premiums [skip ci]"
+            git pull --rebase --autostash origin main || true
+            git push
+          fi

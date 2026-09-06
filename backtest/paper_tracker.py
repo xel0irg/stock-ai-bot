@@ -82,7 +82,11 @@ FIELDS = [
     "pnl_trigger_hold",     # entry@trigger -> close
     "pnl_trigger_exit",     # entry@trigger -> target/stop exit
     "pnl_premium_rule",     # entry@signal -> -30%/+55% premium exit rule
-    "premium_rule_outcome", # STOP / TARGET / CLOSE — which one ended it
+    "premium_rule_outcome",
+    "pnl_trim_runner",      # entry@signal -> trim +15/+30, last third runs
+    "trim_fills",           # which trims filled, in order
+    "peak_pct",             # best the contract traded intraday (DIAGNOSTIC)
+    "peak_time",            # when that peak occurred # STOP / TARGET / CLOSE — which one ended it
     # ── bookkeeping ──
     "status",               # OPEN / DONE
     "last_update",
@@ -366,6 +370,46 @@ def open_paper_trade(ticker: str, ai: Dict[str, Any]) -> None:
              f"({dte_label}, exp {expiry_date})")
 
 
+def sample_open_trades() -> int:
+    """
+    Sample open positions WITHOUT running a full scan.
+
+    Why this exists: update_open_trades() only ran inside a scan, and the
+    scan window closes at 2 PM ET (SCAN_END_TIME). Close-out runs at
+    4:05 PM. So every premium_path in the dataset stops around 13:51 and
+    then jumps straight to the closing mid — a blind two-hour window that
+    is precisely when 0-2 DTE contracts do most of their dying.
+
+    The damage was not cosmetic. The -30%/+55% exit rule replays that
+    path, so it could never fire in the final two hours; trades fell
+    through to CLOSE and inherited the worst-case hold-to-close number.
+    The rule looked like it underperformed when it was simply blind. And
+    published recaps used hold-to-close as the headline, which reported
+    trades that were up intraday as losses (AMZN 2026-09-04: +35.4% at
+    11:12, +1.1% at the last sample, -29.6% at the close).
+
+    This fetches its own prices, makes no AI calls, and posts no signals,
+    so it is cheap enough to run every 15 minutes through 3:55 PM.
+    Returns the number of open trades sampled.
+    """
+    rows = _load()
+    open_tk = sorted({r["ticker"] for r in rows if r.get("status") == "OPEN"})
+    if not open_tk:
+        log.info("No open paper trades to sample.")
+        return 0
+    prices: Dict[str, float] = {}
+    for tk in open_tk:
+        px = _stock_last(tk)
+        if px is not None:
+            prices[tk] = px
+    if not prices:
+        log.warning("Could not fetch any prices for open trades.")
+        return 0
+    log.info(f"Sampling {len(prices)} open trade ticker(s): {', '.join(prices)}")
+    update_open_trades(prices)
+    return len(prices)
+
+
 def update_open_trades(current_prices: Dict[str, float]) -> None:
     """
     Called each scan. For every OPEN paper trade, check whether the stock
@@ -537,6 +581,63 @@ def close_out_trades() -> None:
                 r["premium_rule_outcome"] = _outcome
         except Exception as _e:
             log.debug(f"{tk}: premium rule calc skipped — {_e}")
+
+        # ── Trim-and-runner exit ────────────────────────────────
+        # Two thirds come off at the trim levels; the last third runs with
+        # its stop pulled to breakeven once the final trim fills. This is
+        # how these contracts are meant to be traded near expiry — bank the
+        # move, let a piece ride, never give back a winner.
+        #
+        # peak_pct is recorded SEPARATELY and is a diagnostic, not a
+        # result: nobody exits at the high. It answers "did the runner have
+        # room?" and must never be summed into a P&L figure.
+        #
+        # NOTE: only meaningful once premium_path covers the full session.
+        # Before the afternoon sampling job, paths ended around 13:51, so
+        # both late trims and the true peak were invisible.
+        try:
+            import json as _json
+            from config.settings import (PREMIUM_TRIM_TIERS,
+                                         PREMIUM_RUNNER_STOP,
+                                         PREMIUM_RUNNER_BREAKEVEN)
+            _entry = p_signal
+            _path  = _json.loads(r.get("premium_path") or "[]")
+            if _entry and _entry > 0 and _path:
+                _tiers = list(PREMIUM_TRIM_TIERS)
+                _size  = 1.0 / (len(_tiers) + 1)      # +1 for the runner
+                _rem, _real, _fills = 1.0, 0.0, []
+                _stop = float(PREMIUM_RUNNER_STOP)
+                _peak, _peak_t = None, ""
+                for _t, _prem in _path:
+                    try:
+                        _pct = (float(_prem) - _entry) / _entry * 100
+                    except (TypeError, ValueError, ZeroDivisionError):
+                        continue
+                    if _peak is None or _pct > _peak:
+                        _peak, _peak_t = _pct, _t
+                    if _pct <= _stop:
+                        _real += _rem * _stop
+                        _rem = 0.0
+                        _fills.append("BE" if _stop == 0.0 else f"STOP{_stop:g}")
+                        break
+                    while _tiers and _pct >= _tiers[0]:
+                        _h = _tiers.pop(0)
+                        _real += _size * _h
+                        _rem  -= _size
+                        _fills.append(f"+{_h}")
+                        if not _tiers and PREMIUM_RUNNER_BREAKEVEN:
+                            _stop = 0.0          # runner can no longer lose
+                if _rem > 1e-9 and close_prem:
+                    _real += _rem * ((close_prem - _entry) / _entry * 100)
+                    _fills.append("RUNNER@CLOSE")
+                if _fills:
+                    r["pnl_trim_runner"] = round(_real, 1)
+                    r["trim_fills"]      = " ".join(_fills)
+                if _peak is not None:
+                    r["peak_pct"]  = round(_peak, 1)
+                    r["peak_time"] = _peak_t
+        except Exception as _e:
+            log.debug(f"{tk}: trim/runner calc skipped — {_e}")
 
         r["status"] = "DONE"
         r["last_update"] = now

@@ -680,6 +680,13 @@ def run_ai_synthesis(
             # price-level stop: whichever triggers first is the exit.
             trade_setup["premium_stop_pct"]   = -30
             trade_setup["premium_target_pct"] = 55
+            try:
+                from config.settings import (PREMIUM_TRIM_TIERS,
+                                             PREMIUM_RUNNER_STOP)
+                trade_setup["premium_trim_tiers"]  = list(PREMIUM_TRIM_TIERS)
+                trade_setup["premium_runner_stop"] = PREMIUM_RUNNER_STOP
+            except Exception:
+                pass
 
         log.info(
             f"AI synthesis complete for {ticker} | Score={confluence_score} | Bias={bias} | "

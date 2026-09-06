@@ -43,7 +43,7 @@ BANNER = r"""
 ║   ███████║   ██║   ╚██████╔╝╚██████╗██║  ██╗            ║
 ║   ╚══════╝   ╚═╝    ╚═════╝  ╚═════╝╚═╝  ╚═╝            ║
 ║                                                          ║
-║          DEGËNIC$ — AI OPTIONS SIGNAL ENGINE             ║
+║           DEGĖNIC · BETA — AI OPTIONS SIGNALS            ║
 ║   Technical · Sentiment · Options · SEC · AI Engine      ║
 ╚══════════════════════════════════════════════════════════╝
 """
@@ -375,7 +375,27 @@ def main():
         action="store_true",
         help="Bypass the market-hours check and scan even when the market is closed"
     )
+    parser.add_argument(
+        "--track-only",
+        action="store_true",
+        help="Sample premiums for open paper trades only — no AI calls, no "
+             "Discord signals. Used to keep tracking positions after the "
+             "2 PM scan window closes."
+    )
     args = parser.parse_args()
+
+    # Premium sampling only — cheap, runs through the afternoon
+    if args.track_only:
+        from core.market_hours import market_status
+        status = market_status()
+        # is_open = full session (to 4 PM), unlike scan_open which ends at 2 PM
+        if not (args.force or status.get("is_open")):
+            log.info(f"⏸  Skipping premium sampling — {status.get('reason', 'market closed')}")
+            return
+        from backtest.paper_tracker import sample_open_trades
+        n = sample_open_trades()
+        log.info(f"✅ Premium sampling complete ({n} ticker(s))")
+        return
 
     # Discord test mode
     if args.test_discord:

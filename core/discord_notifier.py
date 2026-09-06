@@ -158,7 +158,14 @@ def _build_embed(
         # real intraday premium paths — whichever triggers first is the exit.
         _pstop = ts_data.get("premium_stop_pct")
         _ptgt  = ts_data.get("premium_target_pct")
-        if _pstop is not None and _ptgt is not None:
+        _tiers = ts_data.get("premium_trim_tiers")
+        if _tiers:
+            _tier_txt = " and ".join(f"+{t}%" for t in _tiers)
+            setup_value += (f"📉 **Trim & run:** cut all at "
+                            f"**{ts_data.get('premium_runner_stop', -30)}%** · "
+                            f"trim a third at **{_tier_txt}** · let the last "
+                            f"third run with the stop at breakeven\n")
+        elif _pstop is not None and _ptgt is not None:
             setup_value += (f"📉 **Premium exit:** cut at **{_pstop}%** · "
                             f"take profit at **+{_ptgt}%** (whichever hits first "
                             f"with the stop above)\n")

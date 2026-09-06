@@ -117,7 +117,7 @@ TA_SETTINGS = {
 # otherwise old-code and new-code signals are indistinguishable forever
 # (we could not tell whether June-July's 36% directional accuracy was
 # old code or old regime; this ends that).
-STRATEGY_VERSION = "2026.09.02-climax-and-ta-fix"
+STRATEGY_VERSION = "2026.09.05-trim-and-runner"
 
 # ── Entry-trigger geometry ───────────────────────────────
 # A trigger sitting at (or through) spot is not a trigger — the entry
@@ -149,3 +149,23 @@ CLUSTER_WINDOW_MINUTES        = _safe_int("CLUSTER_WINDOW_MINUTES", 15)
 # penalty applied, which is the worst of both worlds.
 REVERSAL_RISK_THRESHOLD = _safe_int("REVERSAL_RISK_THRESHOLD", 30)
 REVERSAL_MAX_PENALTY    = _safe_int("REVERSAL_MAX_PENALTY", 15)
+
+# ── Trim-and-runner exit ────────────────────────────────
+# Take a third off at each trim level; the final third RUNS. Once the
+# last trim fills, the runner's stop moves to breakeven so the trade
+# cannot turn red from there — this is why "+30% then reversed" still
+# books green: 1/3(+15) + 1/3(+30) + 1/3(0) = +15%.
+#
+# Modelled on 205 real premium paths (truncated at 13:51, so the trims
+# and the peak are both understated):
+#   +15/+30/+55 ladder ............ mean -2.47%
+#   trim +15/+30, runner stop -30 . mean -1.85%
+#   trim +15/+30, runner breakeven  mean -1.56%   <- this one
+# All three share the same 46.8% green rate and -44.5% worst case; the
+# difference is entirely in what the last third is allowed to do.
+#
+# Sobering context: 53% of trades never reach even +15%, so on more than
+# half of them no trim fires and the exit structure changes nothing.
+PREMIUM_TRIM_TIERS      = [15, 30]   # % gain at which each third exits
+PREMIUM_RUNNER_STOP     = -30        # % loss before any trim fills
+PREMIUM_RUNNER_BREAKEVEN = True      # move runner stop to 0% after last trim
