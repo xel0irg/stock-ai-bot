@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 315.760009765625,
+      "price": 315.6600036621094,
       "volume_ratio": 0.0,
-      "ts": 1788883838.9637089,
+      "ts": 1788884437.1168678,
       "last_full_scan_ts": 1788882130.1457045
     },
     "AMZN": {
-      "price": 257.2099914550781,
+      "price": 257.06048583984375,
       "volume_ratio": 0.0,
-      "ts": 1788883839.1630032,
+      "ts": 1788884437.3343997,
       "last_full_scan_ts": 1788883886.3104384
     },
     "META": {
-      "price": 615.6201171875,
+      "price": 616.0750122070312,
       "volume_ratio": 0.0,
-      "ts": 1788883839.3227959,
-      "last_full_scan_ts": 1788880301.8373358
+      "ts": 1788884437.5631626,
+      "last_full_scan_ts": 1788884487.3449852
     },
     "MSFT": {
-      "price": 492.3999938964844,
+      "price": 491.62298583984375,
       "volume_ratio": 0.0,
-      "ts": 1788883839.5447755,
+      "ts": 1788884437.9175875,
       "last_full_scan_ts": 1788882177.3967595
     },
     "NVDA": {
-      "price": 226.02499389648438,
+      "price": 225.91000366210938,
       "volume_ratio": 0.0,
-      "ts": 1788883839.7690926,
+      "ts": 1788884438.1936417,
       "last_full_scan_ts": 1788882221.6921065
     },
     "QQQ": {
-      "price": 719.6099853515625,
+      "price": 719.25341796875,
       "volume_ratio": 0.0,
-      "ts": 1788883839.9904838,
+      "ts": 1788884438.4622097,
       "last_full_scan_ts": 1788882270.5546625
     },
     "SPY": {
-      "price": 767.2999877929688,
+      "price": 766.9299926757812,
       "volume_ratio": 0.0,
-      "ts": 1788883840.1907496,
+      "ts": 1788884438.755414,
       "last_full_scan_ts": 1788882315.2321134
     },
     "TSLA": {
-      "price": 367.0050048828125,
+      "price": 367.69000244140625,
       "volume_ratio": 0.0,
-      "ts": 1788883840.3442557,
+      "ts": 1788884438.9481177,
       "last_full_scan_ts": 1788883305.1072383
     }
   },
@@ -239,7 +239,45 @@
       "was_flagged": true,
       "cached_at": 1788883886.3104417,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-08T16:21:27.335306",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis\n**12:20 PM ET | Price: $615.96**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has rallied ~6.5% over 5 days and is now pressing against 20D resistance at $616.77, sitting at BB position 0.931 (AT_UPPER_BAND) with stochastics overbought at 91/92. The most plausible scenario over the next 5-15 days is a consolidation/mild pullback to digest the 5D run before any continuation \u2014 price needs to prove it can break and hold above $617 with volume. Tech sector is green (+0.64%) providing a tailwind, but intraday structure is net bearish on the shorter timeframes, and volume is only 0.35x average, suggesting the breakout attempt lacks participation.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram +7.17 (Daily):** Strong positive momentum on the daily \u2014 the recent 5D surge has clear trend energy behind it.\n- **Tech Sector Green (+0.64%):** XLK acting against broad market weakness today, providing sector tailwind directly applicable to META.\n- **OBV Rising:** On-balance volume confirms accumulation over the recent run; institutional buying pressure has not reversed.\n- **Analyst Consensus: Strong Buy / Price Target $754:** Significant upside vs current price; fundamental backstop limits aggressive shorting and supports dip-buyers.\n\n---\n\n## 3. BEAR CASE\n\n- **Price at Upper Bollinger Band (0.931) + Stochastics 91/92:** Statistically extended; BB mean-reversion probability elevated. This is the single strongest near-term bearish signal.\n- **15m Timeframe: Full Bearish (0 Bull / 3 Bear signals):** Price below 15m VWAP, MACD histogram negative, 3-candle momentum negative. The confirmation timeframe is pointed down.\n- **Volume 0.35x Average:** The 5D rally has significantly thinning volume. A breakout attempt above $616.77 resistance without volume surge is a classic false break setup.\n- **20D Resistance at $616.77 \u2014 only $0.81 above current price:** Price is effectively at resistance right now. No confirmed breakout, no clearance.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found:** Absence of a catalyst means any move is purely technical \u2014 cuts both ways but limits upside surprise.\n- **10 Unusual Contracts Flagged (5 calls / 5 puts equally):** The balanced unusual flow suggests either hedging or positioning for a binary move. Net options flow reads NEUTRAL \u2014 no directional conviction from smart money today.\n- **Macro Crosscurrent:** SPY down -0.34% while QQQ is up +0.25%. If the broad market weakness in SPY accelerates into the afternoon, tech could get dragged down despite sector strength.\n- **VIX 15.31:** Low VIX means short-dated premium is relatively compressed \u2014 options are cheap, but moves need to be clean and quick to overcome even modest theta.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Resistance / Breakout trigger | $616.77 | 20D resistance \u2014 must clear with volume to invalidate bear thesis |\n| Upper Bollinger Band | $622.03 | Maximum realistic 0DTE upside / where BB mean-reversion targets begin |\n| 5m VWAP | $616.65 | Intraday pivot \u2014 sustained below = bearish intraday |\n| 15m VWAP | $617.19 | Confirmation VWAP \u2014 reclaim = bull inflection |\n| 1H VWAP | $613.64 | Bull thesis invalidation if breached \u2014 structural support |\n| 20D Support | $543.67 | Multi-session structural floor (irrelevant for 0-2 DTE) |\n| **Thesis-change level** | **$617.50+** | **Volume-confirmed close above this flips to CALL setup** |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 49/100\n\nThe 15m timeframe is cleanly bearish and price sits at resistance on thin volume \u2014 direction leans modestly toward a stall/pullback. However, daily MACD is strongly bullish, 1H is mixed, sector is green, and the stock is only -0.13% on the day. Signal clarity is compromised by genuine cross-timeframe conflict. Tradeability is capped by the setup sitting at resistance with no clear trigger fired yet and a realistic pullback target (~$609-611) sitting within but barely inside the 1DTE expected move at the low end, with entry uncertain and volume absent to confirm the move.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in NONE)**\n\nSignals are genuinely split: daily momentum bullish, sector green, but intraday structure bearish at resistance on no volume. No clean directional trigger has fired. The correct answer here is to wait for resolution above $617.50 (CALL trigger) or a confirmed rejection breakdown below $613.64 1H VWAP (PUT trigger).\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 daily MACD strongly bullish and sector green while 15m is fully bearish and price stalls at resistance on 0.35x average volume; no directional trigger has fired and entering either direction here is a coin flip with extreme theta drag.\n```\n\n---\n\n**MONITOR FOR:**\n- **PUT trigger:** Confirmed rejection at $616.77 + 15m close below $613.64 (1H VWAP) with volume \u22651.5x avg \u2192 bearish structure aligned, viable 1DTE PUT toward ~$608-610\n- **CALL trigger:** 15m close above $617.50 with volume \u22651.5x avg \u2192 resistance cleared, viable 0DTE or 1DTE CALL toward ~$622 (upper BB)\n- **Time gate:** If no trigger by 1:30 PM ET, 0DTE is off the table regardless of direction; would need 1DTE setup minimum.",
+        "confluence_score": 52,
+        "signal_clarity": 55,
+        "tradeability": 49,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 daily MACD strongly bullish and sector green while 15m is fully bearish and price stalls at resistance on 0.35x average volume; no directional trigger has fired and entering either direction here is a coin flip with extreme theta drag.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.35x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6789
+      },
+      "was_flagged": false,
+      "cached_at": 1788884487.344988,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-08T12:11:28-04:00"
+  "saved_at": "2026-09-08T12:21:29-04:00"
 }
