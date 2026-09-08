@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 316.0299987792969,
+      "price": 315.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1788883242.2158408,
+      "ts": 1788883838.9637089,
       "last_full_scan_ts": 1788882130.1457045
     },
     "AMZN": {
-      "price": 256.3100891113281,
+      "price": 257.2099914550781,
       "volume_ratio": 0.0,
-      "ts": 1788883242.4873533,
-      "last_full_scan_ts": 1788883361.3734448
+      "ts": 1788883839.1630032,
+      "last_full_scan_ts": 1788883886.3104384
     },
     "META": {
-      "price": 616.2899780273438,
+      "price": 615.6201171875,
       "volume_ratio": 0.0,
-      "ts": 1788883242.7521167,
+      "ts": 1788883839.3227959,
       "last_full_scan_ts": 1788880301.8373358
     },
     "MSFT": {
-      "price": 492.7099914550781,
+      "price": 492.3999938964844,
       "volume_ratio": 0.0,
-      "ts": 1788883242.978066,
+      "ts": 1788883839.5447755,
       "last_full_scan_ts": 1788882177.3967595
     },
     "NVDA": {
-      "price": 226.25,
+      "price": 226.02499389648438,
       "volume_ratio": 0.0,
-      "ts": 1788883243.2262456,
+      "ts": 1788883839.7690926,
       "last_full_scan_ts": 1788882221.6921065
     },
     "QQQ": {
-      "price": 720.010009765625,
+      "price": 719.6099853515625,
       "volume_ratio": 0.0,
-      "ts": 1788883243.5055683,
+      "ts": 1788883839.9904838,
       "last_full_scan_ts": 1788882270.5546625
     },
     "SPY": {
-      "price": 767.3499755859375,
+      "price": 767.2999877929688,
       "volume_ratio": 0.0,
-      "ts": 1788883243.8185863,
+      "ts": 1788883840.1907496,
       "last_full_scan_ts": 1788882315.2321134
     },
     "TSLA": {
-      "price": 367.7900085449219,
+      "price": 367.0050048828125,
       "volume_ratio": 0.0,
-      "ts": 1788883244.2001452,
+      "ts": 1788883840.3442557,
       "last_full_scan_ts": 1788883305.1072383
     }
   },
@@ -201,7 +201,45 @@
       "was_flagged": false,
       "cached_at": 1788882315.2321162,
       "score": 48
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-09-08T16:11:26.298044",
+        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 12:10 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is trading in a soft bearish drift, sitting in the lower half of its Bollinger Band, below its 1H VWAP, with the 1H timeframe fully bearish (0B/3Br). However, the 5m and 15m timeframes show short-term stabilization above their respective VWAPs, suggesting intraday price is consolidating near $257 rather than in active freefall. The most plausible 5-15 day scenario is continued range-bound pressure between $254.92 support and $260-ish, with downside bias intact given the 20D return of -5.58% and sector headwinds (XLY -2.23%). A clean breakdown below $254.92 opens a move toward $252.51 (lower Bollinger Band).\n\n---\n\n## 2. BULL CASE\n\n- **5m and 15m price above VWAP** \u2014 Short-term buyers are holding the line; VWAP support at $256.94-$256.96 has not broken, meaning intraday sellers are not yet in control.\n- **OBV Trend Rising** \u2014 Despite price weakness, OBV is rising, signaling accumulation pressure underneath. This diverges from the bearish price structure and is a genuine contradiction worth respecting.\n- **Strong analyst consensus (STRONG_BUY, PT $328)** \u2014 60 analysts, mean score 1.31. Fundamental backdrop is not deteriorating; this limits crash risk.\n- **15m MACD Bullish Cross (hist +0.0145)** \u2014 A fresh bullish cross on the 15m is a near-term momentum signal that could drive a brief bounce toward $258-$259 (EMA9/EMA21 on daily).\n\n---\n\n## 3. BEAR CASE\n\n- **1H fully bearish (0B/3Br), below 1H VWAP ($257.48)** \u2014 The dominant intraday trend is down. Price trading below the hourly VWAP while the daily MACD histogram is -1.1632 shows sellers control the intermediate structure.\n- **Daily MACD Histogram -1.1632 (BEARISH)** \u2014 Significant negative momentum on the daily timeframe. This is not a one-candle blip; -1.16 represents persistent selling pressure over multiple sessions.\n- **Sector (XLY -2.23%) and 20D return (-5.58%)** \u2014 AMZN is in a sector that is the worst performer today and has lost ~5.6% over 20 days. Macro tailwinds are absent.\n- **Price in lower Bollinger Band half (0.264), EMA9 < EMA21 on daily (258.58 vs 259.28)** \u2014 Daily structure confirms bearish positioning. Support at $254.92 is the next meaningful floor; a break targets $252.51.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume is only 0.37x the 20D average** \u2014 Extremely thin participation. This is the biggest wildcard: a catalyst (macro print, sector news, broad market reversal) could move AMZN 2-3% on restored volume with little resistance either direction.\n- **OBV Rising vs. Price Falling (Divergence)** \u2014 If this resolves bullishly (accumulation revealed), a snap-back toward $260-$262 is possible without warning.\n- **VIX at 15.32 (benign)** \u2014 No volatility event priced in; but a sudden macro shock (Fed speaker, geopolitical) could spike IV and expand the expected move materially.\n- **10 unusual options contracts flagged (5C/5P balanced)** \u2014 The perfectly balanced unusual flow is notable. Could indicate a straddle or strangle play by a larger participant anticipating a move, direction unknown.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $258.58 | Daily EMA9 \u2014 bulls must reclaim this to shift bias |\n| **Intraday Resistance** | $257.48 | 1H VWAP \u2014 price rejected here is a PUT trigger |\n| **Current Price** | $257.07 | Consolidation zone |\n| **Intraday Support** | $256.94-$256.96 | 5m/15m VWAP cluster \u2014 loss of this is near-term bearish |\n| **Key Support** | $254.92 | 20D support \u2014 breakdown targets $252.51 |\n| **Lower Bollinger Band** | $252.51 | Structural floor; major PUT target |\n| **Thesis-Changer (Bull)** | $259.28 | Daily EMA21 reclaim = bearish thesis invalidated |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 49/100\n\n**Score rationale:** Timeframes are genuinely split \u2014 1H is cleanly bearish but 5m/15m are above VWAP with a 15m MACD bullish cross, creating a mixed picture that does not qualify as aligned. The OBV divergence is a real contradiction to the bear case. Tradeability caps the score: the realistic near-term move on a PUT targets $254.92 (~$2.15 away, 0.84% drop), which is within the 1DTE expected move (\u00b1$3.62) but volume is at 0.37x average, meaning momentum confirmation is absent and the move may not materialize within 0-2 DTE theta windows. No clean entry trigger exists at this moment.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nTimeframes are split (5m/15m bullish, 1H bearish) with no clean directional trigger. The OBV divergence contradicts the bearish macro setup. Mixed signals at 12:10 PM with thin volume do not meet the threshold for a high-theta-decay 0-2 DTE position.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m/15m hold above VWAP with a 15m MACD bullish cross while 1H is fully bearish (0B/3Br), and the rising OBV directly contradicts the directional bear case; no clean aligned trigger exists for either direction at current price.",
+        "confluence_score": 52,
+        "signal_clarity": 55,
+        "tradeability": 49,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m/15m hold above VWAP with a 15m MACD bullish cross while 1H is fully bearish (0B/3Br), and the rising OBV directly contradicts the directional bear case; no clean aligned trigger exists for either direction at current price.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.52x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6857
+      },
+      "was_flagged": true,
+      "cached_at": 1788883886.3104417,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-08T12:02:43-04:00"
+  "saved_at": "2026-09-08T12:11:28-04:00"
 }
