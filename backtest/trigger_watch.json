@@ -442,5 +442,19 @@
   "message_id": "1545441449774944319",
   "signal_time": "2026-09-04T10:32:35-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 255.66,
+  "strike": 255.0,
+  "expiry_date": "",
+  "vol_multiple": 1.2,
+  "entry_condition": "Enter on a 15m candle close below $256.50 (current intraday base) with volume at least 1.2x the recent 15m average, confirming continuation rather than chop.",
+  "score": 66,
+  "verdict": "TRADE",
+  "message_id": "1546913676060004446",
+  "signal_time": "2026-09-08T12:02:41-04:00",
+  "status": "PENDING"
  }
 ]
