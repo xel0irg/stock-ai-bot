@@ -498,5 +498,19 @@
   "message_id": "1547271343874117692",
   "signal_time": "2026-09-09T11:43:55-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "AAPL",
+  "direction": "PUT",
+  "trigger": 312.72,
+  "strike": 312.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15m candle close below $312.72 (EMA50 daily / current intraday structure) with 15m volume >= 1.2x average, confirming EMA50 breakdown.",
+  "score": 72,
+  "verdict": "TRADE",
+  "message_id": "1547293472493666306",
+  "signal_time": "2026-09-09T13:11:51-04:00",
+  "status": "PENDING"
  }
 ]
