@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 313.2300109863281,
+      "price": 311.5400085449219,
       "volume_ratio": 0.0,
-      "ts": 1788973840.541029,
-      "last_full_scan_ts": 1788973911.62582
+      "ts": 1788974437.7274885,
+      "last_full_scan_ts": 1788974487.7413294
     },
     "AMZN": {
-      "price": 252.110107421875,
+      "price": 252.25,
       "volume_ratio": 0.0,
-      "ts": 1788973841.0218582,
+      "ts": 1788974437.9561324,
       "last_full_scan_ts": 1788972693.3778613
     },
     "META": {
-      "price": 650.739990234375,
+      "price": 650.7407836914062,
       "volume_ratio": 0.0,
-      "ts": 1788973841.2887475,
+      "ts": 1788974438.2036245,
       "last_full_scan_ts": 1788973968.092397
     },
     "MSFT": {
-      "price": 492.9800109863281,
+      "price": 492.75,
       "volume_ratio": 0.0,
-      "ts": 1788973841.608424,
+      "ts": 1788974438.4709914,
       "last_full_scan_ts": 1788972732.2219748
     },
     "NVDA": {
-      "price": 224.0800018310547,
+      "price": 224.2100067138672,
       "volume_ratio": 0.0,
-      "ts": 1788973842.01834,
+      "ts": 1788974438.7325795,
       "last_full_scan_ts": 1788972090.4534354
     },
     "QQQ": {
-      "price": 716.405029296875,
+      "price": 716.375,
       "volume_ratio": 0.0,
-      "ts": 1788973842.41306,
+      "ts": 1788974439.0041869,
       "last_full_scan_ts": 1788972772.2033403
     },
     "SPY": {
-      "price": 762.6599731445312,
+      "price": 762.8400268554688,
       "volume_ratio": 0.0,
-      "ts": 1788973842.6850405,
+      "ts": 1788974439.298072,
       "last_full_scan_ts": 1788972814.9174101
     },
     "TSLA": {
-      "price": 368.3599853515625,
+      "price": 368.1099853515625,
       "volume_ratio": 0.0,
-      "ts": 1788973842.9313266,
+      "ts": 1788974439.535413,
       "last_full_scan_ts": 1788971498.689141
     }
   },
@@ -239,7 +239,45 @@
       "was_flagged": false,
       "cached_at": 1788972814.9174135,
       "score": 48
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-09-09T17:21:27.731932",
+        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $311.43 | Time: 1:20 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is in a clear intraday downtrend, trading below all VWAP levels across every timeframe, with bearish momentum confirmed on 5m, 15m, and 1H. However, the **bearish exhaustion signal is material** \u2014 RSI is in oversold territory across all intraday frames (24\u201329), a bullish RSI divergence is forming on the 15m, and price has extended 1.81 ATR from VWAP. The most plausible near-term scenario is a **continued grind lower toward $306\u2013308 before a mean-reversion bounce**, but the exhaustion evidence makes chasing puts at current levels late-entry risk. Over 5\u201315 days, the analyst target of $323.86 suggests price could recover toward that zone if the market stabilizes.\n\n---\n\n## 2. BULL CASE\n\n- **Stochastic Oversold (18.58K / 38.01D):** Extreme oversold readings at the daily level historically precede short-covering bounces \u2014 implies price may find a floor near current levels.\n- **RSI Bullish Divergence (15m):** Price made a lower low but RSI did not \u2014 sellers are thinning, a textbook precursor to intraday reversal toward VWAP ($313.26\u2013$316.06).\n- **Bollinger Lower Half (0.413) with Lower Band at $299.96:** Price is compressing toward the lower band without breaking it \u2014 band acts as a magnetic floor, mean-reversion toward mid-band (~$313) is statistically likely.\n- **Analyst Consensus BUY / $323.86 Target:** 38 analysts with a mean BUY rating and $12+ upside from current price provides a fundamental backstop against sustained selling.\n\n---\n\n## 3. BEAR CASE\n\n- **All Intraday Timeframes BEARISH (0 bull / 4 bear signals on 5m, 15m, 1H):** Price is below every VWAP level simultaneously \u2014 this is textbook distribution, not noise.\n- **OBV Falling + Volume Low (0.62x avg):** Declining volume on a down day reduces squeeze risk but confirms no institutional buying supporting price \u2014 sellers are in control, buyers are absent.\n- **EMA Stack Bearish (9 < 21 < 50 intraday and daily):** Short-term EMAs are stacked bearishly, confirming directional bias is down at multiple horizons.\n- **1D Return -1.51%, 5D Return -4.16%:** Multi-day momentum is clearly negative; the 5-day trend shows sustained selling pressure, not a single-day flush.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Bearish Exhaustion / Mean-Reversion Risk:** This is the primary wildcard \u2014 the exhaustion score of 62/100 with a confirmed RSI divergence makes any PUT trade vulnerable to a sharp snap-back to VWAP ($313\u2013316). This is not a minor risk at 1:20 PM.\n- **Tech Sector Green (+0.18% XLK):** AAPL is diverging negatively from its own sector. If sector momentum accelerates upward, AAPL could be dragged back toward VWAP faster than expected.\n- **Low Volume (0.62x):** With participation this low, a single large institutional order or macro headline could produce an outsized price swing in either direction.\n- **No News Catalyst:** The absence of news means there's no fundamental driver for the move \u2014 this increases the probability that the decline is technical/flow-driven and therefore more prone to reversal.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **5m VWAP** | $313.26 | First resistance / reclaim = bearish thesis weakens |\n| **15m VWAP** | $313.62 | Key intraday pivot for PUT entry confirmation |\n| **1H VWAP** | $316.06 | Full mean-reversion target if bears lose control |\n| **EMA50 (daily)** | $312.65 | Immediate support \u2014 break and hold below confirms continuation |\n| **Support (20D)** | $302.25 | Downside target if selling accelerates |\n| **Current Price** | $311.43 | At-risk zone \u2014 1 ATR below VWAP |\n| **Thesis Changer** | $313.62 reclaim | 15m close back above = exit any PUT, thesis invalidated |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 72/100\nTRADEABILITY: 32/100\n\n**Score rationale:** Signal clarity is strong \u2014 all four intraday timeframes are bearishly aligned with no exceptions. However, tradeability is severely capped by three simultaneous problems: (1) the move is already 1.81 ATR extended from VWAP with a 62/100 bearish exhaustion score and confirmed RSI divergence, making this a **late PUT entry**, not a fresh one; (2) it is 1:20 PM ET, which eliminates 0DTE as a viable vehicle; and (3) the realistic downside target to the 20D support at $302.25 requires a $9+ move which exceeds even the 2DTE expected move (\u00b1$9.65) with insufficient margin of safety for premium recovery. The setup was tradeable hours ago \u2014 not now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 NO TRADE (High directional clarity, but late-entry + exhaustion blocks execution)**\n\nConfidence in direction: **Medium** (clear bearish trend, but exhaustion signals are credible)\nConfidence in trade viability: **Low** \u2014 the entry window has likely passed\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Setup is directionally bearish but the move has already run 1.81 ATR from VWAP with confirmed bearish exhaustion (score 62/100), a forming RSI bullish divergence, and it is past 1:20 PM ET \u2014 this is a late PUT entry where theta and mean-reversion risk both work against the position simultaneously; the viable entry was earlier in the session before exhaustion set in.",
+        "confluence_score": 52,
+        "signal_clarity": 72,
+        "tradeability": 32,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Setup is directionally bearish but the move has already run 1.81 ATR from VWAP with confirmed bearish exhaustion (score 62/100), a forming RSI bullish divergence, and it is past 1:20 PM ET \u2014 this is a late PUT entry where theta and mean-reversion risk both work against the position simultaneously; the viable entry was earlier in the session before exhaustion set in.",
+          "reversal_risk": 62,
+          "exhaustion_side": "BEARISH_EXHAUSTION",
+          "reversal_notes": "price made a lower low but RSI did not \u2014 sellers are thinning out; price is 1.8 ATR from VWAP; latest bar range is 2.4x the recent average \u2014 outsized push",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6864
+      },
+      "was_flagged": true,
+      "cached_at": 1788974487.7413323,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-09T13:12:50-04:00"
+  "saved_at": "2026-09-09T13:21:29-04:00"
 }
