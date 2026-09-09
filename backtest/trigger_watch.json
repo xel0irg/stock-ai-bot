@@ -456,5 +456,47 @@
   "message_id": "1546913676060004446",
   "signal_time": "2026-09-08T12:02:41-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 251.0,
+  "strike": 250.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 5-minute candle close below $251.00 with price failing to reclaim the 5m VWAP ($251.54), confirming continuation rather than a VWAP reclaim attempt.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1547270950532157570",
+  "signal_time": "2026-09-09T11:42:23-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "PUT",
+  "trigger": 490.14,
+  "strike": 490.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15m candle close that holds below VWAP $492.63 with price failing to reclaim $491.81 and 15m volume reading at least 0.8x average, confirming the 15m MACD bullish blip is failing.",
+  "score": 72,
+  "verdict": "RISKY",
+  "message_id": "1547271160889344124",
+  "signal_time": "2026-09-09T11:43:13-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 714.55,
+  "strike": 716.0,
+  "expiry_date": "",
+  "vol_multiple": 0.9,
+  "entry_condition": "Enter on a 15m candle close below $715.50 with volume at or above 0.9x average, confirming continuation below 15m VWAP of $717.54",
+  "score": 72,
+  "verdict": "WATCH",
+  "message_id": "1547271343874117692",
+  "signal_time": "2026-09-09T11:43:55-04:00",
+  "status": "PENDING"
  }
 ]
