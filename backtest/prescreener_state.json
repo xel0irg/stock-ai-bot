@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 312.95001220703125,
+      "price": 312.5199890136719,
       "volume_ratio": 0.0,
-      "ts": 1788966046.6975834,
+      "ts": 1788966640.7943187,
       "last_full_scan_ts": 1788964900.4725566
     },
     "AMZN": {
-      "price": 251.75,
+      "price": 251.38499450683594,
       "volume_ratio": 0.0,
-      "ts": 1788966046.8597705,
+      "ts": 1788966640.9834135,
       "last_full_scan_ts": 1788964370.4738832
     },
     "META": {
-      "price": 655.3599853515625,
+      "price": 656.1309814453125,
       "volume_ratio": 0.0,
-      "ts": 1788966047.0436804,
+      "ts": 1788966641.229642,
       "last_full_scan_ts": 1788966095.3267405
     },
     "MSFT": {
-      "price": 493.3299865722656,
+      "price": 492.1700134277344,
       "volume_ratio": 0.0,
-      "ts": 1788966047.2436173,
+      "ts": 1788966641.53399,
       "last_full_scan_ts": 1788964665.5808306
     },
     "NVDA": {
-      "price": 224.35110473632812,
+      "price": 224.3800048828125,
       "volume_ratio": 0.0,
-      "ts": 1788966047.4870772,
+      "ts": 1788966641.7944877,
       "last_full_scan_ts": 1788964494.6093113
     },
     "QQQ": {
-      "price": 717.9500122070312,
+      "price": 715.9400024414062,
       "volume_ratio": 0.0,
-      "ts": 1788966047.7152312,
+      "ts": 1788966642.0317986,
       "last_full_scan_ts": 1788964718.195861
     },
     "SPY": {
-      "price": 763.7000122070312,
+      "price": 762.0349731445312,
       "volume_ratio": 0.0,
-      "ts": 1788966047.962792,
+      "ts": 1788966642.2824807,
       "last_full_scan_ts": 1788964553.3802607
     },
     "TSLA": {
-      "price": 371.2699890136719,
+      "price": 368.8500061035156,
       "volume_ratio": 0.0,
-      "ts": 1788966048.1939087,
-      "last_full_scan_ts": 1788966137.3717968
+      "ts": 1788966642.4656458,
+      "last_full_scan_ts": 1788966686.9262643
     }
   },
   "ai_cache": {
@@ -239,45 +239,7 @@
       "was_flagged": false,
       "cached_at": 1788964665.5808342,
       "score": 47
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-09-09T15:02:17.366307",
-        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 11:01 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA has recovered ~13% over 20 days and is pressing toward the upper Bollinger Band ($376.65) with price at $371.11. The most plausible scenario is a grinding, low-conviction continuation toward $374\u2013376 resistance, followed by a pause or pullback \u2014 not a breakout. Volume is running at only 0.35x its 20-day average, which disqualifies this as an impulsive move, and the MACD histogram is shrinking for three consecutive bars. The 5m structure has already rolled bearish, suggesting the intraday high may be in for now.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (Daily, +2.925):** Positive and bullish \u2014 price momentum on the daily timeframe still points upward.\n- **15m and 1H VWAP + EMA structure:** Both confirm price is above VWAP and EMA9 > EMA21 on both timeframes \u2014 short-term trend is intact.\n- **20-day return of +13.31% with rising OBV:** Distribution is not happening \u2014 accumulation trend still in force.\n- **Analyst consensus BUY / Price target $390:** $19 upside to consensus; there is no valuation headwind at the index level pressuring TSLA down intraday.\n\n---\n\n## 3. BEAR CASE\n\n- **5m structure is fully bearish:** Price below 5m VWAP ($371.78), 3-candle momentum -0.58%, 0 bull signals vs. 3 bear signals \u2014 near-term price action is rolling over.\n- **Volume deeply anemic (0.35x 20D average):** A rally into upper Bollinger Band on 35% of normal volume is a classic \"exhaustion\" setup. No fuel for continuation.\n- **MACD histogram shrinking three bars (15m):** Momentum deceleration confirmed even on the bullish confirmation timeframe.\n- **XLY (Consumer Discretionary) -1.0% today:** TSLA's sector is the worst-performing sector on the day \u2014 macro tailwind is absent and may be a headwind.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found:** Moves in a news vacuum on TSLA tend to be mean-reverting, not trending. Absence of catalyst reduces conviction in either direction.\n- **Options P/C ratio 0.41:** Heavily skewed to calls \u2014 if the move stalls, call-heavy positioning unwinds can accelerate downside.\n- **Upper Bollinger Band ($376.65) coincides with 20D resistance ($376.37):** A confluence resistance cluster this close to current price is a real cap. Any tag and rejection there would be a clean catalyst for a put trade.\n- **4 recent SEC filings in 90 days:** No insider buying noted; if any material negative disclosure is buried in those filings, it could surface as a late-session catalyst.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Hard resistance / BB upper | $376.65 | Tag-and-reject here = put trigger |\n| 20D resistance | $376.37 | Confluent cap \u2014 thesis changes on a clean close above |\n| 5m VWAP | $371.78 | Current pivot \u2014 price below = 5m bearish |\n| 15m VWAP | $370.16 | Loss of this = intraday trend flips bearish |\n| EMA21 (15m) | $368.70 | First meaningful support; loss = bullish structure breaks |\n| 1H VWAP | $362.72 | Deep support; unlikely to reach today |\n| 20D support | $327.51 | Irrelevant for 0-2 DTE |\n\n**Critical level that changes thesis:** A 15m candle close below $370.16 (15m VWAP) with volume > 1x average shifts from \"grinding bull\" to \"intraday reversal confirmed.\"\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 49/100\n\nMixed timeframe structure (5m bearish vs. 15m/1H bullish) prevents clean alignment in either direction; tradeability is capped because there is no confirmed trigger yet and entering a call at $371 with the 5m rolling over chases a move that has already decelerated, while entering a put requires a trigger that has not fired.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in staying out)**\n\nThe 15m/1H structure is bullish but the 5m has rolled, volume is absent, momentum is fading, and the sector is the day's worst performer. This is a \"watch, not trade\" setup until either (a) price reclaims 5m VWAP with volume and confirms continuation toward $374\u2013376, or (b) price loses 15m VWAP ($370.16) with expanding volume confirming reversal.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is fully bearish while 15m/1H remain bullish, no confirmed trigger exists in either direction, volume is 0.35x average (no participation to sustain a move), and XLY sector headwind (-1.0%) combined with MACD deceleration prevents a viable call entry; a put trigger requires 15m VWAP loss at $370.16 which has not yet occurred.",
-        "confluence_score": 52,
-        "signal_clarity": 55,
-        "tradeability": 49,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is fully bearish while 15m/1H remain bullish, no confirmed trigger exists in either direction, volume is 0.35x average (no participation to sustain a move), and XLY sector headwind (-1.0%) combined with MACD deceleration prevents a viable call entry; a put trigger requires 15m VWAP loss at $370.16 which has not yet occurred.",
-          "reversal_risk": 33,
-          "exhaustion_side": null,
-          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6582
-      },
-      "was_flagged": true,
-      "cached_at": 1788966137.3718007,
-      "score": 52
     }
   },
-  "saved_at": "2026-09-09T11:02:19-04:00"
+  "saved_at": "2026-09-09T11:11:28-04:00"
 }
