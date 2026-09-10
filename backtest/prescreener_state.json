@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 322.0596008300781,
+      "price": 323.7099914550781,
       "volume_ratio": 0.0,
-      "ts": 1789053635.7149572,
-      "last_full_scan_ts": 1789052505.4882112
+      "ts": 1789054239.7196233,
+      "last_full_scan_ts": 1789054300.0580878
     },
     "AMZN": {
-      "price": 252.71499633789062,
+      "price": 252.42999267578125,
       "volume_ratio": 0.0,
-      "ts": 1789053635.8962169,
+      "ts": 1789054239.955818,
       "last_full_scan_ts": 1789050983.6446154
     },
     "META": {
-      "price": 654.0150146484375,
+      "price": 652.1950073242188,
       "volume_ratio": 0.0,
-      "ts": 1789053636.1395106,
+      "ts": 1789054240.2628946,
       "last_full_scan_ts": 1789053106.8189633
     },
     "MSFT": {
-      "price": 491.885009765625,
+      "price": 492.2099914550781,
       "volume_ratio": 0.0,
-      "ts": 1789053636.367532,
+      "ts": 1789054240.557421,
       "last_full_scan_ts": 1789051358.4940293
     },
     "NVDA": {
-      "price": 218.0500030517578,
+      "price": 218.22000122070312,
       "volume_ratio": 0.0,
-      "ts": 1789053636.55785,
+      "ts": 1789054240.8238184,
       "last_full_scan_ts": 1789050760.159954
     },
     "QQQ": {
-      "price": 710.7050170898438,
+      "price": 711.0999755859375,
       "volume_ratio": 0.0,
-      "ts": 1789053636.772589,
+      "ts": 1789054241.117361,
       "last_full_scan_ts": 1789050813.0067124
     },
     "SPY": {
-      "price": 758.97998046875,
+      "price": 759.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1789053637.0428288,
+      "ts": 1789054241.4193108,
       "last_full_scan_ts": 1789050870.5627742
     },
     "TSLA": {
-      "price": 365.7283935546875,
+      "price": 365.92498779296875,
       "volume_ratio": 0.0,
-      "ts": 1789053637.2382715,
+      "ts": 1789054241.6566396,
       "last_full_scan_ts": 1789051417.2357814
     }
   },
@@ -205,11 +205,11 @@
     "AAPL": {
       "result": {
         "ticker": "AAPL",
-        "timestamp": "2026-09-10T15:01:45.477901",
-        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 11:01 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is up 2.43% today, trading at $322.99, sitting 2.7 ATR above VWAP on declining volume (0.52x 20D MA) \u2014 a classic late-move, low-participation extension. The most plausible scenario over the next 5-15 days is a mean reversion toward the $313-$317 zone, with the broader market (SPY -0.53%, QQQ -0.70%, Tech sector -0.90%) providing headwind against further upside. Price is approaching the 20D resistance at $328.21 but lacks the volume conviction to break through it cleanly.\n\n---\n\n## 2. BULL CASE\n\n- **15-min timeframe fully aligned bullish (4/4 signals):** Price above VWAP, EMA9 > EMA21, MACD positive, 3-candle momentum +1.25% \u2014 the cleanest timeframe reading available.\n- **MACD Histogram positive daily (+0.5273):** Daily momentum is still building, not reversing, suggesting the broader trend hasn't turned.\n- **Price above all short-term EMAs (9/21/50):** EMA9=$319.36, EMA21=$317.12, EMA50=$313.29 \u2014 stacked bullishly, providing layered support on any pullback.\n- **Analyst consensus BUY with target $323.86:** Essentially at current price, meaning institutions are not chasing here but not selling either \u2014 a mild floor effect.\n\n---\n\n## 3. BEAR CASE\n\n- **BULLISH EXHAUSTION confirmed, reversal risk 45/100:** Price is 2.7 ATR from VWAP on 0.46x recent volume \u2014 the move has stretched without participation. This is the most material signal in the dataset.\n- **Broad market under pressure (SPY -0.53%, QQQ -0.70%, Tech -0.90%):** AAPL is moving against its sector and the market. This divergence rarely holds intraday \u2014 gravity typically wins.\n- **OBV falling on a price up-day:** On-balance volume declining while price rises is classic distribution. Smart money is not accumulating into this move.\n- **Volume at 0.52x 20D average (today) and 0.0x on 15m timeframe:** No institutional conviction behind the rally. Low-volume moves at resistance are vulnerable to rapid reversal.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found:** The 2.43% move has no identified fundamental catalyst \u2014 this increases the probability it's technical/mechanical (options flows, short covering) and therefore more likely to fade.\n- **P/C ratio 0.29 (heavily call-skewed):** Unusual call activity (5 flagged) could indicate either informed buying OR dealer hedging creating a gamma ramp that artificially lifts price. If gamma support fades post-11 AM, the floor could drop quickly.\n- **Resistance at $328.21 (20D):** A clean break above this level \u2014 unlikely today on current volume \u2014 would flip the bias sharply bullish for 1-2 sessions.\n- **Macro headline risk:** With SPY/QQQ already negative, any deteriorating macro print or Fed commentary could accelerate the sector sell-off and pull AAPL down with it.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Hard Resistance | $328.21 | 20D resistance; Bollinger upper band $328.37 |\n| Immediate Resistance | $325.00 | Round number; 0DTE expected move ceiling ($322.99 + $4.01) |\n| VWAP (15m) | $317.27 | Key mean-reversion magnet; break below = bearish confirmation |\n| VWAP (1H) | $315.58 | Deeper reversion target; aligns with EMA21 zone |\n| Support Zone | $313-$315 | EMA50 + 20D support cluster |\n| Thesis-Flip Level | $326.50 | Sustained hold above here with volume invalidates the fade thesis |\n\n**Critical level:** A 15-min candle close below $319.75 (EMA9 on 15m) with volume expansion signals the exhaustion is converting into a real reversal \u2014 that's the PUT entry trigger.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 46/100\n\nSignal clarity is moderate \u2014 the exhaustion + low volume + market headwind case is readable, but the 15m bullish alignment creates genuine conflict. Tradeability caps the score: the realistic PUT target (VWAP at $317.27, ~1.7% lower) exceeds the 0DTE expected move (\u00b1$4.01 = \u00b11.24%) and barely fits within the 1DTE move (\u00b1$5.65 = \u00b11.75%), and the setup requires waiting for a trigger that hasn't confirmed yet \u2014 making this a marginal trade where theta works against patience.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe bearish thesis is coherent but the entry trigger has not fired. The 15m remains bullish until price breaks EMA9 on that timeframe. Trading the exhaustion *before* it confirms is speculation against a still-bullish intraday structure \u2014 and with 0-2 DTE, being early is the same as being wrong.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: N/A\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: N/A\n\nNO TRADE REASON: The bearish exhaustion thesis is directionally credible but the \n15m timeframe remains in full bullish alignment (4/4 signals) with no confirmed \nbreakdown below EMA9 ($319.75) \u2014 entering a PUT against an unbroken bullish \nintraday structure on a move that hasn't reversed yet is a premature entry, not \na high-conviction setup; wait for the trigger to fire before risking premium.\n```\n\n---\n\n**MONITOR:** Set alert at $319.75 (15m EMA9). If AAPL closes a 15-min candle below that level with volume \u2265 1.2x the recent average, re-run this analysis \u2014 a PUT entry becomes viable with a 1DTE expiry targeting the $317.27 VWAP zone.",
-        "confluence_score": 52,
-        "signal_clarity": 58,
-        "tradeability": 46,
+        "timestamp": "2026-09-10T15:31:40.046445",
+        "analysis": "# AAPL \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:30 AM ET | Last: $323.70**\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL has surged ~2.65% today, lifting intraday structure cleanly above all VWAP levels, but the move is running on thin volume (0.62x 20D average) and shows textbook bullish exhaustion \u2014 RSI bearish divergence on the 15m, price stretched 2.4 ATR from VWAP, with reversal risk scored 80/100. The most plausible scenario over 5-15 days is a mean-reversion pullback toward $315-$318 before any continuation, given the macro headwind (SPY/QQQ both in intraday downtrends, Tech sector -0.92%). A drift toward analyst consensus target of ~$323.86 suggests the stock is essentially fairly valued at current price with limited near-term upside catalyst.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram Positive (+0.5723) on daily** \u2014 momentum has recently shifted upward; trend still has residual carry.\n- **All intraday timeframes above VWAP** \u2014 5m, 15m, and 1H all confirming price above VWAP, which is the cleanest measure of intraday control.\n- **15m fully bullish (4/0 signals)** \u2014 the setup confirmation timeframe is unambiguously aligned; no mixed readings.\n- **20D return +6.04%** \u2014 medium-term trend is upward; any pullback finds a rising floor around $313-$318 EMA cluster.\n\n---\n\n## 3. BEAR CASE\n\n- **Bullish exhaustion score 80/100** \u2014 price made a higher high with lower RSI, extended 2.4 ATR from VWAP on 0.44x volume. Classic late-move signature.\n- **Volume only 0.62x 20D average** \u2014 the intraday rally has no institutional participation. OBV trend is falling. This move is not being confirmed by money flow.\n- **SPY -0.51%, QQQ -0.76%, XLK -0.92%** \u2014 broad market and sector both red today. AAPL is outperforming but is being dragged against a headwind. Relative strength rarely persists intraday without a specific catalyst.\n- **Bollinger Band position 0.821** \u2014 approaching upper band at $328.50, which coincides with 20D resistance. Only ~$4.80 headroom before hitting a natural ceiling.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news catalyst found** \u2014 the +2.65% move today has no identifiable news driver from the data pull. Unexplained moves without catalysts are more prone to reversal.\n- **Options flow balanced** \u2014 P/C ratio of 0.28 looks call-heavy, but unusual activity is equal (5 calls / 5 puts flagged). No clear institutional directional conviction from flow.\n- **Macro catalyst risk** \u2014 with SPY/QQQ dropping, any broader market acceleration to the downside (Fed speak, macro data) would expose AAPL's thin-volume rally.\n- **Analyst price target = $323.86** \u2014 stock is essentially AT consensus. No fundamental upside pull from here in the near term.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Support** | $321.78 | 5m VWAP \u2014 losing this flips intraday bias |\n| **Key Support** | $318.69 | 15m VWAP \u2014 losing this confirms reversal thesis |\n| **Bull/Bear Line** | $315.89 | 1H VWAP \u2014 full reversal target if exhaustion plays out |\n| **Support Cluster** | $313-$317 | EMA50 + EMA21 + prior consolidation zone |\n| **Resistance** | $328.21-$328.50 | 20D resistance + upper Bollinger Band |\n| **Thesis-changer** | $325.50+ on volume | If price breaks higher with volume confirmation, exhaustion thesis is wrong |\n\n---\n\n## 6. CONFLUENCE SCORE: 38/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 24/100\n\nThe chart signal is moderately readable (exhaustion is clear), but **tradeability is critically capped**: a PUT thesis requires a drop toward $318-$320, but the 0DTE expected move is only \u00b1$3.59 and price must first break $321.78 VWAP before the move is confirmed \u2014 by the time entry is triggered, the remaining target may be inside the noise. The 1DTE expected move of \u00b1$5.08 is barely sufficient if the full drop to 15m VWAP materializes, but at 11:30 AM the exhaustion could mean a slow bleed rather than a sharp drop, killing theta-sensitive premium. No CALL trade is viable given exhaustion. Score reflects: real signal, not a real 0-2 DTE trade.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bearish exhaustion read is genuine, but the realistic downside target (~$318-$320) falls right at the edge of the 1DTE expected move, entry requires a trigger that hasn't fired yet (VWAP break), and time of day (11:30 AM) leaves insufficient intraday window for a 0DTE exhaustion trade to develop cleanly. No CALL is appropriate against 80/100 reversal risk and a stretched move.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Bullish exhaustion score 80/100 with RSI divergence and sub-average volume invalidates a CALL; a PUT requires price to break below 5m VWAP ($321.78) and reach ~$318-$319, a move of ~$4.70 which sits at the outer edge of the 1DTE expected move (\u00b1$5.08) leaving insufficient premium payoff relative to theta risk at 11:30 AM with no confirmed trigger yet fired \u2014 realistic target does not fit inside the 0.5-0.8x expected move window required for viable 0-2 DTE premium payoff.\n```\n\n---\n\n**BOTTOM LINE:** AAPL's intraday move is exhausted by every participation metric. The bearish thesis is structurally sound, but the target zone is too close to the expected-move boundary to generate a reliable premium payoff in 0-2 DTE. **Wait for a confirmed VWAP break with volume, or let the stock reset to the $315-$318 zone before evaluating a fresh CALL setup with a clean risk/reward.**",
+        "confluence_score": 38,
+        "signal_clarity": 52,
+        "tradeability": 24,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -227,18 +227,18 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "The bearish exhaustion thesis is directionally credible but the",
-          "reversal_risk": 45,
+          "no_trade_reason": "Bullish exhaustion score 80/100 with RSI divergence and sub-average volume invalidates a CALL; a PUT requires price to break below 5m VWAP ($321.78) and reach ~$318-$319, a move of ~$4.70 which sits at the outer edge of the 1DTE expected move (\u00b1$5.08) leaving insufficient premium payoff relative to theta risk at 11:30 AM with no confirmed trigger yet fired \u2014 realistic target does not fit inside the 0.5-0.8x expected move window required for viable 0-2 DTE premium payoff.",
+          "reversal_risk": 80,
           "exhaustion_side": "BULLISH_EXHAUSTION",
-          "reversal_notes": "price is 2.7 ATR from VWAP \u2014 stretched and prone to snap back; push is on 0.46x the recent volume \u2014 little participation",
+          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push; price is 2.4 ATR from VWAP \u2014 stretched and prone to snap back; push is on 0.44x the recent volume \u2014 little participation",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6643
+        "tokens_used": 6720
       },
       "was_flagged": true,
       "cached_at": 1788974487.7413323,
-      "score": 52
+      "score": 38
     },
     "TSLA": {
       "result": {
@@ -355,5 +355,5 @@
       "score": 41
     }
   },
-  "saved_at": "2026-09-10T11:20:37-04:00"
+  "saved_at": "2026-09-10T11:31:42-04:00"
 }
