@@ -512,5 +512,19 @@
   "message_id": "1547293472493666306",
   "signal_time": "2026-09-09T13:11:51-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "SPY",
+  "direction": "PUT",
+  "trigger": 758.27,
+  "strike": 759.0,
+  "expiry_date": "",
+  "vol_multiple": 0.6,
+  "entry_condition": "Enter on a 15M candle CLOSE below $759.00 (breaking the 20D support / lower BB) with volume at or above 0.6x average and 15M MACD histogram remaining negative.",
+  "score": 66,
+  "verdict": "WATCH",
+  "message_id": "1547633817974603836",
+  "signal_time": "2026-09-10T11:44:16-04:00",
+  "status": "PENDING"
  }
 ]
