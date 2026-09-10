@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 323.55999755859375,
+      "price": 324.1400146484375,
       "volume_ratio": 0.0,
-      "ts": 1789058438.2712796,
+      "ts": 1789059044.7793427,
       "last_full_scan_ts": 1789058487.7162802
     },
     "AMZN": {
-      "price": 252.375,
+      "price": 252.67999267578125,
       "volume_ratio": 0.0,
-      "ts": 1789058438.4833877,
-      "last_full_scan_ts": 1789054890.7649057
+      "ts": 1789059045.071817,
+      "last_full_scan_ts": 1789059112.8449929
     },
     "META": {
-      "price": 649.219970703125,
+      "price": 650.9500122070312,
       "volume_ratio": 0.0,
-      "ts": 1789058438.6210375,
+      "ts": 1789059045.394327,
       "last_full_scan_ts": 1789057349.9215708
     },
     "MSFT": {
-      "price": 492.44000244140625,
+      "price": 493.1300048828125,
       "volume_ratio": 0.0,
-      "ts": 1789058438.8534584,
+      "ts": 1789059045.7313197,
       "last_full_scan_ts": 1789055545.9616718
     },
     "NVDA": {
-      "price": 218.07000732421875,
+      "price": 218.50999450683594,
       "volume_ratio": 0.0,
-      "ts": 1789058439.0941513,
+      "ts": 1789059046.074398,
       "last_full_scan_ts": 1789057293.6297002
     },
     "QQQ": {
-      "price": 709.510009765625,
+      "price": 710.530029296875,
       "volume_ratio": 0.0,
-      "ts": 1789058439.2848904,
-      "last_full_scan_ts": 1789054999.9527385
+      "ts": 1789059046.464362,
+      "last_full_scan_ts": 1789059157.008666
     },
     "SPY": {
-      "price": 758.1799926757812,
+      "price": 758.8272705078125,
       "volume_ratio": 0.0,
-      "ts": 1789058439.5208733,
-      "last_full_scan_ts": 1789055056.496244
+      "ts": 1789059046.9029803,
+      "last_full_scan_ts": 1789059214.5886583
     },
     "TSLA": {
-      "price": 366.3800048828125,
+      "price": 365.91119384765625,
       "volume_ratio": 0.0,
-      "ts": 1789058439.6606443,
+      "ts": 1789059047.3636427,
       "last_full_scan_ts": 1789055594.7225835
     }
   },
@@ -201,7 +201,121 @@
       "was_flagged": true,
       "cached_at": 1789050760.159957,
       "score": 44
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-09-10T16:51:52.837344",
+        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis\n**12:51 PM ET | Last: $252.69**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is grinding along its lower Bollinger Band (~$251.67) in a weak tape, down 4.69% over 20 days and below all key daily EMAs. The intraday structure shows a split: 5m/15m momentum is mildly bullish (above short-term VWAP) but the 1H frame remains bearish and the daily trend is firmly down. The most plausible 5-15 day scenario is continued chop-to-drift lower toward $248\u2013$250, with a modest intraday bounce possible given oversold stochastics, but no catalyst exists to break the bearish structure.\n\n---\n\n## 2. BULL CASE\n\n- **Stochastic K/D 17.3/19.96 \u2192 OVERSOLD**: Deeply oversold on the daily \u2014 historically a mean-reversion trigger, with price near lower Bollinger Band ($251.67 support) creating a logical bounce zone.\n- **5m/15m intraday structure BULLISH**: Price holding above short-term VWAP on both timeframes with clean 4/4 bullish signals on 15m \u2014 near-term buying pressure is present.\n- **Lower Bollinger Band confluence at $251.67**: Price has barely breached this level; closes back above it support a snap-back trade toward mid-band ($259).\n- **Analyst consensus STRONG_BUY with $328 target**: Long-term institutional confidence is high; any broader market stabilization likely benefits AMZN disproportionately given beta of 1.44.\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD histogram -1.44 \u2192 firmly BEARISH**: Momentum on the daily is clearly deteriorating, consistent with the 20D return of -4.69%.\n- **EMA structure BEAR_BELOW (EMA9=$256.4 / EMA21=$258.09 / EMA50=$254.91)**: Price is below all relevant daily EMAs \u2014 no bullish crossover in sight. Resistance stacked overhead.\n- **1H timeframe BEARISH (1B/3Br), below 1H VWAP**: The dominant intraday trend remains downward; the 5m/15m bounce is happening on 0.17x average volume \u2014 no institutional participation.\n- **Broad market weak (SPY -0.57%, QQQ -0.84%, Tech -1.1%)**: AMZN's sector (Consumer Discretionary -0.1%) and the broader tape provide headwind; OBV falling confirms distribution.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news detected**: Zero headlines means today's price action is macro/technical driven \u2014 a surprise headline (AWS outage, tariff news, retail macro data) could spike volatility sharply.\n- **VIX at 17.76**: Not elevated. A spike above 20+ would reprice 0-2 DTE premiums significantly and could accelerate a breakdown.\n- **Unusual options activity (5 calls / 5 puts flagged)**: Perfectly balanced unusual flow with P/C of 0.51 \u2014 suggests smart money is hedging both ways, possibly around an expected macro event not yet in the newsfeed.\n- **Volume at 0.37x 20D average**: If volume surges (institutional re-entry or exit), it could accelerate either direction sharply \u2014 the current quiet tape can break fast.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard support** | $251.67 | Lower Bollinger Band \u2014 failure here opens $248\u2013$250 |\n| **20D Support** | $252.40 | Current floor; price sitting just above it |\n| **Current price** | $252.69 | Decision zone |\n| **1H VWAP** | $252.83 | Reclaim needed for bullish thesis |\n| **EMA50 (daily)** | $254.91 | First overhead resistance |\n| **EMA9 (daily)** | $256.40 | Bull/bear pivot for daily trend |\n| **20D Resistance** | $266.43 | Upper range ceiling \u2014 irrelevant for 0-2 DTE |\n| **Thesis-flip level** | $254.91 | Break and hold above EMA50 daily would shift near-term bias to neutral/bullish |\n\n---\n\n## 6. CONFLUENCE SCORE: 44/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 36/100\n\n**Score rationale:** Signal clarity is moderate \u2014 daily/1H bearish, 5m/15m bullish on thin volume creates a genuine conflict that prevents high conviction in either direction. Tradeability caps this hard: the 5m/15m bounce case requires reclaiming $254.91+ (EMA50), which is $2.22 away \u2014 that's 0.88% from current price, well inside the 1DTE expected move of \u00b1$3.89, but the bounce is happening on 0.17x average volume with no confirmation, making the premise fragile. The bearish case has better daily alignment but price is sitting at the lower BB with oversold stochastics \u2014 a mean-reversion trap risk for 0DTE puts. Neither side offers clean tradeability today.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe timeframe conflict is genuine, not manufactured: daily/1H bearish vs. 5m/15m bullish on anemic volume. The bounce lacks the volume confirmation required by the regime gate. The bearish case is undermined by oversold stochastics and lower BB proximity. This is a classic wait-for-resolution setup.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: N/A\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: N/A\n\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 daily/1H bearish \nbut 5m/15m bullish, and the intraday bounce is on 0.17x average volume with no \nparticipation, making neither a CALL (no volume confirmation) nor a PUT (lower BB \n+ oversold stochastics create mean-reversion trap) a viable 0-2 DTE trade right \nnow; wait for 1H reclaim of VWAP $252.83 with volume >1.5x avg for a CALL, or \nbreak below $251.67 lower BB on volume for a PUT.\n```\n\n---\n\n**\u26a1 WATCH LEVEL ALERT:** If AMZN breaks below $251.67 (lower BB) on volume \u2265 1.2x average \u2192 reassess for 1DTE PUT targeting $249.00. If it reclaims 1H VWAP $252.83 AND EMA50 $254.91 on volume \u2192 reassess for 1DTE CALL targeting $256.50. Neither trigger is hit yet.",
+        "confluence_score": 44,
+        "signal_clarity": 52,
+        "tradeability": 36,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 daily/1H bearish",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.31x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6764
+      },
+      "was_flagged": false,
+      "cached_at": 1789059112.8449965,
+      "score": 44
+    },
+    "QQQ": {
+      "result": {
+        "ticker": "QQQ",
+        "timestamp": "2026-09-10T16:52:37.006924",
+        "analysis": "# QQQ Analysis \u2014 12:51 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is in a multi-timeframe bearish structure \u2014 down 2.94% over 20 days, trading below all short-term EMAs on the daily and 1H, with MACD negative and OBV falling. The most plausible 5-15 day scenario is continued drift lower toward the 20D support zone at $706.32, with any intraday bounces capped by the EMA cluster at $711-715. A break below $706 opens $700-702 (lower Bollinger band). Near-term recovery above $715 is possible but requires a clear catalyst absent from current data.\n\n---\n\n## 2. BULL CASE\n\n- **15M MACD Bullish Cross (hist: +0.05):** Fresh crossover on the confirmation timeframe; if it holds, could trigger a short-term bounce toward $713-714.\n- **1H RSI Oversold at 29.55:** Oversold on the hourly is a mean-reversion signal \u2014 price has dropped hard enough to attract dip buyers, implying a near-term bounce attempt toward VWAP at $714.62.\n- **Price Holding Above 5M and 15M VWAP ($710.13 / $709.74):** Intraday bulls are defending VWAP on the shorter timeframes, which provides near-term support and suggests the session low may already be in.\n- **BB Position at 0.288 / Near Lower Band ($702.22):** Price in the lower third of the Bollinger Band implies mean-reversion probability toward the midline (~$716), a near-term upward pull.\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD Histogram Negative (-0.5251) + EMA Bearish Stack:** Price is below EMA9, EMA21, and EMA50 on the daily \u2014 classic distribution structure. Implies further downside pressure over days.\n- **1H Bias Firmly Bearish (1B/3Br), Price Below 1H VWAP ($714.62):** The dominant intraday trend is bearish. Price is 0.573% below 1H VWAP \u2014 sellers in control on the trend-defining timeframe.\n- **OBV Falling + Volume Below Average (0.61x 20D MA):** Weak volume on the entire structure means sellers are not exhausted \u2014 there's no capitulation or buying absorption visible. Bearish drift can persist without a washout volume event.\n- **20D Return -2.94%, Tech Sector Down -1.1% Today:** Sector-level selling in technology (QQQ's primary driver) with no reversal catalyst visible. The macro tape is aligned with continued pressure.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro Data / Fed Speakers (afternoon):** Any surprise commentary on rates or inflation could spike VIX or trigger sharp directional moves \u2014 not priced into neutral news sentiment.\n- **Options Expiration Dynamics:** With 5 unusual calls AND 5 unusual puts flagged equally, there's a binary tug-of-war in the options market. A dealer gamma flip near $710 could amplify a move in either direction rapidly.\n- **Afternoon Reversal Risk:** 1H RSI at 29.55 is genuinely oversold \u2014 a short-covering rally in the final 90 minutes of the session is a real scenario, especially if SPY finds support.\n- **VIX Spike:** Currently at 17.76 (contained), but a move toward 20+ would compress all tech positioning and accelerate QQQ downside.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 1H VWAP (Resistance) | $714.62 | Reclaiming this flips intraday bias bullish |\n| Daily EMA9/21 Cluster | $714.27\u2013$714.75 | Overhead resistance; rejection here = bearish continuation |\n| 5M/15M VWAP Support | $709.74\u2013$710.13 | Losing both = intraday structure breaks bearish |\n| 20D Support | $706.32 | Key structural support; break = acceleration to $702 |\n| Lower Bollinger Band | $702.22 | Extreme support / potential bounce zone |\n| Thesis Invalidation | $715.50 | Sustained close above EMA stack changes thesis to neutral |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 46/100\n\nThe directional lean is moderately bearish but the 15M MACD bullish cross, the 1H oversold RSI at 29.55, and price holding above 5M/15M VWAP create genuine contradiction at the entry-timing level. More critically, tradeability is capped: the realistic intraday target (~$707-708, a ~$2.50-3.00 move down) sits at roughly 0.9x the 1DTE expected move of $3.84 \u2014 borderline viable but the entry trigger has not been confirmed with volume, and at 12:51 PM there is insufficient time buffer on 0DTE for a move that hasn't started yet. Mixed confluence with no clean entry confirmation keeps this below the tradeable threshold.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS (Low confidence)**\n\nThe daily/1H structure is bearish, but the 15M just posted a bullish MACD cross and 1H RSI is oversold \u2014 these are active contradictions at the entry level. Low confidence because the setup requires resolution of the 15M conflict before a clean PUT entry exists.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 15M MACD has just posted a bullish cross and 1H RSI is oversold at 29.55 while price holds above 5M/15M VWAP, directly contradicting the bearish daily/1H structure; there is no clean entry confirmation with volume support (0.1x\u20130.3x average across all intraday timeframes), and entering a PUT into a potentially exhausted down-move at 12:51 PM ET without trigger confirmation risks buying into a short-covering bounce.",
+        "confluence_score": 52,
+        "signal_clarity": 58,
+        "tradeability": 46,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 15M MACD has just posted a bullish cross and 1H RSI is oversold at 29.55 while price holds above 5M/15M VWAP, directly contradicting the bearish daily/1H structure; there is no clean entry confirmation with volume support (0.1x\u20130.3x average across all intraday timeframes), and entering a PUT into a potentially exhausted down-move at 12:51 PM ET without trigger confirmation risks buying into a short-covering bounce.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.45x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6490
+      },
+      "was_flagged": false,
+      "cached_at": 1789059157.0086687,
+      "score": 52
+    },
+    "SPY": {
+      "result": {
+        "ticker": "SPY",
+        "timestamp": "2026-09-10T16:53:34.586129",
+        "analysis": "# SPY ANALYSIS \u2014 12:52 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is grinding at its 20D support level ($758.79) after a multi-week downtrend, sitting at the lower Bollinger Band with oversold stochastic readings on the daily. The most plausible near-term scenario (5-15 days) is a choppy, low-conviction bounce attempt off this support zone toward $762-$765 before the broader downtrend reasserts \u2014 but that bounce is not confirmed yet. The daily trend remains bearish with price below all short-term EMAs, and any relief rally faces heavy resistance at $765-$768.\n\n---\n\n## 2. BULL CASE\n\n- **Oversold Stochastic (11.52/23.65):** Deeply oversold on daily \u2014 historically associated with short-term mean-reversion bounces, especially when sitting at a concrete support level\n- **Price at 20D Support + Lower Bollinger Band ($758.79/$758.0):** Confluence of two support structures at current price; a bounce from this level is the textbook BB mean-reversion setup\n- **5m and 15m Intraday Momentum:** Both sub-timeframes show 3/0 bullish signals, MACD bullish cross on 5m, price above both VWAP levels \u2014 intraday buyers are present right now\n- **1H RSI = 26.87 (Oversold):** Extreme 1H oversold reading suggests the immediate downward momentum on the hourly is likely exhausted, supporting a near-term relief move\n\n---\n\n## 3. BEAR CASE\n\n- **MACD Histogram = -1.60 (Daily, Bearish):** Negative and accelerating on the daily \u2014 the primary trend engine remains pointed down with no cross in sight\n- **EMA Stack Bearish:** EMA9 (765.07) and EMA21 (765.0) are both above current price and converging \u2014 price has failed to reclaim short-term moving averages; these act as overhead resistance\n- **1H Timeframe Bearish (3 bear signals):** The dominant intraday structural timeframe (1H) shows price below 1H VWAP ($762.17), bearish EMA trend, and bearish MACD \u2014 the bounce in 5m/15m is happening inside a bearish 1H context\n- **Low Volume (0.65x 20D MA) + Falling OBV:** The bounce attempt has no volume behind it. 5m volume at 0.15x avg and 15m at 0.23x avg \u2014 this is a low-participation drift, not a committed bid. OBV falling confirms distribution on the daily\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro/Fed events:** No news was captured in this pull, but SPY is highly sensitive to surprise Fed commentary, CPI/PPI revisions, or geopolitical headlines \u2014 any of these could break the range decisively\n- **Options expiry dynamics:** P/C ratio of 1.17 with balanced unusual activity (5 calls / 5 puts flagged) suggests the market is genuinely uncertain \u2014 a pin near $758-$760 is plausible into close if 0DTE gamma is heavy at this strike cluster\n- **VIX at 17.76:** Currently tame but sitting below 18 \u2014 a spike above 20 on any negative headline would accelerate PUT premium and break support decisively\n- **Sector rotation:** Consumer Staples is the only green sector (+0.1%) \u2014 a defensive posture that often precedes broader weakness, but a reversal in Tech (currently -1.1%) could trigger a sharp SPY bounce given its weight\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Support** | $758.00 | Lower Bollinger Band \u2014 close below = breakdown signal |\n| **Current Support** | $758.79 | 20D support = current price, line in the sand |\n| **Intraday VWAP (15m)** | $758.35 | Losing this flips 15m bias bearish |\n| **1H VWAP** | $762.17 | Reclaiming this would signal real bullish recovery |\n| **EMA9/EMA21 Cluster** | $765.00-$765.07 | First major resistance \u2014 bearish thesis fails only if this is breached |\n| **Resistance** | $777.88 | 20D resistance / near 52W high \u2014 only relevant on sustained rally |\n| **Thesis change level** | $762.17 | Reclaiming 1H VWAP with volume = invalidates bearish bias |\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 42/100\n\n**Score rationale:** Signal clarity is moderate \u2014 daily trend is bearish but 5m/15m are bullish and low-volume, creating genuine timeframe conflict; the 1H bearish bias is the correct anchor but is undercut by oversold readings that raise reversal risk. Tradeability is the primary cap: the realistic intraday move is contained within a \u00b1$2.12 (0DTE) to \u00b1$3.04 (1DTE) expected move, but the lack of volume confirmation and timeframe conflict means neither a CALL nor a PUT has a clean, high-conviction trigger \u2014 this is precisely the \"mixed timeframes = wait for alignment\" scenario described in the confluence guide.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe 5m/15m bullish signals and the 1H bearish structure are in direct conflict. The bounce is happening on 0.15-0.23x normal volume \u2014 it lacks the participation needed to confirm a CALL. The daily downtrend and EMA stack argue for PUTs but the oversold stochastic and BB lower band location argue against chasing a PUT at this exact price. Neither side clears the bar.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m and 15m are bullish (3/0) on low volume while the 1H is bearish (1/3), and the daily MACD is bearish while stochastic/BB position argue against a new PUT entry at this exact price; neither direction has sufficient timeframe alignment or volume confirmation to justify 0-2 DTE premium risk.\n\n---\n\n**WATCH FOR ENTRY:** A valid CALL trigger would be a 15m candle close above 1H VWAP ($762.17) with volume \u2265 1.2x average \u2014 that would align all three intraday timeframes. A valid PUT trigger would be a 15m candle close below $758.00 (lower Bollinger Band) on above-average volume \u2014 that would confirm the breakdown from support with participation. Neither has occurred at 12:52 PM ET.",
+        "confluence_score": 47,
+        "signal_clarity": 52,
+        "tradeability": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m and 15m are bullish (3/0) on low volume while the 1H is bearish (1/3), and the daily MACD is bearish while stochastic/BB position argue against a new PUT entry at this exact price; neither direction has sufficient timeframe alignment or volume confirmation to justify 0-2 DTE premium risk.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.33x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6647
+      },
+      "was_flagged": false,
+      "cached_at": 1789059214.5886617,
+      "score": 47
     }
   },
-  "saved_at": "2026-09-10T12:41:29-04:00"
+  "saved_at": "2026-09-10T12:53:36-04:00"
 }
