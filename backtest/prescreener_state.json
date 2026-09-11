@@ -1,93 +1,55 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 335.2550048828125,
+      "price": 335.19000244140625,
       "volume_ratio": 0.0,
-      "ts": 1789140038.8180501,
+      "ts": 1789140640.3276803,
       "last_full_scan_ts": 1789137710.126221
     },
     "AMZN": {
-      "price": 256.4400939941406,
+      "price": 256.0799865722656,
       "volume_ratio": 0.0,
-      "ts": 1789140039.0405335,
+      "ts": 1789140640.5547073,
       "last_full_scan_ts": 1789137153.8220723
     },
     "META": {
-      "price": 654.1900024414062,
+      "price": 652.3400268554688,
       "volume_ratio": 0.0,
-      "ts": 1789140039.1944945,
+      "ts": 1789140640.7520745,
       "last_full_scan_ts": 1789140097.9764237
     },
     "MSFT": {
-      "price": 495.1700134277344,
+      "price": 496.7749938964844,
       "volume_ratio": 0.0,
-      "ts": 1789140039.4148803,
-      "last_full_scan_ts": 1789137265.3015444
+      "ts": 1789140641.001448,
+      "last_full_scan_ts": 1789140694.6335359
     },
     "NVDA": {
-      "price": 220.27999877929688,
+      "price": 220.23500061035156,
       "volume_ratio": 0.0,
-      "ts": 1789140039.6630082,
+      "ts": 1789140641.207293,
       "last_full_scan_ts": 1789139491.7470882
     },
     "QQQ": {
-      "price": 716.1699829101562,
+      "price": 717.260009765625,
       "volume_ratio": 0.0,
-      "ts": 1789140039.8790822,
+      "ts": 1789140641.3941545,
       "last_full_scan_ts": 1789137392.2298417
     },
     "SPY": {
-      "price": 765.469970703125,
+      "price": 765.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1789140040.1317446,
+      "ts": 1789140641.5746095,
       "last_full_scan_ts": 1789137441.8756406
     },
     "TSLA": {
-      "price": 366.8800048828125,
+      "price": 366.0950012207031,
       "volume_ratio": 0.0,
-      "ts": 1789140040.3552876,
+      "ts": 1789140641.7872334,
       "last_full_scan_ts": 1789138301.725848
     }
   },
   "ai_cache": {
-    "MSFT": {
-      "result": {
-        "ticker": "MSFT",
-        "timestamp": "2026-09-11T14:34:25.296060",
-        "analysis": "# MSFT \u2014 0-2 DTE Options Analysis | 10:33 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT is trading at $494.55, up modestly on the day (+0.43%) in a broadly green tech sector (+1.53%), holding above its 15m and 1H VWAPs. The most plausible scenario over the next 5-15 days is a range-bound grind between $479 support and $513 resistance, with mild upside bias given analyst targets near $573 and sector tailwinds. Near-term, price needs to clear the EMA9 at $496.21 to establish intraday momentum; failure to do so keeps the tape choppy and mean-reverting toward VWAP.\n\n---\n\n## 2. BULL CASE\n\n- **Sector strength (+1.53% XLK today):** Tech is the day's best-performing sector; MSFT is participating modestly, suggesting relative underperformance that could catch up rather than reverse.\n- **15m and 1H VWAP holds:** Price is above both the 15m VWAP ($494.02) and 1H VWAP ($492.35), confirming intraday buyers are in control at the dominant timeframes.\n- **Strong analyst consensus (STRONG_BUY, $572.91 PT, 52 analysts):** Institutional sentiment firmly bullish; provides a structural floor on aggressive selling.\n- **Low reversal risk (8/100) with no exhaustion detected:** The move is not tired. Bullish participation, however modest, is not yet at a fading stage \u2014 no RSI divergence, no MACD fade.\n\n---\n\n## 3. BEAR CASE\n\n- **MACD Histogram negative on daily (-4.01):** Daily momentum is pointed down, implying the 5D return of -1.03% still has some structural weight.\n- **5m timeframe fully bearish (0 bull / 3 bear signals):** Immediate entry-precision timeframe is pointing down; price is below 5m VWAP with bearish 3-candle momentum (-0.151%).\n- **OBV trend falling:** On-balance volume is declining, meaning the up-moves are not being confirmed by volume conviction \u2014 distribution pattern.\n- **Volume at only 0.17x 20D average:** Extremely low volume means any directional read is unreliable; low-volume rallies can stall and reverse quickly, and low-volume declines can reverse just as fast.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent:** Removes the largest binary risk catalyst \u2014 this is a neutral factor.\n- **Volume spike risk:** At 0.17x normal volume, any institutional participant entering at scale will move the stock significantly; direction unknown.\n- **Broad market regime shift:** SPY/QQQ are mixed but green (+1.04%/+1.31%); if macro sentiment firms further into the afternoon, tech leaders like MSFT could see a momentum catch-up move toward $500+.\n- **10 flagged unusual contracts (5 calls, 5 puts):** Balanced unusual activity suggests informed participants are hedging rather than making a directional bet \u2014 consistent with the mixed read.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate resistance | $496.21 | EMA9 (daily); price must clear this to flip intraday bias bullish |\n| Intraday resistance | $500.00 | Psychological round number within 1DTE expected move |\n| 20D Resistance | $513.53 | Bollinger upper band / range ceiling |\n| 15m VWAP support | $494.02 | Lose this \u2192 5m bias takes control, downside risk |\n| 1H VWAP support | $492.35 | Critical: loss of this flips intraday structure bearish |\n| 20D Support | $479.45 | Major floor; breach = material technical breakdown |\n| **Thesis flip level** | **$492.35** | Loss of 1H VWAP converts this to a PUT setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 42/100\nTRADEABILITY: 52/100\n\nSignals are genuinely split across timeframes \u2014 the 5m is clearly bearish while the 15m and 1H lean bullish \u2014 and the daily MACD/OBV conflict with sector/VWAP structure, so neither direction achieves the alignment threshold required to score above 54; tradeability is further capped by the 0.17x volume environment, which makes entry timing unreliable and expected-move targets thin relative to premium cost.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe data is genuinely split: intraday structure (15m/1H) is mildly bullish, but the 5m entry timeframe is bearish, daily MACD is negative, OBV is falling, and volume is only 17% of normal. Sector is green and MSFT is up on the day, which argues against a PUT. But the bullish signals lack volume confirmation, which argues against a CALL. This is a genuine conflict, not a defaulted NONE.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m is fully bearish while 15m and 1H are bullish \u2014 and volume at 0.17x average makes any directional read low-conviction; neither CALL nor PUT achieves the alignment needed for a 0-2 DTE trade where theta is unforgiving of indecision.",
-        "confluence_score": 47,
-        "signal_clarity": 42,
-        "tradeability": 52,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m is fully bearish while 15m and 1H are bullish \u2014 and volume at 0.17x average makes any directional read low-conviction; neither CALL nor PUT achieves the alignment needed for a 0-2 DTE trade where theta is unforgiving of indecision.",
-          "reversal_risk": 8,
-          "exhaustion_side": null,
-          "reversal_notes": "",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6581
-      },
-      "was_flagged": true,
-      "cached_at": 1788972732.2219782,
-      "score": 47
-    },
     "AAPL": {
       "result": {
         "ticker": "AAPL",
@@ -317,5 +279,5 @@
       "score": 44
     }
   },
-  "saved_at": "2026-09-11T11:21:39-04:00"
+  "saved_at": "2026-09-11T11:31:36-04:00"
 }
