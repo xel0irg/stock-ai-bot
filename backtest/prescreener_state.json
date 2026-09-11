@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 334.7799987792969,
+      "price": 334.8399963378906,
       "volume_ratio": 0.0,
-      "ts": 1789137647.706098,
+      "ts": 1789138239.5948334,
       "last_full_scan_ts": 1789137710.126221
     },
     "AMZN": {
-      "price": 255.1300048828125,
+      "price": 255.10000610351562,
       "volume_ratio": 0.0,
-      "ts": 1789137647.909471,
+      "ts": 1789138239.779591,
       "last_full_scan_ts": 1789137153.8220723
     },
     "META": {
-      "price": 654.0499877929688,
+      "price": 652.3212280273438,
       "volume_ratio": 0.0,
-      "ts": 1789137648.2595475,
+      "ts": 1789138239.9797533,
       "last_full_scan_ts": 1789137760.9162102
     },
     "MSFT": {
-      "price": 494.7950134277344,
+      "price": 493.5278015136719,
       "volume_ratio": 0.0,
-      "ts": 1789137648.6333215,
+      "ts": 1789138240.3456042,
       "last_full_scan_ts": 1789137265.3015444
     },
     "NVDA": {
-      "price": 220.22999572753906,
+      "price": 219.8350067138672,
       "volume_ratio": 0.0,
-      "ts": 1789137648.8498695,
+      "ts": 1789138240.5313172,
       "last_full_scan_ts": 1789137814.4457645
     },
     "QQQ": {
-      "price": 715.1900024414062,
+      "price": 714.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1789137649.2596989,
+      "ts": 1789138240.7479496,
       "last_full_scan_ts": 1789137392.2298417
     },
     "SPY": {
-      "price": 764.4993896484375,
+      "price": 764.469970703125,
       "volume_ratio": 0.0,
-      "ts": 1789137650.1611817,
+      "ts": 1789138241.001108,
       "last_full_scan_ts": 1789137441.8756406
     },
     "TSLA": {
-      "price": 364.1700134277344,
+      "price": 365.54998779296875,
       "volume_ratio": 0.0,
-      "ts": 1789137650.5007546,
-      "last_full_scan_ts": 1789137872.0890348
+      "ts": 1789138241.1425083,
+      "last_full_scan_ts": 1789138301.725848
     }
   },
   "ai_cache": {
@@ -277,7 +277,45 @@
       "was_flagged": true,
       "cached_at": 1789059214.5886617,
       "score": 48
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-09-11T14:51:41.714345",
+        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Time: 10:50 AM ET | Price: $365.55**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is drifting in a narrow consolidation zone, straddling VWAP across timeframes with low conviction in either direction. The most plausible scenario over 5-15 days is continued range-bound action between $355\u2013$376, with the path of least resistance mildly upward given the positive 1D/5D/20D returns and analyst target of $390. However, the **severely depressed volume (0.32x the 20D MA)** signals no institutional commitment to the move, making a breakout unlikely without a fresh catalyst.\n\n---\n\n## 2. BULL CASE\n\n1. **MACD Histogram Bullish (1.83)** \u2014 Daily momentum is positive; price has been building for 20 days (+6.8%), suggesting an underlying bid.\n2. **OBV Trend Rising** \u2014 On-balance volume is accumulating, implying buyers are absorbing supply quietly even without explosive volume.\n3. **15m Bias Bullish (3B/1Br)** \u2014 The most relevant setup-confirmation timeframe is bullish; price is marginally above 15m VWAP; 3-candle momentum is positive.\n4. **Sector Tailwind + Analyst Target** \u2014 XLY +0.77%, Tech +1.3% today; analyst consensus BUY with $390 target (~6.7% upside from here), providing a fundamental ceiling not yet tested.\n\n---\n\n## 3. BEAR CASE\n\n1. **MACD Fading (histogram shrinking 3 bars)** \u2014 Momentum is decelerating on the 15m timeframe. The bullish read is staling, not accelerating.\n2. **Price Below VWAP on 5m and 1H** \u2014 The dominant intraday structure (5m and 1H) is bearish-leaning; sellers are active at the $366 level.\n3. **Volume Anemic at 0.32x Average** \u2014 No institutional participation. Rallies on thin volume are not trustworthy; moves can reverse sharply without follow-through.\n4. **RSI/Stochastic Neutral Mid-Range** \u2014 No oversold condition to fuel a bounce, no overbought condition to trigger a flush. Price is in no-man's land with options flow equally split (5 unusual calls / 5 unusual puts).\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news today** \u2014 absence of catalyst is itself information; thin-volume drift is vulnerable to any headline (Musk tweet, political news, macro data).\n- **Elon Musk event/statement** \u2014 TSLA remains the single most Musk-correlated large-cap; any government/DOGE/X headline could move it \u00b13-5% instantly.\n- **Broad market follow-through** \u2014 SPY/QQQ trending up today (+0.91%/+1.13%); if that accelerates into the close, TSLA could get a sympathy bid toward $370-376.\n- **$376 resistance breach** \u2014 If cleared with volume, could trigger a mechanical short-covering move (though short interest is negligible at 2.1%, this level is significant technically).\n- **SEC filing activity** \u2014 5 recent filings in 90 days; none flagged as material currently, but worth monitoring for a Form 8-K.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| **$376.33** | Hard Resistance | Bollinger Upper Band = 20D Resistance. Rejection here = failed breakout. |\n| **$366.28** | Near-term pivot | 1H VWAP \u2014 reclaiming this flips intraday bias bullish |\n| **$365.84** | Micro pivot | 5m VWAP \u2014 current choke point |\n| **$362.43** | Support | EMA9 daily \u2014 first meaningful support on a pullback |\n| **$358.69** | Key Support | EMA50 \u2014 breakdown below = bearish shift |\n| **$336.87** | Major Support | 20D Support floor |\n\n**Thesis-changing level:** A confirmed close above **$366.50** (reclaims all VWAP levels) opens path to $370-376. A break below **$362** on volume signals a VWAP rejection and puts $358 in play.\n\n---\n\n## 6. CONFLUENCE SCORE: 44/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 40/100\n\nSignals are genuinely split across timeframes (5m/1H mixed vs. 15m mildly bullish), volume is far too low to trust momentum, the MACD histogram is actively fading on the confirmation timeframe, and the options flow is exactly neutral (5 unusual calls / 5 unusual puts). Tradeability is capped further because the realistic target in either direction barely exceeds 0.5x the already-tight expected move ranges \u2014 there is insufficient edge to justify theta exposure on 0-2 DTE paper.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in no-trade call)**\n\nThe data does not cleanly favor either direction. This is a genuine conflict, not a default.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m and 1H are bearish-leaning while 15m is mildly bullish, MACD histogram is actively fading on the confirmation timeframe, volume is 0.32x average (no institutional participation to sustain a directional move), and options flow is exactly neutral with 5 unusual calls versus 5 unusual puts \u2014 no edge exists for a 0-2 DTE premium buyer in either direction.\n```\n\n---\n\n**MONITOR FOR RE-ENTRY:** If TSLA reclaims **$366.50+ on 15m close with volume >1.2x average**, reassess for a 1DTE CALL toward $370. If TSLA breaks **$362 on 15m close with volume >1.5x average**, reassess for a 1DTE PUT toward $358. Neither trigger is active at 10:50 AM.",
+        "confluence_score": 44,
+        "signal_clarity": 48,
+        "tradeability": 40,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m and 1H are bearish-leaning while 15m is mildly bullish, MACD histogram is actively fading on the confirmation timeframe, volume is 0.32x average (no institutional participation to sustain a directional move), and options flow is exactly neutral with 5 unusual calls versus 5 unusual puts \u2014 no edge exists for a 0-2 DTE premium buyer in either direction.",
+          "reversal_risk": 25,
+          "exhaustion_side": null,
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6751
+      },
+      "was_flagged": true,
+      "cached_at": 1789138301.7258513,
+      "score": 44
     }
   },
-  "saved_at": "2026-09-11T10:44:34-04:00"
+  "saved_at": "2026-09-11T10:51:43-04:00"
 }
