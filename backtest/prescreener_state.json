@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 329.79998779296875,
+      "price": 330.1099853515625,
       "volume_ratio": 0.0,
-      "ts": 1789492838.8958554,
+      "ts": 1789493443.8108406,
       "last_full_scan_ts": 1789491155.7056262
     },
     "AMZN": {
-      "price": 248.80389404296875,
+      "price": 248.4499969482422,
       "volume_ratio": 0.0,
-      "ts": 1789492839.0849924,
+      "ts": 1789493443.9255373,
       "last_full_scan_ts": 1789491207.3832169
     },
     "META": {
-      "price": 665.2349853515625,
+      "price": 665.030029296875,
       "volume_ratio": 0.0,
-      "ts": 1789492839.355499,
+      "ts": 1789493444.039785,
       "last_full_scan_ts": 1789492888.2699955
     },
     "MSFT": {
-      "price": 499.4939880371094,
+      "price": 499.0199890136719,
       "volume_ratio": 0.0,
-      "ts": 1789492840.278918,
-      "last_full_scan_ts": 1789489366.8180315
+      "ts": 1789493444.198407,
+      "last_full_scan_ts": 1789493539.9800398
     },
     "NVDA": {
-      "price": 211.6988067626953,
+      "price": 211.42999267578125,
       "volume_ratio": 0.0,
-      "ts": 1789492840.5210595,
+      "ts": 1789493444.3329577,
       "last_full_scan_ts": 1789491274.3132591
     },
     "QQQ": {
-      "price": 705.030029296875,
+      "price": 704.760009765625,
       "volume_ratio": 0.0,
-      "ts": 1789492840.708203,
+      "ts": 1789493444.4856274,
       "last_full_scan_ts": 1789491325.6375566
     },
     "SPY": {
-      "price": 756.97998046875,
+      "price": 756.8200073242188,
       "volume_ratio": 0.0,
-      "ts": 1789492840.9663084,
+      "ts": 1789493444.6614153,
       "last_full_scan_ts": 1789491373.7580035
     },
     "TSLA": {
-      "price": 360.1781921386719,
+      "price": 358.67999267578125,
       "volume_ratio": 0.0,
-      "ts": 1789492841.1537533,
-      "last_full_scan_ts": 1789491109.487877
+      "ts": 1789493444.7686818,
+      "last_full_scan_ts": 1789493493.2039587
     }
   },
   "ai_cache": {
@@ -239,7 +239,45 @@
       "was_flagged": false,
       "cached_at": 1789491207.3832197,
       "score": 43
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-09-15T17:31:33.192165",
+        "analysis": "# TSLA \u2014 0-2 DTE OPTIONS ANALYSIS\n**Current Price: $358.68 | Time: 1:30 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is drifting lower within a weak intraday structure, trading below VWAP on all three timeframes while the broader market (SPY -0.56%, QQQ -0.69%) and its own sector (XLY -1.64%) provide a bearish headwind. However, the bearish move is showing clear exhaustion signals \u2014 low volume (0.5x average), MACD histogram shrinking, and a reversal risk score of 45/100 \u2014 suggesting this is a tired, low-participation selloff rather than a clean continuation. Most plausible scenario over 5-15 days: consolidation between $336-$376 support/resistance, with near-term drift toward $350-355 before any directional resolution.\n\n---\n\n## 2. BULL CASE\n\n1. **Daily MACD Histogram Bullish (0.51)** \u2014 On the daily timeframe, momentum is still net positive, suggesting the longer-term trend hasn't fully broken down.\n2. **Bollinger Band Position 0.546 (Upper Half)** \u2014 Price remains in the upper half of the 20-day range, consistent with a stock in recovery mode from its 52W low of $297.38.\n3. **20D Return +6.47%** \u2014 Despite today's weakness, the intermediate trend is higher; sellers have not regained structural control on a swing basis.\n4. **Analyst Consensus BUY / Target $390.09** \u2014 39 analysts with a mean target ~$31 above current price provides a fundamental floor narrative; no earnings imminent to disrupt this.\n\n---\n\n## 3. BEAR CASE\n\n1. **All Three Intraday Timeframes Bearish Below VWAP** \u2014 5m, 15m, and 1H all show price below VWAP with bearish EMA stacks (EMA9 < EMA21 on each). This is the cleanest signal in the dataset.\n2. **OBV Falling / Volume at 0.5x Average** \u2014 Falling on-balance volume with half the normal participation confirms distribution, not accumulation. No buyers stepping in intraday.\n3. **Sector Headwind: XLY -1.64%, Market -0.56%** \u2014 TSLA is not fighting its sector; it's moving with broad risk-off pressure, making a single-stock recovery harder to sustain intraday.\n4. **EMA9 ($361.11) > EMA50 ($359.60) > Price ($358.68)** \u2014 All key EMAs are stacked above price intraday, creating overhead resistance at every level.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Bearish Exhaustion + Low Volume**: The primary wildcard is a sudden VWAP recapture on a volume surge \u2014 absent any news, this would signal short covering or institutional accumulation and invalidate the bear setup rapidly.\n- **No News / 0 Articles**: Information vacuum cuts both ways \u2014 any headline (Musk tweet, macro data, EV policy news) could move TSLA disproportionately given its beta of 1.845.\n- **5 SEC Filings in 90 days**: Not specified, but could include material disclosures. Worth checking before entering.\n- **Short Interest Only 2.1%**: Eliminates short squeeze as a catalyst \u2014 this is not a squeezable float.\n- **VIX at 17.59**: Relatively benign \u2014 no volatility spike is being priced in, which caps option premium expansion as a profit driver.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Resistance | $376.37 | 20D resistance / BB Upper $375.85 |\n| Resistance | $362.23 | 1H EMA21 \u2014 immediate overhead |\n| Resistance | $360.31 | 5m VWAP \u2014 reclaim = thesis invalidation |\n| Current Price | $358.68 | \u2014 |\n| EMA50 Daily | $359.60 | Just above price \u2014 critical near-term pivot |\n| Target Zone | $353.00 | 0.5x 1DTE expected move below |\n| Support | $336.87 | 20D support |\n| Thesis Change Level | $361.50 | Reclaim of VWAP + EMA stack = no trade |\n\n**Critical level**: A 15-minute candle close above $360.31 (5m VWAP) on above-average volume invalidates the bear thesis entirely.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 63/100\nTRADEABILITY: 41/100\n\n**Score explanation**: Signal clarity is reasonable \u2014 all intraday timeframes are bearish and aligned \u2014 but tradeability is severely capped by the BEARISH_EXHAUSTION flag (reversal risk 45/100, MACD decelerating, 0.34x volume participation) and the 1:30 PM ET timing, which eliminates 0DTE and forces 1DTE where the realistic target (~$353) is a modest 0.6x of the expected move but the exhaustion risk makes premium recovery uncertain. The setup is directionally readable but the entry quality is poor \u2014 this is a late PUT, not a clean one.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS (Low confidence)**\n\nThe intraday structure is genuinely bearish across all timeframes. However, confidence is explicitly LOW due to bearish exhaustion, decelerating momentum, thin volume, and the 1:30 PM timing. This is a marginal setup, not a high-conviction one.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: N/A\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: N/A\n\nNO TRADE REASON: Setup is directionally bearish but bearish exhaustion is confirmed \n(reversal risk 45/100, MACD fading 3 bars, volume at 0.34x normal) \u2014 this is a \nLATE entry into a tired move at 1:30 PM ET where 0DTE is off-limits and a 1DTE \nPUT faces immediate mean-reversion risk back to VWAP before any continuation; \nthe combination of exhaustion + thin volume + midday timing makes premium recovery \nunlikely even if direction is ultimately correct.\n```\n\n---\n\n**\u26a0\ufe0f HONEST CONTRADICTION CALLOUT**: The data simultaneously shows \"exceptional PUT confluence\" (all 4 timeframes bearish) and \"BEARISH_EXHAUSTION\" \u2014 these two signals are in direct conflict. The confluence rule says score 85+; the exhaustion rule says materially reduce the score. I am siding with exhaustion + timing over the mechanical confluence count because exhaustion on low volume at 1:30 PM is precisely the condition where 0-2 DTE premium decays before the move resumes. **Waiting for a bounce back toward $360-362 VWAP and a clean rejection with volume would produce a far better PUT entry if that setup develops in the next 30-60 minutes.**",
+        "confluence_score": 52,
+        "signal_clarity": 63,
+        "tradeability": 41,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Setup is directionally bearish but bearish exhaustion is confirmed",
+          "reversal_risk": 45,
+          "exhaustion_side": "BEARISH_EXHAUSTION",
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating; push is on 0.34x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6791
+      },
+      "was_flagged": true,
+      "cached_at": 1789493493.2039626,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-15T13:21:30-04:00"
+  "saved_at": "2026-09-15T13:32:21-04:00"
 }
