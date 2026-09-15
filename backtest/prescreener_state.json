@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 330.1614074707031,
+      "price": 329.9200134277344,
       "volume_ratio": 0.0,
-      "ts": 1789485638.4619482,
+      "ts": 1789486253.830255,
       "last_full_scan_ts": 1789482731.4157145
     },
     "AMZN": {
-      "price": 248.77000427246094,
+      "price": 248.77499389648438,
       "volume_ratio": 0.0,
-      "ts": 1789485638.6426117,
+      "ts": 1789486254.0309203,
       "last_full_scan_ts": 1789482792.576991
     },
     "META": {
-      "price": 672.57568359375,
+      "price": 666.3599853515625,
       "volume_ratio": 0.0,
-      "ts": 1789485638.803722,
-      "last_full_scan_ts": 1789485094.0199149
+      "ts": 1789486254.2077465,
+      "last_full_scan_ts": 1789486313.5390432
     },
     "MSFT": {
-      "price": 500.7850036621094,
+      "price": 499.8349914550781,
       "volume_ratio": 0.0,
-      "ts": 1789485639.020607,
+      "ts": 1789486254.4460948,
       "last_full_scan_ts": 1789485151.7783046
     },
     "NVDA": {
-      "price": 212.13999938964844,
+      "price": 212.15499877929688,
       "volume_ratio": 0.0,
-      "ts": 1789485639.234267,
+      "ts": 1789486254.7490847,
       "last_full_scan_ts": 1789483134.6283808
     },
     "QQQ": {
-      "price": 705.5299072265625,
+      "price": 705.4600219726562,
       "volume_ratio": 0.0,
-      "ts": 1789485639.4565208,
+      "ts": 1789486254.9698715,
       "last_full_scan_ts": 1789482964.7976737
     },
     "SPY": {
-      "price": 757.3200073242188,
+      "price": 757.3350219726562,
       "volume_ratio": 0.0,
-      "ts": 1789485639.6637928,
+      "ts": 1789486255.2649186,
       "last_full_scan_ts": 1789483022.3594222
     },
     "TSLA": {
-      "price": 360.20001220703125,
+      "price": 360.2200012207031,
       "volume_ratio": 0.0,
-      "ts": 1789485639.866688,
+      "ts": 1789486255.5395944,
       "last_full_scan_ts": 1789485204.7340121
     }
   },
@@ -163,7 +163,45 @@
       "was_flagged": true,
       "cached_at": 1789485204.7340147,
       "score": 47
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-15T15:31:53.525048",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis\n**11:31 AM ET | Price: $666.20**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has run 22.5% in 20 days and is now pressing hard against its 20D resistance at exactly current price ($666.20), while SPY/QQQ are both down ~0.5% and sitting below their short-term EMAs. The most plausible scenario over the next 5-15 days is a consolidation or mild pullback from this resistance zone as the broader market headwind absorbs buying pressure. A sustained breakout above $666-$677 (Bollinger upper band) is possible but requires broad market recovery and fresh catalyst.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (10.15) + 1H Bullish Bias:** Daily momentum remains strongly positive; 1H structure (3 bull/1 bear) shows intraday buyers haven't fully capitulated \u2014 the trend is intact at the hour level.\n- **OBV Rising + Analyst Target $758:** On-balance volume confirms accumulation. 57 analysts with a mean target of $758 (~14% above current) implies significant fundamental runway.\n- **News Catalyst (Meta One Launch):** New AI subscription monetization product signals revenue diversification \u2014 fresh catalyst could attract new buyers and sustain premium valuation.\n- **Low Short Interest (1.3% float):** No short overhang. Dip buyers face no squeeze risk from the other direction \u2014 a clean tape.\n\n---\n\n## 3. BEAR CASE\n\n- **Resistance = Current Price + RSI 71 + Stochastic 89/91:** The 20D resistance ceiling sits at exactly $666.20. RSI and Stochastic are both in overbought territory with no divergence yet but significant room to revert. This is a textbook stall zone.\n- **5m and 15m Below VWAP with Bearish Momentum:** Price is below VWAP on both short timeframes ($668.26 and $668.58 respectively), with 5m showing 0 bull / 3 bear signals. Intraday sellers are in control at the micro level.\n- **Broad Market Headwind:** SPY -0.50%, QQQ -0.58%, both below their EMA9/21. Tech sector -0.23%. META is showing relative strength but is not immune \u2014 it's essentially flat (+0.09%) against a red tape.\n- **Volume Collapse (0.46x 20D avg):** Volume is less than half the 20-day average. Low-conviction moves at resistance are high-risk. A breakout on this volume is not trustworthy; a fade is the higher-probability outcome.\n\n---\n\n## 4. WILDCARDS / CATALYSTS\n\n- **Macro reversal:** If SPY/QQQ snap back intraday, META could break above $666-$677 cleanly. Conversely, a broader market leg down could accelerate META's fade from resistance.\n- **Meta One subscription uptake news:** Any early user/revenue metrics leaking could spike price either direction.\n- **Options expiry dynamics:** P/C at 0.39 (very call-heavy). Unusual activity split 5/5 (calls/puts) \u2014 dealers may be positioned to pin or pressure price around current levels through expiry.\n- **VIX spike:** At 17.8 VIX is calm. A VIX move above 22 would reprice short-dated options materially and could cause a rapid META de-rating.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $666.20 | 20D resistance = current price; must break decisively |\n| **Bollinger Upper** | $676.62 | Next cap if $666 breaks; 0DTE EM cap (~$676.99) |\n| **VWAP (15m)** | $668.58 | Reclaiming this flips intraday bias bullish |\n| **VWAP (5m)** | $668.26 | Immediate near-term line in the sand |\n| **EMA9 (1H)** | $663.80 | First intraday support; loss of this is bearish |\n| **EMA21 (1H)** | $658.57 | Deeper support; PUT thesis accelerates below here |\n| **Thesis Flip Level** | $668.60 | Reclaim + hold of 15m VWAP changes bias to BULLISH |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 49/100\n\n**Score rationale:** The bearish intraday signals (5m/15m below VWAP, weak volume, resistance at current price, overbought oscillators) are real but the 1H remains bullish and mixed timeframes prevent high-conviction alignment. More critically, with price sitting exactly at resistance, a PUT needs price to drop \u2014 but the realistic drop target of ~$655-$658 (0.6x of 1DTE \u00b1$15.26 = ~$9.15 move) is achievable in concept but requires follow-through that low volume doesn't confirm yet. Tradeability is marginal \u2014 the setup hasn't triggered yet and entry without confirmation risks buying the temporary dip in a trend that hasn't broken.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low-Medium confidence)**\n\nTimeframes are genuinely split: 5m and 15m bearish, 1H bullish. Volume is insufficient to confirm direction at a critical resistance level. The setup is interesting but not triggered.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m/15m are bearish below VWAP but 1H remains bullish, volume is 0.46x average providing no confirmation of direction at a pivotal resistance level, making a 0-2 DTE directional options trade premature until price either reclaims 15m VWAP ($668.58) to trigger a CALL or loses 1H EMA9 ($663.80) with volume to trigger a PUT.\n```\n\n---\n\n**MONITOR:** Set alerts at $668.60 (PUT thesis invalidated \u2192 potential CALL setup) and $663.50 (PUT trigger with volume). If volume picks up above 1.0x average on a directional move before 2:00 PM ET, reassess with a 1DTE entry.",
+        "confluence_score": 52,
+        "signal_clarity": 55,
+        "tradeability": 49,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m/15m are bearish below VWAP but 1H remains bullish, volume is 0.46x average providing no confirmation of direction at a pivotal resistance level, making a 0-2 DTE directional options trade premature until price either reclaims 15m VWAP ($668.58) to trigger a CALL or loses 1H EMA9 ($663.80) with volume to trigger a PUT.",
+          "reversal_risk": 8,
+          "exhaustion_side": null,
+          "reversal_notes": "",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6639
+      },
+      "was_flagged": true,
+      "cached_at": 1789486313.5390472,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-15T11:20:39-04:00"
+  "saved_at": "2026-09-15T11:31:55-04:00"
 }
