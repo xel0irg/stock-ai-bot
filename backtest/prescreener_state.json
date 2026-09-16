@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 332.5661926269531,
+      "price": 332.739990234375,
       "volume_ratio": 0.0,
-      "ts": 1789576240.2165518,
+      "ts": 1789576842.9413161,
       "last_full_scan_ts": 1789573292.1184998
     },
     "AMZN": {
-      "price": 247.9199981689453,
+      "price": 247.8000030517578,
       "volume_ratio": 0.0,
-      "ts": 1789576240.3587408,
+      "ts": 1789576843.1277852,
       "last_full_scan_ts": 1789573338.0764604
     },
     "META": {
-      "price": 676.969970703125,
+      "price": 676.4400024414062,
       "volume_ratio": 0.0,
-      "ts": 1789576240.5459373,
-      "last_full_scan_ts": 1789572691.8456745
+      "ts": 1789576843.3284485,
+      "last_full_scan_ts": 1789576886.5399518
     },
     "MSFT": {
-      "price": 493.3550109863281,
+      "price": 493.75250244140625,
       "volume_ratio": 0.0,
-      "ts": 1789576240.8466141,
+      "ts": 1789576843.530435,
       "last_full_scan_ts": 1789575680.3080063
     },
     "NVDA": {
-      "price": 215.875,
+      "price": 215.93209838867188,
       "volume_ratio": 0.0,
-      "ts": 1789576241.1367564,
+      "ts": 1789576843.7259936,
       "last_full_scan_ts": 1789573382.1051822
     },
     "QQQ": {
-      "price": 710.3489990234375,
+      "price": 710.010009765625,
       "volume_ratio": 0.0,
-      "ts": 1789576241.338303,
+      "ts": 1789576843.9517605,
       "last_full_scan_ts": 1789573430.2431524
     },
     "SPY": {
-      "price": 760.1599731445312,
+      "price": 759.9371948242188,
       "volume_ratio": 0.0,
-      "ts": 1789576241.5599933,
+      "ts": 1789576844.2027953,
       "last_full_scan_ts": 1789573475.225283
     },
     "TSLA": {
-      "price": 360.8869934082031,
+      "price": 361.5899963378906,
       "volume_ratio": 0.0,
-      "ts": 1789576241.752701,
+      "ts": 1789576844.3664932,
       "last_full_scan_ts": 1789575096.3158352
     }
   },
@@ -243,11 +243,11 @@
     "META": {
       "result": {
         "ticker": "META",
-        "timestamp": "2026-09-16T15:31:31.837573",
-        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**11:30 AM ET | Last: $676.14**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has run +23.8% over 20 days and is pressing against its 20-day resistance at $676.14 \u2014 the exact current price. Intraday structure is fragmenting: the 5-minute frame is fully bearish with price below VWAP, while the 1-hour frame remains bullish, creating a classic exhaustion pattern where the daily trend is intact but short-term momentum is decelerating on thin volume (0.34x 20-day average). The most plausible scenario over 5-15 days is a sideways-to-mild-pullback consolidation as the stock digests the extended run before a potential continuation toward analyst targets near $758.\n\n---\n\n## 2. BULL CASE\n\n1. **MACD Histogram +10.19 (Daily)** \u2014 Strong positive histogram on the daily; the macro trend engine is still running bullish even if slowing intraday.\n2. **Analyst Consensus: STRONG BUY, 57 analysts, PT $758.28** \u2014 ~12% upside to consensus target; institutional support limits deep downside risk.\n3. **OBV Rising + 20-day return +23.8%** \u2014 Sustained accumulation on the larger trend; sellers have not stepped in meaningfully.\n4. **Tech Sector +0.92% today, META acting in line** \u2014 Sector tailwind is present; not diverging bearishly from peers.\n\n---\n\n## 3. BEAR CASE\n\n1. **RSI 72.99 + Stochastic K/D 92.9/94.4 \u2014 Both Overbought** \u2014 Dual oscillator extremes at this price level historically precede mean-reversion; elevated risk of a 3-5% pullback.\n2. **Price at 20-day Resistance ($676.14) + Bollinger Band 0.932 (AT_UPPER_BAND)** \u2014 Touching structural resistance and the upper Bollinger simultaneously; both signal a high-risk entry for longs.\n3. **BULLISH_EXHAUSTION flagged, Reversal Risk 45/100** \u2014 MACD histogram shrinking 3 bars running, move printing on 0.40x recent volume. The up move is losing participation precisely at resistance.\n4. **5-minute fully bearish (0B/4Br), RSI 5m = 19.26, below VWAP $678.91** \u2014 Intraday sellers are active right now; short-term momentum has already rolled over.\n\n---\n\n## 4. WILDCARDS / CATALYSTS\n\n- **No news catalyst identified** \u2014 Zero articles flagged; absence of news means price discovery is purely technical/flow-driven, which amplifies the weight of the exhaustion signals.\n- **Options flow balanced (P/C 0.48, 5 unusual calls / 5 unusual puts)** \u2014 No smart-money directional tell; market makers are hedged both ways, which reduces the probability of a large directional move today.\n- **Low volume (0.34x 20-day avg)** \u2014 Any institution-size order could move price sharply in either direction; a volume surge would be the key tell.\n- **VIX 16.7 (low/normal)** \u2014 Suppresses premium; cheap options cut both ways \u2014 less edge on premium-selling setups, but also cheap to buy directional.\n- **52W high $790.80** \u2014 If META accelerates through $676 resistance on volume, the next visible ceiling is $790; that's the tail risk for any PUT position.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|-------|-------|--------------|\n| **Immediate Resistance** | $676.14 | 20-day resistance = current price; rejection here confirms bearish bias |\n| **Intraday VWAP (5m)** | $678.91 | Price is below this; reclaim above invalidates near-term bear case |\n| **Intraday VWAP (15m)** | $676.47 | Just above current price; critical battle zone |\n| **Bollinger Upper Band** | $687.72 | Bull breakout target if resistance breaks on volume |\n| **1H VWAP** | $669.98 | First meaningful support; ~$6 below current price |\n| **EMA9 (Daily)** | $645.47 | Major pullback support; defines the macro trend |\n| **Thesis-Flip Level** | $680+ on volume | Sustained move above $680 with volume > 1x avg cancels bear/pullback thesis |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 36/100\n\n**Score rationale:** Signal clarity is moderate \u2014 daily trend is bullish but exhaustion signals are real and well-documented at structural resistance; the timeframes are split (1H bullish, 5m bearish), which is not clean alignment in either direction. Tradeability caps the score: the 0DTE expected move is only \u00b1$7.84 and the 1DTE \u00b1$11.09; the realistic pullback target (~$669-$670 = 1H VWAP) sits at ~$6 away \u2014 right at the edge of viable but on thin volume confirmation with a reversal risk of 45/100, making the risk/reward on premium too uncertain to justify execution at this time.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nLean is modestly bearish intraday (exhaustion at resistance, 5m fully bearish), but the 1H bullish structure and low volume mean there is no clean entry trigger confirmed yet. Waiting for a cleaner setup is the correct execution.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Timeframes genuinely conflict (1H bullish vs 5m fully bearish) with BULLISH_EXHAUSTION flagged at reversal risk 45/100 and volume at 0.34x average \u2014 there is no confirmed directional trigger, and the realistic PUT target (~$669 1H VWAP) sits at the outer edge of the 1DTE expected move on thin participation, making premium recovery too uncertain to execute.",
-        "confluence_score": 42,
-        "signal_clarity": 48,
-        "tradeability": 36,
+        "timestamp": "2026-09-16T16:41:26.525860",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis | 12:40 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has surged ~24% over 20 days and is now pressing against its 20-day resistance at $676.44 \u2014 the exact current price \u2014 while sitting at the upper Bollinger Band (0.934 position). The most plausible scenario over 5-15 days is a consolidation/mild pullback toward the $650-660 range as the stock digests the move, with RSI, Stochastic, and proximity to technical resistance all arguing against further immediate extension. A sustained push toward the analyst target of $758 requires either a catalyst or a reset first.\n\n---\n\n## 2. BULL CASE\n\n- **20-Day momentum (+23.88%) + MACD Histogram (+10.21):** The macro trend is powerfully bullish; sustained momentum moves of this magnitude often carry further than technicians expect.\n- **Analyst Consensus STRONG_BUY, PT $758:** 57 analysts with a $758 target implies ~12% upside from here \u2014 structural tailwind for any dip-buying.\n- **Tech sector green (+0.78%) and market broadly positive:** META is acting with its sector; no macro headwind today.\n- **OBV Rising + Low Short Interest (1.3%):** No mechanical short-squeeze fuel, but rising OBV confirms distribution hasn't started; buyers are still in control on a cumulative basis.\n\n---\n\n## 3. BEAR CASE\n\n- **Price = 20-Day Resistance ($676.44):** Current price IS the defined resistance. This is a textbook location for rejection, not initiation.\n- **RSI 73 + Stochastic 93/94 + Upper Bollinger Band (0.934):** Triple overbought confirmation on the daily. These levels have historically marked short-term exhaustion points.\n- **15-Minute timeframe fully bearish (0B/3Br):** VWAP below, MACD negative, 3-candle momentum negative. The only confirmed intraday timeframe reading is bearish.\n- **Volume 0.4x 20-day average:** This entire day's move (and recent session) is happening on dramatically below-average volume. Price at resistance on low volume = weak conviction at the highs. Moves without volume participation are vulnerable.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the biggest binary risk/reward event.\n- **No news detected today** \u2014 means the move is purely technical/momentum-driven, making it more susceptible to mean-reversion without a fundamental anchor.\n- **10 unusual options contracts flagged (5 calls, 5 puts):** Perfectly balanced \u2014 no smart-money directional signal. Could indicate institutional hedging at resistance rather than directional bets.\n- **Macro catalyst risk:** Any SPY/QQQ reversal (both are below their EMA9/21) could drag META lower faster than its own technicals suggest; conversely, a broader market breakout could propel META through resistance.\n- **52W High at $790.80:** If META does break $676 with volume, there's open air to ~$700 with limited overhead resistance before the 52W high.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate Resistance** | $676.44\u2013$677.65 | Current price = 20D resistance; VWAP cluster |\n| **Upper Bollinger Band** | $687.79 | Maximum realistic upside without major expansion |\n| **1H VWAP** | $670.62 | Intraday bull/bear line; break below = bearish shift |\n| **15m VWAP** | $677.65 | Price below here = intraday distribution |\n| **Key Support** | $660\u2013$665 | EMA cluster (5m/15m) and psychological round number |\n| **20D Support** | $645.83 | EMA9 daily; bull thesis breaks below here |\n| **Thesis-flip level** | $676 reclaimed with volume | Close above $677.65 on 2x avg volume flips to CALL setup |\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 42/100\n\n**Score rationale:** The bearish intraday case (15m confirmed bearish, resistance at price, overbought daily) is real but partially offset by bullish daily momentum and mixed 5m/1H readings \u2014 signal clarity is moderate, not clean. Tradeability caps this score: with a 0DTE expected move of only \u00b1$5.95 and price already sitting AT resistance (not breaking down yet), there's no clean entry trigger yet, and the realistic put target (~$668-670) is beyond the 0DTE expected move range. The setup is approaching tradeable but requires confirmation that hasn't arrived.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bearish signals are real and noted honestly \u2014 but the entry trigger hasn't fired. Price is AT resistance, not breaking it. The 15m is bearish but the 5m and 1H are mixed. Volume is too thin to confirm distribution. This is a **watch, not a trade** until price either breaks below $670.62 (1H VWAP) with volume, or rejects $677-678 with a clear 15m bearish candle close.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 15m is confirmed bearish but 5m and 1H are mixed, no entry trigger has fired (price has not broken below 1H VWAP $670.62 with volume), and the realistic put target lies beyond the 0DTE expected move of \u00b1$5.95, making premium uneconomical at current prices; wait for a clean break of $670.62 on above-average volume before initiating a 1DTE PUT.",
+        "confluence_score": 47,
+        "signal_clarity": 52,
+        "tradeability": 42,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -265,18 +265,18 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Timeframes genuinely conflict (1H bullish vs 5m fully bearish) with BULLISH_EXHAUSTION flagged at reversal risk 45/100 and volume at 0.34x average \u2014 there is no confirmed directional trigger, and the realistic PUT target (~$669 1H VWAP) sits at the outer edge of the 1DTE expected move on thin participation, making premium recovery too uncertain to execute.",
-          "reversal_risk": 45,
-          "exhaustion_side": "BULLISH_EXHAUSTION",
-          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating; push is on 0.40x the recent volume \u2014 little participation",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 15m is confirmed bearish but 5m and 1H are mixed, no entry trigger has fired (price has not broken below 1H VWAP $670.62 with volume), and the realistic put target lies beyond the 0DTE expected move of \u00b1$5.95, making premium uneconomical at current prices; wait for a clean break of $670.62 on above-average volume before initiating a 1DTE PUT.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.32x the recent volume \u2014 little participation",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6598
+        "tokens_used": 6505
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1789569221.4328272,
-      "score": 42
+      "score": 47
     },
     "TSLA": {
       "result": {
@@ -317,5 +317,5 @@
       "score": 41
     }
   },
-  "saved_at": "2026-09-16T12:30:41-04:00"
+  "saved_at": "2026-09-16T12:41:28-04:00"
 }
