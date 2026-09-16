@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 332.94000244140625,
+      "price": 333.2349853515625,
       "volume_ratio": 0.0,
-      "ts": 1789579237.959028,
+      "ts": 1789579841.1133363,
       "last_full_scan_ts": 1789577487.5041206
     },
     "AMZN": {
-      "price": 247.49180603027344,
+      "price": 247.72000122070312,
       "volume_ratio": 0.0,
-      "ts": 1789579238.3617926,
+      "ts": 1789579841.5793,
       "last_full_scan_ts": 1789577534.2601175
     },
     "META": {
-      "price": 676.8400268554688,
+      "price": 676.6799926757812,
       "volume_ratio": 0.0,
-      "ts": 1789579238.7890317,
+      "ts": 1789579841.862228,
       "last_full_scan_ts": 1789576886.5399518
     },
     "MSFT": {
-      "price": 493.8399963378906,
+      "price": 493.7099914550781,
       "volume_ratio": 0.0,
-      "ts": 1789579239.291878,
-      "last_full_scan_ts": 1789575680.3080063
+      "ts": 1789579842.2166407,
+      "last_full_scan_ts": 1789579891.410084
     },
     "NVDA": {
-      "price": 215.43499755859375,
+      "price": 215.43130493164062,
       "volume_ratio": 0.0,
-      "ts": 1789579239.743902,
+      "ts": 1789579842.5617375,
       "last_full_scan_ts": 1789577580.8456166
     },
     "QQQ": {
-      "price": 709.6400146484375,
+      "price": 709.7449951171875,
       "volume_ratio": 0.0,
-      "ts": 1789579240.2382603,
+      "ts": 1789579842.8317688,
       "last_full_scan_ts": 1789577621.9477444
     },
     "SPY": {
-      "price": 759.780029296875,
+      "price": 759.9600219726562,
       "volume_ratio": 0.0,
-      "ts": 1789579240.7486176,
+      "ts": 1789579843.198598,
       "last_full_scan_ts": 1789577669.829675
     },
     "TSLA": {
-      "price": 361.3116149902344,
+      "price": 361.54998779296875,
       "volume_ratio": 0.0,
-      "ts": 1789579241.1787047,
+      "ts": 1789579843.4079487,
       "last_full_scan_ts": 1789579307.1816537
     }
   },
@@ -239,7 +239,45 @@
       "was_flagged": false,
       "cached_at": 1789569221.4328272,
       "score": 47
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-09-16T17:31:31.402894",
+        "analysis": "# MSFT \u2014 0-2 DTE Options Analysis | 1:30 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT is consolidating near $493.71 in a low-volume, mixed-signal environment. The 1H timeframe is clearly bearish (4/4 bear signals, below hourly VWAP at $499), but the 15m and 5m frames show mild bullish drift hugging the short-term VWAP (~$493.60), creating a torn intraday structure. The most plausible 5-15 day scenario is continued range-bound chop between $481 support and $513 resistance, with a slight bearish lean given the MACD histogram at -3.35 on the daily and price sitting in the lower half of its Bollinger Band.\n\n---\n\n## 2. BULL CASE\n\n- **OBV Rising**: On-balance volume is trending up despite today's mild price decline \u2014 distribution is not confirmed, suggesting underlying accumulation.\n- **15m Bias Bullish (3/4 signals)**: Price above 15m VWAP, MACD positive histogram (+0.2478), positive 3-candle momentum \u2014 the near-term tape is holding up.\n- **Tech Sector Green (+0.71%)**: XLK is outperforming today; MSFT is underperforming its sector, which sets up potential catch-up if sector strength holds.\n- **Strong Analyst Consensus / Price Target**: 52 analysts at STRONG_BUY with a $572 target implies ~16% upside \u2014 fundamental floor is well-supported.\n\n---\n\n## 3. BEAR CASE\n\n- **1H Fully Bearish (4/4)**: Price below hourly VWAP ($499), bearish EMA9/21 cross, bearish 3-candle momentum, RSI (9) at 36.26 \u2014 the dominant intraday trend is down.\n- **Daily MACD Histogram at -3.35**: Significant negative momentum on the daily \u2014 sellers are in control at the multi-day level.\n- **Price in Lower Bollinger Half (0.425)**: Below mid-band and well below the 52W high of $553.72; no mean-reversion catalyst visible.\n- **Volume Severely Depressed (0.33x 20D avg)**: Today's volume is only one-third of average \u2014 any directional move lacks institutional participation, making breakouts unconvincing and easy to fade.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Volume Vacuum**: At 0.33x average volume, a single large institutional order or algo trigger could move MSFT sharply beyond expected move ranges \u2014 amplified in either direction.\n- **SPY/QQQ Divergence**: QQQ +0.64% today while MSFT is -0.69% \u2014 MSFT is lagging its own index. If QQQ softens, MSFT could catch down hard; if QQQ continues rallying, MSFT may snap back aggressively toward sector peers.\n- **No News Catalyst**: Zero articles found \u2014 price is drifting on market structure alone. A macro headline (FOMC speaker, AI news, geopolitical) in the afternoon session could break the range.\n- **Options Expiry Dynamics**: With 5 unusual calls and 5 unusual puts flagged, market makers may be pinning price near $493-$495 into the close \u2014 a magnet effect that suppresses clean directional moves for 0DTE trades.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $497.00 | EMA9 (1H) \u2014 reclaim = bullish shift |\n| **Hourly VWAP** | $499.00 | Reclaim = invalidates bear thesis |\n| **Intraday Pivot (VWAP)** | $493.60 | Current anchor; break below = bears take control short-term |\n| **20D Support** | $481.15 | Key demand zone; breakdown = significant |\n| **20D Resistance** | $513.53 | Upper range cap; also near Bollinger Upper |\n| **Thesis-changing level** | $499.00 | Hourly VWAP reclaim flips intraday bias to bullish |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 36/100\n\nThe 1H frame is cleanly bearish, but 15m is bullish and 5m is mixed \u2014 timeframe conflict prevents the \"Daily + 1H + 15m aligned\" threshold required for high conviction. Tradeability is further capped by extreme low volume (0.33x avg), the current time (1:30 PM ET limiting 0DTE viability), and the fact that price is hugging VWAP with no clear momentum trigger \u2014 the realistic move is likely to stay within \u00b10.3% until a catalyst appears, making it difficult for 0-2 DTE premium to pay.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe bear signals are real at the 1H level but actively contradicted by the 15m bullish bias. Timeframe conflict is genuine here, not a default to caution.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 1H is fully bearish (4/4) while 15m is bullish (3/4) and 5m is mixed, preventing the minimum timeframe confluence required for a 0-2 DTE directional trade; additionally, volume at 0.33x average means any move is unlikely to sustain direction long enough for short-dated premium to pay, and the current time (1:30 PM ET) eliminates 0DTE as a viable expiry.",
+        "confluence_score": 42,
+        "signal_clarity": 48,
+        "tradeability": 36,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 1H is fully bearish (4/4) while 15m is bullish (3/4) and 5m is mixed, preventing the minimum timeframe confluence required for a 0-2 DTE directional trade; additionally, volume at 0.33x average means any move is unlikely to sustain direction long enough for short-dated premium to pay, and the current time (1:30 PM ET) eliminates 0DTE as a viable expiry.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.27x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6472
+      },
+      "was_flagged": false,
+      "cached_at": 1789579891.4100873,
+      "score": 42
     }
   },
-  "saved_at": "2026-09-16T13:21:49-04:00"
+  "saved_at": "2026-09-16T13:31:33-04:00"
 }
