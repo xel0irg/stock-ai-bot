@@ -526,5 +526,19 @@
   "message_id": "1547633817974603836",
   "signal_time": "2026-09-10T11:44:16-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "CALL",
+  "trigger": 498.28,
+  "strike": 497.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 5-minute candle close above $497.00 with price sustaining above 5m VWAP ($496.44) and 15m EMA9 ($495.74) holding \u2014 do not chase; wait for the level to be tested and held.",
+  "score": 63,
+  "verdict": "TRADE",
+  "message_id": "1550169816684560486",
+  "signal_time": "2026-09-17T11:41:25-04:00",
+  "status": "PENDING"
  }
 ]
