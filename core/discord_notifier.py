@@ -278,7 +278,10 @@ def send_discord_alert(
     # ── Feed cutoff: 65+ and actionable only ──────────────────────
     # Members see only stronger, real trades. NO TRADE never broadcasts
     # (still logged + paper-tracked internally). force=True (/scan) bypasses.
-    FEED_MIN_SCORE = 65
+    try:
+        from config.settings import FEED_MIN_SCORE
+    except Exception:
+        FEED_MIN_SCORE = 62
     if not force:
         if _direction not in ("CALL", "PUT"):
             log.info(f"Discord: {ticker} NO TRADE — not broadcasting")

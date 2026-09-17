@@ -303,7 +303,7 @@ def open_paper_trade(ticker: str, ai: Dict[str, Any]) -> None:
 
     # Did this signal actually reach Discord? Mirrors the notifier's cutoff.
     try:
-        from core.discord_notifier import FEED_MIN_SCORE as _CUTOFF
+        from config.settings import FEED_MIN_SCORE as _CUTOFF
     except Exception:
         _CUTOFF = 65
     try:

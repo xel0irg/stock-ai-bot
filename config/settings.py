@@ -53,6 +53,25 @@ SCAN_INTERVAL_MINUTES = _safe_int("SCAN_INTERVAL_MINUTES", 15)
 SENTIMENT_THRESHOLD   = _safe_float("SENTIMENT_THRESHOLD", 0.6)
 CONFLUENCE_THRESHOLD  = _safe_int("CONFLUENCE_THRESHOLD", 65)
 
+# Score a signal must reach to be BROADCAST to Discord. This used to be
+# hardcoded in discord_notifier.py, so changing it needed a code change —
+# and the CONFLUENCE_THRESHOLD secret, which looks like it should control
+# it, does not. Now settable via the FEED_MIN_SCORE env var / repo secret.
+#
+# Lowered 65 -> 62 on 2026-09-17. The Sept 1 scoring rewrite removed the
+# band-edge clustering that piled scores on 68 and 72, which shifted the
+# whole distribution down ~8-10 points. Against the honest scale, 65 let
+# through 1 signal in 91 scans across a full week. Measured on 122
+# actionable signals since Sep 1: 65 yields 1.5/day, 62 yields 2.7/day,
+# 55 yields 5.8/day.
+#
+# This is a VOLUME control, not a quality control. Win rate is 42-43% at
+# every threshold tested (n=284) — the score does not rank outcomes. 62
+# was chosen to restore a live feed while staying in the upper half of
+# the distribution, where the MEDIAN trade is least bad (the mean looks
+# better lower down, but only because outliers sit there).
+FEED_MIN_SCORE = _safe_int("FEED_MIN_SCORE", 62)
+
 # Custom daily Anthropic API spend cap, enforced in code since Anthropic
 # only supports monthly limits natively. Defaults to $5/day — generous
 # enough for normal scanning + a handful of /scan commands, but caps a
@@ -117,7 +136,7 @@ TA_SETTINGS = {
 # otherwise old-code and new-code signals are indistinguishable forever
 # (we could not tell whether June-July's 36% directional accuracy was
 # old code or old regime; this ends that).
-STRATEGY_VERSION = "2026.09.05-trim-and-runner"
+STRATEGY_VERSION = "2026.09.17-threshold-62"
 
 # ── Entry-trigger geometry ───────────────────────────────
 # A trigger sitting at (or through) spot is not a trigger — the entry
