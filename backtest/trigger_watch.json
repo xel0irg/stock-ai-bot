@@ -540,5 +540,19 @@
   "message_id": "1550169816684560486",
   "signal_time": "2026-09-17T11:41:25-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "CALL",
+  "trigger": 370.5,
+  "strike": 370.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15m candle close above $370.50 with volume at or above 0.8x average on that candle, confirming the break is not another low-volume drift.",
+  "score": 62,
+  "verdict": "TRADE",
+  "message_id": "1550174909853073518",
+  "signal_time": "2026-09-17T12:01:39-04:00",
+  "status": "PENDING"
  }
 ]
