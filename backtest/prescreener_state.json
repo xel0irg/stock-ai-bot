@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 333.75,
+      "price": 332.6499938964844,
       "volume_ratio": 0.0,
-      "ts": 1789655441.3527231,
-      "last_full_scan_ts": 1789655776.6611502
+      "ts": 1789656041.121168,
+      "last_full_scan_ts": 1789656096.9346118
     },
     "AMZN": {
-      "price": 252.25999450683594,
+      "price": 252.36000061035156,
       "volume_ratio": 0.0,
-      "ts": 1789655441.542947,
+      "ts": 1789656041.2608469,
       "last_full_scan_ts": 1789655499.2206845
     },
     "META": {
-      "price": 672.7899780273438,
+      "price": 674.6749877929688,
       "volume_ratio": 0.0,
-      "ts": 1789655441.7068856,
+      "ts": 1789656041.4158273,
       "last_full_scan_ts": 1789655831.3152456
     },
     "MSFT": {
-      "price": 498.32000732421875,
+      "price": 497.5799865722656,
       "volume_ratio": 0.0,
-      "ts": 1789655441.9096303,
+      "ts": 1789656041.5906959,
       "last_full_scan_ts": 1789655552.738309
     },
     "NVDA": {
-      "price": 219.5449981689453,
+      "price": 219.61000061035156,
       "volume_ratio": 0.0,
-      "ts": 1789655442.129268,
+      "ts": 1789656041.762854,
       "last_full_scan_ts": 1789655613.852649
     },
     "QQQ": {
-      "price": 716.2150268554688,
+      "price": 716.510009765625,
       "volume_ratio": 0.0,
-      "ts": 1789655442.3415532,
+      "ts": 1789656041.9246874,
       "last_full_scan_ts": 1789655665.0104313
     },
     "SPY": {
-      "price": 761.8099975585938,
+      "price": 761.9400024414062,
       "volume_ratio": 0.0,
-      "ts": 1789655442.5810277,
+      "ts": 1789656042.151344,
       "last_full_scan_ts": 1789655889.8607206
     },
     "TSLA": {
-      "price": 370.5010070800781,
+      "price": 371.1000061035156,
       "volume_ratio": 0.0,
-      "ts": 1789655442.743501,
+      "ts": 1789656042.300063,
       "last_full_scan_ts": 1789655721.5057197
     }
   },
@@ -277,7 +277,45 @@
       "was_flagged": true,
       "cached_at": 1789579891.4100873,
       "score": 51
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-09-17T14:41:36.925360",
+        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 10:40 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is consolidating just below the key 20-day resistance at $333.08 after a strong 20-day run (+6.86%), sitting 3.4% below its 52-week high of $344.57. The most plausible scenario over the next 5-15 days is continued slow grind higher with shallow pullbacks, constrained by overbought daily oscillators and analyst price targets ($327.20) now sitting *below* current price. For today's session specifically, price is pinned at resistance ($333.08) with decelerating momentum and extremely low volume (0.21x 20D average), making a decisive breakout unlikely without a catalyst.\n\n---\n\n## 2. BULL CASE\n\n- **Sector tailwind**: Tech (XLK) +1.47% today; QQQ +1.01%. AAPL is participating in a broad risk-on session \u2014 sector flow supports upside bias.\n- **All timeframes above VWAP**: 5m, 15m, and 1H price all hold above their respective VWAPs. This is the single clearest intraday bullish structural signal available.\n- **Daily MACD histogram positive (+1.394)**: Macro momentum is still net bullish; the daily trend has not rolled over.\n- **OBV rising**: Accumulation pattern on balance volume supports that buyers are still engaged on a swing basis.\n\n---\n\n## 3. BEAR CASE\n\n- **Pinned at resistance**: 20-day resistance is $333.08; current price $332.65 is essentially there. This level has been a ceiling and has not been cleared with conviction.\n- **MACD bearish on all intraday timeframes (15m, 5m, 1H)**: Momentum histograms are either negative or shrinking \u2014 momentum is decelerating intraday despite price holding above VWAP. The 15m shows MACD fading for three consecutive bars.\n- **Volume collapse**: 0.21x the 20-day average. A breakout above $333 on this volume is statistically weak and prone to failure. No institutional participation visible.\n- **Stochastic/RSI overbought**: Daily Stochastic K/D at 86/85, RSI 62.48 \u2014 the daily chart is extended. Analyst consensus price target ($327.20) is *below* current price, implying the Street sees limited upside at these levels.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news catalyst identified**: Zero articles found. Without a catalyst, a breakout above $333 is unlikely to sustain on 0.21x volume.\n- **Options expiry dynamics**: P/C ratio essentially flat at 1.02 with 5 unusual calls and 5 unusual puts \u2014 zero net directional conviction from institutional flow. Max pain effects could pin price near the $333 strike cluster.\n- **Macro pivot**: Any surprise Fed commentary, macro data, or tariff headline could jolt the entire tech complex; VIX at 15.63 suggests the market isn't pricing in that risk today.\n- **Volume surge**: If volume surges above 1.5x average on a clean break of $333.08, the bull case accelerates toward $337 (upper Bollinger). Conversely, a volume surge on a rejection opens a fast move toward $328-$329.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| $333.08 | Resistance | 20-day resistance; must break with volume to validate calls |\n| $337.92 | Resistance | Upper Bollinger Band \u2014 upside target ceiling |\n| $332.35 | Intraday Support | 5m VWAP \u2014 loss of this = intraday structure breakdown |\n| $328.34 | Support | Daily EMA9 \u2014 swing support; break confirms pullback |\n| $323.10 | Support | Daily EMA21 \u2014 deeper support; major thesis-change level |\n| $309.35 | Support | 20-day technical support floor |\n\n**Thesis-change level**: A clean 15m close *below* $332.35 (5m VWAP) with volume expansion would shift intraday bias bearish. A 15m close *above* $333.50 with 1.5x+ volume would confirm breakout.\n\n---\n\n## 6. CONFLUENCE SCORE: 43/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 38/100\n\nClarity is moderate \u2014 daily trend is bullish but all intraday MACD signals are bearish/decelerating and volume is nearly absent; signals genuinely split across timeframes. Tradeability caps the score hard: with volume at 0.21x average, no catalyst, and price pinned at resistance without a decisive trigger in either direction, there is no confirmed intraday setup where a 0-2 DTE option can profit before theta erodes it \u2014 the realistic move from here is sub-0.5x the expected move in either direction until a level breaks with volume.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nDirection is not the problem \u2014 the bull and bear cases are roughly balanced here. The problem is *entry quality*: price is pinned at resistance, volume is near absent, all intraday MACDs are decelerating, and there is no clean trigger in either direction. Buying a call or put at this moment is buying a lottery ticket on which way resistance resolves, not a high-conviction setup.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 price is above all VWAPs (bullish structure) but all intraday MACDs are decelerating and bearish, volume is 0.21x average with no catalyst, and price is pinned at $333.08 resistance with no confirmed directional trigger; entering a 0-2 DTE option here is paying theta to wait for a coin-flip resolution.\n```\n\n---\n\n**MONITOR FOR ENTRY**: If AAPL breaks and holds above **$333.50** on a 15m close with volume \u2265 1.3x average \u2192 reassess CALL setup targeting $335.50\u2013$336.00 (within 1DTE expected move of \u00b1$4.62). If price breaks below **$332.35** (5m VWAP) on expanding volume \u2192 reassess PUT setup targeting $330.50. Neither condition is met at 10:40 AM ET.",
+        "confluence_score": 43,
+        "signal_clarity": 48,
+        "tradeability": 38,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 price is above all VWAPs (bullish structure) but all intraday MACDs are decelerating and bearish, volume is 0.21x average with no catalyst, and price is pinned at $333.08 resistance with no confirmed directional trigger; entering a 0-2 DTE option here is paying theta to wait for a coin-flip resolution.",
+          "reversal_risk": 25,
+          "exhaustion_side": null,
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6806
+      },
+      "was_flagged": true,
+      "cached_at": 1789656096.9346154,
+      "score": 43
     }
   },
-  "saved_at": "2026-09-17T10:38:11-04:00"
+  "saved_at": "2026-09-17T10:41:38-04:00"
 }
