@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 333.0602111816406,
+      "price": 333.2850036621094,
       "volume_ratio": 0.0,
-      "ts": 1789742441.1169465,
+      "ts": 1789743051.8780677,
       "last_full_scan_ts": 1789741900.1319213
     },
     "AMZN": {
-      "price": 253.09500122070312,
+      "price": 253.0850067138672,
       "volume_ratio": 0.0,
-      "ts": 1789742441.5731554,
+      "ts": 1789743052.1904268,
       "last_full_scan_ts": 1789741953.882431
     },
     "META": {
-      "price": 675.6900024414062,
+      "price": 678.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1789742441.9806464,
-      "last_full_scan_ts": 1789742020.8504755
+      "ts": 1789743052.643921,
+      "last_full_scan_ts": 1789743096.2385452
     },
     "MSFT": {
-      "price": 491.93499755859375,
+      "price": 492.2799987792969,
       "volume_ratio": 0.0,
-      "ts": 1789742442.3596804,
+      "ts": 1789743052.983286,
       "last_full_scan_ts": 1789742078.4845724
     },
     "NVDA": {
-      "price": 219.24000549316406,
+      "price": 219.38999938964844,
       "volume_ratio": 0.0,
-      "ts": 1789742442.6941833,
+      "ts": 1789743053.3514884,
       "last_full_scan_ts": 1789742248.8781698
     },
     "QQQ": {
-      "price": 716.77001953125,
+      "price": 717.1804809570312,
       "volume_ratio": 0.0,
-      "ts": 1789742443.0948071,
+      "ts": 1789743053.6453707,
       "last_full_scan_ts": 1789742302.149726
     },
     "SPY": {
-      "price": 759.4299926757812,
+      "price": 759.5900268554688,
       "volume_ratio": 0.0,
-      "ts": 1789742443.5319483,
+      "ts": 1789743054.2374632,
       "last_full_scan_ts": 1789742135.3495
     },
     "TSLA": {
-      "price": 364.5899963378906,
+      "price": 368.6199951171875,
       "volume_ratio": 0.0,
-      "ts": 1789742443.8445597,
-      "last_full_scan_ts": 1789742190.8539646
+      "ts": 1789743054.5195715,
+      "last_full_scan_ts": 1789743150.6469855
     }
   },
   "ai_cache": {
@@ -125,7 +125,45 @@
       "was_flagged": true,
       "cached_at": 1789741953.8824341,
       "score": 42
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-18T14:51:36.230008",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis | 10:51 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has run +23% over 20 days and is now pressing against near-term resistance at $682.31 with RSI at 72 and Stochastic at 91/93 \u2014 both signaling overbought conditions on the daily timeframe. The most plausible scenario over the next 5-15 days is a shallow consolidation or mean-reversion toward the $650-660 zone as momentum decelerates, particularly given MACD histogram shrinkage across all intraday timeframes. Analyst targets ($755) provide a ceiling-lift longer-term, but the near-term path is more likely sideways-to-lower before the next leg up.\n\n---\n\n## 2. BULL CASE\n\n- **1H Trend Bullish + All Timeframes Above VWAP**: Price holds above VWAP on 5m, 15m, and 1H \u2014 the most reliable intraday trend indicator. This suggests active buyers are absorbing supply.\n- **MACD Histogram Daily +8.53**: Still in positive territory on the daily, indicating underlying momentum has not reversed despite deceleration.\n- **OBV Rising**: On-balance volume confirms distribution has not begun \u2014 institutional accumulation still in play beneath the surface.\n- **Analyst Consensus Strong Buy / PT $755**: 56 analysts with a $77 upside target provides fundamental support for dip-buyers materializing near current levels.\n\n---\n\n## 3. BEAR CASE\n\n- **RSI 72 + Stochastic 91/93 \u2014 Overbought on Both**: Both oscillators are at levels historically associated with short-term tops, particularly after a 23% 20-day run.\n- **MACD Fading Across All Intraday Timeframes**: All three intraday timeframes show bearish or shrinking MACD histograms \u2014 momentum is decelerating across the board. This is the clearest intraday signal in the dataset.\n- **Volume at 0.45x 20D Average**: The move is occurring on well-below-average volume. Low-volume runs at resistance levels are textbook exhaustion setups.\n- **Price at 20D Resistance $682.31**: Current price $678.37 is pressing within $4 of flagged 20D resistance. A rejection here with intraday MACD confirmation is a clean technical signal.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Catalyst**: Zero articles found \u2014 no fundamental driver for the current intraday drift, which increases the probability of mean-reversion rather than a news-driven breakout.\n- **Sector Tech \u25bc-0.08% / SPY \u25bc-0.33%**: Broader tape is soft. If SPY accelerates lower intraday, META could see amplified selling given beta of 1.24.\n- **Options Flow Balanced (5 unusual calls / 5 unusual puts)**: Balanced unusual flow suggests smart money is NOT strongly positioned in either direction \u2014 reduces conviction for either trade.\n- **ATR $20.69**: Daily range potential is large enough that a late-session catalyst or macro headline could gap price outside current expected move bands quickly.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Resistance | $682.31 | 20D flagged resistance \u2014 rejection here is the trigger |\n| Resistance | $703.41 | Bollinger Band upper \u2014 extreme extension zone |\n| Current Price | $678.37 | Pressing toward resistance |\n| VWAP (15m) | $677.03 | Must hold for bulls; break below is first warning |\n| VWAP (5m) | $673.81 | Deeper intraday support |\n| Support | $657.58 | EMA9 daily \u2014 first meaningful pullback target |\n| Support | $549.90 | 20D Support \u2014 catastrophic breakdown level |\n\n**Thesis-change level**: A clean 15m candle close ABOVE $683 on volume \u2265 1.2x average invalidates the bear case and suggests breakout continuation toward $690+.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 44/100\n\nMixed timeframes with no clean directional confluence \u2014 1H is bullish but 5m and 15m MACD are both bearish, creating a cross-timeframe conflict that prevents a high-conviction 0-2 DTE entry. Tradeability is capped further because the expected move for 0DTE is only \u00b1$7.60, and the setup requires a rejection at resistance that hasn't occurred yet \u2014 without a confirmed trigger, premium risk is asymmetric against theta.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nDirectional signals are genuinely split: daily structure and VWAP position favor bulls, but intraday MACD exhaustion and overbought oscillators argue for near-term stall. No clean entry exists without a confirmed rejection or breakout.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 1H is bullish with price above VWAP, but 5m and 15m MACD are both bearish with decelerating momentum, volume is 0.45x average with no confirmation of directional participation, and the setup requires a resistance rejection at $682 that has not yet occurred, making any entry here a premature bet that theta will consume before the trigger resolves.",
+        "confluence_score": 48,
+        "signal_clarity": 52,
+        "tradeability": 44,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 1H is bullish with price above VWAP, but 5m and 15m MACD are both bearish with decelerating momentum, volume is 0.45x average with no confirmation of directional participation, and the setup requires a resistance rejection at $682 that has not yet occurred, making any entry here a premature bet that theta will consume before the trigger resolves.",
+          "reversal_risk": 33,
+          "exhaustion_side": null,
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6596
+      },
+      "was_flagged": true,
+      "cached_at": 1789743096.2385497,
+      "score": 48
     }
   },
-  "saved_at": "2026-09-18T10:40:43-04:00"
+  "saved_at": "2026-09-18T10:52:32-04:00"
 }
