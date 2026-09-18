@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 334.6000061035156,
+      "price": 334.7099914550781,
       "volume_ratio": 0.0,
-      "ts": 1789749043.5230656,
+      "ts": 1789749635.2568226,
       "last_full_scan_ts": 1789748492.3598604
     },
     "AMZN": {
-      "price": 253.67999267578125,
+      "price": 253.42999267578125,
       "volume_ratio": 0.0,
-      "ts": 1789749043.6856685,
+      "ts": 1789749635.4697664,
       "last_full_scan_ts": 1789749092.4279997
     },
     "META": {
-      "price": 670.77001953125,
+      "price": 670.568603515625,
       "volume_ratio": 0.0,
-      "ts": 1789749043.85247,
-      "last_full_scan_ts": 1789745496.3095365
+      "ts": 1789749635.8019578,
+      "last_full_scan_ts": 1789749685.6461837
     },
     "MSFT": {
-      "price": 493.3699951171875,
+      "price": 493.239990234375,
       "volume_ratio": 0.0,
-      "ts": 1789749044.0537162,
+      "ts": 1789749636.1328406,
       "last_full_scan_ts": 1789746101.3796725
     },
     "NVDA": {
-      "price": 219.6699981689453,
+      "price": 219.53500366210938,
       "volume_ratio": 0.0,
-      "ts": 1789749044.2391002,
+      "ts": 1789749636.3712902,
       "last_full_scan_ts": 1789746142.817606
     },
     "QQQ": {
-      "price": 716.260009765625,
+      "price": 716.239990234375,
       "volume_ratio": 0.0,
-      "ts": 1789749044.4439273,
+      "ts": 1789749636.6256623,
       "last_full_scan_ts": 1789746188.525757
     },
     "SPY": {
-      "price": 758.905029296875,
+      "price": 758.9600219726562,
       "volume_ratio": 0.0,
-      "ts": 1789749044.7289581,
+      "ts": 1789749636.8960743,
       "last_full_scan_ts": 1789746236.3496766
     },
     "TSLA": {
-      "price": 362.8999938964844,
+      "price": 362.7449951171875,
       "volume_ratio": 0.0,
-      "ts": 1789749044.891671,
+      "ts": 1789749637.1122262,
       "last_full_scan_ts": 1789749137.9135253
     }
   },
@@ -125,7 +125,45 @@
       "was_flagged": false,
       "cached_at": 1789749092.4280033,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-18T16:41:25.639582",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis\n**As of 12:40 PM ET**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is in a clear intraday downtrend, trading below VWAP on all three timeframes (5m, 15m, 1H) with bearish momentum across all three. However, the critical counterweight is a **BEARISH_EXHAUSTION** signal with 67/100 reversal risk: price has made a lower low without RSI confirmation, on 0.24x average volume, stretched 1.4 ATR below VWAP. The most plausible near-term scenario is either a continued grind toward $660\u2013$665 resistance support, or a mean-reversion bounce back toward VWAP (~$672\u2013$676) before any directional continuation. Over the 5-15 day horizon, the broader structure is still bullish (20D +22%) with analyst targets at $755, suggesting any weakness is corrective rather than structural.\n\n---\n\n## 2. BULL CASE\n\n1. **BEARISH_EXHAUSTION with RSI bullish divergence** \u2014 Price made a lower low but RSI did not follow. Sellers are thinning on 0.24x average volume. Classic mean-reversion setup back toward VWAP (~$672\u2013$676).\n2. **MACD Histogram on daily +8.04** \u2014 Daily momentum remains bullish despite the intraday pullback; structural trend intact.\n3. **Strong analyst consensus (STRONG_BUY, $755 target)** \u2014 56 analysts with a $85 upside target provides fundamental support; any panic selling into $660s is historically bought.\n4. **20D return +21.96% / OBV Rising** \u2014 Accumulation trend on balance over the prior month; institution money has been flowing in.\n\n---\n\n## 3. BEAR CASE\n\n1. **All-timeframe intraday VWAP rejection** \u2014 Price below VWAP on 5m, 15m, and 1H with consistent bearish EMA stacking (EMA9 < EMA21 on both 5m and 15m). Structure is cleanly bearish intraday.\n2. **Daily RSI 68.34, Stochastic 85/91 \u2014 near-overbought** \u2014 Price is stretched after a +22% 20-day run. Daily overbought conditions can produce 1-3 day corrections.\n3. **20D Resistance at $682.31** \u2014 Price has been rejected near this level; the -1.7% 1D return confirms sellers are active at this range.\n4. **Volume running at 0.67x 20-day average** \u2014 Low-volume down days can signal distribution or reluctant buyers; context-dependent, but combined with overbought readings, it's not reassuring for bulls today.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Reversal squeeze**: The exhaustion signal is the primary wildcard \u2014 a VWAP recapture on volume above 1.0x average would invalidate the bearish intraday thesis rapidly and could push price back toward $680+.\n- **Broad market tape shift**: SPY -0.41%, QQQ +0.06% \u2014 divergence suggests tech is still finding buyers. Any broad market recovery acceleration would disproportionately lift mega-cap tech like META.\n- **10 unusual options contracts flagged (5 calls / 5 puts)**: Perfectly balanced unusual flow. No edge from options flow, but a sudden imbalance late in the session could signal informed positioning.\n- **No news catalyst**: Absence of news means price action is technically driven and more mean-reverting in nature \u2014 supports the exhaustion/reversal case.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance** | $682.31 | 20D resistance; recent rejection zone |\n| **VWAP (15m)** | $675.98 | Key intraday pivot; recapture = bearish thesis invalid |\n| **VWAP (1H)** | $676.30 | Confluence with 15m VWAP |\n| **EMA9 (5m)** | $671.13 | Immediate resistance on any bounce |\n| **Last Price** | $670.68 | Current anchor |\n| **Target (Bear)** | $664\u2013$666 | 0.5x expected 1DTE move (~$7.85); logical bear target |\n| **Support** | $660.00 | Round number / psychological; below = acceleration risk |\n| **Thesis Changer** | $676+ close | 15m candle close above 15m VWAP flips intraday bias |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 61/100\nTRADEABILITY: 43/100\n\n**Score rationale:** Intraday signal clarity is genuine \u2014 all three timeframes are bearish with full VWAP and EMA alignment \u2014 but the **BEARISH_EXHAUSTION flag with 67/100 reversal risk critically undermines tradeability**. The move has already run ~1.4 ATR from VWAP on thin volume with RSI divergence, meaning a PUT entry here is a late entry into a tired move. Theta on a 0-2 DTE option charges rent while price likely mean-reverts rather than extends. A CALL on the exhaustion reversal is similarly unattractive \u2014 the intraday structure is bearish and CALL premium would need VWAP recapture first. Tradeability is capped: no clean entry timing with acceptable risk/reward given exhaustion.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday bear case is structurally sound but the BEARISH_EXHAUSTION signal at 67/100 reversal risk, with confirmed RSI bullish divergence on low volume, means entering a PUT now is chasing a move that has already run its likely course. Entering a CALL requires VWAP recapture \u2014 a level not yet reached. Neither side has a clean, confirmed entry.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Intraday bearish structure is real but the move is in BEARISH_EXHAUSTION (67/100 reversal risk) \u2014 price is already 1.4 ATR below VWAP on 0.24x average volume with RSI bullish divergence, making a PUT entry a late chase into a tiring move; a CALL requires VWAP recapture above $676 that has not yet occurred, leaving no clean confirmed entry for either direction at this moment.\n```\n\n---\n\n**MONITOR:** If META recaptures 15m VWAP at $675.98 on volume above 0.8x average in the next 30\u201345 minutes, that is a CALL trigger for a 1DTE structure targeting $680\u2013$682 (0.5x\u20130.6x expected move). If META breaks $668 on volume above 1.0x average with 15m candle close below, that re-opens a PUT thesis. Neither condition is met at 12:40 PM ET.",
+        "confluence_score": 52,
+        "signal_clarity": 61,
+        "tradeability": 43,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Intraday bearish structure is real but the move is in BEARISH_EXHAUSTION (67/100 reversal risk) \u2014 price is already 1.4 ATR below VWAP on 0.24x average volume with RSI bullish divergence, making a PUT entry a late chase into a tiring move; a CALL requires VWAP recapture above $676 that has not yet occurred, leaving no clean confirmed entry for either direction at this moment.",
+          "reversal_risk": 67,
+          "exhaustion_side": "BEARISH_EXHAUSTION",
+          "reversal_notes": "price made a lower low but RSI did not \u2014 sellers are thinning out; price is 1.4 ATR from VWAP; push is on 0.45x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 7037
+      },
+      "was_flagged": false,
+      "cached_at": 1789749685.646187,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-18T12:32:19-04:00"
+  "saved_at": "2026-09-18T12:41:27-04:00"
 }
