@@ -539,7 +539,7 @@
   "verdict": "TRADE",
   "message_id": "1550169816684560486",
   "signal_time": "2026-09-17T11:41:25-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "TSLA",
@@ -553,6 +553,48 @@
   "verdict": "TRADE",
   "message_id": "1550174909853073518",
   "signal_time": "2026-09-17T12:01:39-04:00",
+  "status": "EXPIRED"
+ },
+ {
+  "ticker": "META",
+  "direction": "PUT",
+  "trigger": 670.69,
+  "strike": 672.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15-minute candle close at or below $673.50 with price remaining below 15m VWAP $677.12 and 15m MACD histogram staying negative \u2014 do not chase if price is bouncing.",
+  "score": 66,
+  "verdict": "TRADE",
+  "message_id": "1550515150962954330",
+  "signal_time": "2026-09-18T10:33:40-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "PUT",
+  "trigger": 490.39,
+  "strike": 490.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15m candle close that holds below $493.00 with price failing to reclaim 15m EMA9 ($493.86), confirming continuation rather than chasing the existing extension \u2014 do NOT enter into a 5m RSI bounce spike; wait for rejection.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1550515398107996182",
+  "signal_time": "2026-09-18T10:34:38-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 363.5,
+  "strike": 365.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15-minute candle close below $363.50 with volume at or above 0.8x average, confirming continuation below the current intraday base",
+  "score": 66,
+  "verdict": "TRADE",
+  "message_id": "1550515869690634252",
+  "signal_time": "2026-09-18T10:36:30-04:00",
   "status": "PENDING"
  }
 ]
