@@ -610,5 +610,33 @@
   "message_id": "1550527200867131436",
   "signal_time": "2026-09-18T11:21:32-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 715.18,
+  "strike": 716.0,
+  "expiry_date": "",
+  "vol_multiple": 0.45,
+  "entry_condition": "Enter on a 15-minute candle close below $716.54 (current price) with price holding below both the 5m VWAP ($716.94) and 15m VWAP ($717.36), and volume picking up above current 0.45x average baseline.",
+  "score": 62,
+  "verdict": "TRADE",
+  "message_id": "1550532636701753394",
+  "signal_time": "2026-09-18T11:43:08-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "SPY",
+  "direction": "PUT",
+  "trigger": 758.34,
+  "strike": 759.0,
+  "expiry_date": "",
+  "vol_multiple": 0.5,
+  "entry_condition": "Enter on a 15-minute candle close below 5m VWAP at $759.68 with volume at or above 0.5x the 15m average, confirming sellers are re-engaging.",
+  "score": 63,
+  "verdict": "TRADE",
+  "message_id": "1550532837550330028",
+  "signal_time": "2026-09-18T11:43:56-04:00",
+  "status": "PENDING"
  }
 ]
