@@ -638,5 +638,19 @@
   "message_id": "1550532837550330028",
   "signal_time": "2026-09-18T11:43:56-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 252.09,
+  "strike": 252.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter on a 15-minute candle close that stays below VWAP ($253.33) with MACD histogram remaining negative and 3-candle momentum continuing to show red \u2014 do not enter on a bounce into VWAP resistance, wait for rejection confirmation.",
+  "score": 62,
+  "verdict": "RISKY",
+  "message_id": "1550562408815140875",
+  "signal_time": "2026-09-18T13:41:26-04:00",
+  "status": "PENDING"
  }
 ]
