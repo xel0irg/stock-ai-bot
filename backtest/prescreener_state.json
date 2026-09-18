@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 334.8450012207031,
+      "price": 335.04998779296875,
       "volume_ratio": 0.0,
-      "ts": 1789744239.4960067,
+      "ts": 1789744839.4457152,
       "last_full_scan_ts": 1789744288.991596
     },
     "AMZN": {
-      "price": 254.77999877929688,
+      "price": 253.64999389648438,
       "volume_ratio": 0.0,
-      "ts": 1789744239.6722665,
-      "last_full_scan_ts": 1789743708.5304549
+      "ts": 1789744839.6647754,
+      "last_full_scan_ts": 1789744892.8931284
     },
     "META": {
-      "price": 677.739990234375,
+      "price": 677.5,
       "volume_ratio": 0.0,
-      "ts": 1789744239.830708,
+      "ts": 1789744839.8379886,
       "last_full_scan_ts": 1789744329.3653016
     },
     "MSFT": {
-      "price": 493.5350036621094,
+      "price": 493.3900146484375,
       "volume_ratio": 0.0,
-      "ts": 1789744240.0873754,
+      "ts": 1789744840.0502405,
       "last_full_scan_ts": 1789742078.4845724
     },
     "NVDA": {
-      "price": 219.36000061035156,
+      "price": 219.71009826660156,
       "volume_ratio": 0.0,
-      "ts": 1789744240.2687817,
+      "ts": 1789744840.2441168,
       "last_full_scan_ts": 1789742248.8781698
     },
     "QQQ": {
-      "price": 717.2000122070312,
+      "price": 716.8499755859375,
       "volume_ratio": 0.0,
-      "ts": 1789744240.4953747,
+      "ts": 1789744840.4961028,
       "last_full_scan_ts": 1789742302.149726
     },
     "SPY": {
-      "price": 759.8200073242188,
+      "price": 759.780029296875,
       "volume_ratio": 0.0,
-      "ts": 1789744240.7119706,
+      "ts": 1789744840.7234626,
       "last_full_scan_ts": 1789742135.3495
     },
     "TSLA": {
-      "price": 367.2770080566406,
+      "price": 363.5303039550781,
       "volume_ratio": 0.0,
-      "ts": 1789744240.9583492,
-      "last_full_scan_ts": 1789743150.6469855
+      "ts": 1789744840.882447,
+      "last_full_scan_ts": 1789744936.815931
     }
   },
   "ai_cache": {
@@ -87,44 +87,6 @@
       "was_flagged": false,
       "cached_at": 1789400821.8118858,
       "score": 52
-    },
-    "AMZN": {
-      "result": {
-        "ticker": "AMZN",
-        "timestamp": "2026-09-18T15:01:48.523774",
-        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 11:01 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN has staged a sharp intraday bounce, running ~1.4% above the 1H VWAP on the back of bullish options flow (P/C 0.22) and clean 15m/1H VWAP alignment. However, the move is showing textbook exhaustion characteristics \u2014 outsized bar range on 0.52x average volume, RSI overbought on all intraday timeframes, and price extended 1.6 ATR from VWAP. The most plausible scenario over the next 5-15 sessions is a mean-reversion toward VWAP ($252-$253 zone) before any directional continuation, with the daily MACD histogram negative and OBV falling acting as headwinds on a multi-day basis.\n\n---\n\n## 2. BULL CASE\n\n- **Intraday VWAP structure**: Price is above VWAP on all three intraday timeframes (5m, 15m, 1H). This is the strongest near-term bullish structural signal and the primary reason the combined intraday bias reads LEANING_BULLISH.\n- **Extreme options skew (P/C 0.22)**: Heavily call-sided flow with 5 unusual call flags vs. 2 put flags implies institutional/smart money leaning bullish \u2014 a meaningful near-term sentiment indicator.\n- **Sector outperformance**: XLY +0.03% while SPY is -0.29% \u2014 AMZN's sector is acting as a relative safe haven today, reducing the macro drag.\n- **15m MACD + EMA bullish**: The 15m timeframe shows a proper bullish alignment (EMA9 > EMA21, MACD positive) with 4/4 bull signals \u2014 the most reliable confirmation timeframe for intraday entries.\n\n---\n\n## 3. BEAR CASE\n\n- **Bullish exhaustion flagged \u2014 explicitly**: 47/100 reversal risk, price 1.6 ATR above VWAP, latest candle 2.2x average range, on 0.52x volume. This is a low-participation push. The system explicitly warns this is the definition of chasing.\n- **All intraday RSIs overbought**: 5m RSI=81.47, 15m RSI=73.41, 1H RSI=71.93. Triple-timeframe overbought into a low-volume extension is a red flag for continuation on 0-2 DTE.\n- **Daily MACD histogram negative (-0.86)**: The daily structure is bearish momentum. Price is in the lower half of Bollinger Bands (0.39) and daily OBV is falling \u2014 underlying distribution is present.\n- **Volume below average**: Daily volume at 0.58x the 20-day average. The intraday push has minimal participation, making it structurally suspect and prone to fade.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news today**: Absence of a catalyst means the intraday move is purely technical/flow-driven \u2014 these moves fade faster and are less reliable for 0-2 DTE continuation.\n- **Options expiration flow**: With 0DTE P/C at 0.22, heavy call positioning could create gamma-driven support if market makers delta-hedge \u2014 or a sharp reversal if calls expire worthless and flow reverses.\n- **Macro re-injection**: SPY is down 0.29% \u2014 any negative macro headline (Fed speaker, macro data print) could drag AMZN back quickly given its beta of 1.44.\n- **ATR of $5.98**: AMZN's true daily range can absorb $3-6 moves. If volume normalizes to the upside, a run toward $257-$258 is possible intraday. If it reverts, $251-$252 VWAP becomes the magnet.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Strong support | $252.58\u2013$252.71 | 15m/5m VWAP confluence |\n| Secondary support | $250.49 | 1H VWAP \u2014 pullback target |\n| Near-term resistance | $255.19 | EMA21 (daily) \u2014 capping overhead |\n| Bull breakout level | $257.00 | Above EMA21/EMA50 zone, mid-BB |\n| Key support | $245.96 | 20-day technical support floor |\n| Thesis-change level | $251.50 | Break below 1H VWAP confirms exhaustion thesis |\n\n**Critical level**: $252.58 (15m VWAP). A clean break and close below this on volume confirms mean-reversion is active. A hold above it keeps the bull structure intact.\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 39/100\n\nSignal clarity is moderate \u2014 intraday structure is bullish but the exhaustion warning, overbought RSI across all timeframes, and low-volume extension create a genuine contradiction that prevents clean directional conviction. Tradeability caps the score decisively: the realistic trade here is either (a) a CALL into an exhausted overbought move \u2014 chasing at worst entry \u2014 or (b) a PUT into an above-VWAP, call-flow-dominated structure with no bearish trigger yet. Neither setup has a clean, low-risk entry available at 11:01 AM, making the premium cost unjustifiable on 0-2 DTE theta.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the no-trade conclusion)**\n\nThe exhaustion signal explicitly matches the bullish direction, making a CALL a chase. There is no bearish trigger in place yet (price above all VWAPs, no MACD cross bearish on 15m) to justify a PUT. The cleanest read is: *wait for price to pull back to 15m VWAP ($252.58) and reassess.*\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Bullish exhaustion is confirmed (47/100 reversal risk, 1.6 ATR above VWAP, 0.52x volume on the push) \u2014 entering a CALL here is chasing an overbought, low-participation extension; no bearish trigger (below-VWAP price action, 15m MACD cross) exists to justify a PUT, making both directions untradeable at current price.\n```\n\n---\n\n**WATCHLIST TRIGGER**: If AMZN pulls back to $252.50\u2013$252.71 (15m VWAP) with volume picking up and 15m MACD holding positive \u2192 reassess CALL. If it breaks $251.50 (1H VWAP) on volume \u2192 reassess PUT. Neither condition is met at 11:01 AM.",
-        "confluence_score": 47,
-        "signal_clarity": 55,
-        "tradeability": 39,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Bullish exhaustion is confirmed (47/100 reversal risk, 1.6 ATR above VWAP, 0.52x volume on the push) \u2014 entering a CALL here is chasing an overbought, low-participation extension; no bearish trigger (below-VWAP price action, 15m MACD cross) exists to justify a PUT, making both directions untradeable at current price.",
-          "reversal_risk": 47,
-          "exhaustion_side": "BULLISH_EXHAUSTION",
-          "reversal_notes": "price is 1.6 ATR from VWAP; latest bar range is 2.2x the recent average \u2014 outsized push; push is on 0.52x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6986
-      },
-      "was_flagged": true,
-      "cached_at": 1789741953.8824341,
-      "score": 47
     },
     "AAPL": {
       "result": {
@@ -203,5 +165,5 @@
       "score": 47
     }
   },
-  "saved_at": "2026-09-18T11:12:11-04:00"
+  "saved_at": "2026-09-18T11:22:18-04:00"
 }

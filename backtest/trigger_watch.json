@@ -596,5 +596,19 @@
   "message_id": "1550515869690634252",
   "signal_time": "2026-09-18T10:36:30-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "CALL",
+  "trigger": 254.6,
+  "strike": 255.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15-minute candle close above $254.60 (daily EMA50) with MACD histogram on 15m remaining positive and volume at or above 0.8x average, confirming the daily EMA resistance break.",
+  "score": 62,
+  "verdict": "TRADE",
+  "message_id": "1550527200867131436",
+  "signal_time": "2026-09-18T11:21:32-04:00",
+  "status": "PENDING"
  }
 ]
