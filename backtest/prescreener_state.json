@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 337.625,
+      "price": 336.5,
       "volume_ratio": 0.0,
-      "ts": 1790001639.083885,
-      "last_full_scan_ts": 1790001093.6929605
+      "ts": 1790002235.2821205,
+      "last_full_scan_ts": 1790002291.0425508
     },
     "AMZN": {
-      "price": 255.78990173339844,
+      "price": 256.5,
       "volume_ratio": 0.0,
-      "ts": 1790001639.2854788,
+      "ts": 1790002235.4360683,
       "last_full_scan_ts": 1790001150.541339
     },
     "META": {
-      "price": 710.7349853515625,
+      "price": 710.5,
       "volume_ratio": 0.0,
-      "ts": 1790001639.4930007,
+      "ts": 1790002235.6252935,
       "last_full_scan_ts": 1790001208.3101273
     },
     "MSFT": {
-      "price": 493.46990966796875,
+      "price": 493.39080810546875,
       "volume_ratio": 0.0,
-      "ts": 1790001639.7666864,
+      "ts": 1790002235.8071904,
       "last_full_scan_ts": 1790001263.5912724
     },
     "NVDA": {
-      "price": 224.02000427246094,
+      "price": 224.44850158691406,
       "volume_ratio": 0.0,
-      "ts": 1790001639.9602988,
+      "ts": 1790002236.031603,
       "last_full_scan_ts": 1790001319.6206121
     },
     "QQQ": {
-      "price": 735.2000122070312,
+      "price": 734.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1790001640.2048798,
+      "ts": 1790002236.2145746,
       "last_full_scan_ts": 1790001372.1833057
     },
     "SPY": {
-      "price": 769.2349853515625,
+      "price": 768.8800048828125,
       "volume_ratio": 0.0,
-      "ts": 1790001640.4700415,
+      "ts": 1790002236.4931653,
       "last_full_scan_ts": 1790001435.2969358
     },
     "TSLA": {
-      "price": 375.4599914550781,
+      "price": 375.3500061035156,
       "volume_ratio": 0.0,
-      "ts": 1790001640.669988,
+      "ts": 1790002236.6490164,
       "last_full_scan_ts": 1790001696.3670332
     }
   },
@@ -239,7 +239,45 @@
       "was_flagged": true,
       "cached_at": 1790001150.541342,
       "score": 48
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-09-21T14:51:31.032537",
+        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 10:50 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is grinding near its 52-week high ($344.57) after an 8.4% 20-day rally, sitting at $336.49 with price hugging the upper Bollinger Band. The most plausible scenario over 5-15 days is a mean-reversion pullback toward the $325\u2013$330 zone as the move becomes increasingly crowded, volume dries up (0.23x average), and RSI/Stochastic signal exhaustion. A breakout through $344.57 is possible but requires a fresh catalyst and volume that simply is not present today.\n\n---\n\n## 2. BULL CASE\n\n- **Tech sector strength (+1.55%) + QQQ +1.75%**: Macro tailwind is clearly bullish; AAPL is moving with its sector, not against it.\n- **MACD Daily Histogram +1.444 (BULLISH)**: Medium-term momentum remains positively sloped \u2014 trend is up, not topping yet on the daily.\n- **15m and 1H intraday structure both bullish**: Price above VWAP on both timeframes, EMA9 > EMA21 on 15m, 3-candle momentum positive on 1H. Intraday trend favors buyers on the dominant timeframes.\n- **Low short interest (1.0%)**: No forced covering, but also no squeeze risk \u2014 clean float with bulls in control at the structural level.\n\n---\n\n## 3. BEAR CASE\n\n- **BULLISH EXHAUSTION confirmed (reversal score 43/100)**: Price made a higher high, RSI did not. Fewer buyers behind the push. This is textbook divergence at a local top.\n- **Volume collapse: 0.23x the 20D average**: A rally into resistance with less than a quarter of normal volume is a red flag. Conviction is absent. This is the single most damaging data point for the bull case today.\n- **Stochastic 93/93 + RSI 64.7 near overbought**: Both momentum oscillators stretched. On a 0-2 DTE timeframe, buying into overbought momentum with no volume is the definition of chasing.\n- **5m structure is bearish**: Price below 5m VWAP ($336.57), 3-candle momentum -0.392%, 0 bullish/3 bearish 5m signals. The shortest timeframe \u2014 the one most relevant to entry \u2014 is pointing down.\n- **Resistance directly overhead: $337.00 (20D Resistance)**: Price is essentially AT resistance. The 52-week high at $344.57 is the only layer above. No room to run without a breakout catalyst.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news today (0 articles)**: The absence of a catalyst cuts both ways \u2014 no fuel for a breakout, but also no sudden shock. Price is drifting on technicals alone.\n- **Analyst price target ($328.22) is BELOW current price**: 39 analysts have a consensus BUY but their mean target is $8.27 below current price. Any analyst downgrade or target cut would hit hard near a 52-week high.\n- **VIX at 14.77**: Low IV environment compresses option premiums, but also means any spike (macro headline, Fed commentary) could rapidly reprice the expected move and hurt premium buyers.\n- **52-week high breakout**: If AAPL closes above $344.57 on meaningful volume, momentum algos could trigger a squeeze toward $350+. This is the bull wildcard \u2014 it is not the base case today.\n- **Options flow balanced (5 unusual calls / 5 unusual puts, P/C 0.44)**: Flow is not signaling conviction in either direction. Smart money is not loading up.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $337.00 | 20D resistance; price is AT this level now |\n| **52-Week High** | $344.57 | Breakout level; failure here = double top risk |\n| **5m VWAP** | $336.57 | Immediate pivot; below = short-term sellers in control |\n| **15m VWAP** | $335.78 | Key support; loss of this flips intraday bias bearish |\n| **1H VWAP** | $335.63 | Broader intraday support; hold = bull thesis intact |\n| **EMA21 (Daily)** | $325.73 | Natural mean-reversion target on any meaningful sell-off |\n| **20D Support** | $309.90 | Full structural support; not relevant for 0-2 DTE |\n\n**Thesis-changing level**: A clean 15m candle close above $337.50 on volume >1.5x average flips the picture bullish and warrants a CALL re-evaluation. A break below $335.63 (1H VWAP) on volume confirms the reversal thesis.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 46/100\n\n**Score rationale**: Signal clarity is moderate \u2014 the exhaustion signal, volume collapse, and 5m bearish structure argue for a fade, but the 15m/1H are still technically bullish, creating genuine timeframe conflict per the system's own confluence rules. Tradeability caps the score: the realistic move target sits within the expected move on paper, but entering a fade at resistance WITH BULLISH EXHAUSTION (not yet confirmed reversal, reversal risk only 43/100 \u2014 just below the 45 hard threshold) and no 5m MACD data available creates too much uncertainty for a clean 0-2 DTE entry. The setup is \"almost there\" on both axes but not yet confirmed.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the no-trade call)**\n\nThe bearish case is building but not confirmed. The timeframe confluence rules explicitly state: 15m/1H bullish + 5m bearish = mixed \u2192 wait for alignment. Entering a PUT here means fading a sector that is green (+1.55%), on a stock up 0.11% on the day, with 15m/1H VWAP still holding \u2014 while the exhaustion signal has not crossed the 45/100 reversal threshold. Entering a CALL means chasing an exhausted, low-volume push into the 20D resistance at $337. Neither side is clean.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Timeframes genuinely conflict \u2014 15m/1H remain bullish above VWAP while 5m is bearish and volume is 0.23x average at the 20D resistance ($337.00), with bullish exhaustion (RSI divergence confirmed) but reversal risk at 43/100 just below the confirmation threshold; neither a CALL entry (chasing exhausted resistance) nor a PUT entry (fading a green-sector stock holding 15m/1H VWAP) is structurally justified until price either breaks above $337.50 on volume or loses the 1H VWAP at $335.63.\n```\n\n---\n\n**\u26a1 WATCH LEVELS FOR POTENTIAL RE-ENTRY:**\n- **PUT trigger**: 15m candle close below $335.63 (1H VWAP) with volume >1.2x avg \u2192 re-run analysis for 1DTE put, target $333.50\n- **CALL trigger**: 15m candle close above $337.50 with volume >1.5x avg \u2192 re-run analysis for 0DTE call, target $339.00\n- **Current action**: Sit on hands. Let price declare itself.",
+        "confluence_score": 52,
+        "signal_clarity": 58,
+        "tradeability": 46,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Timeframes genuinely conflict \u2014 15m/1H remain bullish above VWAP while 5m is bearish and volume is 0.23x average at the 20D resistance ($337.00), with bullish exhaustion (RSI divergence confirmed) but reversal risk at 43/100 just below the confirmation threshold; neither a CALL entry (chasing exhausted resistance) nor a PUT entry (fading a green-sector stock holding 15m/1H VWAP) is structurally justified until price either breaks above $337.50 on volume or loses the 1H VWAP at $335.63.",
+          "reversal_risk": 43,
+          "exhaustion_side": "BULLISH_EXHAUSTION",
+          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 7181
+      },
+      "was_flagged": true,
+      "cached_at": 1790002291.042554,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-21T10:41:38-04:00"
+  "saved_at": "2026-09-21T10:51:33-04:00"
 }
