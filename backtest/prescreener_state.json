@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 336.5,
+      "price": 337.0150146484375,
       "volume_ratio": 0.0,
-      "ts": 1790002235.2821205,
+      "ts": 1790002845.9393246,
       "last_full_scan_ts": 1790002291.0425508
     },
     "AMZN": {
-      "price": 256.5,
+      "price": 255.46499633789062,
       "volume_ratio": 0.0,
-      "ts": 1790002235.4360683,
-      "last_full_scan_ts": 1790001150.541339
+      "ts": 1790002846.1134787,
+      "last_full_scan_ts": 1790002891.7132819
     },
     "META": {
-      "price": 710.5,
+      "price": 707.75,
       "volume_ratio": 0.0,
-      "ts": 1790002235.6252935,
-      "last_full_scan_ts": 1790001208.3101273
+      "ts": 1790002846.2869248,
+      "last_full_scan_ts": 1790002948.8093994
     },
     "MSFT": {
-      "price": 493.39080810546875,
+      "price": 493.5799865722656,
       "volume_ratio": 0.0,
-      "ts": 1790002235.8071904,
+      "ts": 1790002846.4929345,
       "last_full_scan_ts": 1790001263.5912724
     },
     "NVDA": {
-      "price": 224.44850158691406,
+      "price": 225.0800018310547,
       "volume_ratio": 0.0,
-      "ts": 1790002236.031603,
+      "ts": 1790002846.6783278,
       "last_full_scan_ts": 1790001319.6206121
     },
     "QQQ": {
-      "price": 734.6900024414062,
+      "price": 735.8400268554688,
       "volume_ratio": 0.0,
-      "ts": 1790002236.2145746,
+      "ts": 1790002846.8636754,
       "last_full_scan_ts": 1790001372.1833057
     },
     "SPY": {
-      "price": 768.8800048828125,
+      "price": 769.2150268554688,
       "volume_ratio": 0.0,
-      "ts": 1790002236.4931653,
+      "ts": 1790002847.1022036,
       "last_full_scan_ts": 1790001435.2969358
     },
     "TSLA": {
-      "price": 375.3500061035156,
+      "price": 375.8550109863281,
       "volume_ratio": 0.0,
-      "ts": 1790002236.6490164,
+      "ts": 1790002847.2709038,
       "last_full_scan_ts": 1790001696.3670332
     }
   },
@@ -205,11 +205,11 @@
     "AMZN": {
       "result": {
         "ticker": "AMZN",
-        "timestamp": "2026-09-21T14:32:30.536438",
-        "analysis": "# AMZN \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:31 AM ET | Price: $256.00**\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in a short-term bullish intraday grind \u2014 up 0.9% today, holding above 15m and 1H VWAP, with the 15m and 1H timeframes in clear bullish alignment. However, the 1H RSI sits at 73.83 (overbought) with a confirmed bearish RSI divergence (price higher high, RSI lower high), and the 5m structure has turned bearish. The most plausible scenario for the next 5-15 days: AMZN continues to consolidate in the $245\u2013$266 range, with a near-term mean-reversion toward the $252\u2013$253 zone (VWAP cluster) before any sustained push toward $266 resistance.\n\n---\n\n## 2. BULL CASE\n\n- **15m fully bullish (4 bull / 0 bear signals):** EMA9 > EMA21, above VWAP, positive MACD histogram \u2014 cleanest short-term momentum structure on the board.\n- **1H above VWAP by 1.06%:** Trend from the hourly perspective remains intact; dips have been bought intraday.\n- **Sector tailwind:** Consumer Discretionary +0.43%, QQQ +1.78% \u2014 macro environment is not fighting this ticker today.\n- **OBV Rising:** Accumulation on balance supports the day's gains being real distribution, not a fade.\n\n---\n\n## 3. BEAR CASE\n\n- **BULLISH_EXHAUSTION confirmed (bearish RSI divergence):** Price made a higher high; RSI did not. Fewer buyers behind this push \u2014 classic exhaustion signal at 0-2 DTE timeframes.\n- **5m structure fully bearish (0 bull / 3 bear signals):** Short-term momentum has flipped; price is below 5m VWAP. This is the entry-precision timeframe \u2014 it's showing distribution.\n- **Volume severely depressed:** 0.29x the 20-day average. Moves on thin volume are unreliable and prone to sharp reversals.\n- **Daily MACD histogram negative (-0.4623):** Intermediate-term momentum is deteriorating even as the stock bounced this week.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news today:** Absence of news means price action is purely technical/flow-driven \u2014 momentum can reverse quickly without a catalyst to anchor direction.\n- **Options flow balanced (5 unusual calls / 5 unusual puts):** Neither side has smart-money conviction behind it \u2014 this is not a clean institutional directional bet.\n- **Broader market chop:** SPY mixed, QQQ strong but AMZN lagging QQQ's 1.78% gain at only 0.9% \u2014 if QQQ fades, AMZN likely fades faster given its beta of 1.44.\n- **MACD on daily:** If histogram crosses back toward zero, it could trigger algorithmic re-entry buying and invalidate the bear thesis quickly.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 20D Resistance | $266.43 | Ceiling \u2014 requires a ~4% move to tag |\n| 52W High | $287.20 | Far upside; irrelevant for 0-2 DTE |\n| Bollinger Upper | $265.43 | Near-term cap on any extension |\n| **Current Price** | **$256.00** | \u2014 |\n| 15m VWAP | $254.88 | **Critical near-term bull/bear line** |\n| 1H VWAP | $253.32 | Deeper support; thesis-defining level |\n| EMA9 (5m) | $255.91 | Immediate overhead resistance on 5m |\n| 20D Support | $245.96 | Major support; bull thesis invalidated on breach |\n| Bollinger Lower | $246.57 | Downside floor |\n\n**Thesis-changing level:** A sustained break below $254.88 (15m VWAP) with expanding volume flips the intraday bias definitively bearish. A reclaim of $256.50 with volume expansion re-opens the call case.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 44/100\n\n**Score rationale:** Signal clarity is moderate \u2014 15m and 1H are bullish but the exhaustion warning (bearish RSI divergence, 1H RSI at 73.83), 5m bearish flip, and depressed volume create genuine timeframe conflict. Tradeability is capped below viable threshold: the realistic move for a CALL target sits within the expected move, but the exhaustion signal means chasing the bullish trend carries high mean-reversion risk; for a PUT, the bullish higher timeframes are not confirmed broken yet, making a put entry premature. Neither direction has the clean trigger + momentum confirmation required for a 0-2 DTE position.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-Low confidence)**\n\nThe intraday structure is genuinely conflicted: 15m/1H bullish but exhausted with divergence; 5m bearish but the larger trend hasn't broken. This is the textbook \"late bullish entry\" scenario the exhaustion framework explicitly flags \u2014 and it's not yet clean enough for a put entry either.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 15m/1H remain bullish but show confirmed bullish exhaustion (RSI divergence, RSI 73.83 overbought) while the 5m has flipped bearish on near-zero volume, making both a CALL entry (chasing exhausted move) and a PUT entry (fading above VWAP without breakdown confirmation) structurally premature; wait for either a 15m VWAP break with volume confirmation (puts) or a 5m reclaim of $256.00 with volume normalization (calls).",
-        "confluence_score": 48,
-        "signal_clarity": 52,
-        "tradeability": 44,
+        "timestamp": "2026-09-21T15:01:31.699849",
+        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 11:00 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in a modest intraday recovery off recent lows, trading above its 15m and 1H VWAPs but just below the 5m VWAP, within a broader 20-day downtrend (-2.52%). The most plausible scenario over 5-15 days is continued chop between $246 support and $266 resistance, with slight upward bias given sector tailwinds (XLY +0.29%, QQQ +1.91%) and strong analyst support ($328 target). Near-term, the 5m bearish momentum and low volume (0.35x 20D average) suggest limited conviction for a sustained intraday push in either direction.\n\n---\n\n## 2. BULL CASE\n\n1. **1H and 15m VWAP and EMA structure bullish** \u2014 Price above both VWAPs on the two higher intraday timeframes; EMA9 > EMA21 on 15m and 1H. This is the dominant intraday structure.\n2. **QQQ +1.91% and VIX at 14.69** \u2014 Tech sector ripping, low fear environment favors momentum continuation in large-cap tech. XLY sector green. AMZN is up +0.69% on the day, participating.\n3. **OBV trend rising** \u2014 Accumulation signal on the daily suggesting underlying buying pressure despite the 20D return drag.\n4. **$245.96 support is well-defined and uncontested** \u2014 More than $9 below current price, giving the bull case room to work before any structural damage.\n\n---\n\n## 3. BEAR CASE\n\n1. **Daily MACD histogram negative (-0.4964) and MACD histogram shrinking on 15m (3 bars running)** \u2014 Momentum decelerating on both daily and intraday timeframes simultaneously. The 15m exhaustion signal is explicit.\n2. **Price below 5m VWAP ($255.98) with 3-candle momentum -0.234%** \u2014 The shortest-term tape is bearish; sellers have control on the microstructure level right now.\n3. **Volume severely depressed at 0.35x 20D average** \u2014 No conviction behind the intraday move up. Low-volume rallies in downtrending stocks (20D: -2.52%) are suspect.\n4. **20D trend is negative (-2.52%) and price sits in lower half of Bollinger Band (0.473)** \u2014 The medium-term structure has not repaired; this is a bounce within a downtrend, not a breakout.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news or earnings imminent** \u2014 Removes a major gamma event risk but also removes a catalyst for a clean directional move. Low-conviction environment.\n- **Options flow balanced (5 unusual calls / 5 unusual puts, P/C 0.51)** \u2014 Genuinely neutral. Neither side has institutional sponsorship today.\n- **QQQ +1.91% divergence** \u2014 If QQQ sustains this move, AMZN could lag-catch and accelerate toward $258-$260 intraday, which would exceed the 1DTE expected move.\n- **Volume spike risk** \u2014 Current volume is 0.35x average. If volume floods in either direction post-11 AM, the move would be amplified but is currently undetectable in advance.\n- **SEC filings (10 in 90 days)** \u2014 No specific catalyst identified, but routine disclosures can occasionally move price.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Value | Significance |\n|---|---|---|\n| 5m VWAP (bear/bull pivot) | $255.98 | Reclaiming this flips 5m bias bullish |\n| 15m VWAP | $255.05 | Current support \u2014 losing this weakens setup |\n| EMA21 (15m) | $254.50 | Next meaningful support below VWAP |\n| 1H VWAP | $253.40 | Bull thesis invalidation intraday |\n| 20D Resistance | $266.43 | Bull target ceiling \u2014 well beyond 0-2 DTE reach |\n| 20D Support | $245.96 | Bear target floor \u2014 also well beyond 0-2 DTE reach |\n| **Thesis-change level** | **$253.40** | Break below 1H VWAP with volume shifts to clear bear; reclaim of $255.98 with volume confirms bull |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 49/100\n\n**Score rationale:** Signal clarity is moderate \u2014 1H and 15m are bullish but the 5m is actively bearish, daily MACD is negative, 15m MACD is fading, and volume is absent; timeframes are genuinely split, not merely mixed. Tradeability caps the score: the 1DTE expected move is only \u00b1$2.45, and with AMZN sitting mid-range between support and resistance with no momentum trigger confirmed and depressed volume, there is no clean entry with a realistic target sitting at 0.5-0.8x the expected move with confidence. A trade entered here is buying theta into an unresolved directional conflict.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe intraday structure is split: 1H and 15m lean bullish, 5m is actively bearish, daily MACD is negative, 15m MACD is fading (exhaustion signal), and volume is absent. There is no clean confluence alignment in either direction required for a 0-2 DTE entry. The bullish case is real but lacks the confirmation trigger needed to justify extreme theta risk.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 1H/15m bullish but 5m actively bearish with 15m MACD exhaustion confirmed and volume at 0.35x average, providing no viable directional trigger with a realistic 0.5-0.8x expected-move target in either direction.\n\n---\n\n**MONITOR FOR:** A confirmed reclaim of 5m VWAP ($255.98) on above-average volume would open a 1DTE CALL toward $257.50. Conversely, a 15m candle close below $255.05 (15m VWAP) with volume expansion would open a 1DTE PUT toward $253.40. Neither condition is met at 11:00 AM ET.",
+        "confluence_score": 52,
+        "signal_clarity": 55,
+        "tradeability": 49,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -227,18 +227,18 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 15m/1H remain bullish but show confirmed bullish exhaustion (RSI divergence, RSI 73.83 overbought) while the 5m has flipped bearish on near-zero volume, making both a CALL entry (chasing exhausted move) and a PUT entry (fading above VWAP without breakdown confirmation) structurally premature; wait for either a 15m VWAP break with volume confirmation (puts) or a 5m reclaim of $256.00 with volume normalization (calls).",
-          "reversal_risk": 35,
-          "exhaustion_side": "BULLISH_EXHAUSTION",
-          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push",
+          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 1H/15m bullish but 5m actively bearish with 15m MACD exhaustion confirmed and volume at 0.35x average, providing no viable directional trigger with a realistic 0.5-0.8x expected-move target in either direction.",
+          "reversal_risk": 33,
+          "exhaustion_side": null,
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6771
+        "tokens_used": 6906
       },
       "was_flagged": true,
       "cached_at": 1790001150.541342,
-      "score": 48
+      "score": 52
     },
     "AAPL": {
       "result": {
@@ -279,5 +279,5 @@
       "score": 52
     }
   },
-  "saved_at": "2026-09-21T10:51:33-04:00"
+  "saved_at": "2026-09-21T11:02:30-04:00"
 }
