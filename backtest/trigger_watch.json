@@ -567,7 +567,7 @@
   "verdict": "TRADE",
   "message_id": "1550515150962954330",
   "signal_time": "2026-09-18T10:33:40-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "MSFT",
@@ -581,7 +581,7 @@
   "verdict": "TRADE",
   "message_id": "1550515398107996182",
   "signal_time": "2026-09-18T10:34:38-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "TSLA",
@@ -595,7 +595,7 @@
   "verdict": "TRADE",
   "message_id": "1550515869690634252",
   "signal_time": "2026-09-18T10:36:30-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "AMZN",
@@ -609,7 +609,7 @@
   "verdict": "TRADE",
   "message_id": "1550527200867131436",
   "signal_time": "2026-09-18T11:21:32-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "QQQ",
@@ -623,7 +623,7 @@
   "verdict": "TRADE",
   "message_id": "1550532636701753394",
   "signal_time": "2026-09-18T11:43:08-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "SPY",
@@ -637,7 +637,7 @@
   "verdict": "TRADE",
   "message_id": "1550532837550330028",
   "signal_time": "2026-09-18T11:43:56-04:00",
-  "status": "PENDING"
+  "status": "EXPIRED"
  },
  {
   "ticker": "AMZN",
@@ -651,6 +651,20 @@
   "verdict": "RISKY",
   "message_id": "1550562408815140875",
   "signal_time": "2026-09-18T13:41:26-04:00",
+  "status": "EXPIRED"
+ },
+ {
+  "ticker": "MSFT",
+  "direction": "PUT",
+  "trigger": 493.0,
+  "strike": 492.5,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter only on a confirmed 15-minute candle close below $493.00 with price remaining below the 15m VWAP ($494.50) and no sustained sector acceleration in QQQ above +2.5%.",
+  "score": 62,
+  "verdict": "TRADE",
+  "message_id": "1551602498433982484",
+  "signal_time": "2026-09-21T10:34:23-04:00",
   "status": "PENDING"
  }
 ]
