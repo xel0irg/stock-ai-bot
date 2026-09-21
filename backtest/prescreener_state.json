@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 337.239990234375,
+      "price": 337.6000061035156,
       "volume_ratio": 0.0,
-      "ts": 1790003444.1822612,
+      "ts": 1790004043.5541644,
       "last_full_scan_ts": 1790002291.0425508
     },
     "AMZN": {
-      "price": 254.52499389648438,
+      "price": 255.19189453125,
       "volume_ratio": 0.0,
-      "ts": 1790003444.4512413,
+      "ts": 1790004043.8657794,
       "last_full_scan_ts": 1790003491.3134658
     },
     "META": {
-      "price": 707.75,
+      "price": 712.4650268554688,
       "volume_ratio": 0.0,
-      "ts": 1790003444.8740015,
-      "last_full_scan_ts": 1790002948.8093994
+      "ts": 1790004044.0871341,
+      "last_full_scan_ts": 1790004098.3828773
     },
     "MSFT": {
-      "price": 493.0899963378906,
+      "price": 492.9100036621094,
       "volume_ratio": 0.0,
-      "ts": 1790003445.216317,
+      "ts": 1790004044.3646705,
       "last_full_scan_ts": 1790001263.5912724
     },
     "NVDA": {
-      "price": 225.4600067138672,
+      "price": 225.11000061035156,
       "volume_ratio": 0.0,
-      "ts": 1790003445.5098321,
+      "ts": 1790004044.6032782,
       "last_full_scan_ts": 1790001319.6206121
     },
     "QQQ": {
-      "price": 736.25,
+      "price": 736.4401245117188,
       "volume_ratio": 0.0,
-      "ts": 1790003445.775553,
+      "ts": 1790004044.8711994,
       "last_full_scan_ts": 1790001372.1833057
     },
     "SPY": {
-      "price": 769.47998046875,
+      "price": 770.0449829101562,
       "volume_ratio": 0.0,
-      "ts": 1790003446.048793,
+      "ts": 1790004045.22053,
       "last_full_scan_ts": 1790001435.2969358
     },
     "TSLA": {
-      "price": 375.92498779296875,
+      "price": 374.8399963378906,
       "volume_ratio": 0.0,
-      "ts": 1790003446.3675153,
+      "ts": 1790004045.5822866,
       "last_full_scan_ts": 1790001696.3670332
     }
   },
@@ -277,7 +277,45 @@
       "was_flagged": true,
       "cached_at": 1790002291.042554,
       "score": 52
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-21T15:21:38.374579",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis | 11:20 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has surged ~7% today on what appears to be momentum continuation from a strong multi-week run (+27.44% over 20 days), now pressing against its 20-day resistance/all-time intraday high zone near $712-713. The most plausible scenario over the next 5-15 days is a consolidation or mild pullback toward the $680-690 range before any attempt at the analyst price target of $755. For today specifically, price is at the upper Bollinger Band ($713.82), overbought on every oscillator, with deteriorating volume (0.84x average daily, 0.37x on the 15m) \u2014 conditions more consistent with a stall or fade than continuation.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (8.915) + 15m/1H VWAP position:** Price holds comfortably above all three intraday VWAPs (5m: $710.97, 15m: $696.92, 1H: $685.90), confirming buyers remain in control of structure.\n- **Sector tailwind:** XLK +1.83% today, QQQ +1.99% \u2014 macro bid under tech is real and providing a floor for META's elevated price.\n- **OBV rising + low short interest (1.3% float):** No meaningful short squeeze fuel, but absence of shorts means no forced selling pressure either. OBV rising confirms institutional accumulation hasn't reversed.\n- **Analyst consensus STRONG_BUY, price target $755:** $43 upside to consensus \u2014 fundamental backstop limits aggressive downside over the medium term.\n\n---\n\n## 3. BEAR CASE\n\n- **BULLISH_EXHAUSTION flagged explicitly:** Price is 2.74 ATR from VWAP on 0.56x recent volume. The move is happening on thin participation \u2014 a classic late-stage squeeze characteristic, not fresh buying.\n- **RSI 74.68 (daily), Stochastic 97.58/92.35, 15m RSI 80.53, 1H RSI 80.32:** Multi-timeframe overbought readings simultaneously hitting extremes is statistically mean-reverting on 0-2 DTE windows.\n- **Price at/against upper Bollinger Band ($713.82) = 20-day resistance:** The 20-day resistance IS the current price. Bollinger position of 0.992 means virtually zero room left in the band. Historical walk-the-band scenarios require volume confirmation \u2014 absent here.\n- **Volume deterioration on the move:** Daily volume at 0.84x 20D average, 15m at 0.37x, 5m near zero. Price at highs on falling volume is a distribution warning, not a momentum signal.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found:** The 7% move has no identified fundamental catalyst in this data pull \u2014 raises the question of whether this is a delayed reaction to a prior event or a momentum/options-flow driven squeeze. If the catalyst is unclear, the reversal risk is higher.\n- **Options expiry dynamics:** P/C at 0.62 with balanced unusual flow (5 calls / 5 puts flagged) suggests market makers aren't clearly positioned \u2014 could create whipsaw around key strikes at expiry.\n- **Macro shock:** VIX at 14.65 (complacent), SPY mixed. Any risk-off catalyst (geopolitical, Fed comment, macro print) would hit a 7%-up high-beta name disproportionately hard.\n- **SEC filings (10 in 90 days):** Worth monitoring \u2014 no insider buying/selling is neutral, but heavy filing activity could precede a disclosure.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $713.82 | Upper Bollinger Band = 20-day resistance ceiling |\n| **Immediate Support** | $710.97 | 5m VWAP \u2014 loss of this triggers first pullback |\n| **Key Intraday Support** | $703.80 | 15m EMA9 \u2014 breach shifts intraday bias |\n| **Critical Thesis Level** | $696.92 | 15m VWAP \u2014 close below this flips intraday structure bearish |\n| **Strong Support** | $685.90 | 1H VWAP \u2014 a test here = full intraday mean reversion |\n| **Structural Support** | $666.53 | Daily EMA9 \u2014 not relevant for 0-2 DTE but defines the true swing floor |\n\n**Level that changes the thesis:** A 15-min candle close below $703.80 (15m EMA9) on above-average volume confirms exhaustion \u2192 fade is on. Hold above $710.97 and the stall/range trade is the story instead.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 26/100\n\n**Score explanation:** Signal clarity is moderate \u2014 directional trend is unambiguously bullish across all timeframes, but the BULLISH_EXHAUSTION flag (reversal risk 45/100, 2.74 ATR VWAP extension, volume non-confirmation) materially degrades the quality of a CALL entry; a PUT entry fights clean trend structure. Tradeability is the killer: for a CALL, the realistic upside target from $712.42 with exhaustion present is minimal (price is already AT resistance), meaning the stock needs to push through $713.82+ to profit \u2014 the setup has already moved. For a PUT, the 0DTE expected move is only \u00b1$8.26, and current intraday structure (all VWAPs below price by $1-26) means a PUT needs a meaningful reversal to trigger, not a continuation. The exhaustion setup is real but tradeability in 0-2 DTE format is severely capped by where price already sits.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bullish case is real on trend, but it is explicitly a LATE/CHASING entry warned against by the exhaustion module. The bearish/fade case is compelling on technicals but fights clean intraday VWAP structure. Neither direction offers a clean, timely entry with a realistic 0-2 DTE target that sits comfortably within the expected move at this moment.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: BULLISH_EXHAUSTION is explicitly confirmed (reversal risk 45/100, 2.74 ATR from VWAP, 0.37-0.56x volume) \u2014 a CALL is a textbook chasing entry at upper Bollinger Band resistance, and a PUT fights unbroken VWAP structure across all three timeframes; neither direction provides a viable entry with a realistic target inside the expected move at current price.\n\n---\n\n**MONITOR FOR ENTRY:** If META pulls back to the $703-705 zone (15m EMA9/15m VWAP convergence) on a clean consolidation with volume returning to 1.0x+, a 1DTE CALL targeting $711-712 becomes viable. Alternatively, a confirmed 15m candle close below $696.92 (15m VWAP) on volume \u22651.2x average opens a 1DTE PUT targeting $686-688. Neither trigger has fired as of 11:20 AM ET.",
+        "confluence_score": 42,
+        "signal_clarity": 58,
+        "tradeability": 26,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "BULLISH_EXHAUSTION is explicitly confirmed (reversal risk 45/100, 2.74 ATR from VWAP, 0.37-0.56x volume) \u2014 a CALL is a textbook chasing entry at upper Bollinger Band resistance, and a PUT fights unbroken VWAP structure across all three timeframes; neither direction provides a viable entry with a realistic target inside the expected move at current price.",
+          "reversal_risk": 45,
+          "exhaustion_side": "BULLISH_EXHAUSTION",
+          "reversal_notes": "price is 2.7 ATR from VWAP \u2014 stretched and prone to snap back; push is on 0.56x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 7119
+      },
+      "was_flagged": true,
+      "cached_at": 1790004098.3828802,
+      "score": 42
     }
   },
-  "saved_at": "2026-09-21T11:11:33-04:00"
+  "saved_at": "2026-09-21T11:21:40-04:00"
 }
