@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 342.3799133300781,
+      "price": 342.80999755859375,
       "volume_ratio": 0.0,
-      "ts": 1790094643.0790722,
+      "ts": 1790095241.0259306,
       "last_full_scan_ts": 1790092949.2065156
     },
     "AMZN": {
-      "price": 254.25999450683594,
+      "price": 254.29319763183594,
       "volume_ratio": 0.0,
-      "ts": 1790094643.264133,
+      "ts": 1790095241.3811307,
       "last_full_scan_ts": 1790091686.1248755
     },
     "META": {
-      "price": 749.1749877929688,
+      "price": 743.9699096679688,
       "volume_ratio": 0.0,
-      "ts": 1790094643.4744847,
-      "last_full_scan_ts": 1790091736.6497347
+      "ts": 1790095241.722384,
+      "last_full_scan_ts": 1790095300.2507
     },
     "MSFT": {
-      "price": 495.5,
+      "price": 495.6300048828125,
       "volume_ratio": 0.0,
-      "ts": 1790094643.7206984,
+      "ts": 1790095242.134276,
       "last_full_scan_ts": 1790094086.3763807
     },
     "NVDA": {
-      "price": 228.77999877929688,
+      "price": 228.82460021972656,
       "volume_ratio": 0.0,
-      "ts": 1790094643.900269,
+      "ts": 1790095242.4862769,
       "last_full_scan_ts": 1790091786.642962
     },
     "QQQ": {
-      "price": 744.25,
+      "price": 744.260009765625,
       "volume_ratio": 0.0,
-      "ts": 1790094644.1318414,
+      "ts": 1790095242.8978398,
       "last_full_scan_ts": 1790091829.9953623
     },
     "SPY": {
-      "price": 772.989990234375,
+      "price": 772.9910888671875,
       "volume_ratio": 0.0,
-      "ts": 1790094644.353598,
+      "ts": 1790095243.2951114,
       "last_full_scan_ts": 1790091873.9290721
     },
     "TSLA": {
-      "price": 376.92999267578125,
+      "price": 377.5899963378906,
       "volume_ratio": 0.0,
-      "ts": 1790094644.5024514,
+      "ts": 1790095243.6083379,
       "last_full_scan_ts": 1790093502.0957518
     }
   },
@@ -277,7 +277,45 @@
       "was_flagged": false,
       "cached_at": 1790091786.642965,
       "score": 47
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-22T16:41:40.241896",
+        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**12:40 PM ET | Last: $743.55**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has run +30.5% in 20 days and is sitting exactly at 20-day resistance ($743.55) with RSI at 78 and Stochastic at 92 \u2014 textbook overbought at structural resistance. Intraday, price is trading below both the 5m and 15m VWAPs (~$749 and $747) with bearish momentum across all short-term timeframes, suggesting the day session is distributing the prior run. The most plausible scenario over 5-15 days is a mean-reversion toward the $710-$720 range, but the key near-term question is whether today's intraday weakness is the start of that rollover or simply consolidation before a breakout to fresh 52W highs near $770.\n\n---\n\n## 2. BULL CASE\n\n1. **News Catalyst (Muse AI)** \u2014 Multiple headlines directly attribute billions in market cap to the Muse app. This is a fresh fundamental catalyst, not stale momentum, and could sustain buying pressure or trigger a breakout above $744 resistance.\n2. **Daily MACD Histogram (+12.14, Bullish)** \u2014 The daily trend structure remains strongly bullish. MACD hasn't rolled over at the daily level; this argues against a sharp reversal and favors continuation or chop.\n3. **Broad Market Bull Regime** \u2014 SPY and QQQ both above EMA9/EMA21 with VIX at 14.29. Regime gate explicitly favors CALLs. Macro tailwind reduces the probability of a sustained break lower in a mega-cap like META.\n4. **Analyst Consensus / Price Target** \u2014 56 analysts, STRONG_BUY, consensus PT $758 \u2014 still ~2% above current price. Fundamental support from Wall Street creates a buyer base on dips.\n\n---\n\n## 3. BEAR CASE\n\n1. **Price at 20-Day Resistance / RSI 78 / Stochastic 92** \u2014 META has hit the exact ceiling of its 20-day range ($743.55 = resistance = current price). RSI and Stochastic both in overbought territory simultaneously. Statistically, this combination produces mean-reversion more often than continuation in the near term.\n2. **Intraday Structure: Fully Bearish on 5m and 15m** \u2014 Price is below VWAP on both 5m ($749.44) and 15m ($747.04), EMA9 < EMA21 on 5m, MACD bearish on all three intraday timeframes, and 3-candle momentum is -1.33% on 15m. This is the clearest intraday signal in the dataset.\n3. **Low Volume on Both the Rally and the Intraday Move** \u2014 Today's volume is 0.87x average. Intraday volume is 0.34x and 0.0x on 5m and 15m. The prior multi-week rally lacks volume conviction, and the intraday breakdown is occurring on thin participation \u2014 cuts both ways (move may not sustain, but support is also soft).\n4. **Bollinger Band Position 1.023 (Outside Upper Band)** \u2014 Price has closed above the upper Bollinger Band. This is historically a mean-reversion signal in the near term, implying a snap back toward the midband (~$632 per the wide band shown \u2014 though the 20-day band is the more relevant near-term anchor).\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Muse Viral Momentum** \u2014 If the app continues gaining social traction, this could be a multi-day narrative driver that overwhelms technical signals and pushes META toward $760-$770 (52W high). This is the primary bull wildcard.\n- **Nasdaq 100 Record Attempt** \u2014 Bloomberg headline flagging QQQ eyeing first record since June. If QQQ breaks out, META as a top-5 holding would likely be dragged higher, making any bearish intraday setup a very short-lived trade.\n- **Options Expiry Flow** \u2014 P/C ratio of 0.3 is heavily call-skewed. 10 flagged unusual contracts (5 calls, 5 puts) balanced. At-the-money options pinning near $743-$745 could create end-of-day price adhesion.\n- **Sector/Macro Reversal** \u2014 Tech is flat today but Financials are -1.6%. Any macro shock (Fed speak, credit event) could hit risk assets and accelerate the technical rollover.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Primary Resistance** | $743.55\u2013$744 | Current 20-day resistance = exact current price; holding here confirms distribution |\n| **5m VWAP** | $749.44 | Reclaim would invalidate intraday bearish setup immediately |\n| **15m VWAP** | $747.04 | Key intraday ceiling for bears; price must stay below |\n| **1H VWAP** | $727.35 | First major intraday support; a break here opens $715-$720 |\n| **0DTE Expected Move Low** | ~$729 | \u00b1$14.13 downside from $743.55; realistic intraday target zone |\n| **52W High** | $770.60 | Bull breakout target; reclaim of $744+ shifts thesis long |\n| **Thesis Flip Level** | $749.44 | Reclaim of 5m VWAP on volume \u2265 1x avg \u2192 puts thesis invalidated |\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 62/100\nTRADEABILITY: 42/100\n\n**Score rationale:** Intraday bearish signals are genuinely clear (5m and 15m fully bearish, below VWAP, negative momentum), which earns a decent clarity score. However, tradeability is capped hard: (1) the **Regime Gate requires PUT signals to score \u226575 AND price below BOTH 15m and 1H VWAP AND volume \u22650.8x** \u2014 price IS below 15m VWAP but is ABOVE 1H VWAP ($727.35), and volume is running at 0.34x average on 15m (far below the 0.8x threshold). Two of three regime gate conditions fail, which blocks a PUT at institutional-grade conviction. (2) A CALL is regime-favored but faces a fully bearish intraday structure \u2014 price is below both short-term VWAPs, which contradicts the entry conditions for a CALL. Net result: direction is readable but no clean trade structure clears all gates simultaneously.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe intraday read is bearish but the regime gate blocks the PUT (volume failure + above 1H VWAP). The bull regime favors a CALL but intraday structure (below 5m and 15m VWAP, bearish MACD cascade) makes a CALL entry here chasing. Neither side clears its full entry checklist.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks the PUT (volume at 0.34x average fails the \u22650.8x threshold required, and price remains above 1H VWAP at $727.35 \u2014 two of three mandatory conditions unmet); the CALL is regime-favored but price is below both 5m VWAP ($749.44) and 15m VWAP ($747.04) with a fully bearish intraday cascade, making a CALL entry structurally unsound \u2014 signals genuinely conflict across the intraday and regime layers with no clean directional entry available at this moment.\n\n---\n\n**WATCH FOR:** A reclaim of $749.44 (5m V",
+        "confluence_score": 52,
+        "signal_clarity": 62,
+        "tradeability": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks the PUT (volume at 0.34x average fails the \u22650.8x threshold required, and price remains above 1H VWAP at $727.35 \u2014 two of three mandatory conditions unmet); the CALL is regime-favored but price is below both 5m VWAP ($749.44) and 15m VWAP ($747.04) with a fully bearish intraday cascade, making a CALL entry structurally unsound \u2014 signals genuinely conflict across the intraday and regime layers with no clean directional entry available at this moment.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "push is on 0.52x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 7355
+      },
+      "was_flagged": true,
+      "cached_at": 1790095300.2507038,
+      "score": 52
     }
   },
-  "saved_at": "2026-09-22T12:30:44-04:00"
+  "saved_at": "2026-09-22T12:41:42-04:00"
 }
