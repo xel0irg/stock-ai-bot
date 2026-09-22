@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 342.06500244140625,
+      "price": 341.2300109863281,
       "volume_ratio": 0.0,
-      "ts": 1790097045.886151,
+      "ts": 1790097641.850573,
       "last_full_scan_ts": 1790097141.4864612
     },
     "AMZN": {
-      "price": 254.3498992919922,
+      "price": 254.4499969482422,
       "volume_ratio": 0.0,
-      "ts": 1790097046.0672786,
+      "ts": 1790097642.0025725,
       "last_full_scan_ts": 1790095887.4277008
     },
     "META": {
-      "price": 744.5798950195312,
+      "price": 745.9801025390625,
       "volume_ratio": 0.0,
-      "ts": 1790097046.2463288,
+      "ts": 1790097642.1802359,
       "last_full_scan_ts": 1790097092.67318
     },
     "MSFT": {
-      "price": 496.510009765625,
+      "price": 497.1600036621094,
       "volume_ratio": 0.0,
-      "ts": 1790097046.4970076,
+      "ts": 1790097642.4007788,
       "last_full_scan_ts": 1790094086.3763807
     },
     "NVDA": {
-      "price": 229.84449768066406,
+      "price": 229.76499938964844,
       "volume_ratio": 0.0,
-      "ts": 1790097046.700672,
+      "ts": 1790097642.605314,
       "last_full_scan_ts": 1790095939.3198354
     },
     "QQQ": {
-      "price": 745.2999877929688,
+      "price": 745.2000122070312,
       "volume_ratio": 0.0,
-      "ts": 1790097046.9620955,
+      "ts": 1790097642.857216,
       "last_full_scan_ts": 1790095995.03948
     },
     "SPY": {
-      "price": 773.3499755859375,
+      "price": 773.219970703125,
       "volume_ratio": 0.0,
-      "ts": 1790097047.2042477,
+      "ts": 1790097643.0727003,
       "last_full_scan_ts": 1790096056.919386
     },
     "TSLA": {
-      "price": 378.4200134277344,
+      "price": 378.9800109863281,
       "volume_ratio": 0.0,
-      "ts": 1790097047.4199603,
-      "last_full_scan_ts": 1790093502.0957518
+      "ts": 1790097643.282747,
+      "last_full_scan_ts": 1790097687.918616
     }
   },
   "ai_cache": {
@@ -277,7 +277,45 @@
       "was_flagged": true,
       "cached_at": 1790095300.2507038,
       "score": 43
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-09-22T17:21:27.909039",
+        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 1:20 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA has run ~8% over 20 days and is pressing against its 20-day resistance ($378.94 = current price = resistance). Price is at the upper Bollinger Band with RSI overbought across all timeframes and a confirmed bearish RSI divergence on the 15m. The most plausible scenario over the next 5-15 days is a consolidation or mild pullback toward $360-$365 (EMA50/EMA21 confluence), as the rally loses participation volume (0.45x average). A sustained breakout above $380 toward the analyst target of $397 is possible but requires fresh volume catalysts.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram Positive (1.3752 daily):** Momentum remains net bullish on the daily \u2014 trend has not rolled over.\n- **All Intraday Timeframes Above VWAP:** 5m, 15m, and 1H all confirm price is holding above VWAP, a reliable short-term bullish structure.\n- **Bull Regime (SPY/QQQ above EMA9/EMA21, VIX 14.26):** Market tailwind is real \u2014 low-fear trending environments favor momentum continuation in high-beta names like TSLA (Beta 1.845).\n- **Analyst Consensus BUY, Target $396.94:** ~4.7% upside to consensus target; institutional buy pressure provides a floor on dips.\n\n---\n\n## 3. BEAR CASE\n\n- **Price = 20-Day Resistance + Upper Bollinger Band (0.979):** TSLA is pressing against a hard ceiling. Upper BB at $379.70 with price at $378.94 \u2014 no room above without expansion.\n- **Bearish RSI Divergence (15m) + Overbought Across All TFs:** Price printed a higher high; RSI did not. Classic exhaustion pattern. 5m RSI 73.1, 15m RSI 72.44, 1H RSI 72.54 \u2014 all overbought simultaneously.\n- **Volume Collapse (0.45x 20-day average, 0.35x on 15m):** Rally is not confirmed by participation. Moves on thin volume at resistance are the textbook definition of a trap.\n- **Bullish Exhaustion Score 55/100 + VWAP Extension 1.12 ATR:** The exhaustion check explicitly flags the bullish move as tiring. Chasing a call here means buying the most expensive moment of a run.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News / Zero Articles:** Absence of a catalyst is itself a risk \u2014 the move has no fundamental driver to sustain it. A single negative headline could accelerate any pullback sharply.\n- **SEC Filings (4 in 90 days):** Worth monitoring; any material disclosure could move price rapidly intraday.\n- **Options Expiry Dynamics:** With P/C at 0.67 and 10 flagged unusual contracts (evenly split 5 calls / 5 puts), market makers are likely defending both sides near $380. This pin risk near resistance is real for today's expiry.\n- **Elon Musk / Political/Macro Headline Risk:** TSLA remains a headline-driven stock with Beta 1.845. A political or macro surprise can override all technical setups with no warning.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $379.70 | Upper Bollinger Band \u2014 current ceiling |\n| **20D Resistance** | $378.94 | Current price = resistance (breakout or rejection here) |\n| **VWAP (1H)** | $373.65 | First meaningful support; loss = momentum shift |\n| **VWAP (15m)** | $377.29 | Near-term bull/bear dividing line |\n| **EMA9 Daily** | $367.49 | Structural support; break changes swing thesis |\n| **EMA21/EMA50** | $361-$360 | Confluence target on pullback |\n| **20D Support** | $345.82 | Macro support \u2014 only relevant on larger breakdown |\n\n**Thesis-changing level:** A 15m candle close below $377.29 (15m VWAP) on volume \u2265 0.8x average would confirm exhaustion-to-pullback. A clean breakout close above $381 on volume \u2265 1.0x average would invalidate the exhaustion thesis entirely.\n\n---\n\n## 6. CONFLUENCE SCORE: 41/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 24/100\n\n**Score rationale:** Signal clarity is moderate-bullish (all TFs aligned above VWAP, bull regime) but materially penalized by confirmed bullish exhaustion, RSI divergence, zero volume confirmation, and price sitting exactly at resistance. Tradeability is what kills this score: a CALL at $379 with 0DTE expected move of only \u00b1$5.15 means any viable profit target ($382-$384) requires the stock to break through hard resistance on collapsing volume at 1:20 PM \u2014 low probability. A PUT is blocked by the Regime Gate (price above both 15m and 1H VWAP; does not meet the required conditions). No 0-2 DTE option trade is viable here with acceptable risk/reward.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in sitting out)**\n\nThe bull setup is real on trend but it is a late, exhausted entry at resistance. The bear setup is technically interesting (RSI divergence, volume collapse, upper BB) but the Regime Gate blocks a PUT signal: price is above BOTH the 15m VWAP ($377.29) AND the 1H VWAP ($373.65), and volume is 0.45x average (below the required 0.8x). Neither direction clears the bar for a 0-2 DTE trade right now.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: The CALL setup is a late-entry chase \u2014 bullish exhaustion confirmed (RSI divergence, 0.35-0.45x volume, price at upper Bollinger Band/20D resistance), making a 0-2 DTE call premium highly unlikely to recover before theta decay; the PUT setup is blocked by the Hard Regime Gate because price is above both 15m VWAP ($377.29) and 1H VWAP ($373.65) and volume is only 0.45x average, failing all three required PUT conditions in a confirmed bull tape.",
+        "confluence_score": 41,
+        "signal_clarity": 58,
+        "tradeability": 24,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "The CALL setup is a late-entry chase \u2014 bullish exhaustion confirmed (RSI divergence, 0.35-0.45x volume, price at upper Bollinger Band/20D resistance), making a 0-2 DTE call premium highly unlikely to recover before theta decay; the PUT setup is blocked by the Hard Regime Gate because price is above both 15m VWAP ($377.29) and 1H VWAP ($373.65) and volume is only 0.45x average, failing all three required PUT conditions in a confirmed bull tape.",
+          "reversal_risk": 55,
+          "exhaustion_side": "BULLISH_EXHAUSTION",
+          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push; push is on 0.46x the recent volume \u2014 little participation",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6958
+      },
+      "was_flagged": false,
+      "cached_at": 1790097687.9186194,
+      "score": 41
     }
   },
-  "saved_at": "2026-09-22T13:12:23-04:00"
+  "saved_at": "2026-09-22T13:21:29-04:00"
 }
