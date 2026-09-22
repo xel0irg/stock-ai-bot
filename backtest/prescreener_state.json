@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 339.739990234375,
+      "price": 342.0400085449219,
       "volume_ratio": 0.0,
-      "ts": 1790088037.3647397,
-      "last_full_scan_ts": 1790087508.2787771
+      "ts": 1790088642.1160893,
+      "last_full_scan_ts": 1790088693.139631
     },
     "AMZN": {
-      "price": 256.84991455078125,
+      "price": 256.8587951660156,
       "volume_ratio": 0.0,
-      "ts": 1790088037.59324,
+      "ts": 1790088642.2925553,
       "last_full_scan_ts": 1790087561.464978
     },
     "META": {
-      "price": 749.3250122070312,
+      "price": 747.6500244140625,
       "volume_ratio": 0.0,
-      "ts": 1790088037.9949856,
+      "ts": 1790088642.4496822,
       "last_full_scan_ts": 1790087620.6309803
     },
     "MSFT": {
-      "price": 497.0849914550781,
+      "price": 497.8699951171875,
       "volume_ratio": 0.0,
-      "ts": 1790088038.2296538,
+      "ts": 1790088642.6828156,
       "last_full_scan_ts": 1790087784.36876
     },
     "NVDA": {
-      "price": 228.3000030517578,
+      "price": 228.33470153808594,
       "volume_ratio": 0.0,
-      "ts": 1790088038.474928,
+      "ts": 1790088642.8954492,
       "last_full_scan_ts": 1790087841.9489768
     },
     "QQQ": {
-      "price": 745.3350219726562,
+      "price": 745.52001953125,
       "volume_ratio": 0.0,
-      "ts": 1790088038.6644497,
+      "ts": 1790088643.1262238,
       "last_full_scan_ts": 1790087674.057019
     },
     "SPY": {
-      "price": 773.3795166015625,
+      "price": 773.8499755859375,
       "volume_ratio": 0.0,
-      "ts": 1790088038.9354985,
+      "ts": 1790088643.357153,
       "last_full_scan_ts": 1790087907.4820735
     },
     "TSLA": {
-      "price": 377.8599853515625,
+      "price": 377.31500244140625,
       "volume_ratio": 0.0,
-      "ts": 1790088039.1506245,
+      "ts": 1790088643.5637465,
       "last_full_scan_ts": 1790087731.0342772
     }
   },
@@ -277,7 +277,45 @@
       "was_flagged": true,
       "cached_at": 1790087731.0342793,
       "score": 52
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-09-22T14:51:33.126232",
+        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 10:50 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is grinding into major resistance at its 52W high ($345.34) on significantly below-average volume (0.29x 20D MA), sitting at the upper Bollinger Band with RSI and Stochastic both flagging overbought conditions. The most plausible scenario over the next 5-15 days is a pause/mean-reversion toward the $327-$335 zone before any continuation higher, as the stock needs volume confirmation to break out convincingly. Analyst price targets ($328.22) are actually below current price, further compressing the risk/reward for bulls at these levels.\n\n---\n\n## 2. BULL CASE\n\n- **Bull tape regime confirmed**: SPY and QQQ both above EMA9/EMA21 with VIX at 14.47 \u2014 macro momentum structurally favors upside continuation in individual names.\n- **All-timeframe VWAP hold**: Price is above VWAP on 5m, 15m, and 1H \u2014 the intraday structure is bullish, and sellers have not been able to reclaim control at any timeframe.\n- **15m confluence clean**: 4/4 bullish signals on the 15m with positive MACD histogram and EMA9 > EMA21 \u2014 the most reliable setup timeframe is fully aligned.\n- **MACD daily bullish**: Daily histogram at 1.68 and rising \u2014 medium-term momentum is intact and has not begun rolling over.\n\n---\n\n## 3. BEAR CASE\n\n- **Bullish exhaustion confirmed, reversal risk 47/100**: RSI bearish divergence on higher price highs \u2014 fewer buyers behind this push. This is the dominant near-term risk flag.\n- **Volume collapse**: 0.29x of 20D average volume. A move of this magnitude into 52W highs on less than a third of normal volume is a classic distribution warning \u2014 no institutional conviction behind the push.\n- **At upper Bollinger Band + 52W resistance**: Price at $342.06 with BB upper at $344.31 and 52W high at $345.34 \u2014 compressed 2-point window before hard overhead. Mean-reversion to the BB midline (~$325) is statistically probable.\n- **OBV falling + Stochastic overbought (90/93)**: On-balance volume diverging from price while Stochastic sits near the top of its range \u2014 classic precursors to a rollover.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W High breakout**: A volume surge through $345.34 on news or sector rotation into tech would trigger momentum buyers and squeeze the modest 1% short float \u2014 not a squeeze candidate but a breakout would accelerate.\n- **Tech sector reversal**: Tech (XLK) is flat/slightly red today (-0.06%). A sector-level rotation out of tech (e.g., macro data, Fed commentary) would hit AAPL disproportionately at these elevated valuations (P/E 39.3, PEG 2.7, price above analyst targets).\n- **No news, no catalyst**: Zero articles found. A thin-news environment at 52W highs on low volume means price is vulnerable to any negative tape-bomb \u2014 there is no fundamental cushion baked in today.\n- **Options expiry dynamics**: Neutral P/C ratio of 0.27 suggests call-heavy positioning; if price stalls at resistance, call sellers (market makers hedging short gamma) stop supporting price \u2014 gravity returns.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Hard resistance | $345.34 | 52W high \u2014 failure here = double top risk |\n| Current resistance | $344.31 | Upper Bollinger Band |\n| Current price | $342.06 | Also tagged as 20D resistance |\n| 1H VWAP | $337.91 | Loss of this = intraday trend breaks bearish |\n| 15m VWAP | $340.29 | Nearest intraday pivot \u2014 must hold for bulls |\n| Thesis-change bear level | $337.91 | Break below 1H VWAP shifts bias to bearish |\n| EMA9 (daily) | $334.23 | First meaningful daily support on pullback |\n| EMA21 (daily) | $327.42 | Analyst target zone \u2014 major support |\n| 20D support | $309.90 | Floor \u2014 not relevant for 0-2 DTE |\n\n**Critical level**: $337.91 (1H VWAP). Holding above = consolidation before potential breakout. Breaking below = exhaustion confirmed, put thesis activates.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 41/100\n\nSignal clarity is moderate \u2014 the directional read is actually readable (exhausted bull move into resistance), but the regime gate heavily favors calls while the exhaustion data argues against chasing. These two forces directly contradict each other. Tradeability caps the score: the realistic near-term move (mean-reversion toward $337-$338) is only ~$4 from current price \u2014 within the 1DTE expected move of \u00b1$4.45 \u2014 but the bull regime gate prohibits a PUT unless price is below both VWAPs (it is not), and a CALL here is a textbook chase into exhaustion. There is no clean, regime-compliant, non-exhausted trade available right now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium-High confidence in the no-trade decision)**\n\nThe bull regime gate blocks a PUT (price is above both 15m and 1H VWAP). The exhaustion data (reversal risk 47, RSI divergence, volume 0.29x) blocks a CALL. This is a genuine conflict between macro regime and intraday exhaustion \u2014 not a default to NONE.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks PUT (price is above 15m and 1H VWAP, failing all three PUT requirements); CALL is blocked by confirmed bullish exhaustion (reversal risk 47/100, RSI bearish divergence, 0.29x volume) \u2014 chasing an already-run move into 52W resistance on thin volume is the definition of a low-probability 0-2 DTE entry; wait for either a pullback to 1H VWAP ($337.91) for a CALL re-entry, or a confirmed breakdown below both VWAPs with volume \u2265 0.8x for a PUT.\n```\n\n---\n\n**MONITOR:** If AAPL pulls back to $337.91-$338.50 (1H VWAP) with volume picking up and 15m MACD holding positive \u2192 reassess CALL. If AAPL breaks below $339 (15m VWAP) on volume \u2265 0.8x average, the regime gate PUT conditions begin to approach \u2014 reassess PUT at that point.",
+        "confluence_score": 48,
+        "signal_clarity": 55,
+        "tradeability": 41,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks PUT (price is above 15m and 1H VWAP, failing all three PUT requirements); CALL is blocked by confirmed bullish exhaustion (reversal risk 47/100, RSI bearish divergence, 0.29x volume) \u2014 chasing an already-run move into 52W resistance on thin volume is the definition of a low-probability 0-2 DTE entry; wait for either a pullback to 1H VWAP ($337.91) for a CALL re-entry, or a confirmed breakdown below both VWAPs with volume \u2265 0.8x for a PUT.",
+          "reversal_risk": 47,
+          "exhaustion_side": "BULLISH_EXHAUSTION",
+          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push; price is 1.3 ATR from VWAP",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 7020
+      },
+      "was_flagged": true,
+      "cached_at": 1790088693.1396344,
+      "score": 48
     }
   },
-  "saved_at": "2026-09-22T10:40:39-04:00"
+  "saved_at": "2026-09-22T10:51:35-04:00"
 }
