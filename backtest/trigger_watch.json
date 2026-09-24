@@ -680,5 +680,19 @@
   "message_id": "1552696496695156816",
   "signal_time": "2026-09-24T11:01:33-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 375.02,
+  "strike": 377.5,
+  "expiry_date": "",
+  "vol_multiple": 0.75,
+  "entry_condition": "Enter on a 15m candle close that holds below $376.80 with 15m MACD histogram remaining negative and volume recovering above 0.75x average on that candle",
+  "score": 66,
+  "verdict": "TRADE",
+  "message_id": "1552707606957662328",
+  "signal_time": "2026-09-24T11:45:41-04:00",
+  "status": "PENDING"
  }
 ]
