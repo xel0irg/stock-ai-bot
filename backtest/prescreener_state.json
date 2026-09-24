@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 337.1199951171875,
+      "price": 336.5249938964844,
       "volume_ratio": 0.0,
-      "ts": 1790260246.1358063,
+      "ts": 1790260837.7173324,
       "last_full_scan_ts": 1790260642.3385496
     },
     "AMZN": {
-      "price": 246.55999755859375,
+      "price": 246.60499572753906,
       "volume_ratio": 0.0,
-      "ts": 1790260246.302315,
+      "ts": 1790260838.0142694,
       "last_full_scan_ts": 1790260301.6794305
     },
     "META": {
-      "price": 765.0650024414062,
+      "price": 767.7899780273438,
       "volume_ratio": 0.0,
-      "ts": 1790260246.5012448,
-      "last_full_scan_ts": 1790260363.1097178
+      "ts": 1790260838.3217196,
+      "last_full_scan_ts": 1790260889.5544243
     },
     "MSFT": {
-      "price": 493.6697082519531,
+      "price": 494.29998779296875,
       "volume_ratio": 0.0,
-      "ts": 1790260246.7879004,
+      "ts": 1790260838.7906754,
       "last_full_scan_ts": 1790260419.1492891
     },
     "NVDA": {
-      "price": 222.4199981689453,
+      "price": 222.5050048828125,
       "volume_ratio": 0.0,
-      "ts": 1790260246.9937973,
+      "ts": 1790260839.122615,
       "last_full_scan_ts": 1790260477.6998625
     },
     "QQQ": {
-      "price": 737.3499755859375,
+      "price": 737.4000244140625,
       "volume_ratio": 0.0,
-      "ts": 1790260247.1991405,
+      "ts": 1790260839.6027546,
       "last_full_scan_ts": 1790260530.5424747
     },
     "SPY": {
-      "price": 765.7849731445312,
+      "price": 765.8699951171875,
       "volume_ratio": 0.0,
-      "ts": 1790260247.4190903,
+      "ts": 1790260839.975785,
       "last_full_scan_ts": 1790260584.4975295
     },
     "TSLA": {
-      "price": 378.19989013671875,
+      "price": 378.07000732421875,
       "volume_ratio": 0.0,
-      "ts": 1790260247.6486363,
+      "ts": 1790260840.2964892,
       "last_full_scan_ts": 1790260694.178595
     }
   },
@@ -315,7 +315,45 @@
       "was_flagged": true,
       "cached_at": 1790174125.5291302,
       "score": 34
+    },
+    "META": {
+      "result": {
+        "ticker": "META",
+        "timestamp": "2026-09-24T14:41:29.543600",
+        "analysis": "# META \u2014 0-2 DTE OPTIONS ANALYSIS\n**As of 10:40 AM ET | Price: $767.69**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has surged 34.5% over 20 days and is now kissing its 52-week high ($768.65) with RSI at ~80 and Bollinger Band position at 0.989 \u2014 essentially glued to the upper band. The most plausible near-term scenario is a brief consolidation or shallow pullback from the 52W high resistance zone, followed by a digestion period before any continuation. The analyst price target of $770.21 implies only $2.52 of upside from here, leaving almost no runway for a momentum chase on short-dated calls.\n\n---\n\n## 2. BULL CASE\n\n- **Analyst consensus + news catalyst**: 56 analysts at STRONG_BUY with BoA backing after the Muse surprise \u2014 institutional support is active and fresh.\n- **Intraday structure intact**: Price is above VWAP on all three timeframes (5m, 15m, 1H), 15m MACD is bullish, and 3-candle momentum is positive. The tape has not broken down intraday.\n- **Low reversal risk (12/100)**: The exhaustion check explicitly shows no exhausted side detected and no RSI divergence \u2014 the move has participation behind it, not just price extension alone.\n- **OBV rising + neutral P/C (0.48)**: Volume accumulation trend is intact; options flow is not showing defensive hedging or bearish conviction.\n\n---\n\n## 3. BEAR CASE\n\n- **52-Week high = hard ceiling**: $767.69 vs. 52W high of $768.65 \u2014 price is 0.1% from the all-time range high. This is the most obvious resistance level in the chart and the market knows it.\n- **Analyst price target nearly exhausted**: $770.21 target is only $2.52 away. Risk/reward for calls is asymmetric in the wrong direction \u2014 the consensus upside is already priced in.\n- **Daily RSI 79.89 + Stochastic 99.41**: Both oscillators are at extremes rarely sustained. Even without divergence, mean reversion pressure increases sharply at these readings.\n- **Low volume (0.63x 20D MA)**: The breakout to 52W highs is happening on below-average volume \u2014 weak participation at a critical level raises the probability of a failed breakout or trap.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52W high breakout vs. rejection**: A clean close above $768.65 could trigger momentum algorithms and FOMO buying. A rejection (bearish engulfing or pin at highs) would be a high-conviction reversal signal intraday.\n- **Broad tech weakness (-1.02% XLK)**: Tech sector is the worst performer today. If sector selling accelerates, META's intraday bid could evaporate quickly despite stock-specific strength.\n- **Options expiry dynamics**: Unusual activity flagged on both 5 calls and 5 puts \u2014 gamma pinning or dealer hedging near $770 could either cap price or accelerate a move through that level.\n- **SPY/QQQ softness**: Both indices are modestly red today. If macro selling resumes, high-beta (Beta 1.24) META is exposed to a sharper intraday flush than the index.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **52W High / Hard Resistance** | $768.65 | Thesis-changing level \u2014 close above = breakout; rejection = short-term top |\n| **Analyst Price Target** | $770.21 | Upside exhausted if reached |\n| **Current Price** | $767.69 | AT resistance right now |\n| **5m VWAP** | $761.12 | First intraday support; loss of this weakens bull case |\n| **15m VWAP** | $755.27 | Key intraday support; breakdown here = meaningful deterioration |\n| **1H VWAP** | $751.18 | Major intraday support; loss = bearish intraday structure shift |\n| **0DTE Expected Move Floor** | ~$750.42 | Lower bound of 0DTE straddle |\n\n**Critical level that changes the thesis**: $768.65 \u2014 a sustained breakout above the 52W high is bullish continuation; a rejection and close below $761 (5m VWAP) opens a move toward $751\u2013$755.\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 41/100\n\nThe directional read is moderately clear (bullish intraday structure, intact VWAPs) but tradeability collapses this score: price is already at 52W high resistance with only $2.52 to the analyst target, and the 0DTE expected move of \u00b1$17.27 means a call needs META to push *through* a 52W ceiling to pay \u2014 a low-probability scenario. The stock is neither in breakout nor pullback; it is parked at resistance with no clean entry trigger for either direction right now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nRationale: The setup is caught at a structural ceiling (52W high) with analyst upside nearly exhausted. The intraday structure is bullish but the entry point is poor \u2014 buying calls at 52W resistance with below-average volume and 0.63x participation is chasing, not trading. Regime gate favors calls generally, but the specific geometry here (target already reached, resistance overhead, low volume breakout) makes this a wait-and-see situation.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Price is parked at the 52-week high ceiling ($768.65) with analyst consensus upside exhausted at $770.21 \u2014 a call requires breaking through multi-month resistance on below-average volume (0.63x), and a put is blocked by the bull regime gate (price above all VWAPs, reversal risk 12/100, no bearish intraday confirmation); neither direction has a viable 0-2 DTE entry trigger at this moment.\n\n---\n\n**WAIT FOR**: Either (a) a clean breakout + hold above $770 on volume \u22651.2x avg \u2192 0DTE/1DTE call targeting $778\u2013$780, or (b) a rejection candle at 52W high with 15m close below $761 VWAP on expanding volume \u2192 reassess put eligibility against regime gate rules.",
+        "confluence_score": 48,
+        "signal_clarity": 55,
+        "tradeability": 41,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Price is parked at the 52-week high ceiling ($768.65) with analyst consensus upside exhausted at $770.21 \u2014 a call requires breaking through multi-month resistance on below-average volume (0.63x), and a put is blocked by the bull regime gate (price above all VWAPs, reversal risk 12/100, no bearish intraday confirmation); neither direction has a viable 0-2 DTE entry trigger at this moment.",
+          "reversal_risk": 12,
+          "exhaustion_side": null,
+          "reversal_notes": "price is 1.9 ATR from VWAP",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6927
+      },
+      "was_flagged": true,
+      "cached_at": 1790260889.5544274,
+      "score": 48
     }
   },
-  "saved_at": "2026-09-24T10:38:16-04:00"
+  "saved_at": "2026-09-24T10:41:31-04:00"
 }
