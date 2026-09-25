@@ -1,212 +1,60 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 336.7699890136719,
+      "price": 336.24468994140625,
       "volume_ratio": 0.0,
-      "ts": 1790272240.9531817,
-      "last_full_scan_ts": 1790268690.4372642
+      "ts": 1790346653.6982608,
+      "last_full_scan_ts": 1790346981.9203606
     },
     "AMZN": {
-      "price": 248.7899932861328,
+      "price": 247.51499938964844,
       "volume_ratio": 0.0,
-      "ts": 1790272241.1139445,
-      "last_full_scan_ts": 1790272287.1641393
+      "ts": 1790346653.9389222,
+      "last_full_scan_ts": 1790346712.0600402
     },
     "META": {
-      "price": 769.7100219726562,
+      "price": 751.4400024414062,
       "volume_ratio": 0.0,
-      "ts": 1790272241.2879958,
-      "last_full_scan_ts": 1790271090.9134166
+      "ts": 1790346654.1374762,
+      "last_full_scan_ts": 1790346762.6420226
     },
     "MSFT": {
-      "price": 495.1700134277344,
+      "price": 513.1799926757812,
       "volume_ratio": 0.0,
-      "ts": 1790272241.4843245,
-      "last_full_scan_ts": 1790270491.8495588
+      "ts": 1790346654.3829777,
+      "last_full_scan_ts": 1790346809.6030746
     },
     "NVDA": {
-      "price": 224.19000244140625,
+      "price": 223.36500549316406,
       "volume_ratio": 0.0,
-      "ts": 1790272241.7345347,
-      "last_full_scan_ts": 1790272330.0510087
+      "ts": 1790346654.7422137,
+      "last_full_scan_ts": 1790346868.4503365
     },
     "QQQ": {
-      "price": 739.6199951171875,
+      "price": 740.72998046875,
       "volume_ratio": 0.0,
-      "ts": 1790272241.991895,
-      "last_full_scan_ts": 1790271134.5757728
+      "ts": 1790346655.0393994,
+      "last_full_scan_ts": 1790347034.7833345
     },
     "SPY": {
-      "price": 766.7000122070312,
+      "price": 767.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1790272242.273202,
-      "last_full_scan_ts": 1790271175.335127
+      "ts": 1790346655.5491726,
+      "last_full_scan_ts": 1790347092.5615356
     },
     "TSLA": {
-      "price": 380.6199951171875,
+      "price": 370.79998779296875,
       "volume_ratio": 0.0,
-      "ts": 1790272242.5392597,
-      "last_full_scan_ts": 1790272378.771123
+      "ts": 1790346656.1400783,
+      "last_full_scan_ts": 1790346923.4244406
     }
   },
   "ai_cache": {
-    "SPY": {
-      "result": {
-        "ticker": "SPY",
-        "timestamp": "2026-09-24T17:32:55.331031",
-        "analysis": "# SPY \u2014 0-2 DTE OPTIONS ANALYSIS\n**01:32 PM ET | Last: $767.40**\n\n---\n\n## 1. MARKET SCENARIO\n\nSPY is grinding in a narrow range just below the 52W high of $779.37, with daily momentum nearly flat (-0.05% today, -0.23% over 20 days). The most plausible scenario over 5-15 days is continued consolidation between the 20D support ($752) and resistance ($773.50), with a mild bullish bias given the confirmed bull regime (SPY and QQQ both above EMA9/EMA21, VIX at 15.48). A catalyst would be required to break meaningfully above $773.50 or below $759 (EMA50).\n\n---\n\n## 2. BULL CASE\n\n- **Confirmed bull regime:** SPY and QQQ both trading above EMA9 and EMA21; VIX at 15.48. The macro tape is unambiguously risk-on.\n- **Daily MACD histogram positive (+0.614):** Bullish momentum on the daily timeframe remains intact despite the flat price action.\n- **Bollinger Band position at 0.65:** Price is in the upper half of the band \u2014 bearish only on extremes; here it reflects healthy positioning, not exhaustion.\n- **15-minute timeframe bullish (3 of 4 signals):** Price above 15m VWAP ($766.05), EMA9 > EMA21, MACD histogram positive (+0.4962). This is the setup-confirmation timeframe and it leans constructive.\n\n---\n\n## 3. BEAR CASE\n\n- **OBV falling:** On-balance volume is declining, suggesting distribution rather than accumulation despite price stability. This is a quiet warning.\n- **Volume severely low (0.47x 20D MA):** The 15m push upward is on just 0.09x average volume. Moves without volume participation are fragile and easily reversed.\n- **5-minute and 1-hour both bearish:** Price is below VWAP on both the 5m ($767.90) and 1H ($768.45) timeframes. Intraday structure is leaning negative.\n- **Price below 52W high with no catalyst:** Sitting $12 below the 52W high ($779.37) with no news, no earnings, no obvious catalyst \u2014 the path of least resistance for a no-catalyst tape is mean reversion, not breakout.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data releases:** Any surprise CPI, Fed speaker, or geopolitical event could spike VIX rapidly and invalidate the current low-vol bull regime.\n- **Options expiry dynamics:** P/C ratio of 1.0 with 10 flagged unusual contracts (balanced 5/5) suggests no dominant positioning \u2014 gamma effects at expiry are unpredictable in this environment.\n- **Low-volume tape snap:** With volume at 0.47x normal, any institutional order flow entering the market could produce a sharp directional move disproportionate to what current signals suggest.\n- **VIX inflection:** VIX at 15.48 is benign; a move above 18-20 would shift the regime and reprice all short-dated premium materially.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Resistance | $773.50 | 20D resistance \u2014 breakout above turns thesis bullish |\n| Resistance | $775.46 | Bollinger Band upper \u2014 price has not tested this |\n| Current | $767.40 | Anchored between VWAP levels |\n| 1H VWAP | $768.45 | Must reclaim to flip intraday bias bullish |\n| 5m VWAP | $767.90 | Immediate overhead resistance for bulls |\n| EMA9 (daily) | $765.76 | First dynamic support |\n| EMA21 (daily) | $763.99 | Loss of this flips regime signal |\n| Support | $759.09 | EMA50 \u2014 key structural floor |\n| Support | $752.18 | 20D support \u2014 loss triggers larger reassessment |\n\n**Thesis-changing level:** A close below $763.99 (daily EMA21) would be the first crack in the bull regime. A clean break above $773.50 confirms continuation toward $779.\n\n---\n\n## 6. CONFLUENCE SCORE: 44/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 40/100\n\nSignals are genuinely mixed across timeframes (5m bearish, 15m bullish, 1H mixed), volume is absent across all frames, and the HARD REGIME GATE blocks PUT signals while the bullish case lacks the momentum confirmation needed to justify CALL premium on a low-volume drift. Tradeability is the binding constraint: the realistic move implied by intraday structure is well within the 0DTE expected move range, but direction confidence is insufficient to justify buying theta here.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bull regime gate favors CALLs structurally, but the intraday setup does not provide a clean enough entry. The 5m is bearish, the 1H is mixed/below VWAP, volume is critically thin (0.09x on 15m, 0.03x on 1H), and the 3-candle momentum on the 15m is actually negative (-0.112%) despite the bullish MACD read. This is a low-participation drift, not a directional trade.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Timeframes genuinely conflict (5m bearish, 15m bullish, 1H mixed) on critically low volume (0.03x\u20130.09x average) \u2014 no directional edge exists; the bull regime gate blocks PUTs and the CALL setup lacks the volume or VWAP confirmation required to justify premium at 1:32 PM ET.",
-        "confluence_score": 44,
-        "signal_clarity": 48,
-        "tradeability": 40,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Timeframes genuinely conflict (5m bearish, 15m bullish, 1H mixed) on critically low volume (0.03x\u20130.09x average) \u2014 no directional edge exists; the bull regime gate blocks PUTs and the CALL setup lacks the volume or VWAP confirmation required to justify premium at 1:32 PM ET.",
-          "reversal_risk": 20,
-          "exhaustion_side": null,
-          "reversal_notes": "push is on 0.49x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6628
-      },
-      "was_flagged": false,
-      "cached_at": 1789750415.9163039,
-      "score": 44
-    },
     "NVDA": {
       "result": {
         "ticker": "NVDA",
-        "timestamp": "2026-09-24T17:52:10.046504",
-        "analysis": "# NVDA \u2014 0-2 DTE OPTIONS ANALYSIS\n**01:51 PM ET | $224.16**\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is grinding in a narrow range, holding above short-term EMAs and 15m VWAP but sitting below the 1H VWAP ($225.08), with volume running at just 34% of its 20-day average \u2014 suggesting institutional disinterest rather than directional conviction. The most plausible scenario over the next 5-15 days is continued consolidation between $216\u2013$230, with minor upward drift supported by the broader bull tape (SPY/QQQ above EMAs) and NVDA's deeply undervalued forward P/E (14.3x) and strong analyst targets ($327.70). A clean breakout above $230 resistance requires a catalyst; a flush below $217 requires macro deterioration.\n\n---\n\n## 2. BULL CASE\n\n1. **SPY/QQQ bull regime + CALL-favored gate** \u2014 Both indices trend above EMA9/EMA21 with VIX at 15.71. Regime rules explicitly favor CALLs at score \u226555; the tape is the confirmation.\n2. **15m and 5m timeframes bullish, above VWAP** \u2014 Price holds above both short-term VWAPs ($222.96 and $224.16), EMA9/21 stacked bullishly on both timeframes, 3-candle momentum positive on 5m (+0.166%).\n3. **MACD histogram positive on daily (+0.3619) and 15m (+0.3121)** \u2014 Both timeframes show constructive momentum; not a fading MACD.\n4. **OBV rising + strong forward fundamentals** \u2014 Accumulation bias persists. Forward P/E of 14.3x, PEG of 0.49, and 59 analysts at STRONG BUY with $327.70 target create a structural bid.\n\n---\n\n## 3. BEAR CASE\n\n1. **1H VWAP/EMA bearish** \u2014 Price sits below 1H VWAP ($225.08) with EMA9 ($224.24) < EMA21 ($224.72); the dominant intraday trend structure is bearish on the highest-weight timeframe.\n2. **Volume is critically absent** \u2014 0.34x of 20-day average; without volume, any \"bull\" move above VWAP is suspect and prone to failure. The 15m reversal check explicitly flags \"little participation.\"\n3. **20D return negative (-1.57%), below 200 EMA** \u2014 Medium-term trend is sideways-to-down; the stock has not reclaimed its longer-term trend.\n4. **Tech sector underperforming (-0.62%)** \u2014 NVDA is moving with a weak sector, which caps near-term upside.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news currently** \u2014 An unexpected headline (AI demand update, export controls, competitor announcement) on thin volume could produce an outsized move relative to the quiet session.\n- **10 unusual options contracts flagged (5 calls / 5 puts)** \u2014 Perfectly balanced unusual flow is unusual in itself; could signal a straddle play ahead of an unknown catalyst, or hedging around a macro event.\n- **Late-day volume surge** \u2014 With volume at 0.34x avg at 1:51 PM ET, any institutional print in the final 90 minutes could set direction for tomorrow's open.\n- **Macro catalyst** \u2014 SPY/QQQ are both slightly red (-0.09%/-0.17%); a Fed speaker or economic print could shift the tape and amplify NVDA's move given beta of 2.22.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 1H VWAP (resistance) | $225.08 | Reclaiming this converts 1H bias to bullish |\n| 15m VWAP (support) | $222.96 | Losing this invalidates short-term bull structure |\n| 5m VWAP (current pivot) | $224.16 | Price sitting exactly here \u2014 directional tie |\n| 20D Resistance | $230.10 | Breakout target; requires catalyst |\n| 20D Support | $210.96 | Macro flush level |\n| EMA50 (daily) | $216.07 | Structural support if 15m VWAP breaks |\n\n**Thesis-changing level:** A 15m candle close above $225.10 (clearing 1H VWAP) on volume \u22650.6x average = bull thesis confirmed. A close below $222.96 (15m VWAP) = short-term bull thesis invalidated.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 56/100\n\n**Score rationale:** The 1H timeframe (highest intraday weight) is bearish while 15m/5m are bullish \u2014 this is the definition of mixed timeframes per the confluence rules. The regime gate favors CALLs but the 1H structure and near-zero volume prevent high-conviction signal clarity. Tradeability is marginally adequate (expected move is workable at \u00b1$2.33\u2013$3.30) but signal clarity caps the composite at 52. The setup is not a clear chart \u2014 it is a genuine conflict.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Low confidence)**\n\nThe 1H bearish structure directly conflicts with the 15m/5m bullish reads. The confluence rules explicitly state \"Mixed timeframes = wait for alignment before entering.\" The regime gate favors CALLs but requires at least one VWAP above on the 15m AND positive intraday momentum \u2014 while those exist on the short timeframes, the 1H VWAP at $225.08 acts as an overhead cap that has not been resolved. Volume absence makes any directional conviction premature.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 5m and 15m are bullish above their VWAPs while the 1H is bearish below its VWAP ($225.08), and volume at 0.34x average provides no confirmation for either direction; wait for 1H VWAP resolution on volume before entering.",
-        "confluence_score": 52,
-        "signal_clarity": 48,
-        "tradeability": 56,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 5m and 15m are bullish above their VWAPs while the 1H is bearish below its VWAP ($225.08), and volume at 0.34x average provides no confirmation for either direction; wait for 1H VWAP resolution on volume before entering.",
-          "reversal_risk": 32,
-          "exhaustion_side": null,
-          "reversal_notes": "price is 1.5 ATR from VWAP; push is on 0.49x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6844
-      },
-      "was_flagged": false,
-      "cached_at": 1790091786.642965,
-      "score": 52
-    },
-    "META": {
-      "result": {
-        "ticker": "META",
-        "timestamp": "2026-09-24T17:31:30.900807",
-        "analysis": "# META \u2014 0-2 DTE Options Analysis\n**As of 1:30 PM ET | Last Price: $771.87**\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA has run 35% in 20 days and is now pressing against its 52-week high ($774.25) \u2014 essentially at all-time-high territory \u2014 with RSI at 80 and Stochastic at 98.6. The most plausible scenario over the next 5-15 days is a consolidation or shallow pullback toward the $740-$750 range as the overbought condition works off, followed by a potential continuation if the macro tape holds. A breakout above $774.25 on strong volume is possible but would require fresh catalyst; the more likely near-term path is sideways-to-lower mean reversion toward intraday VWAP levels.\n\n---\n\n## 2. BULL CASE\n\n- **Multi-timeframe VWAP dominance:** Price is above VWAP on 5m ($770.38), 15m ($766.84), and 1H ($755.56) \u2014 the cleanest structural bullish alignment possible intraday.\n- **MACD Histogram strength:** Daily histogram at 12.98 signals sustained institutional momentum, not a fading move at the macro level.\n- **OBV rising + volume above 20D MA:** Accumulation is genuine; buyers have not abandoned the move despite the extended run.\n- **Bank of America catalyst + Strong Buy consensus:** 56-analyst Strong Buy with $770 mean target (now at price) suggests any pullback will see buy-the-dip behavior; positive news flow sustains bid.\n\n---\n\n## 3. BEAR CASE\n\n- **Bullish exhaustion confirmed, low participation:** Price made a higher high but RSI did not \u2014 bearish divergence on 15m. Volume is 0.28x recent average on the push. This is the textbook definition of a tired move.\n- **RSI 80.29 + Stochastic 98.6 \u2014 historically extreme:** At these readings on a daily timeframe, mean reversion pressure is severe. The last time RSI was this extended, multi-day pullbacks followed.\n- **Pressing 52-week high resistance ($774.25):** Price is within $2.38 of the 52-week high. Resistance at this level is structural; a rejection here has asymmetric downside given the run-up.\n- **Tech sector red today (-0.41%) with flat SPY/QQQ:** META is outperforming a weak sector. Sector rotation pressure exists; if tech continues to lag, META's premium evaporates quickly.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52-week high breakout:** A clean close above $774.25 on volume >1.5x average would trigger momentum-chasing algos and invalidate the exhaustion thesis entirely. This is the single biggest binary risk to a bearish view.\n- **Broad market reversal:** SPY and QQQ are essentially flat on the day. Any deterioration in macro tone (economic data, Fed speak) could accelerate sector rotation out of tech.\n- **Options expiry dynamics:** With 10 unusual contracts flagged (5 calls, 5 puts) and a P/C of 0.57, call-heavy positioning could create a self-reinforcing gamma squeeze if $775 strikes are in play \u2014 or a sharp unwind if they expire worthless.\n- **\"Muse\" product surprise:** The Bank of America note references a product surprise. Any follow-up coverage or user data on adoption could move sentiment rapidly in either direction.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Resistance** | $774.25 | 52-week high \u2014 breakout or rejection defines next 3-5 days |\n| **Current Price** | $771.87 | At upper Bollinger Band (771.29) \u2014 statistically extended |\n| **5m VWAP** | $770.38 | First intraday support; loss of this flips 5m bias |\n| **15m VWAP** | $766.84 | Key intraday support; thesis change level |\n| **1H VWAP** | $755.56 | Major support; a test here = 2.1% pullback, within 0DTE expected move |\n| **Critical level** | $766.84 | 15m VWAP \u2014 loss of this on volume is the CALL-invalidation trigger |\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 36/100\n\nThe directional read is moderately clear (bullish trend structure, bearish exhaustion signal) but the two dominant near-term forces \u2014 structural bullishness and confirmed exhaustion at resistance \u2014 directly oppose each other at the worst possible price (52-week high). Tradeability caps the score hard: the stock is already within $2 of the 52-week high resistance, leaving almost no room for a CALL to profit before hitting structural resistance, and the regime gate blocks a PUT unless price breaks below both VWAPs with volume. No clean trade is available at current price; score reflects a \"clear but non-actionable\" setup.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe trend is unambiguously bullish structurally, but confirmed exhaustion at 52-week high resistance with 0.28x volume participation and RSI divergence makes chasing a CALL here a late entry with extreme risk. The regime gate would block a PUT at current price (not below 15m/1H VWAP, volume insufficient). Neither direction clears the bar at this moment.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: CALL is blocked by confirmed bullish exhaustion (55/100 reversal risk, RSI divergence, 0.28x volume) pressing directly into 52-week high resistance with no room to run; PUT is blocked by the bull regime gate \u2014 price is not below either the 15m VWAP ($766.84) or 1H VWAP ($755.56) and volume is insufficient to meet the PUT threshold. Wait for either a volume-confirmed breakout above $774.25 (CALL entry) or a confirmed break below 15m VWAP $766.84 on volume \u22650.8x average (PUT consideration).\n```\n\n---\n\n**\u26a0\ufe0f TRADER NOTE \u2014 CONDITIONAL TRIGGERS:**\nThis is not a \"no setup exists\" situation \u2014 it's a \"wrong time to enter\" situation. Two live triggers to monitor:\n\n- **CALL trigger:** Clean breakout + close above **$774.25** on volume >1.5x average \u2192 1DTE ATM call, target $785-$787, stop on close back below $771.\n- **PUT trigger (regime-gated):** Close below **$766.84** (15m VWAP) on volume \u22650.8x average, with 1H VWAP also breached at $755.56 \u2192 then reassess PUT at 1DTE, target $755-$756. Requires ALL three regime gate conditions met.\n\nNeither trigger has fired as of 1:30 PM ET.",
-        "confluence_score": 47,
-        "signal_clarity": 58,
-        "tradeability": 36,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "CALL is blocked by confirmed bullish exhaustion (55/100 reversal risk, RSI divergence, 0.28x volume) pressing directly into 52-week high resistance with no room to run; PUT is blocked by the bull regime gate \u2014 price is not below either the 15m VWAP ($766.84) or 1H VWAP ($755.56) and volume is insufficient to meet the PUT threshold. Wait for either a volume-confirmed breakout above $774.25 (CALL entry) or a confirmed break below 15m VWAP $766.84 on volume \u22650.8x average (PUT consideration).",
-          "reversal_risk": 55,
-          "exhaustion_side": "BULLISH_EXHAUSTION",
-          "reversal_notes": "price made a higher high but RSI did not \u2014 fewer buyers behind this push; push is on 0.28x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 7041
-      },
-      "was_flagged": false,
-      "cached_at": 1790260889.5544274,
-      "score": 47
-    },
-    "TSLA": {
-      "result": {
-        "ticker": "TSLA",
-        "timestamp": "2026-09-24T17:52:58.768456",
-        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 01:52 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is grinding near the top of its 20-day range (~$380 resistance) with price at the upper Bollinger Band, RSI near overbought, and stochastics already overbought \u2014 but the 15m and 1H structure remains bullish with price holding above both VWAPs. The most plausible scenario over the next 5-15 sessions is a mild consolidation or shallow pullback toward $365-370 before any continuation, as the rally off the $297 low has run ~28% and is running into technical compression. For today's session, the most likely path is sideways-to-slight-drift as volume is less than half the 20-day average \u2014 no conviction behind a breakout or breakdown.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram +1.69 (Daily) + 15m/1H MACD Bullish:** Multi-timeframe momentum is constructive; daily MACD suggests the intermediate trend still has positive carry.\n- **15m and 1H VWAP holds:** Price is above both the 15m ($379.22) and 1H ($379.92) VWAPs \u2014 the intraday trend structure is bullish by the metrics that matter most for 0-2 DTE.\n- **EMA Stack Aligned Bullish (9/21/50):** EMA9 > EMA21 > EMA50 on the daily ($372 / $365 / $360) \u2014 momentum is stacked, not deteriorating.\n- **Analyst Price Target $396.94 / Bull Tape:** Consensus target sits ~4.4% above current price; SPY and QQQ are above EMA9/21 in confirmed bull regime, which structurally favors CALL setups.\n\n---\n\n## 3. BEAR CASE\n\n- **Price at 20D Resistance ($380.38) + Upper Bollinger Band ($383.43):** TSLA is literally at documented resistance and AT the upper band \u2014 the risk/reward for a new long entry here is unfavorable. Upper band acts as a magnet to mean-revert, not accelerate.\n- **Stochastics Overbought (82/83) + RSI Near Overbought (61):** Short-term momentum oscillators are stretched. Stochastics at 82/83 has historically preceded short-term mean-reversion in range-bound conditions.\n- **Volume 0.47x 20-Day Average:** The current move lacks participation. A breakout attempt above $383 on 47% of normal volume has high failure probability \u2014 exhaustion without confirmation.\n- **5m Structure Fully Bearish + Price Below 5m VWAP ($381.73):** The shortest timeframe is in distribution: 0 bull / 3 bear signals, price below VWAP, negative MACD, bearish 3-candle momentum. This is the most sensitive leading indicator for entry timing.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Today:** Zero articles flagged = price is purely technically driven, which makes the resistance/upper-band setup more meaningful \u2014 no news event is going to inject directional momentum to break the level.\n- **4 Recent SEC Filings (90 days):** Unspecified \u2014 could include anything from registration statements to 8-K disclosures. Worth checking for after-hours risk.\n- **Macro Close Risk:** SPY/QQQ slightly negative on the day; any deterioration into the close in the broad market could accelerate TSLA's 5m-led softness.\n- **Options Expiry Dynamics:** Balanced unusual activity (5 calls / 5 puts flagged) and P/C 0.76 \u2014 no gamma squeeze or max-pain pin is apparent, but watch the $380 level which is clearly the pivot point for options positioning.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Type | Significance |\n|---|---|---|\n| $383.43 | Resistance | Upper Bollinger Band \u2014 breakout above = momentum acceleration |\n| $381.73 | Intraday Pivot | 5m VWAP \u2014 price must reclaim to flip 5m bullish |\n| **$380.38** | **Current / 20D Resistance** | **Thesis pivot \u2014 holding here is neutral; losing it confirms bear micro** |\n| $379.22 | Support | 15m VWAP \u2014 loss here shifts 15m to bearish |\n| $379.92 | Support | 1H VWAP \u2014 loss here makes 1H bearish; changes thesis materially |\n| $372 | Support | EMA9 daily \u2014 meaningful pullback target |\n| $364.64 | Support | EMA21 daily \u2014 bull case remains intact above here |\n\n**Critical level:** $379.22 (15m VWAP). If TSLA loses this and closes a 15m candle below it with volume > 0.5x average, the setup shifts toward near-term weakness. Above $381.73 (5m VWAP) reclaimed = micro bullish resumption.\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 42/100\n\nThe directional read is moderately clear (1H/15m bullish, 5m bearish, daily at hard resistance) but the mixed timeframe structure \u2014 specifically the 5m diverging hard from the 1H/15m \u2014 violates the confluence rules for a high-conviction entry. More critically, tradeability is capped: price is already at the upper Bollinger Band and 20D resistance with sub-0.5x volume, meaning a CALL target requires a breakout through resistance that is not supported by participation, and a PUT cannot clear the Regime Gate (price is above both 15m and 1H VWAP, score below 75 required for bull tape PUT). Tradeability cap prevents this from scoring above 54 regardless of signal clarity.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nRationale: Regime gate favors CALLs but price is already AT resistance with zero volume confirmation and 5m structure in full distribution \u2014 chasing a CALL at the upper band on 0.47x volume is a low-probability entry. A PUT cannot clear the bull regime gate (price above both VWAPs, score < 75). The correct answer is wait.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Timeframes are split (5m fully bearish vs 15m/1H bullish), price is pinned at documented 20D resistance and upper Bollinger Band on 0.47x volume \u2014 a CALL lacks volume confirmation for a breakout at resistance, and the bull regime gate blocks a PUT (price above both 15m and 1H VWAP with score below 75).\n```\n\n---\n\n**MONITOR FOR ENTRY:** If TSLA breaks and holds **above $383.43** (upper band) on volume \u2265 0.8x average on a 15m close \u2192 re-evaluate CALL. If TSLA breaks **below $379.22** (15m VWAP) AND $379.92 (1H VWAP) simultaneously on volume \u2265 0.8x average \u2192 re-evaluate PUT through regime gate. Neither condition is currently met.",
-        "confluence_score": 47,
-        "signal_clarity": 52,
-        "tradeability": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Timeframes are split (5m fully bearish vs 15m/1H bullish), price is pinned at documented 20D resistance and upper Bollinger Band on 0.47x volume \u2014 a CALL lacks volume confirmation for a breakout at resistance, and the bull regime gate blocks a PUT (price above both 15m and 1H VWAP with score below 75).",
-          "reversal_risk": 20,
-          "exhaustion_side": null,
-          "reversal_notes": "push is on 0.42x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 7071
-      },
-      "was_flagged": false,
-      "cached_at": 1790267109.2303941,
-      "score": 47
-    },
-    "MSFT": {
-      "result": {
-        "ticker": "MSFT",
-        "timestamp": "2026-09-24T17:21:31.839256",
-        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**01:20 PM ET | Price: $495.61**\n\n---\n\n## 1. MARKET SCENARIO\n\nThe most plausible scenario over the next 5-15 days is a range-bound grind between $490 support and $513 resistance, with a mild bearish lean intraday. MSFT is trading below its 1H VWAP and EMA9/21 on the hourly, with a negative MACD histogram on the daily \u2014 but the broad market (SPY/QQQ both above EMA9/21) and strong analyst targets ($577) provide a structural floor. A decisive break below $490.30 support would accelerate downside toward the lower Bollinger Band ($487); a reclaim of $497.90 (1H VWAP) flips the intraday narrative bullish.\n\n---\n\n## 2. BULL CASE\n\n- **OBV Rising**: On-Balance Volume is trending up despite price weakness \u2014 institutional accumulation signal; suggests dip buyers are active below $496.\n- **15m Timeframe Fully Bullish (3/0)**: Price above 15m VWAP ($494.48), MACD histogram positive (+0.2454), 3-candle momentum positive \u2014 the intermediate-term intraday structure has not broken down.\n- **EMA50 at $471.84 / Analyst Target $577**: Strong fundamental floor and analyst consensus (Strong Buy, 52 analysts) limit downside; market structure supports a mean-reversion bounce toward $500+.\n- **SPY/QQQ Bull Regime + VIX 15.42**: Macro context favors calls; the regime gate explicitly favors call signals at score \u226555 in this environment.\n\n---\n\n## 3. BEAR CASE\n\n- **Daily MACD Histogram: -2.30**: The strongest intermediate-term momentum signal is decisively bearish \u2014 trend pressure is still down on the daily.\n- **Price Below 1H VWAP ($497.90) and 5m VWAP ($495.80)**: Selling pressure dominates two of three intraday timeframes; 1H bias is 1 bull/3 bear.\n- **Volume Collapsed (0.41x 20D MA)**: Zero participation behind today's move. Without volume, any 15m bullish signal is suspect \u2014 low conviction. The 15m bullish read is explicitly flagged as low-volume (0.13x avg).\n- **Tech Sector Underperforming**: XLK -0.42% vs SPY +0.02% today \u2014 MSFT is seeing sector-specific selling pressure against a benign macro tape.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News (0 articles)**: Complete news vacuum means the tape is driven purely by technicals and flow. Any macro headline (Fed speaker, AI sector news) could swing the stock \u00b11-2% instantly.\n- **Earnings Not Imminent**: Removes binary risk but also removes a catalyst for a directional breakout.\n- **Options Flow Balanced (5 unusual calls / 5 unusual puts)**: No smart-money directional lean \u2014 institution desks are hedging, not betting. This reinforces the mixed signal.\n- **Short Interest Negligible (1.0%)**: No short squeeze potential. Any upside must come from genuine demand, not covering.\n- **SEC Filings (10 in 90D)**: Elevated filing activity warrants monitoring \u2014 could include registration statements or 8-Ks that precede corporate events.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Hard Support** | $490.30 | 20D support \u2014 break triggers acceleration to $487 |\n| **Lower Bollinger Band** | $487.11 | Next structural target on breakdown |\n| **5m VWAP** | $495.80 | Immediate bear/bull pivot intraday |\n| **15m VWAP** | $494.48 | Bull holds above this |\n| **1H VWAP** | $497.90 | Critical: reclaim = intraday reversal |\n| **EMA21 (daily)** | $494.47 | Closest EMA dynamic support |\n| **Resistance** | $513.53 | 20D resistance ceiling |\n| **Thesis-change level** | $497.90 | Reclaim of 1H VWAP invalidates bearish intraday read |\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 36/100\n\n**Score rationale**: The directional read is genuinely mixed \u2014 daily/1H/5m lean bearish, 15m fully bullish \u2014 which fails the EXCEPTIONAL or HIGH CONVICTION thresholds required for either direction. Critically, the **Hard Regime Gate blocks a PUT signal** (price not below *both* 15m and 1H VWAP simultaneously, and volume is 0.41x avg vs. required \u22650.8x). A CALL is theoretically regime-favored but the 1H VWAP rejection and daily MACD deterioration undercut confidence. Tradeability is capped by the timeframe conflict and the regime gate's PUT exclusion without all three conditions met.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe regime gate mathematically blocks a PUT (volume 0.41x avg, fails the \u22650.8x threshold; price not below *both* 15m and 1H VWAP simultaneously \u2014 price is *above* 15m VWAP). A CALL is theoretically the regime-favored direction but the 1H bearish structure, daily MACD at -2.30, and collapsed volume (zero participation behind the 15m bullish move) mean there is no momentum confirmation \u2014 entering a call here is chasing a low-volume micro-bounce against daily and hourly trend pressure.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks PUT (volume 0.41x avg fails \u22650.8x requirement and price is above 15m VWAP); CALL is regime-favored but 15m bullish signal carries zero volume participation (0.13x avg) against daily MACD -2.30 and 1H bearish structure \u2014 timeframes are genuinely conflicted with no momentum confirmation in either direction.\n```",
+        "timestamp": "2026-09-25T14:34:28.447891",
+        "analysis": "# NVDA \u2014 0-2 DTE Options Analysis | 10:33 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is grinding sideways-to-lower within a bull market tape, sitting below VWAP on all three intraday timeframes but only modestly so (-0.06% to -0.37%). The most plausible scenario over the next 5-15 days is continued range oscillation between $210\u2013$230, with a mild upward bias driven by broad market strength and analyst targets near $328. Near-term, the intraday structure slightly favors further softness toward $221\u2013$222, but the bull regime creates a floor via sector tailwinds and index strength.\n\n---\n\n## 2. BULL CASE\n\n- **Broad Market Tailwind**: SPY +0.20%, QQQ +0.21%, Tech sector +0.49% today \u2014 NVDA's sector is acting well and the regime gate explicitly favors CALLs. This is the single most relevant macro factor for a 0-2 DTE trade.\n- **MACD Histogram (Daily) Positive at +0.2511**: Daily momentum is still net bullish, and price sits in the upper half of Bollinger Bands (0.603), indicating the intermediate trend has not broken down.\n- **Forward P/E 14.3x / PEG 0.48**: Fundamentally cheap for this growth rate. 59 analysts with a STRONG_BUY consensus and $327.70 target provide a macro gravitational pull against sustained downside.\n- **20D Support at $210.96 with EMA50 at $216.15**: Multiple cushions beneath current price limit downside range meaningfully for 0-2 DTE sizing.\n\n---\n\n## 3. BEAR CASE\n\n- **All Intraday VWAPs Bearish**: Price is below the 5m, 15m, and 1H VWAP simultaneously. This is the clearest short-term bearish structural signal in the dataset \u2014 sellers have controlled the session so far.\n- **1H Bias Confirmed Bearish (1B/3Br)**: The hourly timeframe is the most reliable intraday trend indicator, and it reads bearish. EMA9 ($223.98) < EMA21 ($224.65) on the hour, confirming downward slope.\n- **OBV Falling + Volume Only 0.2x Average**: On-balance volume is declining and today's volume is a fifth of the 20-day average. This suggests the recent 20D return of +2.99% was not well-distributed \u2014 a weak rally structurally.\n- **Options Flow Bearish (5 unusual puts vs. 3 unusual calls)**: Smart money flow is leaning put-heavy despite a low P/C ratio of 0.47, which itself is not alarming but the unusual activity skew is worth noting.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No earnings imminent** \u2014 removes the biggest binary risk cleanly.\n- **Volume collapse (0.2x average)**: A sudden volume spike in either direction could trigger a momentum move well outside the expected range. Thin tape = exaggerated moves on any catalyst.\n- **Macro catalyst (Fed speaker, geopolitical chip policy)**: NVDA remains hypersensitive to export restriction news. Any headline on China/AI chip policy could gap the stock \u00b13-5% intraday, overwhelming option premium.\n- **Index continuation**: If SPY/QQQ accelerate into the afternoon, NVDA with a beta of 2.22 could snap back sharply above VWAP, invalidating the bearish intraday structure rapidly.\n- **MACD Fading (15m)**: Histogram shrinking for three bars signals the minor bearish momentum may be decelerating \u2014 a reversal attempt is possible mid-session without external catalyst.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance** | $225.00 | Round number + 15m VWAP ($224.65) cluster |\n| **Resistance** | $230.10 | 20D resistance \u2014 thesis-changer if reclaimed |\n| **Current** | $223.82 | Price now |\n| **Support** | $221.12 | EMA21 daily |\n| **Support** | $216.15 | EMA50 daily \u2014 major structural floor |\n| **Support** | $210.96 | 20D support \u2014 invalidates any bull thesis if lost |\n\n**Thesis-changing level**: A close above $225.50 (above all intraday VWAPs) flips the intraday structure bullish and invalidates the put case. A break below $221.12 (daily EMA21) with volume opens $216\u2013$218.\n\n---\n\n## 6. CONFLUENCE SCORE: 42/100\n\nSIGNAL CLARITY: 48/100\nTRADEABILITY: 36/100\n\n**Score rationale**: Signal clarity is moderate \u2014 intraday structure is bearish (below all VWAPs, bearish 1H) but momentum is decelerating (MACD fading, reversal risk building) and the bull regime gate imposes a hard PUT threshold of 75+ score with volume \u2265 0.8x. Volume at 0.2x average is a disqualifying failure of that gate, and the PUT signal does not reach score 75 on its own merit. On the CALL side, price is not above any intraday VWAP, which removes the regime gate's CALL-favorable override. Tradeability is capped by the thin volume, MACD deceleration, and the regime gate blocking the most aligned direction (PUT). No high-conviction 0-2 DTE trade is viable here.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in abstaining)**\n\nThe intraday setup leans bearish structurally, but the HARD REGIME GATE blocks a PUT signal: volume is 0.2x average (gate requires \u2265 0.8x) and the score does not reach 75. A CALL is not warranted because price is below all three intraday VWAPs. The correct answer is to wait.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks the PUT (volume 0.2x average vs. required 0.8x minimum, and PUT score does not reach 75 threshold); CALL is blocked because price is below all intraday VWAPs with bearish 1H EMA structure \u2014 signals genuinely conflict with regime requirements in both directions.\n\n---\n\n**MONITOR FOR ENTRY**: If NVDA reclaims the 15m VWAP ($224.65) on a candle close with volume \u2265 1.0x average before 1 PM ET, re-evaluate for a 0DTE or 1DTE CALL. If it breaks $221.12 (daily EMA21) on elevated volume (\u2265 1.5x), re-evaluate for a 1DTE PUT \u2014 but only if volume gate is satisfied at that moment.",
         "confluence_score": 42,
         "signal_clarity": 48,
         "tradeability": 36,
@@ -227,27 +75,27 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate blocks PUT (volume 0.41x avg fails \u22650.8x requirement and price is above 15m VWAP); CALL is regime-favored but 15m bullish signal carries zero volume participation (0.13x avg) against daily MACD -2.30 and 1H bearish structure \u2014 timeframes are genuinely conflicted with no momentum confirmation in either direction.",
-          "reversal_risk": 20,
+          "no_trade_reason": "Regime gate blocks the PUT (volume 0.2x average vs. required 0.8x minimum, and PUT score does not reach 75 threshold); CALL is blocked because price is below all intraday VWAPs with bearish 1H EMA structure \u2014 signals genuinely conflict with regime requirements in both directions.",
+          "reversal_risk": 33,
           "exhaustion_side": null,
-          "reversal_notes": "push is on 0.37x the recent volume \u2014 little participation",
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6836
+        "tokens_used": 6929
       },
-      "was_flagged": false,
-      "cached_at": 1790270491.8495626,
+      "was_flagged": true,
+      "cached_at": 1790091786.642965,
       "score": 42
     },
-    "AMZN": {
+    "META": {
       "result": {
-        "ticker": "AMZN",
-        "timestamp": "2026-09-24T17:51:27.154623",
-        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 1:50 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is drifting lower within a medium-term downtrend, trading well below all short-term EMAs on the daily frame and sitting in the lower half of its Bollinger Band. The most plausible scenario over the next 5-15 days is continued rangebound erosion toward the $245-$246 support zone, with no catalyst visible to reverse the trend. A decisive break below $245.34 (lower Bollinger Band) opens the door to $240; a recovery above the $252-$254 EMA cluster would negate the bearish thesis.\n\n---\n\n## 2. BULL CASE\n\n- **15m VWAP hold + bullish structure:** Price is above the 15-minute VWAP ($247.42) with EMA9 > EMA21 on that timeframe and a positive MACD histogram (+0.41). This is the cleanest bullish signal in the dataset.\n- **Analyst consensus + valuation:** 57 analysts rate AMZN STRONG BUY with a $329.54 price target \u2014 price is 24% below consensus. Fundamentally oversold relative to institutional positioning.\n- **Strong earnings growth (2.42x YoY):** Revenue up 19.6%, earnings up 242% \u2014 the underlying business is accelerating, which provides a floor against aggressive selling.\n- **Bull regime (SPY/QQQ above EMA9/EMA21, VIX 15.71):** The broad tape is constructive. AMZN historically benefits from risk-on environments; a market-wide move higher would lift it.\n\n---\n\n## 3. BEAR CASE\n\n- **EMA stack bearish on daily:** EMA9 (252.22) > EMA21 (254.29) > EMA50 (253.63) \u2014 all above price ($248.79). Price is below every major short-term average on the daily chart. This is a structurally bearish arrangement.\n- **MACD daily histogram negative and declining (-0.48):** Momentum is pointed lower on the primary trend timeframe. No sign of a histogram crossover.\n- **1H bias bearish (3 bear/1 bull signals), price below 1H VWAP ($249.57):** The dominant intraday trend is down. Price failing to reclaim the hourly VWAP is a meaningful intraday signal.\n- **OBV falling + volume 0.56x 20D average:** Declining On-Balance Volume confirms distribution. Low volume on today's slight bounce suggests no institutional accumulation \u2014 sellers are in control with minimal buying interest.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data surprises:** With no AMZN earnings imminent, macro events (Fed speakers, CPI revisions, jobs data) are the primary binary risk. AMZN's 1.44 beta means outsized reaction to macro shocks in either direction.\n- **AWS/AI sector rotation:** Any material news around Microsoft Azure, Google Cloud, or AI infrastructure spending could trigger sympathy moves in AMZN's highest-margin segment \u2014 either a relief rally or further rotation out of mega-cap tech.\n- **Options expiry dynamics:** P/C ratio of 0.46 (call-heavy) with 10 flagged unusual contracts (5/5 split) \u2014 if call-side dealers unwind hedges into end of week, that gamma unwind could create a brief downside flush through $246.\n- **No news found:** The absence of headlines is itself informative \u2014 the move is purely technical/macro-driven, which means momentum could be self-reinforcing with no catalyst to reverse it.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Immediate resistance | $249.08 | 5m VWAP \u2014 price must reclaim this to flip intraday bias |\n| Key resistance cluster | $252.22\u2013$254.29 | EMA9/EMA21/EMA50 daily \u2014 bearish unless reclaimed |\n| Critical resistance | $266.43 | 20D resistance \u2014 thesis-changer |\n| Immediate support | $247.42 | 15m VWAP \u2014 losing this flips short-term bullish structure |\n| Key support | $245.96\u2013$245.34 | 20D support / lower Bollinger Band \u2014 critical floor |\n| Downside target | $243.00 | Next meaningful support below BB \u2014 breakdown target |\n| Thesis invalidation (bull) | $254.30 | Close above EMA stack negates short bias |\n\n---\n\n## 6. CONFLUENCE SCORE: 41/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 30/100\n\n**Score rationale:** The directional read is moderately bearish on daily/1H timeframes, but the 15m remains bullish \u2014 timeframes are genuinely split, not cleanly aligned. More critically, the **Hard Regime Gate** applies: in a confirmed bull tape (SPY/QQQ above EMA9/EMA21, VIX 15.71), PUT signals on individual names require score \u226575 AND price below BOTH 15m AND 1H VWAP AND volume \u22650.8x average. Price is **above** the 15m VWAP and volume is 0.56x average \u2014 two of three gate conditions fail, blocking a PUT. A CALL is not supported either: the daily/1H structure is bearish and the 15m bounce is low-conviction on 0.13x volume with a negative 3-candle momentum reading (-0.285%). Tradeability is severely capped by conflicting timeframes and failed regime gate conditions.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe regime gate explicitly blocks a PUT (volume 0.56x, price above 15m VWAP). A CALL requires the bull tape favorability but is undermined by the daily/1H bearish structure and the 15m bounce showing no volume participation (0.13x average). Neither direction has sufficient alignment for a 0-2 DTE options trade at 1:50 PM ET.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks the PUT direction (price above 15m VWAP, volume 0.56x average \u2014 two of three gate conditions fail); the CALL direction is not supported by the daily/1H bearish structure and the 15m bullish signal carries no volume confirmation, making both directions untradeable at this moment.",
-        "confluence_score": 41,
-        "signal_clarity": 52,
-        "tradeability": 30,
+        "ticker": "META",
+        "timestamp": "2026-09-25T14:32:42.640307",
+        "analysis": "# META \u2014 0-2 DTE Options Analysis | 10:31 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nMETA is pulling back sharply (-3.3% today) from near its 52W high ($779.82) after an exceptional 30-day run (+30%), trading well below all intraday VWAPs in a clean bearish intraday structure. The most plausible 5-15 day scenario is continued consolidation/mean reversion toward the $730-$740 range before the longer-term bullish trend (supported by strong fundamentals and analyst targets near $787) reasserts. The immediate intraday tension is a stretched bearish move (-2.5 ATR from VWAP) in a broadly bullish tape \u2014 creating a genuine conflict between the intraday bear and the macro/fundamental bull.\n\n---\n\n## 2. BULL CASE\n\n1. **Strongly bullish news catalyst** \u2014 Bloomberg \"Muse Powers Meta to $2T\" and BofA backing post-Muse surprise. This is fresh fundamental fuel that supports dip-buying, not selling.\n2. **Macro tape is bullish** \u2014 SPY +0.20%, QQQ +0.21%, both above EMA9/EMA21, VIX 15.8. Tech sector +0.49%. META is selling off *against* a green tape, which historically resolves upward.\n3. **Analyst consensus STRONG_BUY, price target $786.80** \u2014 57 analysts, mean rating 1.34/5. Institutional sponsorship is heavy and near-term target is above current price.\n4. **Daily MACD histogram at +11.60 with OBV rising** \u2014 the multi-day momentum structure remains bullish; today's pullback has not broken it.\n\n---\n\n## 3. BEAR CASE\n\n1. **Intraday structure is fully bearish across all timeframes** \u2014 Price below VWAP on 5m, 15m, and 1H simultaneously. 0/3 bull signals on 5m and 1H, 0/4 on 15m. This is textbook intraday distribution.\n2. **Daily RSI at 71.69, Stochastic 83.66/90.0** \u2014 Both overbought on the daily. A 30%+ move in 20 days at these readings historically precedes multi-day consolidation.\n3. **Bollinger Band position at 0.872** \u2014 Price has been hugging the upper band. Today's sharp -3.3% rejection from near the upper band ($783.39) is a classic mean-reversion signal toward the midline (~$660 on daily BB, though near-term support is much closer).\n4. **Low volume (0.37x 20D avg)** \u2014 The selloff is on thin volume. This cuts both ways: it's not a panic flush, but it also means there's no strong buying interest defending the price yet.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Mean reversion snap** \u2014 Price is 2.54 ATR from intraday VWAP. These extensions typically resolve within 1-3 hours. A sudden reclaim of VWAP ($761-$766) would invalidate any intraday PUT thesis immediately.\n- **Macro headlines** \u2014 SPY/QQQ trending up means any positive macro print (Fed speaker, macro data) could trigger a broad tech bid that lifts META regardless of its own structure.\n- **Muse product news follow-through** \u2014 The BofA/Bloomberg coverage is very fresh; additional analyst upgrades or media amplification today could trigger a sharp reversal rally.\n- **Low volume warning** \u2014 0.37x average volume means today's move could be a low-liquidity air pocket that reverses violently once institutional flow arrives later in the session.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Intraday VWAP (15m) | $766.19 | Reclaim = bearish thesis breaks |\n| Intraday VWAP (1H) | $761.49 | Key resistance for any bounce |\n| 52W High / Daily BB Upper | $779.82 / $783.39 | Ceiling if bulls reclaim |\n| **Current price** | **$751.95** | \u2014 |\n| 0DTE expected move low | ~$741.57 | Lower bound of realistic 0DTE move |\n| 1DTE expected move low | ~$737.29 | Lower bound of realistic 1DTE move |\n| 20D Resistance (flipped support) | $777.59 | Bull case target |\n| 20D Support | $571.89 | Only relevant on multi-week breakdown |\n\n**Thesis-changing level:** A 15m candle close *above* $761.49 (1H VWAP) on volume \u2265 1.0x average kills the intraday bear case entirely and signals VWAP reclaim.\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 62/100\nTRADEABILITY: 32/100\n\nThe intraday bearish signals are genuinely clear and aligned (62/100 signal clarity), but **tradeability is severely capped** by three hard constraints simultaneously: (1) the Hard Regime Gate requires PUT score \u226575 AND volume \u22650.8x \u2014 volume is at 0.37x, failing the gate outright; (2) the 15m RSI is at 23.43, price is 2.54 ATR from VWAP \u2014 the move is already stretched and entering a PUT here is chasing exhaustion, not momentum; (3) the macro tape (SPY/QQQ green, Tech +0.49%, fresh bullish news) directly opposes the intraday direction. Tradeability: 32/100.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in NONE)**\n\nThe intraday bear signals are real, but the Hard Regime Gate blocks the PUT (volume at 0.37x vs. required 0.8x), and entering a CALL against a fully bearish intraday structure with price below all VWAPs has no clean trigger. Neither side meets the entry criteria simultaneously.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Hard Regime Gate explicitly blocks the PUT \u2014 volume is 0.37x average vs. the required 0.8x minimum, and the move is already 2.54 ATR extended from VWAP making this a late chase into exhaustion, not a fresh entry; CALL is blocked because price is below all three VWAP levels with 0 bullish intraday signals confirmed.\n```\n\n---\n\n**MONITOR FOR RE-ENTRY:**\n- **PUT trigger:** If volume climbs above 0.8x average AND price breaks below $741.57 (0DTE lower expected move) with a clean 15m close \u2014 reassess, but only if regime gate volume condition is met.\n- **CALL trigger:** If price reclaims 15m VWAP ($766.19) on a confirmed 15m candle close with volume \u2265 1.0x avg \u2014 bullish setup emerges with macro tailwind. This is the higher-probability setup given the tape.",
+        "confluence_score": 47,
+        "signal_clarity": 62,
+        "tradeability": 32,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -265,19 +113,209 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate blocks the PUT direction (price above 15m VWAP, volume 0.56x average \u2014 two of three gate conditions fail); the CALL direction is not supported by the daily/1H bearish structure and the 15m bullish signal carries no volume confirmation, making both directions untradeable at this moment.",
-          "reversal_risk": 32,
+          "no_trade_reason": "Hard Regime Gate explicitly blocks the PUT \u2014 volume is 0.37x average vs. the required 0.8x minimum, and the move is already 2.54 ATR extended from VWAP making this a late chase into exhaustion, not a fresh entry; CALL is blocked because price is below all three VWAP levels with 0 bullish intraday signals confirmed.",
+          "reversal_risk": 33,
           "exhaustion_side": null,
-          "reversal_notes": "price is 1.4 ATR from VWAP; push is on 0.40x the recent volume \u2014 little participation",
+          "reversal_notes": "price is 2.5 ATR from VWAP \u2014 stretched and prone to snap back",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6869
+        "tokens_used": 7062
+      },
+      "was_flagged": true,
+      "cached_at": 1790260889.5544274,
+      "score": 47
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-09-25T14:35:23.422664",
+        "analysis": "# TSLA OPTIONS ANALYSIS \u2014 10:34 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a clean intraday downtrend, trading below VWAP on all three timeframes (5m, 15m, 1H) with bearish MACD and momentum on each. The most plausible scenario over the next 5-15 days is a continued consolidation between $348\u2013$370, with near-term downside pressure toward the $360\u2013$363 zone (EMA50 support) before any meaningful recovery attempt. The bull market context (SPY/QQQ both trending above their EMAs) creates a headwind for sustained TSLA downside, but TSLA is diverging negatively from the broad market and its own sector is weak today.\n\n---\n\n## 2. BULL CASE\n\n1. **MACD Histogram Positive (+0.8675)** \u2014 Daily MACD is still in bullish territory, suggesting the longer-term trend hasn't reversed despite today's intraday weakness.\n2. **OBV Rising** \u2014 Accumulation on balance volume implies institutional buying interest hasn't dried up; dips have been absorbed.\n3. **20D Return +6.14% / Analyst Target $396.62** \u2014 Medium-term trend is up; mean reversion bias from analysts and price action favors bulls on a multi-session view.\n4. **Bollinger Position 0.63 (Upper Half)** \u2014 Price remains in the upper half of the 20-day band, indicating the broader trend structure isn't broken despite today's pullback.\n\n---\n\n## 3. BEAR CASE\n\n1. **All Three Intraday Timeframes Fully Bearish (5m/15m/1H)** \u2014 Price is below VWAP on all timeframes, with 0 bull / 3-4 bear signals on each. This is textbook intraday distribution.\n2. **1H RSI 23.77 and 15m RSI 19.58 (Oversold) + 3-Candle Momentum -2.497% on 1H** \u2014 Aggressive selling momentum on the 1-hour with meaningful price deterioration.\n3. **Price Below EMA9 Intraday ($371.68) + 1D Return -2.05%** \u2014 TSLA is underperforming the broad market significantly; SPY/QQQ green while TSLA drops 2%.\n4. **Consumer Discretionary Sector -0.36%** \u2014 TSLA's sector is acting against the market, removing a potential tailwind and amplifying relative weakness.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News Catalyst Identified** \u2014 Zero articles found. The move is technically driven; any headline (Musk activity, macro data, regulatory news) could spike volatility in either direction instantly.\n- **VIX at 15.8** \u2014 Low VIX means options are relatively cheap; a vol spike from an unexpected headline would make puts more expensive intraday.\n- **15m RSI at 19.58 (Extreme Oversold)** \u2014 This is a snap-back risk. A short-covering bounce toward VWAP ($375.57) is plausible at any moment, which would crush 0DTE puts rapidly.\n- **Low Volume (0.51x 20D average / 1H at 0.14x avg)** \u2014 Thin tape amplifies moves in either direction but also means the current bearish move lacks strong institutional conviction behind it.\n- **SEC Filings (4 recent)** \u2014 No specifics available but worth monitoring for material disclosures.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance 1** | $371.31 | EMA9 intraday \u2014 ceiling for any bounce |\n| **Resistance 2** | $373.71 | 15m EMA9 / active VWAP zone |\n| **Resistance 3** | $375.57 | 15m VWAP \u2014 reclaim here flips bias neutral |\n| **Resistance 4** | $380.12 | 20D resistance \u2014 thesis-changing level |\n| **Current Price** | $370.18 | \u2014 |\n| **Support 1** | $364.94 | EMA21 daily |\n| **Support 2** | $360.50 | EMA50 daily \u2014 key structural support |\n| **Support 3** | $348.75 | 20D support / strong floor |\n\n**Thesis-Changing Level:** A 15m candle close **above $375.57** (15m VWAP) invalidates the intraday put thesis entirely \u2014 exit immediately.\n\n---\n\n## 6. CONFLUENCE SCORE: 61/100\n\nSIGNAL CLARITY: 74/100\nTRADEABILITY: 49/100\n\nSignal clarity is genuinely high \u2014 all intraday timeframes are aligned bearish with no conflicting signals \u2014 but tradeability is capped by two hard constraints: (1) the **Regime Gate** requires PUT score \u226575 AND volume \u22650.8x average; volume is at 0.51x on the day and 0.14x on the 1H, failing the volume gate; (2) the extreme oversold readings on 15m (RSI 19.58) and 1H (RSI 23.77) create meaningful snap-back risk that theta would punish if price mean-reverts to VWAP before resuming the decline.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS \u2014 but BLOCKED by Regime Gate (Low confidence for immediate entry)**\n\nThe directional read is clearly bearish. However, the Regime Gate's volume requirement (\u22650.8x average) is not met (current: 0.51x day, 0.14x on 1H). A PUT signal cannot be issued under current conditions without violating the hard gate. Monitor for volume pickup.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: N/A\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: N/A\n\nNO TRADE REASON: Regime Gate blocks this PUT \u2014 volume is 0.51x day average and 0.14x on the 1H, failing the mandatory \u22650.8x volume threshold required for PUT signals in a confirmed bull tape (SPY/QQQ both above EMA9 and EMA21); additionally, 15m and 1H RSIs are at 19\u201323 (extreme oversold), creating a high snap-back risk that would rapidly destroy 0-2 DTE put premium before any continuation lower.\n```\n\n---\n\n**\u26a0\ufe0f WATCH LIST ACTION:** Set an alert at $375.57 (15m VWAP) for a CALL setup if price reclaims with volume, and at $369.00 break with volume \u22651.0x for a potential PUT re-evaluation if the regime gate becomes satisfiable later in the session (before 2 PM ET for 0DTE viability).",
+        "confluence_score": 45,
+        "signal_clarity": 74,
+        "tradeability": 49,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime Gate blocks this PUT \u2014 volume is 0.51x day average and 0.14x on the 1H, failing the mandatory \u22650.8x volume threshold required for PUT signals in a confirmed bull tape (SPY/QQQ both above EMA9 and EMA21); additionally, 15m and 1H RSIs are at 19\u201323 (extreme oversold), creating a high snap-back risk that would rapidly destroy 0-2 DTE put premium before any continuation lower.",
+          "reversal_risk": 12,
+          "exhaustion_side": null,
+          "reversal_notes": "price is 1.8 ATR from VWAP",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6898
+      },
+      "was_flagged": true,
+      "cached_at": 1790267109.2303941,
+      "score": 45
+    },
+    "MSFT": {
+      "result": {
+        "ticker": "MSFT",
+        "timestamp": "2026-09-25T14:33:29.600975",
+        "analysis": "# MSFT \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:32 AM ET | Price: $514.06**\n\n---\n\n## 1. MARKET SCENARIO\n\nMSFT has surged ~3.2% today and is now pressing against its 20-day resistance ceiling ($514.06) and the upper Bollinger Band ($513.48) simultaneously, sitting 2.1 ATR above VWAP \u2014 a classically stretched position. The most plausible scenario over the next 5-15 days is a consolidation or mild pullback toward the $500-507 range before any further attempt at $525-535. The bull tape (SPY/QQQ both above EMAs, VIX 15.8, Tech sector green) supports dip-buying rather than a sustained rollover, making this more a \"pause at resistance\" than a reversal thesis.\n\n---\n\n## 2. BULL CASE\n\n1. **Macro regime is firmly bullish** \u2014 SPY and QQQ both trading above EMA9 and EMA21, VIX at 15.8, Tech sector +0.49%. The path of least resistance is up in this tape.\n2. **15m and 1H intraday structure is bullish** \u2014 Price above VWAP on both timeframes, EMA9 > EMA21 confirmed, 3-candle momentum on 1H showing +3.27%. Trend is intact.\n3. **Analyst consensus STRONG BUY with $577 target** \u2014 52 analysts, mean rating 1.33/5. $63 of upside to consensus from here implies institutional buy pressure on dips.\n4. **Strong earnings growth (31.7%) and revenue growth (17.7%)** \u2014 Fundamental tailwind supports price; any broad risk-on push could accelerate the move toward $525-535.\n\n---\n\n## 3. BEAR CASE\n\n1. **Price is AT the upper Bollinger Band AND 20D resistance simultaneously** \u2014 $514.06 is the 20D resistance level exactly. This is a natural supply zone and the most technically credible ceiling in the data.\n2. **MACD histogram negative on daily (-1.08) and bearish on 1H** \u2014 Daily momentum is deteriorating even as price pushes higher \u2014 a classic momentum divergence at a resistance level.\n3. **Stochastic at 89/62 (overbought) + RSI 62.83 approaching overbought** \u2014 Oscillator exhaustion is building. On 15m, RSI is 76.32 (overbought). On 1H, 82.64. Stretched across all timeframes.\n4. **Volume is anemic: 0.58x the 20D average; 15m volume 0.28x, 1H volume 0.11x** \u2014 The rally is happening on below-average participation. OBV is falling. A move not confirmed by volume at resistance is a low-conviction breakout \u2014 classic bull trap setup.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found (0 articles)** \u2014 This day's 3.24% move has no identified catalyst in the data, which is itself a wildcard. If the move was AI/sector momentum-driven, a single sector rotation headline could reverse it fast.\n- **Options expiry dynamics** \u2014 P/C ratio of 0.39 is call-heavy. If market makers are short calls near $515, gamma hedging could create a pinning effect or brief squeeze through $515, but also sharp reversal if that level fails to hold.\n- **Macro data/Fed commentary** \u2014 VIX at 15.8 is complacent. Any surprise macro print (CPI, Fed speak, jobless claims) could spike VIX and hit high-beta tech names disproportionately.\n- **No earnings imminent** \u2014 Removes the largest binary risk, which keeps option premiums lower and makes the setup cleaner.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance (critical)** | $514.06 | 20D resistance = current price; upper BB $513.48 \u2014 must break AND hold |\n| **Breakout confirmation** | $516-517 | Clean break above BB + resistance confirms buyers; invalidates bear case |\n| **15m VWAP** | $507.82 | Loss of this level = intraday trend shift; PUT trigger zone |\n| **1H VWAP** | $501.72 | Major intraday support; breach here targets $490 |\n| **20D Support** | $490.30 | The floor for any meaningful pullback scenario |\n| **Thesis change level (bull)** | >$517 on volume \u22651x avg | Breakout is real; chase becomes justified |\n| **Thesis change level (bear)** | <$507.82 (15m VWAP) | Distribution confirmed; puts viable |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 44/100\n\n**Score explanation:** Signal clarity is moderate \u2014 daily MACD bearish and oscillators overbought at resistance conflict with a bullish intraday structure and a strong macro tape; the signals are genuinely split. Tradeability is capped below 55 because price is pinned exactly AT resistance with no clean breakout or breakdown trigger yet established \u2014 the 0DTE expected move is only \u00b1$5.29, and with price stalling at a known supply zone on thin volume, the probable near-term outcome is chop/consolidation rather than a directional move large enough to pay option premium reliably before theta destroys it.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bull tape regime favors calls, but price is pinned at the exact resistance level with no confirmed break, volume is at 0.58x average (regime gate requires \u22650.8x for puts), and the 0DTE expected move of \u00b1$5.29 leaves almost no room for error in either direction at this price location. Waiting for resolution is the correct discipline here.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Price is pinned exactly at the 20D resistance and upper Bollinger Band on 0.58x average volume with no confirmed directional break \u2014 a CALL lacks breakout confirmation and volume (regime gate \u22650.8x not met for puts), and the \u00b1$5.29 0DTE expected move is insufficient to pay premium while price chops at a known supply zone; wait for either a volume-confirmed break above $516 (CALL) or a loss of 15m VWAP at $507.82 on volume \u22650.8x (PUT) before entering.",
+        "confluence_score": 48,
+        "signal_clarity": 52,
+        "tradeability": 44,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Price is pinned exactly at the 20D resistance and upper Bollinger Band on 0.58x average volume with no confirmed directional break \u2014 a CALL lacks breakout confirmation and volume (regime gate \u22650.8x not met for puts), and the \u00b1$5.29 0DTE expected move is insufficient to pay premium while price chops at a known supply zone; wait for either a volume-confirmed break above $516 (CALL) or a loss of 15m VWAP at $507.82 on volume \u22650.8x (PUT) before entering.",
+          "reversal_risk": 25,
+          "exhaustion_side": null,
+          "reversal_notes": "price is 2.1 ATR from VWAP \u2014 stretched and prone to snap back",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6894
+      },
+      "was_flagged": true,
+      "cached_at": 1790270491.8495626,
+      "score": 48
+    },
+    "AMZN": {
+      "result": {
+        "ticker": "AMZN",
+        "timestamp": "2026-09-25T14:31:52.049919",
+        "analysis": "# AMZN \u2014 0-2 DTE Options Analysis | 10:31 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAMZN is in a sustained multi-week downtrend (-7.09% over 20 days), trading well below all short-term EMAs with price pressing toward the lower Bollinger Band near $244.53. The most plausible scenario over 5-15 days is continued pressure toward the $244-$246 support zone, with any bounce capped by the dense EMA cluster at $251-$253. The critical contradiction here is that broad market (SPY/QQQ) is green and trending bullishly, while AMZN and its sector (XLY -0.4%) are acting as clear laggards \u2014 this divergence is the defining tension in the setup.\n\n---\n\n## 2. BULL CASE\n\n- **Analyst consensus + valuation:** 57 analysts, STRONG_BUY, mean target $329.54 \u2014 implies ~33% upside from current price. Fundamental undervaluation can attract institutional buying at these levels.\n- **RSI oversold on 5-minute chart (17.06):** Extreme short-term oversold reading. With only -1.51 ATR from VWAP and reversal risk at 12/100, a mean-reversion bounce toward VWAP ($248.43-$248.92) is mechanically plausible intraday.\n- **Bollinger Band proximity to lower band ($244.53):** Price at 0.155 band position with lower band acting as potential floor \u2014 a classic snap-back zone.\n- **Broad market tailwind:** SPY +0.20%, QQQ +0.21%, both above EMA9/21, VIX at 15.8. Bull regime historically reduces the sustainability of single-stock selloffs absent a specific catalyst.\n\n---\n\n## 3. BEAR CASE\n\n- **Total timeframe confluence \u2014 all bearish:** Daily, 1H, 15m, and 5m are all BEARISH (VWAP, EMA, MACD, momentum). This is the \"Exceptional PUT entry\" threshold per the confluence grid. 11 of 11 signals across timeframes are bearish.\n- **MACD histogram deteriorating (-0.6157 daily, -0.2042 on 15m):** Negative and not contracting \u2014 no cross signal imminent, trend momentum confirmed bearish.\n- **Price below entire EMA stack (9/21/50) with OBV falling:** Supply is dominating. Every rally has failed to hold. OBV confirms distribution.\n- **XLY sector underperforming broad market (-0.4% vs SPY +0.2%):** Relative weakness in AMZN's own sector amplifies downside probability. Sector-specific selling, not just broad risk-off.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news identified:** Zero articles pulled \u2014 low information environment increases sensitivity to any headline (macro data, sector news, analyst actions, or unexpected AMZN-specific item).\n- **Volume collapse (0.24x 20D MA):** Extremely thin volume. This is a double-edged wildcard: moves on thin volume can reverse violently on even modest buying flow. A single large institutional order could spike price sharply.\n- **Macro / SPY continuation:** If SPY accelerates upward, AMZN's laggard status could flip to catch-up buying \u2014 beta of 1.44 means any sector rotation into discretionary could produce an outsized squeeze.\n- **Short interest is low (0.8%):** No squeeze potential. Bears can stay short without mechanical risk.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Immediate support** | $245.96 | 20D technical support \u2014 critical floor |\n| **Lower Bollinger Band** | $244.53 | Band boundary; breach would signal acceleration |\n| **52W Low zone** | $196.00 | Distant but structural floor if trend persists |\n| **VWAP cluster (15m/1H)** | $248.43\u2013$248.92 | First resistance; reclaim would flip intraday bias |\n| **EMA9/21/50 cluster** | $251.38\u2013$253.71 | Dense overhead resistance; thesis-changing if reclaimed |\n| **Thesis-change level** | $250.00 | Clean round number + EMA zone; PUT thesis invalidated above here |\n\n---\n\n## 6. CONFLUENCE SCORE: 62/100\n\nSIGNAL CLARITY: 78/100\nTRADEABILITY: 47/100\n\n**Score rationale:** Signal clarity is high \u2014 all four timeframes bearish, clean EMA stack, MACD confirming. Tradeability is the cap: the **HARD REGIME GATE explicitly requires score \u226575 AND price below BOTH 15m and 1H VWAP AND volume \u22650.8x average to issue a PUT in a bull tape.** Price is below both VWAPs \u2713, signals are aligned \u2713, but **volume is at 0.24x average \u2014 severely below the 0.8x minimum threshold required by the regime gate.** The gate is not met. Additionally, ATR-implied expected move on 0DTE is only \u00b1$1.73, and the nearest structural target ($245.96) is $1.57 below current price \u2014 just barely within the 0DTE expected move, but with volume confirmation failing, the setup cannot be validated for a 0-2 DTE PUT. Score reflects strong signal clarity blocked by a non-negotiable regime gate on volume.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS (Low confidence)**\nDirection is clearly bearish. However, the regime gate volume requirement (0.8x avg) is not satisfied at 0.24x. Trade is valid in signal, invalid in gate compliance at this moment.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate blocks this PUT \u2014 bull tape rule requires volume \u22650.8x 20D average for a PUT signal on an individual ticker, and current volume at 0.24x average fails this non-negotiable condition; monitor for volume normalization above 27M shares before re-evaluating.",
+        "confluence_score": 45,
+        "signal_clarity": 78,
+        "tradeability": 47,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks this PUT \u2014 bull tape rule requires volume \u22650.8x 20D average for a PUT signal on an individual ticker, and current volume at 0.24x average fails this non-negotiable condition; monitor for volume normalization above 27M shares before re-evaluating.",
+          "reversal_risk": 12,
+          "exhaustion_side": null,
+          "reversal_notes": "price is 1.5 ATR from VWAP",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6755
+      },
+      "was_flagged": true,
+      "cached_at": 1790272287.1641438,
+      "score": 45
+    },
+    "AAPL": {
+      "result": {
+        "ticker": "AAPL",
+        "timestamp": "2026-09-25T14:36:21.917941",
+        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 10:35 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is trading at $336.72, pressing toward resistance at $339.75 in a bull-regime tape where SPY/QQQ are trending cleanly above their short EMAs. However, the 1H structure is already bearish (below 1H VWAP, EMA9/21 pointing down, negative 3-candle momentum), and the daily MACD histogram is decelerating with OBV falling \u2014 suggesting the recent 5-day bounce has stalled. Most plausible scenario: AAPL chops in the $334\u2013$340 range over the next few sessions, with a modest downside bias intraday but broad market support preventing a clean directional breakdown. Analyst price target ($328) sits materially below current price, adding a longer-term headwind.\n\n---\n\n## 2. BULL CASE\n\n- **Macro regime support**: SPY +0.20%, QQQ +0.21%, both above EMA9/EMA21, VIX at 15.8. Tech sector +0.49% today. This is a confirmed bull tape \u2014 AAPL is swimming with the tide.\n- **Daily MACD histogram positive (+0.4512)**: The daily timeframe still reads bullish momentum, implying the broader trend is not yet broken.\n- **Price above 5m and 15m VWAP**: At 10:35 AM, price holds above both short-term VWAPs ($335.65 and $336.49), the minimum condition for intraday bullish structure.\n- **20D return +5.32% with room to 52W high**: AAPL has recaptured significant ground and is only ~$8.62 (2.6%) from its 52W high of $345.34, giving bulls a clear upside narrative target.\n\n---\n\n## 3. BEAR CASE\n\n- **1H timeframe fully bearish (4/4 signals)**: Price below 1H VWAP, EMA9 < EMA21, negative 3-candle momentum, bearish MACD on the 1H. This is the most reliable directional timeframe for 0-2 DTE.\n- **OBV falling + volume at 0.11x 20D average**: Price near highs with collapsing volume and falling OBV is a classic distribution signature \u2014 buyers are not showing up to defend the move.\n- **RSI near overbought (62.49 daily), 5m RSI at 74.97 (overbought)**: Momentum is extended on multiple timeframes with MACD histogram decelerating (\"three bars running\" per reversal check). Late entry risk is real.\n- **Price above analyst consensus target by ~$8.50**: With a 39-analyst consensus target of $328.22 vs current $336.72, fundamentals argue for mean reversion, not extension. P/E of 38.6x with PEG of 2.71 is elevated.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news / zero articles today**: Absence of a catalyst in a low-volume session (0.11x avg) means price is most likely to drift, not trend. Vol crush risk is real for short-dated premium buyers.\n- **Options flow slightly bearish (P/C 1.06, 5 unusual puts vs 4 unusual calls)**: Modest institutional put positioning \u2014 not alarming, but directionally tilted bearish against the macro regime.\n- **52W high at $345.34**: A break above $339.75 resistance on volume could trigger momentum buying toward the all-time high zone \u2014 significant squeeze if tech accelerates.\n- **Earnings not imminent**: No binary catalyst to justify outsized expected moves. This cuts both ways \u2014 no vol expansion to juice premiums, but no blow-up risk either.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| \ud83d\udd34 Key Resistance | $339.75 | 20D resistance \u2014 rejection here confirms stall |\n| \ud83d\udd34 52W High | $345.34 | Bull breakout trigger |\n| \ud83d\udfe1 1H VWAP | $336.82 | Reclaim = intraday structure turns bullish |\n| \ud83d\udfe1 15m VWAP | $336.49 | Current price barely above \u2014 critical floor |\n| \ud83d\udfe1 5m VWAP | $335.65 | Loss of this = short-term momentum breaks |\n| \ud83d\udfe2 20D Support | $315.34 | Far away \u2014 not relevant for 0-2 DTE |\n| \u26a0\ufe0f Thesis Flip | $336.49 | Loss of 15m VWAP invalidates any intraday bull bias |\n\n**Critical level**: $336.49 (15m VWAP). Holding above = mixed-to-bullish drift. Breaking below with volume confirms the 1H bearish read and opens $334\u2013$333.\n\n---\n\n## 6. CONFLUENCE SCORE: 46/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 40/100\n\nThe 1H is bearishly aligned but the regime gate requires PUTs to score \u226575 AND price to be below BOTH 15m and 1H VWAP AND volume \u22650.8x \u2014 price currently holds above 15m VWAP and volume is 0.11x average, failing two of three gate conditions. The CALL case has macro support but the 1H structure and decelerating momentum make a call entry chasing. Tradeability caps the score: low volume means expected move is narrow ($2.66\u2013$3.77) and a clean entry trigger has not fired yet.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nReasoning: The 1H is bearish but the regime gate explicitly blocks PUT signals without price below BOTH VWAPs and volume \u22650.8x avg. The CALL case has macro support but is entering into an extended 5m RSI (74.97), decelerating MACD, and 1H downtrend \u2014 chasing. Neither direction clears its full entry threshold right now.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: N/A\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: N/A\n\nNO TRADE REASON: Regime gate blocks PUT (price is above 15m VWAP and volume is\n0.11x average, failing two of three required conditions for a PUT in a confirmed\nbull tape); CALL is blocked by 1H fully bearish structure, overbought 5m RSI at\n74.97, and decelerating MACD \u2014 no clean entry trigger has fired in either\ndirection.\n```\n\n---\n\n**MONITOR FOR ENTRY**: If price **breaks and closes a 15m candle below $335.65** (5m VWAP) on volume \u22650.8x, AND 15m VWAP also loses, reassess PUT with fresh confluence check. If price **reclaims $336.82** (1H VWAP) on a 15m close with expanding volume, the CALL case becomes actionable at score ~58\u201362 given macro tailwinds. Neither condition is met at 10:35 AM ET.",
+        "confluence_score": 46,
+        "signal_clarity": 52,
+        "tradeability": 40,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks PUT (price is above 15m VWAP and volume is",
+          "reversal_risk": 33,
+          "exhaustion_side": null,
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6983
       },
       "was_flagged": false,
-      "cached_at": 1790272287.1641438,
-      "score": 41
+      "cached_at": 1790346981.9203634,
+      "score": 46
+    },
+    "QQQ": {
+      "result": {
+        "ticker": "QQQ",
+        "timestamp": "2026-09-25T14:37:14.781503",
+        "analysis": "# QQQ \u2014 0-2 DTE OPTIONS ANALYSIS\n**10:36 AM ET | Last: $741.82**\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is grinding near its 52-week high ($748.65) in a confirmed bull regime with both SPY and QQQ above their EMAs and VIX at 15.8. The most plausible scenario over the next 5-15 days is continued slow-motion grind toward resistance at $747-748, interrupted by shallow intraday pullbacks given low volume and MACD deceleration. A clean breakout above $748.65 would open air to $755+, while failure at resistance risks a retest of $730-734 support.\n\n---\n\n## 2. BULL CASE\n\n1. **Confirmed Bull Regime** \u2014 SPY and QQQ both above EMA9/EMA21, VIX 15.8. The tape is structurally bullish; fading it on QQQ directly is low-probability.\n2. **Daily MACD Histogram +3.37** \u2014 Strong positive histogram on the daily timeframe implies trend momentum remains intact, not exhausted at macro level.\n3. **1H Bias BULLISH (3/4 signals)** \u2014 Price above 1H VWAP ($739.85), EMAs stacked bullishly (EMA9 > EMA21), 3-candle momentum +0.13%. Hourly structure favors continuation.\n4. **Price 87% of Bollinger Band Range** \u2014 Elevated but not at the upper band ($747.78), leaving room for a push toward resistance without a technical overshoot.\n\n---\n\n## 3. BEAR CASE\n\n1. **OBV Falling** \u2014 On-balance volume is declining even as price holds near highs \u2014 distribution signal suggesting institutional selling into strength. Classic divergence.\n2. **Volume at 0.27x 20D Average** \u2014 Extremely low volume participation removes conviction from any directional move. Without volume, breakouts fail and rallies stall.\n3. **Stochastic 86.69/85.79 + RSI 63.96** \u2014 Both overbought on the daily. Price sitting at 89% of the Bollinger range. Short-term mean-reversion risk is real.\n4. **MACD Fading on 15M + Price Below 5M/15M VWAP** \u2014 Intraday momentum is decelerating. 15M 3-candle momentum is -0.40%. The immediate-term micro structure is not bullish.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data releases**: No earnings for QQQ (ETF), but any surprise CPI, Fed commentary, or jobs data print before close could move the tape \u00b11-2% instantly \u2014 dwarfing the 0DTE expected move.\n- **52-Week High Breakout/Rejection**: $748.65 is the critical magnet. A clean break targets momentum buyers; a rejection with volume triggers a wave of stops and profit-taking.\n- **Tech sector lag**: Tech is only +0.5% today while Consumer Discretionary is -0.4% and Energy -0.8%. A sector rotation away from tech would hit QQQ disproportionately.\n- **Options expiry pinning**: P/C ratio of 1.0 with balanced unusual activity (5 calls / 5 puts) suggests market makers are neutral \u2014 price may be pinned near $740-742 into close by dealer hedging.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Resistance** | $747.78 | Upper Bollinger Band; 52W High at $748.65 just above |\n| **20D Resistance** | $747.46 | Confirmed resistance \u2014 first ceiling to test |\n| **5M VWAP** | $742.69 | Price currently below; reclaim = bullish intraday |\n| **15M VWAP** | $741.78 | Near-term pivot; holding below = bearish bias |\n| **1H VWAP** | $739.85 | Key support; loss of this level flips 1H bearish |\n| **20D Support** | $703.81 | Macro support \u2014 only relevant on a large breakdown |\n| **Thesis-change level** | $748.65 | 52W High break = momentum breakout trade |\n\n---\n\n## 6. CONFLUENCE SCORE: 47/100\n\nSIGNAL CLARITY: 52/100\nTRADEABILITY: 42/100\n\n**Score rationale**: Signal clarity is moderate \u2014 1H is bullish, daily trend is up, but intraday structure (below 5M and 15M VWAP, low volume, MACD fading, OBV falling) creates genuine conflict. Tradeability is capped by two hard factors: (1) price is already within $6 of the 52W high with only $5.49 of expected 1DTE move \u2014 there is no room for a CALL target that is both realistic AND meaningfully inside the expected move before hitting resistance; (2) volume at 0.27x average means options premiums are not being driven by genuine participation, increasing slippage and gap risk. A clear directional trade does not exist here with acceptable probability.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bull regime favors CALLs directionally, but the immediate setup lacks a clean entry: price is below both the 5M and 15M VWAP, volume is anemic, MACD is fading at the intraday level, and resistance is within the expected move. A CALL requires reclaiming VWAP with volume confirmation that has not materialized. The Regime Gate favors CALLs but does not mandate one without a confirmed trigger.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Regime gate favors CALLs but the trigger has not fired \u2014 price is below both the 5M VWAP ($742.69) and 15M VWAP ($741.78) with volume at 0.27x average and MACD fading; a CALL entered here without VWAP reclaim and volume confirmation is chasing price into resistance ($747.46) that sits within the 1DTE expected move, leaving no margin for error on theta.",
+        "confluence_score": 47,
+        "signal_clarity": 52,
+        "tradeability": 42,
+        "suggested_bias": "NEUTRAL",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate favors CALLs but the trigger has not fired \u2014 price is below both the 5M VWAP ($742.69) and 15M VWAP ($741.78) with volume at 0.27x average and MACD fading; a CALL entered here without VWAP reclaim and volume confirmation is chasing price into resistance ($747.46) that sits within the 1DTE expected move, leaving no margin for error on theta.",
+          "reversal_risk": 25,
+          "exhaustion_side": null,
+          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6697
+      },
+      "was_flagged": false,
+      "cached_at": 1790347034.7833369,
+      "score": 47
     }
   },
-  "saved_at": "2026-09-24T13:53:00-04:00"
+  "saved_at": "2026-09-25T10:38:14-04:00"
 }
