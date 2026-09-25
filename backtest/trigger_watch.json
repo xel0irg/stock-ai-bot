@@ -694,5 +694,19 @@
   "message_id": "1552707606957662328",
   "signal_time": "2026-09-24T11:45:41-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 371.0,
+  "strike": 372.5,
+  "expiry_date": "",
+  "vol_multiple": 1.0,
+  "entry_condition": "Enter only on a 15m candle close below $371.00 with volume at or above 1.0x the 15m average \u2014 this satisfies the regime gate volume requirement that current tape does not yet meet.",
+  "score": 63,
+  "verdict": "TRADE",
+  "message_id": "1553059150848598157",
+  "signal_time": "2026-09-25T11:02:36-04:00",
+  "status": "PENDING"
  }
 ]
