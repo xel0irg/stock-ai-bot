@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 337.3900146484375,
+      "price": 338.114990234375,
       "volume_ratio": 0.0,
-      "ts": 1790349038.9809697,
+      "ts": 1790349639.3225596,
       "last_full_scan_ts": 1790347287.3143964
     },
     "AMZN": {
-      "price": 248.6999969482422,
+      "price": 248.72630310058594,
       "volume_ratio": 0.0,
-      "ts": 1790349039.102061,
+      "ts": 1790349639.5895045,
       "last_full_scan_ts": 1790346712.0600402
     },
     "META": {
-      "price": 751.9099731445312,
+      "price": 750.682373046875,
       "volume_ratio": 0.0,
-      "ts": 1790349039.289598,
+      "ts": 1790349639.750596,
       "last_full_scan_ts": 1790347889.3658657
     },
     "MSFT": {
-      "price": 515.6300048828125,
+      "price": 514.27001953125,
       "volume_ratio": 0.0,
-      "ts": 1790349039.520914,
+      "ts": 1790349639.9318779,
       "last_full_scan_ts": 1790348506.0274682
     },
     "NVDA": {
-      "price": 224.25999450683594,
+      "price": 224.33999633789062,
       "volume_ratio": 0.0,
-      "ts": 1790349039.7003553,
+      "ts": 1790349640.1188543,
       "last_full_scan_ts": 1790346868.4503365
     },
     "QQQ": {
-      "price": 743.0150146484375,
+      "price": 742.6510009765625,
       "volume_ratio": 0.0,
-      "ts": 1790349039.9187944,
+      "ts": 1790349640.365626,
       "last_full_scan_ts": 1790347034.7833345
     },
     "SPY": {
       "price": 768.6599731445312,
       "volume_ratio": 0.0,
-      "ts": 1790349040.2187467,
+      "ts": 1790349640.5832582,
       "last_full_scan_ts": 1790347092.5615356
     },
     "TSLA": {
-      "price": 372.63079833984375,
+      "price": 369.864990234375,
       "volume_ratio": 0.0,
-      "ts": 1790349040.461374,
-      "last_full_scan_ts": 1790349089.7970357
+      "ts": 1790349640.7443142,
+      "last_full_scan_ts": 1790349683.1935525
     }
   },
   "ai_cache": {
@@ -277,7 +277,45 @@
       "was_flagged": false,
       "cached_at": 1790347034.7833369,
       "score": 47
+    },
+    "TSLA": {
+      "result": {
+        "ticker": "TSLA",
+        "timestamp": "2026-09-25T15:21:23.178795",
+        "analysis": "# TSLA \u2014 0-2 DTE Options Analysis | 11:20 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nTSLA is in a clean intraday downtrend, trading below VWAP on all three timeframes (5m/15m/1H) with bearish EMA structure on each. The most plausible scenario over the next 5-15 days is a continued grind toward the $348-$360 support cluster, constrained by the 20D resistance at $380.12. However, the broad market (SPY/QQQ) is in a confirmed bull regime and TSLA's 1H RSI sits at 23.31 \u2014 deeply oversold \u2014 which creates a meaningful mean-reversion risk that limits downside aggression for very short-dated trades.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Daily Histogram (+0.8439 BULLISH):** The daily MACD is still positive, indicating the longer-term momentum structure has not fully reversed. This could reassert itself intraday.\n- **1H RSI at 23.31 (Oversold):** Extreme short-term oversold condition on the hourly chart. At this level, mean-reversion bounces are statistically common, particularly in a broad bull tape.\n- **Broad Market Tailwind (SPY +0.35%, QQQ +0.43%, VIX 15.2):** Bull regime intact. Individual tickers under pressure often snap back when indexes hold gains into the afternoon.\n- **Bollinger Band Position 0.62 / OBV Rising:** Price remains in the upper half of the 20D Bollinger Band and OBV trend is still rising \u2014 the longer-term structural bid has not been broken.\n\n---\n\n## 3. BEAR CASE\n\n- **All-Timeframe VWAP Rejection (5m/15m/1H all BELOW VWAP):** Consistent rejection across every intraday timeframe is the strongest bearish signal in this dataset. Price is structurally weak on the session.\n- **1H 3-Candle Momentum -2.576%:** Significant downward momentum on the hourly is the most recent and forceful directional signal. Sellers are actively in control of price discovery this hour.\n- **Consumer Discretionary Sector Underperformance (-0.34%):** TSLA's sector is acting against the broad market, reducing the probability of a sympathy bounce.\n- **EMA9 < EMA21 on 5m and 15m:** Short-term bearish EMA crossover confirmed across two timeframes, consistent with a continuation lower rather than reversal.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No News / Zero Headlines:** Absence of news means this move is purely technical/sentiment-driven. Any Elon Musk social media post, macro headline, or sector-specific development could cause a violent spike in either direction with no warning.\n- **1H RSI Oversold Snap:** At RSI 23.31 on the hourly, a short-covering bounce of $5-8 is plausible mid-session. This is the primary risk to any PUT position entered at current levels.\n- **Low Volume (0.66x average):** The move down is happening on below-average participation. A volume surge in either direction \u2014 especially if SPY accelerates \u2014 could overwhelm the current trend.\n- **Options Expiry Pinning:** With balanced unusual call/put activity (5 each), options market makers may exert pinning pressure near key strikes, dampening the magnitude of any move.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| Primary Resistance | $371.24 | EMA9 (5m) / current ceiling |\n| Session VWAP (1H) | $377.11 | Bull/bear line; reclaim = setup invalidated |\n| 20D Resistance | $380.12 | Hard resistance; above this = bullish reclaim |\n| Current Price | $369.81 | \u2014 |\n| 0DTE Expected Move Floor | $365.34 | $369.81 - $4.47 |\n| 1DTE Expected Move Floor | $363.49 | $369.81 - $6.32 |\n| Key Support (EMA50 / 20D Support zone) | $360-$348 | Major structural support cluster |\n| **Thesis-Change Level** | **$374.16** | 15m VWAP reclaim flips setup to NEUTRAL/CALL |\n\n---\n\n## 6. CONFLUENCE SCORE: 58/100\n\nSIGNAL CLARITY: 71/100\nTRADEABILITY: 45/100\n\nSignal clarity is genuinely high \u2014 all intraday timeframes align bearishly with consistent VWAP rejection \u2014 but tradeability is severely capped by two factors: (1) the Hard Regime Gate requires PUT signals to clear score \u226575 with volume \u22650.8x average (current volume is 0.66x, failing the gate), and (2) the 1H RSI at 23.31 creates meaningful mean-reversion risk that the 0DTE expected move (\u00b1$4.47) cannot adequately absorb, making premium recovery uncertain even if direction is correct.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**BEARISH \u2192 PUTS (Low confidence)**\n\nThe directional read is bearish with high signal clarity, but the Hard Regime Gate blocks execution: volume fails the 0.8x minimum threshold required for a PUT in a bull regime. Confidence is degraded to Low accordingly.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\n\nNO TRADE REASON: Regime gate blocks this PUT \u2014 bull tape rules require volume \u2265 0.8x average for any PUT signal; current volume is 0.66x average, failing the mandatory gate regardless of intraday bearish alignment. Additionally, 1H RSI at 23.31 is an active oversold warning that materially elevates reversal risk within the 0DTE expected move window.\n```\n\n---\n\n**MONITOR FOR RE-ENTRY:** If volume climbs above 0.8x 20D average (\u224831M shares) AND price fails to reclaim the 15m VWAP ($374.16) on a bounce attempt, the PUT setup re-qualifies for a 1DTE entry targeting $363-$365. Set an alert at both levels.",
+        "confluence_score": 45,
+        "signal_clarity": 71,
+        "tradeability": 45,
+        "suggested_bias": "BEARISH",
+        "trade_setup": {
+          "contract_type": "NONE",
+          "expiry": null,
+          "strike": null,
+          "moneyness": null,
+          "stock_target": null,
+          "est_premium": null,
+          "est_premium_ai": null,
+          "premium_is_real": false,
+          "profit_target": null,
+          "stop_rule": "N/A",
+          "entry_condition": "N/A",
+          "entry_trigger": null,
+          "avoid_if": "N/A",
+          "key_risk": "N/A",
+          "setup_quality": "NO TRADE",
+          "no_trade_reason": "Regime gate blocks this PUT \u2014 bull tape rules require volume \u2265 0.8x average for any PUT signal; current volume is 0.66x average, failing the mandatory gate regardless of intraday bearish alignment. Additionally, 1H RSI at 23.31 is an active oversold warning that materially elevates reversal risk within the 0DTE expected move window.",
+          "reversal_risk": 20,
+          "exhaustion_side": null,
+          "reversal_notes": "price is 1.4 ATR from VWAP",
+          "chasing_exhausted_move": false
+        },
+        "model": "claude-sonnet-4-6",
+        "tokens_used": 6802
+      },
+      "was_flagged": true,
+      "cached_at": 1790349683.1935563,
+      "score": 45
     }
   },
-  "saved_at": "2026-09-25T11:11:31-04:00"
+  "saved_at": "2026-09-25T11:21:25-04:00"
 }
