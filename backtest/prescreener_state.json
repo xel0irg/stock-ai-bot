@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 340.92999267578125,
+      "price": 340.0050048828125,
       "volume_ratio": 0.0,
-      "ts": 1790606448.4387262,
+      "ts": 1790607033.7503998,
       "last_full_scan_ts": 1790606319.7844446
     },
     "AMZN": {
-      "price": 246.8000030517578,
+      "price": 246.25,
       "volume_ratio": 0.0,
-      "ts": 1790606448.5807981,
+      "ts": 1790607033.9390023,
       "last_full_scan_ts": 1790605907.0585551
     },
     "META": {
-      "price": 720.5999755859375,
+      "price": 718.5999755859375,
       "volume_ratio": 0.0,
-      "ts": 1790606448.738553,
+      "ts": 1790607034.1252372,
       "last_full_scan_ts": 1790605967.570648
     },
     "MSFT": {
-      "price": 506.7799987792969,
+      "price": 506.1300048828125,
       "volume_ratio": 0.0,
-      "ts": 1790606448.921354,
+      "ts": 1790607034.3432302,
       "last_full_scan_ts": 1790606017.2975864
     },
     "NVDA": {
-      "price": 231.14999389648438,
+      "price": 229.5449981689453,
       "volume_ratio": 0.0,
-      "ts": 1790606449.1606038,
-      "last_full_scan_ts": 1790606082.6725702
+      "ts": 1790607034.510379,
+      "last_full_scan_ts": 1790607081.561666
     },
     "QQQ": {
-      "price": 735.3610229492188,
+      "price": 732.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1790606449.3363042,
-      "last_full_scan_ts": 1790606142.0353756
+      "ts": 1790607034.7504272,
+      "last_full_scan_ts": 1790607131.1988692
     },
     "SPY": {
-      "price": 766.5,
+      "price": 764.5499267578125,
       "volume_ratio": 0.0,
-      "ts": 1790606449.512334,
+      "ts": 1790607034.9654877,
       "last_full_scan_ts": 1790606196.572282
     },
     "TSLA": {
-      "price": 360.9100036621094,
+      "price": 360.3800048828125,
       "volume_ratio": 0.0,
-      "ts": 1790606449.6479557,
+      "ts": 1790607035.124496,
       "last_full_scan_ts": 1790606259.6637099
     }
   },
@@ -205,11 +205,11 @@
     "QQQ": {
       "result": {
         "ticker": "QQQ",
-        "timestamp": "2026-09-28T14:35:42.032562",
-        "analysis": "# QQQ Options Analysis \u2014 10:34 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is in a clean intraday downtrend after gapping lower, trading below all three VWAP levels and pressing toward its recent daily lows. The most plausible scenario over the next 5\u201315 days is continued consolidation between ~$720\u2013$748, with short-term bias tilted lower as tech sector underperforms (-1.3% today) and price digests the move up from the 52W low. The critical friction point is the **HARD REGIME GATE**: both QQQ and SPY are technically above their EMA9/21 on the daily, triggering the bull-regime override that prohibits PUT signals on QQQ below a 75 score threshold.\n\n---\n\n## 2. BULL CASE\n\n1. **Daily EMA Structure is Bullish** \u2014 EMA9 ($733.82) > EMA21 ($725.33) > EMA50 ($719.08); price at $736.28 is above all three. The broad uptrend from the 52W low ($555.60) remains structurally intact.\n2. **MACD Histogram Positive (+2.81)** \u2014 Daily MACD histogram is bullish, suggesting the multi-day trend has not reversed despite today's pullback.\n3. **Bollinger Band Position (0.759)** \u2014 Price sits in the upper half of the band, consistent with a bullish trending environment. The upper band at $750.13 is an achievable target.\n4. **VIX at 15.91 (Normal)** \u2014 Low volatility regime historically favors slow grind higher in indices; panic is absent, suggesting today's -1.1% is a routine dip rather than a breakdown signal.\n\n---\n\n## 3. BEAR CASE\n\n1. **All Three Intraday Timeframes Uniformly Bearish** \u2014 5m, 15m, and 1H all show 0 bull / 3-4 bear signals. Price is below VWAP on every timeframe, with bearish EMA and MACD structure intraday. This is textbook short-term distribution.\n2. **OBV Falling + Volume Extremely Low (0.24x avg)** \u2014 Falling on-balance volume into low volume means the recent daily rally lacked conviction. Today's selling, even on thin volume, is not being bought.\n3. **Tech Sector Underperforming (-1.3%)** \u2014 The sector driving QQQ is the worst performer today. Sector rotation into defensives (Energy, Staples, Healthcare) is a headwind for Nasdaq concentration.\n4. **Price Extended -2.73 ATR from VWAP** \u2014 A significant intraday stretch that historically precedes mean reversion. However, this cuts both ways \u2014 it argues against chasing PUTs, not for CALLs.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro Data / Fed Speakers**: No news found, but any surprise macro print (jobs, inflation, Fed commentary) intraday could accelerate or reverse the move sharply \u2014 particularly dangerous on 0DTE.\n- **Tech Earnings from Holdings**: QQQ's top holdings (AAPL, NVDA, MSFT, META) are perpetual catalysts. Any pre-market or after-hours guidance from a major constituent could gap the ETF violently \u2014 unsuitable for 0DTE overnight exposure.\n- **Options Expiry Dynamics**: P/C ratio of 1.23 with balanced unusual activity (5 calls / 5 puts flagged) suggests no strong dealer gamma lean. Options expiry pinning is not a clear factor today.\n- **Mean Reversion Snap**: At -2.73 ATR from intraday VWAP, a sudden reversal to VWAP ($741\u2013$741.45) is a realistic intraday scenario \u2014 a ~$5 move against any PUT position entered here.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 1H VWAP | $741.45 | Bull/bear line intraday \u2014 reclaim = bearish thesis breaks |\n| 15m VWAP | $741.28 | Secondary confirmation level |\n| EMA9 (Daily) | $733.82 | First real daily support \u2014 holding here is bullish |\n| 20D Support | $703.81 | Structural floor; far below current price |\n| 20D Resistance | $747.46 | Near 52W High ($748.65); major supply zone |\n| 52W High | $748.65 | Thesis-changing level; break above = breakout |\n| Bollinger Upper | $750.13 | Extended upside target in bull continuation |\n\n**Critical level:** $733.82 (EMA9 daily). A close below this would shift the daily trend structure bearish. Reclaim of $741 VWAP intraday would invalidate the short-term bear setup immediately.\n\n---\n\n## 6. CONFLUENCE SCORE: 41/100\n\nSIGNAL CLARITY: 62/100\nTRADEABILITY: 20/100\n\n**Score explanation:** Intraday signal clarity is legitimately high (all timeframes bearish, aligned), but the HARD REGIME GATE blocks PUT issuance on QQQ in a confirmed bull regime, the price is already stretched -2.73 ATR from VWAP reducing PUT entry quality, volume is 0.24x average (fails the 0.8x minimum threshold required for a PUT under the gate), and the realistic near-term target (~$733) sits within expected move but the entry risk/reward is poor given snap-back probability. Tradeability is severely capped by regime rules \u2014 a clear bearish intraday read collides with an institutional-grade hard override.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in withholding)**\n\nThe intraday bearish alignment is real and clear. However, the HARD REGIME GATE explicitly prohibits PUT signals on QQQ in a confirmed bull regime (SPY and QQQ above EMA9/EMA21) unless score \u2265 75 AND price below both VWAPs AND volume \u2265 0.8x average. Score is 41/100. Volume is 0.24x average \u2014 a hard fail on two of three required criteria. A CALL is not supported by intraday structure. This is a regime conflict, not a genuinely mixed signal setup.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\n\nEXPIRY: N/A\n\nSTRIKE: N/A\n\nMONEYNESS: N/A\n\nSTOCK PRICE TARGET: N/A\n\nEST. OPTION PREMIUM: N/A\n\nPROFIT TARGET: N/A\n\nMAX LOSS: N/A\n\nSTOP RULE: N/A\n\nENTRY CONDITION: N/A\n\nENTRY TRIGGER PRICE: N/A\n\nAVOID IF: N/A\n\nKEY RISK: N/A\n\nNO TRADE REASON: Regime gate blocks PUTs on QQQ \u2014 confirmed bull regime (SPY+QQQ above EMA9/21, VIX <20) requires PUT score \u226575 AND volume \u22650.8x average; score is 41/100 and volume is 0.24x average, failing two hard criteria; intraday bearish signals are clear but the gate overrides them, and the -2.73 ATR VWAP extension creates high snap-back risk that makes a CALL equally indefensible.\n```\n\n---\n\n**\u26a0\ufe0f MONITOR FOR RE-ENTRY:** If QQQ reclaims $741.45 (1H VWAP) on volume \u2265 1.0x average with a 15m close above, the bull regime gate becomes actionable for a CALL setup targeting $747\u2013$748 resistance. That would be a clean, regime-consistent trade. Set an alert and wait.",
-        "confluence_score": 41,
-        "signal_clarity": 62,
-        "tradeability": 20,
+        "timestamp": "2026-09-28T14:52:11.197141",
+        "analysis": "# QQQ \u2014 0-2 DTE OPTIONS ANALYSIS | 10:51 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ has sold off sharply intraday (-1.73% at time of pull) and is now **3.6 ATR below VWAP** across all three intraday timeframes \u2014 a statistically extreme extension that historically precedes mean reversion, not continuation. The most plausible 0-2 DTE scenario is a **bounce/snap-back toward VWAP ($739\u2013741 zone)** rather than a clean continuation of the downtrend. Over 5-15 days, the broader picture is a range-bound chop between ~$720 and $748 with no clear trending regime, consistent with the mixed SPY/QQQ macro context.\n\n---\n\n## 2. BULL CASE\n\n1. **BEARISH_EXHAUSTION at 3.6 ATR from VWAP** \u2014 Price is statistically overstretched. At this extreme, the probability of mean reversion toward $739\u2013741 VWAP is elevated, not a sustained put continuation.\n2. **RSI (9) sub-20 on 5m and 15m** \u2014 RSI 19\u201320 is deeply oversold on short timeframes. In 0-2 DTE context, this is a rubber-band signal, not a momentum entry signal.\n3. **Daily MACD Histogram +2.58 (Bullish)** \u2014 The daily structure still carries bullish momentum from the prior trend; today's drop is a pullback within an uptrend, not a new bearish regime.\n4. **Bollinger Band Position 0.703 / Upper half** \u2014 On the daily, QQQ remains in the upper half of its 20-day band, above the midline (~$721), consistent with mean-reversion pressure upward from today's intraday lows.\n\n---\n\n## 3. BEAR CASE\n\n1. **All intraday timeframes (5m/15m/1H) uniformly bearish** \u2014 0B/3-4Br signals across every frame; price below VWAP on all three. This is exceptional short-term directional clarity.\n2. **1D return -1.58%, 5D return -1.97%** \u2014 Multi-day distribution of selling pressure; this is not a one-candle spike, it reflects persistent near-term supply.\n3. **Tech sector -1.9%** \u2014 QQQ's core sector is the worst performer today, providing macro headwind confirmation with no sector rotation support.\n4. **OBV Trend: FALLING** \u2014 Institutional accumulation is absent; distribution is ongoing on the daily timeframe, consistent with bearish intermediate pressure.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **VWAP snap-back risk is the primary wildcard** \u2014 At 3.6 ATR extension, a single large buyer or macro headline (Fed speaker, macro data release) could trigger a violent 1-2% reversal intraday.\n- **Volume anomaly**: Today's volume is only 0.34x the 20D average. Low-volume selloffs are frequently reversed when normal participation resumes \u2014 thin tape makes moves less reliable.\n- **Options flow is balanced (P/C 1.19, 5 unusual calls / 5 unusual puts)** \u2014 No clear directional conviction from smart money flow; both sides are active, consistent with hedging not directional bets.\n- **No news catalyst** \u2014 The move is technically/flow-driven, not fundamental. Lack of a narrative anchor means price is more likely to gravitate toward mechanical levels (VWAP, prior day close).\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Critical Support** | $728.62 | 0DTE lower bound (\u00b1$4.10 from ~$732.72) \u2014 breach confirms continuation |\n| **Current Price** | $732.72 | Entry reference |\n| **5m VWAP** | $735.52 | First mean-reversion target; reclaim = bear thesis weakens |\n| **15m/1H VWAP cluster** | $739.88\u2013$740.98 | Full snap-back target zone |\n| **20D Resistance** | $747.46 | Bull thesis invalidation point \u2014 no realistic 0-2 DTE concern |\n| **20D Support** | $703.81 | Bear thesis extension \u2014 well beyond 2DTE expected move |\n| **Thesis-flip level** | $735.52 (5m VWAP reclaim on volume) | A close above this on elevated volume flips the intraday bias from bear to mean-reversion |\n\n---\n\n## 6. CONFLUENCE SCORE: 48/100\n\nSIGNAL CLARITY: 71/100\nTRADEABILITY: 25/100\n\n**Score explanation:** Signal clarity is genuinely high \u2014 all intraday timeframes align bearishly with exceptional confluence \u2014 but tradeability is critically impaired by BEARISH_EXHAUSTION at 3.6 ATR from VWAP, combined with sub-20 RSI readings that signal the short move is spent, not beginning. A PUT entered here is a late entry into an exhausted move; a CALL snap-back thesis has weak directional confirmation from intraday structure. Neither direction has a clean 0-2 DTE tradeable entry right now.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (High confidence in staying out)**\n\nThe bearish signals are real but the move is exhausted. The bullish (reversal) case lacks confirmation. This is a textbook \"wait for reset\" situation.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Setup is clear directionally (bearish intraday) but BEARISH_EXHAUSTION at 3.6 ATR from VWAP with RSI(9) at 19\u201320 means a PUT entry here is a late entry into a spent move \u2014 the realistic target is mean-reversion to VWAP (bullish), not continuation, and neither direction has a confirmed trigger supported by fresh momentum; wait for price to either reclaim 15m VWAP with volume (then evaluate CALL) or consolidate and re-break today's low with expanding volume (then evaluate PUT).",
+        "confluence_score": 48,
+        "signal_clarity": 71,
+        "tradeability": 25,
         "suggested_bias": "NEUTRAL",
         "trade_setup": {
           "contract_type": "NONE",
@@ -227,18 +227,18 @@
           "avoid_if": "N/A",
           "key_risk": "N/A",
           "setup_quality": "NO TRADE",
-          "no_trade_reason": "Regime gate blocks PUTs on QQQ \u2014 confirmed bull regime (SPY+QQQ above EMA9/21, VIX <20) requires PUT score \u226575 AND volume \u22650.8x average; score is 41/100 and volume is 0.24x average, failing two hard criteria; intraday bearish signals are clear but the gate overrides them, and the -2.73 ATR VWAP extension creates high snap-back risk that makes a CALL equally indefensible.",
-          "reversal_risk": 25,
-          "exhaustion_side": null,
-          "reversal_notes": "price is 2.7 ATR from VWAP \u2014 stretched and prone to snap back",
+          "no_trade_reason": "Setup is clear directionally (bearish intraday) but BEARISH_EXHAUSTION at 3.6 ATR from VWAP with RSI(9) at 19\u201320 means a PUT entry here is a late entry into a spent move \u2014 the realistic target is mean-reversion to VWAP (bullish), not continuation, and neither direction has a confirmed trigger supported by fresh momentum; wait for price to either reclaim 15m VWAP with volume (then evaluate CALL) or consolidate and re-break today's low with expanding volume (then evaluate PUT).",
+          "reversal_risk": 40,
+          "exhaustion_side": "BEARISH_EXHAUSTION",
+          "reversal_notes": "price is 3.6 ATR from VWAP \u2014 stretched and prone to snap back; latest bar range is 2.3x the recent average \u2014 outsized push",
           "chasing_exhausted_move": false
         },
         "model": "claude-sonnet-4-6",
-        "tokens_used": 6967
+        "tokens_used": 6705
       },
       "was_flagged": true,
       "cached_at": 1790606142.0353787,
-      "score": 41
+      "score": 48
     },
     "SPY": {
       "result": {
@@ -317,5 +317,5 @@
       "score": 38
     }
   },
-  "saved_at": "2026-09-28T10:40:49-04:00"
+  "saved_at": "2026-09-28T10:52:13-04:00"
 }
