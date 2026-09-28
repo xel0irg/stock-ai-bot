@@ -736,5 +736,19 @@
   "message_id": "1554156792252989442",
   "signal_time": "2026-09-28T11:44:14-04:00",
   "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 735.24,
+  "strike": 737.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 5m candle close below $736.50 with MACD histogram remaining negative on 5m and volume at least 0.8x recent average, confirming continuation rather than a dead-cat pause.",
+  "score": 62,
+  "verdict": "WATCH",
+  "message_id": "1554178766417301646",
+  "signal_time": "2026-09-28T13:11:33-04:00",
+  "status": "PENDING"
  }
 ]

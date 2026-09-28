@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 340.6700134277344,
+      "price": 340.15008544921875,
       "volume_ratio": 0.0,
-      "ts": 1790614847.3884676,
+      "ts": 1790615442.1951537,
       "last_full_scan_ts": 1790614293.9698498
     },
     "AMZN": {
-      "price": 246.69000244140625,
+      "price": 246.50999450683594,
       "volume_ratio": 0.0,
-      "ts": 1790614847.554499,
+      "ts": 1790615442.5000286,
       "last_full_scan_ts": 1790612586.5501807
     },
     "META": {
-      "price": 722.7000122070312,
+      "price": 721.5750122070312,
       "volume_ratio": 0.0,
-      "ts": 1790614847.7533958,
+      "ts": 1790615442.9054139,
       "last_full_scan_ts": 1790613691.8684418
     },
     "MSFT": {
-      "price": 511.9800109863281,
+      "price": 511.6499938964844,
       "volume_ratio": 0.0,
-      "ts": 1790614848.077219,
+      "ts": 1790615443.4924736,
       "last_full_scan_ts": 1790612630.1897476
     },
     "NVDA": {
-      "price": 230.6199951171875,
+      "price": 230.1750030517578,
       "volume_ratio": 0.0,
-      "ts": 1790614848.2467396,
+      "ts": 1790615443.9435127,
       "last_full_scan_ts": 1790612539.2435515
     },
     "QQQ": {
-      "price": 737.0,
+      "price": 736.7100219726562,
       "volume_ratio": 0.0,
-      "ts": 1790614848.4845269,
-      "last_full_scan_ts": 1790611310.6664338
+      "ts": 1790615444.340682,
+      "last_full_scan_ts": 1790615493.5651445
     },
     "SPY": {
-      "price": 766.7899169921875,
+      "price": 766.5900268554688,
       "volume_ratio": 0.0,
-      "ts": 1790614848.699252,
+      "ts": 1790615444.8191142,
       "last_full_scan_ts": 1790614340.2601213
     },
     "TSLA": {
-      "price": 359.57000732421875,
+      "price": 359.4700012207031,
       "volume_ratio": 0.0,
-      "ts": 1790614848.8904436,
+      "ts": 1790615445.1647635,
       "last_full_scan_ts": 1790613748.6690612
     }
   },
@@ -87,44 +87,6 @@
       "was_flagged": true,
       "cached_at": 1790260889.5544274,
       "score": 44
-    },
-    "QQQ": {
-      "result": {
-        "ticker": "QQQ",
-        "timestamp": "2026-09-28T16:01:50.656014",
-        "analysis": "# QQQ ANALYSIS \u2014 12:01 PM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nQQQ is in an intraday bearish drift, trading below the 15m and 1H VWAPs while tech sector underperforms (-1.3%). The most plausible scenario over the next 5-15 days is a continued consolidation/grind lower toward the $720-725 range, with the 20D support at $703.81 as the deeper target if selling accelerates. Near-term (today), the move is showing exhaustion signs with low volume and MACD deceleration \u2014 a bounce toward VWAP ($737-740) before resuming lower is the intraday base case.\n\n---\n\n## 2. BULL CASE\n\n- **MACD Histogram (Daily, +2.74) \u2014 Bullish:** Despite intraday weakness, the daily MACD remains firmly positive, indicating the intermediate trend has upward momentum that has not fully rolled over.\n- **Bollinger Band Position (0.743) \u2014 Upper Half:** Price remains in the upper half of the 20D Bollinger Band, consistent with a market that has not broken down structurally.\n- **20D Return +2.69%:** The 20-day trend is still net positive, meaning this intraday weakness is a short-term pullback within a broader recovery move \u2014 buyers may step in near EMA21 ($725).\n- **1H RSI Oversold (29.96):** The 1-hour RSI at 29.96 is deeply oversold on an intraday basis \u2014 this alone doesn't signal a reversal but significantly elevates mean-reversion risk, especially with VWAP reclaim setups nearby.\n\n---\n\n## 3. BEAR CASE\n\n- **15m and 1H VWAP Rejection (-0.35% and -0.70% below):** Price is trading below VWAP on two of three key intraday timeframes, with the 1H structure fully bearish (0 bull / 4 bear signals). This is the dominant intraday regime.\n- **OBV Falling + Volume 0.54x Average:** On-balance volume is declining with volume at only 54% of its 20-day average \u2014 sellers are in control but participation is thin, which both validates the bear case and flags exhaustion risk.\n- **Tech Sector -1.3%, Cons. Discretionary -1.4%:** QQQ's largest sector weights are the day's worst performers, creating genuine fundamental selling pressure rather than index-level noise.\n- **1D Return -1.24%, 5D Return -1.63%:** Multi-day distribution pattern with no sign of institutional accumulation on any timeframe \u2014 the path of least resistance remains lower absent a catalyst.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **Macro data / Fed speakers:** Any surprise commentary on rates or inflation between now and close could accelerate either direction sharply in a low-volume tape.\n- **Options expiry dynamics:** With P/C ratio at 1.01 and 10 flagged unusual contracts (5 calls / 5 puts equally), dealer hedging flows are balanced but could tip with any directional move \u2014 gamma exposure at $735 strike could pin or amplify.\n- **VWAP Reclaim on Volume:** If QQQ reclaims the 15m VWAP at $737.81 on volume >1.5x average, the bearish thesis is invalidated intraday and a short-covering squeeze toward $740-742 becomes the path.\n- **Broad Market SPY Stabilization:** SPY is at a mixed/sideways state; any upside turn in SPY combined with QQQ oversold 1H RSI creates a synchronized bounce risk that would rapidly close OTM puts.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| 5m VWAP | $734.37 | Current price above this \u2014 only bullish intraday level |\n| 15m VWAP | $737.81 | Critical resistance \u2014 reclaim flips 15m bullish |\n| 1H VWAP | $740.50 | Full intraday bear thesis invalidated above this |\n| 20D Resistance | $747.46 | Also near 52W High $748.65 \u2014 major supply zone |\n| 52W High | $748.65 | Hard resistance / Bollinger Upper $749.98 cluster |\n| Current Price | $735.25 | Reference |\n| 5m EMA9 | $735.04 | Micro support / flip level |\n| 20D Support | $703.81 | Swing target if breakdown accelerates |\n\n**Thesis-changing level:** A 15m candle close ABOVE $737.81 (15m VWAP) on volume >1.2x average kills the bear case for today.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 62/100\nTRADEABILITY: 42/100\n\n**Score explanation:** The directional signal (bearish) has reasonable clarity across 15m and 1H timeframes, but tradeability is critically capped by bearish exhaustion (score 57/100, MACD decelerating three bars, 1H RSI at 29.96 oversold, price already 1.4 ATR from VWAP on 0.4x volume) \u2014 entering a PUT at this exact moment means buying into a move that has largely occurred on thin participation, with mean-reversion risk elevated at current levels relative to the $2.87 0DTE / $4.04 1DTE expected move.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nThe bearish trend is real but the entry is structurally late. The down move is exhausted intraday. The correct trade \u2014 a PUT entered on a failed retest of 15m VWAP \u2014 has not triggered yet.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Bearish signals are aligned across 15m and 1H but the down move is in exhaustion \u2014 price is already 1.4 ATR from VWAP on 0.4x volume with 1H RSI at 29.96 and MACD decelerating three consecutive bars, making a PUT entry here a late, expensive chase with high mean-reversion risk; the actionable PUT setup requires a rally and failed retest of 15m VWAP at $737.81 that has not occurred, and at 12:01 PM the setup must wait for that trigger or be passed entirely.\n\n---\n\n**MONITOR:** If QQQ rallies to $737-738 on low volume, stalls, and rolls over with a bearish 15m candle close back below VWAP \u2014 re-run the score. That would be the entry, likely a 1DTE PUT $735 strike targeting $731-732.",
-        "confluence_score": 52,
-        "signal_clarity": 62,
-        "tradeability": 42,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Bearish signals are aligned across 15m and 1H but the down move is in exhaustion \u2014 price is already 1.4 ATR from VWAP on 0.4x volume with 1H RSI at 29.96 and MACD decelerating three consecutive bars, making a PUT entry here a late, expensive chase with high mean-reversion risk; the actionable PUT setup requires a rally and failed retest of 15m VWAP at $737.81 that has not occurred, and at 12:01 PM the setup must wait for that trigger or be passed entirely.",
-          "reversal_risk": 57,
-          "exhaustion_side": "BEARISH_EXHAUSTION",
-          "reversal_notes": "MACD histogram shrinking three bars running \u2014 momentum decelerating; price is 1.4 ATR from VWAP; push is on 0.40x the recent volume \u2014 little participation",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6867
-      },
-      "was_flagged": false,
-      "cached_at": 1790606142.0353787,
-      "score": 52
     },
     "AAPL": {
       "result": {
@@ -317,5 +279,5 @@
       "score": 41
     }
   },
-  "saved_at": "2026-09-28T13:00:48-04:00"
+  "saved_at": "2026-09-28T13:11:35-04:00"
 }
