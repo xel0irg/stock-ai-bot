@@ -708,5 +708,33 @@
   "message_id": "1553059150848598157",
   "signal_time": "2026-09-25T11:02:36-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "SPY",
+  "direction": "PUT",
+  "trigger": 763.91,
+  "strike": 765.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15m candle close that holds below $765.00 with volume at or above 0.8x average and 15m MACD histogram remaining negative \u2014 do NOT chase; wait for a failed bounce into $765-$766 zone",
+  "score": 62,
+  "verdict": "TRADE",
+  "message_id": "1554156582328205504",
+  "signal_time": "2026-09-28T11:43:24-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "TSLA",
+  "direction": "PUT",
+  "trigger": 359.0,
+  "strike": 360.0,
+  "expiry_date": "",
+  "vol_multiple": null,
+  "entry_condition": "Enter only on a confirmed 5m candle close below $359.00 with price remaining below the 5m VWAP ($360.22) and no visible volume spike (which would suggest capitulation/reversal rather than continuation).",
+  "score": 67,
+  "verdict": "RISKY",
+  "message_id": "1554156792252989442",
+  "signal_time": "2026-09-28T11:44:14-04:00",
+  "status": "PENDING"
  }
 ]
