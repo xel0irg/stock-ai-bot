@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 331.30499267578125,
+      "price": 331.3800048828125,
       "volume_ratio": 0.0,
-      "ts": 1790700042.0117924,
-      "last_full_scan_ts": 1790696556.7034492
+      "ts": 1790700643.8512084,
+      "last_full_scan_ts": 1790700650.5376012
     },
     "AMZN": {
-      "price": 246.9600067138672,
+      "price": 247.39999389648438,
       "volume_ratio": 0.0,
-      "ts": 1790700042.1967793,
-      "last_full_scan_ts": 1790696601.5842218
+      "ts": 1790700644.019515,
+      "last_full_scan_ts": 1790700655.4161966
     },
     "META": {
-      "price": 718.5999755859375,
+      "price": 719.0692138671875,
       "volume_ratio": 0.0,
-      "ts": 1790700042.3821797,
+      "ts": 1790700644.1999302,
       "last_full_scan_ts": 1790697064.391283
     },
     "MSFT": {
-      "price": 508.43499755859375,
+      "price": 509.1199951171875,
       "volume_ratio": 0.0,
-      "ts": 1790700042.6297693,
+      "ts": 1790700644.4118364,
       "last_full_scan_ts": 1790697666.506602
     },
     "NVDA": {
-      "price": 230.02499389648438,
+      "price": 229.8699951171875,
       "volume_ratio": 0.0,
-      "ts": 1790700042.8184187,
-      "last_full_scan_ts": 1790696496.3773713
+      "ts": 1790700644.5925996,
+      "last_full_scan_ts": 1790700660.3454366
     },
     "QQQ": {
-      "price": 736.5800170898438,
+      "price": 736.4400024414062,
       "volume_ratio": 0.0,
-      "ts": 1790700043.0805974,
-      "last_full_scan_ts": 1790696650.3828595
+      "ts": 1790700644.931531,
+      "last_full_scan_ts": 1790700669.302487
     },
     "SPY": {
-      "price": 763.1099853515625,
+      "price": 763.0599975585938,
       "volume_ratio": 0.0,
-      "ts": 1790700043.2814312,
-      "last_full_scan_ts": 1790696705.774583
+      "ts": 1790700645.1986742,
+      "last_full_scan_ts": 1790700684.2733848
     },
     "TSLA": {
-      "price": 352.6549987792969,
+      "price": 352.6499938964844,
       "volume_ratio": 0.0,
-      "ts": 1790700043.4362202,
-      "last_full_scan_ts": 1790696717.3671644
+      "ts": 1790700645.3634052,
+      "last_full_scan_ts": 1790700690.1359944
     }
   },
   "ai_cache": {
@@ -61,79 +61,21 @@
     },
     "AAPL": {
       "result": {
-        "ticker": "AAPL",
-        "timestamp": "2026-09-29T15:42:36.699538",
-        "analysis": "# AAPL \u2014 0-2 DTE Options Analysis | 11:41 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nAAPL is in an intraday downtrend, having sold off sharply from VWAP on the 15m and 1H timeframes, but the move is showing clear signs of exhaustion \u2014 RSI on the 1H is at 21.6 (deeply oversold), price is 2.1 ATR below VWAP, and a bullish RSI divergence has formed on the 15m. The most plausible scenario over 5-15 days is a mean-reversion bounce toward $338-$341 (20D resistance) following today's flush, supported by the 20D return still being positive (+2.18%) and Tech sector outperforming the broad market today. The bearish intraday move has likely run its course for today; initiating new short exposure here is a late and expensive entry.\n\n---\n\n## 2. BULL CASE\n\n- **Bearish exhaustion confirmed (Reversal Risk 68/100):** Price made a lower low on 1H/15m but RSI did not \u2014 classic bullish divergence. Sellers are thinning. At 2.1 ATR below VWAP, mean-reversion snap-back is statistically likely.\n- **1H RSI at 21.6 / 15m RSI at 25.7 (deeply oversold):** Extreme oversold readings at this time of day (pre-noon) on 0-2 DTE timeframes historically precede sharp intraday bounces, not continuation.\n- **Tech sector green (+0.31%) while AAPL is down 1.82%:** Sector rotation divergence \u2014 AAPL is underperforming its own sector, which creates a catch-up dynamic if broad selling pressure abates.\n- **5m price above VWAP ($332.15) with bullish 3-candle momentum (+0.145%):** The shortest timeframe is showing early stabilization and a slight upward tick \u2014 earliest signal of a potential reversal materializing.\n\n---\n\n## 3. BEAR CASE\n\n- **1H and 15m MACD both bearish, price well below 15m and 1H VWAP:** Structural trend on the dominant intraday timeframes is clearly down \u2014 no confirmed reversal has printed yet.\n- **MACD Daily Histogram bearish cross (-0.148) with OBV falling:** Daily trend momentum is deteriorating, suggesting the intraday selloff has macro-timeframe support.\n- **Price at $332.23 vs analyst consensus target $328.22:** AAPL is trading *above* consensus analyst price target, meaning valuation support is arguably already breached at current levels, removing a fundamental floor.\n- **Low volume (0.29x 20D average):** Thin volume means no institutional accumulation is stepping in to defend price \u2014 the bounce, if it comes, may be weak and short-lived.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **No news found:** Absence of a catalyst for today's selloff makes it more likely technical/macro driven and therefore more prone to reversal \u2014 but also means a surprise headline could accelerate in either direction.\n- **Options expiry dynamics:** With 0DTE expected move of \u00b1$2.86, any large gamma positioning near $330 or $335 strikes could act as a magnet or repellent as market makers hedge.\n- **VIX at 16.35 (normal):** No volatility shock expected, but any broad market risk-off event (SPY breaking below its intraday low) could overwhelm the oversold bounce thesis.\n- **SEC filings (10 in 90 days):** No specifics available, but elevated filing activity warrants monitoring for any material disclosure risk.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Value | Significance |\n|---|---|---|\n| **Immediate Support** | $330.00 | Round number / psychological |\n| **20D Support** | $315.34 | Major floor \u2014 not relevant for 0-2 DTE |\n| **5m VWAP** | $332.15 | Current price just above \u2014 holding is bullish |\n| **15m VWAP** | $334.68 | First real resistance; recapture = bullish confirmation |\n| **1H VWAP** | $338.45 | Full mean-reversion target |\n| **EMA21 (daily)** | $330.81 | Dynamic support nearby |\n| **20D Resistance** | $341.07 | Bull case upper target |\n| **Thesis Flip Level** | $329.50 | Break below invalidates bounce thesis; sellers regaining control |\n\n---\n\n## 6. CONFLUENCE SCORE: 51/100\n\nSIGNAL CLARITY: 58/100\nTRADEABILITY: 44/100\n\nScore explanation: Signal clarity is moderate \u2014 the exhaustion/reversal case is well-supported by RSI divergence and extreme VWAP extension, but no confirmed reversal candle has printed yet, and the trend on 15m/1H is still structurally bearish. Tradeability caps the score hard: a PUT trade is late (bearish exhaustion at 68/100 explicitly warns against it), and a CALL trade requires a confirmed reversal trigger that has not yet materialized \u2014 if price needs to rally from $332 to $334.68 (15m VWAP) to confirm, that's already 0.7x the 0DTE expected move consumed before the trade even starts, leaving insufficient premium payoff for 0-2 DTE.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence in the no-trade call)**\n\nThe bearish move is exhausted but unconfirmed for reversal; the bearish continuation trade is explicitly late per the exhaustion data. Neither direction offers a clean, viable 0-2 DTE entry *right now* at 11:41 AM.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Bearish exhaustion score of 68/100 with confirmed RSI divergence explicitly disqualifies a PUT entry (late, stretched 2.1 ATR from VWAP); a CALL entry requires a reversal trigger (15m candle close above $334.68 with volume expansion) that has not yet printed \u2014 enter neither direction until confirmation occurs.\n```\n\n---\n\n**WATCH LIST \u2014 Re-evaluate IF:**\n- 15m candle closes **above $334.68** (15m VWAP) on **volume \u2265 1.0x average** \u2192 CALL setup opens (1DTE, $333-$335 strike, target $337-$338)\n- Price breaks and holds **below $329.50** on expanding volume \u2192 PUT setup opens, but only if RSI divergence is cleared (i.e., RSI makes a new low confirming sellers)\n- Current setup: **wait, do not chase**",
-        "confluence_score": 51,
-        "signal_clarity": 58,
-        "tradeability": 44,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Bearish exhaustion score of 68/100 with confirmed RSI divergence explicitly disqualifies a PUT entry (late, stretched 2.1 ATR from VWAP); a CALL entry requires a reversal trigger (15m candle close above $334.68 with volume expansion) that has not yet printed \u2014 enter neither direction until confirmation occurs.",
-          "reversal_risk": 68,
-          "exhaustion_side": "BEARISH_EXHAUSTION",
-          "reversal_notes": "price made a lower low but RSI did not \u2014 sellers are thinning out; price is 2.1 ATR from VWAP \u2014 stretched and prone to snap back",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6962
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5M5k1ft7gFY8cxDpgu'}",
+        "analysis": null
       },
       "was_flagged": false,
       "cached_at": 1790606319.7844503,
-      "score": 51
+      "score": 0
     },
     "NVDA": {
       "result": {
-        "ticker": "NVDA",
-        "timestamp": "2026-09-29T15:41:36.367355",
-        "analysis": "# NVDA \u2014 0-2 DTE Options Analysis | 11:40 AM ET\n\n---\n\n## 1. MARKET SCENARIO\n\nNVDA is grinding higher in low-volume, choppy conditions \u2014 up 0.84% on the day, sitting just below its 20-day resistance at $230.79 (which is literally the current print). The 52-week high is $236.54, and price is trading at the upper Bollinger Band with Stochastics overbought at 90/79. The most plausible scenario over 5-15 days is a continuation attempt toward $232-234 that faces heavy resistance and digestion before any sustained breakout, with elevated pullback risk given overbought oscillators and below-average volume failing to confirm the move.\n\n---\n\n## 2. BULL CASE\n\n- **1H Timeframe is Bullish (3B/1Br):** Price is above VWAP on all three intraday timeframes with 1H EMA9 ($229.56) > EMA21 ($228.00) \u2014 the cleanest structural signal available at 11:40 AM.\n- **Daily MACD Histogram Positive (+0.6919):** Sustained positive histogram momentum on the daily timeframe supports the broader uptrend; the tape is not collapsing.\n- **Tech Sector Green (+0.31%):** XLK outperforming a weak broad market today. Sector tailwind keeps sellers cautious and funds rotation intact for NVDA.\n- **Analyst Consensus / Fundamentals:** Strong Buy with $327 target, PEG 0.47, forward P/E 14.7 \u2014 fundamental backstop reduces willingness to aggressively short the name near-term.\n\n---\n\n## 3. BEAR CASE\n\n- **Stochastics 90/79 + RSI 60.68 approaching overbought:** Price has run 6.26% over 20 days into the upper Bollinger Band (BB position: 0.844). Oscillators signal overextension, not acceleration.\n- **Volume 0.37x 20-day average:** Today's move is happening on roughly one-third of normal volume. A move to new highs without volume participation is technically suspect \u2014 distribution is a real possibility.\n- **Current price IS the 20-day resistance ($230.79):** NVDA is literally trading at its defined resistance ceiling. Failure to break cleanly here is the base-case for a stall or fade.\n- **15m and 5m MACD Both Bearish:** Despite bullish VWAP positioning, the shorter-term momentum oscillators are printing bearish histograms on 15m (-0.0293) and 5m \u2014 warning that the intraday push is losing incremental buyers.\n\n---\n\n## 4. WILDCARD / CATALYSTS\n\n- **52-Week High Magnetic Pull ($236.54):** ~$5.75 away. If a macro catalyst (AI news, competitor miss, data center headlines) hits, this becomes a magnet. Equally, a failed breakout attempt at current resistance could accelerate a reversal toward $225.\n- **No News Today (0 articles):** A news vacuum in a $5.5T market cap stock is unusual. Any surprise headline \u2014 positive (partnership, government contract, export rule relaxation) or negative (China restrictions, competitor advance) \u2014 carries outsized impact in a thin-volume session.\n- **Options Expiry Flow:** Neutral P/C at 0.48 with equal unusual calls/puts (5 each) is genuinely ambiguous but suggests hedged positioning \u2014 could amplify a move in either direction if a level breaks cleanly, particularly given current proximity to the $230-232 strike cluster.\n- **10 Recent SEC Filings:** Warrants monitoring for any material disclosure that hasn't priced in yet.\n\n---\n\n## 5. KEY LEVELS TO WATCH\n\n| Level | Price | Significance |\n|---|---|---|\n| **Resistance (Hard)** | $230.79 | 20-day resistance = current price; rejection here = fade |\n| **Resistance (Upper BB)** | $234.42 | Next meaningful ceiling; 52W High just above at $236.54 |\n| **VWAP (1H)** | $229.68 | Bull/bear line intraday; lose this = bias flips |\n| **EMA9 (1H)** | $229.56 | Short-term momentum floor |\n| **Support (EMA21 1H)** | $228.00 | Clean breakdown below this confirms bearish intraday |\n| **Support (20D)** | $210.96 | Far structural support \u2014 not relevant for 0-2 DTE |\n\n**Thesis-changing level:** A sustained 15m close **above $231.50** (clearly through resistance with volume) flips this to a credible breakout CALL setup. A clean 15m close **below $229.00** (losing VWAP + EMA9) opens a put trade toward $227.50.\n\n---\n\n## 6. CONFLUENCE SCORE: 52/100\n\nSIGNAL CLARITY: 55/100\nTRADEABILITY: 49/100\n\nSignals show mild bullish lean on higher timeframes (1H bullish) but genuine conflict on 5m/15m with both MACD readings bearish \u2014 this is textbook mixed confluence per the scoring framework. Tradeability caps the score: the realistic move sits tightly against resistance ($230.79 = current price), the 0DTE expected move is only \u00b1$2.47, and the stock needs to either break cleanly above a ceiling it's pressing against OR reverse convincingly \u2014 neither condition is confirmed at entry. Volume at 0.37x average means momentum confirmation is absent for either direction.\n\n---\n\n## 7. SUGGESTED BIAS\n\n**NEUTRAL \u2192 NO TRADE (Medium confidence)**\n\nPrice is at resistance with mixed intraday signals. The 1H is bullish but 5m/15m are diverging with bearish MACD. No volume confirmation. Entering a 0-2 DTE directional bet at precisely the 20-day resistance ceiling, on 37% of normal volume, with oscillators overbought, and no catalyst \u2014 is paying theta for ambiguity.\n\n---\n\n## 8. OPTIONS TRADE SETUP (0-2 DTE)\n\n```\nCONTRACT TYPE: NONE\nEXPIRY: N/A\nSTRIKE: N/A\nMONEYNESS: N/A\nSTOCK PRICE TARGET: N/A\nEST. OPTION PREMIUM: N/A\nPROFIT TARGET: N/A\nMAX LOSS: N/A\nSTOP RULE: N/A\nENTRY CONDITION: N/A\nENTRY TRIGGER PRICE: N/A\nAVOID IF: N/A\nKEY RISK: N/A\nNO TRADE REASON: Signals genuinely conflict across timeframes \u2014 1H is bullish but 5m/15m MACD is bearish, volume is 0.37x average providing no confirmation of direction, and price is pressing exactly against defined 20-day resistance ($230.79) with no clean break in either direction; entering a 0-2 DTE contract at this ambiguous inflection point pays theta for a coin flip.\n```\n\n---\n\n**MONITOR FOR RE-ENTRY:** If NVDA closes a 15m candle above **$231.75** on volume \u2265 0.8x average \u2192 reassess 1DTE CALL. If NVDA breaks below **$229.00** on a 15m close with bearish volume \u2192 reassess 1DTE PUT. Do not anticipate either \u2014 let the tape confirm first.",
-        "confluence_score": 52,
-        "signal_clarity": 55,
-        "tradeability": 49,
-        "suggested_bias": "NEUTRAL",
-        "trade_setup": {
-          "contract_type": "NONE",
-          "expiry": null,
-          "strike": null,
-          "moneyness": null,
-          "stock_target": null,
-          "est_premium": null,
-          "est_premium_ai": null,
-          "premium_is_real": false,
-          "profit_target": null,
-          "stop_rule": "N/A",
-          "entry_condition": "N/A",
-          "entry_trigger": null,
-          "avoid_if": "N/A",
-          "key_risk": "N/A",
-          "setup_quality": "NO TRADE",
-          "no_trade_reason": "Signals genuinely conflict across timeframes \u2014 1H is bullish but 5m/15m MACD is bearish, volume is 0.37x average providing no confirmation of direction, and price is pressing exactly against defined 20-day resistance ($230.79) with no clean break in either direction; entering a 0-2 DTE contract at this ambiguous inflection point pays theta for a coin flip.",
-          "reversal_risk": 8,
-          "exhaustion_side": null,
-          "reversal_notes": "",
-          "chasing_exhausted_move": false
-        },
-        "model": "claude-sonnet-4-6",
-        "tokens_used": 6931
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5MpTn7werrS5FTYz7m'}",
+        "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790616793.815168,
-      "score": 52
+      "score": 0
     },
     "MSFT": {
       "result": {
@@ -146,13 +88,40 @@
     },
     "TSLA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfXzLnQtq7NdCzu66fuit'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5Q1qSovVeVfrPquFaT'}",
         "analysis": null
       },
       "was_flagged": false,
       "cached_at": 1790696717.367168,
       "score": 0
+    },
+    "AMZN": {
+      "result": {
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5MSzwszLr98d5nhK9B'}",
+        "analysis": null
+      },
+      "was_flagged": false,
+      "cached_at": 1790700655.4162,
+      "score": 0
+    },
+    "QQQ": {
+      "result": {
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5NUsqcik1kXSsGoWBb'}",
+        "analysis": null
+      },
+      "was_flagged": false,
+      "cached_at": 1790700669.302491,
+      "score": 0
+    },
+    "SPY": {
+      "result": {
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5PasGmGxtQvfN75qXf'}",
+        "analysis": null
+      },
+      "was_flagged": false,
+      "cached_at": 1790700684.2733877,
+      "score": 0
     }
   },
-  "saved_at": "2026-09-29T12:40:43-04:00"
+  "saved_at": "2026-09-29T12:51:32-04:00"
 }
