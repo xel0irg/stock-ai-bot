@@ -750,5 +750,47 @@
   "message_id": "1554178766417301646",
   "signal_time": "2026-09-28T13:11:33-04:00",
   "status": "EXPIRED"
+ },
+ {
+  "ticker": "AMZN",
+  "direction": "PUT",
+  "trigger": 245.9,
+  "strike": 245.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15-minute candle close below $245.90 (20D support at $245.96 broken) with volume at or above 0.8x average \u2014 confirming the breakdown is not a false flush.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1554518957464096861",
+  "signal_time": "2026-09-29T11:43:21-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "QQQ",
+  "direction": "PUT",
+  "trigger": 735.57,
+  "strike": 737.0,
+  "expiry_date": "",
+  "vol_multiple": 0.7,
+  "entry_condition": "Enter only on a confirmed 15-minute candle close that remains below VWAP ($737.49) with price failing to reclaim EMA9 ($737.78) and 15m volume recovering to at least 0.7x average \u2014 do not chase a further drop from current levels without this confirmation.",
+  "score": 62,
+  "verdict": "TRADE",
+  "message_id": "1554519162737528914",
+  "signal_time": "2026-09-29T11:44:10-04:00",
+  "status": "PENDING"
+ },
+ {
+  "ticker": "SPY",
+  "direction": "PUT",
+  "trigger": 762.68,
+  "strike": 763.0,
+  "expiry_date": "",
+  "vol_multiple": 0.8,
+  "entry_condition": "Enter on a 15-minute candle close below $763.65 with price confirming below 15m EMA9 ($764.48) and volume above 0.8x average \u2014 do not chase into a spike down on thin tape.",
+  "score": 68,
+  "verdict": "TRADE",
+  "message_id": "1554519394166509629",
+  "signal_time": "2026-09-29T11:45:05-04:00",
+  "status": "PENDING"
  }
 ]
