@@ -1,58 +1,58 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 335.4800109863281,
+      "price": 335.7799987792969,
       "volume_ratio": 0.0,
-      "ts": 1791387048.4543324,
+      "ts": 1791387647.5342793,
       "last_full_scan_ts": 1791384648.2679908
     },
     "AMZN": {
-      "price": 256.7799987792969,
+      "price": 258.0400085449219,
       "volume_ratio": 0.0,
-      "ts": 1791387048.5599282,
-      "last_full_scan_ts": 1791386454.3203323
+      "ts": 1791387647.881963,
+      "last_full_scan_ts": 1791387657.3410985
     },
     "META": {
-      "price": 721.7050170898438,
+      "price": 724.1751098632812,
       "volume_ratio": 0.0,
-      "ts": 1791387048.6764262,
-      "last_full_scan_ts": 1791387054.721874
+      "ts": 1791387648.135591,
+      "last_full_scan_ts": 1791387666.443265
     },
     "MSFT": {
-      "price": 527.2584228515625,
+      "price": 528.4550170898438,
       "volume_ratio": 0.0,
-      "ts": 1791387048.8286695,
-      "last_full_scan_ts": 1791383514.8127944
+      "ts": 1791387648.4354217,
+      "last_full_scan_ts": 1791387673.5136614
     },
     "NVDA": {
-      "price": 236.7198944091797,
+      "price": 237.3699951171875,
       "volume_ratio": 0.0,
-      "ts": 1791387048.9726357,
-      "last_full_scan_ts": 1791383532.3585997
+      "ts": 1791387648.8718855,
+      "last_full_scan_ts": 1791387679.5853655
     },
     "QQQ": {
-      "price": 754.9299926757812,
+      "price": 756.2449951171875,
       "volume_ratio": 0.0,
-      "ts": 1791387049.1284482,
-      "last_full_scan_ts": 1791383548.0678008
+      "ts": 1791387649.2013223,
+      "last_full_scan_ts": 1791387685.0502133
     },
     "SPY": {
-      "price": 774.8400268554688,
+      "price": 775.8499755859375,
       "volume_ratio": 0.0,
-      "ts": 1791387049.3103175,
-      "last_full_scan_ts": 1791383564.3706286
+      "ts": 1791387649.4944937,
+      "last_full_scan_ts": 1791387692.0857491
     },
     "TSLA": {
-      "price": 375.0299987792969,
+      "price": 375.6434020996094,
       "volume_ratio": 0.0,
-      "ts": 1791387049.4190617,
-      "last_full_scan_ts": 1791383580.1115205
+      "ts": 1791387649.8131258,
+      "last_full_scan_ts": 1791387697.7338936
     }
   },
   "ai_cache": {
     "META": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo7itjdaJceXeUwRGr7K'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8VzpzoffyP1ZucQn2d'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -70,34 +70,34 @@
     },
     "NVDA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo3FFnumfzfyq4NkAVdi'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8WxxAhNgT5pH4BoAaU'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790616793.815168,
       "score": 0
     },
     "MSFT": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo3DxoCBRL8TsYmmrFAQ'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8WX4CCsVouHP74meTk'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790693488.5340235,
       "score": 0
     },
     "TSLA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo3JmzC5Rv35U3nxN7wA'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8YJeNW3PYaEqBcjW1m'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790696717.367168,
       "score": 0
     },
     "AMZN": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo6xdqUE911GEGPDFKYL'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8VKKDvUpak5abcW8QK'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -106,22 +106,22 @@
     },
     "QQQ": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo3GQxbWSUA4367xx5Ja'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8XNKM7B1merho1qxv3'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790700669.302491,
       "score": 0
     },
     "SPY": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo3HciZuYEk4HPwN1DyW'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfo8XtUKCMkY1VAyDydtL'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790700684.2733877,
       "score": 0
     }
   },
-  "saved_at": "2026-10-07T11:30:56-04:00"
+  "saved_at": "2026-10-07T11:41:39-04:00"
 }
