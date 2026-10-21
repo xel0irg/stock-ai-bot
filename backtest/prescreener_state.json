@@ -1,51 +1,51 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 343.9700012207031,
+      "price": 343.9750061035156,
       "volume_ratio": 0.0,
-      "ts": 1792600841.7147572,
+      "ts": 1792601444.4027967,
       "last_full_scan_ts": 1792600857.27765
     },
     "AMZN": {
-      "price": 263.18499755859375,
+      "price": 263.3190002441406,
       "volume_ratio": 0.0,
-      "ts": 1792600841.943246,
+      "ts": 1792601444.7306614,
       "last_full_scan_ts": 1792600869.9998546
     },
     "META": {
-      "price": 711.9400024414062,
+      "price": 710.5800170898438,
       "volume_ratio": 0.0,
-      "ts": 1792600842.1813967,
+      "ts": 1792601444.9920828,
       "last_full_scan_ts": 1792599056.3934946
     },
     "MSFT": {
-      "price": 532.4299926757812,
+      "price": 532.614990234375,
       "volume_ratio": 0.0,
-      "ts": 1792600842.4667225,
-      "last_full_scan_ts": 1792597253.408679
+      "ts": 1792601445.3771753,
+      "last_full_scan_ts": 1792601455.1656725
     },
     "NVDA": {
-      "price": 220.94000244140625,
+      "price": 220.9600067138672,
       "volume_ratio": 0.0,
-      "ts": 1792600842.7169151,
+      "ts": 1792601445.6619616,
       "last_full_scan_ts": 1792600849.0035229
     },
     "QQQ": {
-      "price": 726.6099853515625,
+      "price": 726.77001953125,
       "volume_ratio": 0.0,
-      "ts": 1792600842.9417837,
-      "last_full_scan_ts": 1792597267.754492
+      "ts": 1792601445.948665,
+      "last_full_scan_ts": 1792601461.1337368
     },
     "SPY": {
-      "price": 773.0399780273438,
+      "price": 773.1900024414062,
       "volume_ratio": 0.0,
-      "ts": 1792600843.2541275,
-      "last_full_scan_ts": 1792597274.8871572
+      "ts": 1792601446.3159275,
+      "last_full_scan_ts": 1792601477.4315305
     },
     "TSLA": {
-      "price": 387.8575134277344,
+      "price": 387.1050109863281,
       "volume_ratio": 0.0,
-      "ts": 1792600843.4825234,
+      "ts": 1792601446.6367936,
       "last_full_scan_ts": 1792600877.4415526
     }
   },
@@ -79,7 +79,7 @@
     },
     "MSFT": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgFdoqxgorFrtcbBo1mQG'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgFj9ZdZRpG2A1ARNqkRR'}",
         "analysis": null
       },
       "was_flagged": false,
@@ -106,7 +106,7 @@
     },
     "QQQ": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgFdpuwpfRPc8e7sGfEvv'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgFjA2PtBRSJL3uDTwGQy'}",
         "analysis": null
       },
       "was_flagged": false,
@@ -115,7 +115,7 @@
     },
     "SPY": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgFdqSRdcQSA1zu3j8fgS'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgFjBE6ryR3DNitSBbABx'}",
         "analysis": null
       },
       "was_flagged": false,
@@ -123,5 +123,5 @@
       "score": 0
     }
   },
-  "saved_at": "2026-10-21T12:41:19-04:00"
+  "saved_at": "2026-10-21T12:51:19-04:00"
 }
