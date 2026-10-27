@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 345.4100036621094,
+      "price": 345.239990234375,
       "volume_ratio": 0.0,
-      "ts": 1793121041.8453698,
-      "last_full_scan_ts": 1793117453.5333817
+      "ts": 1793121639.608433,
+      "last_full_scan_ts": 1793121648.4352705
     },
     "AMZN": {
-      "price": 253.6300048828125,
+      "price": 253.27000427246094,
       "volume_ratio": 0.0,
-      "ts": 1793121042.0576744,
-      "last_full_scan_ts": 1793117459.6110332
+      "ts": 1793121639.9283466,
+      "last_full_scan_ts": 1793121653.829605
     },
     "META": {
-      "price": 623.75,
+      "price": 623.3400268554688,
       "volume_ratio": 0.0,
-      "ts": 1793121042.3060665,
+      "ts": 1793121640.195225,
       "last_full_scan_ts": 1793118058.125944
     },
     "MSFT": {
-      "price": 532.1500244140625,
+      "price": 532.219970703125,
       "volume_ratio": 0.0,
-      "ts": 1793121042.5360894,
+      "ts": 1793121640.4862204,
       "last_full_scan_ts": 1793120465.5792344
     },
     "NVDA": {
-      "price": 218.19000244140625,
+      "price": 217.9600067138672,
       "volume_ratio": 0.0,
-      "ts": 1793121042.814943,
+      "ts": 1793121640.7383575,
       "last_full_scan_ts": 1793120477.3551056
     },
     "QQQ": {
-      "price": 721.0250244140625,
+      "price": 720.4500732421875,
       "volume_ratio": 0.0,
-      "ts": 1793121043.1517143,
+      "ts": 1793121641.0582564,
       "last_full_scan_ts": 1793119852.0163136
     },
     "SPY": {
-      "price": 769.5,
+      "price": 769.457275390625,
       "volume_ratio": 0.0,
-      "ts": 1793121043.4250147,
+      "ts": 1793121641.4141715,
       "last_full_scan_ts": 1793119856.9831429
     },
     "TSLA": {
-      "price": 406.6400146484375,
+      "price": 405.9800109863281,
       "volume_ratio": 0.0,
-      "ts": 1793121043.6143093,
-      "last_full_scan_ts": 1793117466.7479894
+      "ts": 1793121641.6679223,
+      "last_full_scan_ts": 1793121659.4194322
     }
   },
   "ai_cache": {
@@ -61,10 +61,10 @@
     },
     "AAPL": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgT2x3AZy6GKiVYkV14zm'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgT8HGDjxYFcqyuAP2cdG'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790606319.7844503,
       "score": 0
     },
@@ -88,19 +88,19 @@
     },
     "TSLA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgT2y23NVU7jaMzbN2FFZ'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgT8J5bJd1nGqqF1LmX2e'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790696717.367168,
       "score": 0
     },
     "AMZN": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgT2xVZoeLiBKjcPrDbeQ'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgT8HfhNLHKcm5wCsqE2n'}",
         "analysis": null
       },
-      "was_flagged": true,
+      "was_flagged": false,
       "cached_at": 1790700655.4162,
       "score": 0
     },
@@ -123,5 +123,5 @@
       "score": 0
     }
   },
-  "saved_at": "2026-10-27T13:10:43-04:00"
+  "saved_at": "2026-10-27T13:21:01-04:00"
 }
