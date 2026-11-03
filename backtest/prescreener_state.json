@@ -1,58 +1,58 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 331.2250061035156,
+      "price": 331.0400085449219,
       "volume_ratio": 0.0,
-      "ts": 1793728860.9874706,
+      "ts": 1793729454.2598965,
       "last_full_scan_ts": 1793728869.4182384
     },
     "AMZN": {
-      "price": 249.4499969482422,
+      "price": 250.52499389648438,
       "volume_ratio": 0.0,
-      "ts": 1793728861.2011292,
-      "last_full_scan_ts": 1793725848.0925987
+      "ts": 1793729454.4940312,
+      "last_full_scan_ts": 1793729461.8746717
     },
     "META": {
-      "price": 622.8599853515625,
+      "price": 623.7999877929688,
       "volume_ratio": 0.0,
-      "ts": 1793728861.4453297,
-      "last_full_scan_ts": 1793725854.5742464
+      "ts": 1793729454.7482495,
+      "last_full_scan_ts": 1793729472.6207542
     },
     "MSFT": {
-      "price": 520.0900268554688,
+      "price": 521.125,
       "volume_ratio": 0.0,
-      "ts": 1793728861.7429316,
+      "ts": 1793729455.0061176,
       "last_full_scan_ts": 1793725860.6016195
     },
     "NVDA": {
-      "price": 208.25999450683594,
+      "price": 208.7100067138672,
       "volume_ratio": 0.0,
-      "ts": 1793728861.9589255,
+      "ts": 1793729455.2295263,
       "last_full_scan_ts": 1793727661.7153516
     },
     "QQQ": {
-      "price": 686.719970703125,
+      "price": 688.0900268554688,
       "volume_ratio": 0.0,
-      "ts": 1793728862.3261175,
+      "ts": 1793729455.4726248,
       "last_full_scan_ts": 1793728263.4101815
     },
     "SPY": {
-      "price": 755.5346069335938,
+      "price": 756.6900024414062,
       "volume_ratio": 0.0,
-      "ts": 1793728862.6826208,
+      "ts": 1793729455.7522662,
       "last_full_scan_ts": 1793728268.671661
     },
     "TSLA": {
-      "price": 397.5450134277344,
+      "price": 399.04998779296875,
       "volume_ratio": 0.0,
-      "ts": 1793728862.9217966,
-      "last_full_scan_ts": 1793728274.0174496
+      "ts": 1793729456.1635234,
+      "last_full_scan_ts": 1793729467.650137
     }
   },
   "ai_cache": {
     "META": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggNBuNet2f5sQuJU5DJ7'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggSnc6nNxpHJZi378NaJ'}",
         "analysis": null
       },
       "was_flagged": false,
@@ -88,19 +88,19 @@
     },
     "TSLA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggRGFW65m8gWnRkN9BPW'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggSnEr6Mb7AiGXZeijmq'}",
         "analysis": null
       },
-      "was_flagged": false,
+      "was_flagged": true,
       "cached_at": 1790696717.367168,
       "score": 0
     },
     "AMZN": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggNBRCVrHdEckbQ9ffvV'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggSmonTzAxDzFoTF2T46'}",
         "analysis": null
       },
-      "was_flagged": false,
+      "was_flagged": true,
       "cached_at": 1790700655.4162,
       "score": 0
     },
@@ -123,5 +123,5 @@
       "score": 0
     }
   },
-  "saved_at": "2026-11-03T13:01:11-05:00"
+  "saved_at": "2026-11-03T13:11:14-05:00"
 }
