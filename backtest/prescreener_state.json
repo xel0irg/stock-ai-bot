@@ -1,58 +1,58 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 348.8699951171875,
+      "price": 349.0299987792969,
       "volume_ratio": 0.0,
-      "ts": 1795188650.8276997,
+      "ts": 1795189234.9027674,
       "last_full_scan_ts": 1795188775.325359
     },
     "AMZN": {
-      "price": 255.39999389648438,
+      "price": 255.7449951171875,
       "volume_ratio": 0.0,
-      "ts": 1795188651.15285,
+      "ts": 1795189235.102102,
       "last_full_scan_ts": 1795188660.9593697
     },
     "META": {
-      "price": 576.6400146484375,
+      "price": 579.2999877929688,
       "volume_ratio": 0.0,
-      "ts": 1795188651.4912555,
-      "last_full_scan_ts": 1795188677.470898
+      "ts": 1795189235.315779,
+      "last_full_scan_ts": 1795189243.0471199
     },
     "MSFT": {
-      "price": 495.69000244140625,
+      "price": 495.42999267578125,
       "volume_ratio": 0.0,
-      "ts": 1795188651.7951057,
+      "ts": 1795189235.5379658,
       "last_full_scan_ts": 1795188693.8899271
     },
     "NVDA": {
-      "price": 138.40109252929688,
+      "price": 137.3000030517578,
       "volume_ratio": 0.0,
-      "ts": 1795188652.1309505,
-      "last_full_scan_ts": 1795188710.281867
+      "ts": 1795189235.791075,
+      "last_full_scan_ts": 1795189248.315616
     },
     "QQQ": {
-      "price": 630.7100219726562,
+      "price": 630.468505859375,
       "volume_ratio": 0.0,
-      "ts": 1795188652.4362996,
+      "ts": 1795189236.0165095,
       "last_full_scan_ts": 1795188726.7531173
     },
     "SPY": {
-      "price": 709.4600219726562,
+      "price": 709.260009765625,
       "volume_ratio": 0.0,
-      "ts": 1795188652.836249,
+      "ts": 1795189236.3697639,
       "last_full_scan_ts": 1795188743.5701396
     },
     "TSLA": {
-      "price": 362.67999267578125,
+      "price": 364.5950012207031,
       "volume_ratio": 0.0,
-      "ts": 1795188653.104203,
-      "last_full_scan_ts": 1795188759.6609461
+      "ts": 1795189236.558698,
+      "last_full_scan_ts": 1795189253.3861568
     }
   },
   "ai_cache": {
     "META": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChERLsSnp53ePXm7gnekJ'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChES4ZMnCgqzuVXb6zGDF'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -70,7 +70,7 @@
     },
     "NVDA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChERPHkbAxiEiGSicMcp7'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChES4x3HgARwaGNH6PHBm'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -88,7 +88,7 @@
     },
     "TSLA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChERSvrrJYPYEoVxtdqgi'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChES5KoUzd4c5m7GpW2V8'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -123,5 +123,5 @@
       "score": 0
     }
   },
-  "saved_at": "2026-11-20T10:32:57-05:00"
+  "saved_at": "2026-11-20T10:40:55-05:00"
 }
