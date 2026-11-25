@@ -1,52 +1,52 @@
 {
   "snapshots": {
     "AAPL": {
-      "price": 353.17999267578125,
+      "price": 353.6400146484375,
       "volume_ratio": 0.0,
-      "ts": 1795629649.4718251,
+      "ts": 1795630238.376652,
       "last_full_scan_ts": 1795627248.2900343
     },
     "AMZN": {
-      "price": 243.73500061035156,
+      "price": 244.1750030517578,
       "volume_ratio": 0.0,
-      "ts": 1795629649.741433,
+      "ts": 1795630238.6396794,
       "last_full_scan_ts": 1795629069.8784416
     },
     "META": {
-      "price": 602.2999877929688,
+      "price": 602.1300048828125,
       "volume_ratio": 0.0,
-      "ts": 1795629650.0414264,
+      "ts": 1795630238.9306417,
       "last_full_scan_ts": 1795629658.5133529
     },
     "MSFT": {
-      "price": 487.510009765625,
+      "price": 487.4949951171875,
       "volume_ratio": 0.0,
-      "ts": 1795629650.3534708,
+      "ts": 1795630239.1626134,
       "last_full_scan_ts": 1795629100.8528342
     },
     "NVDA": {
-      "price": 145.33999633789062,
+      "price": 146.39500427246094,
       "volume_ratio": 0.0,
-      "ts": 1795629650.648078,
-      "last_full_scan_ts": 1795629115.3618362
+      "ts": 1795630239.4063344,
+      "last_full_scan_ts": 1795630255.4802773
     },
     "QQQ": {
-      "price": 623.4849853515625,
+      "price": 625.3300170898438,
       "volume_ratio": 0.0,
-      "ts": 1795629650.9599438,
+      "ts": 1795630239.651072,
       "last_full_scan_ts": 1795629129.7080178
     },
     "SPY": {
-      "price": 710.5,
+      "price": 711.6699829101562,
       "volume_ratio": 0.0,
-      "ts": 1795629651.3183703,
+      "ts": 1795630239.8829014,
       "last_full_scan_ts": 1795629144.1720543
     },
     "TSLA": {
-      "price": 370.69000244140625,
+      "price": 372.875,
       "volume_ratio": 0.0,
-      "ts": 1795629651.5872169,
-      "last_full_scan_ts": 1795629673.800466
+      "ts": 1795630240.0803735,
+      "last_full_scan_ts": 1795630269.9757621
     }
   },
   "ai_cache": {
@@ -70,7 +70,7 @@
     },
     "NVDA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChQ57SauwSYWmqx9cajBN'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChQ6ZUyNUN2hbjgeeRNtC'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -88,7 +88,7 @@
     },
     "TSLA": {
       "result": {
-        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChQ5pcC1WzdNU7x7as3ts'}",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChQ6aZC9n49QeQxBre3vC'}",
         "analysis": null
       },
       "was_flagged": true,
@@ -123,5 +123,5 @@
       "score": 0
     }
   },
-  "saved_at": "2026-11-25T13:01:15-05:00"
+  "saved_at": "2026-11-25T13:11:11-05:00"
 }
